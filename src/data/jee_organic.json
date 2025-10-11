@@ -3,11 +3,11 @@
     {
       "id": "benzene",
       "label": "Benzene",
-      "smiles": "c1ccccc1",
+      "smiles": "C1=CC=CC=C1",
       "type": "compound",
       "info": {
         "iupac": "Benzene",
-        "formula": "C₆H₆",
+        "formula": "C6H6",
         "notes": "Base aromatic compound, simplest aromatic hydrocarbon",
         "properties": "Colorless liquid, carcinogenic, highly flammable"
       },
@@ -16,7 +16,7 @@
     {
       "id": "nitrobenzene",
       "label": "Nitrobenzene",
-      "smiles": "c1ccc(cc1)[N+](=O)[O-]",
+      "smiles": "C1=CC=C(C=C1)[N+](=O)[O-]",
       "type": "compound",
       "info": {
         "iupac": "Nitrobenzene",
@@ -25,6 +25,149 @@
         "properties": "Yellow oily liquid, toxic, sweet almond odor"
       },
       "position": { "x": 300, "y": 0 }
+    },
+    {
+      "id": "aniline",
+      "label": "Aniline",
+      "smiles": "C1=CC=C(C=C1)N",
+      "type": "compound",
+      "info": {
+        "iupac": "Aniline",
+        "formula": "C6H5NH2",
+        "notes": "Primary aromatic amine, used in dye manufacturing",
+        "properties": "Colorless liquid, turns brown on exposure to air"
+      },
+      "position": { "x": 600, "y": 0 }
+    },
+    {
+      "id": "toluene",
+      "label": "Toluene",
+      "smiles": "CC1=CC=CC=C1",
+      "type": "compound",
+      "info": {
+        "iupac": "Toluene",
+        "formula": "C7H8",
+        "notes": "Methylbenzene, important solvent and chemical feedstock",
+        "properties": "Colorless liquid, aromatic odor"
+      },
+      "position": { "x": 150, "y": -200 }
+    },
+    {
+      "id": "phenol",
+      "label": "Phenol",
+      "smiles": "C1=CC=C(C=C1)O",
+      "type": "compound",
+      "info": {
+        "iupac": "Phenol",
+        "formula": "C6H5OH",
+        "notes": "Carbolic acid, used in plastics and pharmaceuticals",
+        "properties": "White crystalline solid, characteristic odor"
+      },
+      "position": { "x": -150, "y": -200 }
+    },
+    {
+      "id": "chlorobenzene",
+      "label": "Chlorobenzene",
+      "smiles": "C1=CC=C(C=C1)Cl",
+      "type": "compound",
+      "info": {
+        "iupac": "Chlorobenzene",
+        "formula": "C6H5Cl",
+        "notes": "Used as solvent and in pesticide production",
+        "properties": "Colorless liquid, almond-like odor"
+      },
+      "position": { "x": -300, "y": 0 }
+    },
+    {
+      "id": "bromobenzene",
+      "label": "Bromobenzene",
+      "smiles": "C1=CC=C(C=C1)Br",
+      "type": "compound",
+      "info": {
+        "iupac": "Bromobenzene",
+        "formula": "C6H5Br",
+        "notes": "Used in organic synthesis as starting material",
+        "properties": "Colorless liquid, pleasant odor"
+      },
+      "position": { "x": -300, "y": 200 }
+    },
+    {
+      "id": "benzoic_acid",
+      "label": "Benzoic Acid",
+      "smiles": "C1=CC=C(C=C1)C(=O)O",
+      "type": "compound",
+      "info": {
+        "iupac": "Benzoic acid",
+        "formula": "C7H6O2",
+        "notes": "Food preservative, occurs naturally in berries",
+        "properties": "White crystalline solid, slightly soluble in water"
+      },
+      "position": { "x": 300, "y": -200 }
+    },
+    {
+      "id": "benzaldehyde",
+      "label": "Benzaldehyde",
+      "smiles": "C1=CC=C(C=C1)C=O",
+      "type": "compound",
+      "info": {
+        "iupac": "Benzaldehyde",
+        "formula": "C7H6O",
+        "notes": "Artificial almond flavoring, precursor to many compounds",
+        "properties": "Colorless liquid, bitter almond odor"
+      },
+      "position": { "x": 450, "y": -200 }
+    },
+    {
+      "id": "acetanilide",
+      "label": "Acetanilide",
+      "smiles": "CC(=O)NC1=CC=CC=C1",
+      "type": "compound",
+      "info": {
+        "iupac": "N-Phenylacetamide",
+        "formula": "C8H9NO",
+        "notes": "Analgesic drug, predecessor to paracetamol",
+        "properties": "White crystalline solid, odorless"
+      },
+      "position": { "x": 750, "y": 0 }
+    },
+    {
+      "id": "p_nitroaniline",
+      "label": "p-Nitroaniline",
+      "smiles": "C1=CC(=CC=C1N)[N+](=O)[O-]",
+      "type": "compound",
+      "info": {
+        "iupac": "4-Nitroaniline",
+        "formula": "C6H6N2O2",
+        "notes": "Used in dye synthesis, bright yellow color",
+        "properties": "Yellow crystalline solid, slightly toxic"
+      },
+      "position": { "x": 600, "y": 200 }
+    },
+    {
+      "id": "sulfanilic_acid",
+      "label": "Sulfanilic Acid",
+      "smiles": "C1=CC(=CC=C1N)S(=O)(=O)O",
+      "type": "compound",
+      "info": {
+        "iupac": "4-Aminobenzenesulfonic acid",
+        "formula": "C6H7NO3S",
+        "notes": "Used in dye production and as analytical reagent",
+        "properties": "White crystalline solid, water soluble"
+      },
+      "position": { "x": 750, "y": 200 }
+    },
+    {
+      "id": "diphenylamine",
+      "label": "Diphenylamine",
+      "smiles": "C1=CC=C(C=C1)NC2=CC=CC=C2",
+      "type": "compound",
+      "info": {
+        "iupac": "N-Phenylaniline",
+        "formula": "C12H11N",
+        "notes": "Antioxidant, used in propellants and plastics",
+        "properties": "Colorless to pale yellow crystalline solid"
+      },
+      "position": { "x": 450, "y": 200 }
     }
   ],
   "edges": [
@@ -39,6 +182,149 @@
         "conditions": "50-60°C",
         "mechanism": "Electrophilic aromatic substitution",
         "equation": "C6H6 + HNO3 → C6H5NO2 + H2O"
+      }
+    },
+    {
+      "id": "nitrobenzene_to_aniline",
+      "source": "nitrobenzene",
+      "target": "aniline",
+      "label": "Reduction",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "Sn + HCl or Fe + HCl",
+        "conditions": "Reflux",
+        "mechanism": "Reduction of nitro group",
+        "equation": "C6H5NO2 + 6[H] → C6H5NH2 + 2H2O"
+      }
+    },
+    {
+      "id": "benzene_to_toluene",
+      "source": "benzene",
+      "target": "toluene",
+      "label": "Friedel-Crafts Alkylation",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "CH3Cl + AlCl3",
+        "conditions": "Anhydrous conditions",
+        "mechanism": "Electrophilic aromatic substitution",
+        "equation": "C6H6 + CH3Cl → C6H5CH3 + HCl"
+      }
+    },
+    {
+      "id": "benzene_to_phenol",
+      "source": "benzene",
+      "target": "phenol",
+      "label": "Sulfonation + Fusion",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "1) H2SO4, 2) NaOH fusion",
+        "conditions": "300°C for fusion",
+        "mechanism": "Via benzene sulfonic acid",
+        "equation": "C6H6 → C6H5SO3H → C6H5OH"
+      }
+    },
+    {
+      "id": "benzene_to_chlorobenzene",
+      "source": "benzene",
+      "target": "chlorobenzene",
+      "label": "Halogenation",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "Cl2 + FeCl3",
+        "conditions": "Room temperature",
+        "mechanism": "Electrophilic aromatic substitution",
+        "equation": "C6H6 + Cl2 → C6H5Cl + HCl"
+      }
+    },
+    {
+      "id": "benzene_to_bromobenzene",
+      "source": "benzene",
+      "target": "bromobenzene",
+      "label": "Halogenation",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "Br2 + FeBr3",
+        "conditions": "Room temperature",
+        "mechanism": "Electrophilic aromatic substitution",
+        "equation": "C6H6 + Br2 → C6H5Br + HBr"
+      }
+    },
+    {
+      "id": "toluene_to_benzoic_acid",
+      "source": "toluene",
+      "target": "benzoic_acid",
+      "label": "Oxidation",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "KMnO4 + H+",
+        "conditions": "Heat, acidic medium",
+        "mechanism": "Side chain oxidation",
+        "equation": "C6H5CH3 + 3[O] → C6H5COOH + H2O"
+      }
+    },
+    {
+      "id": "benzoic_acid_to_benzaldehyde",
+      "source": "benzoic_acid",
+      "target": "benzaldehyde",
+      "label": "Rosenmund Reduction",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "H2 + Pd/BaSO4",
+        "conditions": "Quinoline poison",
+        "mechanism": "Selective reduction of acyl chloride",
+        "equation": "C6H5COCl + H2 → C6H5CHO + HCl"
+      }
+    },
+    {
+      "id": "aniline_to_acetanilide",
+      "source": "aniline",
+      "target": "acetanilide",
+      "label": "Acetylation",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "CH3COCl or (CH3CO)2O",
+        "conditions": "Pyridine as base",
+        "mechanism": "Nucleophilic acyl substitution",
+        "equation": "C6H5NH2 + CH3COCl → C6H5NHCOCH3 + HCl"
+      }
+    },
+    {
+      "id": "aniline_to_p_nitroaniline",
+      "source": "aniline",
+      "target": "p_nitroaniline",
+      "label": "Nitration",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "HNO3 + H2SO4",
+        "conditions": "0°C initially",
+        "mechanism": "Electrophilic aromatic substitution",
+        "equation": "C6H5NH2 + HNO3 → p-O2NC6H4NH2 + H2O"
+      }
+    },
+    {
+      "id": "aniline_to_sulfanilic_acid",
+      "source": "aniline",
+      "target": "sulfanilic_acid",
+      "label": "Sulfonation",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "H2SO4",
+        "conditions": "180°C",
+        "mechanism": "Electrophilic aromatic substitution",
+        "equation": "C6H5NH2 + H2SO4 → p-H2NC6H4SO3H + H2O"
+      }
+    },
+    {
+      "id": "aniline_to_diphenylamine",
+      "source": "aniline",
+      "target": "diphenylamine",
+      "label": "Ullmann Condensation",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "C6H5Br + Cu",
+        "conditions": "High temperature",
+        "mechanism": "Copper-catalyzed coupling",
+        "equation": "C6H5NH2 + C6H5Br → (C6H5)2NH + HBr"
       }
     }
   ]
