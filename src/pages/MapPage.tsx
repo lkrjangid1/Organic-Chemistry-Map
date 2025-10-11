@@ -80,8 +80,12 @@ const MapPage = () => {
 
   return (
     <div
-      className="w-full h-screen transition-colors duration-300"
-      style={{ backgroundColor: tokens.flow.background }}
+      className="relative w-full transition-colors duration-300"
+      style={{
+        backgroundColor: tokens.flow.background,
+        height: 'calc(100vh - var(--ocm-header-height, 3.5rem))',
+        minHeight: 'calc(100dvh - var(--ocm-header-height, 3.5rem))',
+      }}
     >
       <ReactFlow
         nodes={initialNodes}
@@ -97,8 +101,12 @@ const MapPage = () => {
         minZoom={0.1}
         maxZoom={8}
         attributionPosition="bottom-left"
-        className="text-slate-900 dark:text-neutral-100 transition-colors duration-300"
-        style={{ background: tokens.flow.background }}
+        className="text-slate-900 dark:text-neutral-100 transition-colors duration-300 h-full"
+        style={{
+          background: tokens.flow.background,
+          width: '100%',
+          height: '100%',
+        }}
       >
         {/* Background pattern */}
         <Background
@@ -110,6 +118,7 @@ const MapPage = () => {
 
         {/* Navigation controls */}
         <Controls
+          position="bottom-left"
           className={`backdrop-blur-sm border rounded-lg transition-all duration-300 ${tokens.flow.controlBackground} ${tokens.flow.controlBorder} ${tokens.flow.controlShadow} text-slate-700 dark:text-neutral-200`}
         />
       </ReactFlow>

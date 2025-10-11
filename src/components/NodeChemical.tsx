@@ -32,7 +32,7 @@ const NodeChemical = memo(({ data, selected }: ChemicalNodeProps) => {
 
   return (
     <div
-      className="min-w-[100px] max-w-[120px] rounded-lg border transition-all duration-300 p-2"
+      className="rounded-lg border transition-all duration-300 p-2 sm:p-3"
       style={{
         backgroundColor: tokens.node.background,
         borderColor: selected ? tokens.node.borderSelected : tokens.node.border,
@@ -41,6 +41,7 @@ const NodeChemical = memo(({ data, selected }: ChemicalNodeProps) => {
         boxShadow: selected
           ? `0 0 0 3px ${tokens.node.ring}`
           : '0 8px 18px rgba(15, 23, 42, 0.12)',
+        width: 'clamp(7rem, 34vw, 10.5rem)',
       }}
     >
       {/* Input handle for incoming connections */}
@@ -54,8 +55,8 @@ const NodeChemical = memo(({ data, selected }: ChemicalNodeProps) => {
       <div className="flex justify-center mb-2">
         <SmilesRenderer
           smiles={data.smiles}
-          width={100}
-          height={100}
+          width={96}
+          height={96}
           className="border rounded transition-colors duration-300"
         />
       </div>

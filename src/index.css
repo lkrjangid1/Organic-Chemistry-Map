@@ -7,6 +7,7 @@
 
 :root {
   color-scheme: light;
+  --ocm-header-height: 3.5rem;
   --ocm-body-text: #0f172a;
   --ocm-app-bg: #f8fafc;
   --ocm-flow-pattern: #e2e8f0;
@@ -70,6 +71,33 @@ html, body, #root {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+body {
+  min-height: 100vh;
+}
+
+@supports (height: 100dvh) {
+  body {
+    min-height: 100dvh;
+  }
+}
+
+main {
+  min-height: calc(100vh - var(--ocm-header-height));
+  padding-bottom: 1.5rem;
+}
+
+@supports (height: 100dvh) {
+  main {
+    min-height: calc(100dvh - var(--ocm-header-height));
+  }
+}
+
+@supports (padding: calc(env(safe-area-inset-bottom) + 1rem)) {
+  main {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 1rem);
+  }
+}
+
 /* React Flow custom styles */
 .react-flow {
   background-color: var(--ocm-app-bg);
@@ -117,6 +145,8 @@ html, body, #root {
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease, border-color 0.3s ease;
+  padding: 4px;
+  width: auto;
 }
 
 .react-flow__controls-button {
@@ -143,6 +173,11 @@ html, body, #root {
 
 .react-flow__controls-button:last-child {
   border-bottom: none;
+}
+
+.react-flow__controls-button {
+  width: 20px;
+  height: 20px;
 }
 
 /* MiniMap styling */
@@ -196,6 +231,24 @@ body {
   background-color: var(--ocm-scrollbar-thumb);
   border-radius: 9999px;
   transition: background-color 0.2s ease;
+}
+
+@media (max-width: 640px) {
+  .react-flow__controls {
+    left: 1rem !important;
+    right: auto !important;
+    bottom: 1rem !important;
+    top: auto !important;
+    padding: 2px;
+  }
+
+  .react-flow__edge-path {
+    stroke-width: 1.6;
+  }
+
+  .react-flow__attribution {
+    font-size: 9px;
+  }
 }
 
 ::-webkit-scrollbar-thumb:hover {
