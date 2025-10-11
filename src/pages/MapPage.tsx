@@ -11,6 +11,7 @@ import 'reactflow/dist/style.css';
 
 import NodeChemical from '../components/NodeChemical';
 import data from '../data/jee_organic.json';
+import CustomEdge from '../components/CustomEdge';
 
 /**
  * Main React Flow visualization page for the chemistry map
@@ -24,6 +25,10 @@ import data from '../data/jee_organic.json';
 // Define custom node types for React Flow
 const nodeTypes = {
   chemical: NodeChemical,
+};
+
+const edgeTypes = {
+  custom: CustomEdge,
 };
 
 // Styling for different edge types
@@ -48,30 +53,24 @@ const MapPage = () => {
         smiles: node.smiles,
         info: node.info,
       },
-      draggable: true,
+      draggable: false,
       selectable: true,
     }));
   }, []);
 
-  const initialEdges: Edge[] = useMemo(() => {
+  const initialEdges = useMemo(() => {
     return data.edges.map((edge) => ({
       id: edge.id,
       source: edge.source,
       target: edge.target,
-      label: edge.label,
-      type: 'smoothstep',
-      style: {
-        stroke: '#6366f1',
-        strokeWidth: 2,
-      },
-      labelStyle: {
-        fontSize: 11,
-        fontWeight: 500,
-        fill: '#374151',
-        background: 'rgba(255, 255, 255, 0.8)',
+      type: 'custom', // use our custom edge
+      data: {
+        reagents: edge.reactionInfo.reagents,
+        label: edge.label,
+        conditions: edge.reactionInfo.conditions,
       },
     }));
-  }, []);
+  }, [data.edges]);
 
   return (
     <div className="w-full h-screen bg-slate-50">
@@ -79,6 +78,7 @@ const MapPage = () => {
         nodes={initialNodes}
         edges={initialEdges}
         nodeTypes={nodeTypes}
+        edgeTypes={edgeTypes}
         defaultEdgeOptions={edgeOptions}
         fitView
         fitViewOptions={{
@@ -86,7 +86,7 @@ const MapPage = () => {
           includeHiddenNodes: false,
         }}
         minZoom={0.1}
-        maxZoom={2}
+        maxZoom={8}
         attributionPosition="bottom-left"
       >
         {/* Background pattern */}
@@ -100,18 +100,6 @@ const MapPage = () => {
         {/* Navigation controls */}
         <Controls
           className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-lg shadow-lg"
-          showZoom={true}
-          showFitView={true}
-          showInteractive={true}
-        />
-
-        {/* Minimap for navigation */}
-        <MiniMap
-          className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-lg shadow-lg"
-          nodeColor="#6366f1"
-          nodeStrokeWidth={2}
-          maskColor="rgba(0, 0, 0, 0.1)"
-          position="top-right"
         />
       </ReactFlow>
 

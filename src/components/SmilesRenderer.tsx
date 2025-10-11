@@ -16,7 +16,7 @@ const SmilesRenderer = ({
   smiles,
   width = 150,
   height = 100,
-  className = "border border-gray-200 rounded bg-white"
+  className = ""
 }: SmilesRendererProps) => {
   const [hasError, setHasError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -62,11 +62,15 @@ const SmilesRenderer = ({
           svgElement.setAttribute('width', width.toString());
           svgElement.setAttribute('height', height.toString());
           svgElement.id = smiles + '-svg';
+          svgElement.style.background = 'transparent';
+
+          const themeName = 'plain';
+          const monochromeColor = '#1f2933';
           // Create SmiDrawer instance
           const moleculeOptions = {
             width: width,
             height: height,
-            bondThickness: 2,
+            bondThickness: 1.6,
             bondSpacing: 5,
             atomVisualization: 'default' as const,
             isomeric: true,
@@ -74,7 +78,7 @@ const SmilesRenderer = ({
             terminalCarbons: false,
             explicitHydrogens: false,
             themes: {
-              light: {
+              [themeName]: {
                 C: '#000000',
                 O: '#ff0000',
                 N: '#0000ff',
@@ -84,7 +88,10 @@ const SmilesRenderer = ({
                 Cl: '#00ff00',
                 Br: '#a0522d',
                 I: '#9400d3',
-                BACKGROUND: '#00ffffff'
+                H: monochromeColor,
+                B: monochromeColor,
+                BACKGROUND: '#ffffff',
+                BOND_STROKE: monochromeColor
               }
             }
           };
@@ -120,7 +127,7 @@ const SmilesRenderer = ({
           };
 
           // Use the correct v2.x API: draw(source, svg, theme, successCallback, errorCallback)
-          smiDrawer.draw(smiles, svgElement, 'light', successCallback, errorCallback);
+          smiDrawer.draw(smiles, svgElement, themeName, successCallback, errorCallback);
 
         } catch (error) {
           setHasError(true);
@@ -151,7 +158,7 @@ const SmilesRenderer = ({
     <div
       ref={containerCallbackRef}
       className={`${className} flex items-center justify-center`}
-      style={{ width, height }}
+      style={{ width, height, backgroundColor: 'transparent' }}
     >
       {isLoading && !svgContent && (
         <div className="text-center">
