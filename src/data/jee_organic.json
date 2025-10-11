@@ -1,0 +1,45 @@
+{
+  "nodes": [
+    {
+      "id": "benzene",
+      "label": "Benzene",
+      "smiles": "c1ccccc1",
+      "type": "compound",
+      "info": {
+        "iupac": "Benzene",
+        "formula": "C₆H₆",
+        "notes": "Base aromatic compound, simplest aromatic hydrocarbon",
+        "properties": "Colorless liquid, carcinogenic, highly flammable"
+      },
+      "position": { "x": 0, "y": 0 }
+    },
+    {
+      "id": "nitrobenzene",
+      "label": "Nitrobenzene",
+      "smiles": "c1ccc(cc1)[N+](=O)[O-]",
+      "type": "compound",
+      "info": {
+        "iupac": "Nitrobenzene",
+        "formula": "C6H5NO2",
+        "notes": "Important intermediate in organic synthesis",
+        "properties": "Yellow oily liquid, toxic, sweet almond odor"
+      },
+      "position": { "x": 300, "y": 0 }
+    }
+  ],
+  "edges": [
+    {
+      "id": "benzene_to_nitrobenzene",
+      "source": "benzene",
+      "target": "nitrobenzene",
+      "label": "Nitration",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "HNO3 + H2SO4",
+        "conditions": "50-60°C",
+        "mechanism": "Electrophilic aromatic substitution",
+        "equation": "C6H6 + HNO3 → C6H5NO2 + H2O"
+      }
+    }
+  ]
+}
