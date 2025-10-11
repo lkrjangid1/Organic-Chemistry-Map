@@ -5,6 +5,52 @@
  * Includes Tailwind CSS imports and custom styles for React Flow
  */
 
+:root {
+  color-scheme: light;
+  --ocm-body-text: #0f172a;
+  --ocm-app-bg: #f8fafc;
+  --ocm-flow-pattern: #e2e8f0;
+  --ocm-flow-edge: #6366f1;
+  --ocm-flow-edge-hover: #4f46e5;
+  --ocm-flow-edge-selected: #ef4444;
+  --ocm-control-bg: rgba(255, 255, 255, 0.9);
+  --ocm-control-border: #e5e7eb;
+  --ocm-control-text: #374151;
+  --ocm-control-text-hover: #111827;
+  --ocm-control-hover-bg: #f3f4f6;
+  --ocm-minimap-bg: rgba(255, 255, 255, 0.9);
+  --ocm-minimap-border: #e5e7eb;
+  --ocm-attribution-bg: rgba(255, 255, 255, 0.8);
+  --ocm-attribution-text: #6b7280;
+  --ocm-selection-border: #3b82f6;
+  --ocm-selection-background: rgba(59, 130, 246, 0.1);
+  --ocm-scrollbar-thumb: rgba(148, 163, 184, 0.6);
+  --ocm-scrollbar-thumb-hover: rgba(71, 85, 105, 0.8);
+}
+
+.dark {
+  color-scheme: dark;
+  --ocm-body-text: #f4f4f5;
+  --ocm-app-bg: #09090b;
+  --ocm-flow-pattern: #27272a;
+  --ocm-flow-edge: #f97316;
+  --ocm-flow-edge-hover: #fb923c;
+  --ocm-flow-edge-selected: #facc15;
+  --ocm-control-bg: rgba(23, 23, 23, 0.9);
+  --ocm-control-border: #27272a;
+  --ocm-control-text: #e4e4e7;
+  --ocm-control-text-hover: #fafafa;
+  --ocm-control-hover-bg: rgba(39, 39, 42, 0.9);
+  --ocm-minimap-bg: rgba(15, 15, 15, 0.92);
+  --ocm-minimap-border: #27272a;
+  --ocm-attribution-bg: rgba(23, 23, 23, 0.85);
+  --ocm-attribution-text: #a1a1aa;
+  --ocm-selection-border: rgba(250, 204, 21, 0.8);
+  --ocm-selection-background: rgba(250, 204, 21, 0.2);
+  --ocm-scrollbar-thumb: rgba(82, 82, 91, 0.7);
+  --ocm-scrollbar-thumb-hover: rgba(113, 113, 122, 0.85);
+}
+
 /* Base styles */
 * {
   box-sizing: border-box;
@@ -19,11 +65,15 @@ html, body, #root {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--ocm-app-bg);
+  color: var(--ocm-body-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* React Flow custom styles */
 .react-flow {
-  background-color: #f8fafc;
+  background-color: var(--ocm-app-bg);
+  transition: background-color 0.3s ease;
 }
 
 .react-flow__node {
@@ -32,7 +82,7 @@ html, body, #root {
 }
 
 .react-flow__node.selected {
-  box-shadow: 0 0 0 2px #3b82f6;
+  box-shadow: 0 0 0 2px var(--ocm-selection-border);
 }
 
 .react-flow__edge {
@@ -44,41 +94,51 @@ html, body, #root {
 }
 
 .react-flow__edge-path {
-  stroke: #6366f1;
+  stroke: var(--ocm-flow-edge);
   stroke-width: 2;
   transition: all 0.2s ease-in-out;
 }
 
 .react-flow__edge:hover .react-flow__edge-path {
-  stroke: #4f46e5;
+  stroke: var(--ocm-flow-edge-hover);
   stroke-width: 3;
 }
 
 .react-flow__edge.selected .react-flow__edge-path {
-  stroke: #ef4444;
+  stroke: var(--ocm-flow-edge-selected);
   stroke-width: 3;
 }
 
 /* Controls styling */
 .react-flow__controls {
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--ocm-control-bg);
   backdrop-filter: blur(8px);
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--ocm-control-border);
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .react-flow__controls-button {
   background: transparent;
   border: none;
-  border-bottom: 1px solid #e5e7eb;
-  color: #374151;
+  border-bottom: 1px solid var(--ocm-control-border);
+  color: var(--ocm-control-text);
   transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .react-flow__controls-button:hover {
-  background: #f3f4f6;
-  color: #111827;
+  background: var(--ocm-control-hover-bg);
+  color: var(--ocm-control-text-hover);
+}
+
+.react-flow__controls-button svg {
+  stroke: currentColor;
+  fill: none;
+  transition: stroke 0.2s ease, fill 0.2s ease;
 }
 
 .react-flow__controls-button:last-child {
@@ -87,21 +147,22 @@ html, body, #root {
 
 /* MiniMap styling */
 .react-flow__minimap {
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--ocm-minimap-bg);
   backdrop-filter: blur(8px);
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--ocm-minimap-border);
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 /* Attribution */
 .react-flow__attribution {
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--ocm-attribution-bg);
   backdrop-filter: blur(4px);
   border-radius: 4px;
   padding: 2px 6px;
   font-size: 10px;
-  color: #6b7280;
+  color: var(--ocm-attribution-text);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* Custom animations */
@@ -121,6 +182,26 @@ html, body, #root {
 }
 
 /* Scrollbar styling */
+.react-flow,
+body {
+  scrollbar-color: var(--ocm-scrollbar-thumb) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--ocm-scrollbar-thumb);
+  border-radius: 9999px;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--ocm-scrollbar-thumb-hover);
+}
+
 .react-flow__pane {
   cursor: grab;
 }
@@ -132,8 +213,8 @@ html, body, #root {
 /* Selection styling */
 .react-flow__nodesselection,
 .react-flow__edgeselection {
-  background: rgba(59, 130, 246, 0.1);
-  border: 1px dashed #3b82f6;
+  background: var(--ocm-selection-background);
+  border: 1px dashed var(--ocm-selection-border);
 }
 
 /* Loading states */

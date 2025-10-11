@@ -2,9 +2,7 @@ import { useMemo } from 'react';
 import ReactFlow, {
   Background,
   Controls,
-  MiniMap,
   Node,
-  Edge,
   BackgroundVariant,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
@@ -12,6 +10,7 @@ import 'reactflow/dist/style.css';
 import NodeChemical from '../components/NodeChemical';
 import data from '../data/jee_organic.json';
 import CustomEdge from '../components/CustomEdge';
+import { useTheme } from '../theme';
 
 /**
  * Main React Flow visualization page for the chemistry map
@@ -31,16 +30,8 @@ const edgeTypes = {
   custom: CustomEdge,
 };
 
-// Styling for different edge types
-const edgeOptions = {
-  animated: false,
-  style: {
-    stroke: '#6366f1',
-    strokeWidth: 2,
-  },
-};
-
 const MapPage = () => {
+  const { tokens, isDark } = useTheme();
 
   // Transform JSON data to React Flow format
   const initialNodes: Node[] = useMemo(() => {
@@ -72,8 +63,26 @@ const MapPage = () => {
     }));
   }, [data.edges]);
 
+  const edgeOptions = useMemo(
+    () => ({
+      animated: false,
+      style: {
+        stroke: tokens.flow.edgeStroke,
+        strokeWidth: 2,
+      },
+    }),
+    [tokens.flow.edgeStroke],
+  );
+
+  const highlightColor = isDark
+    ? 'rgba(250, 204, 21, 0.75)'
+    : 'rgba(245, 158, 11, 0.8)';
+
   return (
-    <div className="w-full h-screen bg-slate-50">
+    <div
+      className="w-full h-screen transition-colors duration-300"
+      style={{ backgroundColor: tokens.flow.background }}
+    >
       <ReactFlow
         nodes={initialNodes}
         edges={initialEdges}
@@ -88,25 +97,27 @@ const MapPage = () => {
         minZoom={0.1}
         maxZoom={8}
         attributionPosition="bottom-left"
+        className="text-slate-900 dark:text-neutral-100 transition-colors duration-300"
+        style={{ background: tokens.flow.background }}
       >
         {/* Background pattern */}
         <Background
           variant={BackgroundVariant.Dots}
           gap={20}
           size={1}
-          color="#e2e8f0"
+          color={tokens.flow.backgroundPattern}
         />
 
         {/* Navigation controls */}
         <Controls
-          className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-lg shadow-lg"
+          className={`backdrop-blur-sm border rounded-lg transition-all duration-300 ${tokens.flow.controlBackground} ${tokens.flow.controlBorder} ${tokens.flow.controlShadow} text-slate-700 dark:text-neutral-200`}
         />
       </ReactFlow>
 
       {/* Custom styles for highlighted nodes */}
       <style>{`
         .highlighted-node {
-          filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.8));
+          filter: drop-shadow(0 0 10px ${highlightColor});
         }
 
         .react-flow__edge.animated {

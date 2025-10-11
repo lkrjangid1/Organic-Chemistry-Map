@@ -1,4 +1,5 @@
 import { BaseEdge, EdgeLabelRenderer, getBezierPath, type EdgeProps } from 'reactflow';
+import { useTheme } from '../theme';
 
 type CustomEdgeData = {
     label?: string;
@@ -14,34 +15,39 @@ export default function CustomEdge({
     targetY,
     data,
 }: EdgeProps<CustomEdgeData>) {
+    const { tokens } = useTheme();
     const [edgePath, labelX, labelY] = getBezierPath({ sourceX, sourceY, targetX, targetY });
 
     return (
         <>
-            <BaseEdge id={id} path={edgePath} style={{ stroke: '#6366f1', strokeWidth: 2 }} />
+            <BaseEdge id={id} path={edgePath} style={{ stroke: tokens.flow.edgeStroke, strokeWidth: 2 }} />
 
             <EdgeLabelRenderer>
                 <div
                     style={{
                         position: 'absolute',
                         transform: `translate(-50%, -50%) translate(${labelX}px, ${labelY}px)`,
-                        background: 'rgba(255,255,255,0.85)',
+                        background: tokens.flow.labelBackground,
                         padding: '3px 6px',
                         borderRadius: 6,
                         fontFamily: 'sans-serif',
                         lineHeight: 1.2,
                         textAlign: 'center',
+                        color: tokens.flow.labelText,
+                        boxShadow: tokens.flow.labelShadow,
+                        backdropFilter: 'blur(4px)',
+                        border: `1px solid ${tokens.flow.labelBorder}`,
                     }}
                     className="nodrag nopan"
                 >
                     {data?.reagents && (
-                        <div style={{ fontSize: 10, fontWeight: 600, color: '#2563eb' }}>
+                        <div style={{ fontSize: 10, fontWeight: 600, color: tokens.flow.labelReagents }}>
                             [{data.reagents}]
                         </div>
                     )}
-                    <div style={{ fontSize: 12, fontWeight: 700, color: '#111827' }}>{data?.label}</div>
+                    <div style={{ fontSize: 12, fontWeight: 700 }}>{data?.label}</div>
                     {data?.conditions && (
-                        <div style={{ fontSize: 10, fontStyle: 'italic', color: '#6b7280' }}>
+                        <div style={{ fontSize: 10, fontStyle: 'italic', color: tokens.flow.labelMuted }}>
                             ({data.conditions})
                         </div>
                     )}

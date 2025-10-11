@@ -199,7 +199,6 @@ export default function MapPage() {
       >
         <Background />
         <Controls />
-        <MiniMap />
       </ReactFlow>
     </div>
   );
@@ -231,6 +230,12 @@ export const useMapStore = create((set) => ({
 * Nodes use rounded cards with shadow
 * Consistent typography for chemical labels
 * SidePanel uses glass effect (`bg-white/80 backdrop-blur`)
+* Respect the light/dark theme system:
+  * Theme tokens live in `src/theme/tokens.ts`; extend these instead of hard-coding colors.
+  * Wrap new UI in the existing `ThemeProvider` (see `src/main.tsx`) and consume via `useTheme()` when component-specific tokens are required.
+  * Favor shared CSS variables in `src/index.css` for React Flow surfaces, controls, and scrollbars.
+  * Keep SMILES Drawer colors in sync by updating `tokens.node.smilesPalette` for any new atom types.
+  * Ensure icons and text use `currentColor` so they remain legible in both themes.
 
 ---
 
@@ -273,4 +278,3 @@ When generating project code:
 8. **Write self-documented, commented, production-quality code.**
 9. **Output should include example JSON data** for 10–15 reactions (aromatic subset).
 10. **Export as zip-ready project** that can run with `npm run dev` immediately.
-

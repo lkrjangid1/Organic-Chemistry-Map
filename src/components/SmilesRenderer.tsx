@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useTheme } from '../theme';
 
 /**
  * Dedicated component for rendering SMILES molecular structures
@@ -18,6 +19,7 @@ const SmilesRenderer = ({
   height = 100,
   className = ""
 }: SmilesRendererProps) => {
+  const { tokens } = useTheme();
   const [hasError, setHasError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState('');
@@ -43,6 +45,7 @@ const SmilesRenderer = ({
         setIsLoading(true);
         setHasError(false);
         setErrorMessage('');
+        setSvgContent('');
 
         // Wait a bit to ensure DOM is ready
         await new Promise(resolve => setTimeout(resolve, 100));
@@ -65,7 +68,8 @@ const SmilesRenderer = ({
           svgElement.style.background = 'transparent';
 
           const themeName = 'plain';
-          const monochromeColor = '#1f2933';
+          const monochromeColor = tokens.node.smilesBond;
+          const palette = tokens.node.smilesPalette;
           // Create SmiDrawer instance
           const moleculeOptions = {
             width: width,
@@ -79,18 +83,18 @@ const SmilesRenderer = ({
             explicitHydrogens: false,
             themes: {
               [themeName]: {
-                C: '#000000',
-                O: '#ff0000',
-                N: '#0000ff',
-                S: '#ffff00',
-                P: '#ff8000',
-                F: '#00ff00',
-                Cl: '#00ff00',
-                Br: '#a0522d',
-                I: '#9400d3',
-                H: monochromeColor,
-                B: monochromeColor,
-                BACKGROUND: '#ffffff',
+                C: palette.C,
+                O: palette.O,
+                N: palette.N,
+                S: palette.S,
+                P: palette.P,
+                F: palette.F,
+                Cl: palette.Cl,
+                Br: palette.Br,
+                I: palette.I,
+                H: palette.H,
+                B: palette.B,
+                BACKGROUND: tokens.node.smilesBackground,
                 BOND_STROKE: monochromeColor
               }
             }
@@ -147,7 +151,7 @@ const SmilesRenderer = ({
     return () => {
       isMounted = false;
     };
-  }, [smiles, width, height, className, container]);
+  }, [smiles, width, height, className, container, tokens]);
 
   // Callback ref to set container
   const containerCallbackRef = (node: HTMLDivElement | null) => {
@@ -158,18 +162,25 @@ const SmilesRenderer = ({
     <div
       ref={containerCallbackRef}
       className={`${className} flex items-center justify-center`}
-      style={{ width, height, backgroundColor: 'transparent' }}
+      style={{
+        width,
+        height,
+        backgroundColor: tokens.node.smilesBackground,
+        borderColor: tokens.node.smilesBorder,
+        borderStyle: 'solid',
+        borderWidth: 1,
+      }}
     >
       {isLoading && !svgContent && (
         <div className="text-center">
           <div className="text-xl mb-1">⚗️</div>
-          <div className="text-xs text-gray-500">Loading...</div>
+          <div className="text-xs text-gray-500 dark:text-neutral-300">Loading...</div>
         </div>
       )}
 
       {hasError && !svgContent && (
         <div className="text-center p-2">
-          <div className="text-xs text-gray-600 font-mono break-all">
+          <div className="text-xs font-mono break-all" style={{ color: tokens.node.text }}>
             {smiles}
           </div>
           {errorMessage && (
