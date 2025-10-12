@@ -6,6 +6,9 @@ An interactive, zoomable map of organic chemistry reactions designed for JEE Adv
 ![React](https://img.shields.io/badge/React-19.1.1-blue.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)
 
+<img width="1680" height="932" alt="image" src="https://github.com/user-attachments/assets/28d5f1c4-aa77-45fa-bc34-23973f4f4e41" />
+
+
 ## Features
 
 ### Interactive Map
