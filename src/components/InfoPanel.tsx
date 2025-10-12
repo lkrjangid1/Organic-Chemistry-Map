@@ -3,6 +3,7 @@ import { X } from 'lucide-react';
 
 import { useTheme } from '../theme';
 import SmilesRenderer from './SmilesRenderer';
+import ConformerViewer from './ConformerViewer';
 import type { ChemicalNodeData } from './NodeChemical';
 import type { ReactionInfo } from './CustomEdge';
 
@@ -157,6 +158,15 @@ const InfoPanel = memo(({ selected, onClose }: InfoPanelProps) => {
                 height={140}
                 className="border rounded-lg"
               />
+            </div>
+          )}
+
+          {isNode && (
+            <div>
+              <div className="text-xs uppercase tracking-wide text-slate-600 dark:text-neutral-400 mb-2">
+                3D Conformer
+              </div>
+              <ConformerViewer smiles={selected.payload.smiles} height={220} />
             </div>
           )}
 
