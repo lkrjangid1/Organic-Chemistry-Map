@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { X } from 'lucide-react';
+import { ExternalLink, X } from 'lucide-react';
 
 import { useTheme } from '../theme';
 import SmilesRenderer from './SmilesRenderer';
@@ -25,6 +25,14 @@ const InfoPanel = memo(({ selected, onClose }: InfoPanelProps) => {
 
   const isNode = selected.type === 'node';
   const title = isNode ? selected.payload.label : selected.payload.label;
+
+  const pubchemUrl = isNode
+    ? `https://pubchem.ncbi.nlm.nih.gov/#query=${encodeURIComponent(selected.payload.smiles)}`
+    : null;
+
+  const reactionLookupUrl = !isNode && selected.payload.reactionInfo.equation
+    ? `https://chemequations.com/en/?s=${encodeURIComponent(selected.payload.reactionInfo.equation)}`
+    : null;
 
   const infoRows = isNode
     ? (
@@ -139,14 +147,27 @@ const InfoPanel = memo(({ selected, onClose }: InfoPanelProps) => {
               {title}
             </h2>
           </div>
-          <button
-            type="button"
-            onClick={onClose}
-            className="rounded-full p-1 text-slate-600 hover:text-slate-800 hover:bg-slate-200/70 dark:text-neutral-400 dark:hover:text-neutral-100 dark:hover:bg-neutral-700/60"
-            aria-label="Close info"
-          >
-            <X className="h-4 w-4" />
-          </button>
+          <div className="flex items-center gap-2">
+            {(pubchemUrl || reactionLookupUrl) && (
+              <a
+                href={pubchemUrl ?? reactionLookupUrl!}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full p-1 text-slate-600 hover:text-slate-800 hover:bg-slate-200/70 dark:text-neutral-300 dark:hover:text-neutral-100 dark:hover:bg-neutral-700/60"
+                aria-label={isNode ? 'View on PubChem' : 'Open reaction on ChemEquations'}
+              >
+                <ExternalLink className="h-4 w-4" />
+              </a>
+            )}
+            <button
+              type="button"
+              onClick={onClose}
+              className="rounded-full p-1 text-slate-600 hover:text-slate-800 hover:bg-slate-200/70 dark:text-neutral-400 dark:hover:text-neutral-100 dark:hover:bg-neutral-700/60"
+              aria-label="Close info"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          </div>
         </div>
 
         <div className="overflow-y-auto px-4 py-3 space-y-4 h-[calc(55vh-3.5rem)] md:h-auto md:max-h-[60vh]">
