@@ -1,9 +1,10 @@
 import { useMemo } from 'react';
 import ReactFlow, {
   Background,
-  Controls,
-  Node,
   BackgroundVariant,
+  Controls,
+  MarkerType,
+  Node,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 
@@ -69,6 +70,12 @@ const MapPage = () => {
       style: {
         stroke: tokens.flow.edgeStroke,
         strokeWidth: 2,
+      },
+      markerEnd: {
+        type: MarkerType.ArrowClosed,
+        width: 10,
+        height: 10,
+        color: tokens.flow.edgeStroke,
       },
     }),
     [tokens.flow.edgeStroke],

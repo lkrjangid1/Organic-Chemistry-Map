@@ -14,13 +14,27 @@ export default function CustomEdge({
     targetX,
     targetY,
     data,
+    markerEnd,
+    markerStart,
+    style,
 }: EdgeProps<CustomEdgeData>) {
     const { tokens } = useTheme();
     const [edgePath, labelX, labelY] = getBezierPath({ sourceX, sourceY, targetX, targetY });
+    const computedStyle = {
+        ...(style ?? {}),
+        stroke: style?.stroke ?? tokens.flow.edgeStroke,
+        strokeWidth: style?.strokeWidth ?? 2,
+    };
 
     return (
         <>
-            <BaseEdge id={id} path={edgePath} style={{ stroke: tokens.flow.edgeStroke, strokeWidth: 2 }} />
+            <BaseEdge
+                id={id}
+                path={edgePath}
+                style={computedStyle}
+                markerStart={markerStart}
+                markerEnd={typeof markerEnd === 'string' ? markerEnd : undefined}
+            />
 
             <EdgeLabelRenderer>
                 <div
