@@ -15,6 +15,7 @@ An interactive, zoomable map of organic chemistry reactions designed for JEE Adv
 - Pan and zoom with mouse, trackpad, or touch gestures
 - React Flow driven node and edge visualization
 - Smooth transitions and selection feedback to keep context while exploring
+- Remembers your last zoom level and position so the map reopens exactly where you left it
 
 ### Chemical Structures
 - SMILES Drawer renders molecule diagrams for each compound
