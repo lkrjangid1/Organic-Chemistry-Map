@@ -51,10 +51,10 @@ export default function CustomEdge({
                         position: 'absolute',
                         transform: `translate(-50%, -50%) translate(${labelX}px, ${labelY}px)`,
                         background: tokens.flow.labelBackground,
-                        padding: '3px 6px',
-                        borderRadius: 6,
+                        padding: '2px 4px',
+                        borderRadius: 4,
                         fontFamily: 'sans-serif',
-                        lineHeight: 1.2,
+                        lineHeight: 1,
                         textAlign: 'center',
                         color: tokens.flow.labelText,
                         backdropFilter: 'blur(4px)',
@@ -63,13 +63,13 @@ export default function CustomEdge({
                     className="nodrag nopan"
                 >
                     {data?.reagents && (
-                        <div style={{ fontSize: 10, fontWeight: 600, color: tokens.flow.labelReagents }}>
+                        <div style={{ fontSize: 8, fontWeight: 600, color: tokens.flow.labelReagents }}>
                             [{data.reagents}]
                         </div>
                     )}
-                    <div style={{ fontSize: 12, fontWeight: 700 }}>{data?.label}</div>
+                    <div style={{ fontSize: 10, fontWeight: 700 }}>{data?.label}</div>
                     {data?.conditions && (
-                        <div style={{ fontSize: 10, fontStyle: 'italic', color: tokens.flow.labelMuted }}>
+                        <div style={{ fontSize: 8, fontStyle: 'italic', color: tokens.flow.labelMuted }}>
                             ({data.conditions})
                         </div>
                     )}
