@@ -14,7 +14,7 @@ import { useTheme } from '../theme';
 
 export type HandleDirection = 'left' | 'right' | 'top' | 'bottom';
 
-interface ChemicalNodeData {
+export interface ChemicalNodeData {
   label: string;
   smiles: string;
   info: {

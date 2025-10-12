@@ -18,6 +18,7 @@ type ThemeTokens = {
     controlBorder: string;
     controlShadow: string;
     labelBackground: string;
+    infoBackground: string;
     labelText: string;
     labelMuted: string;
     labelReagents: string;
@@ -56,7 +57,7 @@ export const themeTokens: Record<ThemeName, ThemeTokens> = {
     header: {
       background: 'bg-white/90',
       border: 'border-gray-200',
-      text: 'text-gray-900',
+      text: '#111827',
       subtext: 'text-gray-600',
       buttonText: 'text-gray-600',
       buttonHoverBg: 'hover:bg-gray-100 hover:text-gray-900',
@@ -69,6 +70,7 @@ export const themeTokens: Record<ThemeName, ThemeTokens> = {
       controlBorder: 'border-gray-200',
       controlShadow: 'shadow-lg',
       labelBackground: 'rgba(255,255,255,0.85)',
+      infoBackground: 'rgba(255,255,255)',
       labelText: '#111827',
       labelMuted: '#6b7280',
       labelReagents: '#2563eb',
@@ -118,6 +120,7 @@ export const themeTokens: Record<ThemeName, ThemeTokens> = {
       controlBorder: 'border-neutral-800',
       controlShadow: 'shadow-lg',
       labelBackground: 'rgba(17,17,17,0.9)',
+      infoBackground: 'rgba(17,17,17)',
       labelText: '#f4f4f5',
       labelMuted: '#a1a1aa',
       labelReagents: '#f97316',

@@ -1,10 +1,17 @@
 import { BaseEdge, EdgeLabelRenderer, getBezierPath, type EdgeProps } from 'reactflow';
 import { useTheme } from '../theme';
 
-type CustomEdgeData = {
-    label?: string;
+export type ReactionInfo = {
     reagents?: string;
     conditions?: string;
+    mechanism?: string;
+    equation?: string;
+};
+
+export type CustomEdgeData = {
+    label?: string;
+    reactionInfo?: ReactionInfo;
+    onShowInfo?: () => void;
 };
 
 export default function CustomEdge({
@@ -33,6 +40,7 @@ export default function CustomEdge({
         ...(style ?? {}),
         stroke: style?.stroke ?? tokens.flow.edgeStroke,
         strokeWidth: style?.strokeWidth ?? 2,
+        cursor: 'pointer',
     };
 
     return (
@@ -54,23 +62,36 @@ export default function CustomEdge({
                         padding: '2px 4px',
                         borderRadius: 4,
                         fontFamily: 'sans-serif',
-                        lineHeight: 1,
+                        lineHeight: 1.2,
                         textAlign: 'center',
                         color: tokens.flow.labelText,
                         backdropFilter: 'blur(4px)',
                         border: `1px solid ${tokens.flow.labelBorder}`,
+                        cursor: 'pointer',
                     }}
                     className="nodrag nopan"
+                    role="button"
+                    tabIndex={0}
+                    onClick={(event) => {
+                        event.stopPropagation();
+                        data?.onShowInfo?.();
+                    }}
+                    onKeyDown={(event) => {
+                        if (event.key === 'Enter' || event.key === ' ') {
+                            event.preventDefault();
+                            data?.onShowInfo?.();
+                        }
+                    }}
                 >
-                    {data?.reagents && (
-                        <div style={{ fontSize: 8, fontWeight: 600, color: tokens.flow.labelReagents }}>
-                            [{data.reagents}]
+                    {data?.reactionInfo?.reagents && (
+                        <div style={{ fontSize: 10, fontWeight: 600, color: tokens.flow.labelReagents }}>
+                            [{data.reactionInfo.reagents}]
                         </div>
                     )}
-                    <div style={{ fontSize: 10, fontWeight: 700 }}>{data?.label}</div>
-                    {data?.conditions && (
-                        <div style={{ fontSize: 8, fontStyle: 'italic', color: tokens.flow.labelMuted }}>
-                            ({data.conditions})
+                    <div style={{ fontSize: 12, fontWeight: 700 }}>{data?.label}</div>
+                    {data?.reactionInfo?.conditions && (
+                        <div style={{ fontSize: 10, fontStyle: 'italic', color: tokens.flow.labelMuted }}>
+                            ({data.reactionInfo.conditions})
                         </div>
                     )}
                 </div>

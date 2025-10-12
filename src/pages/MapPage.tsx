@@ -1,18 +1,22 @@
-import { useMemo } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import ReactFlow, {
   Background,
   BackgroundVariant,
   Controls,
   Edge,
+  type EdgeMouseHandler,
   MarkerType,
   Node,
+  type NodeMouseHandler,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 
 import NodeChemical, { HandleDirection } from '../components/NodeChemical';
+import type { ChemicalNodeData } from '../components/NodeChemical';
 import data from '../data/jee_organic.json';
-import CustomEdge from '../components/CustomEdge';
+import CustomEdge, { type CustomEdgeData, type ReactionInfo } from '../components/CustomEdge';
 import { useTheme } from '../theme';
+import InfoPanel, { type SelectedInfo } from '../components/InfoPanel';
 
 /**
  * Main React Flow visualization page for the chemistry map
@@ -35,10 +39,24 @@ const edgeTypes = {
 const MapPage = () => {
   const { tokens, isDark } = useTheme();
 
+  const [selectedInfo, setSelectedInfo] = useState<SelectedInfo | null>(null);
+
+  const handleNodeInfo = useCallback((payload: ChemicalNodeData) => {
+    setSelectedInfo({ type: 'node', payload });
+  }, []);
+
+  const handleEdgeInfo = useCallback((payload: { label: string; reactionInfo: ReactionInfo }) => {
+    setSelectedInfo({ type: 'edge', payload });
+  }, []);
+
+  const handleClearSelection = useCallback(() => {
+    setSelectedInfo(null);
+  }, []);
+
   // Transform JSON data to React Flow format
   const { nodes: initialNodes, edges: initialEdges } = useMemo<{
     nodes: Node[];
-    edges: Edge[];
+    edges: Edge<CustomEdgeData>[];
   }>(() => {
     const nodePositions = new Map(
       data.nodes.map((node) => [node.id, node.position]),
@@ -84,7 +102,7 @@ const MapPage = () => {
       return dy >= 0 ? 'bottom' : 'top';
     };
 
-    const edges: Edge[] = data.edges.map((edge) => {
+    const edges: Edge<CustomEdgeData>[] = data.edges.map((edge) => {
       const sourcePosition = nodePositions.get(edge.source);
       const targetPosition = nodePositions.get(edge.target);
 
@@ -98,6 +116,16 @@ const MapPage = () => {
       ensureHandleSet(sourceHandlesMap, edge.source).add(direction);
       ensureHandleSet(targetHandlesMap, edge.target).add(targetDirection);
 
+      const reactionDetail = {
+        label: edge.label,
+        reactionInfo: {
+          reagents: edge.reactionInfo.reagents,
+          conditions: edge.reactionInfo.conditions,
+          mechanism: edge.reactionInfo.mechanism,
+          equation: edge.reactionInfo.equation,
+        },
+      };
+
       return {
         id: edge.id,
         source: edge.source,
@@ -106,9 +134,9 @@ const MapPage = () => {
         sourceHandle: `source-${direction}`,
         targetHandle: `target-${targetDirection}`,
         data: {
-          reagents: edge.reactionInfo.reagents,
           label: edge.label,
-          conditions: edge.reactionInfo.conditions,
+          reactionInfo: reactionDetail.reactionInfo,
+          onShowInfo: () => handleEdgeInfo(reactionDetail),
         },
       };
     });
@@ -138,7 +166,24 @@ const MapPage = () => {
     });
 
     return { nodes, edges };
-  }, []);
+  }, [handleEdgeInfo]);
+
+  const handleNodeClick = useCallback<NodeMouseHandler>(
+    (_event, node) => {
+      handleNodeInfo(node.data);
+    },
+    [handleNodeInfo],
+  );
+
+  const handleEdgeClick = useCallback<EdgeMouseHandler>(
+    (_event, edge) => {
+      handleEdgeInfo({
+        label: edge.data?.label ?? edge.label ?? 'Reaction',
+        reactionInfo: edge.data?.reactionInfo ?? {},
+      });
+    },
+    [handleEdgeInfo],
+  );
 
   const edgeOptions = useMemo(
     () => ({
@@ -176,6 +221,9 @@ const MapPage = () => {
         nodeTypes={nodeTypes}
         edgeTypes={edgeTypes}
         defaultEdgeOptions={edgeOptions}
+        onNodeClick={handleNodeClick}
+        onEdgeClick={handleEdgeClick}
+        onPaneClick={handleClearSelection}
         fitView
         fitViewOptions={{
           padding: 0.2,
@@ -223,6 +271,8 @@ const MapPage = () => {
           }
         }
       `}</style>
+
+      <InfoPanel selected={selectedInfo} onClose={handleClearSelection} />
     </div>
   );
 };
