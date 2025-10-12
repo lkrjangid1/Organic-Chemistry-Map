@@ -1,4 +1,4 @@
-import { X, Molecule, Flask, Info, Search } from 'lucide-react';
+import { X, Search } from 'lucide-react';
 import { useState } from 'react';
 
 /**
@@ -11,7 +11,7 @@ import { useState } from 'react';
  */
 
 const SidePanel = () => {
-  const [isPanelOpen, setIsPanelOpen] = useState(true);
+  const [isPanelOpen, setIsPanelOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [reactionFilter, setReactionFilter] = useState('All');
 

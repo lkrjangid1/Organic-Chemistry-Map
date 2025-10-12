@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import SidePanel from './components/SidePanel';
 import MapPage from './pages/MapPage';
 import { useTheme } from './theme';
 
@@ -25,7 +26,7 @@ function App() {
         <MapPage />
 
         {/* Side panel for compound/reaction information */}
-        {/* <SidePanel /> */}
+        <SidePanel />
       </main>
     </div>
   );
