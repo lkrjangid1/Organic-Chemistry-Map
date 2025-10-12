@@ -48,17 +48,6 @@ const Header = () => {
             </button>
 
             <button
-              onClick={() => {
-                alert('Organic Chemistry Map v1.0\n\nAn interactive visualization tool for exploring organic chemistry reactions and compounds. Built with React Flow and SMILES Drawer.');
-              }}
-              className={`flex items-center space-x-1 px-3 py-1.5 text-sm rounded-md transition-colors duration-200 ${tokens.header.buttonText} ${tokens.header.buttonHoverBg}`}
-              title="About this app"
-            >
-              <Info className="w-4 h-4" />
-              <span className="hidden sm:inline">About</span>
-            </button>
-
-            <button
               onClick={toggleTheme}
               className={`flex items-center space-x-1 px-3 py-1.5 text-sm rounded-md transition-colors duration-200 ${tokens.header.buttonText} ${tokens.header.buttonHoverBg}`}
               title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
