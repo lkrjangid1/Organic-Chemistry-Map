@@ -102,7 +102,7 @@
         "notes": "Food preservative, occurs naturally in berries",
         "properties": "White crystalline solid, slightly soluble in water"
       },
-      "position": { "x": 300, "y": -200 }
+      "position": { "x": 400, "y": -200 }
     },
     {
       "id": "benzaldehyde",
@@ -115,7 +115,7 @@
         "notes": "Artificial almond flavoring, precursor to many compounds",
         "properties": "Colorless liquid, bitter almond odor"
       },
-      "position": { "x": 450, "y": -200 }
+      "position": { "x": 700, "y": -200 }
     },
     {
       "id": "acetanilide",
@@ -128,7 +128,7 @@
         "notes": "Analgesic drug, predecessor to paracetamol",
         "properties": "White crystalline solid, odorless"
       },
-      "position": { "x": 750, "y": 0 }
+      "position": { "x": 900, "y": 0 }
     },
     {
       "id": "p_nitroaniline",
@@ -154,7 +154,7 @@
         "notes": "Used in dye production and as analytical reagent",
         "properties": "White crystalline solid, water soluble"
       },
-      "position": { "x": 750, "y": 200 }
+      "position": { "x": 800, "y": 200 }
     },
     {
       "id": "diphenylamine",
@@ -167,7 +167,7 @@
         "notes": "Antioxidant, used in propellants and plastics",
         "properties": "Colorless to pale yellow crystalline solid"
       },
-      "position": { "x": 450, "y": 200 }
+      "position": { "x": 400, "y": 200 }
     }
   ],
   "edges": [
