@@ -15,7 +15,7 @@ import 'reactflow/dist/style.css';
 
 import NodeChemical, { HandleDirection } from '../components/NodeChemical';
 import type { ChemicalNodeData } from '../components/NodeChemical';
-import data from '../data/jee_organic.json';
+import { useOrganicData } from '../data/OrganicDataContext';
 import CustomEdge, { type CustomEdgeData, type ReactionInfo } from '../components/CustomEdge';
 import { useTheme } from '../theme';
 import InfoPanel, { type SelectedInfo } from '../components/InfoPanel';
@@ -43,6 +43,12 @@ const VIEWPORT_STORAGE_KEY = 'ocm:viewport';
 
 const MapPage = () => {
   const { tokens, isDark } = useTheme();
+  const {
+    data: organicData,
+    loading: isOrganicDataLoading,
+    error: organicDataError,
+    reload: reloadOrganicData,
+  } = useOrganicData();
 
   const setNodes = useMapStore((state) => state.setNodes);
   const setEdges = useMapStore((state) => state.setEdges);
@@ -85,8 +91,15 @@ const MapPage = () => {
     nodes: Node[];
     edges: Edge<CustomEdgeData>[];
   }>(() => {
+    if (!organicData) {
+      return {
+        nodes: [],
+        edges: [],
+      };
+    }
+
     const nodePositions = new Map(
-      data.nodes.map((node) => [node.id, node.position]),
+      organicData.nodes.map((node) => [node.id, node.position]),
     );
 
     const sourceHandlesMap = new Map<string, Set<HandleDirection>>();
@@ -129,7 +142,7 @@ const MapPage = () => {
       return dy >= 0 ? 'bottom' : 'top';
     };
 
-    const edges: Edge<CustomEdgeData>[] = data.edges.map((edge) => {
+    const edges: Edge<CustomEdgeData>[] = organicData.edges.map((edge) => {
       const sourcePosition = nodePositions.get(edge.source);
       const targetPosition = nodePositions.get(edge.target);
 
@@ -176,7 +189,7 @@ const MapPage = () => {
       return customEdge;
     });
 
-    const nodes: Node[] = data.nodes.map((node) => {
+    const nodes: Node[] = organicData.nodes.map((node) => {
       const sourceHandles = sourceHandlesMap.get(node.id);
       const targetHandles = targetHandlesMap.get(node.id);
 
@@ -201,7 +214,7 @@ const MapPage = () => {
     });
 
     return { nodes, edges };
-  }, [setSelectedEdge]);
+  }, [organicData, setSelectedEdge]);
 
   useEffect(() => {
     setNodes(initialNodes as Node<ChemicalNodeData>[]);
@@ -317,6 +330,10 @@ const MapPage = () => {
     ? 'rgba(250, 204, 21, 0.75)'
     : 'rgba(245, 158, 11, 0.8)';
 
+  const isInitialLoading = isOrganicDataLoading && initialNodes.length === 0;
+  const isInitialError =
+    !!organicDataError && initialNodes.length === 0 && !isOrganicDataLoading;
+
   return (
     <div
       className="relative w-full transition-colors duration-300"
@@ -326,41 +343,75 @@ const MapPage = () => {
         minHeight: 'calc(100dvh - var(--ocm-header-height, 3.5rem))',
       }}
     >
-      <ReactFlow
-        nodes={initialNodes}
-        edges={initialEdges}
-        nodeTypes={nodeTypes}
-        edgeTypes={edgeTypes}
-        defaultEdgeOptions={edgeOptions}
-        onNodeClick={handleNodeClick}
-        onEdgeClick={handleEdgeClick}
-        onPaneClick={clearSelection}
-        onInit={handleInit}
-        minZoom={0.1}
-        maxZoom={8}
-        onMoveEnd={handleMoveEnd}
-        attributionPosition="bottom-left"
-        className="text-slate-900 dark:text-neutral-100 transition-colors duration-300 h-full"
-        style={{
-          background: tokens.flow.background,
-          width: '100%',
-          height: '100%',
-        }}
-      >
-        {/* Background pattern */}
-        <Background
-          variant={BackgroundVariant.Dots}
-          gap={20}
-          size={1}
-          color={tokens.flow.backgroundPattern}
-        />
+      {isInitialLoading || isInitialError ? (
+        <div
+          className="flex h-full w-full flex-col items-center justify-center gap-3 text-center text-slate-700 dark:text-neutral-200 transition-colors duration-300"
+          style={{
+            background: tokens.flow.background,
+          }}
+        >
+          <p className="text-base font-semibold sm:text-lg">
+            {isInitialLoading
+              ? 'Loading organic chemistry map...'
+              : 'Unable to load organic chemistry map.'}
+          </p>
+          {isInitialError && (
+            <>
+              <p className="max-w-md text-sm opacity-80 sm:text-base">
+                {organicDataError?.message ?? 'Please try again in a moment.'}
+              </p>
+              <button
+                type="button"
+                onClick={reloadOrganicData}
+                className="rounded-md px-4 py-2 text-sm font-medium transition-transform duration-200 hover:scale-[1.02]"
+                style={{
+                  background: tokens.actions.primary.background,
+                  color: tokens.actions.primary.text,
+                  boxShadow: tokens.actions.primary.shadow,
+                }}
+              >
+                Try again
+              </button>
+            </>
+          )}
+        </div>
+      ) : (
+        <ReactFlow
+          nodes={initialNodes}
+          edges={initialEdges}
+          nodeTypes={nodeTypes}
+          edgeTypes={edgeTypes}
+          defaultEdgeOptions={edgeOptions}
+          onNodeClick={handleNodeClick}
+          onEdgeClick={handleEdgeClick}
+          onPaneClick={clearSelection}
+          onInit={handleInit}
+          minZoom={0.1}
+          maxZoom={8}
+          onMoveEnd={handleMoveEnd}
+          attributionPosition="bottom-left"
+          className="text-slate-900 dark:text-neutral-100 transition-colors duration-300 h-full"
+          style={{
+            background: tokens.flow.background,
+            width: '100%',
+            height: '100%',
+          }}
+        >
+          {/* Background pattern */}
+          <Background
+            variant={BackgroundVariant.Dots}
+            gap={20}
+            size={1}
+            color={tokens.flow.backgroundPattern}
+          />
 
-        {/* Navigation controls */}
-        <Controls
-          position="bottom-left"
-          className={`backdrop-blur-sm border rounded-lg transition-all duration-300 ${tokens.flow.controlBackground} ${tokens.flow.controlBorder} ${tokens.flow.controlShadow} text-slate-700 dark:text-neutral-200`}
-        />
-      </ReactFlow>
+          {/* Navigation controls */}
+          <Controls
+            position="bottom-left"
+            className={`backdrop-blur-sm border rounded-lg transition-all duration-300 ${tokens.flow.controlBackground} ${tokens.flow.controlBorder} ${tokens.flow.controlShadow} text-slate-700 dark:text-neutral-200`}
+          />
+        </ReactFlow>
+      )}
 
       {/* Custom styles for highlighted nodes */}
       <style>{`

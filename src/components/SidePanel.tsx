@@ -1,7 +1,7 @@
 import { X, Search, Beaker, GitBranch, Download, CheckCircle2 } from 'lucide-react';
 import { useMemo, useState, useEffect } from 'react';
 
-import data from '../data/jee_organic.json';
+import { useOrganicData, type OrganicNode } from '../data/OrganicDataContext';
 import { usePWAInstall } from '../pwa/PWAInstallProvider';
 import { useMapStore } from '../store/useMapStore';
 import { useTheme } from '../theme';
@@ -41,6 +41,11 @@ const SidePanel = () => {
   const focusElement = useMapStore((state) => state.focusElement);
   const setStorePanelOpen = useMapStore((state) => state.setIsPanelOpen);
   const { tokens, isDark } = useTheme();
+  const {
+    data: organicData,
+    loading: isOrganicDataLoading,
+    error: organicDataError,
+  } = useOrganicData();
   const { canInstall, hasInstalled, requestInstall, openPrompt } = usePWAInstall();
 
   const panelTokens = tokens.panel;
@@ -50,23 +55,25 @@ const SidePanel = () => {
   }, [isPanelOpen, setStorePanelOpen]);
 
   const nodeLookup = useMemo(() => {
-    const entries = new Map<string, (typeof data.nodes)[number]>();
-    data.nodes.forEach((node) => {
-      entries.set(node.id, node);
-    });
+    const entries = new Map<string, OrganicNode>();
+    if (organicData) {
+      organicData.nodes.forEach((node) => {
+        entries.set(node.id, node);
+      });
+    }
     return entries;
-  }, []);
+  }, [organicData]);
 
   const { nodeSuggestions, edgeSuggestions } = useMemo(() => {
     const trimmed = searchQuery.trim().toLowerCase();
-    if (!trimmed) {
+    if (!trimmed || !organicData) {
       return { nodeSuggestions: [] as Suggestion[], edgeSuggestions: [] as Suggestion[] };
     }
 
     const containsQuery = (value?: string) =>
       value ? value.toLowerCase().includes(trimmed) : false;
 
-    const nodes = data.nodes
+    const nodes = organicData.nodes
       .filter(
         (node) =>
           containsQuery(node.label) ||
@@ -84,7 +91,7 @@ const SidePanel = () => {
         description: node.info.iupac,
       }));
 
-    const edges = data.edges
+    const edges = organicData.edges
       .filter((edge) => {
         const { reactionInfo } = edge;
         return (
@@ -111,7 +118,7 @@ const SidePanel = () => {
       });
 
     return { nodeSuggestions: nodes, edgeSuggestions: edges };
-  }, [nodeLookup, searchQuery]);
+  }, [nodeLookup, organicData, searchQuery]);
 
   const handleSearchChange = (value: string) => {
     setSearchQuery(value);
@@ -217,7 +224,14 @@ const SidePanel = () => {
               value={searchQuery}
               onFocus={() => setShowSuggestions(true)}
               onChange={(e) => handleSearchChange(e.target.value)}
-              placeholder="Search for compounds or reactions..."
+              placeholder={
+                isOrganicDataLoading
+                  ? 'Loading dataset...'
+                  : organicDataError
+                    ? 'Map data unavailable'
+                    : 'Search for compounds or reactions...'
+              }
+              disabled={!organicData}
               className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder:text-slate-400 dark:placeholder:text-neutral-500"
               style={{
                 background: panelTokens.inputBackground,
@@ -225,7 +239,17 @@ const SidePanel = () => {
                 color: panelTokens.text,
               }}
             />
-            {searchQuery.trim() && showSuggestions && (
+            {!organicData && (isOrganicDataLoading || organicDataError) && (
+              <p
+                className="mt-2 text-xs"
+                style={{ color: panelTokens.textMuted }}
+              >
+                {isOrganicDataLoading
+                  ? 'Loading organic chemistry dataset...'
+                  : 'Dataset unavailable. Try reloading the map.'}
+              </p>
+            )}
+            {searchQuery.trim() && showSuggestions && organicData && (
               <div
                 className="mt-2 border rounded-lg shadow-lg divide-y max-h-60 overflow-y-auto"
                 style={{
