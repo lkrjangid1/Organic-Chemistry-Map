@@ -36,7 +36,7 @@ const Header = () => {
           {/* Navigation */}
           <nav className="flex items-center space-x-4">
             <button
-              onClick={() => window.open('https://github.com', '_blank')}
+              onClick={() => window.open('https://github.com/lkrjangid1/Organic-Chemistry-Map', '_blank')}
               className={`flex items-center space-x-1 px-3 py-1.5 text-sm rounded-md transition-colors duration-200 ${tokens.header.buttonText} ${tokens.header.buttonHoverBg}`}
               title="View on GitHub"
             >
