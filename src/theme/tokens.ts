@@ -82,7 +82,7 @@ export const themeTokens: Record<ThemeName, ThemeTokens> = {
       borderSelected: '#3b82f6',
       ring: 'rgba(191, 219, 254, 0.8)',
       text: '#1f2937',
-      smilesBackground: '#ffffff',
+      smilesBackground: 'transparent',
       smilesBorder: '#e5e7eb',
       smilesBond: '#1f2933',
       smilesPalette: {
@@ -131,7 +131,7 @@ export const themeTokens: Record<ThemeName, ThemeTokens> = {
       borderSelected: '#f97316',
       ring: 'rgba(250, 204, 21, 0.35)',
       text: '#f4f4f5',
-      smilesBackground: '#09090b',
+      smilesBackground: 'transparent',
       smilesBorder: '#27272a',
       smilesBond: '#f4f4f5',
       smilesPalette: {

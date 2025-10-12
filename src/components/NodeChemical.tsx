@@ -34,14 +34,13 @@ const NodeChemical = memo(({ data, selected }: ChemicalNodeProps) => {
     <div
       className="rounded-lg border transition-all duration-300 p-2 sm:p-3"
       style={{
-        backgroundColor: tokens.node.background,
-        borderColor: selected ? tokens.node.borderSelected : tokens.node.border,
-        borderWidth: selected ? 2 : 1,
-        borderStyle: 'solid',
+        borderColor: selected ? tokens.node.borderSelected : 'transparent',
+        borderWidth: selected ? 1 : 0,
+        padding: 0,
+        margin: 0,
         boxShadow: selected
           ? `0 0 0 3px ${tokens.node.ring}`
-          : '0 8px 18px rgba(15, 23, 42, 0.12)',
-        width: 'clamp(7rem, 34vw, 10.5rem)',
+          : '',
       }}
     >
       {/* Input handle for incoming connections */}
@@ -56,7 +55,7 @@ const NodeChemical = memo(({ data, selected }: ChemicalNodeProps) => {
         <SmilesRenderer
           smiles={data.smiles}
           width={96}
-          height={96}
+          height={86}
           className="border rounded transition-colors duration-300"
         />
       </div>

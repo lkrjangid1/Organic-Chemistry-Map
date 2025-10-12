@@ -166,15 +166,11 @@ const SmilesRenderer = ({
         width,
         height,
         backgroundColor: tokens.node.smilesBackground,
-        borderColor: tokens.node.smilesBorder,
-        borderStyle: 'solid',
-        borderWidth: 1,
+        borderWidth: 0,
       }}
     >
       {isLoading && !svgContent && (
         <div className="text-center">
-          <div className="text-xl mb-1">⚗️</div>
-          <div className="text-xs text-gray-500 dark:text-neutral-300">Loading...</div>
         </div>
       )}
 

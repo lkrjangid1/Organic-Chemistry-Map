@@ -34,7 +34,6 @@ export default function CustomEdge({
                         lineHeight: 1.2,
                         textAlign: 'center',
                         color: tokens.flow.labelText,
-                        boxShadow: tokens.flow.labelShadow,
                         backdropFilter: 'blur(4px)',
                         border: `1px solid ${tokens.flow.labelBorder}`,
                     }}
