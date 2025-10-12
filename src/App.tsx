@@ -1,5 +1,6 @@
 import { ReactFlowProvider } from 'reactflow';
 import Header from './components/Header';
+import InstallPromptDialog from './components/InstallPromptDialog';
 import SidePanel from './components/SidePanel';
 import MapPage from './pages/MapPage';
 import { useTheme } from './theme';
@@ -31,6 +32,8 @@ function App() {
           <SidePanel />
         </ReactFlowProvider>
       </main>
+
+      <InstallPromptDialog />
     </div>
   );
 }

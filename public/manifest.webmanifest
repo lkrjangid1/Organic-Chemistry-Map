@@ -1,0 +1,24 @@
+{
+  "name": "Organic Chemistry Map",
+  "short_name": "OrgChem",
+  "description": "Interactive concept map for mastering organic chemistry reactions and compounds.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icons/ogm_logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/ogm_logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

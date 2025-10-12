@@ -1,7 +1,8 @@
-import { X, Search, Beaker, GitBranch } from 'lucide-react';
+import { X, Search, Beaker, GitBranch, Download, CheckCircle2 } from 'lucide-react';
 import { useMemo, useState, useEffect } from 'react';
 
 import data from '../data/jee_organic.json';
+import { usePWAInstall } from '../pwa/PWAInstallProvider';
 import { useMapStore } from '../store/useMapStore';
 import { useTheme } from '../theme';
 
@@ -40,6 +41,7 @@ const SidePanel = () => {
   const focusElement = useMapStore((state) => state.focusElement);
   const setStorePanelOpen = useMapStore((state) => state.setIsPanelOpen);
   const { tokens, isDark } = useTheme();
+  const { canInstall, hasInstalled, requestInstall, openPrompt } = usePWAInstall();
 
   const panelTokens = tokens.panel;
 
@@ -151,6 +153,18 @@ const SidePanel = () => {
       </div>
     );
   }
+
+  const handleInstallClick = () => {
+    if (hasInstalled) {
+      return;
+    }
+
+    if (canInstall) {
+      void requestInstall();
+    } else {
+      openPrompt();
+    }
+  };
 
   return (
     <div
@@ -342,6 +356,69 @@ const SidePanel = () => {
                 )}
               </div>
             )}
+          </div>
+        </div>
+
+        {/* Install App */}
+        <div
+          className="border-t pt-4"
+          style={{ borderColor: panelTokens.divider }}
+        >
+          <div
+            className="rounded-lg p-3 space-y-3"
+            style={{
+              background: panelTokens.surface,
+              color: panelTokens.text,
+            }}
+          >
+            <div className="flex items-start gap-3">
+              <div
+                className="rounded-lg p-2"
+                style={{
+                  background: panelTokens.surfaceHover,
+                  color: panelTokens.icon,
+                }}
+              >
+                {hasInstalled ? (
+                  <CheckCircle2 className="h-5 w-5" />
+                ) : (
+                  <Download className="h-5 w-5" />
+                )}
+              </div>
+              <div className="space-y-1">
+                <h4
+                  className="font-medium"
+                  style={{ color: panelTokens.heading }}
+                >
+                  Install this app
+                </h4>
+                <p className="text-sm" style={{ color: panelTokens.textMuted }}>
+                  {hasInstalled
+                    ? 'You are all set! Launch the app from your home screen.'
+                    : 'Save the Organic Chemistry Map on your device for quick offline access.'}
+                </p>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={handleInstallClick}
+              disabled={hasInstalled}
+              className="w-full inline-flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-60"
+              style={{
+                background: hasInstalled
+                  ? panelTokens.surface
+                  : tokens.actions.primary.background,
+                color: hasInstalled ? panelTokens.textMuted : tokens.actions.primary.text,
+                boxShadow: hasInstalled ? undefined : tokens.actions.primary.shadow,
+              }}
+            >
+              {hasInstalled
+                ? 'App installed'
+                : canInstall
+                  ? 'Install now'
+                  : 'How to install'}
+            </button>
           </div>
         </div>
 

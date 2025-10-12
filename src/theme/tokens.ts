@@ -64,6 +64,13 @@ type ThemeTokens = {
     surfaceHover: string;
     badgeBackground: string;
   };
+  actions: {
+    primary: {
+      background: string;
+      text: string;
+      shadow: string;
+    };
+  };
 };
 
 export const themeTokens: Record<ThemeName, ThemeTokens> = {
@@ -131,6 +138,13 @@ export const themeTokens: Record<ThemeName, ThemeTokens> = {
       surfaceHover: 'rgba(191, 219, 254, 0.45)',
       badgeBackground: 'rgba(37, 99, 235, 0.1)',
     },
+    actions: {
+      primary: {
+        background: '#2563eb',
+        text: '#f8fafc',
+        shadow: '0 12px 28px rgba(37, 99, 235, 0.25)',
+      },
+    },
   },
   dark: {
     appBackground: 'bg-neutral-950',
@@ -195,6 +209,13 @@ export const themeTokens: Record<ThemeName, ThemeTokens> = {
       surface: 'rgba(39, 39, 42, 0.78)',
       surfaceHover: 'rgba(250, 204, 21, 0.22)',
       badgeBackground: 'rgba(249, 115, 22, 0.15)',
+    },
+    actions: {
+      primary: {
+        background: '#f97316',
+        text: '#111827',
+        shadow: '0 16px 32px rgba(249, 115, 22, 0.35)',
+      },
     },
   },
 };

@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 import { ThemeProvider } from './theme';
+import { PWAInstallProvider } from './pwa/PWAInstallProvider';
+import './pwa/registerServiceWorker';
 
 /**
  * Application entry point
@@ -12,7 +14,9 @@ import { ThemeProvider } from './theme';
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider>
-      <App />
+      <PWAInstallProvider>
+        <App />
+      </PWAInstallProvider>
     </ThemeProvider>
   </StrictMode>,
 );

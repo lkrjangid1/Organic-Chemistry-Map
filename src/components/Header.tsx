@@ -1,4 +1,5 @@
-import { Atom, Github, Info, Moon, Sun } from 'lucide-react';
+import { Github, Info, Moon, Sun } from 'lucide-react';
+import ogmLogo from '../assets/ogm_logo.png';
 import { useTheme } from '../theme';
 
 /**
@@ -20,9 +21,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-14">
           {/* Logo and Title */}
           <div className="flex items-center space-x-3">
-            <div className="flex items-center justify-center w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg">
-              <Atom className="w-5 h-5 text-white" />
-            </div>
+            <img
+              src={ogmLogo}
+              alt="Organic Chemistry Map logo"
+              className="w-10 h-10 rounded-[8px] border border-white/10 shadow-sm object-cover"
+            />
             <div>
               <h1 className={`text-lg font-bold transition-colors duration-300 ${tokens.header.text}`}>
                 Organic Chemistry Map
