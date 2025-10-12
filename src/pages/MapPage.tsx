@@ -8,6 +8,8 @@ import ReactFlow, {
   MarkerType,
   Node,
   type NodeMouseHandler,
+  type ReactFlowInstance,
+  type Viewport,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 
@@ -36,6 +38,8 @@ const nodeTypes = {
 const edgeTypes = {
   custom: CustomEdge,
 };
+
+const VIEWPORT_STORAGE_KEY = 'ocm:viewport';
 
 const MapPage = () => {
   const { tokens, isDark } = useTheme();
@@ -218,6 +222,80 @@ const MapPage = () => {
     [setSelectedEdge],
   );
 
+  const restoreViewport = useCallback(
+    (instance: ReactFlowInstance) => {
+      if (typeof window === 'undefined') {
+        return false;
+      }
+
+      const storedViewport = window.localStorage.getItem(VIEWPORT_STORAGE_KEY);
+      if (!storedViewport) {
+        return false;
+      }
+
+      try {
+        const parsed = JSON.parse(storedViewport) as Partial<Viewport>;
+        if (
+          typeof parsed.x === 'number' &&
+          typeof parsed.y === 'number' &&
+          typeof parsed.zoom === 'number'
+        ) {
+          // Apply the saved viewport after React Flow has finished layout work.
+          requestAnimationFrame(() => {
+            instance.setViewport(
+              {
+                x: parsed.x as number,
+                y: parsed.y as number,
+                zoom: parsed.zoom as number,
+              },
+              { duration: 0 },
+            );
+          });
+          return true;
+        }
+      } catch {
+        // Ignore malformed data and fall back to default fit view
+      }
+
+      return false;
+    },
+    [],
+  );
+
+  const handleInit = useCallback(
+    (instance: ReactFlowInstance) => {
+      setReactFlowInstance(instance);
+
+      const restored = restoreViewport(instance);
+      if (!restored) {
+        // Default behavior matches previous fitView configuration
+        requestAnimationFrame(() => {
+          instance.fitView({
+            padding: 0.2,
+            includeHiddenNodes: false,
+            duration: 400,
+          });
+        });
+      }
+    },
+    [restoreViewport, setReactFlowInstance],
+  );
+
+  const handleMoveEnd = useCallback(
+    (_event: unknown, viewport: Viewport) => {
+      if (typeof window === 'undefined') {
+        return;
+      }
+
+      const { x, y, zoom } = viewport;
+      window.localStorage.setItem(
+        VIEWPORT_STORAGE_KEY,
+        JSON.stringify({ x, y, zoom }),
+      );
+    },
+    [],
+  );
+
   const edgeOptions = useMemo(
     () => ({
       animated: false,
@@ -257,14 +335,10 @@ const MapPage = () => {
         onNodeClick={handleNodeClick}
         onEdgeClick={handleEdgeClick}
         onPaneClick={clearSelection}
-        fitView
-        fitViewOptions={{
-          padding: 0.2,
-          includeHiddenNodes: false,
-        }}
-        onInit={setReactFlowInstance}
+        onInit={handleInit}
         minZoom={0.1}
         maxZoom={8}
+        onMoveEnd={handleMoveEnd}
         attributionPosition="bottom-left"
         className="text-slate-900 dark:text-neutral-100 transition-colors duration-300 h-full"
         style={{
