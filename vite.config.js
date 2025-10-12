@@ -10,4 +10,9 @@ export default defineConfig({
       },
     }),
   ],
+  server: {
+    allowedHosts: [
+      'dazedly-combative-alisson.ngrok-free.dev',
+    ],
+  },
 })
