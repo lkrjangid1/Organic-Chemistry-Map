@@ -34,7 +34,7 @@ chem-map/
 │   ├── components/
 │   │   ├── NodeChemical.tsx       # Custom node rendering with SMILES Drawer
 │   │   ├── ReactionEdge.tsx       # Custom edge with labels (reagents, conditions)
-│   │   ├── SidePanel.tsx          # Displays compound or reaction details
+│   │   ├── SidePanel.tsx          # Theme-aware search & detail panel with fly-to controls
 │   │   ├── Controls.tsx           # Zoom, filter, reset, and search controls
 │   │   └── Header.tsx             # Optional app header
 │   ├── data/
@@ -125,10 +125,12 @@ Each **edge** represents a chemical transformation.
 
 * When user selects two nodes, highlight all possible reaction paths between them.
 
-### 🔹 Info Side Panel
+### 🔹 Info & Search Side Panel
 
-* Shows:
-
+* Theme-aware surface that adapts to light/dark tokens from `useTheme()`.
+* Live search with grouped suggestions for compounds and reactions.
+* Selecting a suggestion triggers a smooth zoom-to-element animation.
+* Presents:
   * Chemical name & formula
   * SMILES
   * Related reactions (in/out edges)
@@ -229,7 +231,7 @@ export const useMapStore = create((set) => ({
 * Light background (`bg-slate-50` or `bg-gray-100`)
 * Nodes use rounded cards with shadow
 * Consistent typography for chemical labels
-* SidePanel uses glass effect (`bg-white/80 backdrop-blur`)
+* SidePanel uses theme tokens instead of hard-coded colors; rely on `tokens.panel.*`.
 * Respect the light/dark theme system:
   * Theme tokens live in `src/theme/tokens.ts`; extend these instead of hard-coding colors.
   * Wrap new UI in the existing `ThemeProvider` (see `src/main.tsx`) and consume via `useTheme()` when component-specific tokens are required.

@@ -21,15 +21,20 @@ An interactive, zoomable map of organic chemistry reactions designed for JEE Adv
 - Rich metadata including IUPAC names, formulae, and notes
 - Visual state highlighting for the active pathway
 
-### Search and Filter (planned)
-- Search compounds by label, formula, or IUPAC name
-- Filter reactions by transformation type (e.g., nitration, oxidation)
-- Highlight shortest paths to trace reaction routes
+### Search and Filter
+- Live search suggestions for compounds and reactions with quick jump navigation
+- Google Maps-style fly-to animation that zooms directly to the selected node or edge
+- Reaction type filtering to narrow the visible network
 
 ### Responsive Design
 - Mobile friendly layout with safe-area padding and fixed header
 - Consistent React Flow controls across screen sizes
 - Tailwind CSS theming with coordinated light and dark palettes
+
+### Contextual Side Panel
+- Theme-aware glassmorphism shell that automatically adapts to light and dark palettes
+- Grouped “Compounds” and “Reactions” suggestion lists with chem-specific iconography
+- Inline controls for reaction filters plus quick tips for map interaction
 
 ## Quick Start
 
@@ -77,7 +82,7 @@ src/
 ├── components/           # Reusable UI building blocks
 │   ├── Header.tsx        # Top navigation and theme toggle
 │   ├── NodeChemical.tsx  # Custom React Flow node for compounds
-│   ├── SidePanel.tsx     # (Planned) contextual information panel
+│   ├── SidePanel.tsx     # Theme-aware search and detail panel
 │   └── SmilesRenderer.tsx# SMILES Drawer integration
 ├── data/                 # Static JSON describing nodes and reactions
 │   └── jee_organic.json
