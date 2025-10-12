@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo } from 'react';
 import ReactFlow, {
   Background,
   BackgroundVariant,
@@ -17,6 +17,7 @@ import data from '../data/jee_organic.json';
 import CustomEdge, { type CustomEdgeData, type ReactionInfo } from '../components/CustomEdge';
 import { useTheme } from '../theme';
 import InfoPanel, { type SelectedInfo } from '../components/InfoPanel';
+import { useMapStore } from '../store/useMapStore';
 
 /**
  * Main React Flow visualization page for the chemistry map
@@ -39,19 +40,41 @@ const edgeTypes = {
 const MapPage = () => {
   const { tokens, isDark } = useTheme();
 
-  const [selectedInfo, setSelectedInfo] = useState<SelectedInfo | null>(null);
+  const setNodes = useMapStore((state) => state.setNodes);
+  const setEdges = useMapStore((state) => state.setEdges);
+  const setSelectedNode = useMapStore((state) => state.setSelectedNode);
+  const setSelectedEdge = useMapStore((state) => state.setSelectedEdge);
+  const clearSelection = useMapStore((state) => state.clearSelection);
+  const setReactFlowInstance = useMapStore((state) => state.setReactFlowInstance);
+  const selectedNode = useMapStore((state) => state.selectedNode);
+  const selectedEdge = useMapStore((state) => state.selectedEdge);
 
-  const handleNodeInfo = useCallback((payload: ChemicalNodeData) => {
-    setSelectedInfo({ type: 'node', payload });
-  }, []);
+  useEffect(() => {
+    return () => {
+      setReactFlowInstance(null);
+    };
+  }, [setReactFlowInstance]);
 
-  const handleEdgeInfo = useCallback((payload: { label: string; reactionInfo: ReactionInfo }) => {
-    setSelectedInfo({ type: 'edge', payload });
-  }, []);
+  const selectedInfo: SelectedInfo | null = useMemo(() => {
+    if (selectedNode?.data) {
+      return { type: 'node', payload: selectedNode.data };
+    }
 
-  const handleClearSelection = useCallback(() => {
-    setSelectedInfo(null);
-  }, []);
+    if (selectedEdge) {
+      const rawLabel = selectedEdge.data?.label ?? selectedEdge.label ?? 'Reaction';
+      const label = typeof rawLabel === 'string' ? rawLabel : String(rawLabel);
+      const reactionInfo: ReactionInfo = {
+        reagents: selectedEdge.data?.reactionInfo?.reagents,
+        conditions: selectedEdge.data?.reactionInfo?.conditions,
+        mechanism: selectedEdge.data?.reactionInfo?.mechanism,
+        equation: selectedEdge.data?.reactionInfo?.equation,
+      };
+
+      return { type: 'edge', payload: { label, reactionInfo } };
+    }
+
+    return null;
+  }, [selectedEdge, selectedNode]);
 
   // Transform JSON data to React Flow format
   const { nodes: initialNodes, edges: initialEdges } = useMemo<{
@@ -126,7 +149,7 @@ const MapPage = () => {
         },
       };
 
-      return {
+      const customEdge: Edge<CustomEdgeData> = {
         id: edge.id,
         source: edge.source,
         target: edge.target,
@@ -136,9 +159,17 @@ const MapPage = () => {
         data: {
           label: edge.label,
           reactionInfo: reactionDetail.reactionInfo,
-          onShowInfo: () => handleEdgeInfo(reactionDetail),
         },
       };
+
+      customEdge.data = {
+        ...customEdge.data,
+        onShowInfo: () => {
+          setSelectedEdge(customEdge);
+        },
+      };
+
+      return customEdge;
     });
 
     const nodes: Node[] = data.nodes.map((node) => {
@@ -166,23 +197,25 @@ const MapPage = () => {
     });
 
     return { nodes, edges };
-  }, [handleEdgeInfo]);
+  }, [setSelectedEdge]);
+
+  useEffect(() => {
+    setNodes(initialNodes as Node<ChemicalNodeData>[]);
+    setEdges(initialEdges);
+  }, [initialEdges, initialNodes, setEdges, setNodes]);
 
   const handleNodeClick = useCallback<NodeMouseHandler>(
     (_event, node) => {
-      handleNodeInfo(node.data);
+      setSelectedNode(node as Node<ChemicalNodeData>);
     },
-    [handleNodeInfo],
+    [setSelectedNode],
   );
 
   const handleEdgeClick = useCallback<EdgeMouseHandler>(
     (_event, edge) => {
-      handleEdgeInfo({
-        label: edge.data?.label ?? edge.label ?? 'Reaction',
-        reactionInfo: edge.data?.reactionInfo ?? {},
-      });
+      setSelectedEdge(edge as Edge<CustomEdgeData>);
     },
-    [handleEdgeInfo],
+    [setSelectedEdge],
   );
 
   const edgeOptions = useMemo(
@@ -223,12 +256,13 @@ const MapPage = () => {
         defaultEdgeOptions={edgeOptions}
         onNodeClick={handleNodeClick}
         onEdgeClick={handleEdgeClick}
-        onPaneClick={handleClearSelection}
+        onPaneClick={clearSelection}
         fitView
         fitViewOptions={{
           padding: 0.2,
           includeHiddenNodes: false,
         }}
+        onInit={setReactFlowInstance}
         minZoom={0.1}
         maxZoom={8}
         attributionPosition="bottom-left"
@@ -272,7 +306,7 @@ const MapPage = () => {
         }
       `}</style>
 
-      <InfoPanel selected={selectedInfo} onClose={handleClearSelection} />
+      <InfoPanel selected={selectedInfo} onClose={clearSelection} />
     </div>
   );
 };

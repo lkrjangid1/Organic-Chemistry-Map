@@ -49,6 +49,21 @@ type ThemeTokens = {
       B: string;
     };
   };
+  panel: {
+    background: string;
+    border: string;
+    shadow: string;
+    text: string;
+    textMuted: string;
+    heading: string;
+    divider: string;
+    icon: string;
+    inputBackground: string;
+    inputBorder: string;
+    surface: string;
+    surfaceHover: string;
+    badgeBackground: string;
+  };
 };
 
 export const themeTokens: Record<ThemeName, ThemeTokens> = {
@@ -101,6 +116,21 @@ export const themeTokens: Record<ThemeName, ThemeTokens> = {
         B: '#d97706',
       },
     },
+    panel: {
+      background: 'rgba(255, 255, 255, 0.92)',
+      border: 'rgba(226, 232, 240, 0.85)',
+      shadow: '0 20px 45px rgba(15, 23, 42, 0.12)',
+      text: '#1f2937',
+      textMuted: '#64748b',
+      heading: '#0f172a',
+      divider: 'rgba(226, 232, 240, 0.7)',
+      icon: '#475569',
+      inputBackground: 'rgba(255, 255, 255, 0.96)',
+      inputBorder: 'rgba(203, 213, 225, 0.85)',
+      surface: 'rgba(248, 250, 252, 0.94)',
+      surfaceHover: 'rgba(191, 219, 254, 0.45)',
+      badgeBackground: 'rgba(37, 99, 235, 0.1)',
+    },
   },
   dark: {
     appBackground: 'bg-neutral-950',
@@ -150,6 +180,21 @@ export const themeTokens: Record<ThemeName, ThemeTokens> = {
         H: '#a1a1aa',
         B: '#fbbf24',
       },
+    },
+    panel: {
+      background: 'rgba(17, 17, 19, 0.88)',
+      border: 'rgba(63, 63, 70, 0.75)',
+      shadow: '0 18px 40px rgba(0, 0, 0, 0.45)',
+      text: '#e4e4e7',
+      textMuted: '#a1a1aa',
+      heading: '#f4f4f5',
+      divider: 'rgba(63, 63, 70, 0.7)',
+      icon: '#d4d4d8',
+      inputBackground: 'rgba(24, 24, 27, 0.88)',
+      inputBorder: 'rgba(63, 63, 70, 0.8)',
+      surface: 'rgba(39, 39, 42, 0.78)',
+      surfaceHover: 'rgba(250, 204, 21, 0.22)',
+      badgeBackground: 'rgba(249, 115, 22, 0.15)',
     },
   },
 };

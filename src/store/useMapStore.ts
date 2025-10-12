@@ -1,41 +1,22 @@
 import { create } from 'zustand';
-import { Node, Edge } from 'reactflow';
+import { Edge, Node, type ReactFlowInstance } from 'reactflow';
+
+import type { ChemicalNodeData } from '../components/NodeChemical';
+import type { CustomEdgeData } from '../components/CustomEdge';
 
 /**
  * Zustand store for managing the chemistry map application state
  * Handles selected nodes, filters, search, and path highlighting
  */
 
-interface ChemicalNodeData {
-  label: string;
-  smiles: string;
-  info: {
-    formula: string;
-    iupac: string;
-    notes?: string;
-    properties?: string;
-  };
-}
-
-interface ReactionEdgeData {
-  label: string;
-  type: string;
-  reactionInfo: {
-    reagents: string;
-    conditions: string;
-    mechanism: string;
-    equation: string;
-  };
-}
-
 export interface MapState {
   // Node and edge data
   nodes: Node<ChemicalNodeData>[];
-  edges: Edge<ReactionEdgeData>[];
+  edges: Edge<CustomEdgeData>[];
 
   // Selection and interaction
   selectedNode: Node<ChemicalNodeData> | null;
-  selectedEdge: Edge<ReactionEdgeData> | null;
+  selectedEdge: Edge<CustomEdgeData> | null;
 
   // Filtering and search
   reactionFilter: string | null;
@@ -45,18 +26,23 @@ export interface MapState {
   // UI state
   isPanelOpen: boolean;
 
+  // React Flow instance
+  reactFlowInstance: ReactFlowInstance | null;
+
   // Actions
   setNodes: (nodes: Node<ChemicalNodeData>[]) => void;
-  setEdges: (edges: Edge<ReactionEdgeData>[]) => void;
+  setEdges: (edges: Edge<CustomEdgeData>[]) => void;
   setSelectedNode: (node: Node<ChemicalNodeData> | null) => void;
-  setSelectedEdge: (edge: Edge<ReactionEdgeData> | null) => void;
+  setSelectedEdge: (edge: Edge<CustomEdgeData> | null) => void;
   setReactionFilter: (filter: string | null) => void;
   setSearchQuery: (query: string) => void;
   setHighlightedPath: (path: string[]) => void;
   setIsPanelOpen: (isOpen: boolean) => void;
+  setReactFlowInstance: (instance: ReactFlowInstance | null) => void;
+  focusElement: (id: string, type: 'node' | 'edge') => void;
 
   // Computed values
-  getFilteredEdges: () => Edge<ReactionEdgeData>[];
+  getFilteredEdges: () => Edge<CustomEdgeData>[];
   getNodesMatchingSearch: () => Node<ChemicalNodeData>[];
   clearSelection: () => void;
 }
@@ -71,24 +57,73 @@ export const useMapStore = create<MapState>((set, get) => ({
   searchQuery: '',
   highlightedPath: [],
   isPanelOpen: false,
+  reactFlowInstance: null,
 
   // Setters
   setNodes: (nodes) => set({ nodes }),
   setEdges: (edges) => set({ edges }),
 
   setSelectedNode: (node) => {
+    const instance = get().reactFlowInstance;
+
+    if (instance) {
+      instance.setNodes((nodes) =>
+        nodes.map((current) => ({
+          ...current,
+          selected: !!node && current.id === node.id,
+        })),
+      );
+
+      instance.setEdges((edges) =>
+        edges.map((edge) => ({
+          ...edge,
+          selected: false,
+        })),
+      );
+    }
+
+    let nextNode = node;
+    if (instance && node) {
+      nextNode = instance
+        .getNodes()
+        .find((current) => current.id === node.id) as Node<ChemicalNodeData> | undefined ?? node;
+    }
+
     set({
-      selectedNode: node,
+      selectedNode: nextNode ?? null,
       selectedEdge: null,
-      isPanelOpen: !!node
     });
   },
 
   setSelectedEdge: (edge) => {
+    const instance = get().reactFlowInstance;
+
+    if (instance) {
+      instance.setEdges((edges) =>
+        edges.map((current) => ({
+          ...current,
+          selected: !!edge && current.id === edge.id,
+        })),
+      );
+
+      instance.setNodes((nodes) =>
+        nodes.map((node) => ({
+          ...node,
+          selected: false,
+        })),
+      );
+    }
+
+    let nextEdge = edge;
+    if (instance && edge) {
+      nextEdge = instance
+        .getEdges()
+        .find((current) => current.id === edge.id) as Edge<CustomEdgeData> | undefined ?? edge;
+    }
+
     set({
-      selectedEdge: edge,
+      selectedEdge: nextEdge ?? null,
       selectedNode: null,
-      isPanelOpen: !!edge
     });
   },
 
@@ -109,6 +144,50 @@ export const useMapStore = create<MapState>((set, get) => ({
 
   setHighlightedPath: (path) => set({ highlightedPath: path }),
   setIsPanelOpen: (isOpen) => set({ isPanelOpen: isOpen }),
+  setReactFlowInstance: (instance) => set({ reactFlowInstance: instance }),
+
+  focusElement: (id, type) => {
+    const instance = get().reactFlowInstance;
+    if (!instance) return;
+
+    if (type === 'node') {
+      const node = instance.getNode(id) as Node<ChemicalNodeData> | undefined;
+      if (!node) return;
+
+      // Smoothly zoom to the node position
+      instance.fitView({
+        nodes: [node],
+        padding: 0.35,
+        minZoom: 1.4,
+        maxZoom: 2.2,
+        duration: 1000,
+      });
+
+      get().setSelectedNode(node);
+      return;
+    }
+
+    const edge = instance
+      .getEdges()
+      .find((current) => current.id === id) as Edge<CustomEdgeData> | undefined;
+
+    if (!edge) return;
+
+    const sourceNode = instance.getNode(edge.source) as Node<ChemicalNodeData> | undefined;
+    const targetNode = instance.getNode(edge.target) as Node<ChemicalNodeData> | undefined;
+
+    if (!sourceNode || !targetNode) return;
+
+    instance.fitView({
+      nodes: [sourceNode, targetNode],
+      padding: 0.45,
+      minZoom: 1.2,
+      maxZoom: 1.9,
+      duration: 1100,
+    });
+
+    get().setSelectedEdge(edge);
+  },
 
   // Computed getters
   getFilteredEdges: () => {
@@ -116,8 +195,8 @@ export const useMapStore = create<MapState>((set, get) => ({
     if (!reactionFilter) return edges;
 
     return edges.filter(edge =>
-      edge.data?.label.toLowerCase().includes(reactionFilter.toLowerCase()) ||
-      edge.data?.reactionInfo?.mechanism.toLowerCase().includes(reactionFilter.toLowerCase())
+      (edge.data?.label && edge.data.label.toLowerCase().includes(reactionFilter.toLowerCase())) ||
+      (edge.data?.reactionInfo?.mechanism && edge.data.reactionInfo.mechanism.toLowerCase().includes(reactionFilter.toLowerCase()))
     );
   },
 
@@ -134,12 +213,28 @@ export const useMapStore = create<MapState>((set, get) => ({
   },
 
   clearSelection: () => {
+    const instance = get().reactFlowInstance;
+
+    if (instance) {
+      instance.setNodes((nodes) =>
+        nodes.map((node) => ({
+          ...node,
+          selected: false,
+        })),
+      );
+
+      instance.setEdges((edges) =>
+        edges.map((edge) => ({
+          ...edge,
+          selected: false,
+        })),
+      );
+    }
+
     set({
       selectedNode: null,
       selectedEdge: null,
-      isPanelOpen: false,
       highlightedPath: [],
-      searchQuery: ''
     });
   }
 }));

@@ -1,3 +1,4 @@
+import { ReactFlowProvider } from 'reactflow';
 import Header from './components/Header';
 import SidePanel from './components/SidePanel';
 import MapPage from './pages/MapPage';
@@ -22,11 +23,13 @@ function App() {
 
       {/* Main content area with padding for header */}
       <main className="pt-14 text-slate-900 dark:text-neutral-100 transition-colors duration-300">
-        {/* Chemistry map visualization */}
-        <MapPage />
+        <ReactFlowProvider>
+          {/* Chemistry map visualization */}
+          <MapPage />
 
-        {/* Side panel for compound/reaction information */}
-        <SidePanel />
+          {/* Side panel for compound/reaction information */}
+          <SidePanel />
+        </ReactFlowProvider>
       </main>
     </div>
   );
