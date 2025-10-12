@@ -12,6 +12,8 @@ import { useTheme } from '../theme';
  * - Responsive design with hover effects
  */
 
+export type HandleDirection = 'left' | 'right' | 'top' | 'bottom';
+
 interface ChemicalNodeData {
   label: string;
   smiles: string;
@@ -21,14 +23,33 @@ interface ChemicalNodeData {
     notes?: string;
     properties?: string;
   };
+  sourceHandles?: HandleDirection[];
+  targetHandles?: HandleDirection[];
 }
 
-interface ChemicalNodeProps extends NodeProps {
+interface ChemicalNodeProps extends NodeProps<ChemicalNodeData> {
   data: ChemicalNodeData;
 }
 
+const directionToPosition: Record<HandleDirection, Position> = {
+  left: Position.Left,
+  right: Position.Right,
+  top: Position.Top,
+  bottom: Position.Bottom,
+};
+
+const defaultSourceHandles: HandleDirection[] = ['right'];
+const defaultTargetHandles: HandleDirection[] = ['left'];
+
 const NodeChemical = memo(({ data, selected }: ChemicalNodeProps) => {
   const { tokens } = useTheme();
+
+  const uniqueSourceHandles = data.sourceHandles?.length
+    ? Array.from(new Set(data.sourceHandles))
+    : defaultSourceHandles;
+  const uniqueTargetHandles = data.targetHandles?.length
+    ? Array.from(new Set(data.targetHandles))
+    : defaultTargetHandles;
 
   return (
     <div
@@ -43,12 +64,16 @@ const NodeChemical = memo(({ data, selected }: ChemicalNodeProps) => {
           : '',
       }}
     >
-      {/* Input handle for incoming connections */}
-      <Handle
-        type="target"
-        position={Position.Left}
-        className="w-3 h-3 bg-blue-500 border-2 border-slate-100 dark:border-neutral-900 shadow-sm transition-colors duration-300"
-      />
+      {/* Input handles for incoming connections */}
+      {uniqueTargetHandles.map((direction) => (
+        <Handle
+          key={`target-${direction}`}
+          id={`target-${direction}`}
+          type="target"
+          position={directionToPosition[direction]}
+          className="w-3 h-3 bg-blue-500 border-2 border-slate-100 dark:border-neutral-900 shadow-sm transition-colors duration-300"
+        />
+      ))}
 
       {/* Molecular structure display */}
       <div className="flex justify-center mb-2">
@@ -70,12 +95,16 @@ const NodeChemical = memo(({ data, selected }: ChemicalNodeProps) => {
         </h3>
       </div>
 
-      {/* Output handle for outgoing connections */}
-      <Handle
-        type="source"
-        position={Position.Right}
-        className="w-3 h-3 bg-green-500 border-2 border-slate-100 dark:border-neutral-900 shadow-sm transition-colors duration-300"
-      />
+      {/* Output handles for outgoing connections */}
+      {uniqueSourceHandles.map((direction) => (
+        <Handle
+          key={`source-${direction}`}
+          id={`source-${direction}`}
+          type="source"
+          position={directionToPosition[direction]}
+          className="w-3 h-3 bg-green-500 border-2 border-slate-100 dark:border-neutral-900 shadow-sm transition-colors duration-300"
+        />
+      ))}
     </div>
   );
 });

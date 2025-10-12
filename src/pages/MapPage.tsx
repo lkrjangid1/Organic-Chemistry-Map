@@ -3,12 +3,13 @@ import ReactFlow, {
   Background,
   BackgroundVariant,
   Controls,
+  Edge,
   MarkerType,
   Node,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 
-import NodeChemical from '../components/NodeChemical';
+import NodeChemical, { HandleDirection } from '../components/NodeChemical';
 import data from '../data/jee_organic.json';
 import CustomEdge from '../components/CustomEdge';
 import { useTheme } from '../theme';
@@ -35,34 +36,109 @@ const MapPage = () => {
   const { tokens, isDark } = useTheme();
 
   // Transform JSON data to React Flow format
-  const initialNodes: Node[] = useMemo(() => {
-    return data.nodes.map((node) => ({
-      id: node.id,
-      type: 'chemical',
-      position: node.position,
-      data: {
-        label: node.label,
-        smiles: node.smiles,
-        info: node.info,
-      },
-      draggable: false,
-      selectable: true,
-    }));
-  }, []);
+  const { nodes: initialNodes, edges: initialEdges } = useMemo<{
+    nodes: Node[];
+    edges: Edge[];
+  }>(() => {
+    const nodePositions = new Map(
+      data.nodes.map((node) => [node.id, node.position]),
+    );
 
-  const initialEdges = useMemo(() => {
-    return data.edges.map((edge) => ({
-      id: edge.id,
-      source: edge.source,
-      target: edge.target,
-      type: 'custom', // use our custom edge
-      data: {
-        reagents: edge.reactionInfo.reagents,
-        label: edge.label,
-        conditions: edge.reactionInfo.conditions,
-      },
-    }));
-  }, [data.edges]);
+    const sourceHandlesMap = new Map<string, Set<HandleDirection>>();
+    const targetHandlesMap = new Map<string, Set<HandleDirection>>();
+
+    const ensureHandleSet = (
+      map: Map<string, Set<HandleDirection>>,
+      nodeId: string,
+    ) => {
+      if (!map.has(nodeId)) {
+        map.set(nodeId, new Set<HandleDirection>());
+      }
+      return map.get(nodeId)!;
+    };
+
+    const oppositeDirection: Record<HandleDirection, HandleDirection> = {
+      right: 'left',
+      left: 'right',
+      top: 'bottom',
+      bottom: 'top',
+    };
+
+    const determineDirection = (
+      sourcePosition: { x: number; y: number },
+      targetPosition: { x: number; y: number },
+    ): HandleDirection => {
+      const dx = targetPosition.x - sourcePosition.x;
+      const dy = targetPosition.y - sourcePosition.y;
+      const absDx = Math.abs(dx);
+      const absDy = Math.abs(dy);
+
+      if (absDx === 0 && absDy === 0) {
+        return 'right';
+      }
+
+      if (absDx >= absDy) {
+        return dx >= 0 ? 'right' : 'left';
+      }
+
+      return dy >= 0 ? 'bottom' : 'top';
+    };
+
+    const edges: Edge[] = data.edges.map((edge) => {
+      const sourcePosition = nodePositions.get(edge.source);
+      const targetPosition = nodePositions.get(edge.target);
+
+      let direction: HandleDirection = 'right';
+      if (sourcePosition && targetPosition) {
+        direction = determineDirection(sourcePosition, targetPosition);
+      }
+
+      const targetDirection = oppositeDirection[direction];
+
+      ensureHandleSet(sourceHandlesMap, edge.source).add(direction);
+      ensureHandleSet(targetHandlesMap, edge.target).add(targetDirection);
+
+      return {
+        id: edge.id,
+        source: edge.source,
+        target: edge.target,
+        type: 'custom',
+        sourceHandle: `source-${direction}`,
+        targetHandle: `target-${targetDirection}`,
+        data: {
+          reagents: edge.reactionInfo.reagents,
+          label: edge.label,
+          conditions: edge.reactionInfo.conditions,
+        },
+      };
+    });
+
+    const nodes: Node[] = data.nodes.map((node) => {
+      const sourceHandles = sourceHandlesMap.get(node.id);
+      const targetHandles = targetHandlesMap.get(node.id);
+
+      return {
+        id: node.id,
+        type: 'chemical',
+        position: node.position,
+        data: {
+          label: node.label,
+          smiles: node.smiles,
+          info: node.info,
+          sourceHandles: sourceHandles
+            ? Array.from(sourceHandles)
+            : (['right'] as HandleDirection[]),
+          targetHandles: targetHandles
+            ? Array.from(targetHandles)
+            : (['left'] as HandleDirection[]),
+        },
+        draggable: false,
+        selectable: true,
+      };
+    });
+
+    return { nodes, edges };
+  }, []);
 
   const edgeOptions = useMemo(
     () => ({
