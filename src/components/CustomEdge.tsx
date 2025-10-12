@@ -11,15 +11,24 @@ export default function CustomEdge({
     id,
     sourceX,
     sourceY,
+    sourcePosition,
     targetX,
     targetY,
+    targetPosition,
     data,
     markerEnd,
     markerStart,
     style,
 }: EdgeProps<CustomEdgeData>) {
     const { tokens } = useTheme();
-    const [edgePath, labelX, labelY] = getBezierPath({ sourceX, sourceY, targetX, targetY });
+    const [edgePath, labelX, labelY] = getBezierPath({
+        sourceX,
+        sourceY,
+        sourcePosition,
+        targetX,
+        targetY,
+        targetPosition,
+    });
     const computedStyle = {
         ...(style ?? {}),
         stroke: style?.stroke ?? tokens.flow.edgeStroke,
