@@ -1,5 +1,6 @@
 import {
   createContext,
+  useCallback,
   useContext,
   useEffect,
   useMemo,
@@ -47,11 +48,15 @@ export interface OrganicData {
   edges: OrganicEdge[];
 }
 
+export type OrganicDataSource = 'remote' | 'local';
+
 export interface OrganicDataContextValue {
   data: OrganicData | null;
   loading: boolean;
   error: Error | null;
   reload: () => void;
+  loadLocalData: (data: OrganicData) => void;
+  source: OrganicDataSource;
 }
 
 export const ORGANIC_DATA_URL =
@@ -64,8 +69,13 @@ export const OrganicDataProvider = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<Error | null>(null);
   const [version, setVersion] = useState(0);
+  const [source, setSource] = useState<OrganicDataSource>('remote');
 
   useEffect(() => {
+    if (source !== 'remote') {
+      return;
+    }
+
     let isSubscribed = true;
     const controller = new AbortController();
 
@@ -116,16 +126,30 @@ export const OrganicDataProvider = ({ children }: { children: ReactNode }) => {
       isSubscribed = false;
       controller.abort();
     };
-  }, [version]);
+  }, [source, version]);
+
+  const loadLocalData = useCallback((nextData: OrganicData) => {
+    setSource('local');
+    setData(nextData);
+    setError(null);
+    setLoading(false);
+  }, []);
+
+  const reload = useCallback(() => {
+    setSource('remote');
+    setVersion((current) => current + 1);
+  }, []);
 
   const value = useMemo<OrganicDataContextValue>(
     () => ({
       data,
       loading,
       error,
-      reload: () => setVersion((current) => current + 1),
+      reload,
+      loadLocalData,
+      source,
     }),
-    [data, error, loading],
+    [data, error, loadLocalData, loading, reload, source],
   );
 
   return (

@@ -1,7 +1,21 @@
-import { X, Search, Beaker, GitBranch, Download, CheckCircle2 } from 'lucide-react';
-import { useMemo, useState } from 'react';
+import {
+  X,
+  Search,
+  Beaker,
+  GitBranch,
+  Download,
+  CheckCircle2,
+  Upload,
+  RotateCcw,
+} from 'lucide-react';
+import { useMemo, useRef, useState, type ChangeEvent } from 'react';
 
-import { useOrganicData, type OrganicNode } from '../data/OrganicDataContext';
+import {
+  useOrganicData,
+  type OrganicData,
+  type OrganicEdge,
+  type OrganicNode,
+} from '../data/OrganicDataContext';
 import { usePWAInstall } from '../pwa/PWAInstallProvider';
 import { useMapStore } from '../store/useMapStore';
 import { useTheme } from '../theme';
@@ -32,8 +46,120 @@ type Suggestion =
       extra?: string;
     };
 
+const ensureString = (value: unknown, field: string) => {
+  if (typeof value !== 'string') {
+    throw new Error(`Expected ${field} to be a string.`);
+  }
+  return value;
+};
+
+const ensureOptionalString = (value: unknown) =>
+  typeof value === 'string' ? value : undefined;
+
+const ensurePosition = (value: unknown, index: number): OrganicNode['position'] => {
+  if (!value || typeof value !== 'object') {
+    throw new Error(`nodes[${index}].position must include numeric x/y values.`);
+  }
+
+  const position = value as Record<string, unknown>;
+  const x = position.x;
+  const y = position.y;
+
+  if (typeof x !== 'number' || typeof y !== 'number') {
+    throw new Error(`nodes[${index}].position.x and position.y must be numbers.`);
+  }
+
+  return { x, y };
+};
+
+const ensureNodeInfo = (value: unknown, index: number): OrganicNode['info'] => {
+  if (!value || typeof value !== 'object') {
+    throw new Error(`nodes[${index}].info must be defined.`);
+  }
+
+  const info = value as Record<string, unknown>;
+
+  return {
+    formula: ensureString(info.formula, `nodes[${index}].info.formula`),
+    iupac: ensureString(info.iupac, `nodes[${index}].info.iupac`),
+    notes: ensureOptionalString(info.notes),
+    properties: ensureOptionalString(info.properties),
+  };
+};
+
+const ensureReactionInfo = (
+  value: unknown,
+  index: number,
+): OrganicEdge['reactionInfo'] => {
+  if (!value || typeof value !== 'object') {
+    return {};
+  }
+
+  const info = value as Record<string, unknown>;
+
+  return {
+    reagents: ensureOptionalString(info.reagents),
+    conditions: ensureOptionalString(info.conditions),
+    mechanism: ensureOptionalString(info.mechanism),
+    equation: ensureOptionalString(info.equation),
+  };
+};
+
+const validateOrganicData = (raw: unknown): OrganicData => {
+  if (!raw || typeof raw !== 'object') {
+    throw new Error('Dataset must be a JSON object with nodes and edges.');
+  }
+
+  const rawData = raw as Record<string, unknown>;
+  const rawNodes = rawData.nodes;
+  const rawEdges = rawData.edges;
+
+  if (!Array.isArray(rawNodes) || !Array.isArray(rawEdges)) {
+    throw new Error('Dataset must contain "nodes" and "edges" arrays.');
+  }
+
+  const nodes: OrganicNode[] = rawNodes.map((node, index) => {
+    if (!node || typeof node !== 'object') {
+      throw new Error(`nodes[${index}] must be an object.`);
+    }
+
+    const nodeObj = node as Record<string, unknown>;
+
+    return {
+      id: ensureString(nodeObj.id, `nodes[${index}].id`),
+      label: ensureString(nodeObj.label, `nodes[${index}].label`),
+      smiles: ensureString(nodeObj.smiles, `nodes[${index}].smiles`),
+      type: ensureOptionalString(nodeObj.type),
+      position: ensurePosition(nodeObj.position, index),
+      info: ensureNodeInfo(nodeObj.info, index),
+    };
+  });
+
+  const edges: OrganicEdge[] = rawEdges.map((edge, index) => {
+    if (!edge || typeof edge !== 'object') {
+      throw new Error(`edges[${index}] must be an object.`);
+    }
+
+    const edgeObj = edge as Record<string, unknown>;
+
+    return {
+      id: ensureString(edgeObj.id, `edges[${index}].id`),
+      source: ensureString(edgeObj.source, `edges[${index}].source`),
+      target: ensureString(edgeObj.target, `edges[${index}].target`),
+      label: ensureString(edgeObj.label, `edges[${index}].label`),
+      type: ensureOptionalString(edgeObj.type),
+      reactionInfo: ensureReactionInfo(edgeObj.reactionInfo, index),
+    };
+  });
+
+  return { nodes, edges };
+};
+
 const SidePanel = () => {
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [localFileName, setLocalFileName] = useState<string | null>(null);
+  const [loadingLocalFile, setLoadingLocalFile] = useState(false);
+  const [localFileError, setLocalFileError] = useState<string | null>(null);
 
   const isPanelOpen = useMapStore((state) => state.isPanelOpen);
   const searchQuery = useMapStore((state) => state.searchQuery);
@@ -45,8 +171,12 @@ const SidePanel = () => {
     data: organicData,
     loading: isOrganicDataLoading,
     error: organicDataError,
+    loadLocalData,
+    reload: reloadOrganicData,
+    source: dataSource,
   } = useOrganicData();
   const { canInstall, hasInstalled, requestInstall, openPrompt } = usePWAInstall();
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const panelTokens = tokens.panel;
 
@@ -170,6 +300,47 @@ const SidePanel = () => {
     }
   };
 
+  const handleDatasetUploadClick = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleLocalFileChange = async (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+
+    if (!file) {
+      return;
+    }
+
+    setLoadingLocalFile(true);
+    setLocalFileError(null);
+
+    try {
+      const text = await file.text();
+      const parsed = JSON.parse(text) as unknown;
+      const validated = validateOrganicData(parsed);
+
+      loadLocalData(validated);
+      setLocalFileName(file.name);
+      setSearchQuery('');
+      setShowSuggestions(false);
+    } catch (error) {
+      const message =
+        error instanceof Error ? error.message : 'Unable to load the selected dataset.';
+      setLocalFileError(message);
+    } finally {
+      setLoadingLocalFile(false);
+      event.target.value = '';
+    }
+  };
+
+  const handleDatasetReset = () => {
+    setLocalFileError(null);
+    setLocalFileName(null);
+    setSearchQuery('');
+    setShowSuggestions(false);
+    reloadOrganicData();
+  };
+
   return (
     <div
       className="fixed top-20 right-4 w-80 max-h-[80vh] backdrop-blur-lg border rounded-xl shadow-xl z-10 overflow-hidden flex flex-col"
@@ -207,6 +378,95 @@ const SidePanel = () => {
 
       {/* Content */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
+        {/* Data Source Section */}
+        <div
+          className="rounded-lg p-3 space-y-3"
+          style={{
+            background: panelTokens.surface,
+            color: panelTokens.text,
+          }}
+        >
+          <div className="flex items-start justify-between gap-3">
+            <div className="space-y-1">
+              <div
+                className="text-xs font-semibold uppercase tracking-wide"
+                style={{ color: panelTokens.textMuted }}
+              >
+                Dataset Source
+              </div>
+              <div
+                className="text-sm font-medium"
+                style={{ color: panelTokens.heading }}
+              >
+                {dataSource === 'local' ? 'Local file' : 'Default dataset'}
+              </div>
+              {dataSource === 'local' && localFileName && (
+                <div className="text-xs" style={{ color: panelTokens.textMuted }}>
+                  {localFileName}
+                </div>
+              )}
+              {organicData && (
+                <div className="text-xs" style={{ color: panelTokens.textMuted }}>
+                  {organicData.nodes.length} nodes • {organicData.edges.length} edges
+                </div>
+              )}
+            </div>
+            <button
+              type="button"
+              onClick={handleDatasetUploadClick}
+              disabled={loadingLocalFile}
+              className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+              style={{
+                background: tokens.actions.primary.background,
+                color: tokens.actions.primary.text,
+                boxShadow: tokens.actions.primary.shadow,
+              }}
+            >
+              <Upload className="h-4 w-4" />
+              {loadingLocalFile ? 'Loading…' : 'Load JSON'}
+            </button>
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept=".json,application/json"
+              onChange={handleLocalFileChange}
+              className="hidden"
+            />
+          </div>
+
+          {loadingLocalFile && (
+            <div className="text-xs" style={{ color: panelTokens.textMuted }}>
+              Parsing dataset…
+            </div>
+          )}
+
+          {localFileError && (
+            <div
+              className="text-xs font-medium"
+              style={{ color: isDark ? '#fca5a5' : '#b91c1c' }}
+            >
+              {localFileError}
+            </div>
+          )}
+
+          <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={handleDatasetReset}
+              disabled={isOrganicDataLoading && dataSource === 'remote'}
+              className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold transition-colors border disabled:opacity-60 disabled:cursor-not-allowed"
+              style={{
+                color: panelTokens.text,
+                borderColor: panelTokens.border,
+                background: 'transparent',
+              }}
+            >
+              <RotateCcw className="h-4 w-4" />
+              {dataSource === 'local' ? 'Use default dataset' : 'Reload default dataset'}
+            </button>
+          </div>
+        </div>
+
         {/* Search Section */}
         <div className="space-y-3">
           <div>
