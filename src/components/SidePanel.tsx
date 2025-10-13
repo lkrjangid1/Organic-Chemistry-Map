@@ -1,5 +1,5 @@
 import { X, Search, Beaker, GitBranch, Download, CheckCircle2 } from 'lucide-react';
-import { useMemo, useState, useEffect } from 'react';
+import { useMemo, useState } from 'react';
 
 import { useOrganicData, type OrganicNode } from '../data/OrganicDataContext';
 import { usePWAInstall } from '../pwa/PWAInstallProvider';
@@ -33,13 +33,13 @@ type Suggestion =
     };
 
 const SidePanel = () => {
-  const [isPanelOpen, setIsPanelOpen] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
+  const isPanelOpen = useMapStore((state) => state.isPanelOpen);
   const searchQuery = useMapStore((state) => state.searchQuery);
   const setSearchQuery = useMapStore((state) => state.setSearchQuery);
   const focusElement = useMapStore((state) => state.focusElement);
-  const setStorePanelOpen = useMapStore((state) => state.setIsPanelOpen);
+  const setIsPanelOpen = useMapStore((state) => state.setIsPanelOpen);
   const { tokens, isDark } = useTheme();
   const {
     data: organicData,
@@ -49,10 +49,6 @@ const SidePanel = () => {
   const { canInstall, hasInstalled, requestInstall, openPrompt } = usePWAInstall();
 
   const panelTokens = tokens.panel;
-
-  useEffect(() => {
-    setStorePanelOpen(isPanelOpen);
-  }, [isPanelOpen, setStorePanelOpen]);
 
   const nodeLookup = useMemo(() => {
     const entries = new Map<string, OrganicNode>();

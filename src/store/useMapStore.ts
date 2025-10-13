@@ -92,6 +92,7 @@ export const useMapStore = create<MapState>((set, get) => ({
     set({
       selectedNode: nextNode ?? null,
       selectedEdge: null,
+      ...(node ? { isPanelOpen: false } : {}),
     });
   },
 
@@ -124,6 +125,7 @@ export const useMapStore = create<MapState>((set, get) => ({
     set({
       selectedEdge: nextEdge ?? null,
       selectedNode: null,
+      ...(edge ? { isPanelOpen: false } : {}),
     });
   },
 
@@ -143,7 +145,13 @@ export const useMapStore = create<MapState>((set, get) => ({
   },
 
   setHighlightedPath: (path) => set({ highlightedPath: path }),
-  setIsPanelOpen: (isOpen) => set({ isPanelOpen: isOpen }),
+  setIsPanelOpen: (isOpen) => {
+    if (isOpen) {
+      get().clearSelection();
+    }
+
+    set({ isPanelOpen: isOpen });
+  },
   setReactFlowInstance: (instance) => set({ reactFlowInstance: instance }),
 
   focusElement: (id, type) => {
