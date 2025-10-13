@@ -1,79 +1,248 @@
 {
   "nodes": [
     {
+      "id": "methane",
+      "label": "Methane",
+      "smiles": "C",
+      "type": "compound",
+      "info": {
+        "iupac": "Methane",
+        "formula": "CH4",
+        "notes": "Simplest alkane, natural gas component",
+        "properties": "Colorless gas, odorless, highly flammable"
+      },
+      "position": { "x": -1000, "y": 0 }
+    },
+    {
+      "id": "chloromethane",
+      "label": "Chloromethane",
+      "smiles": "CCl",
+      "type": "compound",
+      "info": {
+        "iupac": "Chloromethane",
+        "formula": "CH3Cl",
+        "notes": "Methyl chloride, alkyl halide",
+        "properties": "Colorless gas, sweet odor"
+      },
+      "position": { "x": -800, "y": 0 }
+    },
+    {
+      "id": "ethane",
+      "label": "Ethane",
+      "smiles": "CC",
+      "type": "compound",
+      "info": {
+        "iupac": "Ethane",
+        "formula": "C2H6",
+        "notes": "Second simplest alkane",
+        "properties": "Colorless gas, odorless"
+      },
+      "position": { "x": -1000, "y": 200 }
+    },
+    {
+      "id": "ethene",
+      "label": "Ethene",
+      "smiles": "C=C",
+      "type": "compound",
+      "info": {
+        "iupac": "Ethene",
+        "formula": "C2H4",
+        "notes": "Simplest alkene, ethylene",
+        "properties": "Colorless gas, sweet odor"
+      },
+      "position": { "x": -600, "y": 0 }
+    },
+    {
+      "id": "ethyne",
+      "label": "Ethyne",
+      "smiles": "C#C",
+      "type": "compound",
+      "info": {
+        "iupac": "Ethyne",
+        "formula": "C2H2",
+        "notes": "Acetylene, simplest alkyne",
+        "properties": "Colorless gas, used in welding"
+      },
+      "position": { "x": -400, "y": 0 }
+    },
+    {
+      "id": "1_2_dibromoethane",
+      "label": "1,2-Dibromoethane",
+      "smiles": "C(Br)C(Br)",
+      "type": "compound",
+      "info": {
+        "iupac": "1,2-Dibromoethane",
+        "formula": "C2H4Br2",
+        "notes": "Ethylene dibromide",
+        "properties": "Colorless liquid, sweet odor"
+      },
+      "position": { "x": -600, "y": 200 }
+    },
+    {
+      "id": "propene",
+      "label": "Propene",
+      "smiles": "CC=C",
+      "type": "compound",
+      "info": {
+        "iupac": "Propene",
+        "formula": "C3H6",
+        "notes": "Propylene, important industrial chemical",
+        "properties": "Colorless gas"
+      },
+      "position": { "x": -600, "y": -200 }
+    },
+    {
+      "id": "2_bromopropane",
+      "label": "2-Bromopropane",
+      "smiles": "CC(Br)C",
+      "type": "compound",
+      "info": {
+        "iupac": "2-Bromopropane",
+        "formula": "C3H7Br",
+        "notes": "Isopropyl bromide",
+        "properties": "Colorless liquid"
+      },
+      "position": { "x": -600, "y": -400 }
+    },
+    {
+      "id": "1_bromopropane",
+      "label": "1-Bromopropane",
+      "smiles": "CCCBr",
+      "type": "compound",
+      "info": {
+        "iupac": "1-Bromopropane",
+        "formula": "C3H7Br",
+        "notes": "n-Propyl bromide",
+        "properties": "Colorless liquid"
+      },
+      "position": { "x": -400, "y": -400 }
+    },
+    {
+      "id": "ethanol",
+      "label": "Ethanol",
+      "smiles": "CCO",
+      "type": "compound",
+      "info": {
+        "iupac": "Ethanol",
+        "formula": "C2H6O",
+        "notes": "Ethyl alcohol, drinking alcohol",
+        "properties": "Colorless liquid, volatile"
+      },
+      "position": { "x": -600, "y": 400 }
+    },
+    {
+      "id": "propan_1_ol",
+      "label": "Propan-1-ol",
+      "smiles": "CCCO",
+      "type": "compound",
+      "info": {
+        "iupac": "Propan-1-ol",
+        "formula": "C3H8O",
+        "notes": "n-Propanol, primary alcohol",
+        "properties": "Colorless liquid"
+      },
+      "position": { "x": -400, "y": -200 }
+    },
+    {
+      "id": "ethanal",
+      "label": "Ethanal",
+      "smiles": "CC=O",
+      "type": "compound",
+      "info": {
+        "iupac": "Ethanal",
+        "formula": "C2H4O",
+        "notes": "Acetaldehyde, important intermediate",
+        "properties": "Colorless liquid, pungent odor"
+      },
+      "position": { "x": -200, "y": 200 }
+    },
+    {
+      "id": "ethanoic_acid",
+      "label": "Ethanoic Acid",
+      "smiles": "CC(=O)O",
+      "type": "compound",
+      "info": {
+        "iupac": "Ethanoic acid",
+        "formula": "C2H4O2",
+        "notes": "Acetic acid, vinegar component",
+        "properties": "Colorless liquid, pungent smell"
+      },
+      "position": { "x": -200, "y": 400 }
+    },
+    {
       "id": "benzene",
       "label": "Benzene",
-      "smiles": "C1=CC=CC=C1",
+      "smiles": "c1ccccc1",
       "type": "compound",
       "info": {
         "iupac": "Benzene",
         "formula": "C6H6",
-        "notes": "Base aromatic compound, simplest aromatic hydrocarbon",
-        "properties": "Colorless liquid, carcinogenic, highly flammable"
+        "notes": "Base aromatic compound, carcinogenic",
+        "properties": "Colorless liquid, sweet odor"
       },
       "position": { "x": 0, "y": 0 }
     },
     {
       "id": "nitrobenzene",
       "label": "Nitrobenzene",
-      "smiles": "C1=CC=C(C=C1)[N+](=O)[O-]",
+      "smiles": "c1ccc(cc1)[N+](=O)[O-]",
       "type": "compound",
       "info": {
         "iupac": "Nitrobenzene",
         "formula": "C6H5NO2",
-        "notes": "Important intermediate in organic synthesis",
-        "properties": "Yellow oily liquid, toxic, sweet almond odor"
+        "notes": "Important intermediate in dye synthesis",
+        "properties": "Pale yellow oil, almond-like odor"
       },
       "position": { "x": 300, "y": 0 }
     },
     {
       "id": "aniline",
       "label": "Aniline",
-      "smiles": "C1=CC=C(C=C1)N",
+      "smiles": "c1ccc(cc1)N",
       "type": "compound",
       "info": {
         "iupac": "Aniline",
         "formula": "C6H5NH2",
-        "notes": "Primary aromatic amine, used in dye manufacturing",
-        "properties": "Colorless liquid, turns brown on exposure to air"
+        "notes": "Phenylamine, used in dye manufacturing",
+        "properties": "Oily liquid, fishy smell, turns brown in air"
       },
       "position": { "x": 600, "y": 0 }
     },
     {
       "id": "toluene",
       "label": "Toluene",
-      "smiles": "CC1=CC=CC=C1",
+      "smiles": "Cc1ccccc1",
       "type": "compound",
       "info": {
-        "iupac": "Toluene",
+        "iupac": "Methylbenzene",
         "formula": "C7H8",
-        "notes": "Methylbenzene, important solvent and chemical feedstock",
-        "properties": "Colorless liquid, aromatic odor"
+        "notes": "Important solvent and feedstock",
+        "properties": "Colorless liquid, sweet smell"
       },
       "position": { "x": 150, "y": -200 }
     },
     {
       "id": "phenol",
       "label": "Phenol",
-      "smiles": "C1=CC=C(C=C1)O",
+      "smiles": "c1ccc(cc1)O",
       "type": "compound",
       "info": {
         "iupac": "Phenol",
         "formula": "C6H5OH",
-        "notes": "Carbolic acid, used in plastics and pharmaceuticals",
-        "properties": "White crystalline solid, characteristic odor"
+        "notes": "Carbolic acid, antiseptic",
+        "properties": "White crystalline solid, sweet tarry odor"
       },
       "position": { "x": -150, "y": -200 }
     },
     {
       "id": "chlorobenzene",
       "label": "Chlorobenzene",
-      "smiles": "C1=CC=C(C=C1)Cl",
+      "smiles": "c1ccc(cc1)Cl",
       "type": "compound",
       "info": {
         "iupac": "Chlorobenzene",
         "formula": "C6H5Cl",
-        "notes": "Used as solvent and in pesticide production",
+        "notes": "Used as solvent and intermediate",
         "properties": "Colorless liquid, almond-like odor"
       },
       "position": { "x": -300, "y": 0 }
@@ -81,12 +250,12 @@
     {
       "id": "bromobenzene",
       "label": "Bromobenzene",
-      "smiles": "C1=CC=C(C=C1)Br",
+      "smiles": "c1ccc(cc1)Br",
       "type": "compound",
       "info": {
         "iupac": "Bromobenzene",
         "formula": "C6H5Br",
-        "notes": "Used in organic synthesis as starting material",
+        "notes": "Starting material in synthesis",
         "properties": "Colorless liquid, pleasant odor"
       },
       "position": { "x": -300, "y": 200 }
@@ -94,83 +263,473 @@
     {
       "id": "benzoic_acid",
       "label": "Benzoic Acid",
-      "smiles": "C1=CC=C(C=C1)C(=O)O",
+      "smiles": "c1ccc(cc1)C(=O)O",
       "type": "compound",
       "info": {
         "iupac": "Benzoic acid",
         "formula": "C7H6O2",
-        "notes": "Food preservative, occurs naturally in berries",
-        "properties": "White crystalline solid, slightly soluble in water"
+        "notes": "Food preservative E210",
+        "properties": "White crystalline solid"
       },
       "position": { "x": 400, "y": -200 }
     },
     {
       "id": "benzaldehyde",
       "label": "Benzaldehyde",
-      "smiles": "C1=CC=C(C=C1)C=O",
+      "smiles": "c1ccc(cc1)C=O",
       "type": "compound",
       "info": {
         "iupac": "Benzaldehyde",
         "formula": "C7H6O",
-        "notes": "Artificial almond flavoring, precursor to many compounds",
-        "properties": "Colorless liquid, bitter almond odor"
+        "notes": "Bitter almond smell, flavoring",
+        "properties": "Colorless liquid, almond odor"
       },
       "position": { "x": 700, "y": -200 }
     },
     {
+      "id": "acetophenone",
+      "label": "Acetophenone",
+      "smiles": "CC(=O)c1ccccc1",
+      "type": "compound",
+      "info": {
+        "iupac": "1-Phenylethanone",
+        "formula": "C8H8O",
+        "notes": "Methyl phenyl ketone",
+        "properties": "Colorless liquid, sweet smell"
+      },
+      "position": { "x": 300, "y": -400 }
+    },
+    {
       "id": "acetanilide",
       "label": "Acetanilide",
-      "smiles": "CC(=O)NC1=CC=CC=C1",
+      "smiles": "CC(=O)Nc1ccccc1",
       "type": "compound",
       "info": {
         "iupac": "N-Phenylacetamide",
         "formula": "C8H9NO",
-        "notes": "Analgesic drug, predecessor to paracetamol",
-        "properties": "White crystalline solid, odorless"
+        "notes": "Analgesic precursor",
+        "properties": "White crystalline solid"
       },
       "position": { "x": 900, "y": 0 }
     },
     {
       "id": "p_nitroaniline",
       "label": "p-Nitroaniline",
-      "smiles": "C1=CC(=CC=C1N)[N+](=O)[O-]",
+      "smiles": "Nc1ccc(cc1)[N+](=O)[O-]",
       "type": "compound",
       "info": {
         "iupac": "4-Nitroaniline",
         "formula": "C6H6N2O2",
-        "notes": "Used in dye synthesis, bright yellow color",
-        "properties": "Yellow crystalline solid, slightly toxic"
+        "notes": "Yellow dye intermediate",
+        "properties": "Yellow crystalline solid"
       },
       "position": { "x": 600, "y": 200 }
     },
     {
-      "id": "sulfanilic_acid",
-      "label": "Sulfanilic Acid",
-      "smiles": "C1=CC(=CC=C1N)S(=O)(=O)O",
+      "id": "benzenediazonium_chloride",
+      "label": "Benzenediazonium Chloride",
+      "smiles": "[N+]#Nc1ccccc1",
       "type": "compound",
       "info": {
-        "iupac": "4-Aminobenzenesulfonic acid",
-        "formula": "C6H7NO3S",
-        "notes": "Used in dye production and as analytical reagent",
-        "properties": "White crystalline solid, water soluble"
+        "iupac": "Benzenediazonium chloride",
+        "formula": "C6H5N2Cl",
+        "notes": "Diazonium salt, highly reactive",
+        "properties": "Colorless crystals, explosive when dry"
       },
       "position": { "x": 800, "y": 200 }
     },
     {
-      "id": "diphenylamine",
-      "label": "Diphenylamine",
-      "smiles": "C1=CC=C(C=C1)NC2=CC=CC=C2",
+      "id": "phenyl_cyanide",
+      "label": "Benzonitrile",
+      "smiles": "N#Cc1ccccc1",
       "type": "compound",
       "info": {
-        "iupac": "N-Phenylaniline",
-        "formula": "C12H11N",
-        "notes": "Antioxidant, used in propellants and plastics",
-        "properties": "Colorless to pale yellow crystalline solid"
+        "iupac": "Benzonitrile",
+        "formula": "C7H5N",
+        "notes": "Phenyl cyanide, used in synthesis",
+        "properties": "Colorless liquid, almond odor"
       },
-      "position": { "x": 400, "y": 200 }
+      "position": { "x": 1000, "y": 200 }
+    },
+    {
+      "id": "salicylic_acid",
+      "label": "Salicylic Acid",
+      "smiles": "O=C(O)c1ccccc1O",
+      "type": "compound",
+      "info": {
+        "iupac": "2-Hydroxybenzoic acid",
+        "formula": "C7H6O3",
+        "notes": "Aspirin precursor, antiseptic",
+        "properties": "White crystalline solid"
+      },
+      "position": { "x": -150, "y": -400 }
+    },
+    {
+      "id": "salicylaldehyde",
+      "label": "Salicylaldehyde",
+      "smiles": "O=Cc1ccccc1O",
+      "type": "compound",
+      "info": {
+        "iupac": "2-Hydroxybenzaldehyde",
+        "formula": "C7H6O2",
+        "notes": "o-Hydroxybenzaldehyde",
+        "properties": "Colorless oily liquid"
+      },
+      "position": { "x": 0, "y": -400 }
+    },
+    {
+      "id": "picric_acid",
+      "label": "Picric Acid",
+      "smiles": "Oc1c(cc(cc1[N+](=O)[O-])[N+](=O)[O-])[N+](=O)[O-]",
+      "type": "compound",
+      "info": {
+        "iupac": "2,4,6-Trinitrophenol",
+        "formula": "C6H3N3O7",
+        "notes": "Yellow explosive compound",
+        "properties": "Yellow crystalline solid, bitter"
+      },
+      "position": { "x": -150, "y": -600 }
+    },
+    {
+      "id": "methanal",
+      "label": "Methanal",
+      "smiles": "C=O",
+      "type": "compound",
+      "info": {
+        "iupac": "Methanal",
+        "formula": "CH2O",
+        "notes": "Formaldehyde, preservative",
+        "properties": "Colorless gas, pungent smell"
+      },
+      "position": { "x": 0, "y": 400 }
+    },
+    {
+      "id": "propanal",
+      "label": "Propanal",
+      "smiles": "CCC=O",
+      "type": "compound",
+      "info": {
+        "iupac": "Propanal",
+        "formula": "C3H6O",
+        "notes": "Propionaldehyde",
+        "properties": "Colorless liquid, pungent smell"
+      },
+      "position": { "x": -400, "y": 600 }
+    },
+    {
+      "id": "propanone",
+      "label": "Propanone",
+      "smiles": "CC(=O)C",
+      "type": "compound",
+      "info": {
+        "iupac": "Propanone",
+        "formula": "C3H6O",
+        "notes": "Acetone, common solvent",
+        "properties": "Colorless liquid, sweet smell"
+      },
+      "position": { "x": -200, "y": 600 }
+    },
+    {
+      "id": "crotonaldehyde",
+      "label": "Crotonaldehyde",
+      "smiles": "CC=CC=O",
+      "type": "compound",
+      "info": {
+        "iupac": "But-2-enal",
+        "formula": "C4H6O",
+        "notes": "α,β-unsaturated aldehyde",
+        "properties": "Colorless liquid, pungent odor"
+      },
+      "position": { "x": 0, "y": 600 }
+    },
+    {
+      "id": "acetyl_chloride",
+      "label": "Acetyl Chloride",
+      "smiles": "CC(=O)Cl",
+      "type": "compound",
+      "info": {
+        "iupac": "Ethanoyl chloride",
+        "formula": "C2H3ClO",
+        "notes": "Acyl chloride, highly reactive",
+        "properties": "Colorless fuming liquid"
+      },
+      "position": { "x": -200, "y": 800 }
+    },
+    {
+      "id": "ethyl_acetate",
+      "label": "Ethyl Acetate",
+      "smiles": "CCOC(=O)C",
+      "type": "compound",
+      "info": {
+        "iupac": "Ethyl ethanoate",
+        "formula": "C4H8O2",
+        "notes": "Common ester, solvent",
+        "properties": "Colorless liquid, fruity smell"
+      },
+      "position": { "x": 0, "y": 800 }
+    },
+    {
+      "id": "methylamine",
+      "label": "Methylamine",
+      "smiles": "CN",
+      "type": "compound",
+      "info": {
+        "iupac": "Methanamine",
+        "formula": "CH5N",
+        "notes": "Simplest primary amine",
+        "properties": "Colorless gas, fishy smell"
+      },
+      "position": { "x": 600, "y": 400 }
+    },
+    {
+      "id": "acetamide",
+      "label": "Acetamide",
+      "smiles": "CC(=O)N",
+      "type": "compound",
+      "info": {
+        "iupac": "Ethanamide",
+        "formula": "C2H5NO",
+        "notes": "Simple amide",
+        "properties": "White crystalline solid"
+      },
+      "position": { "x": 800, "y": 400 }
+    },
+    {
+      "id": "ethane_1_2_diol",
+      "label": "Ethane-1,2-diol",
+      "smiles": "OCCO",
+      "type": "compound",
+      "info": {
+        "iupac": "Ethane-1,2-diol",
+        "formula": "C2H6O2",
+        "notes": "Ethylene glycol, antifreeze",
+        "properties": "Colorless viscous liquid, sweet taste"
+      },
+      "position": { "x": -800, "y": 400 }
+    },
+    {
+      "id": "glycerol",
+      "label": "Glycerol",
+      "smiles": "OCC(O)CO",
+      "type": "compound",
+      "info": {
+        "iupac": "Propane-1,2,3-triol",
+        "formula": "C3H8O3",
+        "notes": "Glycerine, sweetening agent",
+        "properties": "Colorless viscous liquid, sweet"
+      },
+      "position": { "x": -800, "y": 600 }
+    },
+    {
+      "id": "diethyl_ether",
+      "label": "Diethyl Ether",
+      "smiles": "CCOCC",
+      "type": "compound",
+      "info": {
+        "iupac": "Ethoxyethane",
+        "formula": "C4H10O",
+        "notes": "Common ether, anesthetic",
+        "properties": "Colorless volatile liquid"
+      },
+      "position": { "x": -400, "y": 800 }
+    },
+    {
+      "id": "anisole",
+      "label": "Anisole",
+      "smiles": "COc1ccccc1",
+      "type": "compound",
+      "info": {
+        "iupac": "Methoxybenzene",
+        "formula": "C7H8O",
+        "notes": "Phenyl methyl ether",
+        "properties": "Colorless liquid, pleasant smell"
+      },
+      "position": { "x": -300, "y": -400 }
+    },
+    {
+      "id": "glucose",
+      "label": "Glucose",
+      "smiles": "OC[C@H]1O[C@H](O)[C@H](O)[C@@H](O)[C@@H]1O",
+      "type": "compound",
+      "info": {
+        "iupac": "D-Glucose",
+        "formula": "C6H12O6",
+        "notes": "Blood sugar, energy source",
+        "properties": "White crystalline solid, sweet"
+      },
+      "position": { "x": 1200, "y": 0 }
+    },
+    {
+      "id": "fructose",
+      "label": "Fructose",
+      "smiles": "OC[C@@]1(O)O[C@H](CO)[C@@H](O)[C@@H]1O",
+      "type": "compound",
+      "info": {
+        "iupac": "D-Fructose",
+        "formula": "C6H12O6",
+        "notes": "Fruit sugar, sweetest natural sugar",
+        "properties": "White crystalline solid, very sweet"
+      },
+      "position": { "x": 1200, "y": 200 }
+    },
+    {
+      "id": "sucrose",
+      "label": "Sucrose",
+      "smiles": "OC[C@H]1O[C@](CO)(O[C@H]2O[C@H](CO)[C@@H](O)[C@H](O)[C@H]2O)[C@@H](O)[C@@H]1O",
+      "type": "compound",
+      "info": {
+        "iupac": "Sucrose",
+        "formula": "C12H22O11",
+        "notes": "Table sugar, non-reducing",
+        "properties": "White crystalline solid, sweet"
+      },
+      "position": { "x": 1400, "y": 100 }
     }
   ],
   "edges": [
+    {
+      "id": "methane_to_chloromethane",
+      "source": "methane",
+      "target": "chloromethane",
+      "label": "Free Radical Halogenation",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "Cl₂",
+        "conditions": "UV light (hν) or heat (300-400°C)",
+        "mechanism": "Free radical substitution",
+        "equation": "CH₄ + Cl₂ → CH₃Cl + HCl"
+      }
+    },
+    {
+      "id": "ethene_to_ethane",
+      "source": "ethene",
+      "target": "ethane",
+      "label": "Catalytic Hydrogenation",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "H₂ + Ni/Pd/Pt catalyst",
+        "conditions": "150-300°C, 1-100 atm",
+        "mechanism": "Syn addition",
+        "equation": "C₂H₄ + H₂ → C₂H₆"
+      }
+    },
+    {
+      "id": "ethene_to_dibromoethane",
+      "source": "ethene",
+      "target": "1_2_dibromoethane",
+      "label": "Halogenation",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "Br₂ in CCl₄",
+        "conditions": "Room temperature",
+        "mechanism": "Electrophilic addition via cyclic bromonium ion",
+        "equation": "C₂H₄ + Br₂ → CH₂BrCH₂Br"
+      }
+    },
+    {
+      "id": "propene_to_2_bromopropane",
+      "source": "propene",
+      "target": "2_bromopropane",
+      "label": "Hydrohalogenation (Markovnikov)",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "HBr",
+        "conditions": "Room temperature",
+        "mechanism": "Electrophilic addition via carbocation",
+        "equation": "CH₃CH=CH₂ + HBr → CH₃CHBrCH₃"
+      }
+    },
+    {
+      "id": "propene_to_1_bromopropane",
+      "source": "propene",
+      "target": "1_bromopropane",
+      "label": "Anti-Markovnikov Addition",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "HBr + ROOR (peroxide)",
+        "conditions": "Heat or UV light",
+        "mechanism": "Free radical addition (Peroxide effect)",
+        "equation": "CH₃CH=CH₂ + HBr (ROOR) → CH₃CH₂CH₂Br"
+      }
+    },
+    {
+      "id": "ethene_to_ethanol",
+      "source": "ethene",
+      "target": "ethanol",
+      "label": "Hydration",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "H₂SO₄/H₂O",
+        "conditions": "60-80°C",
+        "mechanism": "Electrophilic addition (Markovnikov)",
+        "equation": "C₂H₄ + H₂O → C₂H₅OH"
+      }
+    },
+    {
+      "id": "propene_to_propanol",
+      "source": "propene",
+      "target": "propan_1_ol",
+      "label": "Hydroboration-Oxidation",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "(1) BH₃/THF (2) H₂O₂/NaOH",
+        "conditions": "RT then oxidation",
+        "mechanism": "Syn addition, Anti-Markovnikov",
+        "equation": "CH₃CH=CH₂ → CH₃CH₂CH₂OH"
+      }
+    },
+    {
+      "id": "ethene_to_glycol",
+      "source": "ethene",
+      "target": "ethane_1_2_diol",
+      "label": "Baeyer's Test / Hydroxylation",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "Cold, dilute KMnO₄",
+        "conditions": "Room temperature",
+        "mechanism": "Oxidation to vicinal diol",
+        "equation": "C₂H₄ + [O] + H₂O → CH₂(OH)CH₂(OH)"
+      }
+    },
+    {
+      "id": "ethyne_to_ethane",
+      "source": "ethyne",
+      "target": "ethane",
+      "label": "Complete Hydrogenation",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "H₂/Ni or Pd or Pt (excess)",
+        "conditions": "Heat, pressure",
+        "mechanism": "Two-step addition",
+        "equation": "HC≡CH + 2H₂ → CH₃CH₃"
+      }
+    },
+    {
+      "id": "ethyne_to_ethene",
+      "source": "ethyne",
+      "target": "ethene",
+      "label": "Lindlar Reduction",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "H₂/Lindlar catalyst (Pd-CaCO₃-PbO)",
+        "conditions": "Partial hydrogenation",
+        "mechanism": "Syn addition to cis-alkene",
+        "equation": "HC≡CH + H₂ → cis-CH₂=CH₂"
+      }
+    },
+    {
+      "id": "ethyne_to_ethanal",
+      "source": "ethyne",
+      "target": "ethanal",
+      "label": "Hydration",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "H₂O/H₂SO₄/HgSO₄",
+        "conditions": "60-80°C",
+        "mechanism": "Via enol intermediate",
+        "equation": "HC≡CH + H₂O → CH₃CHO"
+      }
+    },
     {
       "id": "benzene_to_nitrobenzene",
       "source": "benzene",
@@ -178,10 +737,10 @@
       "label": "Nitration",
       "type": "reaction",
       "reactionInfo": {
-        "reagents": "HNO3 + H2SO4",
+        "reagents": "Conc. HNO₃ + Conc. H₂SO₄",
         "conditions": "50-60°C",
-        "mechanism": "Electrophilic aromatic substitution",
-        "equation": "C6H6 + HNO3 → C6H5NO2 + H2O"
+        "mechanism": "Electrophilic aromatic substitution (EAS)",
+        "equation": "C₆H₆ + HNO₃ → C₆H₅NO₂ + H₂O"
       }
     },
     {
@@ -194,33 +753,7 @@
         "reagents": "Sn + HCl or Fe + HCl",
         "conditions": "Reflux",
         "mechanism": "Reduction of nitro group",
-        "equation": "C6H5NO2 + 6[H] → C6H5NH2 + 2H2O"
-      }
-    },
-    {
-      "id": "benzene_to_toluene",
-      "source": "benzene",
-      "target": "toluene",
-      "label": "Friedel-Crafts Alkylation",
-      "type": "reaction",
-      "reactionInfo": {
-        "reagents": "CH3Cl + AlCl3",
-        "conditions": "Anhydrous conditions",
-        "mechanism": "Electrophilic aromatic substitution",
-        "equation": "C6H6 + CH3Cl → C6H5CH3 + HCl"
-      }
-    },
-    {
-      "id": "benzene_to_phenol",
-      "source": "benzene",
-      "target": "phenol",
-      "label": "Sulfonation + Fusion",
-      "type": "reaction",
-      "reactionInfo": {
-        "reagents": "1) H2SO4, 2) NaOH fusion",
-        "conditions": "300°C for fusion",
-        "mechanism": "Via benzene sulfonic acid",
-        "equation": "C6H6 → C6H5SO3H → C6H5OH"
+        "equation": "C₆H₅NO₂ + 6[H] → C₆H₅NH₂ + 2H₂O"
       }
     },
     {
@@ -230,10 +763,10 @@
       "label": "Halogenation",
       "type": "reaction",
       "reactionInfo": {
-        "reagents": "Cl2 + FeCl3",
-        "conditions": "Room temperature",
+        "reagents": "Cl₂ + FeCl₃",
+        "conditions": "Anhydrous, RT-50°C",
         "mechanism": "Electrophilic aromatic substitution",
-        "equation": "C6H6 + Cl2 → C6H5Cl + HCl"
+        "equation": "C₆H₆ + Cl₂ → C₆H₅Cl + HCl"
       }
     },
     {
@@ -243,23 +776,62 @@
       "label": "Halogenation",
       "type": "reaction",
       "reactionInfo": {
-        "reagents": "Br2 + FeBr3",
-        "conditions": "Room temperature",
+        "reagents": "Br₂ + FeBr₃",
+        "conditions": "Anhydrous, RT",
         "mechanism": "Electrophilic aromatic substitution",
-        "equation": "C6H6 + Br2 → C6H5Br + HBr"
+        "equation": "C₆H₆ + Br₂ → C₆H₅Br + HBr"
+      }
+    },
+    {
+      "id": "benzene_to_toluene",
+      "source": "benzene",
+      "target": "toluene",
+      "label": "Friedel-Crafts Alkylation",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "CH₃Cl + AlCl₃",
+        "conditions": "Anhydrous, 40-80°C",
+        "mechanism": "Electrophilic aromatic substitution",
+        "equation": "C₆H₆ + CH₃Cl → C₆H₅CH₃ + HCl"
+      }
+    },
+    {
+      "id": "benzene_to_acetophenone",
+      "source": "benzene",
+      "target": "acetophenone",
+      "label": "Friedel-Crafts Acylation",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "CH₃COCl + AlCl₃",
+        "conditions": "Anhydrous",
+        "mechanism": "Electrophilic aromatic substitution via acylium ion",
+        "equation": "C₆H₆ + CH₃COCl → C₆H₅COCH₃ + HCl"
+      }
+    },
+    {
+      "id": "benzene_to_phenol",
+      "source": "benzene",
+      "target": "phenol",
+      "label": "Sulfonation + Fusion",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "(1) H₂SO₄ (2) NaOH fusion",
+        "conditions": "300°C for fusion",
+        "mechanism": "Via benzenesulfonic acid",
+        "equation": "C₆H₆ → C₆H₅SO₃H → C₆H₅OH"
       }
     },
     {
       "id": "toluene_to_benzoic_acid",
       "source": "toluene",
       "target": "benzoic_acid",
-      "label": "Oxidation",
+      "label": "Side-Chain Oxidation",
       "type": "reaction",
       "reactionInfo": {
-        "reagents": "KMnO4 + H+",
+        "reagents": "KMnO₄/H⁺, hot",
         "conditions": "Heat, acidic medium",
         "mechanism": "Side chain oxidation",
-        "equation": "C6H5CH3 + 3[O] → C6H5COOH + H2O"
+        "equation": "C₆H₅CH₃ + 3[O] → C₆H₅COOH + H₂O"
       }
     },
     {
@@ -269,10 +841,10 @@
       "label": "Rosenmund Reduction",
       "type": "reaction",
       "reactionInfo": {
-        "reagents": "H2 + Pd/BaSO4",
-        "conditions": "Quinoline poison",
-        "mechanism": "Selective reduction of acyl chloride",
-        "equation": "C6H5COCl + H2 → C6H5CHO + HCl"
+        "reagents": "H₂ + Pd/BaSO₄",
+        "conditions": "Quinoline (poison)",
+        "mechanism": "Selective reduction of acid chloride",
+        "equation": "C₆H₅COCl + H₂ → C₆H₅CHO + HCl"
       }
     },
     {
@@ -282,49 +854,231 @@
       "label": "Acetylation",
       "type": "reaction",
       "reactionInfo": {
-        "reagents": "CH3COCl or (CH3CO)2O",
+        "reagents": "CH₃COCl or (CH₃CO)₂O",
         "conditions": "Pyridine as base",
         "mechanism": "Nucleophilic acyl substitution",
-        "equation": "C6H5NH2 + CH3COCl → C6H5NHCOCH3 + HCl"
+        "equation": "C₆H₅NH₂ + CH₃COCl → C₆H₅NHCOCH₃ + HCl"
       }
     },
     {
       "id": "aniline_to_p_nitroaniline",
       "source": "aniline",
       "target": "p_nitroaniline",
+      "label": "Nitration (protected)",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "Via acetanilide: (1) Acetylation (2) HNO₃/H₂SO₄ (3) Hydrolysis",
+        "conditions": "Protection required",
+        "mechanism": "Electrophilic aromatic substitution",
+        "equation": "C₆H₅NH₂ → C₆H₅NHCOCH₃ → p-O₂NC₆H₄NHCOCH₃ → p-O₂NC₆H₄NH₂"
+      }
+    },
+    {
+      "id": "aniline_to_diazonium",
+      "source": "aniline",
+      "target": "benzenediazonium_chloride",
+      "label": "Diazotization",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "NaNO₂ + HCl",
+        "conditions": "0-5°C (CRITICAL)",
+        "mechanism": "Diazonium salt formation",
+        "equation": "C₆H₅NH₂ + NaNO₂ + 2HCl → C₆H₅N₂⁺Cl⁻ + NaCl + 2H₂O"
+      }
+    },
+    {
+      "id": "diazonium_to_chlorobenzene",
+      "source": "benzenediazonium_chloride",
+      "target": "chlorobenzene",
+      "label": "Sandmeyer Reaction",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "CuCl",
+        "conditions": "Room temperature",
+        "mechanism": "Radical substitution",
+        "equation": "C₆H₅N₂⁺Cl⁻ + CuCl → C₆H₅Cl + N₂"
+      }
+    },
+    {
+      "id": "diazonium_to_cyanide",
+      "source": "benzenediazonium_chloride",
+      "target": "phenyl_cyanide",
+      "label": "Sandmeyer Reaction",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "CuCN",
+        "conditions": "Room temperature",
+        "mechanism": "Radical substitution",
+        "equation": "C₆H₅N₂⁺Cl⁻ + CuCN → C₆H₅CN + N₂"
+      }
+    },
+    {
+      "id": "phenol_to_salicylic_acid",
+      "source": "phenol",
+      "target": "salicylic_acid",
+      "label": "Kolbe's Reaction",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "CO₂ under pressure, then H⁺",
+        "conditions": "400K, 4-7 atm",
+        "mechanism": "Electrophilic substitution",
+        "equation": "C₆H₅ONa + CO₂ → o-HOC₆H₄COONa → o-HOC₆H₄COOH"
+      }
+    },
+    {
+      "id": "phenol_to_salicylaldehyde",
+      "source": "phenol",
+      "target": "salicylaldehyde",
+      "label": "Reimer-Tiemann Reaction",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "CHCl₃ + NaOH",
+        "conditions": "340K, then H₃O⁺",
+        "mechanism": "Electrophile: :CCl₂ (dichlorocarbene)",
+        "equation": "C₆H₅OH + CHCl₃ + 3NaOH → o-HOC₆H₄CHO + 3NaCl + 2H₂O"
+      }
+    },
+    {
+      "id": "phenol_to_picric_acid",
+      "source": "phenol",
+      "target": "picric_acid",
       "label": "Nitration",
       "type": "reaction",
       "reactionInfo": {
-        "reagents": "HNO3 + H2SO4",
-        "conditions": "0°C initially",
-        "mechanism": "Electrophilic aromatic substitution",
-        "equation": "C6H5NH2 + HNO3 → p-O2NC6H4NH2 + H2O"
+        "reagents": "Conc. HNO₃ + Conc. H₂SO₄",
+        "conditions": "Heat",
+        "mechanism": "Multiple electrophilic aromatic substitutions",
+        "equation": "C₆H₅OH + 3HNO₃ → 2,4,6-(O₂N)₃C₆H₂OH + 3H₂O"
       }
     },
     {
-      "id": "aniline_to_sulfanilic_acid",
-      "source": "aniline",
-      "target": "sulfanilic_acid",
-      "label": "Sulfonation",
+      "id": "ethanol_to_ethanal",
+      "source": "ethanol",
+      "target": "ethanal",
+      "label": "Oxidation with PCC",
       "type": "reaction",
       "reactionInfo": {
-        "reagents": "H2SO4",
-        "conditions": "180°C",
-        "mechanism": "Electrophilic aromatic substitution",
-        "equation": "C6H5NH2 + H2SO4 → p-H2NC6H4SO3H + H2O"
+        "reagents": "PCC in CH₂Cl₂",
+        "conditions": "Room temperature, anhydrous",
+        "mechanism": "Oxidation (stops at aldehyde)",
+        "equation": "CH₃CH₂OH + PCC → CH₃CHO"
       }
     },
     {
-      "id": "aniline_to_diphenylamine",
-      "source": "aniline",
-      "target": "diphenylamine",
-      "label": "Ullmann Condensation",
+      "id": "ethanol_to_ethanoic_acid",
+      "source": "ethanol",
+      "target": "ethanoic_acid",
+      "label": "Oxidation with K₂Cr₂O₇",
       "type": "reaction",
       "reactionInfo": {
-        "reagents": "C6H5Br + Cu",
-        "conditions": "High temperature",
-        "mechanism": "Copper-catalyzed coupling",
-        "equation": "C6H5NH2 + C6H5Br → (C6H5)2NH + HBr"
+        "reagents": "K₂Cr₂O₇/H₂SO₄",
+        "conditions": "Heat",
+        "mechanism": "Oxidation to carboxylic acid",
+        "equation": "CH₃CH₂OH + 2[O] → CH₃COOH + H₂O"
+      }
+    },
+    {
+      "id": "ethanol_to_ethene",
+      "source": "ethanol",
+      "target": "ethene",
+      "label": "Dehydration",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "Conc. H₂SO₄",
+        "conditions": "170-180°C",
+        "mechanism": "E1 elimination",
+        "equation": "CH₃CH₂OH → CH₂=CH₂ + H₂O"
+      }
+    },
+    {
+      "id": "ethanol_to_diethyl_ether",
+      "source": "ethanol",
+      "target": "diethyl_ether",
+      "label": "Williamson Ether Synthesis",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "Conc. H₂SO₄",
+        "conditions": "140°C",
+        "mechanism": "Intermolecular dehydration",
+        "equation": "2C₂H₅OH → C₂H₅OC₂H₅ + H₂O"
+      }
+    },
+    {
+      "id": "ethanal_aldol",
+      "source": "ethanal",
+      "target": "crotonaldehyde",
+      "label": "Aldol Condensation",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "Dilute NaOH",
+        "conditions": "Heat",
+        "mechanism": "Enolate formation → nucleophilic addition",
+        "equation": "2CH₃CHO → CH₃CH(OH)CH₂CHO → CH₃CH=CHCHO + H₂O"
+      }
+    },
+    {
+      "id": "ethanoic_acid_to_acetyl_chloride",
+      "source": "ethanoic_acid",
+      "target": "acetyl_chloride",
+      "label": "Formation of Acid Chloride",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "SOCl₂ or PCl₅",
+        "conditions": "Heat",
+        "mechanism": "Nucleophilic acyl substitution",
+        "equation": "CH₃COOH + SOCl₂ → CH₃COCl + SO₂ + HCl"
+      }
+    },
+    {
+      "id": "ethanoic_acid_to_ethyl_acetate",
+      "source": "ethanoic_acid",
+      "target": "ethyl_acetate",
+      "label": "Fischer Esterification",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "C₂H₅OH + Conc. H₂SO₄",
+        "conditions": "Heat, reflux",
+        "mechanism": "Acid-catalyzed nucleophilic acyl substitution",
+        "equation": "CH₃COOH + C₂H₅OH ⇌ CH₃COOC₂H₅ + H₂O"
+      }
+    },
+    {
+      "id": "acetamide_to_methylamine",
+      "source": "acetamide",
+      "target": "methylamine",
+      "label": "Hofmann Bromamide Degradation",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "Br₂ + conc. KOH",
+        "conditions": "60-70°C",
+        "mechanism": "Rearrangement via isocyanate (one carbon less)",
+        "equation": "CH₃CONH₂ + Br₂ + 4KOH → CH₃NH₂ + K₂CO₃ + 2KBr + 2H₂O"
+      }
+    },
+    {
+      "id": "glucose_sucrose",
+      "source": "glucose",
+      "target": "sucrose",
+      "label": "Glycosidic Bond Formation",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "Glucose + Fructose",
+        "conditions": "Enzymatic condensation",
+        "mechanism": "Dehydration to form α-1,β-2-glycosidic linkage",
+        "equation": "C₆H₁₂O₆ + C₆H₁₂O₆ → C₁₂H₂₂O₁₁ + H₂O"
+      }
+    },
+    {
+      "id": "phenol_to_anisole",
+      "source": "phenol",
+      "target": "anisole",
+      "label": "Williamson Ether Synthesis",
+      "type": "reaction",
+      "reactionInfo": {
+        "reagents": "(1) NaOH (2) CH₃I",
+        "conditions": "Room temperature",
+        "mechanism": "SN2 substitution",
+        "equation": "C₆H₅OH + NaOH + CH₃I → C₆H₅OCH₃ + NaI + H₂O"
       }
     }
   ]
