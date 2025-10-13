@@ -129,6 +129,7 @@ const SidePanel = () => {
     focusElement(suggestion.id, suggestion.type);
     setSearchQuery(suggestion.title);
     setShowSuggestions(false);
+    setIsPanelOpen(false);
   };
 
   const suggestionSurfaceVars = useMemo(
