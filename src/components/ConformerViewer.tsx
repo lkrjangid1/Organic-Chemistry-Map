@@ -359,13 +359,16 @@ const ConformerViewer = memo(({ smiles, height = 220 }: ConformerViewerProps) =>
         scaleRef.current,
         translateRef.current,
       );
+      const brightLabelColor = '#0f172a';
+      const dimLabelColor = isDark ? '#f8fafc' : '#f8fafc';
+
       drawStructure(
         ctx,
         projected.atoms,
         projected.bonds,
         palette,
-        isDark ? tokens.node.text : '#0f172a',
-        isDark ? '#e5e5e5' : '#f8fafc',
+        brightLabelColor,
+        dimLabelColor,
       );
 
       animationRef.current = requestAnimationFrame(render);
@@ -540,7 +543,7 @@ const ConformerViewer = memo(({ smiles, height = 220 }: ConformerViewerProps) =>
       state.lastY = event.clientY;
 
       rotationRef.current.y += deltaX * 0.01;
-      rotationRef.current.x += deltaY * 0.01;
+      rotationRef.current.x -= deltaY * 0.01;
       rotationRef.current.x = clamp(rotationRef.current.x, -Math.PI / 2, Math.PI / 2);
       pinchCenterRef.current = { x: event.clientX, y: event.clientY };
     };
