@@ -27,9 +27,7 @@ export interface ChemicalNodeData {
   targetHandles?: HandleDirection[];
 }
 
-interface ChemicalNodeProps extends NodeProps<ChemicalNodeData> {
-  data: ChemicalNodeData;
-}
+interface ChemicalNodeProps extends NodeProps<ChemicalNodeData> {}
 
 const directionToPosition: Record<HandleDirection, Position> = {
   left: Position.Left,
@@ -53,7 +51,7 @@ const NodeChemical = memo(({ data, selected }: ChemicalNodeProps) => {
 
   return (
     <div
-      className="rounded-lg border transition-all duration-300 p-2 sm:p-3"
+      className="group relative rounded-xl border transition-all duration-300"
       style={{
         borderColor: selected ? tokens.node.borderSelected : 'transparent',
         borderWidth: selected ? 1 : 0,
@@ -76,23 +74,31 @@ const NodeChemical = memo(({ data, selected }: ChemicalNodeProps) => {
       ))}
 
       {/* Molecular structure display */}
-      <div className="flex justify-center mb-2">
-        <SmilesRenderer
-          smiles={data.smiles}
-          width={96}
-          height={86}
-          className="border rounded transition-colors duration-300"
-        />
-      </div>
-
-      {/* Compound information */}
-      <div className="text-center space-y-1">
-        <h3
-          className="font-semibold text-sm leading-tight transition-colors duration-300"
-          style={{ color: tokens.node.text }}
+      <div className="flex flex-col items-center gap-3 px-3 py-3 sm:px-4 sm:py-4">
+        <div
+          className="flex items-center justify-center rounded-lg border p-2 shadow-sm transition-colors duration-300"
+          style={{
+            borderColor: tokens.node.smilesBorder,
+            background: tokens.node.smilesBackground,
+          }}
         >
-          {data.label}
-        </h3>
+          <SmilesRenderer
+            smiles={data.smiles}
+            width={96}
+            height={96}
+            className="rounded-md"
+          />
+        </div>
+
+        {/* Compound information */}
+        <div className="flex flex-col items-center gap-1 text-center transition-colors duration-300">
+          <h2
+            className="font-semibold text-sm leading-tight sm:text-base"
+            style={{ color: tokens.node.text }}
+          >
+            {data.label}
+          </h2>
+        </div>
       </div>
 
       {/* Output handles for outgoing connections */}

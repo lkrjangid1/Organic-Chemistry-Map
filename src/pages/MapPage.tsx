@@ -41,6 +41,73 @@ const edgeTypes = {
 
 const VIEWPORT_STORAGE_KEY = 'ocm:viewport';
 
+const CARD_WIDTH = 150;
+const CARD_HEIGHT = 150;
+const CARD_GAP = 20;
+
+type LayoutPoint = {
+  x: number;
+  y: number;
+};
+
+type PositionLike = {
+  position: LayoutPoint;
+};
+
+const MIN_GAP_X = CARD_WIDTH + CARD_GAP;
+const MIN_GAP_Y = CARD_HEIGHT + CARD_GAP;
+
+const determineLayoutScale = (nodes: PositionLike[]): number => {
+  if (nodes.length < 2) {
+    return 1;
+  }
+
+  let requiredScale = 1;
+
+  for (let i = 0; i < nodes.length; i += 1) {
+    const current = nodes[i].position;
+
+    for (let j = i + 1; j < nodes.length; j += 1) {
+      const candidate = nodes[j].position;
+      const dx = Math.abs(current.x - candidate.x);
+      const dy = Math.abs(current.y - candidate.y);
+
+      if (dx < MIN_GAP_X && dy < MIN_GAP_Y) {
+        const scaleCandidates: number[] = [];
+
+        if (dx > 0) {
+          scaleCandidates.push(MIN_GAP_X / dx);
+        }
+
+        if (dy > 0) {
+          scaleCandidates.push(MIN_GAP_Y / dy);
+        }
+
+        const pairScale = scaleCandidates.length > 0 ? Math.max(...scaleCandidates) : 1.25;
+        requiredScale = Math.max(requiredScale, pairScale);
+      }
+    }
+  }
+
+  const bufferedScale = requiredScale === 1 ? 1 : requiredScale * 1.05;
+  return Math.min(Math.max(bufferedScale, 1), 4);
+};
+
+const applyScaledLayout = (
+  point: LayoutPoint,
+  center: LayoutPoint,
+  scale: number,
+): LayoutPoint => {
+  if (scale === 1) {
+    return point;
+  }
+
+  return {
+    x: (point.x - center.x) * scale + center.x,
+    y: (point.y - center.y) * scale + center.y,
+  };
+};
+
 const MapPage = () => {
   const { tokens, isDark } = useTheme();
   const {
@@ -98,8 +165,27 @@ const MapPage = () => {
       };
     }
 
+    const layoutScale = determineLayoutScale(organicData.nodes);
+
+    const centerPoint = organicData.nodes.reduce<LayoutPoint>(
+      (acc, node) => {
+        acc.x += node.position.x;
+        acc.y += node.position.y;
+        return acc;
+      },
+      { x: 0, y: 0 },
+    );
+
+    if (organicData.nodes.length > 0) {
+      centerPoint.x /= organicData.nodes.length;
+      centerPoint.y /= organicData.nodes.length;
+    }
+
     const nodePositions = new Map(
-      organicData.nodes.map((node) => [node.id, node.position]),
+      organicData.nodes.map((node) => [
+        node.id,
+        applyScaledLayout(node.position, centerPoint, layoutScale),
+      ]),
     );
 
     const sourceHandlesMap = new Map<string, Set<HandleDirection>>();
@@ -190,13 +276,14 @@ const MapPage = () => {
     });
 
     const nodes: Node[] = organicData.nodes.map((node) => {
+      const scaledPosition = nodePositions.get(node.id) ?? node.position;
       const sourceHandles = sourceHandlesMap.get(node.id);
       const targetHandles = targetHandlesMap.get(node.id);
 
       return {
         id: node.id,
         type: 'chemical',
-        position: node.position,
+        position: scaledPosition,
         data: {
           label: node.label,
           smiles: node.smiles,

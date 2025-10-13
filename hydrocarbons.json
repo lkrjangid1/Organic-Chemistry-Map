@@ -1,0 +1,256 @@
+{
+  "nodes": [
+    {
+      "id": "methane",
+      "label": "Methane",
+      "smiles": "C",
+      "type": "alkane",
+      "info": {
+        "iupac": "Methane",
+        "formula": "CH₄",
+        "notes": "Simplest alkane, major component of natural gas",
+        "properties": "Colorless, odorless gas"
+      },
+      "position": { "x": 0, "y": 0 }
+    },
+    {
+      "id": "ethane",
+      "label": "Ethane",
+      "smiles": "CC",
+      "type": "alkane",
+      "info": {
+        "iupac": "Ethane",
+        "formula": "C₂H₆",
+        "notes": "Common fuel and petrochemical feedstock",
+        "properties": "Colorless, odorless gas"
+      },
+      "position": { "x": 100, "y": 0 }
+    },
+    {
+      "id": "propane",
+      "label": "Propane",
+      "smiles": "CCC",
+      "type": "alkane",
+      "info": {
+        "iupac": "Propane",
+        "formula": "C₃H₈",
+        "notes": "Used as fuel and in organic synthesis",
+        "properties": "Colorless, odorless gas"
+      },
+      "position": { "x": 200, "y": 0 }
+    },
+    {
+      "id": "butane",
+      "label": "Butane",
+      "smiles": "CCCC",
+      "type": "alkane",
+      "info": {
+        "iupac": "Butane",
+        "formula": "C₄H₁₀",
+        "notes": "Used in lighters and as a fuel",
+        "properties": "Colorless, odorless gas"
+      },
+      "position": { "x": 300, "y": 0 }
+    },
+    {
+      "id": "ethene",
+      "label": "Ethene",
+      "smiles": "C=C",
+      "type": "alkene",
+      "info": {
+        "iupac": "Ethene",
+        "formula": "C₂H₄",
+        "notes": "Important industrial chemical",
+        "properties": "Colorless gas with a sweet odor"
+      },
+      "position": { "x": 50, "y": -100 }
+    },
+    {
+      "id": "propene",
+      "label": "Propene",
+      "smiles": "CC=C",
+      "type": "alkene",
+      "info": {
+        "iupac": "Propene",
+        "formula": "C₃H₆",
+        "notes": "Used in the production of polypropylene",
+        "properties": "Colorless gas with a faint petroleum-like odor"
+      },
+      "position": { "x": 150, "y": -100 }
+    },
+    {
+      "id": "butene",
+      "label": "Butene",
+      "smiles": "CCCC",
+      "type": "alkene",
+      "info": {
+        "iupac": "Butene",
+        "formula": "C₄H₈",
+        "notes": "Used in the production of synthetic rubber",
+        "properties": "Colorless gas with a mild odor"
+      },
+      "position": { "x": 250, "y": -100 }
+    },
+    {
+      "id": "ethyne",
+      "label": "Ethyne",
+      "smiles": "C#C",
+      "type": "alkyne",
+      "info": {
+        "iupac": "Ethyne",
+        "formula": "C₂H₂",
+        "notes": "Commonly known as acetylene, used in welding",
+        "properties": "Colorless gas with a distinct odor"
+      },
+      "position": { "x": 50, "y": -200 }
+    },
+    {
+      "id": "propyne",
+      "label": "Propyne",
+      "smiles": "CC#C",
+      "type": "alkyne",
+      "info": {
+        "iupac": "Propyne",
+        "formula": "C₃H₄",
+        "notes": "Used in organic synthesis",
+        "properties": "Colorless gas with a faint odor"
+      },
+      "position": { "x": 150, "y": -200 }
+    },
+    {
+      "id": "benzene",
+      "label": "Benzene",
+      "smiles": "C1=CC=CC=C1",
+      "type": "aromatic",
+      "info": {
+        "iupac": "Benzene",
+        "formula": "C₆H₆",
+        "notes": "Base aromatic compound, simplest aromatic hydrocarbon",
+        "properties": "Colorless liquid, carcinogenic, highly flammable"
+      },
+      "position": { "x": 0, "y": 100 }
+    }
+  ],
+  "edges": [
+    {
+      "id": "wurtz_reaction",
+      "source": "ethane",
+      "target": "butane",
+      "label": "Wurtz Reaction",
+      "reactionInfo": {
+        "reagents": "2 CH₃CH₂Cl + 2 Na",
+        "conditions": "Dry ether",
+        "mechanism": "Free radical coupling",
+        "equation": "2 CH₃CH₂Cl + 2 Na → CH₃CH₂CH₂CH₃ + 2 NaCl"
+      }
+    },
+    {
+      "id": "kolbe_electrolysis",
+      "source": "acetic_acid",
+      "target": "ethane",
+      "label": "Kolbe Electrolysis",
+      "reactionInfo": {
+        "reagents": "CH₃COOH + NaOH",
+        "conditions": "Electrolysis",
+        "mechanism": "Electrolytic decarboxylation",
+        "equation": "CH₃COOH + NaOH → CH₄ + Na₂CO₃"
+      }
+    },
+    {
+      "id": "soda_lime_decarboxylation",
+      "source": "acetic_acid",
+      "target": "methane",
+      "label": "Soda Lime Decarboxylation",
+      "reactionInfo": {
+        "reagents": "CH₃COOH + NaOH + CaO",
+        "conditions": "Heat",
+        "mechanism": "Decarboxylation",
+        "equation": "CH₃COOH + NaOH + CaO → CH₄ + Na₂CO₃"
+      }
+    },
+    {
+      "id": "hydrogenation_ethene",
+      "source": "ethene",
+      "target": "ethane",
+      "label": "Hydrogenation",
+      "reactionInfo": {
+        "reagents": "H₂",
+        "conditions": "Ni catalyst",
+        "mechanism": "Addition",
+        "equation": "C₂H₄ + H₂ → C₂H₆"
+      }
+    },
+    {
+      "id": "hydrogenation_propyne",
+      "source": "propyne",
+      "target": "propane",
+      "label": "Hydrogenation",
+      "reactionInfo": {
+        "reagents": "H₂",
+        "conditions": "Lindlar's catalyst",
+        "mechanism": "Partial hydrogenation",
+        "equation": "C₃H₄ + H₂ → C₃H₆"
+      }
+    },
+    {
+      "id": "hydrogenation_butyne",
+      "source": "butyne",
+      "target": "butane",
+      "label": "Hydrogenation",
+      "reactionInfo": {
+        "reagents": "H₂",
+        "conditions": "Ni catalyst",
+        "mechanism": "Addition",
+        "equation": "C₄H₆ + H₂ → C₄H₁₀"
+      }
+    },
+    {
+      "id": "halogenation_methane",
+      "source": "methane",
+      "target": "methyl_chloride",
+      "label": "Halogenation",
+      "reactionInfo": {
+        "reagents": "Cl₂",
+        "conditions": "UV light",
+        "mechanism": "Free radical substitution",
+        "equation": "CH₄ + Cl₂ → CH₃Cl + HCl"
+      }
+    },
+    {
+      "id": "combustion_methane",
+      "source": "methane",
+      "target": "carbon_dioxide",
+      "label": "Combustion",
+      "reactionInfo": {
+        "reagents": "O₂",
+        "conditions": "Excess oxygen",
+        "mechanism": "Oxidation",
+        "equation": "CH₄ + 2 O₂ → CO₂ + 2 H₂O"
+      }
+    },
+    {
+      "id": "cracking_decane",
+      "source": "decane",
+      "target": "ethene",
+      "label": "Cracking",
+      "reactionInfo": {
+        "reagents": "Heat, Al₂O₃",
+        "conditions": "High temperature",
+        "mechanism": "Thermal cracking",
+        "equation": "C₁₀H₂₂ → C₂H₄ + C₈H₁₈"
+      }
+    },
+    {
+      "id": "isomerisation_butane",
+      "source": "butane",
+      "target": "isobutane",
+      "label": "Isomerisation",
+      "reactionInfo": {
+        "reagents": "AlCl₃",
+        "conditions": "Heat",
+        "mechanism": "Carbocation rearrangement",
+        "equation": "C₄H₁₀ → C₄H₁₀ (isomer)"
+      }
+    }
+  ]
+}
