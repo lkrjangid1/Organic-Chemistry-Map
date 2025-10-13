@@ -1,5 +1,5 @@
-import { memo, useEffect, useMemo, useRef, useState } from 'react';
-import { Expand, Minimize } from 'lucide-react';
+import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Expand, Info, Minimize, X } from 'lucide-react';
 import { useTheme } from '../theme';
 
 type AtomProjection = {
@@ -17,6 +17,8 @@ type BondProjection = {
   by: number;
   depth: number;
   order: number;
+  sourceElement: string;
+  targetElement: string;
 };
 
 type ParsedStructure = {
@@ -160,6 +162,56 @@ const adjustColor = (hex: string, amount: number) => {
   return `#${((1 << 24) + (newR << 16) + (newG << 8) + newB).toString(16).slice(1)}`;
 };
 
+const normalizeElementSymbol = (element: string) => (
+  element.length > 1
+    ? element.charAt(0).toUpperCase() + element.slice(1).toLowerCase()
+    : element.toUpperCase()
+);
+
+const getElementColor = (element: string, palette: Record<string, string>) => {
+  const normalized = normalizeElementSymbol(element);
+  return palette[element] ?? palette[normalized] ?? palette[element.toUpperCase()] ?? '#1e293b';
+};
+
+const mixHexColors = (colorA: string, colorB: string, ratio = 0.5) => {
+  const sanitize = (hex: string) => {
+    const clean = hex.replace('#', '');
+    if (clean.length === 3) {
+      return clean.split('').map((char) => char + char).join('');
+    }
+    return clean.padStart(6, '0').slice(-6);
+  };
+
+  const a = sanitize(colorA);
+  const b = sanitize(colorB);
+  const ai = parseInt(a, 16);
+  const bi = parseInt(b, 16);
+  if (Number.isNaN(ai) || Number.isNaN(bi)) {
+    return colorA;
+  }
+
+  const ar = (ai >> 16) & 255;
+  const ag = (ai >> 8) & 255;
+  const ab = ai & 255;
+
+  const br = (bi >> 16) & 255;
+  const bg = (bi >> 8) & 255;
+  const bb = bi & 255;
+
+  const mix = (ac: number, bc: number) => Math.round(ac + (bc - ac) * ratio);
+
+  const r = mix(ar, br);
+  const g = mix(ag, bg);
+  const bOut = mix(ab, bb);
+
+  return `#${((1 << 24) + (r << 16) + (g << 8) + bOut).toString(16).slice(1)}`;
+};
+
+const SCALE_MIN = 0.55;
+const SCALE_MAX = 2.4;
+const TRANSLATE_LIMIT_FACTOR = 0.42;
+const TRANSLATE_EASING = 0.18;
+
 interface ConformerViewerProps {
   smiles: string;
   height?: number;
@@ -167,21 +219,66 @@ interface ConformerViewerProps {
 
 const ConformerViewer = memo(({ smiles, height = 220 }: ConformerViewerProps) => {
   const { tokens, isDark } = useTheme();
+  const palette = tokens.node.smilesPalette as Record<string, string>;
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const animationRef = useRef<number | null>(null);
   const rotationRef = useRef({ x: -0.35, y: 0.5, z: 0 });
   const autoRotateRef = useRef(true);
-  const dragStateRef = useRef<{ active: boolean; lastX: number; lastY: number; timeout: number | null }>({
+  const dragStateRef = useRef<{
+    active: boolean;
+    lastX: number;
+    lastY: number;
+    timeout: number | null;
+    mode: 'idle' | 'rotate' | 'pinch';
+  }>({
     active: false,
     lastX: 0,
     lastY: 0,
     timeout: null,
+    mode: 'idle',
   });
+  const scaleRef = useRef(1);
+  const targetScaleRef = useRef(1);
+  const translateRef = useRef({ x: 0, y: 0 });
+  const targetTranslateRef = useRef({ x: 0, y: 0 });
+  const pointerCacheRef = useRef<Map<number, { x: number; y: number }>>(new Map());
+  const pinchDistanceRef = useRef<number | null>(null);
+  const pinchCenterRef = useRef<{ x: number; y: number } | null>(null);
+  const lastTapRef = useRef(0);
 
   const [structure, setStructure] = useState<ParsedStructure | null>(null);
   const [error, setError] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [showInfoSheet, setShowInfoSheet] = useState(false);
+
+  const resetView = useCallback(() => {
+    rotationRef.current = { x: -0.35, y: 0.5, z: 0 };
+    targetScaleRef.current = 1;
+    scaleRef.current = 1;
+    targetTranslateRef.current = { x: 0, y: 0 };
+    translateRef.current = { x: 0, y: 0 };
+    pinchCenterRef.current = null;
+    autoRotateRef.current = true;
+  }, []);
+
+  const legendEntries = useMemo(() => {
+    if (!structure) {
+      return [];
+    }
+
+    const unique = new Map<string, string>();
+    for (const atom of structure.atoms) {
+      const symbol = normalizeElementSymbol(atom.element);
+      if (!unique.has(symbol)) {
+        unique.set(symbol, getElementColor(atom.element, palette));
+      }
+    }
+
+    return Array.from(unique.entries())
+      .map(([element, color]) => ({ element, color }))
+      .sort((a, b) => a.element.localeCompare(b.element));
+  }, [structure, palette]);
 
   useEffect(() => {
     let cancelled = false;
@@ -192,6 +289,7 @@ const ConformerViewer = memo(({ smiles, height = 220 }: ConformerViewerProps) =>
         const parsed = await loadStructure(smiles);
         if (!cancelled) {
           setStructure(parsed);
+          resetView();
         }
       } catch (err) {
         if (!cancelled) {
@@ -206,7 +304,7 @@ const ConformerViewer = memo(({ smiles, height = 220 }: ConformerViewerProps) =>
     return () => {
       cancelled = true;
     };
-  }, [smiles]);
+  }, [smiles, resetView]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -237,15 +335,36 @@ const ConformerViewer = memo(({ smiles, height = 220 }: ConformerViewerProps) =>
         rotationRef.current.y += 0.0075;
       }
 
-      const projected = projectStructure(structure, rotationRef.current, width, heightPx);
+      targetScaleRef.current = clamp(targetScaleRef.current, SCALE_MIN, SCALE_MAX);
+      scaleRef.current = clamp(
+        scaleRef.current + (targetScaleRef.current - scaleRef.current) * 0.12,
+        SCALE_MIN,
+        SCALE_MAX,
+      );
+
+      const maxTranslateX = width * TRANSLATE_LIMIT_FACTOR;
+      const maxTranslateY = heightPx * TRANSLATE_LIMIT_FACTOR;
+
+      targetTranslateRef.current.x = clamp(targetTranslateRef.current.x, -maxTranslateX, maxTranslateX);
+      targetTranslateRef.current.y = clamp(targetTranslateRef.current.y, -maxTranslateY, maxTranslateY);
+
+      translateRef.current.x += (targetTranslateRef.current.x - translateRef.current.x) * TRANSLATE_EASING;
+      translateRef.current.y += (targetTranslateRef.current.y - translateRef.current.y) * TRANSLATE_EASING;
+
+      const projected = projectStructure(
+        structure,
+        rotationRef.current,
+        width,
+        heightPx,
+        scaleRef.current,
+        translateRef.current,
+      );
       drawStructure(
         ctx,
         projected.atoms,
         projected.bonds,
-        tokens.node.smilesPalette as Record<string, string>,
-        isDark
-          ? tokens.node.text
-          : '#0f172a',
+        palette,
+        isDark ? tokens.node.text : '#0f172a',
         isDark ? '#e5e5e5' : '#f8fafc',
       );
 
@@ -259,7 +378,38 @@ const ConformerViewer = memo(({ smiles, height = 220 }: ConformerViewerProps) =>
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [structure, height]);
+  }, [structure, height, palette, isDark, tokens]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) {
+      return undefined;
+    }
+
+    const previous = canvas.style.touchAction;
+    canvas.style.touchAction = 'none';
+
+    return () => {
+      canvas.style.touchAction = previous;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!showInfoSheet) {
+      return undefined;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setShowInfoSheet(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [showInfoSheet]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -268,6 +418,7 @@ const ConformerViewer = memo(({ smiles, height = 220 }: ConformerViewerProps) =>
     }
 
     const state = dragStateRef.current;
+    const pointerCache = pointerCacheRef.current;
 
     const clearTimeoutSafe = () => {
       if (state.timeout !== null) {
@@ -284,19 +435,102 @@ const ConformerViewer = memo(({ smiles, height = 220 }: ConformerViewerProps) =>
       }, 2400);
     };
 
+    const resetPinchState = () => {
+      pinchDistanceRef.current = null;
+      pinchCenterRef.current = null;
+    };
+
+    const getPinchState = () => {
+      if (pointerCache.size < 2) {
+        return null;
+      }
+      const [first, second] = Array.from(pointerCache.values());
+      const distance = Math.hypot(first.x - second.x, first.y - second.y) || 0;
+      const center = {
+        x: (first.x + second.x) / 2,
+        y: (first.y + second.y) / 2,
+      };
+      return { distance, center };
+    };
+
     const handlePointerDown = (event: PointerEvent) => {
       if (!canvas) {
         return;
       }
+
+      if (event.pointerType === 'touch') {
+        event.preventDefault();
+      }
+
+      clearTimeoutSafe();
       autoRotateRef.current = false;
-      state.active = true;
-      state.lastX = event.clientX;
-      state.lastY = event.clientY;
-      canvas.setPointerCapture(event.pointerId);
+      pointerCache.set(event.pointerId, { x: event.clientX, y: event.clientY });
+
+      if (event.pointerType === 'touch' && pointerCache.size === 1) {
+        const now = performance.now();
+        if (now - lastTapRef.current < 280) {
+          resetView();
+        }
+        lastTapRef.current = now;
+      }
+
+      if (pointerCache.size === 1) {
+        state.mode = 'rotate';
+        state.active = true;
+        state.lastX = event.clientX;
+        state.lastY = event.clientY;
+        pinchCenterRef.current = { x: event.clientX, y: event.clientY };
+        try {
+          canvas.setPointerCapture(event.pointerId);
+        } catch (err) {
+          // silently ignore pointer capture issues
+        }
+      } else if (pointerCache.size === 2) {
+        state.mode = 'pinch';
+        state.active = false;
+        const pinchState = getPinchState();
+        if (pinchState) {
+          pinchDistanceRef.current = pinchState.distance || null;
+          pinchCenterRef.current = pinchState.center;
+        }
+      }
     };
 
     const handlePointerMove = (event: PointerEvent) => {
-      if (!state.active) {
+      if (!pointerCache.has(event.pointerId)) {
+        return;
+      }
+
+      pointerCache.set(event.pointerId, { x: event.clientX, y: event.clientY });
+
+      if (pointerCache.size >= 2) {
+        const pinchState = getPinchState();
+        if (!pinchState) {
+          resetPinchState();
+          return;
+        }
+
+        const { distance, center } = pinchState;
+
+        if (pinchDistanceRef.current && pinchDistanceRef.current > 0 && distance > 0) {
+          const scaleDelta = distance / pinchDistanceRef.current;
+          targetScaleRef.current = clamp(targetScaleRef.current * scaleDelta, SCALE_MIN, SCALE_MAX);
+        }
+
+        if (pinchCenterRef.current) {
+          const deltaX = center.x - pinchCenterRef.current.x;
+          const deltaY = center.y - pinchCenterRef.current.y;
+          const scaleAdjustment = 1 / Math.max(scaleRef.current, 0.001);
+          targetTranslateRef.current.x += deltaX * scaleAdjustment;
+          targetTranslateRef.current.y += deltaY * scaleAdjustment;
+        }
+
+        pinchDistanceRef.current = distance || pinchDistanceRef.current;
+        pinchCenterRef.current = center;
+        return;
+      }
+
+      if (!state.active || state.mode !== 'rotate') {
         return;
       }
 
@@ -308,22 +542,69 @@ const ConformerViewer = memo(({ smiles, height = 220 }: ConformerViewerProps) =>
       rotationRef.current.y += deltaX * 0.01;
       rotationRef.current.x += deltaY * 0.01;
       rotationRef.current.x = clamp(rotationRef.current.x, -Math.PI / 2, Math.PI / 2);
+      pinchCenterRef.current = { x: event.clientX, y: event.clientY };
     };
 
     const handlePointerUp = (event: PointerEvent) => {
-      if (!state.active) {
+      if (pointerCache.has(event.pointerId)) {
+        pointerCache.delete(event.pointerId);
+      }
+
+      try {
+        canvas.releasePointerCapture(event.pointerId);
+      } catch (err) {
+        // ignore capture release failures
+      }
+
+      if (pointerCache.size === 0) {
+        state.active = false;
+        state.mode = 'idle';
+        resetPinchState();
+        scheduleAutoRotate();
         return;
       }
 
-      state.active = false;
-      canvas?.releasePointerCapture(event.pointerId);
+      if (pointerCache.size === 1) {
+        const [remaining] = Array.from(pointerCache.values());
+        state.mode = 'rotate';
+        state.active = true;
+        state.lastX = remaining.x;
+        state.lastY = remaining.y;
+        pinchDistanceRef.current = null;
+        pinchCenterRef.current = { x: remaining.x, y: remaining.y };
+        return;
+      }
+
+      const pinchState = getPinchState();
+      if (pinchState) {
+        pinchDistanceRef.current = pinchState.distance;
+        pinchCenterRef.current = pinchState.center;
+      }
+    };
+
+    const handleWheel = (event: WheelEvent) => {
+      event.preventDefault();
+      clearTimeoutSafe();
+      autoRotateRef.current = false;
+
+      const delta = clamp(event.deltaY, -180, 180);
+      const factor = clamp(1 - delta * 0.0025, 0.75, 1.3);
+      const nextTarget = clamp(targetScaleRef.current * factor, SCALE_MIN, SCALE_MAX);
+      targetScaleRef.current = nextTarget;
       scheduleAutoRotate();
+    };
+
+    const handleDoubleClick = () => {
+      clearTimeoutSafe();
+      resetView();
     };
 
     canvas.addEventListener('pointerdown', handlePointerDown);
     window.addEventListener('pointermove', handlePointerMove);
     window.addEventListener('pointerup', handlePointerUp);
     window.addEventListener('pointercancel', handlePointerUp);
+    canvas.addEventListener('wheel', handleWheel, { passive: false });
+    canvas.addEventListener('dblclick', handleDoubleClick);
 
     return () => {
       clearTimeoutSafe();
@@ -331,8 +612,13 @@ const ConformerViewer = memo(({ smiles, height = 220 }: ConformerViewerProps) =>
       window.removeEventListener('pointermove', handlePointerMove);
       window.removeEventListener('pointerup', handlePointerUp);
       window.removeEventListener('pointercancel', handlePointerUp);
+      canvas.removeEventListener('wheel', handleWheel);
+      canvas.removeEventListener('dblclick', handleDoubleClick);
+      pointerCache.clear();
+      pinchDistanceRef.current = null;
+      pinchCenterRef.current = null;
     };
-  }, []);
+  }, [resetView]);
 
   const containerStyle = useMemo(() => ({
     height: isFullscreen ? '100%' : height,
@@ -347,9 +633,11 @@ const ConformerViewer = memo(({ smiles, height = 220 }: ConformerViewerProps) =>
       if (!document.fullscreenElement) {
         await containerRef.current.requestFullscreen();
         setIsFullscreen(true);
+        setShowInfoSheet(false);
       } else {
         await document.exitFullscreen();
         setIsFullscreen(false);
+        setShowInfoSheet(false);
       }
     } catch (err) {
       console.error('Fullscreen request failed', err);
@@ -358,8 +646,10 @@ const ConformerViewer = memo(({ smiles, height = 220 }: ConformerViewerProps) =>
 
   useEffect(() => {
     const handleChange = () => {
-      if (!document.fullscreenElement) {
-        setIsFullscreen(false);
+      const active = Boolean(document.fullscreenElement);
+      setIsFullscreen(active);
+      if (!active) {
+        setShowInfoSheet(false);
       }
     };
 
@@ -391,11 +681,108 @@ const ConformerViewer = memo(({ smiles, height = 220 }: ConformerViewerProps) =>
         {isFullscreen ? <Minimize className="h-4 w-4" /> : <Expand className="h-4 w-4" />}
       </button>
 
+      {isFullscreen && (
+        <button
+          type="button"
+          onClick={() => setShowInfoSheet((prev) => !prev)}
+          className="absolute left-3 bottom-3 z-10 rounded-full border border-slate-200/70 bg-white/85 p-2 text-slate-600 shadow-sm transition hover:bg-white hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 dark:border-neutral-800/80 dark:bg-neutral-900/70 dark:text-neutral-200 dark:hover:bg-neutral-900"
+          aria-pressed={showInfoSheet}
+          aria-label={showInfoSheet ? 'Hide viewer info' : 'Show viewer info'}
+        >
+          <Info className="h-4 w-4" />
+        </button>
+      )}
+
       <canvas
         ref={canvasRef}
         style={containerStyle}
         className="w-full rounded-lg bg-white/60 dark:bg-neutral-900/50 border border-slate-200/70 dark:border-neutral-800/80 shadow-sm"
       />
+
+      {legendEntries.length > 0 && (
+        <div
+          aria-hidden="true"
+          className={`pointer-events-none absolute bottom-3 right-3 min-w-[160px] flex-col gap-2 rounded-lg border border-slate-200/70 bg-white/85 px-3 py-2 text-xs shadow-sm backdrop-blur-sm dark:border-neutral-800/70 dark:bg-neutral-900/75 ${isFullscreen ? 'flex' : 'hidden lg:flex'}`}
+        >
+          <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-slate-500 dark:text-neutral-400">
+            Element Colors
+          </span>
+          <div className="flex flex-wrap gap-x-3 gap-y-2">
+            {legendEntries.map(({ element, color }) => (
+              <div key={element} className="flex items-center gap-1.5">
+                <span
+                  className="inline-flex h-2.5 w-2.5 rounded-full shadow-sm"
+                  style={{ backgroundColor: color }}
+                />
+                <span className="font-medium text-slate-600 dark:text-neutral-200">
+                  {element}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {isFullscreen && showInfoSheet && (
+        <div
+          className="pointer-events-auto absolute inset-0 z-20 flex flex-col justify-end bg-slate-950/35 backdrop-blur-sm dark:bg-black/40"
+          onClick={() => setShowInfoSheet(false)}
+        >
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label="Conformer viewer controls"
+            className="mx-auto w-full max-w-xl rounded-t-3xl border border-slate-200/70 bg-white/95 px-5 pb-6 pt-4 shadow-2xl dark:border-neutral-800/80 dark:bg-neutral-950/95"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="mb-3 flex items-center justify-between">
+              <h2 className="text-sm font-semibold text-slate-700 dark:text-neutral-200">
+                Viewer Controls
+              </h2>
+              <button
+                type="button"
+                onClick={() => setShowInfoSheet(false)}
+                className="rounded-full p-1 text-slate-500 transition hover:bg-slate-100 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-100"
+                aria-label="Close viewer info"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+            <div className="space-y-2 text-xs text-slate-600 dark:text-neutral-300">
+              <div className="flex items-start gap-2">
+                <span className="mt-[0.35rem] inline-flex h-1.5 w-1.5 flex-shrink-0 rounded-full bg-sky-500" />
+                <p>
+                  <span className="font-semibold text-slate-700 dark:text-neutral-100">Rotate:</span> Drag with one finger on touch or click-drag with a mouse/trackpad.
+                </p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="mt-[0.35rem] inline-flex h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500" />
+                <p>
+                  <span className="font-semibold text-slate-700 dark:text-neutral-100">Zoom:</span> Pinch with two fingers or scroll the mouse wheel.
+                </p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="mt-[0.35rem] inline-flex h-1.5 w-1.5 flex-shrink-0 rounded-full bg-amber-500" />
+                <p>
+                  <span className="font-semibold text-slate-700 dark:text-neutral-100">Pan:</span> Move two fingers together while pinched to nudge the structure in view.
+                </p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="mt-[0.35rem] inline-flex h-1.5 w-1.5 flex-shrink-0 rounded-full bg-fuchsia-500" />
+                <p>
+                  <span className="font-semibold text-slate-700 dark:text-neutral-100">Reset:</span> Double-tap (touch) or double-click to re-center and restore the default angle.
+                </p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="mt-[0.35rem] inline-flex h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-500" />
+                <p>
+                  <span className="font-semibold text-slate-700 dark:text-neutral-100">Colors:</span> Element colors remain visible in the legend on the lower right.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 });
@@ -407,11 +794,13 @@ const projectStructure = (
   rotation: { x: number; y: number; z: number },
   width: number,
   height: number,
+  scale: number,
+  translate: { x: number; y: number },
 ) => {
   const projectedAtoms: AtomProjection[] = [];
   const bonds: BondProjection[] = [];
 
-  const baseScale = Math.min(width, height) * 0.42;
+  const baseScale = Math.min(width, height) * 0.42 * scale;
   const cosY = Math.cos(rotation.y);
   const sinY = Math.sin(rotation.y);
   const cosX = Math.cos(rotation.x);
@@ -441,8 +830,8 @@ const projectStructure = (
     projectedAtoms.push({
       index,
       element: atom.element,
-      x: width / 2 + x2 * perspective,
-      y: height / 2 + y2 * perspective,
+      x: width / 2 + x2 * perspective + translate.x,
+      y: height / 2 + y2 * perspective + translate.y,
       depth: zNormalized,
     });
   }
@@ -461,6 +850,8 @@ const projectStructure = (
       by: target.y,
       depth: (source.depth + target.depth) / 2,
       order: bond.order,
+      sourceElement: structure.atoms[bond.source]?.element ?? 'C',
+      targetElement: structure.atoms[bond.target]?.element ?? 'C',
     });
   }
 
@@ -475,69 +866,128 @@ const drawStructure = (
   textColorDark: string,
   textColorLight: string,
 ) => {
-  ctx.lineCap = 'round';
-
   const sortedBonds = [...bonds].sort((a, b) => a.depth - b.depth);
 
   for (const bond of sortedBonds) {
-    const shade = clamp((bond.depth + 1) / 2, 0, 1);
-    ctx.strokeStyle = adjustColor('#334155', shade * -0.35);
-    ctx.lineWidth = 2 + bond.order * 0.7;
+    const depthShade = clamp((bond.depth + 1) / 2, 0, 1);
+    const sourceColor = getElementColor(bond.sourceElement, palette);
+    const targetColor = getElementColor(bond.targetElement, palette);
+    const coreColor = mixHexColors(sourceColor, targetColor, 0.5);
+    const rodWidth = 5.5 + bond.order * 1.4 + depthShade * 1.1;
 
-    ctx.beginPath();
-    ctx.moveTo(bond.ax, bond.ay);
-    ctx.lineTo(bond.bx, bond.by);
-    ctx.stroke();
+    const gradient = ctx.createLinearGradient(bond.ax, bond.ay, bond.bx, bond.by);
+    gradient.addColorStop(0, adjustColor(sourceColor, 0.2));
+    gradient.addColorStop(0.5, adjustColor(coreColor, depthShade * -0.18));
+    gradient.addColorStop(1, adjustColor(targetColor, 0.2));
 
-    if (bond.order >= 2) {
-      const dx = bond.bx - bond.ax;
-      const dy = bond.by - bond.ay;
-      const length = Math.hypot(dx, dy) || 1;
-      const offsetScale = (bond.order === 2 ? 4 : 6) / length;
-      const offsetX = -dy * offsetScale;
-      const offsetY = dx * offsetScale;
+    const outlineGradient = ctx.createLinearGradient(bond.ax, bond.ay, bond.bx, bond.by);
+    outlineGradient.addColorStop(0, adjustColor(sourceColor, -0.45));
+    outlineGradient.addColorStop(1, adjustColor(targetColor, -0.45));
 
+    const drawRod = (offsetX: number, offsetY: number, widthFactor: number) => {
+      ctx.save();
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+
+      ctx.globalAlpha = 0.9;
+      ctx.lineWidth = rodWidth * widthFactor + 1.4;
+      ctx.strokeStyle = outlineGradient;
       ctx.beginPath();
       ctx.moveTo(bond.ax + offsetX, bond.ay + offsetY);
       ctx.lineTo(bond.bx + offsetX, bond.by + offsetY);
       ctx.stroke();
 
-      if (bond.order === 3) {
-        ctx.beginPath();
-        ctx.moveTo(bond.ax - offsetX, bond.ay - offsetY);
-        ctx.lineTo(bond.bx - offsetX, bond.by - offsetY);
-        ctx.stroke();
+      ctx.globalAlpha = 1;
+      ctx.lineWidth = rodWidth * widthFactor;
+      ctx.strokeStyle = gradient;
+      ctx.beginPath();
+      ctx.moveTo(bond.ax + offsetX, bond.ay + offsetY);
+      ctx.lineTo(bond.bx + offsetX, bond.by + offsetY);
+      ctx.stroke();
+
+      const highlightGradient = ctx.createLinearGradient(
+        bond.ax + offsetX,
+        bond.ay + offsetY,
+        bond.bx + offsetX,
+        bond.by + offsetY,
+      );
+      highlightGradient.addColorStop(0, adjustColor(sourceColor, 0.7));
+      highlightGradient.addColorStop(1, adjustColor(targetColor, 0.7));
+      ctx.globalAlpha = 0.55;
+      ctx.lineWidth = Math.max(rodWidth * widthFactor * 0.32, 1.4);
+      ctx.strokeStyle = highlightGradient;
+      ctx.beginPath();
+      ctx.moveTo(bond.ax + offsetX, bond.ay + offsetY);
+      ctx.lineTo(bond.bx + offsetX, bond.by + offsetY);
+      ctx.stroke();
+
+      ctx.restore();
+    };
+
+    if (bond.order <= 1) {
+      drawRod(0, 0, 1);
+    } else {
+      const dx = bond.bx - bond.ax;
+      const dy = bond.by - bond.ay;
+      const length = Math.hypot(dx, dy) || 1;
+      const offsetMagnitude = Math.min(rodWidth * 0.45, length * 0.28);
+      const offsetX = (-dy / length) * offsetMagnitude;
+      const offsetY = (dx / length) * offsetMagnitude;
+
+      if (bond.order === 2) {
+        drawRod(offsetX, offsetY, 0.78);
+        drawRod(-offsetX, -offsetY, 0.78);
+      } else {
+        drawRod(0, 0, 0.72);
+        drawRod(offsetX, offsetY, 0.62);
+        drawRod(-offsetX, -offsetY, 0.62);
       }
     }
   }
 
   const sortedAtoms = [...atoms].sort((a, b) => a.depth - b.depth);
 
-  ctx.font = '600 12px "Inter", "Arial", sans-serif';
+  ctx.font = '600 13px "Inter", "Arial", sans-serif';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
 
   for (const atom of sortedAtoms) {
-    const capitalized = atom.element.length > 1
-      ? atom.element.charAt(0).toUpperCase() + atom.element.slice(1).toLowerCase()
-      : atom.element.toUpperCase();
-    const baseColor = palette[atom.element] ?? palette[capitalized] ?? palette[atom.element.toUpperCase()] ?? '#1e293b';
+    const capitalized = normalizeElementSymbol(atom.element);
+    const baseColor = getElementColor(atom.element, palette);
     const shade = clamp((atom.depth + 1) / 2, 0, 1);
-    const fill = adjustColor(baseColor, 0.35 + shade * 0.3);
-    const outline = adjustColor(baseColor, -0.45);
-    const radius = 10 + shade * 4;
+    const radius = 11 + shade * 5;
 
-    ctx.fillStyle = fill;
-    ctx.strokeStyle = outline;
-    ctx.lineWidth = 1.5;
+    ctx.save();
+    ctx.shadowColor = adjustColor(baseColor, -0.55);
+    ctx.shadowBlur = 6 * (0.6 + shade * 0.4);
+
+    const gradient = ctx.createRadialGradient(
+      atom.x - radius * 0.35,
+      atom.y - radius * 0.35,
+      radius * 0.18,
+      atom.x,
+      atom.y,
+      radius,
+    );
+    gradient.addColorStop(0, adjustColor(baseColor, 0.75));
+    gradient.addColorStop(0.45, adjustColor(baseColor, 0.35));
+    gradient.addColorStop(1, adjustColor(baseColor, -0.45));
+
+    ctx.fillStyle = gradient;
+    ctx.strokeStyle = adjustColor(baseColor, -0.55);
+    ctx.lineWidth = 1.6;
 
     ctx.beginPath();
     ctx.arc(atom.x, atom.y, radius, 0, Math.PI * 2);
     ctx.fill();
     ctx.stroke();
 
+    ctx.shadowBlur = 0;
+    ctx.shadowColor = 'transparent';
+    ctx.restore();
+
     ctx.fillStyle = shade > 0.55 ? textColorDark : textColorLight;
-    ctx.fillText(atom.element, atom.x, atom.y);
+    ctx.fillText(capitalized, atom.x, atom.y);
   }
 };
 
