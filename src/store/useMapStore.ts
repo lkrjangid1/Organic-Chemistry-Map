@@ -1,5 +1,11 @@
 import { create } from 'zustand';
-import { Edge, Node, type ReactFlowInstance } from 'reactflow';
+import {
+  Edge,
+  Node,
+  type NodeChange,
+  type ReactFlowInstance,
+  applyNodeChanges,
+} from 'reactflow';
 
 import type { ChemicalNodeData } from '../components/NodeChemical';
 import type { CustomEdgeData } from '../components/CustomEdge';
@@ -34,6 +40,7 @@ export interface MapState {
   setEdges: (edges: Edge<CustomEdgeData>[]) => void;
   setSelectedNode: (node: Node<ChemicalNodeData> | null) => void;
   setSelectedEdge: (edge: Edge<CustomEdgeData> | null) => void;
+  applyNodeChanges: (changes: NodeChange<ChemicalNodeData>[]) => void;
   setReactionFilter: (filter: string | null) => void;
   setSearchQuery: (query: string) => void;
   setHighlightedPath: (path: string[]) => void;
@@ -60,74 +67,109 @@ export const useMapStore = create<MapState>((set, get) => ({
   reactFlowInstance: null,
 
   // Setters
-  setNodes: (nodes) => set({ nodes }),
-  setEdges: (edges) => set({ edges }),
+  setNodes: (nodes) =>
+    set((state) => {
+      const selectedNodeId = state.selectedNode?.id;
+      const nextSelectedNode =
+        selectedNodeId != null
+          ? (nodes.find((node) => node.id === selectedNodeId) as
+              | Node<ChemicalNodeData>
+              | undefined)
+          : null;
 
-  setSelectedNode: (node) => {
-    const instance = get().reactFlowInstance;
+      return {
+        nodes,
+        selectedNode: nextSelectedNode ?? null,
+      };
+    }),
 
-    if (instance) {
-      instance.setNodes((nodes) =>
-        nodes.map((current) => ({
-          ...current,
-          selected: !!node && current.id === node.id,
-        })),
-      );
+  setEdges: (edges) =>
+    set((state) => {
+      const selectedEdgeId = state.selectedEdge?.id;
+      const nextSelectedEdge =
+        selectedEdgeId != null
+          ? (edges.find((edge) => edge.id === selectedEdgeId) as
+              | Edge<CustomEdgeData>
+              | undefined)
+          : null;
 
-      instance.setEdges((edges) =>
-        edges.map((edge) => ({
-          ...edge,
-          selected: false,
-        })),
-      );
-    }
+      return {
+        edges,
+        selectedEdge: nextSelectedEdge ?? null,
+      };
+    }),
 
-    let nextNode = node;
-    if (instance && node) {
-      nextNode = instance
-        .getNodes()
-        .find((current) => current.id === node.id) as Node<ChemicalNodeData> | undefined ?? node;
-    }
+  setSelectedNode: (node) =>
+    set((state) => {
+      const nextNodes = state.nodes.map((current) => ({
+        ...current,
+        selected: !!node && current.id === node.id,
+      }));
 
-    set({
-      selectedNode: nextNode ?? null,
-      selectedEdge: null,
-      ...(node ? { isPanelOpen: false } : {}),
-    });
-  },
+      const nextEdges = state.edges.map((edge) => ({
+        ...edge,
+        selected: false,
+      }));
 
-  setSelectedEdge: (edge) => {
-    const instance = get().reactFlowInstance;
+      const nextSelectedNode = node
+        ? (nextNodes.find((current) => current.id === node.id) as
+            | Node<ChemicalNodeData>
+            | undefined) ?? node
+        : null;
 
-    if (instance) {
-      instance.setEdges((edges) =>
-        edges.map((current) => ({
-          ...current,
-          selected: !!edge && current.id === edge.id,
-        })),
-      );
+      return {
+        nodes: nextNodes,
+        edges: nextEdges,
+        selectedNode: nextSelectedNode,
+        selectedEdge: null,
+        ...(node ? { isPanelOpen: false } : {}),
+      };
+    }),
 
-      instance.setNodes((nodes) =>
-        nodes.map((node) => ({
-          ...node,
-          selected: false,
-        })),
-      );
-    }
+  setSelectedEdge: (edge) =>
+    set((state) => {
+      const nextEdges = state.edges.map((current) => ({
+        ...current,
+        selected: !!edge && current.id === edge?.id,
+      }));
 
-    let nextEdge = edge;
-    if (instance && edge) {
-      nextEdge = instance
-        .getEdges()
-        .find((current) => current.id === edge.id) as Edge<CustomEdgeData> | undefined ?? edge;
-    }
+      const nextNodes = state.nodes.map((nodeItem) => ({
+        ...nodeItem,
+        selected: false,
+      }));
 
-    set({
-      selectedEdge: nextEdge ?? null,
-      selectedNode: null,
-      ...(edge ? { isPanelOpen: false } : {}),
-    });
-  },
+      const nextSelectedEdge = edge
+        ? (nextEdges.find((current) => current.id === edge.id) as
+            | Edge<CustomEdgeData>
+            | undefined) ?? edge
+        : null;
+
+      return {
+        nodes: nextNodes,
+        edges: nextEdges,
+        selectedEdge: nextSelectedEdge,
+        selectedNode: null,
+        ...(edge ? { isPanelOpen: false } : {}),
+      };
+    }),
+
+  applyNodeChanges: (changes) =>
+    set((state) => {
+      const updatedNodes = applyNodeChanges(changes, state.nodes);
+      let updatedSelectedNode = state.selectedNode;
+
+      if (updatedSelectedNode) {
+        updatedSelectedNode =
+          (updatedNodes.find((node) => node.id === updatedSelectedNode?.id) as
+            | Node<ChemicalNodeData>
+            | undefined) ?? null;
+      }
+
+      return {
+        nodes: updatedNodes,
+        selectedNode: updatedSelectedNode ?? null,
+      };
+    }),
 
   setReactionFilter: (filter) => set({ reactionFilter: filter }),
 
@@ -221,28 +263,18 @@ export const useMapStore = create<MapState>((set, get) => ({
   },
 
   clearSelection: () => {
-    const instance = get().reactFlowInstance;
-
-    if (instance) {
-      instance.setNodes((nodes) =>
-        nodes.map((node) => ({
-          ...node,
-          selected: false,
-        })),
-      );
-
-      instance.setEdges((edges) =>
-        edges.map((edge) => ({
-          ...edge,
-          selected: false,
-        })),
-      );
-    }
-
-    set({
+    set((state) => ({
+      nodes: state.nodes.map((node) => ({
+        ...node,
+        selected: false,
+      })),
+      edges: state.edges.map((edge) => ({
+        ...edge,
+        selected: false,
+      })),
       selectedNode: null,
       selectedEdge: null,
       highlightedPath: [],
-    });
-  }
+    }));
+  },
 }));

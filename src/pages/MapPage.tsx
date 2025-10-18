@@ -7,6 +7,7 @@ import ReactFlow, {
   type EdgeMouseHandler,
   MarkerType,
   Node,
+  type NodeChange,
   type NodeMouseHandler,
   type ReactFlowInstance,
   type Viewport,
@@ -15,11 +16,22 @@ import 'reactflow/dist/style.css';
 
 import NodeChemical, { HandleDirection } from '../components/NodeChemical';
 import type { ChemicalNodeData } from '../components/NodeChemical';
-import { useOrganicData } from '../data/OrganicDataContext';
+import {
+  useOrganicData,
+  type OrganicEdge,
+  type OrganicNode,
+} from '../data/OrganicDataContext';
 import CustomEdge, { type CustomEdgeData, type ReactionInfo } from '../components/CustomEdge';
 import { useTheme } from '../theme';
 import InfoPanel, { type SelectedInfo } from '../components/InfoPanel';
 import { useMapStore } from '../store/useMapStore';
+import {
+  buildOrganicDatasetSnapshot,
+  extractPositionsFromDataset,
+  readStoredDataset,
+  type LayoutPoint,
+  writeStoredDataset,
+} from '../utils/layoutStorage';
 
 /**
  * Main React Flow visualization page for the chemistry map
@@ -41,14 +53,9 @@ const edgeTypes = {
 
 const VIEWPORT_STORAGE_KEY = 'ocm:viewport';
 
-const CARD_WIDTH = 150;
-const CARD_HEIGHT = 150;
-const CARD_GAP = 20;
-
-type LayoutPoint = {
-  x: number;
-  y: number;
-};
+const CARD_WIDTH = 220;
+const CARD_HEIGHT = 240;
+const CARD_GAP = 60;
 
 type PositionLike = {
   position: LayoutPoint;
@@ -125,6 +132,23 @@ const MapPage = () => {
   const setReactFlowInstance = useMapStore((state) => state.setReactFlowInstance);
   const selectedNode = useMapStore((state) => state.selectedNode);
   const selectedEdge = useMapStore((state) => state.selectedEdge);
+  const applyNodeChangesToStore = useMapStore((state) => state.applyNodeChanges);
+  const mapNodes = useMapStore((state) => state.nodes);
+  const mapEdges = useMapStore((state) => state.edges);
+  const baselineNodesMap = useMemo(
+    () =>
+      organicData
+        ? new Map<string, OrganicNode>(organicData.nodes.map((node) => [node.id, node]))
+        : new Map<string, OrganicNode>(),
+    [organicData],
+  );
+  const baselineEdgesMap = useMemo(
+    () =>
+      organicData
+        ? new Map<string, OrganicEdge>(organicData.edges.map((edge) => [edge.id, edge]))
+        : new Map<string, OrganicEdge>(),
+    [organicData],
+  );
 
   useEffect(() => {
     return () => {
@@ -166,6 +190,8 @@ const MapPage = () => {
     }
 
     const layoutScale = determineLayoutScale(organicData.nodes);
+    const storedDataset = typeof window !== 'undefined' ? readStoredDataset() : null;
+    const storedPositions = extractPositionsFromDataset(storedDataset);
 
     const centerPoint = organicData.nodes.reduce<LayoutPoint>(
       (acc, node) => {
@@ -182,10 +208,13 @@ const MapPage = () => {
     }
 
     const nodePositions = new Map(
-      organicData.nodes.map((node) => [
-        node.id,
-        applyScaledLayout(node.position, centerPoint, layoutScale),
-      ]),
+      organicData.nodes.map((node) => {
+        const stored = storedPositions[node.id];
+        const basePosition = stored
+          ? { x: stored.x, y: stored.y }
+          : applyScaledLayout(node.position, centerPoint, layoutScale);
+        return [node.id, basePosition] as const;
+      }),
     );
 
     const sourceHandlesMap = new Map<string, Set<HandleDirection>>();
@@ -295,7 +324,7 @@ const MapPage = () => {
             ? Array.from(targetHandles)
             : (['left'] as HandleDirection[]),
         },
-        draggable: false,
+        draggable: true,
         selectable: true,
       };
     });
@@ -307,6 +336,23 @@ const MapPage = () => {
     setNodes(initialNodes as Node<ChemicalNodeData>[]);
     setEdges(initialEdges);
   }, [initialEdges, initialNodes, setEdges, setNodes]);
+
+  useEffect(() => {
+    if (initialNodes.length === 0 && initialEdges.length === 0) {
+      return;
+    }
+
+    const snapshot = buildOrganicDatasetSnapshot(
+      initialNodes as Node<ChemicalNodeData>[],
+      initialEdges,
+      {
+        baselineNodes: baselineNodesMap,
+        baselineEdges: baselineEdgesMap,
+      },
+    );
+
+    writeStoredDataset(snapshot);
+  }, [baselineEdgesMap, baselineNodesMap, initialEdges, initialNodes]);
 
   const handleNodeClick = useCallback<NodeMouseHandler>(
     (_event, node) => {
@@ -321,6 +367,52 @@ const MapPage = () => {
     },
     [setSelectedEdge],
   );
+
+const handleNodesChange = useCallback(
+  (changes: NodeChange[]) => {
+    applyNodeChangesToStore(changes);
+
+    const shouldPersist = changes.some((change) => change.type === 'position');
+    if (!shouldPersist) {
+      return;
+    }
+
+    const latestState = useMapStore.getState();
+    const snapshot = buildOrganicDatasetSnapshot(
+      latestState.nodes,
+      latestState.edges,
+      {
+        baselineNodes: baselineNodesMap,
+        baselineEdges: baselineEdgesMap,
+      },
+    );
+
+    writeStoredDataset(snapshot);
+  },
+  [applyNodeChangesToStore, baselineEdgesMap, baselineNodesMap],
+);
+
+const handleNodeDragStop = useCallback(
+  (
+    _event: unknown,
+    _node: Node<ChemicalNodeData>,
+    nodesState?: Node<ChemicalNodeData>[],
+  ) => {
+    const latestState = useMapStore.getState();
+    const nodesToPersist = nodesState ?? latestState.nodes;
+    const snapshot = buildOrganicDatasetSnapshot(
+      nodesToPersist,
+      latestState.edges,
+      {
+        baselineNodes: baselineNodesMap,
+        baselineEdges: baselineEdgesMap,
+      },
+    );
+
+    writeStoredDataset(snapshot);
+  },
+  [baselineEdgesMap, baselineNodesMap],
+);
 
   const restoreViewport = useCallback(
     (instance: ReactFlowInstance) => {
@@ -464,13 +556,15 @@ const MapPage = () => {
         </div>
       ) : (
         <ReactFlow
-          nodes={initialNodes}
-          edges={initialEdges}
+          nodes={mapNodes}
+          edges={mapEdges}
           nodeTypes={nodeTypes}
           edgeTypes={edgeTypes}
           defaultEdgeOptions={edgeOptions}
           onNodeClick={handleNodeClick}
           onEdgeClick={handleEdgeClick}
+          onNodesChange={handleNodesChange}
+          onNodeDragStop={handleNodeDragStop}
           onPaneClick={clearSelection}
           onInit={handleInit}
           minZoom={0.1}

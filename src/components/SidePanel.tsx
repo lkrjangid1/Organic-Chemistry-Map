@@ -19,6 +19,10 @@ import {
 import { usePWAInstall } from '../pwa/PWAInstallProvider';
 import { useMapStore } from '../store/useMapStore';
 import { useTheme } from '../theme';
+import {
+  buildOrganicDatasetSnapshot,
+  writeStoredDataset,
+} from '../utils/layoutStorage';
 
 /**
  * Side panel component for displaying detailed information about selected nodes/edges
@@ -160,12 +164,15 @@ const SidePanel = () => {
   const [localFileName, setLocalFileName] = useState<string | null>(null);
   const [loadingLocalFile, setLoadingLocalFile] = useState(false);
   const [localFileError, setLocalFileError] = useState<string | null>(null);
+  const [datasetExportError, setDatasetExportError] = useState<string | null>(null);
 
   const isPanelOpen = useMapStore((state) => state.isPanelOpen);
   const searchQuery = useMapStore((state) => state.searchQuery);
   const setSearchQuery = useMapStore((state) => state.setSearchQuery);
   const focusElement = useMapStore((state) => state.focusElement);
   const setIsPanelOpen = useMapStore((state) => state.setIsPanelOpen);
+  const nodes = useMapStore((state) => state.nodes);
+  const edges = useMapStore((state) => state.edges);
   const { tokens, isDark } = useTheme();
   const {
     data: organicData,
@@ -341,6 +348,45 @@ const SidePanel = () => {
     reloadOrganicData();
   };
 
+  const handleDatasetExport = () => {
+    try {
+      if (!organicData) {
+        setDatasetExportError('Dataset export becomes available once the map has loaded.');
+        return;
+      }
+
+      const baselineNodes = new Map<string, OrganicNode>(
+        organicData.nodes.map((node) => [node.id, node]),
+      );
+      const baselineEdges = new Map<string, OrganicEdge>(
+        organicData.edges.map((edge) => [edge.id, edge]),
+      );
+
+      const snapshot = buildOrganicDatasetSnapshot(nodes, edges, {
+        baselineNodes,
+        baselineEdges,
+      });
+
+      writeStoredDataset(snapshot);
+
+      const serialized = JSON.stringify(snapshot, null, 2);
+
+      const blob = new Blob([serialized], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement('a');
+      const timestamp = new Date().toISOString().split('T')[0];
+      anchor.href = url;
+      anchor.download = `ocm-layout-${timestamp}.json`;
+      document.body.appendChild(anchor);
+      anchor.click();
+      document.body.removeChild(anchor);
+      URL.revokeObjectURL(url);
+      setDatasetExportError(null);
+    } catch (error) {
+      setDatasetExportError('Unable to export dataset. Please try again.');
+    }
+  };
+
   return (
     <div
       className="fixed top-20 right-4 w-80 max-h-[80vh] backdrop-blur-lg border rounded-xl shadow-xl z-10 overflow-hidden flex flex-col"
@@ -449,7 +495,7 @@ const SidePanel = () => {
             </div>
           )}
 
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             <button
               type="button"
               onClick={handleDatasetReset}
@@ -464,7 +510,29 @@ const SidePanel = () => {
               <RotateCcw className="h-4 w-4" />
               {dataSource === 'local' ? 'Use default dataset' : 'Reload default dataset'}
             </button>
+            <button
+              type="button"
+              onClick={handleDatasetExport}
+              className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold transition-colors border"
+              style={{
+                background: panelTokens.surfaceHover,
+                color: panelTokens.heading,
+                borderColor: panelTokens.border,
+              }}
+            >
+              <Download className="h-4 w-4" />
+              Export dataset
+            </button>
           </div>
+
+          {datasetExportError && (
+            <div
+              className="text-xs font-medium"
+              style={{ color: isDark ? '#fca5a5' : '#b91c1c' }}
+            >
+              {datasetExportError}
+            </div>
+          )}
         </div>
 
         {/* Search Section */}
