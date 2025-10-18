@@ -135,6 +135,11 @@ const MapPage = () => {
   const applyNodeChangesToStore = useMapStore((state) => state.applyNodeChanges);
   const mapNodes = useMapStore((state) => state.nodes);
   const mapEdges = useMapStore((state) => state.edges);
+
+  // Helper function to get connected edges for a node
+  const getConnectedEdges = useCallback((nodeId: string) => {
+    return mapEdges.filter(edge => edge.source === nodeId || edge.target === nodeId);
+  }, [mapEdges]);
   const baselineNodesMap = useMemo(
     () =>
       organicData
@@ -488,6 +493,67 @@ const handleNodeDragStop = useCallback(
     [],
   );
 
+  // Calculate styled edges and nodes based on selection
+  const { styledEdges, styledNodes } = useMemo(() => {
+    const selectedNodeId = selectedNode?.id;
+    const selectedEdgeId = selectedEdge?.id;
+
+    // Get connected node IDs when an edge is selected
+    const connectedNodeIds = selectedEdge
+      ? [selectedEdge.source, selectedEdge.target]
+      : [];
+
+    const purpleColor = isDark ? '#a855f7' : '#7c3aed';
+    const greyColor = isDark ? '#6b7280' : '#9ca3af';
+
+    // Style edges
+    const edges = mapEdges.map(edge => {
+      const isSelectedEdge = edge.id === selectedEdgeId;
+      const isConnectedToSelectedNode = selectedNodeId &&
+        (edge.source === selectedNodeId || edge.target === selectedNodeId);
+
+      const shouldHighlight = isSelectedEdge || isConnectedToSelectedNode;
+
+      const edgeStyle = {
+        stroke: shouldHighlight ? purpleColor : greyColor,
+        strokeWidth: shouldHighlight ? 3 : 2,
+        opacity: shouldHighlight ? 1 : 0.6,
+      };
+
+      const markerColor = shouldHighlight ? purpleColor : greyColor;
+
+      return {
+        ...edge,
+        style: edgeStyle,
+        markerEnd: {
+          type: MarkerType.ArrowClosed,
+          width: 10,
+          height: 10,
+          color: markerColor,
+        },
+      };
+    });
+
+    // Style nodes - highlight when connected to selected edge or when node is selected
+    const nodes = mapNodes.map(node => {
+      const isSelectedNode = node.id === selectedNodeId;
+      const isConnectedToSelectedEdge = connectedNodeIds.includes(node.id);
+
+      const shouldHighlight = isSelectedNode || isConnectedToSelectedEdge;
+
+      return {
+        ...node,
+        selected: shouldHighlight, // This will trigger the NodeChemical component's selected styling
+        style: {
+          ...node.style,
+          opacity: shouldHighlight ? 1 : (selectedEdge || selectedNode ? 0.7 : 1), // Dim non-connected nodes when something is selected
+        },
+      };
+    });
+
+    return { styledEdges: edges, styledNodes: nodes };
+  }, [mapEdges, mapNodes, selectedNode?.id, selectedEdge, isDark]);
+
   const edgeOptions = useMemo(
     () => ({
       animated: false,
@@ -556,8 +622,8 @@ const handleNodeDragStop = useCallback(
         </div>
       ) : (
         <ReactFlow
-          nodes={mapNodes}
-          edges={mapEdges}
+          nodes={styledNodes}
+          edges={styledEdges}
           nodeTypes={nodeTypes}
           edgeTypes={edgeTypes}
           defaultEdgeOptions={edgeOptions}

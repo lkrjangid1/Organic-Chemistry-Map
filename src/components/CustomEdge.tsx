@@ -37,10 +37,10 @@ export default function CustomEdge({
         targetPosition,
     });
     const computedStyle = {
-        ...(style ?? {}),
-        stroke: style?.stroke ?? tokens.flow.edgeStroke,
-        strokeWidth: style?.strokeWidth ?? 2,
+        stroke: tokens.flow.edgeStroke,
+        strokeWidth: 2,
         cursor: 'pointer',
+        ...(style ?? {}), // Allow style prop to override defaults
     };
 
     return (
