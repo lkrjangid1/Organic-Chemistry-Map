@@ -1,15 +1,302 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icons/ogm_logo.png" />
-    <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organic Chemistry Reaction Map for JEE Main, Advanced & NEET</title>
+    <meta
+      name="description"
+      content="Free interactive organic chemistry map with %REACTION_COUNT% reactions and %COMPOUND_COUNT% compounds. Revise named reactions, reagents, conditions and conversions for JEE Main, JEE Advanced and NEET."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="%SITE_URL%" />
+    <link rel="alternate" hreflang="en-IN" href="%SITE_URL%" />
+    <link rel="alternate" hreflang="x-default" href="%SITE_URL%" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Organic Chemistry Map" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:title" content="Organic Chemistry Reaction Map for JEE Main, Advanced & NEET" />
+    <meta
+      property="og:description"
+      content="%REACTION_COUNT% reactions, %COMPOUND_COUNT% compounds, one zoomable map. Revise named reactions and conversions with reagents and mechanisms. Free."
+    />
+    <meta property="og:url" content="%SITE_URL%" />
+    <meta property="og:image" content="%SITE_URL%og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Organic Chemistry Map: interactive reaction map for JEE and NEET" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Organic Chemistry Reaction Map for JEE Main, Advanced & NEET" />
+    <meta
+      name="twitter:description"
+      content="%REACTION_COUNT% reactions and %COMPOUND_COUNT% compounds on one interactive map. Free and open source."
+    />
+    <meta name="twitter:image" content="%SITE_URL%og-image.png" />
+    <!-- @site-verification -->
+
+    <link rel="icon" type="image/png" href="/icons/ogm_logo.png" />
+    <link rel="apple-touch-icon" href="/icons/ogm_logo.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="theme-color" content="#0f172a" />
-    <title>Organic Chemistry Map</title>
+    <link rel="stylesheet" href="/src/home/home.css" />
+    <!-- @json-ld -->
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./" aria-label="Organic Chemistry Map home">
+          <img src="/icons/ogm_logo.png" alt="" width="36" height="36" />
+          <span>Organic Chemistry Map</span>
+        </a>
+        <nav aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="#exams">Exams</a></li>
+            <li><a href="#reactions">Reactions</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+          <a class="btn btn-primary btn-sm" href="app/">Open map</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Free · Open source · Works offline</p>
+            <h1>Organic chemistry reaction map for JEE Main, JEE Advanced &amp; NEET</h1>
+            <p class="lede">
+              Stop memorising reactions as a list. See all %REACTION_COUNT% reactions and
+              %COMPOUND_COUNT% compounds as one connected, zoomable map, with reagents,
+              conditions, mechanisms and structures for every step.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="app/">Open the interactive map</a>
+              <a class="btn btn-ghost" href="#reactions">Browse all reactions</a>
+            </div>
+            <dl class="stats">
+              <div><dt>Reactions</dt><dd>%REACTION_COUNT%</dd></div>
+              <div><dt>Named reactions</dt><dd>%NAMED_COUNT%</dd></div>
+              <div><dt>Compounds</dt><dd>%COMPOUND_COUNT%</dd></div>
+              <div><dt>Compound classes</dt><dd>%CLASS_COUNT%</dd></div>
+            </dl>
+          </div>
+          <figure class="hero-figure">
+            <img
+              src="/screenshots/organic-chemistry-map.webp"
+              width="1440"
+              height="900"
+              alt="Interactive organic chemistry map showing compounds as structure cards connected by reaction arrows, with a reaction detail panel open"
+              fetchpriority="high"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="why" aria-labelledby="why-h">
+        <div class="container narrow">
+          <h2 id="why-h">Why a reaction map works better than a list</h2>
+          <p>
+            Organic chemistry questions in JEE and NEET rarely ask for one reaction in
+            isolation. They ask you to convert one compound into another, identify the
+            product of a two-step sequence, or pick the right reagent. That is a
+            <strong>path-finding</strong> problem, and paths are easiest to learn on a map.
+          </p>
+          <p>
+            Organic Chemistry Map puts every compound on a single canvas and draws each
+            reaction as an arrow from reactant to product. Follow arrows to build
+            conversion chains, compare reagents that lead to the same product, and see at a
+            glance which functional groups connect to which.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="exams" aria-labelledby="exams-h">
+        <div class="container">
+          <h2 id="exams-h">How it helps you in each exam</h2>
+          <div class="cards cards-3">
+            <article class="card exam-card">
+              <h3>JEE Main organic chemistry</h3>
+              <p>
+                JEE Main rewards quick, accurate recall of standard NCERT conversions and
+                reagents. Revise them by functional group instead of by chapter.
+              </p>
+              <ul class="ticks">
+                <li>Alcohol, aldehyde, ketone and acid interconversions in one view</li>
+                <li>Aldol, Cannizzaro, Reimer–Tiemann, Kolbe and Friedel–Crafts reactions</li>
+                <li>Diazonium salt reactions: Sandmeyer, Gattermann, Balz–Schiemann, azo coupling</li>
+                <li>Search any compound to see every reaction going in and out</li>
+              </ul>
+            </article>
+            <article class="card exam-card">
+              <h3>JEE Advanced organic chemistry</h3>
+              <p>
+                JEE Advanced tests multi-step conversions, mechanisms and stereochemistry.
+                Trace full reaction sequences and read the mechanism for each step.
+              </p>
+              <ul class="ticks">
+                <li>Rearrangements: Beckmann, Pinacol–Pinacolone, Hofmann, Curtius, Schmidt, Wolff, Claisen</li>
+                <li>Stereochemistry: S<sub>N</sub>2 inversion, anti-E2, Sharpless and CBS reactions</li>
+                <li>Kinetic vs thermodynamic control in sulfonation</li>
+                <li>Pericyclic reactions: Diels–Alder, electrocyclic ring opening, Oxy-Cope</li>
+              </ul>
+            </article>
+            <article class="card exam-card">
+              <h3>NEET organic chemistry</h3>
+              <p>
+                NEET organic chemistry is NCERT-based and leans on named reactions,
+                distinguishing tests and biomolecules. Revise them visually in minutes.
+              </p>
+              <ul class="ticks">
+                <li>Named reactions with reagents and conditions for every arrow</li>
+                <li>Tests for amines: Carbylamine (isocyanide) and Hinsberg tests</li>
+                <li>Biomolecules: osazone formation, mutarotation, Kiliani–Fischer, Ruff degradation</li>
+                <li>Polymers: condensation polymerisation and copolymerisation</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features" aria-labelledby="features-h">
+        <div class="container">
+          <h2 id="features-h">What you get</h2>
+          <div class="cards cards-4">
+            <div class="card feature">
+              <h3>Zoomable reaction map</h3>
+              <p>Pan and pinch-zoom across the whole syllabus. The map remembers where you left off.</p>
+            </div>
+            <div class="card feature">
+              <h3>Structures for every compound</h3>
+              <p>Each compound shows its drawn structure, IUPAC name and molecular formula.</p>
+            </div>
+            <div class="card feature">
+              <h3>Reagents, conditions &amp; mechanism</h3>
+              <p>Tap any arrow for reagents, conditions, a mechanism summary and the balanced equation.</p>
+            </div>
+            <div class="card feature">
+              <h3>Instant search</h3>
+              <p>Type a compound or reaction name and the map flies straight to it.</p>
+            </div>
+            <div class="card feature">
+              <h3>Reaction filters</h3>
+              <p>Narrow the map to one reaction type to revise a single concept at a time.</p>
+            </div>
+            <div class="card feature">
+              <h3>Works offline</h3>
+              <p>Install it on your phone or laptop and revise without an internet connection.</p>
+            </div>
+            <div class="card feature">
+              <h3>Light &amp; dark mode</h3>
+              <p>Comfortable for late-night revision sessions and bright classrooms alike.</p>
+            </div>
+            <div class="card feature">
+              <h3>Free &amp; open source</h3>
+              <p>No sign-up, no ads, no paywall. The data and code are on GitHub.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="how" aria-labelledby="how-h">
+        <div class="container narrow">
+          <h2 id="how-h">How to revise with the map</h2>
+          <ol class="steps">
+            <li>
+              <h3>Find your starting point</h3>
+              <p>Search for a compound such as <em>benzene</em> or <em>ethanol</em>, or a reaction such as <em>Cannizzaro</em>.</p>
+            </li>
+            <li>
+              <h3>Open a reaction</h3>
+              <p>Tap an arrow to read its reagents, conditions, mechanism and balanced equation.</p>
+            </li>
+            <li>
+              <h3>Follow the path</h3>
+              <p>Hop from product to product to build multi-step conversions, the same way exam questions are built.</p>
+            </li>
+          </ol>
+          <p class="center"><a class="btn btn-primary" href="app/">Start exploring the map</a></p>
+        </div>
+      </section>
+
+      <section class="section" id="popular" aria-labelledby="popular-h">
+        <div class="container">
+          <h2 id="popular-h">Frequently asked named reactions</h2>
+          <p class="section-sub">Jump straight to a reaction on the map.</p>
+          <ul class="pill-list">
+            <!-- @popular-reactions -->
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="reactions" aria-labelledby="reactions-h">
+        <div class="container">
+          <h2 id="reactions-h">All organic reactions on the map (A–Z)</h2>
+          <p class="section-sub">
+            %NAMED_COUNT% reaction types covering %REACTION_COUNT% conversions. Each conversion
+            links to its exact spot on the interactive map.
+          </p>
+          <div class="index-tools">
+            <label class="search">
+              <span class="sr-only">Filter reactions</span>
+              <input
+                id="rxn-filter"
+                type="search"
+                placeholder="Filter by reaction, compound or reagent, e.g. aldol, phenol, NaBH₄"
+                autocomplete="off"
+              />
+            </label>
+            <nav class="letter-nav" aria-label="Reaction index letters"><!-- @letter-nav --></nav>
+          </div>
+          <p id="rxn-empty" class="empty" hidden>No reactions match that search.</p>
+          <div class="rxn-index"><!-- @reaction-index --></div>
+        </div>
+      </section>
+
+      <section class="section" id="compounds" aria-labelledby="compounds-h">
+        <div class="container">
+          <h2 id="compounds-h">Compound classes covered</h2>
+          <p class="section-sub">
+            %COMPOUND_COUNT% compounds across %CLASS_COUNT% classes, from alkanes and alkyl halides
+            to carbohydrates, amino acids and polymers.
+          </p>
+          <ul class="chips"><!-- @compound-classes --></ul>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="faq" aria-labelledby="faq-h">
+        <div class="container narrow">
+          <h2 id="faq-h">Frequently asked questions</h2>
+          <div class="faq"><!-- @faq --></div>
+        </div>
+      </section>
+
+      <section class="section cta">
+        <div class="container narrow center">
+          <h2>Ready to see organic chemistry as one big picture?</h2>
+          <p>Free, no sign-up, and it works on any device.</p>
+          <a class="btn btn-primary" href="app/">Open the interactive map</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          <strong>Organic Chemistry Map</strong> is a free, open-source revision tool for
+          JEE Main, JEE Advanced and NEET organic chemistry.
+        </p>
+        <ul class="footer-links">
+          <li><a href="app/">Interactive map</a></li>
+          <li><a href="#reactions">Reaction index</a></li>
+          <li><a href="https://github.com/lkrjangid1/Organic-Chemistry-Map" rel="noopener">Source on GitHub</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/home/home.ts"></script>
   </body>
 </html>

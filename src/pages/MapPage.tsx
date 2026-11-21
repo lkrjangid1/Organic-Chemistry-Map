@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo } from 'react';
+import { useCallback, useEffect, useMemo, useRef } from 'react';
 import ReactFlow, {
   Background,
   BackgroundVariant,
@@ -135,6 +135,36 @@ const MapPage = () => {
   const applyNodeChangesToStore = useMapStore((state) => state.applyNodeChanges);
   const mapNodes = useMapStore((state) => state.nodes);
   const mapEdges = useMapStore((state) => state.edges);
+  const reactFlowInstance = useMapStore((state) => state.reactFlowInstance);
+  const focusElement = useMapStore((state) => state.focusElement);
+  const deepLinkHandled = useRef(false);
+
+  // Deep links from the home page: ?reaction=<edgeId> or ?compound=<nodeId>
+  useEffect(() => {
+    if (deepLinkHandled.current || !reactFlowInstance || mapNodes.length === 0) {
+      return;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const reactionId = params.get('reaction');
+    const compoundId = params.get('compound');
+    if (!reactionId && !compoundId) {
+      deepLinkHandled.current = true;
+      return;
+    }
+
+    // Wait for React Flow to measure nodes and for any viewport restore to settle.
+    const timer = window.setTimeout(() => {
+      deepLinkHandled.current = true;
+      if (reactionId) {
+        focusElement(reactionId, 'edge');
+      } else if (compoundId) {
+        focusElement(compoundId, 'node');
+      }
+    }, 400);
+
+    return () => window.clearTimeout(timer);
+  }, [focusElement, mapNodes.length, reactFlowInstance]);
 
   // Helper function to get connected edges for a node
   const getConnectedEdges = useCallback((nodeId: string) => {

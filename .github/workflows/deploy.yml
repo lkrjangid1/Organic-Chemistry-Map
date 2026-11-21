@@ -27,10 +27,17 @@ jobs:
 
       - run: npm ci
 
+      # Reads the Pages settings: base_url is the custom domain when one is set,
+      # base_path is "" for a custom domain or "/<repo>" for a project page.
+      - id: pages
+        uses: actions/configure-pages@v5
+
       - name: Build
         run: npm run build
         env:
-          BASE_PATH: /${{ github.event.repository.name }}/
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}/
+          SITE_URL: ${{ steps.pages.outputs.base_url }}/
+          GOOGLE_SITE_VERIFICATION: ${{ vars.GOOGLE_SITE_VERIFICATION }}
 
       - uses: actions/upload-pages-artifact@v3
         with:

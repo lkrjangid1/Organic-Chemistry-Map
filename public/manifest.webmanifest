@@ -2,7 +2,7 @@
   "name": "Organic Chemistry Map",
   "short_name": "OrgChem",
   "description": "Interactive concept map for mastering organic chemistry reactions and compounds.",
-  "start_url": "./",
+  "start_url": "./app/",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",

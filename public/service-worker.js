@@ -1,7 +1,7 @@
-const CACHE_NAME = 'organic-chem-map-cache-v2';
+const CACHE_NAME = 'organic-chem-map-cache-v3';
 const CORE_ASSETS = [
   './',
-  './index.html',
+  './app/',
   './manifest.webmanifest',
   './icons/ogm_logo.png',
 ];
@@ -43,6 +43,27 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+  // Pages: network first so new deploys show up, cache as offline fallback.
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          if (response && response.ok) {
+            const responseClone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(request, responseClone));
+          }
+          return response;
+        })
+        .catch(() =>
+          caches
+            .match(request, { ignoreSearch: true })
+            .then((cached) => cached || caches.match('./app/')),
+        ),
+    );
+    return;
+  }
+
+  // Static assets: cache first (filenames are content-hashed).
   event.respondWith(
     caches.match(request).then((cachedResponse) => {
       if (cachedResponse) {

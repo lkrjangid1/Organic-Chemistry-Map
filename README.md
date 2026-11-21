@@ -1,6 +1,8 @@
 # Organic Chemistry Map
 
-An interactive, zoomable map of organic chemistry reactions designed for JEE Advanced preparation. Nodes represent compounds, edges capture reactions, and every node renders its molecular structure with SMILES Drawer.
+An interactive, zoomable map of organic chemistry reactions for JEE Main, JEE Advanced and NEET preparation.
+
+**Live:** https://organic-chemistry-map.yaaratech.in/ (interactive map at [/app/](https://organic-chemistry-map.yaaratech.in/app/)) Nodes represent compounds, edges capture reactions, and every node renders its molecular structure with SMILES Drawer.
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![React](https://img.shields.io/badge/React-19.1.1-blue.svg)
