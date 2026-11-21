@@ -1,0 +1,11 @@
+---
+import { SITE, url } from '../lib/site';
+interface Props { notesPages?: number[]; updated?: Date }
+const { notesPages = [], updated } = Astro.props;
+const date = updated?.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<p class="byline">
+  <a href={url('about/')}>{SITE.author.byline}</a>
+  {notesPages.length > 0 && <> (notebook p. {notesPages.join(', ')})</>}
+  · {SITE.publisher.credit}{date && <> · Updated {date}</>}
+</p>

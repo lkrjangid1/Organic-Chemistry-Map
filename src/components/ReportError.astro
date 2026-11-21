@@ -1,0 +1,18 @@
+---
+import { SITE, absUrl } from '../lib/site';
+interface Props { path: string; title: string }
+const { path, title } = Astro.props;
+const page = absUrl(path);
+let href: string;
+if (SITE.reportForm) {
+  const u = new URL(SITE.reportForm);
+  if (SITE.reportFormPageField) u.searchParams.set(SITE.reportFormPageField, page);
+  href = u.href;
+} else {
+  const u = new URL(`${SITE.repo}/issues/new`);
+  u.searchParams.set('title', `Error on: ${title}`);
+  u.searchParams.set('body', `Page: ${page}\n\nWhat is wrong:\n\nCorrect version / source:\n`);
+  href = u.href;
+}
+---
+<a href={href} rel="noopener nofollow" target="_blank">Report an error on this page</a>

@@ -1,0 +1,125 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Mol from '../../components/Mol.astro';
+import ReportError from '../../components/ReportError.astro';
+import Byline from '../../components/Byline.astro';
+import LibgenCard from '../../components/LibgenCard.astro';
+import { url, absUrl } from '../../lib/site';
+import { breadcrumbLd, orgLd } from '../../lib/seo';
+import { pageCompounds, compoundSlug, edgesFrom, edgesTo, compoundName, hasCompoundPage, titleCase, type GraphEdge, type GraphNode } from '../../lib/graph';
+
+export function getStaticPaths() {
+  return pageCompounds.map((node) => ({ params: { slug: compoundSlug(node.id) }, props: { node } }));
+}
+
+const { node } = Astro.props as { node: GraphNode };
+const path = `compounds/${compoundSlug(node.id)}/`;
+const pages = await getCollection('reactions');
+const pageForEdge = new Map<string, { id: string; title: string }>();
+for (const p of pages) for (const e of p.data.mapEdges) pageForEdge.set(e, { id: p.id, title: p.data.title });
+
+const made = edgesTo(node.id);
+const uses = edgesFrom(node.id);
+const name = node.label;
+const iupac = node.info?.iupac && node.info.iupac !== name ? node.info.iupac : undefined;
+const cls = node.type ? titleCase(node.type) : undefined;
+const description = `${name}${node.info?.formula ? ` (${node.info.formula})` : ''}: structure, IUPAC name, ${made.length} ways to prepare it and ${uses.length} reactions, with reagents and conditions for JEE and NEET.`.slice(0, 165);
+
+const jsonLd = [
+  {
+    '@type': 'MolecularEntity',
+    '@id': absUrl(`${path}#compound`),
+    name,
+    url: absUrl(path),
+    ...(iupac ? { iupacName: iupac } : {}),
+    ...(node.info?.formula ? { molecularFormula: node.info.formula } : {}),
+    ...(node.smiles ? { smiles: node.smiles } : {}),
+    description,
+  },
+  {
+    '@type': 'WebPage',
+    url: absUrl(path),
+    name: `${name}: preparation and reactions`,
+    about: { '@id': absUrl(`${path}#compound`) },
+    publisher: orgLd(),
+    inLanguage: 'en-IN',
+  },
+  breadcrumbLd([{ name: 'Compounds', path: 'compounds/' }, { name, path }]),
+];
+
+const Row = (e: GraphEdge, other: string) => ({ e, other, page: pageForEdge.get(e.id) });
+const madeRows = made.map((e) => Row(e, e.source));
+const useRows = uses.map((e) => Row(e, e.target));
+---
+<Base title={`${name}: Structure, Preparation & Reactions`} description={description} path={path} jsonLd={jsonLd} section="compounds">
+  <div class="container page">
+    <Breadcrumbs items={[{ label: 'Compounds', href: url('compounds/') }, { label: name }]} />
+    <header class="page-head">
+      <h1>{name}</h1>
+      {iupac && <p class="aka">IUPAC name: {iupac}</p>}
+      <div class="meta-row">{cls && <span class="tag">{cls}</span>}{node.info?.formula && <span class="tag">{node.info.formula}</span>}</div>
+    </header>
+    <div class="layout">
+      <article class="prose">
+        <div class="scheme"><Mol name={name} smiles={node.smiles} width={300} height={220} /></div>
+        <section class="glance" aria-label="Properties">
+          <dl>
+            {node.info?.formula && <><dt>Formula</dt><dd>{node.info.formula}</dd></>}
+            {iupac && <><dt>IUPAC name</dt><dd>{iupac}</dd></>}
+            {cls && <><dt>Class</dt><dd>{cls}</dd></>}
+            {node.info?.properties && <><dt>Properties</dt><dd>{node.info.properties}</dd></>}
+          </dl>
+        </section>
+        {node.info?.notes && <p>{node.info.notes}</p>}
+
+        {madeRows.length > 0 && (
+          <section aria-labelledby="prep-h">
+            <h2 id="prep-h">How to prepare {name}</h2>
+            <table>
+              <thead><tr><th>From</th><th>Reaction</th><th>Reagents and conditions</th></tr></thead>
+              <tbody>
+                {madeRows.map(({ e, other, page }) => (
+                  <tr>
+                    <td>{hasCompoundPage.has(other) ? <a href={url(`compounds/${compoundSlug(other)}/`)}>{compoundName(other)}</a> : compoundName(other)}</td>
+                    <td>{page ? <a href={url(`reactions/${page.id}/`)}>{e.label}</a> : <a href={url(`map/?reaction=${encodeURIComponent(e.id)}`)}>{e.label}</a>}</td>
+                    <td>{[e.reactionInfo?.reagents, e.reactionInfo?.conditions].filter(Boolean).join('; ')}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </section>
+        )}
+
+        {useRows.length > 0 && (
+          <section aria-labelledby="rxn-h">
+            <h2 id="rxn-h">Reactions of {name}</h2>
+            <table>
+              <thead><tr><th>Reaction</th><th>Product</th><th>Reagents and conditions</th></tr></thead>
+              <tbody>
+                {useRows.map(({ e, other, page }) => (
+                  <tr>
+                    <td>{page ? <a href={url(`reactions/${page.id}/`)}>{e.label}</a> : <a href={url(`map/?reaction=${encodeURIComponent(e.id)}`)}>{e.label}</a>}</td>
+                    <td>{hasCompoundPage.has(other) ? <a href={url(`compounds/${compoundSlug(other)}/`)}>{compoundName(other)}</a> : compoundName(other)}</td>
+                    <td>{[e.reactionInfo?.reagents, e.reactionInfo?.conditions].filter(Boolean).join('; ')}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </section>
+        )}
+        <Byline />
+        <p><ReportError path={path} title={name} /></p>
+        <LibgenCard />
+      </article>
+      <aside class="side">
+        <div class="side-card">
+          <h2>On the map</h2>
+          <p>See every arrow in and out of {name}.</p>
+          <a class="btn btn-primary btn-sm" href={url(`map/?compound=${encodeURIComponent(node.id)}`)}>Open {name} on the map</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</Base>

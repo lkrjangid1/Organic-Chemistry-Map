@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/site';
+---
+<Base title="Page not found" description="This page does not exist." path="404/" noindex>
+  <div class="container narrow page center">
+    <h1>Page not found</h1>
+    <p>The page you were looking for doesn't exist or has moved.</p>
+    <p><a class="btn btn-primary" href={url('reactions/')}>Browse all reactions</a> <a class="btn btn-ghost" href={url()}>Home</a></p>
+  </div>
+</Base>

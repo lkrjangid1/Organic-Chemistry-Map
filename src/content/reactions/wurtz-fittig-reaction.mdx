@@ -1,0 +1,124 @@
+---
+title: "Wurtz–Fittig Reaction"
+description: "Wurtz–Fittig reaction couples an aryl halide and an alkyl halide with sodium in dry ether to give an alkylbenzene, e.g. bromobenzene + CH3Br to toluene."
+aliases: ["Wurtz Fittig reaction", "Wurtz-Fittig coupling", "Wurtz Fitting reaction", "Wurtz–Fittig synthesis"]
+kind: "named-reaction"
+family: "coupling-reactions"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "Bromobenzene + bromomethane"
+  smiles: "Brc1ccccc1.CBr"
+product:
+  name: "Toluene (methylbenzene)"
+  smiles: "Cc1ccccc1"
+byproducts: "NaX; biphenyl and R–R as side products"
+reagents: "Sodium metal (Na)"
+conditions: "Dry ether"
+equation: "C6H5Br + CH3Br + 2 Na ->[dry ether] C6H5-CH3 + 2 NaBr"
+notesPages: [9, 31]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Wurtz–Fittig reaction?"
+    a: "An alkylarene (alkylbenzene). Bromobenzene and bromomethane with sodium in dry ether give toluene; with bromoethane the product is ethylbenzene."
+  - q: "What are the side products in the Wurtz–Fittig reaction?"
+    a: "Because both halides can also couple with themselves, the alkane R–R (Wurtz product) and biphenyl (Fittig product) form alongside the alkylbenzene. They usually have very different boiling points and are separated by distillation."
+  - q: "Why does the alkyl halide react first in the Wurtz–Fittig reaction?"
+    a: "The alkyl halide is more reactive towards sodium than the aryl halide, so it forms the organosodium compound first. This alkylsodium then attacks the aryl halide, favouring the cross product Ar–R."
+  - q: "How is the Wurtz–Fittig reaction different from Friedel–Crafts alkylation?"
+    a: "Both give alkylbenzenes, but Wurtz–Fittig starts from an aryl halide and uses sodium, whereas Friedel–Crafts alkylates benzene itself with R–X and anhydrous AlCl3 through a carbocation-like electrophile."
+related: ["wurtz-reaction", "fittig-reaction", "friedel-crafts-alkylation", "corey-house-synthesis"]
+sources:
+  - title: "Chemistry Part II, Class XII, Unit 6: Haloalkanes and Haloarenes (reaction with metals)"
+    url: "https://ncert.nic.in/textbook/pdf/lech201.pdf"
+    publisher: "NCERT"
+  - title: "Wurtz–Fittig reaction"
+    url: "https://en.wikipedia.org/wiki/Wurtz%E2%80%93Fittig_reaction"
+    publisher: "Wikipedia"
+  - title: "Wurtz-Fittig Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/wurtz-fittig-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 3
+---
+
+## What is the Wurtz–Fittig reaction?
+
+The **Wurtz–Fittig reaction** is the coupling of an **aryl halide** with an **alkyl halide** using **sodium metal in dry ether**, giving an **alkylarene** (alkylbenzene). It is a way of putting an alkyl group onto a benzene ring that already carries a halogen: for example, **bromobenzene + bromomethane → toluene**. Fittig extended Wurtz's alkyl coupling to mixed aryl–alkyl pairs, so the reaction carries both names.
+
+## General reaction
+
+<Eq ce="Ar-X + R-X + 2 Na ->[dry ether] Ar-R + 2 NaX" />
+
+In short: Ph–X + R–X → Ph–R with Na/ether.
+
+## Mechanism
+
+As with the Wurtz reaction, the mechanism has not been studied by modern methods. Exam answers use one of two pictures.
+
+**Organosodium (ionic) pathway**, the one favoured by the Organic Chemistry Portal:
+
+1. The **more reactive alkyl halide** reacts with sodium first, forming an alkylsodium, R⁻Na⁺.
+2. This carbanion-like nucleophile attacks the aryl halide, displacing X⁻ and forming the Ar–R bond.
+
+<Eq ce="R-X + 2 Na -> R^-Na+ + NaX" />
+<Eq ce="R^-Na+ + Ar-X -> Ar-R + NaX" />
+
+**Radical pathway:**
+
+1. Sodium transfers electrons to both halides, giving an alkyl radical R• and an aryl radical Ar•.
+2. The two radicals combine to give Ar–R.
+
+Radicals explain why the self-coupled products appear too: R• + R• → R–R, and Ar• + Ar• → Ar–Ar.
+
+<KeyPoint>
+The cross product is favoured when the two halides differ in reactivity. Alkyl halides react with sodium faster than aryl halides, which is summed up as "Reactivity: Wurtz &gt; Fittig". Using halogens from different periods (for example ArCl with RBr) increases the difference.
+</KeyPoint>
+
+## Examples
+
+1. **Toluene from bromobenzene and bromomethane**:
+
+<Eq ce="C6H5Br + CH3Br + 2 Na ->[dry ether] C6H5CH3 + 2 NaBr" />
+
+2. **Ethylbenzene from bromobenzene and bromoethane**:
+
+<Eq ce="C6H5Br + C2H5Br + 2 Na ->[dry ether] C6H5C2H5 + 2 NaBr" />
+
+3. **n-Butylbenzene from chlorobenzene and 1-bromobutane**, where the halogen difference helps the cross-coupling:
+
+<Eq ce="C6H5Cl + CH3(CH2)3Br + 2 Na ->[dry ether] C6H5(CH2)3CH3 + NaCl + NaBr" />
+
+## Side products
+
+Three couplings can occur in the same flask:
+
+| Coupling | Product (from C₆H₅Br + CH₃Br) | Name |
+|---|---|---|
+| Ar + R (wanted) | toluene | Wurtz–Fittig |
+| R + R | ethane | Wurtz |
+| Ar + Ar | biphenyl | Fittig |
+
+An excess of alkyl halide and sodium can be used when the symmetrical side products are easy to separate. Here ethane is a gas and biphenyl is a high-boiling solid, so toluene is easily isolated.
+
+<ExamTip>
+If a question gives one aryl halide and one alkyl halide with Na/dry ether and asks for all products, write three: Ar–R (major), R–R and Ar–Ar. If it asks only for the main product, write the alkylbenzene.
+</ExamTip>
+
+## Limitations and exceptions
+
+- **For JEE/NEET**, the reaction is a clean route to alkylbenzenes. **In practice**, side reactions (rearrangement, elimination) limit its use, and yields are moderate.
+- **Tertiary alkyl halides** tend to eliminate rather than couple.
+- Ring substituents that react with sodium (OH, NO₂, C=O, COOH) are not tolerated.
+- The reaction also works with other metals (K, Li, Fe, Cu); with lithium it needs ultrasound to give a useful yield.
+- Unlike Friedel–Crafts alkylation, the alkyl group is introduced exactly where the halogen was on the ring, so the position of substitution is fixed by the starting aryl halide.
+
+## Related reactions
+
+- [Wurtz reaction](/reactions/wurtz-reaction/): two alkyl halides + Na give an alkane.
+- [Fittig reaction](/reactions/fittig-reaction/): two aryl halides + Na give a biaryl.
+- [Friedel–Crafts alkylation](/reactions/friedel-crafts-alkylation/): the other common route to alkylbenzenes, via a carbocation.
+- [Corey–House synthesis](/reactions/corey-house-synthesis/): a cleaner cross-coupling using a Gilman reagent.
+- Hub: [Coupling reactions](/mechanisms/coupling-reactions/)

@@ -1,0 +1,130 @@
+---
+title: "Diazotization Reaction"
+description: "Diazotization converts a primary aromatic amine such as aniline into a diazonium salt with NaNO₂ and HCl at 0–5 °C. Mechanism via NO⁺, aliphatic amines."
+aliases: ["Diazotisation", "Diazotisation reaction", "Diazotization of aniline", "Preparation of benzenediazonium chloride", "Reaction of amines with nitrous acid"]
+kind: "named-reaction"
+family: "diazonium-salt-reactions"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["diazotization", "diazotization_reaction"]
+reactant:
+  name: "Aniline (benzenamine)"
+  smiles: "Nc1ccccc1"
+product:
+  name: "Benzenediazonium chloride"
+  smiles: "[Cl-].N#[N+]c1ccccc1"
+byproducts: "NaCl, H₂O"
+reagents: "NaNO₂ + HCl (nitrous acid generated in situ)"
+conditions: "Ice-cold, 273–278 K (0–5 °C)"
+equation: "C6H5NH2 + NaNO2 + 2HCl ->[273-278 K] C6H5N2^+ Cl^- + NaCl + 2H2O"
+notesPages: [8, 24, 47]
+memoryTricks: []
+faq:
+  - q: "What is the product of the diazotization of aniline?"
+    a: "Benzenediazonium chloride, C₆H₅N₂⁺Cl⁻. It forms when aniline is treated with sodium nitrite and hydrochloric acid at 273–278 K."
+  - q: "Why is diazotization carried out at 0–5 °C?"
+    a: "Benzenediazonium chloride is stable only in the cold. If the solution warms up (to about 283 K) the salt reacts with water, losing N₂ and giving phenol, so the diazonium salt is made in ice and used immediately."
+  - q: "What happens when a primary aliphatic amine reacts with nitrous acid?"
+    a: "The aliphatic diazonium ion is too unstable to survive. It loses N₂ at once to give a carbocation, so the products are mainly alcohols plus alkenes, alkyl halides and rearranged products, with quantitative evolution of nitrogen gas."
+  - q: "What is the electrophile in diazotization?"
+    a: "The nitrosonium ion, NO⁺. It forms when nitrous acid is protonated by the excess mineral acid and loses water; the amine nitrogen then attacks NO⁺."
+  - q: "How do secondary and tertiary amines react with nitrous acid?"
+    a: "Secondary amines give N-nitrosamines (R₂N–N=O), which separate as yellow oils. Tertiary aliphatic amines only form ammonium salts, while N,N-dialkylanilines undergo nitrosation of the ring at the para position."
+related: ["sandmeyer-reaction", "gattermann-reaction", "balz-schiemann-reaction", "demjanov-rearrangement", "sn1-reaction", "carbylamine-reaction"]
+sources:
+  - title: "Amines (Class 12 Chemistry, Unit 9)"
+    url: "https://ncert.nic.in/textbook/pdf/lech204.pdf"
+    publisher: "NCERT"
+  - title: "Diazotisation"
+    url: "https://www.organic-chemistry.org/namedreactions/diazotisation.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "Reaction of Amines with Nitrous Acid"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Amines/Reactivity_of_Amines/Reaction_of_Amines_with_Nitrous_Acid"
+    publisher: "Chemistry LibreTexts"
+  - title: "Amines with Nitrous Acid (Roberts and Caserio)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Basic_Principles_of_Organic_Chemistry_(Roberts_and_Caserio)/23:_Organonitrogen_Compounds_I_-_Amines/23.10:_Amines_with_Nitrous_Acid"
+    publisher: "Chemistry LibreTexts"
+verified:
+  status: "conflict"
+  checked: 2026-11-21
+  sourceCount: 4
+  note: "Notes draw the amine attacking HO–N=O directly; sources give NO⁺ (from protonated HNO₂) as the electrophile, and the page follows the sources. Notes say methylamine gives dimethyl ether; no source checked confirms this, so it is kept only as an exam statement."
+---
+
+## What is the diazotization reaction?
+
+**Diazotization** is the conversion of a **primary aromatic amine** into an **arenediazonium salt** using **nitrous acid**, which is generated in situ from **sodium nitrite and hydrochloric acid** at **273–278 K (0–5 °C)**. Aniline gives **benzenediazonium chloride**, C₆H₅N₂⁺Cl⁻, the starting point for the Sandmeyer, Gattermann and Balz–Schiemann reactions and for azo dyes.
+
+Primary **aliphatic** amines react with the same reagent, but their diazonium ions decompose instantly, releasing nitrogen gas and giving mainly alcohols.
+
+## General reaction
+
+<Eq ce="NaNO2 + HCl -> HNO2 + NaCl" />
+
+<Eq ce="C6H5NH2 + HNO2 + HCl ->[273-278 K] C6H5N2^+ Cl^- + 2H2O" />
+
+<Eq ce="R-NH2 ->[NaNO2, HCl] [R-N2^+] -> R^+ + N2 ^ ->[H2O] R-OH" />
+
+## Mechanism
+
+1. **Formation of NO⁺.** Nitrous acid is protonated by the excess acid and loses water, giving the nitrosonium ion, NO⁺, the actual electrophile.
+2. **N-Nitrosation.** The lone pair on the amine nitrogen attacks NO⁺. Loss of H⁺ gives an N-nitrosamine, R–NH–N=O.
+3. **Tautomerism.** A proton shifts from nitrogen to oxygen, giving the diazoic acid (diazohydroxide), R–N=N–OH.
+4. **Loss of water.** The OH is protonated and leaves as water, giving the diazonium ion, R–N≡N⁺.
+5. **Fate of the diazonium ion.** For an aryl group the ion is stable in the cold and is used in further reactions. For an alkyl group it loses N₂ to give a carbocation R⁺, which is captured by water to give R–OH. In exam answers, this loss of N₂ is shown as the slow, rate-determining step.
+
+<Eq ce="HNO2 + H+ -> H2O + NO+" />
+
+<Eq ce="R-NH2 ->[NO+][-H+] R-NH-N=O <=> R-N=N-OH ->[H+][-H2O] R-N#N+" />
+
+<KeyPoint>
+Aryl diazonium ions are stabilised by resonance with the ring, and aryl cations are hard to form, so ArN₂⁺ survives at 0–5 °C. Alkyl diazonium ions have no such stabilisation and lose N₂ immediately.
+</KeyPoint>
+
+## Primary aliphatic amines: carbocation products
+
+Because the intermediate is a **carbocation**, a primary aliphatic amine gives a mixture. The main product is the alcohol, with nitrogen gas evolved quantitatively (the basis of the Van Slyke estimation of amino groups). The carbocation can take several routes:
+
+- R⁺ + H₂O → **R–OH** (major)
+- R⁺ + R–OH → **R–O–R** (ether)
+- R⁺ + ⁻O–N=O → **R–O–N=O** (alkyl nitrite)
+- R⁺ + Cl⁻ → **R–Cl**
+- loss of H⁺ at higher temperature → **alkene**
+
+Carbocation **rearrangement** is common: propanamine gives about half its products from the rearranged isopropyl cation. A chiral amine gives the alcohol with both retention and inversion (racemisation), as expected for an open carbocation.
+
+<ExamTip>
+For methylamine, many JEE study materials write CH₃NH₂ + HNO₂ → CH₃–O–CH₃ (methoxymethane) rather than methanol. NCERT only states that primary aliphatic amines give alcohols with evolution of N₂, so write the alcohol unless a question specifically asks about the methylamine case.
+</ExamTip>
+
+## Examples
+
+**1. Aniline to benzenediazonium chloride (NCERT):**
+
+<Eq ce="C6H5NH2 + NaNO2 + 2HCl ->[273-278 K] C6H5N2^+ Cl^- + NaCl + 2H2O" />
+
+**2. Ethylamine with nitrous acid:**
+
+<Eq ce="C2H5NH2 + HNO2 -> C2H5OH + N2 ^ + H2O" />
+
+**3. Secondary and tertiary amines:**
+
+<Eq ce="(CH3)2NH + HNO2 -> (CH3)2N-N=O + H2O" />
+
+<Eq ce="(CH3)3N + HNO2 -> (CH3)3NH^+ NO2^-" />
+
+Secondary amines give yellow, water-insoluble **N-nitrosamines**; tertiary aliphatic amines only undergo an acid–base reaction. **N,N-Dimethylaniline** is attacked on the ring by NO⁺ at the para position, giving p-nitroso-N,N-dimethylaniline; HNO₃ then oxidises the –N=O group to –NO₂.
+
+## Limitations and exceptions
+
+- The reaction must be kept cold; above about 283 K the aryl diazonium salt is hydrolysed to phenol.
+- Dry benzenediazonium chloride can decompose explosively, so it is used in solution straight away. The tetrafluoroborate salt is stable enough to isolate.
+- Aliphatic diazotization has little synthetic use because of mixed and rearranged products. A useful exception is ring expansion of aminomethylcycloalkanes ([Demjanov rearrangement](/reactions/demjanov-rearrangement/)).
+
+## Related reactions
+
+- [Sandmeyer reaction](/reactions/sandmeyer-reaction/): ArN₂⁺ to ArCl, ArBr or ArCN with Cu(I) salts.
+- [Gattermann reaction](/reactions/gattermann-reaction/): ArN₂⁺ to ArCl or ArBr with copper powder and HX.
+- [Balz–Schiemann reaction](/reactions/balz-schiemann-reaction/): ArN₂⁺BF₄⁻ heated to give ArF.
+- [Carbylamine reaction](/reactions/carbylamine-reaction/): the other classic test that picks out primary amines.
+- [SN1 reaction](/reactions/sn1-reaction/): the carbocation chemistry behind aliphatic diazotization.
+- [Reactions of diazonium salts](/mechanisms/diazonium-salt-reactions/): the full family overview.

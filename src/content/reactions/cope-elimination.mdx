@@ -1,0 +1,107 @@
+---
+title: "Cope Elimination"
+description: "Cope elimination: heating a tertiary amine N-oxide gives an alkene and an N,N-dialkylhydroxylamine by syn (Ei) elimination via a five-membered ring."
+aliases: ["Cope reaction", "Amine oxide elimination", "Ei mechanism", "Internal elimination", "Ester pyrolysis"]
+kind: "named-reaction"
+family: "elimination-reactions"
+exams: [jee-main, jee-advanced]
+mapEdges: []
+reactant:
+  name: "N,N-Dimethylethylamine N-oxide"
+  smiles: "CC[N+](C)(C)[O-]"
+product:
+  name: "Ethene"
+  smiles: "C=C"
+byproducts: "N,N-Dimethylhydroxylamine, (CH₃)₂N–OH"
+reagents: "H₂O₂ or a peroxy acid (e.g. mCPBA) to make the N-oxide; then heat only"
+conditions: "Heat (Δ), no external base; aprotic solvent"
+equation: "CH3CH2-N(CH3)2-O ->[\\Delta] CH2=CH2 + (CH3)2N-OH"
+notesPages: [20]
+memoryTricks: []
+faq:
+  - q: "What is the product of Cope elimination?"
+    a: "An alkene plus an N,N-dialkylhydroxylamine. For example, N,N-dimethylethylamine N-oxide gives ethene and (CH₃)₂N–OH on heating."
+  - q: "Is Cope elimination syn or anti?"
+    a: "Syn. The oxygen of the N-oxide removes a β-hydrogen on the same side through a cyclic five-membered transition state, so the H and the leaving nitrogen are lost from the same face (Ei mechanism)."
+  - q: "Does Cope elimination give the Saytzeff or Hofmann alkene?"
+    a: "Usually the Hofmann (less substituted) alkene, because the bulky amine oxide group reaches the more accessible β-hydrogens, such as those of a CH₃ group, more easily."
+  - q: "What is the difference between Cope elimination and Hofmann elimination?"
+    a: "Both remove a nitrogen group and favour the less substituted alkene. Hofmann uses a quaternary ammonium hydroxide, an external base and an anti E2 pathway; Cope uses an amine oxide whose own oxygen acts as the base, so it is a syn, intramolecular reaction under milder conditions."
+  - q: "What is ester pyrolysis?"
+    a: "Strong heating of an ester with a β-hydrogen gives an alkene and the carboxylic acid by a syn elimination through a six-membered cyclic transition state. Ethyl esters give ethene; the carbonyl oxygen picks up the hydrogen."
+related: ["hofmann-elimination", "e2-reaction", "e1-reaction", "dehydration-of-alcohols"]
+sources:
+  - title: "Cope reaction"
+    url: "https://en.wikipedia.org/wiki/Cope_reaction"
+    publisher: "Wikipedia"
+  - title: "Cope Elimination"
+    url: "https://www.organic-chemistry.org/namedreactions/cope-elimination.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "Ester pyrolysis"
+    url: "https://en.wikipedia.org/wiki/Ester_pyrolysis"
+    publisher: "Wikipedia"
+  - title: "Ester Pyrolysis"
+    url: "https://www.organic-chemistry.org/namedreactions/ester-pyrolysis.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "conflict"
+  checked: 2026-11-21
+  sourceCount: 4
+  note: "Notes label the Cope reaction 'syn addition'; the sources describe it as a syn elimination. The page follows the sources."
+---
+
+## What is the Cope elimination?
+
+The **Cope elimination** (Cope reaction) is the thermal conversion of a **tertiary amine N-oxide** into an **alkene** and an **N,N-dialkylhydroxylamine**. No external base is needed: the negatively charged oxygen of the N-oxide removes a β-hydrogen from the **same side** of the molecule, so the reaction is a **syn elimination** that passes through a cyclic five-membered transition state. It was developed by Arthur C. Cope, and the amine oxide is usually made in situ from the tertiary amine with hydrogen peroxide or a peroxy acid.
+
+## Mechanism (Ei, internal elimination)
+
+1. **Oxidation.** A tertiary amine R–CH₂CH₂–NMe₂ is oxidised by H₂O₂ or mCPBA to the N-oxide R–CH₂CH₂–N⁺Me₂–O⁻.
+2. **Heating.** The O⁻ swings round to a β-hydrogen on the same face. In one concerted step six electrons move around a five-membered ring (O, N, Cα, Cβ, H): the O–H bond forms, the C–H bond breaks, the C=C forms and the C–N bond breaks.
+3. **Products:** alkene + Me₂N–OH.
+
+<Eq ce="CH3CH2-N(CH3)2-O ->[\Delta] CH2=CH2 + (CH3)2N-OH" />
+
+<KeyPoint>
+Cope elimination is a **syn** process and gives the **Hofmann alkene**. It is sometimes miscalled "syn addition"; it is a syn *elimination*. The H removed and the N-oxide group must be able to sit roughly in the same plane on the same side.
+</KeyPoint>
+
+## Examples
+
+**1. Ethyl amine oxide.** N,N-Dimethylethylamine N-oxide gives ethene and N,N-dimethylhydroxylamine on heating.
+
+**2. Synthesis of methylenecyclohexane.** The N-oxide of N,N-dimethylcyclohexylmethylamine eliminates on heating to give the exocyclic alkene methylenecyclohexane, a classic preparative example.
+
+<Eq ce="C6H11CH2N(CH3)2 ->[H2O2] C6H11CH2N(CH3)2-O ->[\Delta] C6H10=CH2 + (CH3)2NOH" />
+
+**3. Regioselectivity.** When β-hydrogens are available on both a CH₃ and a CH₂ group, the bulky N-oxide removes the more accessible CH₃ hydrogen, so the less substituted alkene is the major product (Hofmann rule).
+
+<ExamTip>
+Spot the Ei family by three clues: heat only (no added base or acid), syn stereochemistry, and Hofmann (less substituted) alkene. Cope uses a five-membered transition state; ester and xanthate pyrolysis use a six-membered one.
+</ExamTip>
+
+## Other Ei eliminations: ester and xanthate pyrolysis
+
+The Cope reaction is grouped with **pyrolysis of esters and xanthates**, because all three are internal (Ei) syn eliminations.
+
+- **Ester pyrolysis.** An ester with a β-hydrogen, heated strongly (by vacuum pyrolysis, typically several hundred °C; reported examples run near 575–700 °C), gives an alkene and the corresponding carboxylic acid. The **carbonyl oxygen** abstracts the β-hydrogen through a six-membered cyclic transition state, so if the C=O oxygen is labelled (O*), the label ends up in the –OH of the acid. Ethyl acrylate, for example, gives acrylic acid and ethene.
+
+<Eq ce="R-CO-O-CH2CH3 ->[\Delta] R-COOH + CH2=CH2" />
+
+- **Xanthate pyrolysis (Chugaev elimination).** The same idea applied to an S-methyl xanthate ester made from an alcohol, again giving an alkene by syn elimination.
+
+Like the Cope reaction, these pyrolyses are syn and tend to give the less hindered alkene when the cyclic transition state is crowded.
+
+## Limitations and exceptions
+
+- A β-hydrogen that can be syn-coplanar with the N-oxide is required.
+- In six-membered rings the reaction is rare, because the required syn geometry is hard to reach; five-membered and seven-membered or larger rings react well.
+- The reverse reaction (retro-Cope) is known: an N,N-disubstituted hydroxylamine can add to an alkene to give an N-oxide.
+
+## Related reactions
+
+- [Hofmann elimination](/reactions/hofmann-elimination/): the anti E2 analogue using quaternary ammonium hydroxides.
+- [E2 reaction](/reactions/e2-reaction/): anti elimination with an external base.
+- [E1 reaction](/reactions/e1-reaction/): carbocation elimination.
+- [Dehydration of alcohols](/reactions/dehydration-of-alcohols/): the acid-catalysed route from alcohols to alkenes.
+- [Elimination reactions hub](/mechanisms/elimination-reactions/).

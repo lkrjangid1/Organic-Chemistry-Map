@@ -1,0 +1,122 @@
+---
+title: "Carbenes: Singlet, Triplet and Their Reactions"
+description: "Carbenes for JEE: singlet vs triplet carbene, :CCl₂ from chloroform, cyclopropanation, insertion, Reimer–Tiemann, carbylamine, Simmons–Smith and diazomethane."
+exams: ["jee-main", "jee-advanced", "neet"]
+order: 80
+notesPages: [11, 12, 13, 17, 37, 38]
+faq:
+  - q: "What is the difference between singlet and triplet carbene?"
+    a: "A singlet carbene has its two non-bonding electrons paired in one sp² orbital, is diamagnetic and adds to alkenes in one concerted, stereospecific step. A triplet carbene has two unpaired electrons, is paramagnetic, reacts like a diradical in steps, and does not keep the alkene geometry."
+  - q: "Which is more stable, singlet or triplet carbene?"
+    a: "For simple carbenes such as :CH₂ the triplet is the ground state, about 33 kJ/mol lower in energy, in line with Hund's rule. Triplets are favoured in the gas phase, while singlets are met more often in solution, and substituents with lone pairs (for example Cl in :CCl₂) make the singlet the ground state."
+  - q: "How is dichlorocarbene formed?"
+    a: "By α-elimination from chloroform: a strong base removes the proton from CHCl₃, and the CCl₃⁻ ion loses Cl⁻ to give :CCl₂. This is the reactive species in the Reimer–Tiemann and carbylamine reactions."
+  - q: "Is the addition of a triplet carbene to an alkene anti?"
+    a: "No. A triplet carbene adds in two steps through a diradical, so bond rotation can occur and a mixture of cis and trans cyclopropanes forms; the addition is non-stereospecific rather than anti. Only singlet carbenes give clean syn (stereospecific) addition."
+sources:
+  - title: "Carbene"
+    url: "https://en.wikipedia.org/wiki/Carbene"
+    publisher: "Wikipedia"
+  - title: "Carbenes"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Fundamentals/Reactive_Intermediates/Carbenes"
+    publisher: "Chemistry LibreTexts"
+  - title: "Addition of Carbenes to Alkenes: Cyclopropane Synthesis"
+    url: "https://chem.libretexts.org/Courses/Sonoma_State_University/SSU_Chem_335A/Material_Since_Exam_3_for_the_Final/Unit_8:_Alkenes:_Reactions_and_Synthesis/8.09_Addition_of_Carbenes_to_Alkenes:_Cyclopropane_Synthesis"
+    publisher: "Chemistry LibreTexts"
+  - title: "Dichlorocarbene"
+    url: "https://en.wikipedia.org/wiki/Dichlorocarbene"
+    publisher: "Wikipedia"
+  - title: "Diazomethane"
+    url: "https://en.wikipedia.org/wiki/Diazomethane"
+    publisher: "Wikipedia"
+  - title: "Buchner–Curtius–Schlotterbeck reaction"
+    url: "https://en.wikipedia.org/wiki/Buchner%E2%80%93Curtius%E2%80%93Schlotterbeck_reaction"
+    publisher: "Wikipedia"
+  - title: "Johnson–Corey–Chaykovsky reaction"
+    url: "https://en.wikipedia.org/wiki/Johnson%E2%80%93Corey%E2%80%93Chaykovsky_reaction"
+    publisher: "Wikipedia"
+verified:
+  status: "conflict"
+  checked: 2026-11-21
+  sourceCount: 7
+---
+
+## What is a carbene?
+
+A **carbene** is a neutral species containing a **divalent carbon with only six valence electrons**: two bonds and two non-bonding electrons, written R₂C:. The simplest is **methylene, :CH₂**. Carbenes are short-lived, highly reactive intermediates; their main reactions are **addition to C=C bonds (cyclopropanation)** and **insertion into σ bonds**. In the JEE syllabus they appear as the hidden intermediate in the Reimer–Tiemann and carbylamine reactions.
+
+## How carbenes are generated
+
+- **α-Elimination from chloroform:** a strong base removes the proton, and CCl₃⁻ loses Cl⁻. Two groups leave from the same carbon, hence "α".
+- **Loss of N₂ from diazomethane:** light, heat or copper decomposes CH₂N₂ into :CH₂ and nitrogen gas.
+- **Carbenoids:** zinc and CH₂I₂ give ICH₂ZnI, which behaves like a carbene ([Simmons–Smith reaction](/reactions/simmons-smith-reaction/)).
+
+<Eq ce="CHCl3 + OH- -> CCl3^- + H2O" />
+
+<Eq ce="CCl3^- -> :CCl2 + Cl-" />
+
+<Eq ce="CH2N2 ->[h\nu or \Delta] :CH2 + N2" />
+
+## Singlet vs triplet carbene
+
+| Property | Singlet carbene | Triplet carbene |
+|---|---|---|
+| Electrons | Paired (↑↓) in one orbital | Two unpaired (↑ ↑) in different orbitals |
+| Hybridisation and shape | sp², bent (about 102° for :CH₂) | Often drawn as sp and linear in exam answers; measured angle 125–140° for :CH₂ |
+| Magnetism | Diamagnetic | Paramagnetic |
+| Hund's rule | Not followed | Followed |
+| Character | Electrophile; empty p orbital gives Lewis-acid behaviour | Reacts as a diradical |
+| Stability | Less stable for :CH₂ | Ground state for :CH₂ (about 33 kJ/mol lower) |
+| Addition to alkenes | Concerted, syn, stereospecific | Stepwise, non-stereospecific (cis/trans mixture) |
+
+<KeyPoint title="Phase and substituents">
+Triplet carbenes are more stable in the gas phase; singlets are found more often in solution. Substituents with lone pairs (Cl, O, N) push electrons into the empty p orbital and stabilise the singlet, so dichlorocarbene is a bent, diamagnetic singlet.
+</KeyPoint>
+
+## Addition to alkenes: cyclopropanation
+
+A singlet carbene adds to both alkene carbons at once, so **cis-but-2-ene gives only cis-1,2-dimethylcyclopropane** and trans gives trans. A triplet carbene first forms one bond, giving a diradical that can rotate before the ring closes, so both isomers form. This difference is used to tell which spin state reacted.
+
+<Eq ce="CH2=CH2 + :CH2 -> C3H6" />
+
+<ExamTip title="Common mistake">
+Calling triplet addition "anti". It is non-stereospecific (a mixture), not a clean anti addition. Write: singlet → syn, stereospecific; triplet → non-stereospecific.
+</ExamTip>
+
+Dichlorocarbene adds the same way to give 1,1-dichlorocyclopropanes. With pyrrole, :CCl₂ adds to the ring and it expands to 3-chloropyridine (the "abnormal Reimer–Tiemann" or Ciamician–Dennstedt reaction).
+
+## Insertion into σ bonds
+
+Free :CH₂ can push itself into an existing bond. The preference is **X–H (X = O, N) first, then C–H, then C–C**. Methylene is so reactive that it hardly distinguishes primary, secondary and tertiary C–H bonds.
+
+<Eq ce="R-OH + :CH2 -> R-O-CH3" />
+
+<Eq ce="R2N-H + :CH2 -> R2N-CH3" />
+
+<Eq ce="R-H + :CH2 -> R-CH3" />
+
+## Diazomethane and sulphur ylides with carbonyl compounds
+
+These are often grouped with carbene reactions; strictly, they are **nucleophilic additions** of a ylide carbon to C=O, not carbene insertions.
+
+- **Alcohols + CH₂N₂:** methyl ethers form only with a Lewis acid catalyst such as **BF₃**. Without it, diazomethane methylates the more acidic carboxylic acids and phenols.
+- **Ketones + CH₂N₂ (Buchner–Curtius–Schlotterbeck reaction):** the diazomethane carbon adds to C=O, N₂ leaves, and either an alkyl group shifts to give the **homologated ketone** R–CO–CH₂–R (major) or the oxygen closes onto the carbon to give an **epoxide**.
+- **Ketones + sulphur ylide, CH₂⁻–S⁺R₂ (Corey–Chaykovsky reaction):** the ylide adds to C=O and the oxygen displaces the sulphide, giving the **epoxide** as the main product.
+
+<Eq ce="R2C=O + CH2N2 -> R-CO-CH2-R + N2" />
+
+<Eq ce="R2C=O + CH2=S(CH3)2 -> R2C(O)CH2 + (CH3)2S" />
+
+## Factors that decide carbene behaviour
+
+- **Spin state:** singlet (concerted, stereospecific) vs triplet (stepwise, radical-like).
+- **Substituents:** halogens and heteroatoms stabilise the singlet and make the carbene more selective; :CH₂ is the least selective.
+- **Metal:** zinc or copper carbenoids react more cleanly than free carbenes and can be directed by nearby OH groups.
+
+## Member reactions
+
+- [Reimer–Tiemann reaction](/reactions/reimer-tiemann-reaction/): :CCl₂ with phenoxide gives salicylaldehyde.
+- [Carbylamine reaction](/reactions/carbylamine-reaction/): :CCl₂ with a primary amine gives an isocyanide.
+- [Simmons–Smith reaction](/reactions/simmons-smith-reaction/): zinc carbenoid cyclopropanation.
+
+Related: [Wittig reaction](/reactions/wittig-reaction/) (phosphorus ylide, compared with sulphur ylides) and [rearrangement reactions](/mechanisms/rearrangement-reactions/) (the 1,2-shift in the diazomethane homologation).

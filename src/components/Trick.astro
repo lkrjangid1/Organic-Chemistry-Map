@@ -1,0 +1,5 @@
+---
+interface Props { title?: string }
+const { title = 'Memory trick' } = Astro.props;
+---
+<aside class="callout callout-trick"><span class="callout-title">🧠 {title}</span><slot /></aside>

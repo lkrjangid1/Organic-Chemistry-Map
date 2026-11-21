@@ -1,0 +1,113 @@
+---
+title: "Corey–House Synthesis"
+description: "Corey–House synthesis couples a lithium dialkylcuprate (Gilman reagent, R2CuLi) with an alkyl halide R′X to give an unsymmetrical alkane R–R′. Steps, examples."
+aliases: ["Corey House reaction", "Corey-House synthesis", "Corey–Posner–Whitesides–House reaction", "Gilman reagent coupling"]
+kind: "named-reaction"
+family: "coupling-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: []
+reactant:
+  name: "1-Bromobutane (with lithium dimethylcuprate)"
+  smiles: "CCCCBr"
+product:
+  name: "Pentane"
+  smiles: "CCCCC"
+byproducts: "LiX, CH3Cu (organocopper), LiBr"
+reagents: "1. Li (dry ether); 2. CuI; 3. R′–X"
+conditions: "Dry ether or THF, room temperature or below"
+equation: "(CH3)2CuLi + CH3CH2CH2CH2Br -> CH3CH2CH2CH2CH3 + CH3Cu + LiBr"
+notesPages: [11, 37]
+memoryTricks: []
+faq:
+  - q: "What is the Gilman reagent in Corey–House synthesis?"
+    a: "A lithium dialkylcuprate, R2CuLi, made by treating two equivalents of an alkyllithium with copper(I) iodide. It supplies the alkyl group R as a nucleophile."
+  - q: "Why is Corey–House synthesis better than Wurtz reaction for unsymmetrical alkanes?"
+    a: "In Corey–House only the cross product R–R′ forms in significant amount, whereas Wurtz with two different halides gives a mixture of R–R, R–R′ and R′–R′. It can therefore make odd-carbon alkanes cleanly."
+  - q: "Which alkyl halides work best in Corey–House synthesis?"
+    a: "The halide R′–X should be methyl, primary, benzylic, allylic or a secondary cycloalkyl halide, preferably a bromide or iodide. Tertiary and open-chain secondary halides give poor yields, although the cuprate itself may carry 1°, 2° or 3° groups."
+  - q: "What is the mechanism of the coupling step in Corey–House synthesis?"
+    a: "The cuprate attacks R′–X in an SN2-like step, forming a copper(III) intermediate that undergoes reductive elimination to give R–R′. With alkyl bromides and tosylates the configuration at R′ is inverted."
+related: ["wurtz-reaction", "wurtz-fittig-reaction", "grignard-reagent", "sn2-reaction"]
+sources:
+  - title: "Corey–House synthesis"
+    url: "https://en.wikipedia.org/wiki/Corey%E2%80%93House_synthesis"
+    publisher: "Wikipedia"
+  - title: "10.7: Organometallic Coupling Reactions"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/10%3A_Organohalides/10.07%3A_Organometallic_Coupling_Reactions"
+    publisher: "LibreTexts Chemistry"
+  - title: "Gilman reagent"
+    url: "https://en.wikipedia.org/wiki/Gilman_reagent"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 3
+---
+
+## What is the Corey–House synthesis?
+
+The **Corey–House synthesis** is the coupling of a **lithium dialkylcuprate** (**Gilman reagent**, R₂CuLi) with an **alkyl halide** R′–X to form an alkane **R–R′**. Because only the cross product forms, it is the standard method for making **unsymmetrical alkanes**, including those with an odd number of carbon atoms that the Wurtz reaction cannot make cleanly. It was developed in the late 1960s by E. J. Corey and Herbert House (with Posner and Whitesides).
+
+## General reaction (three steps)
+
+The full sequence starts from an alkyl halide:
+
+1. **Alkyllithium formation:** R–X with lithium metal in dry ether.
+
+<Eq ce="R-X + 2 Li ->[dry ether] R-Li + LiX" />
+
+2. **Gilman reagent formation:** two alkyllithiums with copper(I) halide (usually CuI).
+
+<Eq ce="2 R-Li + CuI -> R2CuLi + LiI" />
+
+3. **Coupling:** the cuprate with the second alkyl halide.
+
+<Eq ce="R2CuLi + R'-X -> R-R' + R-Cu + LiX" />
+
+R and R′ may be the same or different. One R group of the cuprate is not transferred and ends up as an organocopper species.
+
+## Mechanism
+
+1. **Electron transfer to make the carbanion equivalent.** Each lithium atom gives one electron (2Li → 2Li⁺ + 2e⁻). Two electrons reduce R–X to R⁻ and X⁻, which pair with Li⁺ as RLi and LiX.
+2. **Transmetalation.** RLi transfers its alkyl group to copper, giving the dialkylcuprate anion [R–Cu–R]⁻ Li⁺.
+3. **SN2-like attack.** The cuprate acts as a soft carbon nucleophile and attacks the carbon of R′–X from the back, displacing X⁻. Sources describe this as giving a copper(III) intermediate.
+4. **Reductive elimination.** The Cu(III) species releases R–R′ and returns to copper(I).
+
+<KeyPoint>
+In exam answers the coupling step is usually written as **SN2**; strictly it is SN2-like: configuration at R′ is inverted for alkyl bromides and tosylates, and the reaction works best for unhindered (methyl, 1°) halides, exactly as expected for backside attack. With alkyl iodides some radical character (loss of configuration) is seen.
+</KeyPoint>
+
+## Examples
+
+1. **Pentane from bromomethane and 1-bromobutane** (an odd-carbon alkane):
+
+<Eq ce="2 CH3Li + CuI -> (CH3)2CuLi + LiI" />
+<Eq ce="(CH3)2CuLi + CH3(CH2)3Br -> CH3(CH2)3CH3 + CH3Cu + LiBr" />
+
+2. **Propane from ethyl and methyl groups:**
+
+<Eq ce="(C2H5)2CuLi + CH3I -> C2H5-CH3 + C2H5Cu + LiI" />
+
+3. **Aryl groups work too:** lithium diphenylcuprate with iodomethane gives toluene.
+
+<Eq ce="(C6H5)2CuLi + CH3I -> C6H5-CH3 + C6H5Cu + LiI" />
+
+<ExamTip>
+To design a Corey–House route, split the target alkane at any C–C bond. Make the cuprate from the part that may be branched or hindered, and use the **less hindered (primary or methyl) part as R′–X**.
+</ExamTip>
+
+## Limitations and exceptions
+
+- **Hindered halides fail:** tertiary and open-chain secondary R′–X give poor yields or elimination.
+- **Chlorides are marginal;** bromides, iodides and tosylates are preferred.
+- **One R is wasted** as R–Cu in the simple version, which matters when R is valuable.
+- **Moisture must be excluded:** RLi and R₂CuLi are destroyed by water and alcohols, just like Grignard reagents.
+- Organolithium or Grignard reagents alone do not couple well with alkyl halides (metal–halogen exchange, reduction and elimination compete); copper is what makes the coupling selective.
+
+## Related reactions
+
+- [Wurtz reaction](/reactions/wurtz-reaction/): symmetrical alkanes from R–X and Na.
+- [Wurtz–Fittig reaction](/reactions/wurtz-fittig-reaction/): aryl–alkyl coupling with sodium.
+- [Grignard reagent](/reactions/grignard-reagent/): another organometallic carbon nucleophile, made from Mg.
+- [SN2 reaction](/reactions/sn2-reaction/): the backside attack pattern of the coupling step.
+- Hub: [Coupling reactions](/mechanisms/coupling-reactions/)

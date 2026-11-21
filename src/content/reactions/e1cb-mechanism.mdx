@@ -1,0 +1,112 @@
+---
+title: "E1cB Mechanism"
+description: "E1cB mechanism: base first removes an acidic β-H to form a carbanion (conjugate base), which then expels a poor leaving group to give an alkene, with examples."
+aliases: ["E1cB reaction", "E1cb elimination", "Elimination unimolecular conjugate base", "Carbanion elimination"]
+kind: "mechanism-type"
+family: "elimination-reactions"
+exams: [jee-main, jee-advanced]
+mapEdges: ["E1cB_1,1-dichloro-2,2,2-trifluoroethane_to_1-chloro-2,2,2-trifluoroethene"]
+reactant:
+  name: "3-Hydroxybutanal (aldol)"
+  smiles: "CC(O)CC=O"
+product:
+  name: "But-2-enal (crotonaldehyde)"
+  smiles: "CC=CC=O"
+byproducts: "H₂O (OH⁻ is the leaving group)"
+reagents: "Base (OH⁻, alkoxide)"
+conditions: "Electron-withdrawing group on the carbon bearing the β-H, poor leaving group; often warming"
+equation: "CH3CH(OH)CH2CHO ->[OH-][\\Delta] CH3CH=CHCHO + H2O"
+notesPages: [19]
+memoryTricks: []
+faq:
+  - q: "What does E1cB stand for?"
+    a: "Elimination, unimolecular, conjugate base. The base first converts the substrate into its conjugate base (a carbanion), and the step that controls the rate involves this single species losing the leaving group."
+  - q: "What conditions favour the E1cB mechanism?"
+    a: "An acidic hydrogen made acidic by an electron-withdrawing group such as C=O, NO₂, CN or CF₃; a poor leaving group such as OH⁻, OR⁻ or F⁻; and a base. These make carbanion formation easy and stop E1 or E2 from competing."
+  - q: "What is the difference between E1 and E1cB?"
+    a: "In E1 the leaving group leaves first and a carbocation forms; in E1cB the proton leaves first and a carbanion forms. E1 needs a good leaving group and acidic or neutral conditions, while E1cB needs an acidic H, a poor leaving group and basic conditions."
+  - q: "Which common reaction goes by E1cB?"
+    a: "The dehydration step of a base-catalysed aldol condensation. The aldol (a β-hydroxy carbonyl compound) forms an enolate, which pushes out OH⁻ to give the α,β-unsaturated aldehyde or ketone."
+related: ["e1-reaction", "e2-reaction", "dehydration-of-alcohols", "haloform-reaction"]
+sources:
+  - title: "E1cB-elimination reaction"
+    url: "https://en.wikipedia.org/wiki/E1cB-elimination_reaction"
+    publisher: "Wikipedia"
+  - title: "11.10: The E1 and E1cB Reactions"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/11:_Reactions_of_Alkyl_Halides-_Nucleophilic_Substitutions_and_Eliminations/11.10:_The_E1_and_E1cB_Reactions"
+    publisher: "LibreTexts (OpenStax Organic Chemistry)"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 2
+---
+
+## What is the E1cB mechanism?
+
+The **E1cB mechanism** (elimination, unimolecular, conjugate base) is a two-step β-elimination in which a **base first removes an acidic β-hydrogen** to form a **carbanion**, and this carbanion then **expels the leaving group** from the adjacent carbon to form a C=C bond. It operates when an electron-withdrawing group (EWG) stabilises the carbanion and the leaving group is poor, such as –OH, –OR or –F, under basic conditions.
+
+General form:
+
+<Eq ce="EWG-CH2-CH2-lg ->[Base] EWG-CH=CH2 + lg-" />
+
+## Mechanism
+
+1. **Deprotonation.** The base removes the hydrogen on the carbon next to the EWG. The negative charge is spread onto the EWG by resonance or induction (for a carbonyl, an enolate forms).
+2. **Loss of the leaving group.** The lone pair of the carbanion moves in to form the π bond and pushes out the leaving group as an anion.
+
+<Eq ce="EWG-CH2-CH2-lg + B- <=> EWG-CH^{-}-CH2-lg + BH" />
+<Eq ce="EWG-CH^{-}-CH2-lg -> EWG-CH=CH2 + lg-" />
+
+<KeyPoint>
+E1cB is the mirror image of E1. E1 goes through a **carbocation** (leaving group first); E1cB goes through a **carbanion** (proton first). E2 lies between them, with both bonds breaking together.
+</KeyPoint>
+
+Which step is slow depends on the system. Textbooks often describe the deprotonation as rate-limiting, but when the carbanion is very stable, or the first step is reversible, loss of the leaving group can be the slow step instead. For exams it is enough to know that a distinct carbanion intermediate is formed.
+
+## Examples
+
+**1. Aldol dehydration (most important).** Base-catalysed aldol condensation ends with an E1cB step. The β-hydroxy aldehyde forms an enolate, which expels hydroxide.
+
+<Eq ce="CH3CH(OH)CH2CHO ->[OH-][\Delta] CH3CH=CHCHO + H2O" />
+
+**2. Dehydration of a β-hydroxy acid.** In 3-hydroxybutanoic acid the –OH is β to the carboxyl group, and the α-H is activated by the C=O. Loss of the α-H and β-OH gives but-2-enoic acid. A β-amino acid can similarly lose NH₃.
+
+<Eq ce="CH3CH(OH)CH2COOH -> CH3CH=CHCOOH + H2O" />
+
+**3. A haloalkane with fluorine as the leaving group.** In CF₃–CHCl₂ the H is acidic because of the CF₃ and two Cl atoms. Base removes it to give the carbanion CF₃–CCl₂⁻; this then loses **fluoride**, not chloride, giving 1,1-dichloro-2,2-difluoroethene. Chlorine stabilises the carbanion better than fluorine, so the only leaving group β to the anion is F, even though Cl⁻ is normally the better leaving group. This product could not form by a concerted E2, so it is evidence for the carbanion.
+
+<Eq ce="CF3-CHCl2 ->[OH-] CF2=CCl2 + F- + H2O" />
+
+## Conditions that favour E1cB
+
+- **Acidic β-hydrogen:** an EWG (C=O, CN, NO₂, SO₂R, CF₃, polyhalogen) on the carbon that loses H.
+- **Poor leaving group:** –OH, –OR, –F, which leave too slowly for E1 or E2.
+- **Base:** moderate to strong, often in excess.
+- **Polar solvent** to support the charged intermediate.
+
+<ExamTip>
+If the leaving group is OH or F and there is a carbonyl, nitro or cyano group next to the C–H, choose E1cB. The double bond always forms in conjugation with the EWG, so the product is an α,β-unsaturated compound.
+</ExamTip>
+
+## E1 vs E2 vs E1cB at a glance
+
+| Feature | E1 | E2 | E1cB |
+|---|---|---|---|
+| Steps | Two | One | Two |
+| Intermediate | Carbocation | None | Carbanion |
+| Medium | Acidic or neutral, weak base | Strong base | Base |
+| Leaving group | Good | Good | Poor |
+| β-H acidity needed | No | Some | High |
+
+## Limitations
+
+- Without an EWG the carbanion is too unstable and the reaction does not follow this path.
+- With a good leaving group (Br, I, OTs) the substrate usually reacts by E2 instead.
+- Some reactions lie between E2 and E1cB ("E1cB-like E2"), where the C–H bond breaks well ahead of the C–X bond. This is the usual explanation for why onium and fluoride leaving groups favour the less substituted (Hofmann) alkene.
+
+## Related reactions
+
+- [E1 reaction](/reactions/e1-reaction/) and [E2 reaction](/reactions/e2-reaction/): the other two β-elimination mechanisms.
+- [Dehydration of alcohols](/reactions/dehydration-of-alcohols/): acid-catalysed dehydrations go by E1/E2, but β-hydroxy carbonyl compounds dehydrate by E1cB in base.
+- [Haloform reaction](/reactions/haloform-reaction/): another reaction driven by carbanions next to a carbonyl group.
+- [Elimination reactions hub](/mechanisms/elimination-reactions/).

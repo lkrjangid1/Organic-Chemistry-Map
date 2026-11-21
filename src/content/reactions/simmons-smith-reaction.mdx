@@ -1,0 +1,107 @@
+---
+title: "Simmons–Smith Reaction"
+description: "Simmons–Smith reaction converts an alkene into a cyclopropane with CH₂I₂ and a zinc–copper couple via the carbenoid ICH₂ZnI, with syn, stereospecific addition."
+aliases: ["Simmons Smith reaction", "Simmon-Smith reaction", "Simmons–Smith cyclopropanation", "CH2I2 Zn-Cu reaction", "Furukawa modification"]
+kind: "named-reaction"
+family: "carbenes"
+exams: ["jee-advanced"]
+mapEdges: []
+reactant:
+  name: "Cyclohexene"
+  smiles: "C1=CCCCC1"
+product:
+  name: "Norcarane (bicyclo[4.1.0]heptane)"
+  smiles: "C1CCC2CC2C1"
+byproducts: "ZnI₂"
+reagents: "CH₂I₂ + Zn(Cu) couple (or Et₂Zn in the Furukawa modification)"
+conditions: "Diethyl ether solvent"
+equation: "C6H10 + CH2I2 ->[Zn(Cu)][ether] C7H12 + ZnI2"
+notesPages: [12]
+memoryTricks: []
+faq:
+  - q: "What is the Simmons–Smith reaction?"
+    a: "It is the conversion of an alkene into a cyclopropane using diiodomethane and a zinc–copper couple. The active reagent is the organozinc carbenoid ICH₂ZnI, which delivers a CH₂ group to both alkene carbons at once."
+  - q: "Is the Simmons–Smith reaction syn or anti addition?"
+    a: "It is a syn addition and is stereospecific: the configuration of the alkene is kept, so a cis-alkene gives a cis-disubstituted cyclopropane and a trans-alkene gives the trans product."
+  - q: "Does the Simmons–Smith reaction involve a free carbene?"
+    a: "No. The reagent is a carbenoid, iodomethylzinc iodide, that behaves like a carbene but is not a free :CH₂. That is why it is cleaner than cyclopropanation with diazomethane and light."
+  - q: "What is the product of cyclohexene in the Simmons–Smith reaction?"
+    a: "Norcarane, bicyclo[4.1.0]heptane, in which a CH₂ bridge has been added across the former C=C bond. Zinc iodide is the by-product."
+related: ["carbylamine-reaction", "reimer-tiemann-reaction", "prilezhaev-epoxidation", "wittig-reaction", "diels-alder-reaction"]
+sources:
+  - title: "Simmons–Smith reaction"
+    url: "https://en.wikipedia.org/wiki/Simmons%E2%80%93Smith_reaction"
+    publisher: "Wikipedia"
+  - title: "Simmons-Smith Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/simmons-smith-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "Addition of Carbenes to Alkenes: Cyclopropane Synthesis"
+    url: "https://chem.libretexts.org/Courses/Sonoma_State_University/SSU_Chem_335A/Material_Since_Exam_3_for_the_Final/Unit_8:_Alkenes:_Reactions_and_Synthesis/8.09_Addition_of_Carbenes_to_Alkenes:_Cyclopropane_Synthesis"
+    publisher: "Chemistry LibreTexts"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 3
+---
+
+## What is the Simmons–Smith reaction?
+
+The **Simmons–Smith reaction** converts an **alkene into a cyclopropane** by adding a CH₂ unit across the C=C bond. The reagents are **diiodomethane (CH₂I₂) and a zinc–copper couple**, which react to form the organozinc **carbenoid iodomethylzinc iodide, ICH₂ZnI**. The addition is **syn and stereospecific**, so the geometry of the alkene is kept in the cyclopropane, and **zinc iodide** is the by-product. It is named after Howard E. Simmons Jr. and Ronald D. Smith.
+
+## General reaction
+
+<Eq ce="R2C=CR2 + CH2I2 ->[Zn(Cu)] cyclo-(CR2)2CH2 + ZnI2" />
+
+ZnI₂ is the by-product. **Common mistake:** writing the reagent as plain "CH₂I₂, Zn" with heat. The zinc is activated with copper (the zinc–copper couple), and the reaction is usually run in an ether solvent.
+
+## Mechanism
+
+1. **Carbenoid formation.** Zinc inserts into a C–I bond of diiodomethane at the metal surface, giving ICH₂ZnI. (Ultrasound speeds this step.)
+2. **Concerted CH₂ transfer.** The carbenoid approaches one face of the alkene and delivers the CH₂ group to **both carbons at the same time** in a single cheletropic step. Both new C–C bonds form on the same face, which is why the addition is syn.
+3. **Release of ZnI₂.** The zinc leaves as zinc iodide, and the cyclopropane is formed.
+
+<Eq ce="CH2I2 + Zn(Cu) -> ICH2ZnI" />
+
+<Eq ce="ICH2ZnI + C=C -> cyclopropane + ZnI2" />
+
+<KeyPoint>
+The Simmons–Smith reagent is a **carbenoid**, not a free carbene. It behaves like singlet methylene (concerted, stereospecific addition) but does not give the C–H insertion side products that free :CH₂ does.
+</KeyPoint>
+
+## Examples
+
+**1. Cyclohexene to norcarane:**
+
+<Eq ce="C6H10 + CH2I2 ->[Zn(Cu)] C7H12 + ZnI2" />
+
+**2. Stereospecificity with 2-butene:** cis-but-2-ene gives only cis-1,2-dimethylcyclopropane, and trans-but-2-ene gives only the trans isomer.
+
+<Eq ce="cis-CH3CH=CHCH3 ->[CH2I2, Zn(Cu)] cis-C3H4(CH3)2" />
+
+**3. Directed cyclopropanation:** in an allylic alcohol such as cyclohex-2-en-1-ol, the zinc coordinates to the OH group, so the CH₂ is delivered to the face of the ring **cis to the hydroxyl group**, even if that face is more crowded.
+
+<ExamTip>
+For JEE Advanced, treat Simmons–Smith exactly like singlet carbene addition: draw the cyclopropane with substituents in the same relative positions (cis stays cis, trans stays trans). If an OH group is near the double bond, put the new CH₂ on the same side as the OH.
+</ExamTip>
+
+## Comparison with carbene cyclopropanation
+
+| Feature | Simmons–Smith | :CH₂ from CH₂N₂ + light | :CCl₂ from CHCl₃ + base |
+|---|---|---|---|
+| Species | ICH₂ZnI (carbenoid) | free methylene | dichlorocarbene |
+| Product | cyclopropane | cyclopropane (plus insertion products) | 1,1-dichlorocyclopropane |
+| Stereochemistry | syn, stereospecific | stereospecific for singlet | stereospecific |
+
+## Limitations and exceptions
+
+- **Steric effects:** without a directing group, the CH₂ adds to the less hindered face of the alkene.
+- **Cost:** diiodomethane is expensive; cheaper variants use dibromomethane, or diazomethane with zinc iodide. The **Furukawa modification** replaces the Zn–Cu couple with diethylzinc for more reactive systems.
+- **Side reactions:** the Lewis-acidic ZnI₂ can damage acid-sensitive products, and excess reagent over long times can methylate alcohols. Alkenes bearing amino groups can be N-alkylated instead.
+- Many groups survive the conditions, including alcohols, ethers, ketones, esters and alkynes.
+
+## Related reactions
+
+- [Carbylamine reaction](/reactions/carbylamine-reaction/) and [Reimer–Tiemann reaction](/reactions/reimer-tiemann-reaction/): reactions of dichlorocarbene.
+- [Prilezhaev epoxidation](/reactions/prilezhaev-epoxidation/): the oxygen analogue, a syn addition that makes a three-membered ring from an alkene.
+- [Wittig reaction](/reactions/wittig-reaction/): another ylide-type method for making C–C bonds.
+- [Carbenes](/mechanisms/carbenes/): singlet and triplet carbenes, insertion and addition.

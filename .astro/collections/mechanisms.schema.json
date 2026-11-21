@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 170
+    },
+    "exams": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "jee-main",
+          "jee-advanced",
+          "neet"
+        ]
+      }
+    },
+    "order": {
+      "default": 100,
+      "type": "number"
+    },
+    "notesPages": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "faq": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string"
+          },
+          "a": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "q",
+          "a"
+        ]
+      }
+    },
+    "sources": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "publisher": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "url"
+        ]
+      }
+    },
+    "verified": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "verified",
+            "conflict",
+            "pending"
+          ]
+        },
+        "checked": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "sourceCount": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "status",
+        "checked",
+        "sourceCount"
+      ]
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "exams"
+  ]
+}

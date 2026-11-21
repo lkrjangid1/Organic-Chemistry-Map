@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { url, absUrl } from '../../lib/site';
+import { breadcrumbLd } from '../../lib/seo';
+
+const items = (await getCollection('mechanisms')).sort((a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title));
+const reactions = await getCollection('reactions');
+const count = (id: string) => reactions.filter((r) => r.data.family === id).length;
+const path = 'mechanisms/';
+const jsonLd = [
+  {
+    '@type': 'CollectionPage',
+    name: 'Organic reaction mechanisms',
+    url: absUrl(path),
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: items.map((m, i) => ({ '@type': 'ListItem', position: i + 1, url: absUrl(`mechanisms/${m.id}/`), name: m.data.title })),
+    },
+  },
+  breadcrumbLd([{ name: 'Mechanisms', path }]),
+];
+---
+<Base title="Organic Reaction Mechanisms for JEE & NEET" description="Organic reaction mechanisms for JEE Main, JEE Advanced and NEET: substitution, elimination, addition, rearrangements and free radicals, with linked reactions." path={path} jsonLd={jsonLd} section="mechanisms">
+  <div class="container page">
+    <Breadcrumbs items={[{ label: 'Mechanisms' }]} />
+    <header class="page-head">
+      <h1>Organic reaction mechanisms</h1>
+      <p class="summary">Reactions grouped by how they happen. Each mechanism page explains the steps, then links to every reaction of that type.</p>
+    </header>
+    <ul class="list-cards">
+      {items.map((m) => (
+        <li><a class="card" href={url(`mechanisms/${m.id}/`)}><strong>{m.data.title}</strong><p>{m.data.description}</p>{count(m.id) > 0 && <p>{count(m.id)} reactions</p>}</a></li>
+      ))}
+    </ul>
+  </div>
+</Base>

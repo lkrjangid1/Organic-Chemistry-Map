@@ -1,0 +1,10 @@
+---
+import { moleculeSvg } from '../lib/structure';
+interface Props { smiles?: string; name: string; width?: number; height?: number }
+const { smiles, name, width = 220, height = 160 } = Astro.props;
+const svg = await moleculeSvg(smiles, { width, height });
+---
+<figure class="mol">
+  {svg ? <Fragment set:html={svg.replace("role='img'", `role='img' aria-label='Structure of ${name.replace(/'/g, '')}'`)} /> : <div class="mol-text">{name}</div>}
+  <figcaption>{name}</figcaption>
+</figure>

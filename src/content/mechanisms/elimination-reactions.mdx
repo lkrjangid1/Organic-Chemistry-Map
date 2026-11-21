@@ -1,0 +1,112 @@
+---
+title: "Elimination Reactions in Organic Chemistry"
+description: "Elimination reactions for JEE and NEET: α and β elimination, E1, E2, E1cB and Ei mechanisms, Saytzeff vs Hofmann alkenes, and elimination vs substitution."
+exams: [jee-main, jee-advanced, neet]
+order: 20
+notesPages: [17, 18, 19, 20, 26, 27, 37, 38]
+faq:
+  - q: "What is an elimination reaction?"
+    a: "A reaction in which two atoms or groups are removed from a molecule, usually from adjacent carbons, to form a multiple bond. Dehydrohalogenation of an alkyl halide to an alkene is the standard example."
+  - q: "What is the difference between α-elimination and β-elimination?"
+    a: "In β-elimination the two groups leave from adjacent carbons and a C=C bond forms. In α-elimination both leave from the same carbon and a carbene forms, as when chloroform with base gives dichlorocarbene."
+  - q: "What is Saytzeff's rule?"
+    a: "In most β-eliminations the more substituted, more stable alkene is the major product. It fails with bulky bases, with F or onium (–NR₃⁺, –SR₂⁺) leaving groups and in crowded substrates, where the less substituted Hofmann alkene dominates."
+  - q: "How do you decide between substitution and elimination?"
+    a: "Elimination is favoured by a more hindered substrate, a stronger or bulkier base, a poorly nucleophilic base and higher temperature. For example, chloroethane gives ethanol with aqueous KOH but ethene with alcoholic KOH."
+  - q: "What are the main elimination mechanisms?"
+    a: "E1 (carbocation, two steps), E2 (one concerted step with anti-periplanar H and leaving group), E1cB (carbanion, two steps) and Ei (thermal syn elimination through a cyclic transition state, as in Cope elimination and ester pyrolysis)."
+sources:
+  - title: "Elimination reaction"
+    url: "https://en.wikipedia.org/wiki/Elimination_reaction"
+    publisher: "Wikipedia"
+  - title: "Zaitsev's rule"
+    url: "https://en.wikipedia.org/wiki/Zaitsev%27s_rule"
+    publisher: "Wikipedia"
+  - title: "11.10: The E1 and E1cB Reactions"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/11:_Reactions_of_Alkyl_Halides-_Nucleophilic_Substitutions_and_Eliminations/11.10:_The_E1_and_E1cB_Reactions"
+    publisher: "LibreTexts (OpenStax Organic Chemistry)"
+  - title: "Dichlorocarbene"
+    url: "https://en.wikipedia.org/wiki/Dichlorocarbene"
+    publisher: "Wikipedia"
+  - title: "Dehalogenation"
+    url: "https://en.wikipedia.org/wiki/Dehalogenation"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 5
+---
+
+## What is an elimination reaction?
+
+In an **elimination reaction** two atoms or groups are removed from a molecule and a **multiple bond** (or a carbene) is formed. Usually a hydrogen and a leaving group (halide, water from a protonated alcohol, an ammonium group) are lost from **adjacent carbons**, and the product is an **alkene**. Elimination is the reverse of addition and the main competitor of nucleophilic substitution.
+
+## α-Elimination and β-elimination
+
+- **β-Elimination (1,2-elimination):** the groups leave from neighbouring carbons (Cα carries the leaving group, Cβ the hydrogen) and a C=C bond forms. This is by far the most common type.
+- **α-Elimination (1,1-elimination):** both groups leave from the **same carbon**, giving a **carbene**. The classic case is chloroform with a base: H⁺ and Cl⁻ are both lost from one carbon to give dichlorocarbene, the intermediate in the Reimer–Tiemann and carbylamine reactions.
+
+<Eq ce="CHCl3 + OH- -> :CCl2 + H2O + Cl-" />
+
+## Common β-eliminations
+
+| Type | Group lost | Reagent | Example |
+|---|---|---|---|
+| Dehydration | H₂O | Conc. H₂SO₄, H₃PO₄, Al₂O₃, heat | Ethanol to ethene at 443 K |
+| Dehydrohalogenation | HX | Alcoholic KOH, NaOEt, KOtBu | 2-Bromopentane to pent-2-ene |
+| Dehalogenation | X₂ | Zn dust or NaI in acetone, heat | 2,3-Dibromobutane to but-2-ene |
+| Hofmann elimination | R₃N + H₂O | CH₃I, Ag₂O, heat | Amine to least substituted alkene |
+| Cope elimination | R₂NOH | Heat on an amine N-oxide | Amine oxide to alkene |
+
+<Eq ce="CH3CHBr-CHBrCH3 ->[Zn][\Delta] CH3CH=CHCH3 + ZnBr2" />
+
+A related dehydration: a β-hydroxy (or β-amino) acid loses water (or ammonia) to give the conjugated unsaturated acid, because the α-H next to the C=O is acidic.
+
+<Eq ce="CH3CH(OH)CH2COOH -> CH3CH=CHCOOH + H2O" />
+
+## The four mechanisms compared
+
+| Feature | E1 | E2 | E1cB | Ei |
+|---|---|---|---|---|
+| Steps | Two | One | Two | One |
+| Intermediate | Carbocation | None | Carbanion | None (cyclic TS) |
+| Rate law | k[RX] | k[RX][B⁻] | Depends on slow step | k[substrate] |
+| Base | Weak or none | Strong | Moderate to strong | None (internal) |
+| Leaving group | Good | Good | Poor (OH, OR, F) | Built into the molecule |
+| Stereochemistry | Not stereospecific | Anti-periplanar | Not required | Syn |
+| Rearrangement | Possible | No | No | No |
+| Typical substrate | 3° halides, 2°/3° alcohols in acid | 1°/2°/3° halides with strong base | β-Hydroxy carbonyls | Amine oxides, esters, xanthates |
+
+## Saytzeff or Hofmann alkene?
+
+When there is more than one kind of β-hydrogen, two alkenes can form. **Saytzeff's (Zaitsev's) rule:** the **more substituted, more stable alkene** is normally major. There are three cases in which the **Hofmann (less substituted) alkene** is major instead:
+
+1. **The leaving group is poor or positively charged**: F, –NR₃⁺, –SR₂⁺. Here the C–H bond breaks well ahead of the C–X bond (carbanion-like transition state), so the most acidic, least hindered hydrogen is removed.
+2. **The base is bulky**, for example potassium tert-butoxide: 2-chlorobutane gives mainly but-1-ene.
+3. **The substrate is crowded** near the more substituted β-carbon: 2-chloro-4,4-dimethylpentane gives mainly 4,4-dimethylpent-1-ene.
+
+<KeyPoint>
+Small base and halide leaving group: Saytzeff. Bulky base, onium or fluoride leaving group, or crowded substrate: Hofmann. Ei reactions (Cope, ester pyrolysis) also usually give the Hofmann alkene.
+</KeyPoint>
+
+## Elimination versus substitution
+
+Elimination and substitution compete (E2 with SN2, E1 with SN1). Elimination is favoured by:
+
+- more substitution at the α-carbon (3° greater than 2° greater than 1°),
+- a stronger, bulkier, less nucleophilic base,
+- higher temperature,
+- an alcoholic rather than aqueous medium.
+
+<ExamTip>
+Aqueous KOH on chloroethane gives ethanol (substitution); alcoholic KOH gives ethene (elimination). With conc. H₂SO₄, ethanol gives diethyl ether at 413 K but ethene at 443 K. Questions often test exactly this switch.
+</ExamTip>
+
+## Member pages
+
+- [E1 reaction](/reactions/e1-reaction/): two-step carbocation elimination, Saytzeff product, rearrangements possible.
+- [E2 reaction](/reactions/e2-reaction/): one-step anti elimination with strong base; dehydrohalogenation.
+- [E1cB mechanism](/reactions/e1cb-mechanism/): carbanion pathway; aldol dehydration.
+- [Dehydration of alcohols](/reactions/dehydration-of-alcohols/): acid-catalysed alcohol to alkene, temperature and rearrangement effects.
+- [Hofmann elimination](/reactions/hofmann-elimination/): quaternary ammonium hydroxides to the least substituted alkene.
+- [Cope elimination](/reactions/cope-elimination/): syn (Ei) elimination of amine oxides; ester pyrolysis.

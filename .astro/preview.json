@@ -1,0 +1,14 @@
+{
+	"pid": 33074,
+	"port": 4791,
+	"url": "http://localhost:4791",
+	"urls": {
+		"local": [
+			"http://localhost:4791/"
+		],
+		"network": [],
+		"networkInterfaceNames": []
+	},
+	"background": true,
+	"startedAt": "2026-11-21T17:12:51.753Z"
+}

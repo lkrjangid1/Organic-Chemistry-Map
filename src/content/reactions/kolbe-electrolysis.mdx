@@ -1,0 +1,120 @@
+---
+title: "Kolbe Electrolysis"
+description: "Kolbe electrolysis turns aqueous sodium or potassium carboxylates into an even-carbon alkane R–R and CO2 at the anode, via free radicals. Mechanism, examples."
+aliases: ["Kolbe's electrolysis", "Kolbe's electrolytic method", "Kolbe reaction", "Kolbe electrolytic decarboxylation"]
+kind: "named-reaction"
+family: "coupling-reactions"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "Sodium acetate (sodium ethanoate)"
+  smiles: "CC(=O)[O-].[Na+]"
+product:
+  name: "Ethane"
+  smiles: "CC"
+byproducts: "CO2 at the anode; H2 and NaOH (or KOH) at the cathode"
+reagents: "Aqueous sodium or potassium salt of a carboxylic acid; electric current"
+conditions: "Electrolysis of the aqueous solution (platinum anode)"
+equation: "2 CH3COONa + 2 H2O ->[electrolysis] CH3-CH3 + 2 CO2 + H2 + 2 NaOH"
+notesPages: [10, 34]
+memoryTricks: []
+faq:
+  - q: "What is formed at the anode and cathode in Kolbe electrolysis?"
+    a: "The alkane and carbon dioxide form at the anode, where carboxylate ions are oxidised. Hydrogen gas forms at the cathode, and NaOH or KOH is left in solution."
+  - q: "Why can't methane be prepared by Kolbe electrolysis?"
+    a: "Two alkyl radicals always join, so the product has at least two carbon atoms. Even the simplest salt, sodium acetate, gives ethane."
+  - q: "What is the product of Kolbe electrolysis of sodium propanoate?"
+    a: "Butane. Each propanoate loses CO2 to give an ethyl radical, and two ethyl radicals combine to form CH3CH2CH2CH3."
+  - q: "Is Kolbe electrolysis a free radical reaction?"
+    a: "Yes. The carboxylate loses an electron at the anode to give a carboxyl radical, which loses CO2 to form an alkyl radical; two alkyl radicals then couple."
+  - q: "What is the difference between Kolbe electrolysis and the Kolbe–Schmitt reaction?"
+    a: "Kolbe electrolysis makes alkanes by electrolysing carboxylate salts. The Kolbe–Schmitt reaction carboxylates sodium phenoxide with CO2 under pressure to make salicylic acid."
+related: ["wurtz-reaction", "decarboxylation", "hunsdiecker-reaction", "free-radical-halogenation"]
+sources:
+  - title: "Chemistry Part II, Class XI, Unit 9: Hydrocarbons (Kolbe's electrolytic method)"
+    url: "https://ncert.nic.in/textbook/pdf/kech203.pdf"
+    publisher: "NCERT"
+  - title: "Kolbe electrolysis"
+    url: "https://en.wikipedia.org/wiki/Kolbe_electrolysis"
+    publisher: "Wikipedia"
+  - title: "Kolbe Electrolysis"
+    url: "https://www.organic-chemistry.org/namedreactions/kolbe-electrolysis.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "conflict"
+  checked: 2026-11-21
+  sourceCount: 3
+  note: "Notes show K+ + e- -> K, then K + H2O -> KOH + H2 at the cathode; NCERT shows water itself being reduced to H2 and OH-. Page follows NCERT. Notes' 'retention and inversion' (racemisation) point is not stated by sources and is kept as exam convention."
+---
+
+## What is Kolbe electrolysis?
+
+**Kolbe electrolysis** (Kolbe's electrolytic method) is the electrolysis of an **aqueous solution of the sodium or potassium salt of a carboxylic acid**, which gives an **alkane with an even number of carbon atoms at the anode**, along with carbon dioxide. Two carboxylate ions each lose an electron and CO₂, and the two alkyl radicals combine: 2RCOO⁻ → R–R + 2CO₂ + 2e⁻. It is a decarboxylative dimerisation, named after Hermann Kolbe, and is an NCERT method for preparing alkanes.
+
+## General reaction
+
+<Eq ce="2 RCOONa + 2 H2O ->[electrolysis] R-R + 2 CO2 + H2 + 2 NaOH" />
+
+With the potassium salt it is written as: R–COO⁻K⁺ →(electrolysis) R–R + CO₂.
+
+## Mechanism
+
+The reaction is a **free radical** process.
+
+**In solution:** the salt ionises.
+
+<Eq ce="2 CH3COONa -> 2 CH3COO- + 2 Na+" />
+
+**At the anode (oxidation):**
+
+1. Each carboxylate ion loses one electron, forming a carboxyl (acyloxy) radical.
+2. The carboxyl radical loses CO₂ almost at once, giving an alkyl radical.
+3. Two alkyl radicals combine to form the alkane.
+
+<Eq ce="2 CH3COO- ->[-2e-] 2 CH3COO^. -> 2 CH3^. + 2 CO2" />
+<Eq ce="CH3^. + CH3^. -> CH3-CH3" />
+
+**At the cathode (reduction):** water is reduced to hydrogen gas, leaving hydroxide ions that pair with Na⁺ or K⁺.
+
+<Eq ce="2 H2O + 2 e- -> H2 + 2 OH-" />
+
+<ExamTip title="Common mistake">
+Writing the cathode step as K⁺ + e⁻ → K, followed by K + H₂O → KOH + H₂. NCERT writes the cathode reaction as reduction of water itself to H₂ and OH⁻; the overall result (H₂ gas and KOH/NaOH in solution) is the same. Write the NCERT form in board answers.
+</ExamTip>
+
+## Examples
+
+1. **Sodium acetate to ethane** (NCERT):
+
+<Eq ce="2 CH3COONa + 2 H2O ->[electrolysis] CH3-CH3 + 2 CO2 + H2 + 2 NaOH" />
+
+2. **Potassium propanoate to butane:**
+
+<Eq ce="2 CH3CH2COOK + 2 H2O ->[electrolysis] CH3CH2CH2CH3 + 2 CO2 + H2 + 2 KOH" />
+
+3. **Mixed salts give mixtures:** electrolysing sodium acetate with sodium propanoate gives ethane, propane and butane, because all three radical combinations occur.
+
+<Eq ce="CH3COO- + C2H5COO- ->[electrolysis] CH3-CH3 + CH3-C2H5 + C2H5-C2H5" />
+
+<ExamTip>
+Count carbons: the alkane has 2 × (carbons in the acid − 1). Sodium butanoate (C₄) gives hexane (C₆). Methane can never be made this way, which is a favourite NCERT question.
+</ExamTip>
+
+## Stereochemistry
+
+Because the alkyl radical is planar (or rapidly inverting), a stereocentre on the carbon next to COO⁻ is not preserved. In exam answers this is described as both **retention and inversion** occurring, so an optically active acid gives a racemised product.
+
+## Limitations and exceptions
+
+- **No methane:** the smallest product is ethane.
+- **Odd-carbon alkanes** need two different salts and give a mixture (as in the Wurtz reaction).
+- **Side products:** if the alkyl radical is oxidised further, it forms a carbocation (Hofer–Moest reaction), leading to alcohols, alkenes or rearranged products. This happens readily when the α-carbon carries a carbocation-stabilising group.
+- In practice yields are often below 50%. Coupling is favoured by a platinum anode, high current density and weakly acidic, protic solvents.
+
+## Related reactions
+
+- [Wurtz reaction](/reactions/wurtz-reaction/): another way to make even-carbon symmetrical alkanes, from alkyl halides and sodium.
+- [Decarboxylation](/reactions/decarboxylation/): sodium carboxylate + soda lime gives an alkane with one carbon fewer.
+- [Hunsdiecker reaction](/reactions/hunsdiecker-reaction/): radical decarboxylation of silver carboxylates to alkyl halides.
+- [Free radical halogenation](/reactions/free-radical-halogenation/): more radical chemistry of alkanes.
+- Hub: [Coupling reactions](/mechanisms/coupling-reactions/)

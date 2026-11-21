@@ -1,0 +1,111 @@
+---
+title: "Ozonolysis"
+description: "Ozonolysis cleaves a C=C bond with O₃: Zn/H₂O work-up gives aldehydes or ketones, oxidative work-up gives acids. But-2-ene gives 2 CH₃CHO. Mechanism."
+aliases: ["Ozonolysis of alkenes", "Ozonization", "Ozonigation", "Reductive ozonolysis", "Oxidative ozonolysis", "Ozonolysis of benzene"]
+kind: "named-reaction"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "But-2-ene"
+  smiles: "CC=CC"
+product:
+  name: "Acetaldehyde (ethanal), 2 equivalents"
+  smiles: "CC=O"
+byproducts: "ZnO, H₂O (reductive work-up)"
+reagents: "(i) O₃; (ii) Zn/H₂O (reductive) or H₂O₂ (oxidative)"
+conditions: "O₃ bubbled at low temperature (about −78 °C) in an inert solvent, then work-up"
+equation: "CH3-CH=CH-CH3 ->[(i) O3][(ii) Zn/H2O] 2CH3-CHO"
+notesPages: [21]
+memoryTricks:
+  - text: "Zn नहीं तो"
+    meaning: "If there is no Zn, the aldehyde is oxidised further to the carboxylic acid."
+faq:
+  - q: "What is the product of ozonolysis of but-2-ene?"
+    a: "With O₃ followed by Zn/H₂O, but-2-ene gives two molecules of acetaldehyde (ethanal). With an oxidative work-up (H₂O₂), each fragment becomes acetic acid."
+  - q: "What is the role of zinc in ozonolysis?"
+    a: "Zinc is a reducing agent. It destroys the hydrogen peroxide formed when the ozonide is hydrolysed, so aldehydes are not oxidised further to carboxylic acids."
+  - q: "What is an ozonide?"
+    a: "An ozonide is the five-membered 1,2,4-trioxolane ring formed when ozone adds to a C=C bond and the first adduct (molozonide) rearranges. It is hydrolysed in the work-up step to give the carbonyl products."
+  - q: "What is the product of ozonolysis of benzene?"
+    a: "Glyoxal (OHC–CHO). Benzene behaves as if it had three C=C bonds and gives three molecules of glyoxal after a reductive work-up."
+  - q: "How is ozonolysis used to find the position of a double bond?"
+    a: "Join the carbonyl carbons of the products back together with a C=C bond. The structure that results is the original alkene, so the fragments reveal where the double bond was."
+related: ["prilezhaev-epoxidation", "decarboxylation", "wolff-kishner-reduction", "diels-alder-reaction"]
+sources:
+  - title: "Ozonolysis"
+    url: "https://en.wikipedia.org/wiki/Ozonolysis"
+    publisher: "Wikipedia"
+  - title: "Ozonolysis - Criegee Mechanism"
+    url: "https://www.organic-chemistry.org/namedreactions/ozonolysis-criegee-mechanism.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "Glyoxal"
+    url: "https://en.wikipedia.org/wiki/Glyoxal"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 3
+  note: "Notes say an electron-rich (OCH₃-bearing) C=C is cleaved first with 1 mol O₃, and give the ozonolysis products of toluene and o-xylene; these follow from the general rules but are not stated in the sources read."
+---
+
+## What is ozonolysis?
+
+**Ozonolysis** is the cleavage of a **C=C double bond by ozone (O₃)**, in which each alkene carbon becomes a **C=O** group. Ozone first adds to give an **ozonide**, which is then broken down in a work-up step. A **reductive work-up (Zn/H₂O, or dimethyl sulphide)** gives **aldehydes and ketones**; an **oxidative work-up (H₂O₂)** turns any aldehyde fragments into **carboxylic acids**. For example, but-2-ene gives two molecules of acetaldehyde with O₃ then Zn/H₂O.
+
+## Mechanism (Criegee mechanism)
+
+1. **1,3-Dipolar cycloaddition.** Ozone adds across the C=C bond to form an unstable five-membered **molozonide** (primary ozonide, a 1,2,3-trioxolane).
+2. **Fragmentation.** The molozonide splits into a carbonyl compound and a **carbonyl oxide** (Criegee intermediate).
+3. **Recombination.** These two pieces add together again the other way round to give the more stable **ozonide** (1,2,4-trioxolane), with a C–O–C bridge and an O–O bond.
+4. **Work-up.** Hydrolysis of the ozonide gives two carbonyl compounds and H₂O₂. Zinc removes the H₂O₂ (Zn + H₂O₂ → ZnO + H₂O), protecting any aldehyde.
+
+<Eq ce="CH3-CH=CH-CH3 ->[O3] ozonide ->[Zn/H2O] 2CH3-CHO" />
+
+<Trick>
+**"Zn नहीं तो"**: if zinc is not present, the H₂O₂ formed oxidises the aldehyde to the acid: CH₃CHO → CH₃COOH.
+</Trick>
+
+<Eq ce="CH3-CH=CH-CH3 ->[(i) O3][(ii) H2O2] 2CH3-COOH" />
+
+<KeyPoint>
+Reductive work-up: =CH– becomes –CHO, =CR₂ becomes a ketone, =CH₂ becomes HCHO. Oxidative work-up: –CHO becomes –COOH, but ketones stay as ketones.
+</KeyPoint>
+
+## Examples
+
+**1. But-2-ene**: two CH₃CHO (Zn/H₂O) or two CH₃COOH (without Zn).
+
+**2. 2-Methylpropene** gives acetone + formaldehyde:
+
+<Eq ce="(CH3)2C=CH2 ->[(i) O3][(ii) Zn/H2O] (CH3)2C=O + HCHO" />
+
+**3. Benzene** gives three molecules of **glyoxal**. Ozone reacts with each of the three Kekulé C=C bonds:
+
+<Eq ce="C6H6 ->[(i) 3O3][(ii) Zn/H2O] 3OHC-CHO" />
+
+**Substituted benzenes.** Using the same rule, toluene gives one methylglyoxal (CH₃–CO–CHO) and two glyoxal. o-Xylene gives a mixture of glyoxal, methylglyoxal and biacetyl (CH₃–CO–CO–CH₃). Drawing both Kekulé structures of o-xylene shows why all three products appear: each Kekulé form is cut at different bonds.
+
+<ExamTip>
+To work backwards from products to an alkene, write the carbonyl compounds with their C=O carbons facing each other, delete the oxygens and join the carbons with a double bond. Count carbons on both sides to check.
+</ExamTip>
+
+## Multi-step questions
+
+A typical chain: ozonolysis of a ring alkene with an oxidative (O₃/H₂O, no Zn) work-up gives a cyclic **β-keto acid**; on heating, the β-keto acid loses CO₂ (decarboxylation) to give **cyclohexanone**; Clemmensen reduction (Zn–Hg/HCl) then removes the C=O to give **cyclohexane**. Recognise the β-keto acid → ketone + CO₂ step whenever a C=O sits two carbons from a COOH.
+
+In exam answers, when only **one mole** of O₃ is used on a diene, the **more electron-rich** C=C (for example one carrying an OCH₃ group) is taken as the one that is cleaved, since ozone acts as an electrophile; the other C=C survives.
+
+## Limitations and exceptions
+
+- Ozone and peroxide intermediates are hazardous, so the ozonide is normally not isolated; the work-up is done straight after ozone treatment.
+- Sodium borohydride as the work-up reagent gives **alcohols** instead of carbonyl compounds.
+- Alkynes react differently: they give a 1,2-diketone or an acid anhydride, which in water hydrolyses to two carboxylic acids.
+- The end of the reaction is easy to see in the lab: the solution turns blue once excess, unreacted ozone builds up.
+
+## Related reactions
+
+- [Prilezhaev epoxidation](/reactions/prilezhaev-epoxidation/) adds one oxygen to the C=C without breaking it.
+- [Decarboxylation](/reactions/decarboxylation/) explains the β-keto acid step in multi-step ozonolysis problems.
+- [Wolff–Kishner reduction](/reactions/wolff-kishner-reduction/) is the basic alternative to Clemmensen reduction for removing C=O.
+- [Diels–Alder reaction](/reactions/diels-alder-reaction/) products are often cleaved by ozonolysis in synthesis.
+- Overview: [Electrophilic addition reactions](/mechanisms/electrophilic-addition/).

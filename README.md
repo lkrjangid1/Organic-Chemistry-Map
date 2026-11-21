@@ -1,8 +1,8 @@
 # Organic Chemistry Map
 
-An interactive, zoomable map of organic chemistry reactions for JEE Main, JEE Advanced and NEET preparation.
+Free organic chemistry notes and an interactive reaction map for JEE Main, JEE Advanced and NEET. One verified page per reaction, written from Lokesh Jangid's handwritten classroom notes and checked against trusted references, plus a zoomable map where nodes are compounds and arrows are reactions.
 
-**Live:** https://organic-chemistry-map.yaaratech.in/ (interactive map at [/app/](https://organic-chemistry-map.yaaratech.in/app/)) Nodes represent compounds, edges capture reactions, and every node renders its molecular structure with SMILES Drawer.
+**Live:** https://organic-chemistry-map.yaaratech.in/ · interactive map: [/map/](https://organic-chemistry-map.yaaratech.in/map/)
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![React](https://img.shields.io/badge/React-19.1.1-blue.svg)
@@ -39,149 +39,56 @@ An interactive, zoomable map of organic chemistry reactions for JEE Main, JEE Ad
 - Grouped “Compounds” and “Reactions” suggestion lists with chem-specific iconography
 - Inline controls for reaction filters plus quick tips for map interaction
 
+## Site structure
+
+| Path | What it is |
+|------|------------|
+| `/` | Home page |
+| `/reactions/` | A–Z index of every reaction; `/reactions/<slug>/` is one verified page per reaction |
+| `/mechanisms/` | Hub pages per mechanism family (SN1/SN2, elimination, rearrangements…) |
+| `/compounds/` | Compounds that appear in 3+ reactions: structure, preparation, reactions |
+| `/notes/` | Free PDF of the original handwritten notes |
+| `/map/` | The interactive React Flow map (`/app/` redirects here, keeping `?reaction=` / `?compound=` deep links) |
+
+Built with [Astro](https://astro.build): every content page is static HTML (crawlable, fast); the map is a React island.
+
 ## Quick Start
 
-### Prerequisites
-- Node.js 18+
-- npm (bundled with Node) or yarn
-
-### Installation
-
 ```bash
-# Clone the repository
-git clone <repository-url>
-cd organic-chem-map
-
-# Install dependencies
 npm install
-
-# Start the development server
-npm run dev
-
-# Build for production output
-npm run build
+npm run dev            # http://localhost:4321
+npm run build          # static site in dist/
+npm run check:content  # validate content MDX (frontmatter, SMILES, equations, links)
+npm run check:site     # post-build SEO + link checks over dist/
 ```
+
+Node 22.23+ is required (Astro 7).
+
+## Adding or editing a reaction page
+
+1. Create `src/content/reactions/<slug>.mdx`. Copy the frontmatter of an existing page; the schema is in `src/content.config.ts`.
+2. Every page needs at least **2 trusted sources** (NCERT, LibreTexts, Organic Chemistry Portal, Wikipedia/primary literature, IUPAC). Coaching and Q&A sites are not accepted.
+3. Link the page to map arrows with `mapEdges` (edge ids from `src/app/data/jee_organic.json`).
+4. Body components: `<Eq ce="..."/>` (mhchem equation), `<Mol smiles="..." name="..."/>`, `<KeyPoint>`, `<ExamTip>`, `<Trick>`.
+5. Run `npm run check:content` and `npm run build`.
+
+Molecule structures are drawn at build time with RDKit (SVG), equations with KaTeX + mhchem.
+
+## Deployment
+
+GitHub Actions (`.github/workflows/deploy.yml`) builds, validates and deploys to GitHub Pages on every push to `main`; pull requests are built and checked but not deployed. Optional repository variables:
+
+| Variable | Purpose |
+|----------|---------|
+| `GOOGLE_SITE_VERIFICATION` | Search Console HTML-tag verification code |
+| `CF_ANALYTICS_TOKEN` | Cloudflare Web Analytics token (cookie-free) |
+| `REPORT_FORM_URL` / `REPORT_FORM_PAGE_FIELD` | Google Form for "Report an error" and the prefill field id for the page URL |
 
 ## Technology Stack
 
 | Component | Technology |
 |-----------|------------|
-| Framework | React 19 with TypeScript |
-| Build Tool | Vite 7 |
-| Styling | Tailwind CSS 4 |
-| Graph Rendering | React Flow 11 |
-| Molecule Rendering | SMILES Drawer 2 |
-| State Management | Zustand 5 |
-| Icons | Lucide React |
-
-## Project Structure
-
-```
-src/
-├── App.tsx               # Root application component
-├── index.css             # Global styles and React Flow overrides
-├── main.tsx              # Application entry point
-├── assets/               # Static assets
-├── components/           # Reusable UI building blocks
-│   ├── Header.tsx        # Top navigation and theme toggle
-│   ├── NodeChemical.tsx  # Custom React Flow node for compounds
-│   ├── SidePanel.tsx     # Theme-aware search and detail panel
-│   └── SmilesRenderer.tsx# SMILES Drawer integration
-├── data/                 # Static JSON describing nodes and reactions
-│   └── jee_organic.json
-├── pages/                # Top-level pages
-│   └── MapPage.tsx       # React Flow visualization canvas
-├── store/                # Zustand stores
-│   └── useMapStore.ts
-├── theme/                # Theme tokens and provider hooks
-└── utils/                # Helper utilities
-```
-
-## Chemical Data Format
-
-Organic Chemistry Map reads a JSON description of nodes and reactions. A minimal entry looks like this:
-
-```json
-{
-  "nodes": [
-    {
-      "id": "benzene",
-      "label": "Benzene",
-      "smiles": "C1=CC=CC=C1",
-      "type": "compound",
-      "info": {
-        "iupac": "Benzene",
-        "formula": "C6H6",
-        "notes": "Base aromatic compound",
-        "properties": "Colorless liquid, carcinogenic"
-      },
-      "position": { "x": 0, "y": 0 }
-    }
-  ],
-  "edges": [
-    {
-      "id": "benzene_to_nitrobenzene",
-      "source": "benzene",
-      "target": "nitrobenzene",
-      "label": "Nitration",
-      "type": "reaction",
-      "reactionInfo": {
-        "reagents": "HNO3 + H2SO4",
-        "conditions": "50-60 deg C",
-        "mechanism": "Electrophilic aromatic substitution",
-        "equation": "C6H6 + HNO3 -> C6H5NO2 + H2O"
-      }
-    }
-  ]
-}
-```
-
-## Key Components
-
-### `NodeChemical`
-- Wraps a SMILES rendering canvas with compound metadata
-- Applies selection styling and exposes connection handles
-- Uses responsive sizing to keep nodes legible on all devices
-
-### `MapPage`
-- Configures React Flow with custom nodes, edges, and theming
-- Manages fit view, zoom bounds, and background styling
-- Positions navigation controls consistently on mobile and desktop
-
-### `SmilesRenderer`
-- Lazily loads SMILES Drawer to keep the bundle lean
-- Converts generated SVG output into React content safely
-- Handles loading states and error messaging for invalid SMILES strings
-
-## Development Notes
-
-### Adding Compounds
-1. Append a new node entry to `src/data/jee_organic.json` with a unique `id` and coordinates.
-2. Include a valid SMILES string to generate the diagram.
-3. Provide supporting metadata (formula, IUPAC name, notes) for richer context.
-
-### Adding Reactions
-1. Create an edge entry connecting the source and target compound ids.
-2. Supply reagents, conditions, and mechanism within `reactionInfo` for tooltips.
-3. Adjust node positions if needed to minimise edge crossings.
-
-### Styling and Theming
-1. Tailwind tokens live in `tailwind.config.js` and `src/theme/tokens.ts`.
-2. Global React Flow overrides reside in `src/index.css`.
-3. Component-level styling uses Tailwind utility classes for consistency.
-
-## Scripts
-
-```
-npm run dev     # Start Vite in development mode
-npm run build   # Generate production assets
-npm run preview # Preview the production build locally
-```
-
-## Contributing
-
-Issues and pull requests are welcome. Please open a discussion before submitting large changes to coordinate on data formats or visualization conventions.
-
-## License
-
-This project is distributed under the MIT License. See `LICENSE` for details.
+| Site | Astro 7 + MDX content collections |
+| Map | React 19, React Flow 11, Zustand 5, Tailwind CSS 4 |
+| Structures | RDKit (build-time SVG) and SMILES Drawer (map) |
+| Equations | KaTeX + mhchem |

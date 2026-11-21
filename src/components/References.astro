@@ -1,0 +1,24 @@
+---
+interface Props {
+  sources: { title: string; url: string; publisher?: string }[];
+  checked?: Date;
+  status?: 'verified' | 'conflict' | 'pending';
+}
+const { sources, checked, status } = Astro.props;
+const date = checked?.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+{sources.length > 0 && (
+  <section class="refs" aria-labelledby="refs-h">
+    <h2 id="refs-h">References</h2>
+    {status && date && (
+      <p>
+        {status === 'verified' ? `Verified against ${sources.length} sources` : 'Checked against the sources below'} · last checked {date}
+      </p>
+    )}
+    <ol>
+      {sources.map((s) => (
+        <li><a href={s.url} rel="noopener nofollow">{s.title}</a>{s.publisher && <> · {s.publisher}</>}</li>
+      ))}
+    </ol>
+  </section>
+)}

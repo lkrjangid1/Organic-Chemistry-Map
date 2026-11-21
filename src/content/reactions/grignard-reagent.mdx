@@ -1,0 +1,133 @@
+---
+title: "Grignard Reagent (RMgX)"
+description: "Grignard reagent RMgX is made from an alkyl halide and Mg in dry ether; it adds to aldehydes and ketones to give alcohols and is destroyed by water or acids."
+aliases: ["Grignard reaction", "RMgX", "Alkyl magnesium halide", "Organomagnesium halide", "Grignard reagent reactions"]
+kind: "general-reaction"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["grignard_reagent_formation", "grignard_formation", "grignard_reaction_with_ketone", "reaction4", "reaction1", "reaction3", "reaction5", "reaction6", "grignard_carbonation"]
+reactant:
+  name: "Butan-2-one + ethylmagnesium bromide"
+  smiles: "CCC(C)=O"
+product:
+  name: "3-Methylpentan-3-ol"
+  smiles: "CCC(C)(O)CC"
+byproducts: "Mg(OH)X after aqueous acid work-up"
+reagents: "R–X + Mg in dry ether (to make RMgX); then the electrophile, then H₃O⁺"
+conditions: "Strictly anhydrous diethyl ether or THF; acidic aqueous work-up"
+equation: "CH3COC2H5 ->[1) C2H5MgBr, dry ether][2) H3O+] (C2H5)2C(OH)CH3"
+notesPages: [9, 13, 52]
+memoryTricks: []
+faq:
+  - q: "How is a Grignard reagent prepared?"
+    a: "By reacting an alkyl or aryl halide (chloride, bromide or iodide) with magnesium metal in dry ether, for example CH3Br + Mg → CH3MgBr. The ether stabilises the reagent by coordinating to magnesium."
+  - q: "Why must Grignard reactions be carried out in dry conditions?"
+    a: "RMgX is a very strong base. Any water, alcohol or other compound with an acidic hydrogen protonates it at once to give the alkane R–H, destroying the reagent."
+  - q: "What alcohol is formed when a Grignard reagent reacts with a ketone?"
+    a: "A tertiary alcohol. Methanal gives a primary alcohol, other aldehydes give secondary alcohols, and ketones give tertiary alcohols after acidic work-up."
+  - q: "How is a carboxylic acid made using a Grignard reagent?"
+    a: "The Grignard reagent is added to solid CO2 (dry ice) and the salt is then acidified. For example, C6H5MgBr gives benzoic acid, one carbon more than the starting halide."
+  - q: "Why are alkyl fluorides not used to make Grignard reagents?"
+    a: "The C–F bond is too strong; fluorides do not react with ordinary magnesium. Chlorides, bromides and iodides are used."
+related: ["wurtz-reaction", "ether-cleavage-with-hx", "decarboxylation", "corey-house-synthesis"]
+sources:
+  - title: "Haloalkanes and Haloarenes (Class XII Chemistry, Unit 6)"
+    url: "https://ncert.nic.in/textbook/pdf/lech201.pdf"
+    publisher: "NCERT"
+  - title: "Alcohols, Phenols and Ethers (Class XII Chemistry, Unit 7)"
+    url: "https://ncert.nic.in/textbook/pdf/lech202.pdf"
+    publisher: "NCERT"
+  - title: "Grignard reagent"
+    url: "https://en.wikipedia.org/wiki/Grignard_reagent"
+    publisher: "Wikipedia"
+  - title: "Grignard reaction"
+    url: "https://en.wikipedia.org/wiki/Grignard_reaction"
+    publisher: "Wikipedia"
+  - title: "Grignard Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/grignard-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 5
+---
+
+## What is a Grignard reagent?
+
+A **Grignard reagent** is an **alkyl or aryl magnesium halide, RMgX**, made by reacting an **alkyl or aryl halide with magnesium metal in dry ether**. The C–Mg bond is polar, with the carbon carrying a partial negative charge, so the R group behaves like a carbanion: a **strong nucleophile and a strong base**. Its most important use is adding to **aldehydes and ketones to form alcohols** after acidic work-up. The reagents were discovered by Victor Grignard in 1900.
+
+## Preparation
+
+<Eq ce="R-X + Mg ->[dry ether] R-MgX" />
+
+<Eq ce="C6H5Br + Mg ->[dry ether] C6H5MgBr" />
+
+- **R** is an alkyl, vinyl or aryl group, not hydrogen.
+- **X** is Cl, Br or I. Alkyl fluorides do not react with ordinary magnesium because the C–F bond is too strong.
+- **Solvent:** dry diethyl ether or THF. The ether oxygen coordinates to Mg and stabilises the reagent.
+
+## Reaction with protic compounds (why everything must be dry)
+
+RMgX is a much stronger base than water, alcohols, phenols, amines or terminal alkynes. Any compound with an acidic hydrogen (written HA) protonates it and releases the alkane:
+
+<Eq ce="R-MgX + H-A -> R-H + Mg(A)X" />
+
+<Eq ce="CH3MgBr + H2O -> CH4 + Mg(OH)Br" />
+
+<KeyPoint>
+Grignard reactions must be run under strictly anhydrous conditions. Even moist air converts RMgX into R–H. The same reaction can be used on purpose to convert R–X into the alkane R–H (via RMgX and water).
+</KeyPoint>
+
+## Mechanism of addition to a carbonyl group
+
+1. **Nucleophilic attack.** The carbanion-like R group attacks the electrophilic carbonyl carbon; the C=O π electrons move onto oxygen.
+2. **Alkoxide adduct.** A magnesium alkoxide (R–C–O–MgX) forms.
+3. **Acidic work-up.** Dilute acid protonates the alkoxide to give the alcohol and Mg(OH)X.
+
+<Eq ce="R'2C=O + RMgX -> R'2C(R)-OMgX ->[H3O+] R'2C(R)-OH + Mg(OH)X" />
+
+## Which alcohol forms?
+
+| Carbonyl compound | Product after H₃O⁺ |
+|---|---|
+| Methanal (HCHO) | 1° alcohol |
+| Other aldehydes (RCHO) | 2° alcohol |
+| Ketones (R₂CO) | 3° alcohol |
+
+## Examples
+
+**Ketone → tertiary alcohol** (butan-2-one with ethylmagnesium bromide):
+
+<Eq ce="CH3COC2H5 + C2H5MgBr -> (C2H5)2C(OMgBr)CH3 ->[H3O+] (C2H5)2C(OH)CH3" />
+
+**Benzophenone → triphenylmethanol:**
+
+<Eq ce="(C6H5)2CO + C6H5MgBr ->[1) dry ether][2) H3O+] (C6H5)3COH" />
+
+**Carbonation → carboxylic acid** (one carbon added):
+
+<Eq ce="C6H5MgBr + CO2 -> C6H5COOMgBr ->[H3O+] C6H5COOH" />
+
+**Nitrile → ketone** via an imine salt:
+
+<Eq ce="C6H5CN + CH3MgBr -> C6H5C(=NMgBr)CH3 ->[H3O+] C6H5COCH3" />
+
+**Epoxide ring opening:** RMgX attacks the less hindered carbon of the epoxide (SN2-like), giving an alcohol with the new C–C bond two carbons away from oxygen.
+
+**Acid chlorides and esters:** the first addition gives a ketone, which reacts with a second molecule of RMgX. With excess reagent the product is a tertiary alcohol with two identical R groups.
+
+<ExamTip>
+To design a Grignard synthesis, cut the bond between the carbinol carbon and one of its R groups. That R group comes from RMgX; the rest is the aldehyde or ketone. Never put an OH, NH or COOH group in the same molecule as the Grignard reagent.
+</ExamTip>
+
+## Limitations and exceptions
+
+- Substrates with acidic hydrogens (–OH, –NH₂, –COOH, terminal alkyne C–H) quench the reagent instead of reacting at the carbonyl group.
+- With very hindered ketones, RMgX can act as a base (forming the enolate) or deliver a hydride (reduction) instead of adding.
+- Grignard reagents generally do not couple with ordinary alkyl halides without a metal catalyst.
+
+## Related reactions
+
+- [Wurtz reaction](/reactions/wurtz-reaction/): another reaction of alkyl halides with a metal.
+- [Corey–House synthesis](/reactions/corey-house-synthesis/): an organocopper route to C–C bonds.
+- [Ether cleavage with HX](/reactions/ether-cleavage-with-hx/): includes epoxide ring opening by RMgX.
+- [Decarboxylation](/reactions/decarboxylation/): the reverse idea, removing CO₂ instead of adding it.

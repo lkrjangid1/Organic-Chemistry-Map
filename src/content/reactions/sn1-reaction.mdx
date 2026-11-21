@@ -1,0 +1,114 @@
+---
+title: "SN1 Reaction"
+description: "The SN1 reaction is a two-step nucleophilic substitution in which an alkyl halide ionises to a carbocation, then a nucleophile adds, giving racemisation."
+aliases: ["SN1 mechanism", "Unimolecular nucleophilic substitution", "SN1 reaction mechanism", "Solvolysis", "SN1' allylic rearrangement"]
+kind: "mechanism-type"
+family: "nucleophilic-substitution"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["SN1_2-bromo-2-methylbutane_to_2-ethoxy-2-methylbutane", "SN1_neopentyl_bromide_to_2-methoxy-2-methylbutane", "sn1_rearrangement"]
+reactant:
+  name: "tert-Butyl bromide (2-bromo-2-methylpropane)"
+  smiles: "CC(C)(C)Br"
+product:
+  name: "tert-Butyl alcohol (2-methylpropan-2-ol)"
+  smiles: "CC(C)(C)O"
+byproducts: "HBr (as H3O+ and Br-)"
+reagents: "Weak or neutral nucleophile (H2O, ROH, CH3COOH), usually the solvent"
+conditions: "Polar protic solvent (water, alcohol, aqueous acetone); tertiary, allylic or benzylic substrate"
+equation: "(CH3)3C-Br + H2O -> (CH3)3C-OH + HBr"
+notesPages: [43, 44]
+memoryTricks: []
+faq:
+  - q: "What is the rate law of an SN1 reaction?"
+    a: "Rate = k[R–X]. Only the substrate appears because the slow step is the ionisation of the C–X bond to a carbocation; the nucleophile joins later in a fast step."
+  - q: "Why do tertiary alkyl halides prefer the SN1 mechanism?"
+    a: "A tertiary carbocation is stabilised by three alkyl groups (inductive effect and hyperconjugation), so it forms fastest. Reactivity order is 3° > 2° > 1°, and allylic and benzylic halides also react fast because their cations are resonance-stabilised."
+  - q: "Does an SN1 reaction give racemisation or inversion?"
+    a: "The planar carbocation can be attacked from either face, so a chiral substrate gives a mixture of both enantiomers. In practice racemisation is not complete: the departing halide ion partly shields one face, so slightly more inverted product forms."
+  - q: "Why is a polar protic solvent used for SN1?"
+    a: "Water, alcohols and acetic acid stabilise the carbocation and solvate the leaving anion through hydrogen bonding, which lowers the energy of the ionisation step."
+  - q: "Can the carbocation rearrange in an SN1 reaction?"
+    a: "Yes. A 1,2-hydride or 1,2-methyl shift can convert a less stable cation into a more stable one before the nucleophile attacks, so the product can have a different skeleton, as in neopentyl bromide giving 2-methoxy-2-methylbutane in methanol."
+related: ["sn2-reaction", "sni-mechanism", "neighbouring-group-participation", "e1-reaction", "lucas-test", "dehydration-of-alcohols", "pinacol-pinacolone-rearrangement"]
+sources:
+  - title: "Haloalkanes and Haloarenes (Class 12 Chemistry Part II, Unit 6)"
+    url: "https://ncert.nic.in/textbook/pdf/lech201.pdf"
+    publisher: "NCERT"
+  - title: "SN1 reaction"
+    url: "https://en.wikipedia.org/wiki/SN1_reaction"
+    publisher: "Wikipedia"
+  - title: "Allylic rearrangement"
+    url: "https://en.wikipedia.org/wiki/Allylic_rearrangement"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 3
+  note: "Notes label the two SN1′ products of 3-chloro-3-methylcyclohexene as kinetic (tertiary alcohol) and thermodynamic (secondary alcohol); the sources describe SN1′ but do not assign these labels, so they are kept as exam convention."
+---
+
+## What is the SN1 reaction?
+
+The **SN1 reaction** (substitution, nucleophilic, unimolecular) is a nucleophilic substitution that takes place in two steps. First the C–X bond of an alkyl halide breaks on its own to give a **planar carbocation** and a halide ion; then a nucleophile, usually the solvent, bonds to the carbocation. It is typical of **tertiary, allylic and benzylic halides** in **polar protic solvents** such as water, alcohols or aqueous acetone. Because only the substrate takes part in the slow step, the rate law is **rate = k[R–X]** (first order).
+
+## General reaction
+
+<Eq ce="R3C-X ->[\text{slow}] R3C+ + X- ->[Nu-][\text{fast}] R3C-Nu" />
+
+## Mechanism
+
+1. **Ionisation (slow, rate-determining).** The polarised C–X bond breaks heterolytically. The carbon becomes sp² hybridised and trigonal planar, with an empty p orbital above and below the plane. NCERT describes this step as the slowest one and reversible.
+2. **Nucleophilic attack (fast).** The nucleophile can approach either lobe of the empty p orbital, so it adds from the top face or the bottom face.
+3. **Deprotonation (when the nucleophile is neutral).** If water or an alcohol attacks, an oxonium ion forms first and loses H⁺ to a solvent molecule.
+
+<Eq ce="(CH3)3C-Br <=>[\text{slow}] (CH3)3C+ + Br- ; (CH3)3C+ + H2O -> (CH3)3C-OH2+ ->[-H+] (CH3)3C-OH" />
+
+<KeyPoint>
+SN1 goes through a **carbocation**, so **rearrangement is possible**; it is a two- (or more-) step reaction; it needs a **weak, neutral nucleophile**, a **good leaving group** and a **polar protic solvent**. Reactivity is proportional to the stability of the carbocation: 3° > 2° > 1° > CH₃.
+</KeyPoint>
+
+## Stereochemistry
+
+When the carbon bearing the halogen is a stereocentre, attack on both faces of the planar cation gives **both enantiomers**. NCERT's example is optically active 2-bromobutane, which gives (±)-butan-2-ol. In real reactions racemisation is usually incomplete: the leaving halide stays close to the cation for a moment as an ion pair and blocks the front face, so the inverted product is slightly favoured.
+
+## Leaving group ability
+
+In short: leaving-group ability ∝ 1/basicity ∝ stability of the anion. Weak bases leave easily, so I⁻ > Br⁻ > Cl⁻ > F⁻. Groups such as –N₂⁺ (leaving as N₂) and –OH₂⁺ (leaving as H₂O) are excellent leaving groups, which is why alcohols react by SN1 only after protonation.
+
+## Examples
+
+**1. Hydrolysis of tert-butyl bromide (NCERT).** Water acts as the nucleophile; the rate depends only on [tert-butyl bromide].
+
+<Eq ce="(CH3)3C-Br + H2O -> (CH3)3C-OH + HBr" />
+
+**2. Solvolysis in ethanol.** 2-Bromo-2-methylbutane in warm ethanol gives 2-ethoxy-2-methylbutane, with some alkene from the competing E1 path.
+
+<Eq ce="CH3CH2C(CH3)2Br + C2H5OH -> CH3CH2C(CH3)2OC2H5 + HBr" />
+
+**3. Rearrangement: neopentyl bromide in methanol.** The neopentyl carbon has no hydrogen on its neighbour, so a **1,2-methyl shift** converts the primary cation into a tertiary one. The product is 2-methoxy-2-methylbutane, not neopentyl methyl ether.
+
+<Eq ce="(CH3)3C-CH2Br ->[CH3OH][\Delta] (CH3)2C(OCH3)-CH2CH3 + HBr" />
+
+<ExamTip>
+Whenever an SN1 or E1 question gives a 1° or 2° carbon next to a branched carbon, check for a hydride or methyl shift before writing the product. Neopentyl systems always involve a methyl shift.
+</ExamTip>
+
+## Allylic rearrangement: SN1′ and SN2′
+
+Allylic halides form a **resonance-stabilised allyl cation** with positive charge shared between two carbons, so the nucleophile can bond at either end. Substitution at the far end of the double bond, with the π bond moving, is called an **allylic shift**: SN1′ when it goes through the cation and SN2′ when the nucleophile attacks the alkene carbon in one concerted step.
+
+A classic question: 3-chloro-3-methylcyclohexene with water gives two alcohols. Attack at the tertiary end gives **1-methylcyclohex-2-en-1-ol**; attack at the other end gives **3-methylcyclohex-2-en-1-ol**, which has the more substituted, more stable C=C. In exam answers the first is labelled the kinetically controlled product and the second the thermodynamically controlled product. With OH⁻, exam answers show the SN2′ path giving 3-methylcyclohex-2-en-1-ol directly.
+
+## Limitations and exceptions
+
+- **E1 competes**, especially on heating or with basic nucleophiles; tertiary substrates give alkenes easily.
+- **Methyl and primary halides** do not ionise (their cations are too unstable); they react by SN2.
+- **Aryl and vinyl halides** do not undergo SN1, because aryl and vinyl cations are very unstable.
+
+## Related reactions
+
+- [SN2 reaction](/reactions/sn2-reaction/): the one-step, inversion pathway favoured by 1° substrates.
+- [E1 reaction](/reactions/e1-reaction/): shares the same carbocation step.
+- [Lucas test](/reactions/lucas-test/): turbidity speed reflects SN1 reactivity of 3°, 2° and 1° alcohols.
+- [SNi mechanism](/reactions/sni-mechanism/) and [neighbouring group participation](/reactions/neighbouring-group-participation/): substitutions that give retention.
+- [Nucleophilic substitution overview](/mechanisms/nucleophilic-substitution/)

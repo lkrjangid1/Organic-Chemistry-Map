@@ -1,0 +1,110 @@
+---
+title: "Reimer–Tiemann Reaction"
+description: "Reimer–Tiemann reaction: phenol heated with chloroform and aqueous NaOH gives salicylaldehyde (ortho-formylation) via dichlorocarbene. Mechanism and examples."
+aliases: ["Reimer Tiemann reaction", "Riemer Tiemann reaction", "Reimer-Tiemann formylation", "Phenol to salicylaldehyde", "Abnormal Reimer–Tiemann reaction"]
+kind: "named-reaction"
+family: "carbenes"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["reimer_tiemann"]
+reactant:
+  name: "Phenol"
+  smiles: "Oc1ccccc1"
+product:
+  name: "Salicylaldehyde (2-hydroxybenzaldehyde)"
+  smiles: "O=Cc1ccccc1O"
+byproducts: "NaCl, H₂O"
+reagents: "CHCl₃ + aqueous NaOH, then dilute acid (H⁺) work-up"
+conditions: "Warming to start the reaction; biphasic aqueous NaOH/chloroform mixture"
+equation: "C6H5OH + CHCl3 + 3NaOH ->[\\Delta] 2-HOC6H4CHO + 3NaCl + 2H2O"
+notesPages: [11]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Reimer–Tiemann reaction of phenol?"
+    a: "Salicylaldehyde (2-hydroxybenzaldehyde) is the main product. A –CHO group is introduced at the ortho position of the ring, and a smaller amount of the para isomer, 4-hydroxybenzaldehyde, can also form."
+  - q: "What is the electrophile in the Reimer–Tiemann reaction?"
+    a: "Dichlorocarbene, :CCl₂. It is formed when hydroxide removes a proton from chloroform and the CCl₃⁻ ion loses a chloride ion."
+  - q: "What happens if carbon tetrachloride is used instead of chloroform?"
+    a: "A carboxylic acid group is introduced instead of an aldehyde, so phenol gives salicylic acid (2-hydroxybenzoic acid)."
+  - q: "Why is the ortho product major in the Reimer–Tiemann reaction?"
+    a: "The electron-poor dichlorocarbene is attracted to the electron-rich phenoxide ion, and attack occurs mainly at the ring carbon next to the O⁻ group, giving ortho-formylation."
+  - q: "What is the abnormal Reimer–Tiemann reaction?"
+    a: "When pyrrole is treated with chloroform and base, dichlorocarbene adds to the ring and it expands to 3-chloropyridine instead of giving an aldehyde. This ring expansion is the Ciamician–Dennstedt rearrangement."
+related: ["carbylamine-reaction", "friedel-crafts-acylation", "simmons-smith-reaction", "diazotization-reaction"]
+sources:
+  - title: "Alcohols, Phenols and Ethers (Class 12 Chemistry, Unit 7)"
+    url: "https://ncert.nic.in/textbook/pdf/lech202.pdf"
+    publisher: "NCERT"
+  - title: "Reimer–Tiemann reaction"
+    url: "https://en.wikipedia.org/wiki/Reimer%E2%80%93Tiemann_reaction"
+    publisher: "Wikipedia"
+  - title: "Ciamician–Dennstedt rearrangement"
+    url: "https://en.wikipedia.org/wiki/Ciamician%E2%80%93Dennstedt_rearrangement"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 3
+  note: "Notes give both o- and p-hydroxybenzaldehyde without ranking; sources state ortho-formylation is selective, so the page gives ortho as major and para as a minor product (para formation kept as exam teaching, not confirmed by the sources read)."
+---
+
+## What is the Reimer–Tiemann reaction?
+
+The **Reimer–Tiemann reaction** is the **ortho-formylation of phenols**: phenol is treated with **chloroform (CHCl₃) and aqueous sodium hydroxide**, and a **–CHO group is introduced at the ortho position** of the ring. Acidifying the mixture gives **salicylaldehyde (2-hydroxybenzaldehyde)**. The reactive species is **dichlorocarbene, :CCl₂**, made from chloroform by the base. The reaction was reported by Karl Reimer and Ferdinand Tiemann in 1876.
+
+## General reaction
+
+<Eq ce="C6H5OH ->[CHCl3, aq. NaOH][\Delta] 2-NaOC6H4CHO ->[H3O+] 2-HOC6H4CHO" />
+
+NCERT describes the intermediate as a **substituted benzal chloride** (a –CHCl₂ group on the ring), which is hydrolysed by the alkali to the aldehyde.
+
+## Mechanism
+
+1. **Carbene formation.** OH⁻ removes the proton from CHCl₃, giving CCl₃⁻; this loses Cl⁻ (α-elimination) to give **:CCl₂**.
+2. **Phenoxide formation.** OH⁻ also deprotonates phenol. The negative charge of the phenoxide is spread into the ring, making the ortho and para carbons strongly nucleophilic.
+3. **Attack on the carbene.** The ortho carbon of the phenoxide attacks the electron-poor carbene carbon. A proton shift restores aromaticity, giving an o-(dichloromethyl)phenoxide.
+4. **Hydrolysis.** Under the basic conditions the two C–Cl bonds are replaced by OH, and the gem-diol loses water to give the –CHO group (as the sodium phenoxide).
+5. **Acid work-up.** Dilute acid protonates the phenoxide, giving salicylaldehyde.
+
+<Eq ce="CHCl3 + OH- -> CCl3^- + H2O -> :CCl2 + Cl-" />
+
+<Eq ce="C6H5O- + :CCl2 -> 2-(CHCl2)C6H4O- ->[OH-] 2-(CHO)C6H4O-" />
+
+<KeyPoint>
+Dichlorocarbene is a neutral but strongly electron-deficient electrophile, so it needs a very electron-rich ring. That is why the reaction works on phenoxide ions and electron-rich heterocycles, but not on benzene itself.
+</KeyPoint>
+
+## Examples
+
+**1. Phenol to salicylaldehyde (NCERT):**
+
+<Eq ce="C6H5OH + CHCl3 + 3NaOH ->[\Delta] 2-HOC6H4CHO + 3NaCl + 2H2O" />
+
+Both o-hydroxybenzaldehyde and p-hydroxybenzaldehyde can form. The ortho isomer is the major product; in exam answers the para isomer is listed as the minor product.
+
+**2. Carbon tetrachloride variant:** using CCl₄ in place of CHCl₃ introduces –COOH, so phenol gives **salicylic acid**.
+
+<Eq ce="C6H5OH ->[CCl4, NaOH][H3O+] 2-HOC6H4COOH" />
+
+**3. Abnormal Reimer–Tiemann reaction (ring expansion):** pyrrole with chloroform and base gives **3-chloropyridine**. Dichlorocarbene adds across a C=C of the pyrrole ring, and the bicyclic intermediate opens to a six-membered ring. This is the **Ciamician–Dennstedt rearrangement**.
+
+<Eq ce="C4H4NH + CHCl3 ->[KOH] C5H4ClN" />
+
+<ExamTip title="Common mistake">
+Writing the reagent of the abnormal reaction as "CHCl₂". The correct reagent is chloroform, CHCl₃, which with base gives :CCl₂. In JEE questions, pyrrole + CHCl₃/base → 3-chloropyridine is the standard "abnormal" product: the ring grows by one carbon and keeps a chlorine.
+</ExamTip>
+
+## Limitations and exceptions
+
+- The reaction is run in a two-phase mixture (aqueous NaOH and chloroform), so rapid stirring, a phase-transfer catalyst or a co-solvent such as 1,4-dioxane is needed.
+- It needs warming to start but can then become strongly exothermic.
+- Substrates with alkenes or amino groups are unsuitable, because :CCl₂ also forms dichlorocyclopropanes and isocyanides ([carbylamine reaction](/reactions/carbylamine-reaction/)).
+- Compounds that cannot survive hot hydroxide do not tolerate the conditions.
+- Unlike Gattermann–Koch formylation, it works on phenols and needs no acid or dry conditions.
+
+## Related reactions
+
+- [Carbylamine reaction](/reactions/carbylamine-reaction/): :CCl₂ attacked by a primary amine instead of a phenoxide.
+- [Friedel–Crafts acylation](/reactions/friedel-crafts-acylation/): another way to put a carbonyl group on a ring.
+- [Simmons–Smith reaction](/reactions/simmons-smith-reaction/): carbene-type addition to alkenes.
+- [Carbenes](/mechanisms/carbenes/): how :CCl₂ and other carbenes are formed and react.
+- [Electrophilic aromatic substitution](/mechanisms/electrophilic-aromatic-substitution/): the ring-attack pattern behind ortho/para selectivity.

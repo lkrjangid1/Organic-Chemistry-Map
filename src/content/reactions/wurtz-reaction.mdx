@@ -1,0 +1,134 @@
+---
+title: "Wurtz Reaction"
+description: "Wurtz reaction couples two alkyl halides with sodium in dry ether to give a higher alkane (R–R). Mechanism, examples, limitations and intramolecular version."
+aliases: ["Wurtz coupling", "Wurtz synthesis", "Wurtz rxn", "Wurtz reaction of alkyl halides"]
+kind: "named-reaction"
+family: "coupling-reactions"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["wurtz_reaction", "wurtz_coupling_2_chloropropane", "intramolecular_wurtz_bicyclobutane"]
+reactant:
+  name: "Bromoethane (ethyl bromide)"
+  smiles: "CCBr"
+product:
+  name: "Butane (n-butane)"
+  smiles: "CCCC"
+byproducts: "NaX (here NaBr)"
+reagents: "Sodium metal (Na)"
+conditions: "Dry (anhydrous) ether; THF or dioxane also used"
+equation: "2 CH3CH2Br + 2 Na ->[dry ether] CH3CH2CH2CH3 + 2 NaBr"
+notesPages: [9, 30, 31, 32]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Wurtz reaction?"
+    a: "A symmetrical alkane R–R with twice the carbon atoms of the alkyl halide. Bromoethane with sodium in dry ether gives n-butane, and bromomethane gives ethane."
+  - q: "Why is dry ether used in the Wurtz reaction?"
+    a: "Sodium reacts violently with water, and any moisture would also protonate the organosodium intermediate to give an alkane RH instead of R–R. An anhydrous, unreactive aprotic solvent such as dry ether, THF or dioxane is therefore required."
+  - q: "Why can't the Wurtz reaction make alkanes with an odd number of carbon atoms?"
+    a: "An odd-carbon alkane needs two different alkyl halides. Their mixture gives three coupled products (R–R, R–R′ and R′–R′) with close boiling points, so the wanted alkane is hard to separate."
+  - q: "Can methane be prepared by the Wurtz reaction?"
+    a: "No. The Wurtz reaction always joins two alkyl groups, so the smallest alkane it can give is ethane from a methyl halide."
+  - q: "What is the intramolecular Wurtz reaction?"
+    a: "When both halogens are in the same molecule, sodium joins the two carbons to close a ring. 1-Bromo-3-chlorocyclobutane gives bicyclo[1.1.0]butane with sodium in refluxing dioxane."
+related: ["wurtz-fittig-reaction", "fittig-reaction", "corey-house-synthesis", "kolbe-electrolysis", "ullmann-reaction", "grignard-reagent"]
+sources:
+  - title: "Chemistry Part II, Class XI, Unit 9: Hydrocarbons (preparation of alkanes)"
+    url: "https://ncert.nic.in/textbook/pdf/kech203.pdf"
+    publisher: "NCERT"
+  - title: "Chemistry Part II, Class XII, Unit 6: Haloalkanes and Haloarenes"
+    url: "https://ncert.nic.in/textbook/pdf/lech201.pdf"
+    publisher: "NCERT"
+  - title: "Wurtz reaction"
+    url: "https://en.wikipedia.org/wiki/Wurtz_reaction"
+    publisher: "Wikipedia"
+  - title: "Wurtz Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/wurtz-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 4
+  note: "Notes give radical reactivity 1° > 2° > 3° and a low-temperature intermolecular product for 1-bromo-3-chlorocyclobutane; sources neither confirm nor deny these, so they are kept as exam convention."
+---
+
+## What is the Wurtz reaction?
+
+The **Wurtz reaction** is the coupling of two molecules of an **alkyl halide** with **sodium metal in dry ether** to give a **higher alkane** containing twice the number of carbon atoms. The two alkyl groups are joined by a new C–C bond and the halogen leaves as sodium halide: 2R–X + 2Na → R–R + 2NaX. It is the standard NCERT method for preparing **symmetrical alkanes** with an even number of carbon atoms, named after Charles Adolphe Wurtz (1855).
+
+## General reaction
+
+<Eq ce="2 R-X + 2 Na ->[dry ether] R-R + 2 NaX" />
+
+The ether must be completely free of moisture: sodium reacts violently with water, and water would destroy the reactive intermediate. Unreactive **polar aprotic solvents** (dry ether, THF, dioxane) are used.
+
+## Mechanism
+
+The exact mechanism is still debated, and exam answers accept both versions.
+
+**1. Free radical mechanism**
+
+1. Sodium gives up an electron: Na → Na⁺ + e⁻.
+2. The electron breaks the C–X bond, giving an alkyl radical and a halide ion: R–X + e⁻ → R• + X⁻.
+3. Two alkyl radicals combine to form R–R; Na⁺ and X⁻ form NaX.
+
+<Eq ce="R-X + Na -> R^. + NaX" />
+<Eq ce="R^. + R^. -> R-R" />
+
+**2. Ionic (organosodium) mechanism**
+
+1. Two sodium atoms supply two electrons to one R–X, giving a carbanion: R–X + 2e⁻ → R⁻ + X⁻ (that is, an organosodium compound R⁻Na⁺).
+2. The carbanion attacks a second molecule of R–X as a nucleophile, displacing X⁻ in an SN2-like step, to form R–R.
+
+<Eq ce="R-X + 2 Na -> R^-Na+ + NaX" />
+<Eq ce="R^-Na+ + R-X -> R-R + NaX" />
+
+<KeyPoint>
+Sources describe the first step as a metal–halogen exchange (like forming a Grignard reagent) that may pass through radicals. The organosodium intermediate then behaves like a nucleophile in an SN2-type substitution.
+</KeyPoint>
+
+## Examples
+
+1. **Bromomethane to ethane** (NCERT):
+
+<Eq ce="2 CH3Br + 2 Na ->[dry ether] CH3-CH3 + 2 NaBr" />
+
+2. **Bromoethane to n-butane** (NCERT):
+
+<Eq ce="2 C2H5Br + 2 Na ->[dry ether] CH3CH2CH2CH3 + 2 NaBr" />
+
+3. **2-Chloropropane to 2,3-dimethylbutane**, a secondary halide giving a branched symmetrical alkane:
+
+<Eq ce="2 (CH3)2CHCl + 2 Na ->[dry ether] (CH3)2CH-CH(CH3)2 + 2 NaCl" />
+
+## Intramolecular Wurtz reaction (dihalides)
+
+When both halogens are in the same molecule, sodium can close a ring. The classic case is **1-bromo-3-chlorocyclobutane**, which gives the highly strained **bicyclo[1.1.0]butane** in about 95% yield. In the published procedure the reaction is run in refluxing dioxane, where sodium is molten.
+
+<Eq ce="C4H6BrCl + 2 Na ->[dioxane][reflux] C4H6 + NaBr + NaCl" />
+
+In exam answers the two outcomes are contrasted: Na/ether at low temperature joins two molecules (intermolecular coupling at the C–Br carbon, giving a bicyclobutyl with both Cl atoms kept). Na/ether at high temperature, 2 equivalents of Na, or Na in dioxane favour ring closure to bicyclobutane. Vicinal dihalides give alkenes and geminal dihalides give alkynes under Wurtz conditions.
+
+<KeyPoint>
+Remember: "मुक्त मूलक की अभिक्रियाशीलता का क्रम: 1° &gt; 2° &gt; 3°" (order of free-radical reactivity, that is, of coupling: 1° &gt; 2° &gt; 3°). In exam answers, primary halides give the best Wurtz yields; tertiary halides mostly give alkenes and alkanes by disproportionation or elimination instead of coupling.
+</KeyPoint>
+
+## Limitations and exceptions
+
+- **Odd-carbon alkanes:** using two different halides (for example CH₃Br + C₂H₅Br) gives a mixture of ethane, propane and butane. NCERT asks why the method is not preferred for odd-carbon alkanes.
+- **No methane:** at least two carbon atoms are joined, so ethane is the smallest product.
+- **Tertiary halides** give mostly elimination products, not coupling.
+- **Functional groups** that react with hot sodium (OH, C=O, NO₂) cannot be present.
+- In real lab practice, yields are low, so the reaction is mainly of teaching value except for small rings. Other metals (Zn, Ag, activated Cu, In) have been tried to improve it.
+
+<ExamTip>
+To get an unsymmetrical alkane R–R′ cleanly, answer **Corey–House synthesis**, not Wurtz. If the question pairs an aryl halide with an alkyl halide and sodium, it is the **Wurtz–Fittig reaction**.
+</ExamTip>
+
+## Related reactions
+
+- [Wurtz–Fittig reaction](/reactions/wurtz-fittig-reaction/): aryl halide + alkyl halide + Na gives an alkylbenzene.
+- [Fittig reaction](/reactions/fittig-reaction/): two aryl halides + Na give a biaryl.
+- [Corey–House synthesis](/reactions/corey-house-synthesis/): the clean route to unsymmetrical alkanes.
+- [Kolbe electrolysis](/reactions/kolbe-electrolysis/): another radical coupling that gives even-carbon alkanes.
+- [Ullmann reaction](/reactions/ullmann-reaction/): copper-mediated coupling of aryl halides.
+- [Grignard reagent](/reactions/grignard-reagent/): Mg with R–X in dry ether, the closely related metal–halogen exchange.
+- Hub: [Coupling reactions](/mechanisms/coupling-reactions/)

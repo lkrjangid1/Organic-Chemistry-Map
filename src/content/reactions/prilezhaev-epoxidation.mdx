@@ -1,0 +1,109 @@
+---
+title: "Prilezhaev Epoxidation"
+description: "Prilezhaev epoxidation converts an alkene into an epoxide using a peroxy acid such as mCPBA, in one concerted syn step that keeps alkene geometry. Mechanism."
+aliases: ["Prilezhaev reaction", "Prileschajew reaction", "Epoxidation of alkenes", "mCPBA epoxidation", "Peracid epoxidation"]
+kind: "named-reaction"
+family: "electrophilic-addition"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["prilezhaev_reaction_methylenecyclohexane"]
+reactant:
+  name: "Cyclohexene"
+  smiles: "C1=CCCCC1"
+product:
+  name: "Cyclohexene oxide (7-oxabicyclo[4.1.0]heptane)"
+  smiles: "C1CCC2OC2C1"
+byproducts: "Carboxylic acid (e.g. m-chlorobenzoic acid from mCPBA)"
+reagents: "Peroxy acid RCO₃H: mCPBA, MMPP (magnesium monoperoxyphthalate) or peracetic acid"
+conditions: "Inert solvent (CH₂Cl₂, CHCl₃, hexane), about −10 to 60 °C"
+equation: "C6H10 + m-ClC6H4CO3H -> C6H10O + m-ClC6H4COOH"
+notesPages: [15]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Prilezhaev reaction?"
+    a: "An epoxide (oxirane). The peroxy acid gives one oxygen atom to the C=C bond, and the peroxy acid itself becomes the corresponding carboxylic acid."
+  - q: "Is epoxidation with mCPBA syn or anti?"
+    a: "Syn. Both new C–O bonds form on the same face in one concerted step, so a cis-alkene gives a cis-epoxide and a trans-alkene gives a trans-epoxide."
+  - q: "Which double bond reacts first with a peroxy acid?"
+    a: "The most electron-rich, usually the most substituted, double bond. The peroxy acid acts as the electrophile, so alkyl groups that push electron density into the C=C speed up the reaction."
+  - q: "Why is mCPBA commonly used for epoxidation?"
+    a: "mCPBA is a relatively stable crystalline peroxy acid that dissolves well in organic solvents, so it is easier and safer to handle than most other peracids."
+related: ["baeyer-villiger-oxidation", "hydroboration-oxidation", "ozonolysis", "simmons-smith-reaction"]
+sources:
+  - title: "Prilezhaev reaction"
+    url: "https://en.wikipedia.org/wiki/Prilezhaev_reaction"
+    publisher: "Wikipedia"
+  - title: "Prilezhaev Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/prilezhaev-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "8.7: Oxidation of Alkenes - Epoxidation and Hydroxylation"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/08:_Alkenes-_Reactions_and_Synthesis/8.07:_Oxidation_of_Alkenes_-_Epoxidation_and_Hydroxylation"
+    publisher: "Chemistry LibreTexts"
+  - title: "Epoxide"
+    url: "https://en.wikipedia.org/wiki/Epoxide"
+    publisher: "Wikipedia"
+verified:
+  status: "conflict"
+  checked: 2026-11-21
+  sourceCount: 4
+  note: "Notes list Ag₂O as a general epoxidising reagent; sources say silver-catalysed oxidation with O₂ works for ethylene only. Notes list H₂O₂ and H₂SO₅ without a catalyst; sources say H₂O₂ needs a catalyst, and H₂SO₅ is not covered."
+---
+
+## What is Prilezhaev epoxidation?
+
+**Prilezhaev epoxidation** (also spelt Prileschajew) is the reaction of an **alkene with a peroxy acid (RCO₃H)** to give an **epoxide** (oxirane, a three-membered cyclic ether). It was reported by Nikolai Prilezhaev in 1909. The usual reagent is **meta-chloroperoxybenzoic acid (mCPBA)**; magnesium monoperoxyphthalate (MMPP) and peracetic acid also work. The reaction is a **stereospecific syn addition**: the geometry of the alkene is carried into the epoxide.
+
+## Mechanism (butterfly mechanism)
+
+1. **Hydrogen-bonded peracid.** The peroxy acid holds its O–H hydrogen close to its own C=O oxygen through an internal hydrogen bond. This makes the terminal O of the O–O unit electron-poor (electrophilic).
+2. **One concerted step.** The alkene π electrons attack that electrophilic oxygen. In the same step the weak O–O bond breaks, the second C–O bond closes and the proton moves to the carbonyl oxygen. The cyclic transition state looks like a butterfly, which gives the mechanism its name.
+3. **Products.** The epoxide and a carboxylic acid separate. No carbocation forms, so there is no rearrangement.
+
+<Eq ce="R2C=CR2 + R'CO3H -> R2C(O)CR2 + R'COOH" />
+
+<KeyPoint>
+Epoxidation is a **syn addition** (both C–O bonds on the same face). cis-But-2-ene gives only cis-2,3-dimethyloxirane; trans-but-2-ene gives only the trans-epoxide.
+</KeyPoint>
+
+## Reactivity: which C=C reacts first?
+
+The peroxy acid is the electrophile and the alkene is the nucleophile. More alkyl groups on the double bond mean more electron density, so the rate rises steeply with substitution: ethene is slowest, then propene, then the butenes, with tetrasubstituted 2,3-dimethylbut-2-ene fastest. In a molecule with two C=C bonds, the **more substituted (more electron-rich)** one is epoxidised first.
+
+## Examples
+
+**1. Cyclohexene to cyclohexene oxide:**
+
+<Eq ce="C6H10 ->[mCPBA][CH2Cl2] C6H10O" />
+
+**2. trans-But-2-ene to trans-2,3-dimethyloxirane** (geometry retained):
+
+<Eq ce="CH3-CH=CH-CH3 ->[mCPBA] CH3-CH(O)CH-CH3" />
+
+**3. Methylenecyclohexane to 1-oxaspiro[2.5]octane.** The exocyclic C=C becomes a spiro epoxide.
+
+## Epoxide to anti diol
+
+Opening the epoxide with water and acid gives a **vicinal diol**. Water attacks from the face opposite to the epoxide oxygen, so the two OH groups end up **anti (trans)**. Epoxidation followed by acid hydrolysis is therefore the standard route to **anti-dihydroxylation**, while cold dilute alkaline KMnO₄ or OsO₄ gives the syn diol.
+
+<ExamTip>
+Epoxidation (RCO₃H) = syn addition of one O. Epoxidation + H₃O⁺ = anti-diol. Baeyer's reagent or OsO₄ = syn-diol.
+</ExamTip>
+
+## Common epoxidising reagents compared
+
+- **RCO₃H, mCPBA, MMPP**: all peroxy acids; confirmed reagents for the Prilezhaev reaction.
+- **Ag₂O**: often listed as an epoxidising reagent. The sources say silver catalysis works with **O₂ (air) and ethylene only**: this is how ethylene oxide is made industrially. Other alkenes, even propene, fail to give useful epoxides this way. So for JEE, use silver only for ethene + O₂.
+- **H₂O₂**: hydrogen peroxide alone is not an alkene epoxidising agent; it needs a metal catalyst. The peroxy acid route is the one to write.
+- **H₂SO₅ (Caro's acid)**: a peroxy acid of sulphur, sometimes listed too; the sources read do not cover it, so prefer mCPBA in answers.
+
+## Limitations
+
+- Electron-poor alkenes (e.g. C=C conjugated with C=O) react slowly with peracids; they are epoxidised instead by nucleophilic reagents such as alkaline H₂O₂.
+- If water and acid are present, the epoxide can open further to the anti diol, so the reaction is run in an inert, dry solvent when the epoxide itself is wanted.
+
+## Related reactions
+
+- [Baeyer–Villiger oxidation](/reactions/baeyer-villiger-oxidation/) uses the same peroxy acids (mCPBA) on ketones.
+- [Hydroboration–oxidation](/reactions/hydroboration-oxidation/) is another concerted syn addition to alkenes.
+- [Simmons–Smith reaction](/reactions/simmons-smith-reaction/) adds CH₂ instead of O to make a three-membered ring.
+- [Ozonolysis](/reactions/ozonolysis/) cleaves the C=C completely instead of adding one O.
+- Overview: [Electrophilic addition reactions](/mechanisms/electrophilic-addition/).

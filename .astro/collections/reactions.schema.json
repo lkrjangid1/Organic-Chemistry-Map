@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 170
+    },
+    "aliases": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "named-reaction",
+        "rearrangement",
+        "general-reaction",
+        "test",
+        "mechanism-type"
+      ]
+    },
+    "family": {
+      "type": "string"
+    },
+    "exams": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "jee-main",
+          "jee-advanced",
+          "neet"
+        ]
+      }
+    },
+    "mapEdges": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reactant": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "smiles": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "product": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "smiles": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "byproducts": {
+      "type": "string"
+    },
+    "reagents": {
+      "type": "string"
+    },
+    "conditions": {
+      "type": "string"
+    },
+    "equation": {
+      "type": "string"
+    },
+    "notesPages": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "memoryTricks": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "meaning": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    },
+    "faq": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string"
+          },
+          "a": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "q",
+          "a"
+        ]
+      }
+    },
+    "related": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sources": {
+      "minItems": 2,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "publisher": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "url"
+        ]
+      }
+    },
+    "verified": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "verified",
+            "conflict",
+            "pending"
+          ]
+        },
+        "checked": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "sourceCount": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "checked",
+        "sourceCount"
+      ]
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "kind",
+    "exams",
+    "reagents",
+    "sources",
+    "verified"
+  ]
+}

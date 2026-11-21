@@ -1,7 +1,7 @@
-const CACHE_NAME = 'organic-chem-map-cache-v3';
+const CACHE_NAME = 'organic-chem-map-cache-v4';
 const CORE_ASSETS = [
   './',
-  './app/',
+  './map/',
   './manifest.webmanifest',
   './icons/ogm_logo.png',
 ];
@@ -57,7 +57,7 @@ self.addEventListener('fetch', (event) => {
         .catch(() =>
           caches
             .match(request, { ignoreSearch: true })
-            .then((cached) => cached || caches.match('./app/')),
+            .then((cached) => cached || caches.match('./map/')),
         ),
     );
     return;

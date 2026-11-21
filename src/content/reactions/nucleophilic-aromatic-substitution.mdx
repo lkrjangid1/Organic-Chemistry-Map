@@ -1,0 +1,110 @@
+---
+title: "Nucleophilic Aromatic Substitution (SNAr)"
+description: "Nucleophilic aromatic substitution (SNAr) replaces a halogen on an arene with a nucleophile via a Meisenheimer carbanion; ortho/para nitro groups speed it up."
+aliases: ["SNAr", "ArSN2", "ArSN1", "Addition–elimination mechanism", "Meisenheimer complex", "Nucleophilic substitution in haloarenes"]
+kind: "mechanism-type"
+family: "nucleophilic-substitution"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "1-Chloro-2,4-dinitrobenzene"
+  smiles: "Clc1ccc(cc1[N+](=O)[O-])[N+](=O)[O-]"
+product:
+  name: "2,4-Dinitrophenol"
+  smiles: "Oc1ccc(cc1[N+](=O)[O-])[N+](=O)[O-]"
+byproducts: "NaCl"
+reagents: "Strong nucleophile (OH-, RO-, NH3, RNH2) on an aryl halide"
+conditions: "Unactivated: about 623 K and 300 atm; much milder with NO2 groups ortho/para to the halogen"
+equation: "C6H5Cl ->[1. NaOH, 623 K, 300 atm][2. H+] C6H5OH"
+notesPages: [46, 47, 48]
+memoryTricks: []
+faq:
+  - q: "Why are aryl halides less reactive than alkyl halides towards nucleophiles?"
+    a: "The C–X bond has partial double-bond character from resonance, the sp² carbon holds the bond more tightly, and the ring blocks backside attack. A phenyl cation is also very unstable, so neither SN2 nor SN1 works under normal conditions."
+  - q: "Why does a nitro group at ortho or para position increase the rate of SNAr?"
+    a: "When the nucleophile adds, the negative charge of the carbanion is spread to the carbons ortho and para to the site of attack. A nitro group at these positions can take that charge onto its oxygens by resonance, stabilising the intermediate. A meta nitro group cannot, so it has little effect."
+  - q: "What is a Meisenheimer complex?"
+    a: "It is the resonance-stabilised, negatively charged intermediate formed when a nucleophile adds to the carbon bearing the leaving group. That carbon becomes sp³, aromaticity is lost, and it returns when the halide leaves."
+  - q: "How is chlorobenzene converted into phenol?"
+    a: "By heating with aqueous NaOH at about 623 K and 300 atm, followed by acidification (Dow process). With nitro groups at ortho and para positions the same substitution needs much lower temperatures."
+related: ["benzyne-mechanism", "sn2-reaction", "sandmeyer-reaction", "balz-schiemann-reaction", "diazotization-reaction"]
+sources:
+  - title: "Haloalkanes and Haloarenes (Class 12 Chemistry Part II, Unit 6)"
+    url: "https://ncert.nic.in/textbook/pdf/lech201.pdf"
+    publisher: "NCERT"
+  - title: "Nucleophilic aromatic substitution"
+    url: "https://en.wikipedia.org/wiki/Nucleophilic_aromatic_substitution"
+    publisher: "Wikipedia"
+  - title: "NAS Reactions: the Elimination–Addition (Benzyne) Mechanism (Wade, Organic Chemistry)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Map:_Organic_Chemistry_(Wade)_Complete_and_Semesters_I_and_II/Map:_Organic_Chemistry_(Wade)/18:_Reactions_of_Aromatic_Compounds/18.11:__NAS_Reactions_-_the_Elimination-Addition_(Benzyne)_Mechanism"
+    publisher: "LibreTexts"
+  - title: "Diazonium compound"
+    url: "https://en.wikipedia.org/wiki/Diazonium_compound"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 4
+  note: "The notes' 'room temperature with many electron-withdrawing groups' is not stated in the sources (NCERT shows progressively milder conditions); kept as approximate exam teaching. The notes file unactivated halobenzene + NaOH at high temperature under ArSN2; LibreTexts shows such forcing reactions often go via benzyne, so the page shows both."
+---
+
+## What is nucleophilic aromatic substitution?
+
+**Nucleophilic aromatic substitution** is the replacement of a leaving group on a benzene ring, usually a halogen, by a nucleophile. Simple aryl halides react only under drastic conditions (chlorobenzene needs aqueous NaOH at about **623 K and 300 atm** to give phenol), but **electron-withdrawing groups such as –NO₂ at ortho or para positions** make it fast. The main pathway, called **SNAr** or, in Indian coaching classes, **ArSN2**, is an **addition–elimination**: the nucleophile adds to form a carbanion (Meisenheimer complex), then the halide leaves. Two other pathways exist: **ArSN1** through an aryl cation (diazonium salts) and the **benzyne** elimination–addition.
+
+## Why ordinary SN1 and SN2 fail
+
+- The C–X bond lies in the plane of the ring, so the ring blocks a **backside attack**: no SN2.
+- An **aryl cation** is very unstable, so unaided ionisation (SN1) is unfavourable.
+- Resonance gives the C–X bond partial double-bond character, making it harder to break.
+
+## Mechanism of SNAr (ArSN2, addition–elimination)
+
+1. **Addition (slow).** The nucleophile attacks the **ipso carbon** (the δ+ carbon bearing X). That carbon becomes sp³ and the ring loses aromaticity. This step is reversible.
+2. **Carbanion intermediate.** The negative charge is delocalised over the carbons **ortho and para** to the site of attack. With –NO₂ at these positions the charge spreads onto the nitro oxygens. This resonance-stabilised anion is the **Meisenheimer complex**.
+3. **Elimination (fast).** X⁻ leaves and aromaticity is restored, giving Ar–Nu.
+
+<Eq ce="Ar-X + Nu- <=> [Ar(X)(Nu)]- -> Ar-Nu + X-" />
+
+<KeyPoint title="ArSN2 checklist">
+Strong nucleophile; high temperature and pressure for plain halobenzene; ortho and para स्थिति पर e⁻ आकर्षित समूह उपस्थित होना चाहिए (an electron-withdrawing group should be at ortho/para positions); reactivity ∝ stability of the carbanion; SN2 at an alkyl carbon is faster than ArSN2.
+</KeyPoint>
+
+A **meta** nitro group has no effect on the rate, because the carbanion's charge never reaches the meta carbon (NCERT). The more ortho/para nitro groups present, the milder the conditions: in exam teaching, with many electron-withdrawing groups the reaction is said to go even near room temperature.
+
+## Examples
+
+**1. Chlorobenzene to phenol (NCERT).**
+
+<Eq ce="C6H5Cl ->[NaOH, 623 K][300 atm] C6H5ONa ->[H+] C6H5OH" />
+
+**2. 2,4-Dinitrochlorobenzene with hydroxide.** Two nitro groups stabilise the Meisenheimer complex, so aqueous base replaces chlorine easily to give 2,4-dinitrophenol (as its anion in base).
+
+<Eq ce="C6H3(NO2)2Cl + 2OH- -> C6H3(NO2)2O- + Cl- + H2O" />
+
+**3. ArSN1: diazonium salt to phenol.** Benzenediazonium chloride loses N₂, an excellent leaving group, to give a phenyl cation, which water captures. Warming the aqueous diazonium salt gives phenol.
+
+<Eq ce="C6H5N2+Cl- ->[\text{slow}][-N2] C6H5+ ->[H2O][-H+] C6H5OH" />
+
+In exam answers N₂ loss is treated as the slow, reversible step, as in SN1. Not every diazonium replacement is ArSN1: the Sandmeyer reaction with Cu(I) salts goes by aryl radicals, not cations.
+
+<ExamTip>
+To rank SNAr reactivity, count the nitro (or –CN, –CHO, –COR) groups at ortho and para positions to the halogen. More groups at these positions means faster reaction; a group only at meta barely helps.
+</ExamTip>
+
+## For JEE vs in practice
+
+For JEE, the conversion of chlorobenzene to phenol with NaOH at 623 K is written by the addition–elimination route. In practice, unactivated aryl halides under these forcing conditions often react through **benzyne**: 4-chlorotoluene heated with NaOH at about 340 °C gives an equal mixture of 3- and 4-methylphenol, which only an elimination–addition can explain. The true SNAr path needs activating groups.
+
+## Limitations and exceptions
+
+- Without activating groups, SNAr is very slow; strong bases such as NaNH₂ switch the reaction to the benzyne mechanism.
+- Electron-donating groups (–CH₃, –OCH₃) slow SNAr by destabilising the carbanion.
+- Diazonium replacements with Cu(I) (Sandmeyer, Gattermann) are radical reactions, not ArSN1.
+
+## Related reactions
+
+- [Benzyne mechanism](/reactions/benzyne-mechanism/): elimination–addition for unactivated aryl halides.
+- [Diazotization reaction](/reactions/diazotization-reaction/), [Sandmeyer reaction](/reactions/sandmeyer-reaction/) and [Balz–Schiemann reaction](/reactions/balz-schiemann-reaction/): replacing –N₂⁺ on the ring.
+- [SN2 reaction](/reactions/sn2-reaction/): substitution at an sp³ carbon.
+- [Nucleophilic substitution overview](/mechanisms/nucleophilic-substitution/)

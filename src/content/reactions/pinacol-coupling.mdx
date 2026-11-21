@@ -1,0 +1,104 @@
+---
+title: "Pinacol Coupling Reaction"
+description: "Pinacol coupling joins two ketone or aldehyde molecules with Mg/Hg, then water, to give a 1,2-diol (pinacol) via ketyl radicals. Mechanism, examples, uses."
+aliases: ["Pinacol formation reaction", "Pinacol coupling", "Pinacol reduction", "Bimolecular reduction of ketones"]
+kind: "named-reaction"
+family: "free-radical-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: []
+reactant:
+  name: "Acetone (propan-2-one)"
+  smiles: "CC(C)=O"
+product:
+  name: "Pinacol (2,3-dimethylbutane-2,3-diol)"
+  smiles: "CC(C)(O)C(C)(C)O"
+byproducts: "Mg(OH)2"
+reagents: "1. Mg/Hg (magnesium amalgam); 2. H2O"
+conditions: "Reduction by Mg/Hg, then water work-up (proton donor)"
+equation: "2 (CH3)2C=O ->[1. Mg/Hg][2. H2O] (CH3)2C(OH)-C(OH)(CH3)2"
+notesPages: [9, 34]
+memoryTricks: []
+faq:
+  - q: "What is the product of pinacol coupling of acetone?"
+    a: "Pinacol, 2,3-dimethylbutane-2,3-diol, (CH3)2C(OH)–C(OH)(CH3)2. Two acetone molecules are joined at their carbonyl carbons and each oxygen becomes an OH group."
+  - q: "Which reagent is used for pinacol formation?"
+    a: "Magnesium amalgam (Mg/Hg) acts as a one-electron reducing agent, followed by water to protonate the diolate. Other electron donors such as SmI2 or low-valent titanium salts can also be used."
+  - q: "What is the difference between pinacol coupling and the pinacol–pinacolone rearrangement?"
+    a: "Pinacol coupling makes the 1,2-diol from two ketones by reduction. The pinacol–pinacolone rearrangement then converts that diol into a ketone (pinacolone) with acid and heat."
+  - q: "Is pinacol coupling a free radical reaction?"
+    a: "Yes. Magnesium gives one electron to each carbonyl group, forming ketyl radical anions, and two ketyl radicals combine to make the new C–C bond."
+related: ["pinacol-pinacolone-rearrangement", "kolbe-electrolysis", "wurtz-reaction", "grignard-reagent"]
+sources:
+  - title: "Pinacol coupling reaction"
+    url: "https://en.wikipedia.org/wiki/Pinacol_coupling_reaction"
+    publisher: "Wikipedia"
+  - title: "Pinacol Coupling Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/pinacol-coupling-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 2
+---
+
+## What is the pinacol coupling reaction?
+
+The **pinacol coupling reaction** (pinacol formation) is the **reductive coupling of two aldehyde or ketone molecules** at their carbonyl carbons to give a **vicinal (1,2-) diol**. A one-electron donor such as **magnesium amalgam (Mg/Hg)** reduces each C=O group to a radical, the two radicals join through a new C–C bond, and **water** then protonates the two oxygens. With acetone the product is **pinacol** (2,3-dimethylbutane-2,3-diol), which gives the reaction its name.
+
+## General reaction
+
+<Eq ce="2 R2C=O ->[1. Mg/Hg][2. H2O] R2C(OH)-C(OH)R2" />
+
+In general, R–CO–R →(Mg–Hg, H₂O) R–C(OH)(R)–C(OH)(R)–R. Aldehydes react the same way and give 1,2-diols with H on each carbinol carbon. The molecule doubles in size: two C₃ acetone units give the C₆ diol, so the reaction is a C–C bond-forming step as well as a reduction. Water (or another proton donor) is essential in the second step; without it the product stays as the magnesium diolate.
+
+## Mechanism
+
+1. **Electron transfer.** Magnesium gives up two electrons (Mg → Mg²⁺ + 2e⁻). One electron goes to each of two carbonyl groups, converting them into **ketyl radical anions** (an O⁻ and an unpaired electron on carbon).
+2. **Radical coupling.** The two ketyl radicals combine at carbon, forming the central C–C bond and a 1,2-diolate. With magnesium, both oxygens bind the Mg²⁺ ion in a five-membered cyclic complex.
+3. **Hydrolysis.** Water breaks up the magnesium complex, protonating both oxygens to give the diol and forming Mg(OH)₂.
+
+<Eq ce="2 (CH3)2C=O + Mg -> 2 (CH3)2C^.-O^- + Mg^2+" />
+<Eq ce="2 (CH3)2C^.-O^- -> (CH3)2C(O^-)-C(O^-)(CH3)2" />
+<Eq ce="(CH3)2C(O^-)-C(O^-)(CH3)2 + 2 H2O -> (CH3)2C(OH)-C(OH)(CH3)2 + 2 OH-" />
+
+<KeyPoint>
+Pinacol coupling is a reduction (each carbonyl carbon gains an electron) and a free radical C–C bond formation in one step. The product always has two OH groups on adjacent carbons.
+</KeyPoint>
+
+## Examples
+
+1. **Acetone to pinacol** (the classic example):
+
+<Eq ce="2 CH3COCH3 ->[1. Mg/Hg][2. H2O] (CH3)2C(OH)-C(OH)(CH3)2" />
+
+2. **Benzophenone to benzopinacol**, a diaryl ketone that couples well (also possible photochemically):
+
+<Eq ce="2 (C6H5)2C=O ->[1. Mg/Hg][2. H2O] (C6H5)2C(OH)-C(OH)(C6H5)2" />
+
+3. **Benzaldehyde to 1,2-diphenylethane-1,2-diol** (hydrobenzoin), an aldehyde example:
+
+<Eq ce="2 C6H5CHO ->[1. Mg/Hg][2. H2O] C6H5CH(OH)-CH(OH)C6H5" />
+
+## Pinacol coupling followed by rearrangement
+
+Pinacols and other highly substituted 1,2-diols readily undergo the **pinacol–pinacolone rearrangement** with acid. This gives the common two-step exam sequence:
+
+<Eq ce="2 CH3COCH3 ->[1. Mg/Hg][2. H2O] (CH3)2C(OH)-C(OH)(CH3)2 ->[H+][\Delta] (CH3)3C-CO-CH3" />
+
+<ExamTip>
+If a question shows a ketone →(Mg/Hg, H₂O) → A →(H⁺, Δ) → B, then A is the pinacol and B is the rearranged ketone (pinacolone for acetone). Do not confuse Mg/Hg (coupling) with Zn/Hg + HCl (Clemmensen reduction to CH₂).
+</ExamTip>
+
+## Limitations and exceptions
+
+- The reaction is usually a **homocoupling** (two identical carbonyl compounds). Mixing two different ketones gives a mixture of diols.
+- Aryl ketones and aldehydes generally give **higher yields** than aliphatic ones.
+- With classical alkali or alkaline-earth metals, yields and selectivity are modest. Modern versions use catalytic early transition-metal salts or SmI₂ for better yields and stereoselectivity.
+- Stoichiometric low-valent titanium removes both oxygens and gives an **alkene** instead (McMurry reaction).
+
+## Related reactions
+
+- [Pinacol–pinacolone rearrangement](/reactions/pinacol-pinacolone-rearrangement/): acid-catalysed conversion of the pinacol into a ketone.
+- [Kolbe electrolysis](/reactions/kolbe-electrolysis/) and [Wurtz reaction](/reactions/wurtz-reaction/): other C–C bond formations by coupling of two radicals or reduced species.
+- [Grignard reagent](/reactions/grignard-reagent/): magnesium chemistry that adds to carbonyl groups instead of coupling them.
+- Hubs: [Free radical reactions](/mechanisms/free-radical-reactions/), [Coupling reactions](/mechanisms/coupling-reactions/)

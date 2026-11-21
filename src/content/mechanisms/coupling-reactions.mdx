@@ -1,0 +1,114 @@
+---
+title: "Coupling Reactions in Organic Chemistry"
+description: "Coupling reactions for JEE and NEET: Wurtz, Fittig, Wurtz–Fittig, Ullmann, Corey–House and Kolbe electrolysis compared, with metals, mechanisms and products."
+exams: ["jee-main", "jee-advanced", "neet"]
+order: 70
+notesPages: [9, 10, 11, 30, 31, 32, 34, 37]
+faq:
+  - q: "What is a coupling reaction in organic chemistry?"
+    a: "A coupling reaction joins two organic fragments through a new carbon–carbon bond, usually with the help of a metal. Joining two identical groups (R–R) is homocoupling; joining two different groups (R–R′) is cross-coupling."
+  - q: "Which coupling reaction gives an unsymmetrical alkane cleanly?"
+    a: "The Corey–House synthesis. A lithium dialkylcuprate R2CuLi reacts with an alkyl halide R′X to give only R–R′, whereas Wurtz coupling of two different halides gives a mixture of three alkanes."
+  - q: "What is the difference between Wurtz, Fittig and Wurtz–Fittig reactions?"
+    a: "All use sodium in dry ether. Wurtz couples two alkyl halides to an alkane, Fittig couples two aryl halides to a biaryl, and Wurtz–Fittig couples an aryl halide with an alkyl halide to give an alkylbenzene."
+  - q: "What happens when iodoform is heated with silver powder?"
+    a: "Iodoform is reduced and two CHI3 units couple to give ethyne (acetylene), with silver iodide formed: 2CHI3 + 6Ag → HC≡CH + 6AgI."
+  - q: "Which coupling reactions go through free radicals?"
+    a: "Kolbe electrolysis and pinacol coupling are free radical couplings, and the Wurtz and Fittig reactions are often explained by radicals too. The classical Ullmann reaction goes through organocopper intermediates, not radicals."
+sources:
+  - title: "Coupling reaction"
+    url: "https://en.wikipedia.org/wiki/Coupling_reaction"
+    publisher: "Wikipedia"
+  - title: "Chemistry Part II, Class XII, Unit 6: Haloalkanes and Haloarenes"
+    url: "https://ncert.nic.in/textbook/pdf/lech201.pdf"
+    publisher: "NCERT"
+  - title: "Wurtz reaction"
+    url: "https://en.wikipedia.org/wiki/Wurtz_reaction"
+    publisher: "Wikipedia"
+  - title: "Iodoform"
+    url: "https://en.wikipedia.org/wiki/Iodoform"
+    publisher: "Wikipedia"
+  - title: "Organozinc chemistry"
+    url: "https://en.wikipedia.org/wiki/Organozinc_chemistry"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 5
+---
+
+## What is a coupling reaction?
+
+A **coupling reaction** joins two organic fragments through a **new carbon–carbon bond**, usually with the help of a metal. In the classic exam reactions, a reactive metal (Na, Li, Mg, Zn, Cu, Ag) pulls the halogen off an organic halide, and the carbon left behind, as a radical, a carbanion-like organometallic or an organocopper species, bonds to a second carbon. Electrolysis can do the same job for carboxylate ions (Kolbe), and electron transfer to C=O groups does it for ketones (pinacol coupling).
+
+Coupling reactions fall into two groups:
+
+- **Homocoupling:** two identical partners give a symmetrical product, R–R or Ar–Ar (Wurtz, Fittig, Ullmann, Kolbe).
+- **Cross-coupling (heterocoupling):** two different partners give R–R′ (Wurtz–Fittig, Corey–House). Modern palladium couplings such as Suzuki and Heck, which won the 2010 Nobel Prize, belong here.
+
+## General pattern
+
+<Eq ce="2 R-X + 2 M -> R-R + 2 MX" />
+
+The metal works in one of two ways:
+
+1. **Radical route:** M gives one electron to R–X, giving R• and X⁻; two radicals combine.
+2. **Organometallic (ionic) route:** R–X + 2M gives R⁻M⁺ (an organometallic carbanion), which attacks a second R–X in an SN2-like step.
+
+## The coupling reactions compared
+
+| Reaction | Substrate(s) | Reagent / conditions | Product | Key feature |
+|---|---|---|---|---|
+| [Wurtz](/reactions/wurtz-reaction/) | 2 R–X | Na, dry ether | R–R | even-carbon symmetrical alkanes |
+| [Fittig](/reactions/fittig-reaction/) | 2 Ar–X | Na, dry ether | Ar–Ar | biaryls; less reactive than Wurtz |
+| [Wurtz–Fittig](/reactions/wurtz-fittig-reaction/) | Ar–X + R–X | Na, dry ether | Ar–R | alkylbenzenes; R–R and Ar–Ar side products |
+| [Ullmann](/reactions/ullmann-reaction/) | 2 Ar–X (ArI or nitro-ArCl) | Cu powder, about 200 °C | Ar–Ar | organocopper, not radical |
+| [Corey–House](/reactions/corey-house-synthesis/) | R₂CuLi + R′–X | Li, then CuI, then R′X | R–R′ | clean unsymmetrical alkanes; SN2-like |
+| [Kolbe electrolysis](/reactions/kolbe-electrolysis/) | 2 RCOO⁻Na⁺ (aq) | electrolysis | R–R + 2CO₂ | radicals at the anode; H₂ at cathode |
+
+The related [pinacol coupling](/reactions/pinacol-coupling/) joins two ketones with Mg/Hg and then water to give a 1,2-diol, and is grouped with [free radical reactions](/mechanisms/free-radical-reactions/).
+
+<KeyPoint>
+Reactivity order: **Wurtz &gt; Fittig**. Alkyl C–X bonds break more easily than aryl C–X bonds, which have partial double bond character. This is also why the alkyl halide reacts first in Wurtz–Fittig.
+</KeyPoint>
+
+## Other metals with alkyl halides
+
+Several other metals also react with R–X and are studied alongside the Wurtz family.
+
+**Magnesium (Grignard reagent).** In dry ether, magnesium inserts into the C–X bond to give RMgX. NCERT stresses that even traces of moisture must be avoided, because the reagent reacts with any proton source to give the alkane. See [Grignard reagent](/reactions/grignard-reagent/).
+
+<Eq ce="R-X + Mg ->[dry ether] RMgX" />
+
+You may also see R–X →(Mg, ether) R–R written. In exam answers this is the **Wurtz-type coupling** seen as a side reaction while preparing Grignard reagents, when RMgX meets unreacted R–X. It is a nuisance product rather than a preparative method; plain Grignard reagents do not normally couple with alkyl halides without a catalyst.
+
+**Zinc (Frankland).** Edward Frankland made the first organozinc compound in 1848 by heating ethyl iodide with zinc. The organozinc R⁻–Zn–X acts as a carbanion source that attacks a second R–X to give R–R. Zinc is one of the metals that has been used in place of sodium for Wurtz-type coupling.
+
+<Eq ce="R-X + Zn -> R-Zn-X" />
+<Eq ce="R-Zn-X + R-X -> R-R + ZnX2" />
+
+**Silver with iodoform.** Heating iodoform with powdered silver removes all the iodine and joins two CH units by a triple bond, giving **ethyne** (acetylene).
+
+<Eq ce="2 CHI3 + 6 Ag ->[\Delta] HC#CH + 6 AgI" />
+
+<ExamTip>
+Match the metal to the reaction: Na → Wurtz family; Cu → Ullmann (and Gilman reagents in Corey–House); Li + CuI → Corey–House; Mg → Grignard (C–C coupling only as a side reaction); Ag + CHI₃ → ethyne; electrolysis of RCOONa → Kolbe.
+</ExamTip>
+
+## Factors that decide the outcome
+
+- **Type of halide:** alkyl halides couple more easily than aryl halides. Among alkyl halides, primary give the best yields; tertiary halides mostly eliminate. Aryl halides need copper (Ullmann) or an activating nitro group.
+- **Halogen:** I &gt; Br &gt; Cl in reactivity; aryl chlorides are the hardest.
+- **Solvent:** dry, aprotic solvents (ether, THF, dioxane) are essential for Na, Li and Mg, because water destroys the organometallic intermediates.
+- **Symmetrical vs unsymmetrical products:** homocoupling methods (Wurtz, Fittig, Kolbe) give mixtures when two different partners are used, so odd-carbon or mixed products are best made by Corey–House.
+- **Temperature and dilution:** for dihalides, conditions decide between intermolecular coupling and ring closure (for example bicyclobutane from 1-bromo-3-chlorocyclobutane in the intramolecular Wurtz reaction).
+
+## Member pages
+
+- [Wurtz reaction](/reactions/wurtz-reaction/)
+- [Fittig reaction](/reactions/fittig-reaction/)
+- [Wurtz–Fittig reaction](/reactions/wurtz-fittig-reaction/)
+- [Ullmann reaction](/reactions/ullmann-reaction/)
+- [Corey–House synthesis](/reactions/corey-house-synthesis/)
+- [Kolbe electrolysis](/reactions/kolbe-electrolysis/)
+- Related: [Pinacol coupling](/reactions/pinacol-coupling/), [Grignard reagent](/reactions/grignard-reagent/), [Haloform reaction](/reactions/haloform-reaction/)

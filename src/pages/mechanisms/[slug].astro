@@ -1,0 +1,96 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Eq from '../../components/Eq.astro';
+import Mol from '../../components/Mol.astro';
+import KeyPoint from '../../components/KeyPoint.astro';
+import Trick from '../../components/Trick.astro';
+import ExamTip from '../../components/ExamTip.astro';
+import ExamTags from '../../components/ExamTags.astro';
+import References from '../../components/References.astro';
+import ReportError from '../../components/ReportError.astro';
+import Byline from '../../components/Byline.astro';
+import LibgenCard from '../../components/LibgenCard.astro';
+import { url, absUrl } from '../../lib/site';
+import { audienceLd, breadcrumbLd, faqLd, orgLd, personLd } from '../../lib/seo';
+
+export async function getStaticPaths() {
+  const items = await getCollection('mechanisms');
+  return items.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+const path = `mechanisms/${entry.id}/`;
+const members = (await getCollection('reactions'))
+  .filter((r) => r.data.family === entry.id)
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+const jsonLd = [
+  {
+    '@type': ['Article', 'LearningResource'],
+    headline: d.title,
+    name: d.title,
+    description: d.description,
+    url: absUrl(path),
+    inLanguage: 'en-IN',
+    image: absUrl('og-image.png'),
+    author: personLd(),
+    publisher: orgLd(),
+    isAccessibleForFree: true,
+    educationalLevel: 'Class 11–12, competitive entrance exams',
+    audience: audienceLd,
+    hasPart: members.map((m) => ({ '@type': 'LearningResource', name: m.data.title, url: absUrl(`reactions/${m.id}/`) })),
+    ...(d.verified ? { dateModified: d.verified.checked.toISOString().slice(0, 10) } : {}),
+  },
+  breadcrumbLd([{ name: 'Mechanisms', path: 'mechanisms/' }, { name: d.title, path }]),
+  faqLd(d.faq, path),
+].filter(Boolean) as Record<string, unknown>[];
+---
+<Base title={d.title} description={d.description} path={path} ogType="article" jsonLd={jsonLd} section="mechanisms">
+  <div class="container page">
+    <Breadcrumbs items={[{ label: 'Mechanisms', href: url('mechanisms/') }, { label: d.title }]} />
+    <header class="page-head">
+      <h1>{d.title}</h1>
+      <div class="meta-row"><ExamTags exams={d.exams} /></div>
+      <p class="summary">{d.description}</p>
+    </header>
+    <div class="layout">
+      <article class="prose">
+        <Content components={{ Eq, Mol, KeyPoint, Trick, ExamTip }} />
+        {members.length > 0 && (
+          <section aria-labelledby="members-h">
+            <h2 id="members-h">Reactions in this family</h2>
+            <ul class="list-cards">
+              {members.map((m) => (
+                <li><a class="card" href={url(`reactions/${m.id}/`)}><strong>{m.data.title}</strong><p>{m.data.description}</p></a></li>
+              ))}
+            </ul>
+          </section>
+        )}
+        {d.faq.length > 0 && (
+          <section id="faq" aria-labelledby="faq-h">
+            <h2 id="faq-h">Frequently asked questions</h2>
+            <div class="faq">{d.faq.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}</div>
+          </section>
+        )}
+        <References sources={d.sources} checked={d.verified?.checked} status={d.verified?.status} />
+        <Byline notesPages={d.notesPages} updated={d.verified?.checked} />
+        <p><ReportError path={path} title={d.title} /></p>
+        <LibgenCard />
+      </article>
+      <aside class="side">
+        <div class="side-card">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href={url('reactions/')}>All reactions A–Z</a></li>
+            <li><a href={url('mechanisms/')}>All mechanism types</a></li>
+            <li><a href={url('map/')}>Interactive reaction map</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</Base>

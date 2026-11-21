@@ -1,0 +1,119 @@
+---
+title: "Gattermann Reaction"
+description: "The Gattermann reaction turns an arenediazonium salt into an aryl chloride or bromide with copper powder and HCl or HBr. Mechanism and Sandmeyer comparison."
+aliases: ["Gatterman reaction", "Gattermann reaction diazonium", "Cu HX reaction", "Benzenediazonium chloride with copper powder", "Gattermann haloarene synthesis"]
+kind: "named-reaction"
+family: "diazonium-salt-reactions"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["gattermann_reaction", "gattermann_reaction_br"]
+reactant:
+  name: "Benzenediazonium chloride"
+  smiles: "[Cl-].N#[N+]c1ccccc1"
+product:
+  name: "Bromobenzene"
+  smiles: "Brc1ccccc1"
+byproducts: "N₂ (biaryl as a side product)"
+reagents: "Copper powder + HCl or HBr"
+conditions: "Diazonium salt solution warmed with Cu powder and the halogen acid"
+equation: "C6H5N2^+ Cl^- ->[Cu/HBr] C6H5Br + N2 ^"
+notesPages: [47]
+memoryTricks: []
+faq:
+  - q: "What is the Gattermann reaction in amines?"
+    a: "It is the replacement of the diazonium group by Cl or Br by treating the arenediazonium salt solution with the corresponding halogen acid in the presence of copper powder. Benzenediazonium chloride with Cu/HCl gives chlorobenzene."
+  - q: "What is the difference between the Gattermann and Sandmeyer reactions?"
+    a: "Gattermann uses metallic copper powder with HCl or HBr, while Sandmeyer uses a copper(I) salt (CuCl or CuBr) with the acid. The Sandmeyer reaction usually gives the better yield."
+  - q: "Is the Gattermann reaction the same as Gattermann–Koch or Gattermann formylation?"
+    a: "No. The Gattermann reaction of diazonium salts makes aryl halides. The Gattermann–Koch reaction (CO, HCl, AlCl₃/CuCl) and the Gattermann formylation (HCN, HCl, Lewis acid) put a –CHO group on an arene."
+  - q: "Can fluorobenzene or iodobenzene be made by the Gattermann reaction?"
+    a: "No. Only Cl and Br are introduced this way. Iodobenzene is made with KI, and fluorobenzene by the Balz–Schiemann reaction."
+related: ["sandmeyer-reaction", "diazotization-reaction", "balz-schiemann-reaction", "friedel-crafts-acylation"]
+sources:
+  - title: "Amines (Class 12 Chemistry, Unit 9)"
+    url: "https://ncert.nic.in/textbook/pdf/lech204.pdf"
+    publisher: "NCERT"
+  - title: "Diazonium compound (copper powder variant of the Sandmeyer reaction)"
+    url: "https://en.wikipedia.org/wiki/Diazonium_compound"
+    publisher: "Wikipedia"
+  - title: "Ludwig Gattermann"
+    url: "https://en.wikipedia.org/wiki/Ludwig_Gattermann"
+    publisher: "Wikipedia"
+verified:
+  status: "conflict"
+  checked: 2026-11-21
+  sourceCount: 3
+  note: "Notes draw one aryl-cation (SN1-type) mechanism for all diazonium replacements; sources show copper powder acting through Cu(I) formed in situ, as in the radical Sandmeyer pathway. Reagents (Cu + HX, X = Cl, Br) match the notes."
+---
+
+## What is the Gattermann reaction?
+
+The **Gattermann reaction** converts an **arenediazonium salt** into an **aryl chloride or aryl bromide** by warming the diazonium salt solution with the corresponding **halogen acid (HCl or HBr) in the presence of copper powder**. Benzenediazonium chloride gives chlorobenzene with Cu/HCl and bromobenzene with Cu/HBr, with loss of nitrogen gas.
+
+Ludwig Gattermann developed it as an improved Sandmeyer reaction that uses **metallic copper** in place of a copper(I) salt.
+
+<KeyPoint>
+Do not confuse it with the Gattermann–Koch reaction or the Gattermann formylation. Those make aldehydes from arenes; this one makes aryl halides from diazonium salts.
+</KeyPoint>
+
+## General reaction
+
+<Eq ce="Ar-N2^+ Cl^- ->[Cu, HX] Ar-X + N2 ^ \quad (X = Cl, Br)" />
+
+In exam answers this branch is written as **Cu + HX, X → Cl, Br**, as in NCERT.
+
+## Mechanism
+
+1. **Copper(I) forms in situ.** Copper metal reduces some diazonium ion, producing Cu⁺ (and some biaryl as a side product).
+2. **Electron transfer and loss of N₂.** Cu⁺ passes one electron to ArN₂⁺; the radical loses nitrogen to give an aryl radical.
+3. **Halogen transfer.** The aryl radical takes a halogen from the copper(II) halide, forming Ar–X and regenerating Cu⁺.
+
+<Eq ce="2Cu + 2ArN2^+ -> 2Cu^+ + Ar-Ar + 2N2" />
+
+<Eq ce="ArN2^+ + HX ->[Cu^+] ArX + N2 + H^+" />
+
+So, once started, the Gattermann reaction runs on the same Cu(I) chemistry as the [Sandmeyer reaction](/reactions/sandmeyer-reaction/). Do not draw the single aryl-cation mechanism here: copper-mediated halogenation follows this radical pathway instead.
+
+## Examples
+
+**1. Chlorobenzene:**
+
+<Eq ce="C6H5N2^+ Cl^- ->[Cu/HCl] C6H5Cl + N2 ^" />
+
+**2. Bromobenzene:**
+
+<Eq ce="C6H5N2^+ Cl^- ->[Cu/HBr] C6H5Br + N2 ^" />
+
+**3. From p-toluidine to p-bromotoluene (two steps):**
+
+<Eq ce="CH3C6H4NH2 ->[NaNO2, HCl][273-278 K] CH3C6H4N2^+ Cl^- ->[Cu/HBr] CH3C6H4Br + N2" />
+
+<ExamTip>
+When a question shows "Cu, HCl" or "Cu/HBr" on a diazonium salt, name it **Gattermann**; when it shows "CuCl/HCl", "Cu₂Cl₂/HCl" or "CuCN", name it **Sandmeyer**. NCERT asks which gives the better yield: Sandmeyer.
+</ExamTip>
+
+## Gattermann vs Sandmeyer
+
+| Feature | Gattermann | Sandmeyer |
+|---|---|---|
+| Copper source | Cu powder | CuCl, CuBr, CuCN |
+| Groups introduced | Cl, Br | Cl, Br, CN |
+| Yield | Lower | Higher |
+| Key intermediate | Aryl radical (via Cu⁺ formed in situ) | Aryl radical |
+
+## Where it fits in a synthesis
+
+The Gattermann reaction is normally the last step of a three-step route from an arene: nitration, reduction of –NO₂ to –NH₂, then diazotization and replacement. Because the amino group decides the orientation before it is removed, the halogen ends up at a position that direct halogenation might not give. In questions, both the Gattermann and Sandmeyer options lead to the same aryl halide; only the reagent label and the yield differ.
+
+## Limitations and exceptions
+
+- Only chlorine and bromine are introduced; cyanide, iodide and fluoride need other methods.
+- Yields are generally lower than with Sandmeyer conditions, partly because biaryl forms when copper metal reduces the diazonium ion.
+- The diazonium salt must be made and used in the cold; warming in water alone gives phenol.
+
+## Related reactions
+
+- [Sandmeyer reaction](/reactions/sandmeyer-reaction/): the copper(I) salt version.
+- [Diazotization reaction](/reactions/diazotization-reaction/): preparation of the diazonium salt.
+- [Balz–Schiemann reaction](/reactions/balz-schiemann-reaction/): for aryl fluorides.
+- [Friedel–Crafts acylation](/reactions/friedel-crafts-acylation/): a different way to functionalise the ring, often contrasted with Gattermann–Koch formylation.
+- [Reactions of diazonium salts](/mechanisms/diazonium-salt-reactions/): family overview.

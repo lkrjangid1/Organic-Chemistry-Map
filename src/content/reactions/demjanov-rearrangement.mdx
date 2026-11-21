@@ -1,0 +1,104 @@
+---
+title: "Demjanov Rearrangement"
+description: "Demjanov rearrangement: HNO₂ turns a primary amine into a ring-expanded alcohol; the Tiffeneau–Demjanov variant turns a 1,2-amino alcohol into a ketone."
+aliases: ["Demjanov ring expansion", "Demyanov rearrangement", "Damjanov rearrangement", "Tiffeneau–Demjanov rearrangement", "Tiffeneau Demjanov ring expansion"]
+kind: "rearrangement"
+family: "rearrangement-reactions"
+exams: ["jee-advanced"]
+mapEdges: []
+reactant:
+  name: "1-(Aminomethyl)cyclohexan-1-ol"
+  smiles: "NCC1(O)CCCCC1"
+product:
+  name: "Cycloheptanone"
+  smiles: "O=C1CCCCCC1"
+byproducts: "N₂, H₂O"
+reagents: "HNO₂ (NaNO₂ + HCl or acetic acid)"
+conditions: "Cold, dilute aqueous acid (mild conditions)"
+equation: "\\text{1-(aminomethyl)cyclohexanol} ->[HNO2] \\text{cycloheptanone} + N2 + H2O"
+notesPages: [8, 25]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Demjanov rearrangement?"
+    a: "A primary amine such as an aminomethylcycloalkane gives an alcohol, often with the ring enlarged by one carbon. Unrearranged alcohol and alkenes usually form alongside it."
+  - q: "What is the difference between the Demjanov and Tiffeneau–Demjanov rearrangements?"
+    a: "The Demjanov reaction starts from a simple primary amine and ends in an alcohol. The Tiffeneau–Demjanov reaction starts from a 1,2-amino alcohol (for example 1-aminomethylcyclohexanol) and ends in a ring-expanded ketone, with better yields and fewer side products."
+  - q: "What does 1-aminomethylcyclohexanol give with nitrous acid?"
+    a: "Cycloheptanone. The amino group is diazotised, N₂ leaves, a ring bond shifts to the CH₂ carbon and the oxygen-stabilised cation loses H⁺ to give the seven-membered ketone."
+  - q: "Why does the ring expand in the Demjanov rearrangement?"
+    a: "Loss of N₂ leaves a very unstable primary carbocation outside the ring. A ring C–C bond shifts to it, which moves the positive charge onto a more substituted carbon (or onto the carbon bearing OH) and enlarges the ring by one carbon."
+related: ["diazotization-reaction", "pinacol-pinacolone-rearrangement", "dienone-phenol-rearrangement", "beckmann-rearrangement"]
+sources:
+  - title: "Demjanov rearrangement"
+    url: "https://en.wikipedia.org/wiki/Demjanov_rearrangement"
+    publisher: "Wikipedia"
+  - title: "Tiffeneau–Demjanov rearrangement"
+    url: "https://en.wikipedia.org/wiki/Tiffeneau%E2%80%93Demjanov_rearrangement"
+    publisher: "Wikipedia"
+  - title: "30.3: Tiffeneau-Demjanov Rearrangement (Virtual Textbook of Organic Chemistry, Reusch)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Book%3A_Virtual_Textbook_of_OChem_(Reusch)_UNDER_CONSTRUCTION/30%3A_Cationic_Rearrangements/30.3%3A_Tiffeneau-Demjanov_Rearrangement"
+    publisher: "LibreTexts"
+verified:
+  status: "conflict"
+  checked: 2026-11-21
+  sourceCount: 3
+  note: "Notes call the 1,2-amino alcohol + HNO₂ → ketone reaction simply 'Demjanov'; sources name it Tiffeneau–Demjanov (plain Demjanov gives alcohols). Notes box carbocation formation as the RDS; sources describe N₂ loss and the shift as concerted."
+---
+
+## What is the Demjanov rearrangement?
+
+The **Demjanov rearrangement** is the reaction of a **primary amine with nitrous acid (HNO₂)** in which the amino group is replaced by OH and the carbon skeleton rearranges on the way. With an aminomethyl group on a ring, the ring usually **expands by one carbon**, so an aminomethylcycloalkane gives a larger **cycloalkanol**. It was reported by N. J. Demjanov in 1903.
+
+Its more useful cousin, the **Tiffeneau–Demjanov rearrangement**, starts from a **1,2-amino alcohol** (–C(OH)–C(NH₂)–, NH₂ and OH on adjacent carbons). With HNO₂ it gives a **ketone**; 1-aminomethylcyclohexanol, for example, gives **cycloheptanone**.
+
+## Mechanism (Tiffeneau–Demjanov version)
+
+1. **Diazotisation.** HNO₂ converts –CH₂NH₂ into –CH₂N₂⁺, an excellent leaving group.
+2. **Loss of N₂.** N₂ leaves, so the CH₂ carbon becomes electron-deficient. In exam answers this is drawn as a separate primary carbocation and treated as the slow (rate-determining) step. The currently accepted picture is that N₂ leaves and the neighbouring bond shifts **at the same time**, because a free primary carbocation is too unstable.
+3. **1,2-shift (ring expansion).** A ring C–C bond on the carbinol carbon moves to the CH₂ carbon. The ring gains a carbon and the positive charge lands on the carbon that carries OH.
+4. **Deprotonation.** That cation is stabilised as an oxonium ion (C=OH⁺). Loss of H⁺ gives the ketone.
+
+<Eq ce="R2C(OH)-CH2NH2 ->[HNO2] R2C(OH)-CH2N2+ ->[-N2][\text{1,2-shift}] R-C+(OH)-CH2R ->[-H+] R-CO-CH2R" />
+
+<KeyPoint>
+The driving force is the same as in the pinacol rearrangement: a poor (primary) cation is replaced by an oxygen-stabilised cation, which then becomes a strong C=O bond.
+</KeyPoint>
+
+## Mechanism (plain Demjanov version)
+
+With no OH group, the cation formed after the shift cannot become a C=O. Instead **water attacks it**, giving an alcohol. Water can also displace N₂ directly, without any shift, so a mixture forms:
+
+<Eq ce="\text{cyclobutylmethylamine} ->[HNO2][H2O] \text{cyclopentanol (ring-expanded)} + \text{cyclobutylmethanol} + N2" />
+
+Alkenes from loss of H⁺, and further rearrangements, add to the mixture. That is why the Tiffeneau–Demjanov variant, which always ring-expands and stops cleanly at the ketone, is preferred in synthesis.
+
+## Examples
+
+1. **Cyclohexane to cycloheptane ring:**
+
+<Eq ce="\text{1-(aminomethyl)cyclohexanol} ->[NaNO2, HCl] \text{cycloheptanone} + N2 + H2O" />
+
+2. **One-carbon ring expansion of a ketone (sequence):** cyclohexanone → cyanohydrin (HCN) → reduce CN to CH₂NH₂ (LiAlH₄) → HNO₂ → cycloheptanone. This homologation is the main practical use.
+
+3. **Substituted ring:** when the two ring bonds that could shift are different, the more substituted (secondary) alkyl carbon migrates in preference, so 2-substituted aminomethylcyclohexanols give mainly the 3-substituted cycloheptanone.
+
+<ExamTip>
+Spot the pattern –C(OH)–C–NH₂ (NH₂ on the carbon next to the carbinol carbon) plus HNO₂ or NaNO₂/HCl. Remove N₂, shift a bond from the carbinol carbon, and turn the C–OH carbon into C=O. If the carbinol carbon is in a ring, the ring grows by one.
+</ExamTip>
+
+## Which group migrates?
+
+The shift is controlled by how well the migrating bond can share positive charge, plus steric and conformational factors, so it is not always easy to predict. Useful exam rules: aryl and more substituted alkyl groups migrate in preference to primary alkyl, and the migrating group keeps its configuration. Aryl groups migrate through a bridged phenonium ion, and electron-rich aryls (such as anisyl) move faster than phenyl.
+
+## Limitations and exceptions
+
+- Plain Demjanov reactions give mixtures (rearranged and unrearranged alcohols, alkenes), so yields are often low.
+- Ring expansion works best for making five-, six- and seven-membered rings; yields fall for larger rings.
+- The reagent is nitrous acid (from NaNO₂ and acid), not nitric acid.
+
+## Related reactions
+
+- [Diazotization reaction](/reactions/diazotization-reaction/): the same N₂⁺ leaving group, made from aromatic amines.
+- [Pinacol–pinacolone rearrangement](/reactions/pinacol-pinacolone-rearrangement/): the same 1,2-shift to an oxygen-stabilised cation, starting from a 1,2-diol.
+- [Dienone–phenol rearrangement](/reactions/dienone-phenol-rearrangement/): another acid-promoted 1,2-alkyl shift.
+- [Rearrangement reactions hub](/mechanisms/rearrangement-reactions/)

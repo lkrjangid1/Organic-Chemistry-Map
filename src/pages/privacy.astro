@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { SITE } from '../lib/site';
+const updated = '21 November 2026';
+---
+<Base title="Privacy Policy" description="Privacy policy for Organic Chemistry Map: what data the site collects (very little), cookie-free analytics, and how sign-in data will be handled." path="privacy/">
+  <div class="container narrow page">
+    <Breadcrumbs items={[{ label: 'Privacy' }]} />
+    <article class="prose">
+      <h1>Privacy policy</h1>
+      <p>Last updated: {updated}</p>
+      <h2>What we collect today</h2>
+      <ul>
+        <li><strong>No accounts, no cookies for tracking.</strong> You can use every page and the map without signing in.</li>
+        <li><strong>Cookie-free analytics.</strong> We use Cloudflare Web Analytics to count page views. It does not use cookies or fingerprinting and does not identify you.</li>
+        <li><strong>Data stored on your device.</strong> The map saves your theme, map position and install-prompt choice in your browser's local storage. It never leaves your device, and clearing site data removes it.</li>
+        <li><strong>Error reports.</strong> If you send an error report, we receive what you type in the form and the page address.</li>
+      </ul>
+      <h2>Sign-in (coming later)</h2>
+      <p>A future version may offer optional Google sign-in to sync study progress across devices. If it launches, we will store only your Google account ID, name, email address and your study progress, use it only to provide the sync feature, and delete it on request. This policy will be updated before sign-in goes live, as required by India's Digital Personal Data Protection Act, 2023.</p>
+      <h2>Links to other sites</h2>
+      <p>Pages link to references, Google Play and GitHub. Those sites have their own privacy policies.</p>
+      <h2>Contact</h2>
+      <p>Questions or deletion requests: open an issue on <a href={SITE.repo} rel="noopener">GitHub</a> or use the error report link on any page.</p>
+    </article>
+  </div>
+</Base>

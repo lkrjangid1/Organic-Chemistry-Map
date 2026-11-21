@@ -1,0 +1,121 @@
+---
+title: "Williamson Ether Synthesis"
+description: "Williamson ether synthesis makes an ether from a sodium alkoxide and a primary alkyl halide by SN2. Choice of halide, elimination with 3° halides, examples."
+aliases: ["Williamson synthesis", "Williamson reaction", "Williamson ether reaction", "Preparation of ethers from alkyl halides"]
+kind: "named-reaction"
+family: "nucleophilic-substitution"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["r1", "r5"]
+reactant:
+  name: "Sodium ethoxide + chloroethane"
+  smiles: "CC[O-].[Na+].CCCl"
+product:
+  name: "Ethoxyethane (diethyl ether)"
+  smiles: "CCOCC"
+byproducts: "NaX"
+reagents: "Sodium alkoxide or phenoxide (RO⁻Na⁺) + alkyl halide (R′–X)"
+conditions: "Alkoxide made from ROH with Na or NaH (phenoxide with NaOH); polar solvent, warm"
+equation: "C2H5ONa + C2H5Cl -> C2H5-O-C2H5 + NaCl"
+notesPages: [49]
+memoryTricks: []
+faq:
+  - q: "What is the Williamson ether synthesis?"
+    a: "It is the preparation of an ether by reacting a sodium alkoxide (or phenoxide) with an alkyl halide. The alkoxide ion displaces the halide by an SN2 reaction, giving R–O–R′ and NaX."
+  - q: "Why should the alkyl halide be primary in Williamson synthesis?"
+    a: "Alkoxides are strong bases as well as nucleophiles. With secondary halides elimination competes with substitution, and with tertiary halides elimination (E2) is the only reaction, giving an alkene instead of an ether."
+  - q: "How is tert-butyl methyl ether made by Williamson synthesis?"
+    a: "Use sodium tert-butoxide with methyl bromide or iodide. The reverse choice, sodium methoxide with tert-butyl bromide, gives only 2-methylpropene by elimination."
+  - q: "How is anisole prepared from phenol?"
+    a: "Phenol is first converted to sodium phenoxide with NaOH, and the phenoxide is then treated with methyl iodide. The phenoxide ion attacks CH3I by SN2 to give methoxybenzene (anisole)."
+  - q: "Can aryl halides be used in Williamson synthesis?"
+    a: "No. The aryl carbon cannot undergo SN2, so for alkyl aryl ethers the aryl part must come from the phenoxide and the alkyl part from the alkyl halide."
+related: ["sn2-reaction", "e2-reaction", "ether-cleavage-with-hx", "finkelstein-reaction"]
+sources:
+  - title: "Alcohols, Phenols and Ethers (Class XII Chemistry, Unit 7)"
+    url: "https://ncert.nic.in/textbook/pdf/lech202.pdf"
+    publisher: "NCERT"
+  - title: "Williamson ether synthesis"
+    url: "https://en.wikipedia.org/wiki/Williamson_ether_synthesis"
+    publisher: "Wikipedia"
+  - title: "Williamson Synthesis"
+    url: "https://www.organic-chemistry.org/namedreactions/williamson-synthesis.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "18.2: Preparing Ethers"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/18:_Ethers_and_Epoxides_Thiols_and_Sulfides/18.02:_Preparing_Ethers"
+    publisher: "LibreTexts Chemistry"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 4
+---
+
+## What is the Williamson ether synthesis?
+
+The **Williamson ether synthesis** is the reaction of a **sodium alkoxide (or phenoxide) with an alkyl halide** to give an **ether**, R–O–R′, and a sodium halide. The alkoxide ion attacks the alkyl halide by an **SN2** reaction, so the best results come with **methyl and primary alkyl halides**. It is the most important laboratory method for making both symmetrical and unsymmetrical ethers, and was developed by Alexander Williamson in 1850.
+
+## General reaction
+
+<Eq ce="R-O^{-}Na+ + R'-X -> R-O-R' + NaX" />
+
+The alkoxide is usually prepared just before use, by adding sodium metal or sodium hydride to the alcohol. Phenols are acidic enough that aqueous NaOH (or K₂CO₃) converts them to phenoxide.
+
+<Eq ce="2 ROH + 2 Na -> 2 RO^{-}Na+ + H2 ^" />
+
+## Mechanism
+
+1. **Formation of the nucleophile.** The alcohol is deprotonated to the alkoxide ion, RO⁻, a strong nucleophile and a strong base.
+2. **SN2 attack.** The alkoxide oxygen attacks the carbon bearing the halogen from the back side. The C–O bond forms as the C–X bond breaks, in one step.
+3. **Products.** The ether and NaX are formed. If the carbon attacked is a stereocentre, its configuration is inverted.
+
+<KeyPoint>
+The alkoxide can be primary, secondary or tertiary. The alkyl halide should be methyl or primary, because the halide carbon is where the SN2 attack happens.
+</KeyPoint>
+
+## Examples
+
+**Diethyl ether** from sodium ethoxide and chloroethane:
+
+<Eq ce="C2H5ONa + C2H5Cl -> C2H5OC2H5 + NaCl" />
+
+**Anisole from phenol** (map edge: phenol → anisole):
+
+<Eq ce="C6H5OH ->[NaOH] C6H5O^{-}Na+ ->[CH3I] C6H5OCH3 + NaI" />
+
+**Allyl phenyl ether** (map edge: phenol → allyl phenyl ether), the substrate of the Claisen rearrangement:
+
+<Eq ce="C6H5OH + CH2=CHCH2Br ->[K2CO3, acetone] C6H5OCH2CH=CH2" />
+
+**tert-Butyl methyl ether**: the bulky part must be the alkoxide.
+
+<Eq ce="(CH3)3C-O^{-}Na+ + CH3Br -> (CH3)3C-O-CH3 + NaBr" />
+
+## Choosing the right pair (substitution vs elimination)
+
+| Alkyl halide | Main outcome with RO⁻ |
+|---|---|
+| Methyl, 1° | SN2: ether (good yield) |
+| 2° | SN2 and E2 compete: ether + alkene |
+| 3° | E2 only: alkene, no ether |
+
+For example, sodium methoxide with tert-butyl bromide gives only **2-methylpropene**, because the alkoxide removes a β-hydrogen instead of attacking the crowded carbon.
+
+<Eq ce="CH3ONa + (CH3)3C-Br -> CH2=C(CH3)2 + CH3OH + NaBr" />
+
+<ExamTip>
+To plan an unsymmetrical ether, cut one C–O bond in your mind. Put the less hindered carbon on the halide side and the more hindered carbon on the alkoxide side. For alkyl aryl ethers the aryl part is always the phenoxide.
+</ExamTip>
+
+## Limitations and exceptions
+
+- **Tertiary halides** give alkenes only; secondary halides give mixtures.
+- **Aryl and vinyl halides** cannot be attacked by SN2, so they cannot be the halide component.
+- **Phenoxide is an ambident nucleophile**: under some conditions it can be alkylated on the ring carbon instead of oxygen.
+- **Slow alkyl chlorides** can be speeded up by adding a little iodide salt, which converts R–Cl into the more reactive R–I in situ (a Finkelstein exchange).
+
+## Related reactions
+
+- [SN2 reaction](/reactions/sn2-reaction/): the mechanism of the Williamson synthesis.
+- [E2 reaction](/reactions/e2-reaction/): the competing elimination with 2° and 3° halides.
+- [Ether cleavage with HX](/reactions/ether-cleavage-with-hx/): the reverse direction, breaking ethers with HI or HBr.
+- [Finkelstein reaction](/reactions/finkelstein-reaction/): iodide catalysis for slow alkyl chlorides.
+- [Nucleophilic substitution](/mechanisms/nucleophilic-substitution/): overview of substitution pathways.

@@ -1,0 +1,104 @@
+---
+title: "Benzyne Mechanism"
+description: "The benzyne mechanism converts an unactivated aryl halide into aniline with NaNH₂ in liquid NH₃ by elimination to benzyne, then addition, giving cine products."
+aliases: ["Elimination–addition mechanism", "Aryne mechanism", "Benzyne intermediate", "Cine substitution", "Dehydrobenzene"]
+kind: "mechanism-type"
+family: "nucleophilic-substitution"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: []
+reactant:
+  name: "Chlorobenzene"
+  smiles: "Clc1ccccc1"
+product:
+  name: "Aniline"
+  smiles: "Nc1ccccc1"
+byproducts: "NaCl"
+reagents: "NaNH₂ (or KNH₂) in liquid NH₃"
+conditions: "Liquid ammonia, about 240 K (−33 °C); aryl halide with at least one ortho H"
+equation: "C6H5Cl + NaNH2 ->[liq. NH3] C6H5NH2 + NaCl"
+notesPages: [51]
+memoryTricks: []
+faq:
+  - q: "What is benzyne?"
+    a: "Benzyne (1,2-dehydrobenzene) is a very reactive neutral intermediate: a benzene ring with two fewer hydrogens and an extra, weak π bond between two adjacent carbons, formed by side-on overlap of sp² orbitals in the ring plane."
+  - q: "What is cine substitution?"
+    a: "Cine substitution is when the nucleophile ends up on the carbon next to the one that carried the leaving group. In the benzyne mechanism it happens because the nucleophile can add to either carbon of the triple bond."
+  - q: "How was the benzyne mechanism proved?"
+    a: "In 1953 J. D. Roberts treated chlorobenzene labelled with carbon-14 at C-1 with potassium amide. The aniline formed had the label at C-1 and at C-2 in equal amounts, which only a symmetrical benzyne intermediate can explain."
+  - q: "Why does 2,6-disubstituted bromobenzene not react by the benzyne mechanism?"
+    a: "The first step needs a hydrogen ortho to the halogen for the amide ion to remove. If both ortho positions are blocked, benzyne cannot form."
+related: ["nucleophilic-aromatic-substitution", "e2-reaction", "sn2-reaction"]
+sources:
+  - title: "Aryne"
+    url: "https://en.wikipedia.org/wiki/Aryne"
+    publisher: "Wikipedia"
+  - title: "NAS Reactions: the Elimination–Addition (Benzyne) Mechanism (Wade, Organic Chemistry)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Map:_Organic_Chemistry_(Wade)_Complete_and_Semesters_I_and_II/Map:_Organic_Chemistry_(Wade)/18:_Reactions_of_Aromatic_Compounds/18.11:__NAS_Reactions_-_the_Elimination-Addition_(Benzyne)_Mechanism"
+    publisher: "LibreTexts"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 2
+---
+
+## What is the benzyne mechanism?
+
+The **benzyne mechanism** (elimination–addition) is a nucleophilic aromatic substitution used by **unactivated aryl halides** with very strong bases such as **sodium amide (NaNH₂) in liquid ammonia**. The base first removes HX from the ring to give **benzyne**, a short-lived intermediate with a strained triple bond; the nucleophile then adds across that bond. Chlorobenzene gives aniline this way. Because the nucleophile can add to **either** end of the triple bond, part of the product carries the new group on the carbon **next to** the original halogen; this is called **cine substitution**.
+
+## Mechanism
+
+1. **Proton removal.** NH₂⁻ removes a hydrogen **ortho** to the halogen, giving an aryl carbanion next to the C–X carbon.
+2. **Elimination.** The carbanion expels X⁻ to form **benzyne**. The new π bond is made from sp² orbitals lying in the ring plane, so it is weak and very reactive. Steps 1 and 2 together are an elimination of HX.
+3. **Addition.** NH₂⁻ adds to **either carbon** of the triple bond, giving a new aryl anion.
+4. **Protonation.** Liquid ammonia protonates the aryl anion, giving aniline and regenerating NH₂⁻.
+
+<Eq ce="C6H5Cl ->[NH2-][-NH3] C6H4Cl- ->[-Cl-] C6H4 ->[NH2-] C6H4NH2- ->[NH3] C6H5NH2 + NH2-" />
+
+<KeyPoint>
+Label the carbon that carried the halogen as C*. Products with NH₂ on C* come from **direct substitution**; products with NH₂ on the carbon next to C* come from **cine substitution**. Both form because benzyne can be attacked at either end.
+</KeyPoint>
+
+## Evidence: Roberts' carbon-14 experiment
+
+In 1953 **John D. Roberts** and co-workers heated chlorobenzene labelled with ¹⁴C at C-1 with potassium amide in liquid ammonia. The aniline contained the label **at C-1 and at C-2 in equal amounts**. A direct addition–elimination would keep the label only at the carbon bearing NH₂ (C-1). An equal split means a symmetrical intermediate was formed, which is benzyne.
+
+<Eq ce="C6H5-^{14}C-Cl ->[KNH2][liq. NH3] \text{aniline with label at C-1 (50\%)} + \text{label at C-2 (50\%)}" />
+
+## Examples
+
+**1. Bromobenzene to aniline.** The reaction with potassium amide in liquid ammonia is extremely fast even at −33 °C.
+
+<Eq ce="C6H5Br + KNH2 ->[liq. NH3][240 K] C6H5NH2 + KBr" />
+
+**2. Substituted benzynes give mixtures.** 4-Chlorotoluene gives 4-methylbenzyne. Hydroxide adding at either end of the triple bond then gives both 3- and 4-methylphenol; LibreTexts reports an equimolar mixture when the chloride is heated with NaOH at about 340 °C.
+
+<Eq ce="CH3C6H4Cl ->[NaOH][\Delta] \text{3-methylphenol} + \text{4-methylphenol}" />
+
+**3. 2-Chloroanisole gives only the meta product.** Amination of 2-chloromethoxybenzene gives 3-methoxyaniline exclusively. The benzyne formed has the triple bond next to –OCH₃, and the amide ion adds to the carbon farther from it, because the resulting aryl anion sits next to the electron-withdrawing (–I) oxygen. The new group is not where the chlorine was, which only the benzyne route explains.
+
+<Eq ce="CH3OC6H4Cl ->[NaNH2][liq. NH3] \text{3-methoxyaniline}" />
+
+<ExamTip>
+To predict benzyne products: (a) find each ortho H that can be removed; (b) draw the benzyne for each; (c) add NH₂⁻ to both ends of each triple bond. Count only distinct products. If the halogen has no ortho H, there is no benzyne product.
+</ExamTip>
+
+## Benzyne vs SNAr (addition–elimination)
+
+| Feature | Benzyne (elimination–addition) | SNAr (addition–elimination) |
+|---|---|---|
+| Substrate | Unactivated aryl halide with ortho H | Aryl halide with ortho/para –NO₂ |
+| Reagent | Very strong base: NaNH₂/KNH₂ in liq. NH₃ | Nucleophile: OH⁻, RO⁻, amines |
+| Intermediate | Neutral benzyne | Anionic Meisenheimer complex |
+| Position of new group | Ipso and cine (adjacent) products | Only ipso (where X was) |
+
+## Limitations and exceptions
+
+- An aryl halide with **no ortho hydrogen** cannot form benzyne and does not react this way.
+- Nucleophile addition to substituted benzynes is guided by which aryl anion is more stable, so electron-withdrawing substituents shift the product ratio.
+- Under forcing hydroxide conditions (Dow-type phenol synthesis) both pathways may operate; activated substrates prefer SNAr.
+
+## Related reactions
+
+- [Nucleophilic aromatic substitution (SNAr)](/reactions/nucleophilic-aromatic-substitution/): the addition–elimination pathway.
+- [E2 reaction](/reactions/e2-reaction/): benzyne formation is an elimination of HX.
+- [Nucleophilic substitution overview](/mechanisms/nucleophilic-substitution/)

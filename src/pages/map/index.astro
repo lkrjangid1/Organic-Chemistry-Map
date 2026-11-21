@@ -1,0 +1,35 @@
+---
+import MapApp from '../../app/MapApp';
+import { SITE, absUrl, url } from '../../lib/site';
+const canonical = absUrl('map/');
+const title = 'Interactive Organic Chemistry Reaction Map | JEE & NEET';
+const description = 'Explore organic chemistry reactions on an interactive, zoomable map. Search compounds, follow conversions and see reagents, conditions and mechanisms.';
+---
+<!doctype html>
+<html lang={SITE.lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={absUrl('og-image.png')} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href={url('icons/ogm_logo.png')} />
+    <link rel="apple-touch-icon" href={url('icons/ogm_logo.png')} />
+    <link rel="manifest" href={url('manifest.webmanifest')} />
+    <meta name="theme-color" content={SITE.themeColor} />
+  </head>
+  <body>
+    <div id="root"><MapApp client:only="react" /></div>
+    <noscript>
+      The interactive map needs JavaScript. Browse every reaction on the
+      <a href={url('reactions/')}>reaction index</a>.
+    </noscript>
+  </body>
+</html>

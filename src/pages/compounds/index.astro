@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { url, absUrl } from '../../lib/site';
+import { breadcrumbLd } from '../../lib/seo';
+import { pageCompounds, compoundSlug, titleCase, edgesFrom, edgesTo } from '../../lib/graph';
+
+const groups = new Map<string, typeof pageCompounds>();
+for (const n of pageCompounds) {
+  const key = n.type ? titleCase(n.type) : 'Other';
+  groups.set(key, [...(groups.get(key) ?? []), n]);
+}
+const sorted = [...groups.entries()].sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+const path = 'compounds/';
+const jsonLd = [
+  {
+    '@type': 'CollectionPage',
+    name: 'Organic compounds: preparation and reactions',
+    url: absUrl(path),
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: pageCompounds.map((n, i) => ({ '@type': 'ListItem', position: i + 1, url: absUrl(`compounds/${compoundSlug(n.id)}/`), name: n.label })),
+    },
+  },
+  breadcrumbLd([{ name: 'Compounds', path }]),
+];
+---
+<Base title="Organic Compounds: Preparation & Reactions (JEE & NEET)" description={`${pageCompounds.length} key organic compounds with structures, methods of preparation and reactions, for JEE Main, JEE Advanced and NEET.`} path={path} jsonLd={jsonLd} section="compounds">
+  <div class="container page">
+    <Breadcrumbs items={[{ label: 'Compounds' }]} />
+    <header class="page-head">
+      <h1>Organic compounds: preparation and reactions</h1>
+      <p class="summary">Key compounds that link many reactions. Each page shows the structure, how to make it and what it turns into.</p>
+    </header>
+    {sorted.map(([cls, list]) => (
+      <section class="section-tight">
+        <h2>{cls}</h2>
+        <ul class="list-cards">
+          {list.map((n) => (
+            <li><a class="card" href={url(`compounds/${compoundSlug(n.id)}/`)}><strong>{n.label}</strong><p>{n.info?.formula} · {edgesTo(n.id).length} preparations · {edgesFrom(n.id).length} reactions</p></a></li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</Base>

@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { SITE, url, absUrl } from '../lib/site';
+import { breadcrumbLd, orgLd, personLd } from '../lib/seo';
+const path = 'about/';
+const jsonLd = [
+  { '@type': 'AboutPage', url: absUrl(path), name: `About ${SITE.name}`, mainEntity: personLd(), publisher: orgLd() },
+  { ...personLd(), description: 'JEE/NEET student whose handwritten classroom notes are the basis of Organic Chemistry Map.' },
+  breadcrumbLd([{ name: 'About', path }]),
+];
+---
+<Base title="About Organic Chemistry Map" description="Who writes Organic Chemistry Map, where the notes come from, and how every reaction is checked against NCERT and other trusted references." path={path} jsonLd={jsonLd} section="about">
+  <div class="container narrow page">
+    <Breadcrumbs items={[{ label: 'About' }]} />
+    <article class="prose">
+      <h1>About Organic Chemistry Map</h1>
+      <p class="summary">Organic Chemistry Map turns one student's handwritten organic chemistry notes into free, structured, verified study pages and an interactive reaction map for JEE Main, JEE Advanced and NEET.</p>
+
+      <h2 id="lokesh-jangid">The notes</h2>
+      <p>The content is based on <strong>Lokesh Jangid</strong>'s handwritten notes from classroom lectures. Each topic is rewritten into a clear page: the general reaction, a worked example, the mechanism step by step, key points, exam tips and the memory tricks from the original notebook.</p>
+
+      <h2>How every page is checked</h2>
+      <p>Every reaction is checked one by one against at least two trusted references before it is published:</p>
+      <ol>
+        <li>NCERT Chemistry textbooks (Class 11 and 12)</li>
+        <li>LibreTexts Chemistry</li>
+        <li>organic-chemistry.org</li>
+        <li>Wikipedia and the primary literature it cites</li>
+        <li>Standard textbooks (Clayden, March, Morrison &amp; Boyd)</li>
+      </ol>
+      <p>Coaching websites and Q&amp;A sites are never used as sources. Each page lists its references and the date it was last checked. Where the answer expected in exams differs from what happens in the lab, the page says so.</p>
+
+      <h2>Found a mistake?</h2>
+      <p>Every page has a "Report an error" link. Reports are reviewed and the page is corrected.</p>
+
+      <h2>Who builds the site</h2>
+      <p>The website and interactive map are built by the <strong>YaaraTech</strong> team. The code and reaction data are open source on <a href={SITE.repo} rel="noopener">GitHub</a>.</p>
+
+      <p><a class="btn btn-primary" href={url('reactions/')}>Browse the reactions</a></p>
+    </article>
+  </div>
+</Base>

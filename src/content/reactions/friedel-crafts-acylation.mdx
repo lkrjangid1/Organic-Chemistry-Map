@@ -1,0 +1,111 @@
+---
+title: "Friedel–Crafts Acylation"
+description: "Friedel–Crafts acylation converts benzene into an aryl ketone such as acetophenone using an acyl chloride or anhydride and anhydrous AlCl₃ via an acylium ion."
+aliases: ["Friedel Crafts acylation", "Friedel Craft acylation", "Acylation of benzene", "Friedel-Crafts acetylation"]
+kind: "named-reaction"
+family: "electrophilic-aromatic-substitution"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["friedel_crafts_acylation", "anisole_to_p_methoxyacetophenone", "thiophene_to_2_acetylthiophene", "friedel-crafts-acylation-furan", "intramolecular_fc_acylation_tetralone"]
+reactant:
+  name: "Benzene"
+  smiles: "c1ccccc1"
+product:
+  name: "Acetophenone (1-phenylethan-1-one)"
+  smiles: "CC(=O)c1ccccc1"
+byproducts: "HCl (or CH₃COOH with acetic anhydride)"
+reagents: "Acyl chloride (RCOCl) or acid anhydride with anhydrous AlCl₃ (at least one equivalent)"
+conditions: "Anhydrous; warm (benzene + CH₃COCl about 80 °C); aqueous work-up frees the ketone from AlCl₃"
+equation: "C6H6 + CH3COCl ->[anhyd. AlCl3] C6H5COCH3 + HCl"
+notesPages: [20]
+memoryTricks: []
+faq:
+  - q: "What is the product of benzene with acetyl chloride and anhydrous AlCl₃?"
+    a: "Acetophenone (C₆H₅COCH₃) and HCl. The acylium ion CH₃CO⁺ formed from acetyl chloride and AlCl₃ substitutes one ring hydrogen."
+  - q: "What is the electrophile in Friedel–Crafts acylation?"
+    a: "The acylium ion, R–C≡O⁺, which is a resonance hybrid of R–C⁺=O and R–C≡O⁺. It is formed when AlCl₃ removes chloride from the acyl chloride."
+  - q: "Why does Friedel–Crafts acylation not show rearrangement or polysubstitution?"
+    a: "The acylium ion is resonance-stabilised, so it does not rearrange like a carbocation. The C=O group of the ketone product withdraws electrons and deactivates the ring, so a second acylation does not occur."
+  - q: "Why is more than a catalytic amount of AlCl₃ needed in acylation?"
+    a: "The ketone product is a Lewis base and forms a stable complex with AlCl₃, so the AlCl₃ is not released at the end. At least one equivalent is used, and the complex is broken during aqueous work-up."
+  - q: "How do you make n-propylbenzene from benzene?"
+    a: "Acylate benzene with propanoyl chloride and AlCl₃ to get propiophenone, then reduce the C=O to CH₂ by Clemmensen or Wolff–Kishner reduction. Direct alkylation with 1-chloropropane would give rearranged isopropylbenzene."
+related: ["friedel-crafts-alkylation", "wolff-kishner-reduction", "haloform-reaction", "reimer-tiemann-reaction"]
+sources:
+  - title: "Friedel–Crafts reaction"
+    url: "https://en.wikipedia.org/wiki/Friedel%E2%80%93Crafts_reaction"
+    publisher: "Wikipedia"
+  - title: "Friedel-Crafts Acylation"
+    url: "https://www.organic-chemistry.org/namedreactions/friedel-crafts-acylation.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "16.3: Alkylation and Acylation of Aromatic Rings – The Friedel–Crafts Reaction"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/16:_Chemistry_of_Benzene_-_Electrophilic_Aromatic_Substitution/16.03:_Alkylation_and_Acylation_of_Aromatic_Rings_-_The_Friedel-Crafts_Reaction"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 3
+---
+
+## What is Friedel–Crafts acylation?
+
+**Friedel–Crafts acylation** is the electrophilic aromatic substitution in which an **acyl group (R–CO–) replaces a ring hydrogen**. An arene is treated with an **acyl chloride** or an **acid anhydride** in the presence of **anhydrous AlCl₃**, and the product is an **aryl ketone**. The classic example is benzene with acetyl chloride giving **acetophenone**. The electrophile is the resonance-stabilised **acylium ion**.
+
+## General reaction
+
+<Eq ce="Ar-H + R-CO-Cl ->[anhyd. AlCl3] Ar-CO-R + HCl" />
+<Eq ce="Ar-H + (RCO)2O ->[anhyd. AlCl3] Ar-CO-R + RCOOH" />
+
+## Mechanism
+
+1. **Acylium ion formation.** AlCl₃ accepts chloride from the acyl chloride. The resulting cation is stabilised by the lone pair on oxygen, so it is best written as a resonance hybrid.
+
+<Eq ce="CH3-CO-Cl + AlCl3 -> CH3-C#O+ + AlCl4-" />
+
+2. **Attack by the ring.** The π electrons of benzene attack the carbon of the acylium ion, giving a resonance-stabilised arenium ion (σ-complex). This step breaks aromaticity and is the slow step.
+3. **Deprotonation.** AlCl₄⁻ removes the ring proton, aromaticity is restored and HCl is released.
+4. **Complexation and work-up.** The ketone oxygen binds AlCl₃. Adding water at the end breaks this complex and releases the free ketone.
+
+<KeyPoint>
+The acylium ion is drawn as R–C≡O⁺ ↔ R–C⁺=O. Because the positive charge is shared with oxygen, the acylium ion is far more stable than an ordinary primary carbocation and **never rearranges**.
+</KeyPoint>
+
+## Examples
+
+**1. Acetophenone from benzene (NCERT example).**
+
+<Eq ce="C6H6 + CH3COCl ->[anhyd. AlCl3] C6H5COCH3 + HCl" />
+
+**2. Acylation of an activated ring.** The –OCH₃ group of anisole is an ortho/para director, and the bulky acyl group goes mainly para, giving 4-methoxyacetophenone.
+
+<Eq ce="C6H5OCH3 + CH3COCl ->[AlCl3] p-CH3OC6H4COCH3 + HCl" />
+
+**3. Heterocycles and ring closure.** Thiophene reacts with acetyl chloride under milder SnCl₄ catalysis to give 2-acetylthiophene; furan is acylated by acetic anhydride to give 2-acetylfuran. In the intramolecular version, 4-phenylbutanoic acid cyclises with polyphosphoric acid or methanesulfonic acid to α-tetralone (3,4-dihydronaphthalen-1(2H)-one).
+
+<Eq ce="C6H5(CH2)3COOH ->[PPA][\Delta] C10H10O + H2O" />
+
+## Acylation versus alkylation
+
+| Feature | Alkylation | Acylation |
+|---|---|---|
+| Electrophile | carbocation R⁺ | acylium ion RCO⁺ |
+| Rearrangement | common with primary halides | none |
+| Further substitution | polyalkylation (product activated) | stops at one (product deactivated) |
+| AlCl₃ needed | catalytic | at least one equivalent |
+
+<ExamTip>
+For a straight-chain alkylbenzene, the standard two-step answer is Friedel–Crafts acylation followed by reduction of the C=O to CH₂ (Clemmensen: Zn-Hg/HCl, or Wolff–Kishner: NH₂NH₂/KOH). This avoids both rearrangement and polysubstitution.
+</ExamTip>
+
+## Limitations and exceptions
+
+- **Deactivated rings fail.** Nitrobenzene and other rings carrying strong meta-directing deactivators do not undergo acylation.
+- **Amino groups block the reaction.** Aniline and other basic amines bind AlCl₃ through the nitrogen lone pair, which deactivates the ring.
+- **Stoichiometric Lewis acid.** Both the acyl chloride and the ketone product complex the AlCl₃, so it is consumed. With electron-rich rings, milder catalysts such as zinc(II) salts can be used in smaller amounts.
+- **Formyl group.** To put a –CHO group on benzene, the related Gattermann–Koch reaction (CO and HCl with anhydrous AlCl₃) is used, not an ordinary acyl chloride.
+
+## Related reactions
+
+- [Friedel–Crafts alkylation](/reactions/friedel-crafts-alkylation/) uses a carbocation electrophile and suffers rearrangement and polyalkylation.
+- [Wolff–Kishner reduction](/reactions/wolff-kishner-reduction/) turns the aryl ketone into an alkylbenzene.
+- The [haloform reaction](/reactions/haloform-reaction/) converts the methyl ketone acetophenone into benzoic acid.
+- [Electrophilic aromatic substitution](/mechanisms/electrophilic-aromatic-substitution/) covers the common mechanism and directing effects.
