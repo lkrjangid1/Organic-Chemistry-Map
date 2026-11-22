@@ -1,0 +1,102 @@
+---
+title: "Curtius Rearrangement (कर्टियस पुनर्विन्यास)"
+description: "Curtius rearrangement: acyl azide (RCOCl और NaN₃ से) को गर्म करने पर isocyanate R–N=C=O बनता है, जिसे पानी एक carbon कम वाली primary amine में बदल देता है।"
+aliases: ["कर्टियस पुनर्विन्यास", "कर्टियस रिएक्शन", "curtius rearrangement hindi", "curtius reaction hindi", "curtius degradation hindi", "acyl azide rearrangement hindi"]
+reagents: "Acyl chloride पर NaN₃ (sodium azide); फिर H₂O (amine), R′OH (carbamate) या R′NH₂ (urea)"
+conditions: "Inert solvent में acyl azide को हल्का गर्म करना; isocyanate का पानी या dilute acid से hydrolysis"
+byproducts: "N₂ (rearrangement step), CO₂ (hydrolysis step), NaCl"
+reactantName: "Acetyl chloride (ethanoyl chloride)"
+productName: "Methanamine (methyl isocyanate के रास्ते)"
+steps:
+  - title: "Acyl azide बनना"
+    text: "Sodium azide, azide ion N₃⁻ देता है। इसका terminal nitrogen acetyl chloride के acyl carbon पर attack करता है और Cl⁻ निकल जाता है (nucleophilic acyl substitution), जिससे acetyl azide, CH₃–CO–N₃ बनता है।"
+    arrows: "N₃⁻ के terminal N का lone pair → C=O carbon; C=O π pair → O, फिर वापस नीचे आकर Cl⁻ को बाहर निकालता है।"
+  - title: "Isocyanate में rearrangement"
+    text: "हल्का गर्म करने पर N₂ निकलता है और उसी समय methyl group carbonyl carbon से पास वाले nitrogen पर shift हो जाता है, जिससे methyl isocyanate, CH₃–N=C=O बनता है। Exam answers में migration के साथ N₂ का निकलना slow, rate-determining step माना जाता है; पुरानी textbooks पहले acyl nitrene बनाती हैं, लेकिन thermal reaction concerted है।"
+    arrows: "C–CH₃ bond pair → electron-deficient N, जबकि N–N bond pair N₂ के साथ निकल जाता है; N का lone pair नया C=N bond बनाता है।"
+  - title: "Isocyanate पर पानी जुड़ना"
+    text: "पानी isocyanate के C=N bond पर जुड़ता है, जिससे carbamic acid, CH₃–NH–COOH बनता है।"
+    arrows: "पानी के O का lone pair → isocyanate carbon; C=N π pair → N, जो फिर एक proton ले लेता है।"
+  - title: "Decarboxylation"
+    text: "Carbamic acids unstable होते हैं और CO₂ खो देते हैं, जिससे primary amine methanamine, CH₃NH₂ बनता है। इस amine में acetyl chloride से एक carbon कम है।"
+    arrows: "C–N bond pair nitrogen पर चला जाता है (जो O–H proton ले लेता है) और CO₂ निकल जाती है।"
+faq:
+  - q: "Curtius rearrangement का product क्या है?"
+    a: "Acyl azide, R–CO–N₃ को गर्म करने पर isocyanate, R–N=C=O और nitrogen gas बनती है। फिर isocyanate के hydrolysis से primary amine, R–NH₂ मिलती है, जिसमें acid से एक carbon कम होता है, साथ में CO₂।"
+  - q: "क्या Curtius rearrangement intramolecular है, और क्या configuration retain होता है?"
+    a: "दोनों का जवाब हाँ है। R group उसी molecule के अंदर carbon से पास वाले nitrogen पर जाता है, और chiral R group पूरी तरह configuration retain करते हुए migrate करता है।"
+  - q: "Curtius, Hofmann और Schmidt reactions में क्या अंतर है?"
+    a: "तीनों पहले isocyanate देते हैं और फिर एक carbon कम वाली amine। Curtius acyl azide से शुरू होता है (RCOCl + NaN₃, heat), Hofmann amide से (Br₂ + NaOH), और Schmidt carboxylic acid से, HN₃ और conc. H₂SO₄ के साथ।"
+  - q: "क्या Curtius rearrangement में isocyanate को isolate किया जा सकता है?"
+    a: "हाँ। चूँकि reaction बिना पानी के चलाई जा सकती है, isocyanate R–N=C=O को isolate किया जा सकता है, या alcohol से trap करके carbamate या amine से trap करके substituted urea बनाया जा सकता है।"
+  - q: "R nitrogen पर migrate क्यों करता है?"
+    a: "जैसे ही N₂ निकलता है, carbonyl से जुड़ा nitrogen electron-deficient (nitrene जैसा) हो जाता है। पास वाला R group अपने bonding pair के साथ उस पर shift हो जाता है, thermal reaction में उसी step में।"
+translated: 2026-11-22
+---
+
+## Curtius rearrangement क्या है?
+
+**Curtius rearrangement** एक **acyl azide, R–CO–N₃ का thermal decomposition है, जिसमें nitrogen gas निकलती है और isocyanate, R–N=C=O बनता है**। Acyl azide आमतौर पर **acid chloride और sodium azide** से बनाया जाता है। Isocyanate के hydrolysis से starting acid की तुलना में **एक carbon कम वाली primary amine** मिलती है, इसलिए Hofmann reaction की तरह यह acids से amines तक का एक **step-down** रास्ता है। Theodor Curtius ने इसे 1885 में बताया था।
+
+<Eq ce="R-COCl + NaN3 -> R-CO-N3 + NaCl" />
+<Eq ce="R-CO-N3 ->[\Delta] R-N=C=O + N2 ^" />
+<Eq ce="R-N=C=O + H2O -> R-NH2 + CO2" />
+
+## Mechanism
+
+1. **Azide ion।** Sodium azide, N₃⁻ देता है, जिसे ⁻N=N⁺=N⁻ लिखा जाता है और जो N²⁻–N⁺≡N के साथ resonance में है।
+2. **Acyl azide।** Azide का terminal nitrogen, R–COCl के acyl carbon पर attack करता है; Cl⁻ निकल जाता है (nucleophilic acyl substitution), और R–CO–N⁻–N⁺≡N बनता है।
+3. **Rearrangement।** गर्म करने पर N₂ निकलता है और R **उसी समय** carbonyl carbon से पास वाले nitrogen पर shift हो जाता है, जिससे isocyanate R–N=C=O बनता है। Exam answers में migration के साथ N₂ का निकलना slow, rate-determining step माना जाता है।
+4. **Hydrolysis।** पानी isocyanate के C=N पर जुड़कर **carbamic acid**, R–NH–COOH बनाता है।
+5. **Decarboxylation।** Carbamic acids unstable होते हैं और CO₂ खोकर R–NH₂ देते हैं।
+
+<Eq ce="R-N=C=O + H2O -> R-NH-COOH -> R-NH2 + CO2" />
+
+पुरानी textbooks दिखाती हैं कि पहले एक **acyl nitrene** (R–CO–N:) बनता है और फिर rearrange होता है। आधुनिक evidence (कोई nitrene by-products नहीं, calculations) बताते हैं कि thermal reaction **concerted** है; free nitrenes सिर्फ़ photochemical version में आते हैं, जहाँ वे side products देते हैं।
+
+<KeyPoint>
+मुख्य बातें: (1) **step-down** reaction (amine में acid से एक carbon कम); (2) **intramolecular** 1,2-shift, **configuration retain** होता है; (3) **isocyanate intermediate है** और isolate किया जा सकता है; (4) shift इसलिए होता है क्योंकि N₂ निकलने पर nitrogen **electron-deficient** हो जाता है; (5) electron-rich groups सबसे अच्छा migrate करते हैं, लगभग 3° &gt; 2° ≈ aryl &gt; 1°।
+</KeyPoint>
+
+## Examples
+
+**1. Acetyl chloride से methylamine**
+
+<Eq ce="CH3COCl ->[NaN3][\Delta] CH3-N=C=O ->[H2O] CH3NH2 + CO2" />
+
+**2. Benzoyl chloride से aniline**
+
+<Eq ce="C6H5COCl ->[NaN3] C6H5CON3 ->[\Delta] C6H5N=C=O ->[H2O] C6H5NH2 + CO2" />
+
+**3. Isocyanate को trap करना**
+
+<Eq ce="R-N=C=O + C2H5OH -> R-NH-COOC2H5" />
+<Eq ce="R-N=C=O + R'NH2 -> R-NH-CO-NH-R'" />
+
+Alcohol से **carbamate (urethane)** बनता है और amine से **substituted urea**।
+
+## Curtius vs Hofmann vs Schmidt
+
+| Reaction | Starting material | Reagents | Common intermediate |
+|---|---|---|---|
+| Curtius | Acyl azide (RCOCl से) | NaN₃, फिर heat; H₂O | R–N=C=O |
+| [Hofmann bromamide](/hi/reactions/hofmann-bromamide-degradation/) | Primary amide RCONH₂ | Br₂ + NaOH (aq.) | R–N=C=O |
+| [Schmidt](/hi/reactions/schmidt-reaction/) | Carboxylic acid RCOOH | HN₃, conc. H₂SO₄ | R–N=C=O |
+| [Lossen](/hi/reactions/lossen-rearrangement/) | Acyl hydroxamate | base | R–N=C=O |
+
+<ExamTip>
+अगर question में RCOCl + NaN₃ और heat दिया हो, तो पहले isocyanate लिखें, फिर hydrolysis पर amine। Carbons गिनें: carbonyl carbon CO₂ बनकर निकल जाता है, इसलिए CH₃COCl से CH₃NH₂ बनता है, CH₃CH₂NH₂ नहीं।
+</ExamTip>
+
+## Variations और limitations
+
+- Acyl azide को **acyl hydrazide और nitrous acid** से भी बनाया जा सकता है, या acid से सीधे **diphenylphosphoryl azide (DPPA)** के साथ।
+- Brønsted या Lewis acids (जैसे BF₃) decomposition temperature को लगभग 100 °C कम कर देते हैं।
+- Acyl azides **explosive हो सकते हैं** और इन्हें सावधानी से गर्म करना चाहिए।
+
+## Related reactions
+
+- [Hofmann bromamide degradation](/hi/reactions/hofmann-bromamide-degradation/), [Schmidt reaction](/hi/reactions/schmidt-reaction/) और [Lossen rearrangement](/hi/reactions/lossen-rearrangement/): amines तक का वही isocyanate रास्ता।
+- [Beckmann rearrangement](/hi/reactions/beckmann-rearrangement/): oximes में electron-deficient nitrogen पर migration।
+- [Arndt–Eistert synthesis](/hi/reactions/arndt-eistert-synthesis/): इसी तरह N₂ निकलने के साथ 1,2-shift, लेकिन carbon पर।
+- [Rearrangement reactions](/hi/mechanisms/rearrangement-reactions/) और [reactions of carboxylic acids](/hi/mechanisms/reactions-of-carboxylic-acids/) hubs।

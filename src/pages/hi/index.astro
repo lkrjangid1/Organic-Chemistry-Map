@@ -7,19 +7,30 @@ import { SECTIONS, type SectionKey } from '../../lib/sections';
 import { breadcrumbLd } from '../../lib/seo';
 
 const pages = (await getCollection('hindi')).sort((a, b) => a.data.title.localeCompare(b.data.title));
+const href = (id: string) => {
+  const [section, slug] = id.split('/');
+  return `hi/${SECTIONS[section as SectionKey].path}${slug}/`;
+};
+const ORDER: [SectionKey, string][] = [
+  ['reactions', 'Named reactions (नामित अभिक्रियाएँ)'],
+  ['mechanisms', 'Mechanisms (क्रियाविधि)'],
+  ['tests', 'Functional group tests (परीक्षण)'],
+  ['reagents', 'Reagents (अभिकर्मक)'],
+  ['concepts', 'Concepts: GOC, biomolecules, polymers'],
+  ['comparisons', 'Order comparisons (तुलना)'],
+  ['preparation', 'Methods of preparation (बनाने की विधियाँ)'],
+];
+const groups = ORDER.map(([key, label]) => ({ label, items: pages.filter((p) => p.id.startsWith(`${key}/`)) })).filter((g) => g.items.length);
 const path = 'hi/';
 const title = 'Organic Chemistry हिंदी में: JEE और NEET के लिए नोट्स';
-const description = 'JEE Main, JEE Advanced और NEET के लिए organic chemistry हिंदी में: named reactions, mechanisms, tests और concepts, आसान हिंदी और English technical terms के साथ।';
+const description = 'JEE Main, JEE Advanced और NEET के लिए organic chemistry हिंदी में: named reactions, mechanisms, tests, reagents और GOC concepts, English technical terms के साथ।';
 const jsonLd = [
   {
     '@type': 'CollectionPage',
     name: title,
     url: absUrl(path),
     inLanguage: 'hi-IN',
-    mainEntity: {
-      '@type': 'ItemList',
-      itemListElement: pages.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: absUrl(`hi/${SECTIONS[p.id.split('/')[0] as SectionKey].path}${p.id.split('/')[1]}/`), name: p.data.title })),
-    },
+    mainEntity: { '@type': 'ItemList', numberOfItems: pages.length, itemListElement: pages.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: absUrl(href(p.id)), name: p.data.title })) },
   },
   breadcrumbLd([{ name: 'हिंदी', path }]),
 ];
@@ -29,14 +40,16 @@ const jsonLd = [
     <Breadcrumbs items={[{ label: 'हिंदी' }]} />
     <header class="page-head">
       <h1>Organic chemistry हिंदी में</h1>
-      <p class="summary">Reactions, tests और concepts को आसान हिंदी में समझें। Chemistry के technical terms English में ही रखे गए हैं, ताकि exam में वही शब्द याद रहें।</p>
+      <p class="summary">{pages.length} पेज: reactions, mechanisms, tests और concepts आसान हिंदी में। Chemistry के technical terms English में ही रखे गए हैं, ताकि exam में वही शब्द याद रहें।</p>
     </header>
-    <ul class="list-cards">
-      {pages.map((p) => {
-        const [section, slug] = p.id.split('/');
-        return <li><a class="card" href={url(`hi/${SECTIONS[section as SectionKey].path}${slug}/`)}><strong>{p.data.title}</strong><p>{p.data.description}</p></a></li>;
-      })}
-    </ul>
-    <p>और pages जल्द ही हिंदी में आएँगे। तब तक <a href={url('reactions/')}>English में सभी reactions</a> देखें।</p>
+    <nav class="letter-nav" aria-label="Sections">{groups.map((g, i) => <a href={`#s${i}`}>{g.label.split(' (')[0]}</a>)}</nav>
+    {groups.map((g, i) => (
+      <section aria-labelledby={`s${i}`}>
+        <h2 id={`s${i}`}>{g.label} <small>({g.items.length})</small></h2>
+        <ul class="list-cards">
+          {g.items.map((p) => <li><a class="card" href={url(href(p.id))}><strong>{p.data.title}</strong><p>{p.data.description}</p></a></li>)}
+        </ul>
+      </section>
+    ))}
   </div>
 </Base>

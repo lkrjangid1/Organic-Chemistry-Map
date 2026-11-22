@@ -1,0 +1,97 @@
+---
+title: "Free Radical Reactions in Organic Chemistry (मुक्त मूलक अभिक्रियाएँ)"
+description: "JEE और NEET के लिए free radical reactions: homolysis, radical stability, chain steps, halogenation, NBS, Hunsdiecker, peroxide effect और alkanes के दूसरे reactions।"
+faq:
+  - q: "Free radical क्या होता है?"
+    a: "Free radical ऐसा atom या group है जिसमें एक unpaired electron हो, जैसे Cl• या CH₃•। यह तब बनता है जब कोई covalent bond homolytically टूटता है और हर atom एक electron रखता है; यह बहुत reactive होता है।"
+  - q: "Alkyl free radicals की stability का order क्या है?"
+    a: "Resonance की वजह से allyl और benzyl radicals सबसे stable होते हैं, फिर hyperconjugation की वजह से 3° > 2° > 1° > methyl। Radical जितना stable होता है, उतनी तेज़ी से बनता है।"
+  - q: "Free radical chain reaction के steps कौन-से हैं?"
+    a: "Initiation में radicals बनते हैं (आमतौर पर light या heat से Cl–Cl या O–O जैसा कोई weak bond टूटता है), propagation steps में एक radical खर्च होता है और दूसरा बनता है, और termination steps में combination या disproportionation से radicals खत्म होते हैं।"
+  - q: "क्या alkanes का pyrolysis एक free radical reaction है?"
+    a: "हाँ। Alkanes की thermal cracking में C–C और C–H bonds homolytically टूटते हैं, इसलिए यह free radicals के through होता है और छोटे alkanes, alkenes और hydrogen का mixture देता है।"
+  - q: "Benzene hexachloride (gammexane) कैसे बनाया जाता है?"
+    a: "UV light में benzene पर chlorine के तीन molecules जुड़कर C₆H₆Cl₆ (hexachlorocyclohexane) बनाते हैं। इसका gamma isomer, lindane, सबसे ज़्यादा insecticidal होता है।"
+translated: 2026-11-22
+---
+
+## Free radical reaction क्या है?
+
+**Free radical reaction** वह reaction है जो **unpaired electron** वाले intermediates के through होता है। Radicals तब बनते हैं जब कोई covalent bond **homolytically** टूटता है और shared pair का एक-एक electron हर atom ले लेता है। Weak bonds सबसे आसानी से टूटते हैं, इसीलिए Cl–Cl, Br–Br या peroxide के O–O bond पर **light (hν)** या **heat** का असर आमतौर पर शुरुआत होती है।
+
+<Eq ce="R-O-O-R ->[light] R-O^{.} + R-O^{.}" />
+
+Radical reactions **non-polar conditions** में होते हैं: gas phase या CCl₄ जैसे non-polar solvents, light या peroxide initiators, और कोई strong acid या base नहीं। Oxygen एक radical trap है और इन्हें धीमा कर देता है।
+
+## Free radicals की stability
+
+<KeyPoint>
+Allyl ≈ benzyl (resonance) > 3° > 2° > 1° > CH₃• (hyperconjugation)। Reactivity ∝ बनने वाले radical की stability: जिस hydrogen के हटने से सबसे stable radical बनता है, वही सबसे पहले replace होता है।
+</KeyPoint>
+
+## General pattern: एक chain reaction
+
+1. **Initiation:** एक radical बनता है, जैसे light में Cl₂ → 2Cl•।
+2. **Propagation:** radical किसी molecule से react करके एक नया radical बनाता है, जैसे Cl• + CH₄ → CH₃• + HCl, फिर CH₃• + Cl₂ → CH₃Cl + Cl•। एक photon हज़ारों cycles शुरू कर सकता है।
+3. **Termination:** radicals जोड़ों में खत्म होते हैं।
+   - **Combination:** R• + R• → R–R।
+   - **Disproportionation:** एक radical दूसरे को β-H दे देता है, जिससे एक alkene और एक alkane बनते हैं (2CH₃CH₂• → CH₂=CH₂ + CH₃CH₃)।
+
+दोनों termination रास्ते exothermic हैं और इनमें बहुत कम या बिल्कुल activation energy नहीं लगती। β-hydrogens की संख्या बढ़ने के साथ disproportionation का हिस्सा बढ़ता है, इसलिए tertiary radicals, primary radicals की तुलना में ज़्यादा आसानी से disproportionate होते हैं।
+
+<ExamTip title="Common mistake">
+Disproportionation को high temperature और काफ़ी बड़ी activation energy से जोड़ना। Combination की तरह यह भी लगभग barrier-free है।
+</ExamTip>
+
+## Member reactions की तुलना
+
+| Reaction | Substrate | Reagent / conditions | Product | Type |
+|---|---|---|---|---|
+| [Free radical halogenation](/hi/reactions/free-radical-halogenation/) | alkane R–H | Cl₂ या Br₂, hν | R–X + HX | substitution |
+| [NBS allylic bromination](/hi/reactions/nbs-allylic-bromination/) | allylic H वाला alkene | NBS, hν या peroxide, CCl₄ | allylic bromide | substitution |
+| [Hunsdiecker reaction](/hi/reactions/hunsdiecker-reaction/) | RCOOAg | Br₂, CCl₄, heat | R–Br + CO₂ (एक carbon कम) | decarboxylative halogenation |
+| [Pinacol coupling](/hi/reactions/pinacol-coupling/) | ketone | Mg/Hg, फिर H₂O | vicinal diol (pinacol) | ketyl radicals के through reductive coupling |
+| [Peroxide effect](/hi/reactions/peroxide-effect/) | unsymmetrical alkene | HBr, peroxide | anti-Markovnikov bromide | radical addition |
+| [Kolbe electrolysis](/hi/reactions/kolbe-electrolysis/) | RCOONa (aq) | electrolysis | R–R + CO₂ | radical dimerisation |
+
+## Radical reactions को control करने वाले factors
+
+- **Bond strength:** initiation में मौजूद सबसे weak bond टूटता है (Br–Br, Cl–Cl से weak है; peroxides का O–O बहुत weak है)।
+- **Radical stability:** यह तय करती है कि substitution या addition *कहाँ* होगा (पहले allylic/benzylic और 3° positions)।
+- **Reactivity vs selectivity:** कम reactive radical ज़्यादा selective होता है। Per-hydrogen rates (1° : 2° : 3°) chlorination के लिए 1 : 3.8 : 5 हैं, लेकिन bromination के लिए लगभग 1 : 80 : 1600, क्योंकि Br•, Cl• से कहीं कम reactive है।
+- **हर step की thermodynamics:** chain तभी चलती है जब हर propagation step favourable हो। इसीलिए सिर्फ़ HBr ही peroxide effect दिखाता है, और इसीलिए alkanes का direct iodination fail होता है जबकि fluorination explosive होता है।
+- **Concentration:** NBS, Br₂ को कम रखता है ताकि substitution, addition पर भारी पड़े।
+
+## Alkanes के दूसरे reactions
+
+**Nitration (vapour phase)।** लगभग 350–450 °C पर nitric acid के साथ propane से **1-nitropropane, 2-nitropropane, nitroethane और nitromethane** का mixture मिलता है। Reaction के दौरान बने alkoxy radicals C–C bonds तोड़ सकते हैं, इसीलिए छोटे nitroalkanes भी दिखते हैं।
+
+<Eq ce="CH3CH2CH3 ->[conc. HNO3][vapour phase] CH3CH2CH2NO2 + CH3CH(NO2)CH3 + CH3CH2NO2 + CH3NO2" />
+
+**Sulphonation।** Exam answers में लिखा जाता है कि propane को concentrated H₂SO₄ के साथ गर्म करने पर propane-1- और propane-2-sulphonic acids बनते हैं। इसे सिर्फ़ classroom statement मानें: जाँचे गए references में इसका वर्णन नहीं है, और alkane पर sulphur group लगाने का standard रास्ता Reed reaction है (light में SO₂ और Cl₂, जिससे sulphonyl chlorides बनते हैं)।
+
+**Isomerisation।** n-Alkanes को **anhydrous AlCl₃ और HCl gas** के साथ गर्म करने पर वे branched isomers में rearrange हो जाते हैं (n-butane → isobutane; n-hexane → 2- और 3-methylpentane)। यह एक ionic (carbocation) process है, radical process नहीं। Industry में platinum catalysts भी इस्तेमाल होते हैं, और branching से octane number बढ़ता है।
+
+**Aromatisation (reforming)।** छह या ज़्यादा carbons वाले n-alkanes को **alumina पर supported vanadium, molybdenum या chromium के oxides** के ऊपर **773 K और 10–20 atm** पर गर्म करने से वे dehydrogenate और cyclise होते हैं: n-hexane से benzene बनता है। **Common mistake:** catalyst में manganese लिखना ("V, Cr, Mn"); NCERT की catalyst list में molybdenum है, manganese नहीं।
+
+<Eq ce="C6H14 ->[V, Mo or Cr oxide on Al2O3][773 K, 10-20 atm] C6H6 + 4H2" />
+
+**Pyrolysis (cracking)।** Higher alkanes को तेज़ गर्म करने पर वे छोटे alkanes, alkenes और hydrogen में टूट जाते हैं; NCERT pyrolysis को एक **free radical reaction** बताता है। उदाहरण के लिए, 500 °C से ऊपर propane से propene, ethene, methane, ethane, ethyne, propyne, propadiene और H₂ मिलते हैं।
+
+**Benzene hexachloride।** UV light में benzene पर तीन Cl₂ molecules **जुड़ते** हैं और C₆H₆Cl₆ (hexachlorocyclohexane, "666", BHC) बनता है। इसका γ-isomer, **lindane (gammexane)**, सबसे ज़्यादा insecticidal (कीटनाशी) होता है।
+
+<Eq ce="C6H6 + 3Cl2 ->[UV light] C6H6Cl6" />
+
+<KeyPoint>
+**Boiling point ∝ surface area ∝ molecular mass ∝ 1/branching।** n-Butane 0 °C पर उबलता है लेकिन isobutane −12 °C पर। **Octane number** fuel की quality का पता लगाने का पैमाना है: n-heptane = 0, iso-octane (2,2,4-trimethylpentane) = 100।
+</KeyPoint>
+
+<ExamTip>
+Radical question को उसकी conditions से पहचानें: hν, peroxide, NBS, high temperature या vapour phase, solvent के रूप में CCl₄। फिर देखें कि कौन-सा radical सबसे stable है; वही major product तय करता है। Carbocations के उलट, simple alkyl radicals में आमतौर पर hydride या methyl shifts नहीं होते, इसलिए rearranged products की उम्मीद न करें।
+</ExamTip>
+
+## Related hubs
+
+- [Electrophilic addition](/hi/mechanisms/electrophilic-addition/): Markovnikov addition और उससे उल्टा peroxide effect।
+- [Coupling reactions](/hi/mechanisms/coupling-reactions/): Wurtz, Fittig, Kolbe और C–C bond बनाने वाले related reactions।
+- [Rearrangement reactions](/hi/mechanisms/rearrangement-reactions/): carbocation shifts, जो radicals में आमतौर पर नहीं होते।

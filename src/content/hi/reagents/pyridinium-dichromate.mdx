@@ -1,0 +1,83 @@
+---
+title: "Pyridinium Dichromate (PDC, पिरिडिनियम डाइक्रोमेट)"
+description: "Pyridinium dichromate (PDC) CH₂Cl₂ में 1° alcohols को aldehydes में, DMF में carboxylic acids में, और 2° alcohols को ketones में oxidise करता है। Solvent का असर समझें।"
+aliases: ["पिरिडिनियम डाइक्रोमेट", "पीडीसी", "pdc reagent hindi", "pyridinium dichromate hindi", "cornforth reagent hindi", "pdc dmf hindi", "pdc vs pcc hindi"]
+faq:
+  - q: "PDC primary alcohol के साथ क्या करता है?"
+    a: "यह solvent पर निर्भर करता है। Dichloromethane में PDC aldehyde पर रुक जाता है, लेकिन DMF में saturated primary alcohol पूरी तरह carboxylic acid तक oxidise हो जाता है।"
+  - q: "PDC strong oxidising agent है या mild?"
+    a: "PDC एक Cr(VI) oxidant है जिसकी strength solvent पर निर्भर करती है। CH₂Cl₂ में यह PCC की तरह mild, selective oxidant है; DMF में यह ज़्यादा strong है और saturated primary alcohols को acids तक over-oxidise कर देता है।"
+  - q: "PCC और PDC में क्या अंतर है?"
+    a: "PCC chlorochromate salt C₅H₅NH⁺CrO₃Cl⁻ है और थोड़ा acidic है; PDC dichromate salt (C₅H₅NH⁺)₂Cr₂O₇²⁻ है और लगभग neutral है, इसलिए यह acid-sensitive substrates के लिए सही है। CH₂Cl₂ में दोनों primary alcohols से aldehydes देते हैं।"
+  - q: "क्या DMF में PDC allylic और benzylic alcohols को acids में oxidise करता है?"
+    a: "नहीं। DMF में भी allylic और benzylic primary alcohols aldehyde stage पर रुक जाते हैं; सिर्फ़ saturated primary alcohols carboxylic acids तक जाते हैं।"
+translated: 2026-11-22
+---
+
+## Pyridinium dichromate (PDC) क्या है?
+
+**Pyridinium dichromate (PDC)**, जिसे **Cornforth reagent** भी कहते हैं, dichromate का नारंगी pyridinium salt है, **(C₅H₅NH⁺)₂Cr₂O₇²⁻**। यह एक chromium(VI) oxidising agent है जो **secondary alcohols को ketones** में और solvent के हिसाब से **primary alcohols को aldehydes या carboxylic acids** में बदलता है। **Dichloromethane** में यह aldehyde पर रुक जाता है; **DMF** में यह saturated primary alcohols को **carboxylic acids** तक oxidise कर देता है। Cornforth ने इसे 1962 में introduce किया, और Corey और Schmidt ने 1979 में alcohols के लिए इसका उपयोग विकसित किया।
+
+## बनाने का तरीका और composition
+
+PDC बनाने के लिए **chromium trioxide** का concentrated aqueous solution बर्फ़ से ठंडा करते हुए धीरे-धीरे **pyridine** में डाला जाता है (मिलाना बहुत exothermic है)। नारंगी solid को filter करके acetone से धोया और सुखाया जाता है।
+
+<Eq ce="2C5H5N + 2CrO3 + H2O -> (C5H5NH)2Cr2O7" />
+
+पानी में CrO₃ dichromic acid बनाता है, जिसके दो protons दो pyridine molecules ले लेते हैं। मुख्य properties:
+
+- हवा में stable, **ज़्यादा hygroscopic नहीं**, store करना आसान;
+- **लगभग neutral** (pyridinium ion की वजह से सिर्फ़ थोड़ा acidic), इसलिए यह **PCC से कम acidic** है;
+- पानी, DMF और DMSO में घुलनशील; CH₂Cl₂ में बहुत कम घुलता है, जहाँ इसे suspension के रूप में इस्तेमाल किया जाता है।
+
+## PDC क्या oxidise करता है: solvent तय करता है
+
+| Substrate | CH₂Cl₂ में PDC | DMF में PDC |
+|---|---|---|
+| Saturated 1° alcohol, RCH₂OH | aldehyde, RCHO | **carboxylic acid, RCOOH** |
+| Allylic या benzylic 1° alcohol | α,β-unsaturated aldehyde / ArCHO | फिर भी aldehyde पर रुकता है |
+| 2° alcohol, R₂CHOH | ketone | ketone |
+| 3° alcohol | oxidation नहीं | oxidation नहीं |
+
+<Eq ce="CH3(CH2)6CH2OH ->[PDC][CH2Cl2] CH3(CH2)6CHO" />
+
+<Eq ce="CH3(CH2)6CH2OH ->[PDC][DMF] CH3(CH2)6COOH" />
+
+<Eq ce="C6H5CH2OH ->[PDC][DMF] C6H5CHO" />
+
+<KeyPoint>
+PDC, CH₂Cl₂ में mild है (PCC की तरह) लेकिन DMF में strong। Solvent mixture में जितना ज़्यादा DMF, oxidation उतना strong। DMF में भी allylic और benzylic primary alcohols acids तक नहीं जाते।
+</KeyPoint>
+
+धीमे oxidations को powdered 3 Å molecular sieves, acetic acid या acetic anhydride से तेज़ किया जा सकता है, लेकिन इससे medium कम neutral रहता है और कुछ selectivity कम हो जाती है।
+
+## PDC किसे नहीं छूता
+
+- **Tertiary alcohols**: कोई α-hydrogen नहीं, इसलिए carbonyl नहीं बन सकता।
+- **Acid-sensitive groups** (acetals, silyl ethers, कई protecting groups): PDC लगभग neutral है, इसलिए ऐसे substrates के लिए यह पसंदीदा Cr(VI) reagent है।
+- सामान्य room-temperature conditions में isolated C=C bonds नहीं टूटते।
+
+## Mechanism (संक्षेप में)
+
+दूसरे Cr(VI) oxidants की तरह, alcohol पहले dichromate के साथ एक **chromate ester** बनाता है। फिर एक base carbinol carbon का hydrogen हटाता है और उसी समय O–Cr bond टूटता है, जिससे C=O group और reduced chromium मिलता है। Tertiary alcohol में ऐसा hydrogen नहीं होता, इसीलिए वह oxidise नहीं होता। Exam answers में DMF में बने acid को stronger conditions में aldehyde के दूसरे oxidation (उसके hydrate के through) से explain किया जाता है।
+
+## मिलते-जुलते reagents से तुलना
+
+| Reagent | Formula | Acidity | 1° alcohol से मिलता है |
+|---|---|---|---|
+| **PDC** | (C₅H₅NH⁺)₂Cr₂O₇²⁻ | लगभग neutral | aldehyde (CH₂Cl₂) / acid (DMF) |
+| [PCC](/hi/reagents/pyridinium-chlorochromate/) | C₅H₅NH⁺CrO₃Cl⁻ | थोड़ा acidic | aldehyde (CH₂Cl₂) |
+| Collins reagent | CH₂Cl₂ में CrO₃·2C₅H₅N | neutral से basic | aldehyde |
+| [Jones reagent](/hi/reagents/jones-reagent/) | acetone में CrO₃ + dil. H₂SO₄ | strongly acidic | carboxylic acid |
+| [K₂Cr₂O₇ + H₂SO₄](/hi/reagents/potassium-dichromate/) | Cr₂O₇²⁻ / H⁺ | strongly acidic | carboxylic acid |
+
+PCC और PDC की ज़्यादातर properties एक जैसी हैं: दोनों stable हैं, commercially मिलते हैं, और room temperature पर CH₂Cl₂ में alcohols को aldehydes और ketones में बदलते हैं। निर्णायक अंतर acidity है: **acid-sensitive substrates के लिए PDC** चुनें।
+
+## Exam tips
+
+- Solvent पढ़ें। "PDC, CH₂Cl₂" का मतलब aldehyde; saturated primary alcohol के साथ "PDC, DMF" का मतलब carboxylic acid।
+- PDC और PCC दोनों Cr(VI) के pyridinium salts हैं: PCC में **एक Cr और एक Cl** है, PDC में **O से जुड़े दो Cr** हैं।
+- अगर कोई question PDC को "strong" या "hard" oxidant कहता है, तो वह DMF conditions की बात कर रहा है; CH₂Cl₂ में यह PCC जितना ही selective है।
+- सिर्फ़ allylic या benzylic alcohols को oxidise करने के लिए [MnO₂](/hi/reagents/manganese-dioxide/) और भी ज़्यादा selective है।
+
+सभी chromium(VI) reagents toxic हैं और इन्हें सावधानी से handle करना चाहिए; आधुनिक labs में अक्सर इनकी जगह Swern या Dess–Martin oxidations इस्तेमाल होते हैं। Overview: [Oxidation reactions](/hi/mechanisms/oxidation-reactions/)।

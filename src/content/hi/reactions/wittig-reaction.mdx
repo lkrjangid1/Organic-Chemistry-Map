@@ -1,0 +1,103 @@
+---
+title: "Wittig Reaction (विटिग अभिक्रिया)"
+description: "Wittig reaction में phosphorus ylide (Ph₃P=CHR) से aldehyde या ketone alkene में बदलता है; C=O की जगह C=C बनता है और Ph₃P=O by-product है।"
+aliases: ["विटिग अभिक्रिया", "विटिग रिएक्शन", "wittig reaction hindi", "wittig reagent hindi", "phosphorus ylide hindi", "wittig olefination hindi", "carbonyl se alkene"]
+reagents: "Phosphorus ylide Ph₃P=CHR (Ph₃P + RCH₂X से, फिर n-BuLi जैसा strong base)"
+conditions: "Anhydrous aprotic solvent (THF या ether)"
+byproducts: "Triphenylphosphine oxide, Ph₃P=O"
+reactantName: "Cyclohexanone"
+productName: "Methylenecyclohexane"
+steps:
+  - title: "Ph₃P का SN2 alkylation"
+    text: "Triphenylphosphine, जो एक अच्छा nucleophile है, SN2 से methyl bromide पर attack करता है और methyltriphenylphosphonium bromide बनाता है।"
+    arrows: "P का lone pair → CH₃ carbon; C–Br bond pair Br⁻ बनकर निकलता है।"
+  - title: "Deprotonation से ylide"
+    text: "Positive phosphorus के बगल वाला C–H थोड़ा acidic होता है, इसलिए n-butyllithium उसे हटाकर neutral ylide देता है, जो Ph₃P=CH₂ और Ph₃P⁺–CH₂⁻ का hybrid है।"
+    arrows: "Butyl carbanion P⁺ के बगल वाले carbon का H ले लेता है; C–H bond pair उसी carbon पर रह जाता है।"
+  - title: "Oxaphosphetane का बनना"
+    text: "Ylide का carbon cyclohexanone के carbonyl carbon से bond बनाता है और carbonyl oxygen phosphorus से जुड़ता है, जिससे चार सदस्यों वाली C–C–P–O ring बनती है। Lithium-free conditions में यह एक concerted [2+2] step है; पुरानी textbooks एक zwitterionic betaine दिखाती हैं जो बाद में ring बंद करता है।"
+    arrows: "Ylide carbanion lone pair → carbonyl carbon; carbonyl O → P, ring बंद होती है।"
+  - title: "टूटना (fragmentation)"
+    text: "Oxaphosphetane टूटकर methylenecyclohexane और triphenylphosphine oxide देता है। Driving force बहुत strong P=O bond है।"
+    arrows: "Ring के C–P और C–O bond pairs खिसककर नए C=C और P=O π bonds बनाते हैं।"
+faq:
+  - q: "Wittig reaction का product क्या है?"
+    a: "एक alkene, जिसमें नया C=C bond ठीक वहीं बनता है जहाँ C=O था, साथ में triphenylphosphine oxide। उदाहरण के लिए, cyclohexanone और Ph₃P=CH₂ से methylenecyclohexane बनता है।"
+  - q: "Wittig reagent क्या है और कैसे बनता है?"
+    a: "यह phosphorus ylide, Ph₃P=CHR, है: एक neutral species जिसमें positively charged phosphorus के बगल में carbanion होता है। Triphenylphosphine को SN2 reaction से primary alkyl halide द्वारा alkylate किया जाता है, फिर phosphonium salt को n-butyllithium जैसे strong base से deprotonate किया जाता है।"
+  - q: "Wittig reaction की driving force क्या है?"
+    a: "Triphenylphosphine oxide में बहुत strong P=O bond का बनना। चार सदस्यों वाला oxaphosphetane intermediate टूटकर इसे alkene के साथ छोड़ता है।"
+  - q: "Wittig reaction E alkene देता है या Z?"
+    a: "Non-stabilised ylides (R = alkyl) मुख्य रूप से Z-alkene देते हैं, जबकि stabilised ylides (R = ester या ketone) मुख्य रूप से E-alkene देते हैं।"
+  - q: "Alkene बनाने के लिए Wittig reaction, alcohol के dehydration से बेहतर क्यों है?"
+    a: "यह double bond की position fix कर देता है। Wittig रास्ते से cyclohexanone सिर्फ़ methylenecyclohexane देता है, जबकि Grignard addition के बाद dehydration से alkene isomers का mixture मिलता है।"
+translated: 2026-11-22
+---
+
+## Wittig reaction क्या है?
+
+**Wittig reaction** में **aldehyde या ketone** को **phosphorus ylide** (Wittig reagent, Ph₃P=CHR) से treat करके **alkene** में बदला जाता है। Carbonyl oxygen की जगह ylide का carbon आ जाता है, इसलिए नया C=C bond ठीक वहीं बनता है जहाँ C=O था, और **triphenylphosphine oxide (Ph₃P=O)** निकलता है। इसे Georg Wittig और Ulrich Schöllkopf ने 1954 में report किया था, और Wittig को 1979 का Chemistry Nobel Prize आंशिक रूप से इसी काम के लिए मिला।
+
+## General reaction
+
+<Eq ce="R2C=O + Ph3P=CHR' -> R2C=CHR' + Ph3P=O" />
+
+याद रखने का आसान तरीका: C=O के oxygen और ylide के PPh₃ हिस्से को एक साथ घेर लें। ये O=PPh₃ बनकर निकल जाते हैं, और carbonyl carbon व ylide का CH₂ जुड़कर C=C bond बनाते हैं।
+
+## Ylide बनाना
+
+1. **SN2 alkylation।** Triphenylphosphine, जो अच्छा nucleophile है, primary alkyl halide पर attack करके alkyltriphenylphosphonium salt देता है।
+2. **Deprotonation।** Positive phosphorus के बगल वाला C–H थोड़ा acidic होता है, इसलिए n-butyllithium जैसा strong base उसे हटाकर neutral ylide देता है।
+
+<Eq ce="Ph3P + CH3Br -> Ph3P^+-CH3 Br^- ->[n-BuLi] Ph3P=CH2" />
+
+कोई भी methyl halide इसी तरह काम करता है: CH₃Cl के साथ salt Ph₃P⁺–CH₃ Cl⁻ होता है, और एक alkyllithium (R–Li, जैसे n-BuLi या PhLi) proton हटाता है। Exam answers में base को अक्सर सिर्फ़ R–Li लिखा जाता है।
+
+<Eq ce="Ph3P + CH3Cl -> Ph3P^+-CH3 Cl^- ->[R-Li] Ph3P=CH2 + R-H + LiCl" />
+
+Ylide, Ph₃P=CH₂ और Ph₃P⁺–CH₂⁻ का resonance hybrid है; carbanion form से समझ आता है कि इसका carbon nucleophilic क्यों है। Secondary halides Ph₃P को ठीक से alkylate नहीं करते, इसलिए ज़्यादातर ylides primary halides से बनते हैं।
+
+## Mechanism
+
+1. **Addition।** Nucleophilic ylide carbon, carbonyl carbon से bond बनाता है और carbonyl oxygen phosphorus से जुड़ता है।
+2. **Oxaphosphetane।** इससे C–C–P–O वाली चार सदस्यों की ring, **oxaphosphetane**, बनती है। Lithium-free conditions में यह एक concerted [2+2] step में बनता है; पुरानी textbooks एक zwitterionic **betaine** दिखाती हैं जो बंद होकर ring बनाता है, और lithium salts की मौजूदगी में betaine जैसे intermediates मायने रख सकते हैं।
+3. **Fragmentation।** Oxaphosphetane टूटकर alkene और Ph₃P=O देता है।
+
+<KeyPoint>
+Driving force triphenylphosphine oxide में बहुत strong P=O bond का बनना है।
+</KeyPoint>
+
+## Stereochemistry
+
+- **Non-stabilised ylides** (R = alkyl) तेज़ी से react करते हैं और मुख्य रूप से **Z-alkene** देते हैं।
+- **Stabilised ylides** (R = –COOR, –COR) कम reactive हैं और मुख्य रूप से **E-alkene** देते हैं।
+- **Semi-stabilised ylides** (R = aryl) अक्सर E/Z mixtures देते हैं।
+
+## Examples
+
+**1. Cyclohexanone का methylenation।**
+
+<Eq ce="(CH2)5C=O + Ph3P=CH2 -> (CH2)5C=CH2 + Ph3P=O" />
+
+**2. Benzaldehyde से styrene।**
+
+<Eq ce="C6H5CHO + Ph3P=CH2 -> C6H5CH=CH2 + Ph3P=O" />
+
+**3. Industrial उपयोग।** BASF एक 15-carbon ylide और एक 5-carbon aldehyde के बीच Wittig reaction से vitamin A बनाती है, और β-carotene एक diylide की aldehyde के दो equivalents के साथ double Wittig reaction से बनाया जाता है। Camphor जैसे hindered ketone को भी Ph₃P=CH₂ से उसके methylene derivative में बदला जा सकता है।
+
+<ExamTip>
+किसी दिए गए alkene के reactants निकालने के लिए C=C bond को काटें: एक हिस्सा C=O compound बनता है और दूसरा हिस्सा PPh₃ से जुड़ा ylide carbon। ऐसा split चुनें जिसमें ylide primary (या methyl) halide से बने।
+</ExamTip>
+
+## Limitations और exceptions
+
+- **Tetrasubstituted alkenes** steric hindrance की वजह से इस तरह नहीं बन सकते; mono-, di- और trisubstituted alkenes ठीक बनते हैं।
+- **Hindered ketones** धीरे react करते हैं और कम yield देते हैं, ख़ासकर stabilised ylides के साथ। तब Horner–Wadsworth–Emmons reaction, जिसमें phosphonate carbanion इस्तेमाल होता है, बेहतर है।
+- **Strong base चाहिए।** Non-stabilised ylides n-BuLi जैसे bases से बनते हैं, इसलिए reaction anhydrous conditions में किया जाता है।
+
+## Related reactions
+
+- [Grignard reagent](/hi/reactions/grignard-reagent/) additions भी C=O carbon पर attack करते हैं, लेकिन alkenes की जगह alcohols देते हैं।
+- [Dehydration of alcohols](/hi/reactions/dehydration-of-alcohols/) alkenes बनाने का पुराना रास्ता है और अक्सर isomer mixtures देता है।
+- [Wolff–Kishner reduction](/hi/reactions/wolff-kishner-reduction/) carbonyl oxygen हटाने का एक और तरीका है, जो C=C की जगह CH₂ देता है।
+- [SN2 reaction](/hi/reactions/sn2-reaction/) phosphonium salt बनाने का पहला step है।

@@ -1,0 +1,90 @@
+---
+title: "Elimination Reactions in Organic Chemistry (विलोपन अभिक्रियाएँ)"
+description: "JEE और NEET के लिए elimination reactions: α और β elimination, E1, E2, E1cB और Ei mechanisms, Saytzeff vs Hofmann alkenes, और elimination vs substitution।"
+faq:
+  - q: "Elimination reaction क्या है?"
+    a: "ऐसा reaction जिसमें किसी molecule से दो atoms या groups हटाए जाते हैं, आमतौर पर पास-पास के carbons से, और एक multiple bond बनता है। Alkyl halide का dehydrohalogenation होकर alkene बनना इसका standard example है।"
+  - q: "α-elimination और β-elimination में क्या अंतर है?"
+    a: "β-elimination में दोनों groups पास-पास के carbons से निकलते हैं और C=C bond बनता है। α-elimination में दोनों एक ही carbon से निकलते हैं और carbene बनता है, जैसे chloroform और base से dichlorocarbene बनता है।"
+  - q: "Saytzeff's rule क्या है?"
+    a: "ज़्यादातर β-eliminations में ज़्यादा substituted, ज़्यादा stable alkene major product होता है। यह bulky bases, F या onium (–NR₃⁺, –SR₂⁺) leaving groups और crowded substrates में fail होता है, जहाँ कम substituted Hofmann alkene हावी रहता है।"
+  - q: "Substitution और elimination में फ़ैसला कैसे करें?"
+    a: "Elimination को ज़्यादा hindered substrate, ज़्यादा strong या bulky base, कम nucleophilic base और ऊँचा temperature favour करते हैं। उदाहरण के लिए, chloroethane aqueous KOH के साथ ethanol देता है लेकिन alcoholic KOH के साथ ethene।"
+  - q: "मुख्य elimination mechanisms कौन-से हैं?"
+    a: "E1 (carbocation, दो steps), E2 (एक concerted step जिसमें H और leaving group anti-periplanar होते हैं), E1cB (carbanion, दो steps) और Ei (cyclic transition state से thermal syn elimination, जैसे Cope elimination और ester pyrolysis में)।"
+translated: 2026-11-22
+---
+
+## Elimination reaction क्या है?
+
+**Elimination reaction** में किसी molecule से दो atoms या groups हटते हैं और एक **multiple bond** (या carbene) बनता है। आमतौर पर एक hydrogen और एक leaving group (halide, protonated alcohol से पानी, ammonium group) **पास-पास के carbons** से निकलते हैं, और product एक **alkene** होता है। Elimination, addition का उल्टा है और nucleophilic substitution का मुख्य competitor है।
+
+## α-Elimination और β-elimination
+
+- **β-Elimination (1,2-elimination):** groups पड़ोसी carbons से निकलते हैं (Cα पर leaving group, Cβ पर hydrogen) और C=C bond बनता है। यह सबसे आम प्रकार है।
+- **α-Elimination (1,1-elimination):** दोनों groups **एक ही carbon** से निकलते हैं और **carbene** बनता है। Classic case chloroform और base है: एक ही carbon से H⁺ और Cl⁻ दोनों निकलते हैं और dichlorocarbene बनता है, जो Reimer–Tiemann और carbylamine reactions का intermediate है।
+
+<Eq ce="CHCl3 + OH- -> :CCl2 + H2O + Cl-" />
+
+## आम β-eliminations
+
+| प्रकार | निकलने वाला group | Reagent | Example |
+|---|---|---|---|
+| Dehydration | H₂O | Conc. H₂SO₄, H₃PO₄, Al₂O₃, heat | 443 K पर ethanol से ethene |
+| Dehydrohalogenation | HX | Alcoholic KOH, NaOEt, KOtBu | 2-Bromopentane से pent-2-ene |
+| Dehalogenation | X₂ | Zn dust या acetone में NaI, heat | 2,3-Dibromobutane से but-2-ene |
+| Hofmann elimination | R₃N + H₂O | CH₃I, Ag₂O, heat | Amine से सबसे कम substituted alkene |
+| Cope elimination | R₂NOH | Amine N-oxide को गर्म करना | Amine oxide से alkene |
+
+<Eq ce="CH3CHBr-CHBrCH3 ->[Zn][\Delta] CH3CH=CHCH3 + ZnBr2" />
+
+एक related dehydration: β-hydroxy (या β-amino) acid पानी (या ammonia) खोकर conjugated unsaturated acid देता है, क्योंकि C=O के बगल वाला α-H acidic होता है।
+
+<Eq ce="CH3CH(OH)CH2COOH -> CH3CH=CHCOOH + H2O" />
+
+## चारों mechanisms की तुलना
+
+| Feature | E1 | E2 | E1cB | Ei |
+|---|---|---|---|---|
+| Steps | दो | एक | दो | एक |
+| Intermediate | Carbocation | कोई नहीं | Carbanion | कोई नहीं (cyclic TS) |
+| Rate law | k[RX] | k[RX][B⁻] | slow step पर निर्भर | k[substrate] |
+| Base | कमज़ोर या कोई नहीं | Strong | मध्यम से strong | कोई नहीं (internal) |
+| Leaving group | अच्छा | अच्छा | कमज़ोर (OH, OR, F) | molecule में ही मौजूद |
+| Stereochemistry | stereospecific नहीं | Anti-periplanar | ज़रूरी नहीं | Syn |
+| Rearrangement | संभव | नहीं | नहीं | नहीं |
+| Typical substrate | 3° halides, acid में 2°/3° alcohols | strong base के साथ 1°/2°/3° halides | β-Hydroxy carbonyls | Amine oxides, esters, xanthates |
+
+## Saytzeff या Hofmann alkene?
+
+जब एक से ज़्यादा तरह के β-hydrogens हों, तो दो alkenes बन सकते हैं। **Saytzeff's (Zaitsev's) rule:** आमतौर पर **ज़्यादा substituted, ज़्यादा stable alkene** major होता है। तीन cases में इसकी जगह **Hofmann (कम substituted) alkene** major होता है:
+
+1. **Leaving group कमज़ोर या positively charged हो**: F, –NR₃⁺, –SR₂⁺। यहाँ C–H bond, C–X bond से काफ़ी पहले टूटता है (carbanion जैसी transition state), इसलिए सबसे acidic, सबसे कम hindered hydrogen हटता है।
+2. **Base bulky हो**, जैसे potassium tert-butoxide: 2-chlorobutane मुख्य रूप से but-1-ene देता है।
+3. **Substrate ज़्यादा substituted β-carbon के पास crowded हो**: 2-chloro-4,4-dimethylpentane मुख्य रूप से 4,4-dimethylpent-1-ene देता है।
+
+<KeyPoint>
+छोटा base और halide leaving group: Saytzeff। Bulky base, onium या fluoride leaving group, या crowded substrate: Hofmann। Ei reactions (Cope, ester pyrolysis) भी आमतौर पर Hofmann alkene देते हैं।
+</KeyPoint>
+
+## Elimination बनाम substitution
+
+Elimination और substitution में मुकाबला होता है (E2 का SN2 से, E1 का SN1 से)। Elimination को favour करते हैं:
+
+- α-carbon पर ज़्यादा substitution (3° > 2° > 1°),
+- ज़्यादा strong, ज़्यादा bulky, कम nucleophilic base,
+- ऊँचा temperature,
+- aqueous की बजाय alcoholic medium।
+
+<ExamTip>
+Chloroethane पर aqueous KOH से ethanol मिलता है (substitution); alcoholic KOH से ethene (elimination)। Conc. H₂SO₄ के साथ ethanol 413 K पर diethyl ether देता है लेकिन 443 K पर ethene। Questions अक्सर ठीक यही switch test करते हैं।
+</ExamTip>
+
+## Member pages
+
+- [E1 reaction](/hi/reactions/e1-reaction/): दो steps वाला carbocation elimination, Saytzeff product, rearrangements संभव।
+- [E2 reaction](/hi/reactions/e2-reaction/): strong base के साथ एक step वाला anti elimination; dehydrohalogenation।
+- [E1cB mechanism](/hi/reactions/e1cb-mechanism/): carbanion वाला रास्ता; aldol dehydration।
+- [Dehydration of alcohols](/hi/reactions/dehydration-of-alcohols/): acid-catalysed alcohol से alkene, temperature और rearrangement के effects।
+- [Hofmann elimination](/hi/reactions/hofmann-elimination/): quaternary ammonium hydroxides से सबसे कम substituted alkene।
+- [Cope elimination](/hi/reactions/cope-elimination/): amine oxides का syn (Ei) elimination; ester pyrolysis।

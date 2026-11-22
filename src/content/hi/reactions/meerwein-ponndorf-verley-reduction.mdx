@@ -1,0 +1,98 @@
+---
+title: "Meerwein–Ponndorf–Verley Reduction (MPV अपचयन)"
+description: "Meerwein–Ponndorf–Verley (MPV) reduction में isopropanol में aluminium isopropoxide से aldehydes और ketones, alcohols में बदलते हैं, और C=C bonds को कुछ नहीं होता।"
+aliases: ["MPV अपचयन", "मीरवाइन पॉनडॉर्फ वर्ले अपचयन", "MPV reduction hindi", "meerwein ponndorf verley reduction hindi", "aluminium isopropoxide reduction hindi", "एल्युमिनियम आइसोप्रोपॉक्साइड अपचयन"]
+reagents: "Aluminium isopropoxide, Al[OCH(CH₃)₂]₃, और propan-2-ol (isopropanol) hydride donor व solvent के रूप में"
+conditions: "गर्म करें; equilibrium को आगे बढ़ाने के लिए acetone को distil करके निकाला जाता है"
+byproducts: "Acetone (propan-2-one)"
+reactantName: "Cyclohexanone"
+productName: "Cyclohexanol"
+memoryTricks:
+  - text: "केवल aldehyde or Ketone का अपचयन करता है।"
+    meaning: "MPV सिर्फ़ aldehydes या ketones को reduce करता है।"
+faq:
+  - q: "MPV reduction में reagent क्या है?"
+    a: "Propan-2-ol में aluminium isopropoxide, Al[OCH(CH₃)₂]₃। Isopropoxide group hydride देता है और ख़ुद oxidise होकर acetone बन जाता है।"
+  - q: "MPV reduction और Oppenauer oxidation में क्या अंतर है?"
+    a: "दोनों एक ही aluminium-catalysed hydride transfer हैं, बस उल्टी दिशाओं में। MPV में ज़्यादा isopropanol लिया जाता है और acetone हटाकर alcohol बनाया जाता है; Oppenauer oxidation में ज़्यादा acetone लेकर secondary alcohol को ketone में बदला जाता है।"
+  - q: "क्या MPV reduction C=C double bond को reduce करता है?"
+    a: "नहीं। Alkenes और alkynes react नहीं करते, इसलिए unsaturated aldehyde या ketone से unsaturated alcohol मिलता है। यही chemoselectivity इस reaction के exams में पूछे जाने का मुख्य कारण है।"
+  - q: "MPV reduction में acetone को distil करके क्यों निकाला जाता है?"
+    a: "हर step reversible है। Mixture में acetone का boiling point सबसे कम है, इसलिए distillation से इसे हटाने पर equilibrium reduced alcohol की तरफ़ खिसक जाता है।"
+  - q: "MPV reduction का mechanism क्या है?"
+    a: "Carbonyl oxygen aluminium से coordinate करता है, और एक hydride isopropoxide ligand के α-carbon से six-membered cyclic transition state के through carbonyl carbon पर जाता है। फिर isopropanol के साथ exchange से product alcohol मुक्त हो जाता है।"
+translated: 2026-11-22
+---
+
+## Meerwein–Ponndorf–Verley reduction क्या है?
+
+**Meerwein–Ponndorf–Verley (MPV) reduction** में **isopropanol (propan-2-ol)** में **aluminium isopropoxide** की मदद से **aldehyde को primary alcohol** में या **ketone को secondary alcohol** में बदला जाता है। Isopropoxide group से एक hydride carbonyl carbon पर जाता है, और isopropanol oxidise होकर acetone बन जाता है। सिर्फ़ C=O group reduce होता है: **C=C और C≡C bonds बचे रहते हैं**।
+
+यह reaction 1925 में Albert Verley ने और Hans Meerwein ने Rudolf Schmidt के साथ अलग-अलग खोजा था; 1926 में Wolfgang Ponndorf ने isopropanol में aluminium isopropoxide को reagent system के रूप में शुरू किया।
+
+## General reaction
+
+<Eq ce="R-CO-R' + (CH3)2CHOH <=>[Al(O-iPr)3] R-CH(OH)-R' + CH3COCH3" />
+
+यहाँ Al(O-iPr)₃ का मतलब Al[OCH(CH₃)₂]₃ है। Reaction एक equilibrium है; acetone (b.p. 56 °C) बनते ही flask से distil करके निकाल दिया जाता है, जो reaction को alcohol की तरफ़ खींचता है।
+
+## Mechanism
+
+1. **Coordination।** Substrate का carbonyl oxygen, Al(O-iPr)₃ के Lewis-acidic aluminium से जुड़ता है।
+2. **Six-membered ring के through hydride transfer।** Aluminium, isopropoxide oxygen, उसका α-carbon और hydrogen, और substrate का C=O मिलकर cyclic six-membered transition state बनाते हैं। Hydride एक concerted step में isopropoxide के α-carbon से carbonyl carbon पर चला जाता है।
+3. **Acetone का निकलना।** अपना hydride खो चुका isopropoxide ligand acetone बनकर निकल जाता है; substrate अब aluminium alkoxide है।
+4. **Alkoxide exchange।** Isopropanol, aluminium पर नए alkoxide से जगह बदलता है, जिससे product alcohol मुक्त होता है और aluminium isopropoxide वापस बन जाता है।
+
+<KeyPoint>
+इसमें न तो free hydride ion होता है और न कोई metal hydride: hydride **isopropanol के C–H** से आता है। इसीलिए यह reaction C=O के लिए इतना selective है।
+</KeyPoint>
+
+## Examples
+
+1. **Ketone से secondary alcohol।**
+<Eq ce="C6H10O ->[Al(O-iPr)3][(CH3)2CHOH] C6H11OH" />
+Cyclohexanone से cyclohexanol बनता है।
+
+2. **Unsaturated aldehyde: C=C बना रहता है।**
+<Eq ce="CH3CH=CHCHO ->[Al(O-iPr)3][(CH3)2CHOH] CH3CH=CHCH2OH" />
+But-2-enal से but-2-en-1-ol बनता है; double bond को छुआ नहीं जाता।
+
+3. **Ketone की उपस्थिति में aldehyde।** Aldehydes, ketones से तेज़ी से reduce होते हैं, इसलिए सावधानी से control करके पहले aldehyde group को reduce किया जा सकता है।
+
+## Chemoselectivity: MPV क्या reduce करता है और क्या नहीं
+
+| Group | MPV result |
+|---|---|
+| Aldehyde | 1° alcohol |
+| Ketone | 2° alcohol |
+| C=C, C≡C | कोई reaction नहीं |
+| दूसरे groups (esters, nitro, halides) | इन mild conditions में reduce नहीं होते |
+
+<ExamTip>
+अगर question में "unsaturated aldehyde या ketone के सिर्फ़ carbonyl group का reduction" पूछा जाए, तो MPV (Al(O-iPr)₃ / isopropanol) और [NaBH₄](/hi/reagents/sodium-borohydride/) सुरक्षित answers हैं। ज़्यादा मात्रा में [LiAlH₄](/hi/reagents/lithium-aluminium-hydride/) C=O के साथ conjugated C=C पर भी attack कर सकता है।
+</ExamTip>
+
+## Oppenauer oxidation से संबंध
+
+[Oppenauer oxidation](/hi/reactions/oppenauer-oxidation/), MPV reduction का **उल्टा** है। Aluminium isopropoxide और बहुत ज़्यादा **acetone** के साथ एक secondary alcohol अपना hydride acetone को दे देता है और ketone बन जाता है। कौन-सा product बनेगा, यह सिर्फ़ इस पर निर्भर करता है कि equilibrium को किस तरफ़ धकेला गया है:
+
+| | MPV reduction | Oppenauer oxidation |
+|---|---|---|
+| Substrate | Aldehyde या ketone | Secondary alcohol |
+| Hydride donor | Isopropanol | Substrate alcohol |
+| Hydride acceptor | Substrate का C=O | Acetone (ज़्यादा मात्रा) |
+| Equilibrium को आगे बढ़ाना | Acetone distil करके निकालना | ज़्यादा acetone |
+| Product | Alcohol | Ketone |
+
+## Limitations और side reactions
+
+- α-hydrogens वाले aldehydes या ketones में **aldol condensation** होड़ कर सकता है, क्योंकि aluminium alkoxides basic होते हैं (देखें [aldol condensation](/hi/reactions/aldol-condensation/))।
+- **बिना α-hydrogen वाले aldehydes** [Tishchenko reaction](/hi/reactions/tishchenko-reaction/) दे सकते हैं, जिससे alcohol की जगह ester बनता है।
+- Equilibrium होने के कारण अच्छी yield के लिए acetone हटाना या बहुत ज़्यादा isopropanol लेना ज़रूरी है।
+
+## Related reactions
+
+- [Oppenauer oxidation](/hi/reactions/oppenauer-oxidation/): उल्टी process।
+- [Cannizzaro reaction](/hi/reactions/cannizzaro-reaction/): carbonyl carbons के बीच एक और hydride transfer, लेकिन base से होने वाला।
+- [Sodium borohydride](/hi/reagents/sodium-borohydride/) और [lithium aluminium hydride](/hi/reagents/lithium-aluminium-hydride/): metal-hydride विकल्प।
+- [Reduction reactions hub](/hi/mechanisms/reduction-reactions/)।

@@ -1,0 +1,91 @@
+---
+title: "Bouveault–Blanc Reduction (बूवो–ब्लां अपचयन)"
+description: "Bouveault–Blanc reduction में absolute ethanol में sodium metal से ester एक primary alcohol (और R′OH) में बदलता है; यह LiAlH₄ का सस्ता विकल्प है।"
+aliases: ["बूवो ब्लां अपचयन", "बुवो ब्लांक रिडक्शन", "bouveault blanc reduction hindi", "BB reduction hindi", "Na ethanol ester reduction hindi", "ester se alcohol hindi"]
+reagents: "Sodium metal (Na, बारीक पिसा, excess में) और absolute ethanol"
+conditions: "पूरी तरह anhydrous (dry ethanol); aqueous work-up"
+byproducts: "R′OH (ester के alkoxy हिस्से से), sodium ethoxide, कुछ H₂"
+reactantName: "Ethyl oleate"
+productName: "Oleyl alcohol ((Z)-octadec-9-en-1-ol)"
+faq:
+  - q: "Bouveault–Blanc reduction का product क्या है?"
+    a: "दो alcohols। Ester R–COOR′ का acyl हिस्सा primary alcohol R–CH₂OH बन जाता है, और alkoxy हिस्सा R′OH के रूप में निकलता है। उदाहरण के लिए, ethyl oleate से oleyl alcohol और ethanol मिलते हैं।"
+  - q: "Bouveault–Blanc reduction में absolute ethanol क्यों इस्तेमाल करना ज़रूरी है?"
+    a: "Sodium पानी से बहुत तेज़ी से react करता है, इसलिए गीला ethanol metal बर्बाद करता है और yield कम देता है। Dry ethanol proton source का काम करता है और sodium को ester को electrons देने देता है।"
+  - q: "हर ester molecule के लिए कितने sodium atoms चाहिए?"
+    a: "चार। Ester carbon को CH₂OH में बदलने के लिए चार electrons चाहिए, जिनमें से हर एक एक sodium atom देता है; व्यवहार में excess sodium इस्तेमाल होता है क्योंकि कुछ ethanol से react करके H₂ के रूप में बर्बाद हो जाता है।"
+  - q: "Bouveault–Blanc reduction और acyloin condensation में क्या अंतर है?"
+    a: "दोनों में sodium और ester इस्तेमाल होते हैं। Proton donor के रूप में ethanol हो तो ester alcohols में reduce होता है (Bouveault–Blanc)। Proton donor न हो, यानी aprotic solvent में, radical intermediates आपस में जुड़कर α-hydroxy ketone (acyloin) देते हैं।"
+  - q: "LiAlH₄ होते हुए भी Bouveault–Blanc reduction क्यों इस्तेमाल होता है?"
+    a: "बड़ी मात्रा में sodium और ethanol, LiAlH₄ से कहीं सस्ते और handle करने में सुरक्षित हैं, इसलिए यह reaction industry में अब भी इस्तेमाल होती है, भले ही laboratory में LiAlH₄ ने इसकी जगह काफ़ी हद तक ले ली है।"
+translated: 2026-11-22
+---
+
+## Bouveault–Blanc reduction क्या है?
+
+**Bouveault–Blanc reduction** **absolute ethanol में sodium metal** की मदद से एक **ester (R–COOR′) को primary alcohol (R–CH₂OH)** और alcohol R′OH में बदलता है। Sodium एक-एक करके electrons देता है और ethanol protons देता है, इसलिए यह एक **dissolving-metal reduction** है, [Birch reduction](/hi/reactions/birch-reduction/) का करीबी रिश्तेदार। इसे Louis Bouveault और Gustave Louis Blanc ने 1903 में report किया था, जब उन्होंने ethyl oleate को oleyl alcohol में reduce किया।
+
+## General reaction
+
+<Eq ce="R-COOR' ->[Na, C2H5OH] R-CH2OH + R'-OH" />
+
+Work-up से पहले बनने वाले sodium salts के साथ लिखें तो हर ester पर चार sodium atoms लगते हैं:
+
+<Eq ce="RCOOR' + 4Na + 2C2H5OH -> RCH2ONa + R'ONa + 2C2H5ONa" />
+
+फिर पानी डालने पर free alcohols R–CH₂OH और R′–OH मिलते हैं।
+
+## Mechanism
+
+Sodium, metal surface पर electrons transfer करता है, इसीलिए बारीक पिसा sodium (या sodium dispersion) इस्तेमाल होता है। Textbook में आमतौर पर यह sequence दिया जाता है:
+
+1. **पहला electron।** Na, ester के C=O को एक electron देता है, जिससे एक **radical anion** (ketyl) बनता है।
+2. **Protonation।** Ethanol, oxygen anion को protonate करता है और एक carbon radical बचता है।
+3. **दूसरा electron।** एक और Na, radical को carbanion में reduce करता है, जिसे ethanol protonate करता है। इससे hemiacetal जैसा intermediate बनता है।
+4. **R′O⁻ का निकलना।** यह intermediate alkoxide R′O⁻ को बाहर निकालता है, जिससे एक **aldehyde** बनता है।
+5. **दो और electrons और दो protons।** Aldehyde इसी तरह (electron, proton, electron, proton) reduce होकर primary alcohol बन जाता है।
+
+<KeyPoint>
+कुल मिलाकर चार electrons (चार Na) और चार hydrogens जुड़ते हैं: R–CO–OR′ + 4[H] → R–CH₂OH + R′OH। Ethanol proton donor है; अगर यह न हो, तो radical anions इसकी जगह आपस में **couple** हो जाते हैं, और यही acyloin condensation है।
+</KeyPoint>
+
+## Examples
+
+1. **1903 का original example।** Ethyl oleate से oleyl alcohol मिलता है; chain का C=C double bond बचा रहता है।
+<Eq ce="C17H33COOC2H5 ->[Na, C2H5OH] C17H33CH2OH + C2H5OH" />
+
+2. **एक simple ester।** Ethyl butanoate से butan-1-ol और ethanol मिलते हैं।
+<Eq ce="CH3CH2CH2COOC2H5 ->[Na, C2H5OH] CH3CH2CH2CH2OH + C2H5OH" />
+
+3. **Aryl ether वाला ester।** Ethyl phenoxyacetate से 2-phenoxyethanol मिलता है।
+<Eq ce="C6H5OCH2COOC2H5 ->[Na, C2H5OH] C6H5OCH2CH2OH + C2H5OH" />
+
+## Bouveault–Blanc vs LiAlH₄
+
+| Point | Bouveault–Blanc (Na/EtOH) | [LiAlH₄](/hi/reagents/lithium-aluminium-hydride/) |
+|---|---|---|
+| Type | Dissolving metal, single-electron transfer | Hydride transfer |
+| Ester का product | 1° alcohol + R′OH | 1° alcohol + R′OH |
+| Solvent | Absolute ethanol | Dry ether या THF |
+| Cost | सस्ता; industry में इस्तेमाल | महँगा; laboratory reagent |
+| Isolated C=C | Reduce नहीं होता | Reduce नहीं होता |
+
+Metal hydrides आने से पहले esters को alcohols में reduce करने का यही एकमात्र practical तरीका था। अगर aldehyde पर ही रुकना हो, तो −78 °C पर [DIBAL-H](/hi/reagents/dibal-h/) इस्तेमाल करें।
+
+<ExamTip>
+Ester पर Na/C₂H₅OH → **दो alcohols**। Acyl carbon को CH₂OH लिखें और alkoxy group को उसके alcohol के रूप में निकालें। इसे [Claisen condensation](/hi/reactions/claisen-condensation/) से confuse न करें, जहाँ sodium ethoxide (एक base, sodium metal नहीं) दो ester molecules को जोड़कर β-keto ester बनाता है।
+</ExamTip>
+
+## Limitations
+
+- **पानी बिल्कुल नहीं होना चाहिए।** गीला ethanol sodium को खर्च कर देता है और yield कम देता है।
+- **Excess sodium** चाहिए, क्योंकि कुछ sodium ethanol से react करके H₂ देता है।
+- **Proton donor नहीं, तो reduction नहीं:** aprotic solvent में ester इसकी जगह couple होकर acyloin बनाता है।
+- आधुनिक variants, जैसे silica gel पर absorbed alkali metal, reaction को सुरक्षित बनाते हैं और yields को hydride reagents के करीब रखते हैं।
+
+## Related reactions
+
+- [Birch reduction](/hi/reactions/birch-reduction/): वही dissolving-metal idea, aromatic rings पर लागू।
+- [Lithium aluminium hydride](/hi/reagents/lithium-aluminium-hydride/): ester → alcohol के लिए laboratory hydride method।
+- [DIBAL-H](/hi/reagents/dibal-h/): esters का aldehydes तक partial reduction।
+- [Reduction reactions hub](/hi/mechanisms/reduction-reactions/)।

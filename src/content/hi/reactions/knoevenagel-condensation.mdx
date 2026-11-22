@@ -1,0 +1,98 @@
+---
+title: "Knoevenagel Condensation (नोवेनागेल संघनन)"
+description: "Knoevenagel condensation में aldehyde या ketone, diethyl malonate जैसे active methylene compound से weak amine base की मदद से जुड़कर C=C वाला product देता है।"
+aliases: ["नोवेनागेल संघनन", "क्नोवेनागेल अभिक्रिया", "knoevenagel condensation hindi", "knoevenagel reaction hindi", "doebner modification hindi", "डोबनर संशोधन", "active methylene compound hindi"]
+reagents: "Active methylene compound Z–CH₂–Z′ (diethyl malonate, malonic acid, ethyl acetoacetate, ethyl cyanoacetate) और piperidine या pyridine जैसा weakly basic amine"
+conditions: "Mild base, अक्सर गुनगुना; Doebner modification: refluxing pyridine में malonic acid (decarboxylation)"
+byproducts: "H₂O"
+reactantName: "Benzaldehyde"
+productName: "Diethyl benzylidenemalonate"
+faq:
+  - q: "Knoevenagel condensation का product क्या है?"
+    a: "एक alkene, जिसमें पानी निकलने के बाद carbonyl carbon अब active methylene carbon से double bond से जुड़ा होता है। Benzaldehyde और diethyl malonate से diethyl benzylidenemalonate, C₆H₅CH=C(COOEt)₂, बनता है।"
+  - q: "Knoevenagel condensation में weak base क्यों इस्तेमाल होता है?"
+    a: "Active methylene compound का CH₂ दो electron-withdrawing groups के बीच होता है और piperidine जैसे amine के लिए काफ़ी acidic (pKa लगभग 9–13) होता है। Strong base aldehyde या ketone को भी deprotonate कर देगा और उसका self-condensation करवा देगा।"
+  - q: "Doebner modification क्या है?"
+    a: "जब pyridine में malonic acid इस्तेमाल होता है, तो condensation के बाद CO₂ निकल जाती है। तब benzaldehyde से cinnamic acid, C₆H₅CH=CHCOOH, और crotonaldehyde से sorbic acid बनता है।"
+  - q: "Active methylene compound क्या होता है?"
+    a: "ऐसा compound जिसमें CH₂ group दो electron-withdrawing groups के बीच हो, Z–CH₂–Z′, जैसे diethyl malonate, ethyl acetoacetate, malononitrile या ethyl cyanoacetate। दोनों groups carbanion का negative charge बाँट लेते हैं, जिससे hydrogens acidic हो जाते हैं।"
+  - q: "Knoevenagel, aldol condensation से कैसे अलग है?"
+    a: "यह एक modified aldol condensation है। इसमें nucleophile साधारण aldehyde या ketone की जगह active methylene compound होता है, weak amine base काफ़ी होता है, और सामान्य रूप से dehydrated C=C product ही isolate किया जाता है।"
+translated: 2026-11-22
+---
+
+## Knoevenagel condensation क्या है?
+
+**Knoevenagel condensation** में एक **aldehyde या ketone**, किसी **active methylene compound** (Z–CH₂–Z′, जहाँ Z और Z′ electron-withdrawing groups हैं) से piperidine या pyridine जैसे **weakly basic amine** की उपस्थिति में react करता है। Carbanion C=O group पर जुड़ता है और फिर adduct **पानी खो देता है**, जिससे नए C=C bond वाला α,β-unsaturated product बनता है। यह aldol condensation का modification है, जिसका नाम German chemist Emil Knoevenagel के नाम पर है।
+
+## General reaction
+
+<Eq ce="R2C=O + CH2ZZ' ->[amine base] R2C=CZZ' + H2O" />
+
+आम active methylene partners:
+
+| Compound | Z, Z′ | CH₂ का लगभग pKa |
+|---|---|---|
+| Acetylacetone (pentane-2,4-dione) | COCH₃, COCH₃ | 9 |
+| Ethyl acetoacetate | COCH₃, COOEt | 11 |
+| Diethyl malonate | COOEt, COOEt | 13 |
+| Malonic acid, cyanoacetic acid, malononitrile | COOH / CN | acidic CH₂ |
+| Nitromethane (एक strong group) | NO₂ | लगभग 9 |
+
+इनकी तुलना साधारण ketone (pKa लगभग 19) या ester (लगभग 25) से करें: amine base active methylene compound से proton हटा सकता है, लेकिन carbonyl partner को मुश्किल से छूता है।
+
+<KeyPoint>
+**Weak** base क्यों: Z इतना strong होना चाहिए कि mild amine से deprotonation हो सके। Strong base aldehyde या ketone का enolate भी बना देगा और उसका self-condensation शुरू कर देगा।
+</KeyPoint>
+
+## Mechanism
+
+1. **Carbanion (enol) बनना।** Piperidine, diethyl malonate के CH₂ से एक proton हटाता है, जिससे stabilised carbanion बनता है; charge दोनों ester carbonyls में बँट जाता है।
+2. **Addition।** Carbanion aldehyde के C=O पर attack करता है, जिससे alkoxide बनता है जो protonate होकर aldol-type adduct R–CH(OH)–CH(COOEt)₂ देता है।
+3. **Elimination।** दोनों esters के बीच बचा CH बहुत acidic है, इसलिए base उसे हटाता है और OH⁻ बाहर निकलता है (E1cB-type step)। बना हुआ C=C दोनों ester groups के साथ conjugated होता है।
+
+<Eq ce="CH2(COOEt)2 + B <=> ^-CH(COOEt)2 + BH+" />
+<Eq ce="RCHO + ^-CH(COOEt)2 -> RCH(OH)CH(COOEt)2 ->[-H2O] RCH=C(COOEt)2" />
+
+एक दूसरी तस्वीर में piperidine organocatalyst की तरह काम करता है: amine पहले aldehyde को **iminium ion** में बदलता है, जो ख़ुद aldehyde से बेहतर electrophile है।
+
+<ExamTip title="Common mistake">
+β-hydroxy adduct पर मत रुकिए। Knoevenagel condensation की पहचान ही dehydration step है, इसलिए expected answer C=C product है, जैसे acetaldehyde और diethyl malonate से CH₃CH=C(COOEt)₂। यह भी ध्यान रखें कि textbook base एक weak amine (piperidine या pyridine) है, sodium ethoxide नहीं।
+</ExamTip>
+
+## Doebner modification
+
+जब activating groups में से एक **carboxylic acid** हो, जैसे **malonic acid** में, और reaction **pyridine** में किया जाए, तो condensation के साथ **decarboxylation** भी होता है। Product में सिर्फ़ एक COOH group बचता है।
+
+<Eq ce="C6H5CHO + CH2(COOH)2 ->[pyridine][\Delta] C6H5CH=CHCOOH + CO2 + H2O" />
+
+Pyridine में malonic acid के साथ acrolein से *trans*-penta-2,4-dienoic acid बनता है, और crotonaldehyde से **sorbic acid** (hexa-2,4-dienoic acid), जो एक food preservative है।
+
+## Examples
+
+**1. Benzaldehyde और diethyl malonate।**
+
+<Eq ce="C6H5CHO + CH2(COOEt)2 ->[piperidine] C6H5CH=C(COOEt)2 + H2O" />
+
+**2. Acetaldehyde और diethyl malonate।**
+
+<Eq ce="CH3CHO + CH2(COOEt)2 ->[piperidine] CH3CH=C(COOEt)2 + H2O" />
+
+Intermediate CH₃CH(OH)CH(COOEt)₂ aldol-type adduct है; Knoevenagel conditions में यह dehydrate होकर diethyl ethylidenemalonate बन जाता है।
+
+**3. Cinnamic acid (Doebner)।** Pyridine में malonic acid के साथ benzaldehyde, जैसा ऊपर दिखाया गया है। Cinnamic acids बनाने के लिए यह [Perkin reaction](/hi/reactions/perkin-reaction/) का एक विकल्प है।
+
+## Applications
+
+- Hantzsch pyridine synthesis और कई heterocycle syntheses में एक Knoevenagel step होता है।
+- Antimalarial drug lumefantrine के industrial synthesis में Knoevenagel condensation एक key step है।
+- दो electron-withdrawing groups के साथ conjugated C=C वाले products बेहतरीन [Michael acceptors](/hi/reactions/michael-addition/) होते हैं।
+
+## Related reactions
+
+- [Aldol condensation](/hi/reactions/aldol-condensation/) और [cross aldol condensation](/hi/reactions/cross-aldol-condensation/): मूल reactions।
+- [Perkin reaction](/hi/reactions/perkin-reaction/): cinnamic acids का एक और रास्ता।
+- [Henry reaction](/hi/reactions/henry-reaction/): active hydrogen partner के रूप में nitroalkanes।
+- [Michael addition](/hi/reactions/michael-addition/): वही malonate carbanion α,β-unsaturated carbonyl पर 1,4 जुड़ता है।
+- [Decarboxylation](/hi/reactions/decarboxylation/): Doebner modification का extra step।
+- Hub: [Carbonyl condensation reactions](/hi/mechanisms/carbonyl-condensation-reactions/)

@@ -1,0 +1,88 @@
+---
+title: "Oxymercuration–Demercuration (ऑक्सीमर्क्यूरेशन–डीमर्क्यूरेशन)"
+description: "Oxymercuration–demercuration में Hg(OAc)₂/H₂O और फिर NaBH₄ से alkene, Markovnikov alcohol में बदलता है, बिना carbocation rearrangement के। Mechanism सहित।"
+aliases: ["ऑक्सीमर्क्यूरेशन डीमर्क्यूरेशन", "ऑक्सीमरक्यूरेशन", "oxymercuration demercuration hindi", "oxymercuration hindi", "mercuric acetate hydration hindi", "alkene se alcohol bina rearrangement", "मर्क्यूरिक एसीटेट से जलयोजन"]
+reagents: "(i) Hg(OAc)₂ (mercuric acetate), H₂O/THF; (ii) NaBH₄, OH⁻"
+conditions: "Room temperature, दो steps"
+byproducts: "Hg (metal), acetic acid"
+reactantName: "Propene"
+productName: "Propan-2-ol"
+faq:
+  - q: "Propene के oxymercuration–demercuration का product क्या है?"
+    a: "Propan-2-ol। Double bond पर पानी Markovnikov तरीके से जुड़ता है, इसलिए OH ज़्यादा substituted carbon (C-2) पर जाता है और H, C-1 पर।"
+  - q: "Oxymercuration–demercuration में rearrangement क्यों नहीं होता?"
+    a: "Intermediate एक bridged mercurinium ion है, free carbocation नहीं। चूँकि कोई खुला carbocation नहीं बनता, इसलिए acid-catalysed hydration के उलट, hydride और alkyl shifts नहीं होते।"
+  - q: "Oxymercuration syn addition है या anti?"
+    a: "Oxymercuration step एक anti addition है: पानी mercurinium ion पर mercury की उल्टी तरफ़ से attack करता है। NaBH₄ वाला demercuration step radicals के through होता है और stereospecific नहीं है, इसलिए कुल मिलाकर H और OH cis या trans दोनों हो सकते हैं।"
+  - q: "Oxymercuration–demercuration और hydroboration–oxidation में क्या अंतर है?"
+    a: "दोनों बिना rearrangement के alkene का hydration करते हैं, लेकिन oxymercuration–demercuration Markovnikov alcohol देता है जबकि hydroboration–oxidation anti-Markovnikov alcohol देता है (और यह syn addition है)।"
+translated: 2026-11-22
+---
+
+## Oxymercuration–demercuration क्या है?
+
+**Oxymercuration–demercuration** एक two-step तरीका है जिसमें C=C bond पर पानी जोड़कर **Markovnikov** orientation वाला **alcohol** बनाया जाता है। Step (i) में alkene, aqueous THF में **mercuric acetate, Hg(OAc)₂**, से react करता है; step (ii) में organomercury intermediate को base में **sodium borohydride (NaBH₄)** से reduce किया जाता है। चूँकि reaction free carbocation की जगह bridged mercurinium ion से होकर गुज़रता है, इसलिए carbon skeleton **rearrange नहीं होता**।
+
+Propene के लिए product **propan-2-ol** है: OH ज़्यादा substituted carbon पर, H CH₂ वाले सिरे पर।
+
+## Mechanism
+
+**Step (i): oxymercuration**
+
+1. **Electrophilic attack।** Hg(OAc)₂ एक acetate ion खोता है, और electrophilic ⁺HgOAc पर alkene के π electrons attack करते हैं। एक three-membered **mercurinium ion** बनता है, जिसमें mercury दोनों carbons के बीच bridge बनाता है।
+2. **पानी का attack।** पानी bridge को **ज़्यादा substituted carbon** पर खोलता है, क्योंकि उस carbon पर partial positive charge ज़्यादा होता है। यह mercury की उल्टी तरफ़ से आता है, इसलिए यह step **anti addition** है।
+3. **Deprotonation।** Acetate (या पानी) oxonium ion से एक proton हटाता है, जिससे neutral β-hydroxyalkylmercury acetate बनता है।
+
+<Eq ce="CH3-CH=CH2 + Hg(OAc)2 + H2O -> CH3-CH(OH)-CH2-HgOAc + CH3COOH" />
+
+**Step (ii): demercuration**
+
+4. **Reduction।** Aqueous base में NaBH₄, –HgOAc group की जगह H लगा देता है, और metallic mercury अलग हो जाता है। यह step radical intermediates के through होता है और stereospecific नहीं है।
+
+<Eq ce="CH3-CH(OH)-CH2-HgOAc ->[NaBH4, OH-] CH3-CH(OH)-CH3 + Hg" />
+
+<KeyPoint>
+Oxymercuration–demercuration = **बिना rearrangement के** Markovnikov hydration। पहला step anti addition है, लेकिन radical वाले demercuration step से overall stereochemistry बिगड़ जाती है।
+</KeyPoint>
+
+## Examples
+
+**1. Propene से propan-2-ol:**
+
+<Eq ce="CH3-CH=CH2 ->[(i) Hg(OAc)2, H2O][(ii) NaBH4] CH3-CH(OH)-CH3" />
+
+**2. 3,3-Dimethylbut-1-ene से 3,3-dimethylbutan-2-ol।** Dilute acid के साथ यह alkene methyl shift के through मुख्य रूप से rearranged 2,3-dimethylbutan-2-ol देता है। Oxymercuration–demercuration **बिना rearrangement वाला** alcohol देता है:
+
+<Eq ce="(CH3)3C-CH=CH2 ->[(i) Hg(OAc)2, H2O][(ii) NaBH4] (CH3)3C-CH(OH)-CH3" />
+
+**3. Norbornene से exo-norborneol।** इस rigid bicyclic alkene में पानी कम hindered **exo** face से attack करता है, इसलिए OH exo position पर आता है।
+
+<ExamTip>
+अगर question में ऐसा alkene दिया हो जो H₃O⁺ में rearrange हो जाएगा (quaternary या 3° carbon के बगल में 2° carbocation), और rearrangement के **बिना** alcohol पूछा जाए, तो answer oxymercuration–demercuration (Markovnikov) या hydroboration–oxidation (anti-Markovnikov) है।
+</ExamTip>
+
+## Alkoxymercuration: ethers बनाना
+
+अगर पानी की जगह alcohol को solvent लिया जाए, तो alcohol का oxygen mercurinium ion को खोलता है। NaBH₄ reduction के बाद product एक **ether** होता है जिसमें OR group ज़्यादा substituted carbon पर होता है। उदाहरण के लिए, methanol में Hg(OAc)₂ के साथ propene, फिर NaBH₄, से 2-methoxypropane बनता है।
+
+## Alkene hydration के तरीकों की तुलना
+
+| तरीका | Reagents | Orientation | Rearrangement? | Stereochemistry |
+|---|---|---|---|---|
+| Acid-catalysed hydration | dil. H₂SO₄ / H₃O⁺ | Markovnikov | हाँ (carbocation) | Stereospecific नहीं |
+| Oxymercuration–demercuration | Hg(OAc)₂, H₂O; NaBH₄ | Markovnikov | नहीं | Step (i) में anti; overall scrambled |
+| Hydroboration–oxidation | BH₃·THF; H₂O₂, NaOH | Anti-Markovnikov | नहीं | Syn |
+
+## Limitations और exceptions
+
+- Mercury compounds बहुत toxic होते हैं, इसलिए आज industry में यह तरीका कम इस्तेमाल होता है; exam questions में यह अब भी पसंदीदा है।
+- सिर्फ़ hydration step anti है। आखिरी H और OH के लिए fixed cis या trans relationship न लिखें, जब तक substrate rigid न हो (जैसे norbornene)।
+- Mercury salt को सामान्य रूप से (RCOO)₂Hg भी लिखा जा सकता है; mercuric acetate (R = CH₃) standard choice है, और exam answers में दोनों रूप मान्य हैं, बशर्ते इसके बाद NaBH₄ लिखा हो।
+
+## Related reactions
+
+- [Hydroboration–oxidation](/hi/reactions/hydroboration-oxidation/) उसी alkene से anti-Markovnikov alcohol देता है।
+- [Markovnikov's rule](/hi/reactions/markovnikov-rule/) orientation को समझाता है।
+- [Kucherov reaction](/hi/reactions/kucherov-reaction/) alkynes का Hg²⁺-catalysed hydration है जिससे ketones बनते हैं।
+- [Dehydration of alcohols](/hi/reactions/dehydration-of-alcohols/) उल्टी दिशा है: alcohol से alkene।
+- Overview: [Electrophilic addition reactions](/hi/mechanisms/electrophilic-addition/)।

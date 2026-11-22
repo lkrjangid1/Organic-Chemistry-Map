@@ -1,0 +1,84 @@
+---
+title: "Mendius Reduction (मेंडियस अपचयन)"
+description: "Mendius reduction में sodium और ethanol से nitrile (R–C≡N) primary amine R–CH₂–NH₂ में बदलता है। Mechanism, examples और LiAlH₄ व H₂/Ni से तुलना।"
+aliases: ["मेंडियस अपचयन", "मेंडियस रिडक्शन", "mendius reduction hindi", "mendius reaction hindi", "nitrile reduction hindi", "Na C2H5OH reduction hindi", "nitrile se primary amine"]
+reagents: "Sodium metal + ethanol (C₂H₅OH)"
+conditions: "Ethanol में nitrile पर sodium metal डाला जाता है"
+reactantName: "Propanenitrile (ethyl cyanide)"
+productName: "Propan-1-amine"
+faq:
+  - q: "Mendius reduction क्या है?"
+    a: "यह ethanol में sodium metal से nitrile, R–C≡N, का primary amine, R–CH₂–NH₂, में reduction है। C≡N triple bond पर चार hydrogen atoms जुड़ते हैं।"
+  - q: "Methyl cyanide के Mendius reduction का product क्या है?"
+    a: "Ethanamine (ethylamine), CH₃CH₂NH₂। Nitrile का carbon nitrogen से जुड़ा CH₂ बन जाता है।"
+  - q: "Nitrile reduction को amine series का ascent क्यों कहते हैं?"
+    a: "Alkyl halide R–X cyanide के साथ R–CN देता है, जिससे एक carbon बढ़ जाता है। फिर nitrile का reduction R–CH₂–NH₂ देता है, जो उस amine R–NH₂ से एक carbon ज़्यादा वाला amine है जो R–X सीधे देता।"
+  - q: "कौन-से दूसरे reagents nitriles को primary amines में reduce करते हैं?"
+    a: "Lithium aluminium hydride और फिर पानी, और catalytic hydrogenation (Ni, Pd या Pt के साथ H₂)। Diborane और LiBH₄ भी काम करते हैं। सभी R–CH₂–NH₂ देते हैं।"
+  - q: "क्या isocyanides और nitriles reduction पर एक ही amine देते हैं?"
+    a: "नहीं। Nitrile R–C≡N primary amine R–CH₂NH₂ देता है, जबकि isomeric isocyanide R–N≡C secondary amine R–NH–CH₃ देता है, क्योंकि उसका carbon nitrogen पर methyl group बनकर रह जाता है।"
+translated: 2026-11-22
+---
+
+## Mendius reduction क्या है?
+
+**Mendius reduction** में **sodium metal और ethanol** से **nitrile (alkyl या aryl cyanide, R–C≡N) को primary amine, R–CH₂–NH₂,** में reduce किया जाता है। C≡N triple bond पर चार hydrogen atoms जुड़ते हैं; nitrile का carbon nitrogen से जुड़ा CH₂ group बन जाता है। इसका नाम Otto Mendius पर है, जिन्होंने 1862 में nitriles के इस नए conversion को report किया था।
+
+<Eq ce="R-C#N ->[Na, C2H5OH] R-CH2-NH2" />
+
+## Mechanism (dissolving-metal reduction)
+
+Sodium electron source का काम करता है और ethanol proton source का, ठीक वैसे ही जैसे esters के [Bouveault–Blanc reduction](/hi/reactions/bouveault-blanc-reduction/) में होता है।
+
+1. **Electron transfer।** Sodium C≡N group को एक electron देता है, जिससे radical anion बनता है।
+2. **Protonation।** Ethanol इसे protonate करता है; दूसरा electron और दूसरा proton मिलकर H₂ का पहला addition पूरा करते हैं, जिससे imine, R–CH=NH, बनता है।
+3. **दूसरा reduction।** Imine का C=N भी इसी तरह (दो electrons, दो protons) reduce होकर amine R–CH₂–NH₂ बनता है।
+
+कुल मिलाकर हर nitrile के लिए चार sodium atoms और चार ethanol molecules लगते हैं, और sodium ethoxide बनता है।
+
+<Eq ce="R-C#N + 4Na + 4C2H5OH -> R-CH2-NH2 + 4C2H5ONa" />
+
+<KeyPoint>
+जो भी reagent nitrile को पूरी तरह reduce करता है (Na/C₂H₅OH, LiAlH₄ फिर H₂O, या H₂/Ni), वह **एक ही** primary amine, R–CH₂–NH₂, देता है। Aldehyde तक partial reduction के लिए special reagents चाहिए: SnCl₂/HCl ([Stephen reduction](/hi/reactions/stephen-reduction/)) या DIBAL-H।
+</KeyPoint>
+
+## Examples
+
+**Ethanenitrile से ethanamine**
+
+<Eq ce="CH3-C#N ->[Na, C2H5OH] CH3-CH2-NH2" />
+
+**Amine series का ascent।** Chloroethane, KCN के साथ propanenitrile देता है, और reduction से propan-1-amine मिलता है, जो chloroethane के ammonolysis से मिलने वाले ethanamine से एक carbon ज़्यादा है।
+
+<Eq ce="CH3CH2Cl ->[KCN] CH3CH2CN ->[Na, C2H5OH] CH3CH2CH2NH2" />
+
+**Benzonitrile से benzylamine**
+
+<Eq ce="C6H5-C#N ->[Na, C2H5OH] C6H5-CH2-NH2" />
+
+## Nitrile reducing agents की तुलना
+
+| Reagent | R–C≡N से product | Note |
+|---|---|---|
+| Na + C₂H₅OH (Mendius) | R–CH₂–NH₂ | dissolving-metal reduction |
+| [LiAlH₄](/hi/reagents/lithium-aluminium-hydride/), फिर H₂O | R–CH₂–NH₂ | NCERT वाला reagent |
+| H₂ / Ni, Pd या Pt ([catalytic hydrogenation](/hi/reactions/catalytic-hydrogenation/)) | R–CH₂–NH₂ | industry में सबसे सस्ता; कुछ 2° और 3° amine बन सकता है |
+| SnCl₂ / HCl, फिर H₃O⁺ | R–CHO | Stephen reduction, aldehyde पर रुकता है |
+| DIBAL-H, फिर H₂O | R–CHO | aldehyde पर रुकता है |
+
+## Limitations और exceptions
+
+- Catalytic hydrogenation में imine intermediate पर amine product attack कर सकता है, जिससे कुछ secondary और tertiary amine बनते हैं; catalyst का चुनाव इसे control करता है।
+- बहुत acidic या basic aqueous conditions में –CN group reduce होने की जगह hydrolyse होकर amide या acid बन सकता है, इसलिए reduction alcohol में किया जाता है।
+- **Isocyanides अलग व्यवहार करते हैं:** R–N≡C reduce होकर secondary amine R–NH–CH₃ देता है, जो nitriles के साथ एक common exam contrast है।
+
+<ExamTip>
+Carbons गिनें। Nitrile reduction का product R–CN के सारे carbons रखता है, इसलिए R–CH₂NH₂ में उस alkyl halide R–X से एक carbon ज़्यादा होता है जिससे nitrile बनाया गया था। Hofmann bromamide degradation इसका उल्टा करता है (एक carbon कम)।
+</ExamTip>
+
+## Related reactions
+
+- [Bouveault–Blanc reduction](/hi/reactions/bouveault-blanc-reduction/): Na/ethanol से esters का alcohols में reduction।
+- [Reductive amination](/hi/reactions/reductive-amination/): Na/ethanol oximes को भी primary amines में reduce करता है।
+- [Stephen reduction](/hi/reactions/stephen-reduction/): nitrile से aldehyde।
+- [Preparation of amines](/hi/preparation/preparation-of-amines/): सभी methods की तुलना।

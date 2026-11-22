@@ -1,0 +1,88 @@
+---
+title: "Corey–House Synthesis (कोरी-हाउस संश्लेषण)"
+description: "Corey–House synthesis में lithium dialkylcuprate (Gilman reagent, R2CuLi) alkyl halide R′X से जुड़कर unsymmetrical alkane R–R′ देता है। Steps और examples।"
+aliases: ["कोरी-हाउस संश्लेषण", "कोरी हाउस अभिक्रिया", "corey house synthesis hindi", "corey house reaction hindi", "gilman reagent hindi", "unsymmetrical alkane banana"]
+reagents: "1. Li (dry ether); 2. CuI; 3. R′–X"
+conditions: "Dry ether या THF, room temperature या उससे कम"
+byproducts: "LiX, CH3Cu (organocopper), LiBr"
+reactantName: "1-Bromobutane (lithium dimethylcuprate के साथ)"
+productName: "Pentane"
+faq:
+  - q: "Corey–House synthesis में Gilman reagent क्या है?"
+    a: "एक lithium dialkylcuprate, R2CuLi, जो alkyllithium के दो equivalents को copper(I) iodide से treat करके बनता है। यह alkyl group R को nucleophile की तरह देता है।"
+  - q: "Unsymmetrical alkanes के लिए Corey–House synthesis, Wurtz reaction से बेहतर क्यों है?"
+    a: "Corey–House में सिर्फ़ cross product R–R′ ही अच्छी मात्रा में बनता है, जबकि दो अलग halides के साथ Wurtz, R–R, R–R′ और R′–R′ का mixture देता है। इसलिए इससे odd-carbon alkanes साफ़-सुथरे तरीके से बन सकते हैं।"
+  - q: "Corey–House synthesis में कौन-से alkyl halides सबसे अच्छे काम करते हैं?"
+    a: "Halide R′–X methyl, primary, benzylic, allylic या secondary cycloalkyl halide होना चाहिए, और बेहतर है कि bromide या iodide हो। Tertiary और open-chain secondary halides कम yield देते हैं, हालाँकि cuprate खुद 1°, 2° या 3° groups रख सकता है।"
+  - q: "Corey–House synthesis के coupling step का mechanism क्या है?"
+    a: "Cuprate, R′–X पर SN2-like step में attack करता है, जिससे copper(III) intermediate बनता है, जो reductive elimination से R–R′ देता है। Alkyl bromides और tosylates में R′ का configuration invert हो जाता है।"
+translated: 2026-11-22
+---
+
+## Corey–House synthesis क्या है?
+
+**Corey–House synthesis** में **lithium dialkylcuprate** (**Gilman reagent**, R₂CuLi) और **alkyl halide** R′–X जुड़कर alkane **R–R′** बनाते हैं। चूँकि सिर्फ़ cross product बनता है, यह **unsymmetrical alkanes** बनाने का standard method है, जिनमें odd number of carbon atoms वाले alkanes भी शामिल हैं जिन्हें Wurtz reaction साफ़ तरीके से नहीं बना पाता। इसे 1960s के आखिर में E. J. Corey और Herbert House (Posner और Whitesides के साथ) ने develop किया था।
+
+## General reaction (तीन steps)
+
+पूरा sequence एक alkyl halide से शुरू होता है:
+
+1. **Alkyllithium बनना:** dry ether में lithium metal के साथ R–X।
+
+<Eq ce="R-X + 2 Li ->[dry ether] R-Li + LiX" />
+
+2. **Gilman reagent बनना:** दो alkyllithiums और copper(I) halide (आमतौर पर CuI)।
+
+<Eq ce="2 R-Li + CuI -> R2CuLi + LiI" />
+
+3. **Coupling:** cuprate और दूसरा alkyl halide।
+
+<Eq ce="R2CuLi + R'-X -> R-R' + R-Cu + LiX" />
+
+R और R′ एक जैसे भी हो सकते हैं और अलग भी। Cuprate का एक R group transfer नहीं होता और organocopper species के रूप में बच जाता है।
+
+## Mechanism
+
+1. **Carbanion equivalent बनाने के लिए electron transfer।** हर lithium atom एक electron देता है (2Li → 2Li⁺ + 2e⁻)। दो electrons R–X को R⁻ और X⁻ में reduce करते हैं, जो Li⁺ के साथ RLi और LiX बनाते हैं।
+2. **Transmetalation।** RLi अपना alkyl group copper को दे देता है, जिससे dialkylcuprate anion [R–Cu–R]⁻ Li⁺ बनता है।
+3. **SN2-like attack।** Cuprate एक soft carbon nucleophile की तरह R′–X के carbon पर पीछे से attack करता है और X⁻ को हटा देता है। Sources के अनुसार इससे copper(III) intermediate बनता है।
+4. **Reductive elimination।** Cu(III) species R–R′ छोड़ देती है और वापस copper(I) बन जाती है।
+
+<KeyPoint>
+Exam answers में coupling step को आमतौर पर **SN2** लिखा जाता है; सही मायने में यह SN2-like है: alkyl bromides और tosylates में R′ का configuration invert होता है, और reaction unhindered (methyl, 1°) halides के साथ सबसे अच्छा चलता है, ठीक वैसे ही जैसा backside attack से उम्मीद होती है। Alkyl iodides में कुछ radical character (configuration का खो जाना) दिखता है।
+</KeyPoint>
+
+## Examples
+
+1. **Bromomethane और 1-bromobutane से pentane** (एक odd-carbon alkane):
+
+<Eq ce="2 CH3Li + CuI -> (CH3)2CuLi + LiI" />
+<Eq ce="(CH3)2CuLi + CH3(CH2)3Br -> CH3(CH2)3CH3 + CH3Cu + LiBr" />
+
+2. **Ethyl और methyl groups से propane:**
+
+<Eq ce="(C2H5)2CuLi + CH3I -> C2H5-CH3 + C2H5Cu + LiI" />
+
+3. **Aryl groups भी काम करते हैं:** lithium diphenylcuprate और iodomethane से toluene मिलता है।
+
+<Eq ce="(C6H5)2CuLi + CH3I -> C6H5-CH3 + C6H5Cu + LiI" />
+
+<ExamTip>
+Corey–House route design करने के लिए target alkane को किसी भी C–C bond पर तोड़ें। जो हिस्सा branched या hindered हो सकता है, उससे cuprate बनाएँ, और **कम hindered (primary या methyl) हिस्से को R′–X** के रूप में लें।
+</ExamTip>
+
+## Limitations और exceptions
+
+- **Hindered halides काम नहीं करते:** tertiary और open-chain secondary R′–X कम yield या elimination देते हैं।
+- **Chlorides मुश्किल से चलते हैं;** bromides, iodides और tosylates को prefer किया जाता है।
+- Simple version में **एक R बेकार जाता है** (R–Cu के रूप में), जो तब मायने रखता है जब R कीमती हो।
+- **Moisture से बचाना ज़रूरी है:** RLi और R₂CuLi, Grignard reagents की तरह ही पानी और alcohols से नष्ट हो जाते हैं।
+- सिर्फ़ organolithium या Grignard reagents alkyl halides के साथ ठीक से couple नहीं करते (metal–halogen exchange, reduction और elimination साथ-साथ होते हैं); copper ही coupling को selective बनाता है।
+
+## Related reactions
+
+- [Wurtz reaction](/hi/reactions/wurtz-reaction/): R–X और Na से symmetrical alkanes।
+- [Wurtz–Fittig reaction](/hi/reactions/wurtz-fittig-reaction/): sodium के साथ aryl–alkyl coupling।
+- [Grignard reagent](/hi/reactions/grignard-reagent/): Mg से बनने वाला एक और organometallic carbon nucleophile।
+- [SN2 reaction](/hi/reactions/sn2-reaction/): coupling step का backside attack pattern।
+- Hub: [Coupling reactions](/hi/mechanisms/coupling-reactions/)

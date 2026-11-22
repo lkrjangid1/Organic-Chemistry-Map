@@ -1,0 +1,80 @@
+---
+title: "Prilezhaev Epoxidation (प्रिलेझायेव एपॉक्सीकरण)"
+description: "Prilezhaev epoxidation में mCPBA जैसे peroxy acid से alkene एक concerted syn step में epoxide बनता है और alkene की geometry बनी रहती है। Mechanism सहित।"
+aliases: ["प्रिलेझायेव अभिक्रिया", "एपॉक्सीकरण", "prilezhaev reaction hindi", "epoxidation of alkenes hindi", "mcpba epoxidation hindi", "peracid epoxidation hindi"]
+reagents: "Peroxy acid RCO₃H: mCPBA, MMPP (magnesium monoperoxyphthalate) या peracetic acid"
+conditions: "Inert solvent (CH₂Cl₂, CHCl₃, hexane), लगभग −10 से 60 °C"
+byproducts: "Carboxylic acid (जैसे mCPBA से m-chlorobenzoic acid)"
+reactantName: "Cyclohexene"
+productName: "Cyclohexene oxide (7-oxabicyclo[4.1.0]heptane)"
+faq:
+  - q: "Prilezhaev reaction का product क्या है?"
+    a: "एक epoxide (oxirane)। Peroxy acid, C=C bond को एक oxygen atom देता है, और peroxy acid खुद संबंधित carboxylic acid बन जाता है।"
+  - q: "mCPBA से epoxidation syn होता है या anti?"
+    a: "Syn। दोनों नए C–O bonds एक ही concerted step में एक ही face पर बनते हैं, इसलिए cis-alkene से cis-epoxide और trans-alkene से trans-epoxide मिलता है।"
+  - q: "Peroxy acid के साथ पहले कौन-सा double bond react करता है?"
+    a: "सबसे ज़्यादा electron-rich, आमतौर पर सबसे ज़्यादा substituted, double bond। Peroxy acid electrophile की तरह काम करता है, इसलिए C=C में electron density धकेलने वाले alkyl groups reaction को तेज़ करते हैं।"
+  - q: "Epoxidation के लिए mCPBA ज़्यादा क्यों इस्तेमाल होता है?"
+    a: "mCPBA अपेक्षाकृत stable crystalline peroxy acid है जो organic solvents में अच्छी तरह घुलता है, इसलिए इसे ज़्यादातर दूसरे peracids की तुलना में handle करना आसान और safe है।"
+translated: 2026-11-22
+---
+
+## Prilezhaev epoxidation क्या है?
+
+**Prilezhaev epoxidation** (spelling Prileschajew भी) एक **alkene और peroxy acid (RCO₃H)** का reaction है, जिससे **epoxide** (oxirane, तीन सदस्यों वाला cyclic ether) बनता है। इसे Nikolai Prilezhaev ने 1909 में report किया था। आम reagent **meta-chloroperoxybenzoic acid (mCPBA)** है; magnesium monoperoxyphthalate (MMPP) और peracetic acid भी काम करते हैं। यह reaction एक **stereospecific syn addition** है: alkene की geometry epoxide में चली जाती है।
+
+## Mechanism (butterfly mechanism)
+
+1. **Hydrogen-bonded peracid।** Peroxy acid अपने O–H hydrogen को internal hydrogen bond से अपने ही C=O oxygen के पास रखता है। इससे O–O unit का आखिरी O electron-poor (electrophilic) हो जाता है।
+2. **एक concerted step।** Alkene के π electrons उस electrophilic oxygen पर attack करते हैं। उसी step में कमज़ोर O–O bond टूटता है, दूसरा C–O bond बंद होता है और proton carbonyl oxygen पर चला जाता है। Cyclic transition state तितली (butterfly) जैसा दिखता है, इसी से mechanism का नाम पड़ा।
+3. **Products।** Epoxide और एक carboxylic acid अलग हो जाते हैं। कोई carbocation नहीं बनता, इसलिए कोई rearrangement नहीं होता।
+
+<Eq ce="R2C=CR2 + R'CO3H -> R2C(O)CR2 + R'COOH" />
+
+<KeyPoint>
+Epoxidation एक **syn addition** है (दोनों C–O bonds एक ही face पर)। cis-But-2-ene से सिर्फ़ cis-2,3-dimethyloxirane मिलता है; trans-but-2-ene से सिर्फ़ trans-epoxide।
+</KeyPoint>
+
+## Reactivity: कौन-सा C=C पहले react करता है?
+
+Peroxy acid electrophile है और alkene nucleophile। Double bond पर ज़्यादा alkyl groups का मतलब ज़्यादा electron density, इसलिए substitution के साथ rate तेज़ी से बढ़ता है: ethene सबसे धीमा, फिर propene, फिर butenes, और tetrasubstituted 2,3-dimethylbut-2-ene सबसे तेज़। दो C=C bonds वाले molecule में **ज़्यादा substituted (ज़्यादा electron-rich)** bond पहले epoxidise होता है।
+
+## Examples
+
+**1. Cyclohexene से cyclohexene oxide:**
+
+<Eq ce="C6H10 ->[mCPBA][CH2Cl2] C6H10O" />
+
+**2. trans-But-2-ene से trans-2,3-dimethyloxirane** (geometry बनी रहती है):
+
+<Eq ce="CH3-CH=CH-CH3 ->[mCPBA] CH3-CH(O)CH-CH3" />
+
+**3. Methylenecyclohexane से 1-oxaspiro[2.5]octane।** Exocyclic C=C एक spiro epoxide बन जाता है।
+
+## Epoxide से anti diol
+
+Epoxide को पानी और acid से खोलने पर **vicinal diol** मिलता है। पानी epoxide oxygen के उल्टे face से attack करता है, इसलिए दोनों OH groups **anti (trans)** होते हैं। इसलिए epoxidation के बाद acid hydrolysis, **anti-dihydroxylation** का standard रास्ता है, जबकि ठंडा dilute alkaline KMnO₄ या OsO₄ syn diol देता है।
+
+<ExamTip>
+Epoxidation (RCO₃H) = एक O का syn addition। Epoxidation + H₃O⁺ = anti-diol। Baeyer's reagent या OsO₄ = syn-diol।
+</ExamTip>
+
+## आम epoxidising reagents की तुलना
+
+- **RCO₃H, mCPBA, MMPP**: सभी peroxy acids हैं; Prilezhaev reaction के confirmed reagents।
+- **Ag₂O**: अक्सर epoxidising reagent के रूप में list किया जाता है। Sources बताते हैं कि silver catalysis सिर्फ़ **O₂ (air) और ethylene** के साथ काम करता है: industry में ethylene oxide इसी तरह बनाया जाता है। दूसरे alkenes, यहाँ तक कि propene भी, इस तरह useful epoxides नहीं देते। इसलिए JEE के लिए silver सिर्फ़ ethene + O₂ के लिए लिखें।
+- **H₂O₂**: अकेला hydrogen peroxide alkene epoxidising agent नहीं है; इसे metal catalyst चाहिए। लिखने के लिए peroxy acid वाला रास्ता ही सही है।
+- **H₂SO₅ (Caro's acid)**: sulphur का एक peroxy acid, जो कभी-कभी list में भी होता है; पढ़े गए sources इसे cover नहीं करते, इसलिए answers में mCPBA को prefer करें।
+
+## Limitations
+
+- Electron-poor alkenes (जैसे C=O के साथ conjugated C=C) peracids के साथ धीरे react करते हैं; इन्हें alkaline H₂O₂ जैसे nucleophilic reagents से epoxidise किया जाता है।
+- अगर पानी और acid मौजूद हों, तो epoxide आगे खुलकर anti diol बन सकता है, इसलिए जब epoxide ही चाहिए तो reaction inert, dry solvent में किया जाता है।
+
+## Related reactions
+
+- [Baeyer–Villiger oxidation](/hi/reactions/baeyer-villiger-oxidation/) ketones पर यही peroxy acids (mCPBA) इस्तेमाल करता है।
+- [Hydroboration–oxidation](/hi/reactions/hydroboration-oxidation/) alkenes पर होने वाला एक और concerted syn addition है।
+- [Simmons–Smith reaction](/hi/reactions/simmons-smith-reaction/) तीन सदस्यों वाली ring बनाने के लिए O की जगह CH₂ जोड़ता है।
+- [Ozonolysis](/hi/reactions/ozonolysis/) एक O जोड़ने की जगह C=C को पूरी तरह तोड़ देता है।
+- Overview: [Electrophilic addition reactions](/hi/mechanisms/electrophilic-addition/)।

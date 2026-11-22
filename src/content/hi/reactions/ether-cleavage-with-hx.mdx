@@ -1,0 +1,103 @@
+---
+title: "Ether Cleavage with HX (HI/HBr, ईथर का विदलन)"
+description: "HI या HBr से ether cleavage में R–O–R′ टूटकर alcohol और alkyl halide देता है, SN2 (1°/methyl) या SN1 (3°, benzyl, allyl) से। Anisole से phenol + CH3I मिलता है।"
+aliases: ["ईथर का विदलन", "ईथर और HI की अभिक्रिया", "ether cleavage hindi", "ether with HI hindi", "anisole HI reaction hindi", "zeisel method hindi", "acidic cleavage of ethers hindi"]
+reagents: "Concentrated HI या HBr (HI > HBr > HCl)"
+conditions: "गर्म करना; excess HX बने हुए alcohol को दूसरे alkyl halide में बदल देता है"
+byproducts: "CH₃I (iodomethane)"
+reactantName: "Methoxybenzene (anisole)"
+productName: "Phenol"
+faq:
+  - q: "Anisole को HI के साथ गर्म करने पर कौन-से products बनते हैं?"
+    a: "Phenol और methyl iodide। Iodide, SN2 से methyl carbon पर attack करता है; O–C6H5 bond नहीं टूटता क्योंकि aryl carbon पर nucleophilic substitution नहीं हो सकता।"
+  - q: "Methyl tert-butyl ether, HI से react करे तो क्या होता है?"
+    a: "इससे methanol और tert-butyl iodide मिलते हैं। Protonated ether, methanol खोकर stable tert-butyl carbocation बनाता है (SN1), जिसे फिर iodide पकड़ लेता है।"
+  - q: "Ethers को तोड़ने के लिए HI, HBr या HCl से बेहतर क्यों है?"
+    a: "HI सबसे strong acid है और halides में iodide सबसे अच्छा nucleophile है, इसलिए reactivity का order HI > HBr > HCl है। HCl सिर्फ़ कड़ी conditions में react करता है।"
+  - q: "क्या ethers पानी या NaOH से react करते हैं?"
+    a: "नहीं। Ethers पानी और aqueous base के प्रति inert होते हैं, इसीलिए इन्हें solvents की तरह इस्तेमाल किया जाता है। ये सिर्फ़ HI और HBr जैसे strong acids से टूटते हैं, आमतौर पर गर्म करने पर।"
+  - q: "Epoxide खुलते समय nucleophile किस carbon पर attack करता है?"
+    a: "Basic conditions (CH3O−, Grignard reagents) में nucleophile SN2 से कम substituted carbon पर attack करता है। Acidic conditions में यह ज़्यादा substituted carbon पर attack करता है, क्योंकि उस carbon पर ज़्यादा positive charge होता है।"
+translated: 2026-11-22
+---
+
+## HX से ether cleavage क्या है?
+
+**Ether cleavage** का मतलब है ether के C–O bond को किसी **strong hydrogen halide, आमतौर पर concentrated HI या HBr, से गर्म करके** तोड़ना। Ether R–O–R′ से **एक alcohol और एक alkyl halide** मिलते हैं। Excess HX होने पर alcohol भी दूसरे alkyl halide में बदल जाता है। यह एक acid-catalysed nucleophilic substitution है: groups methyl या primary हों तो यह **SN2** से चलता है, और कोई group tertiary, benzylic या allylic हो तो **SN1** से।
+
+## General reaction
+
+<Eq ce="R-O-R' + HX ->[\Delta] R-OH + R'-X" />
+
+<Eq ce="R-OH + HX -> R-X + H2O \quad (\text{with excess HX})" />
+
+Acids की reactivity का order: **HI > HBr > HCl**। HF ethers को नहीं तोड़ता।
+
+## Mechanism
+
+**Step 1: protonation।** Ether का oxygen HX से H⁺ लेकर oxonium ion बनाता है। इससे खराब leaving group (RO⁻) अच्छे leaving group (ROH) में बदल जाता है।
+
+**Step 2 (SN2 path, methyl और 1°/2° groups)।** Halide ion, oxonium ion के **कम hindered carbon** पर attack करता है और एक ही step में alcohol को बाहर धकेल देता है। उदाहरण के लिए methyl ethyl ether में iodide methyl group पर attack करता है, जिससे CH₃I और ethanol मिलते हैं।
+
+<Eq ce="CH3-O-CH2CH3 + HI -> CH3I + CH3CH2OH" />
+
+**Step 2 (SN1 path, 3°, benzyl, allyl groups)।** Oxonium ion अपने आप टूटकर **ज़्यादा stable carbocation** और एक alcohol देता है। फिर halide carbocation को पकड़ लेता है। इसलिए tertiary (या benzylic) group halide बनता है।
+
+<Eq ce="(CH3)3C-O-CH3 + HI -> (CH3)3C-I + CH3OH" />
+
+<KeyPoint>
+Path alkyl groups से तय करें: अगर कोई group stable carbocation दे सकता है (3°, benzyl, allyl), तो SN1 लें और वही group halide बनेगा। वरना SN2 लें: halide छोटे group पर attack करता है, और वही halide बनता है।
+</KeyPoint>
+
+## Examples
+
+**Anisole के साथ HI** (Zeisel's method, map edges anisole → phenol): O–CH₃ bond टूटता है, O–C₆H₅ bond कभी नहीं, क्योंकि aryl carbon sp² है और उस bond में partial double-bond character होता है। Phenol आगे react करके aryl halide नहीं देता।
+
+<Eq ce="C6H5OCH3 + HI ->[\Delta] C6H5OH + CH3I" />
+
+बने हुए CH₃I को नापना ही किसी compound में methoxy groups गिनने के **Zeisel's method** का आधार है।
+
+**Excess HI के साथ diethyl ether:**
+
+<Eq ce="C2H5OC2H5 + 2 HI ->[\Delta] 2 C2H5I + H2O" />
+
+Diphenyl ether जैसे **diaryl ethers** HI से **नहीं टूटते**।
+
+## Ethers का acid-catalysed hydrolysis (isotope-labelling questions)
+
+Exam questions में कभी-कभी पूछा जाता है कि carbocation बनाने वाले group वाले ether को H₂¹⁸O और acid के साथ गर्म करने पर क्या होता है। ऊपर वाले SN1 logic से, protonated ether टूटकर ज़्यादा stable carbocation (R′⁺) और R–OH देता है। फिर पानी carbocation को पकड़ लेता है, इसलिए **¹⁸O label उस alcohol में जाता है जो carbocation वाले group से बनता है**:
+
+<Eq ce="R-O-R' ->[H2^{18}O, H+] R-OH + R'-^{18}OH" />
+
+Ethers अकेले पानी या OH⁻ से **react नहीं करते**; acid ज़रूरी है।
+
+## Unsymmetrical epoxides का ring opening
+
+Epoxides cyclic ethers हैं जिनका ring strain इन्हें सामान्य ethers से कहीं ज़्यादा reactive बनाता है। 2-Methyloxirane में attack की जगह conditions पर निर्भर करती है:
+
+- **Basic या strongly nucleophilic conditions (SN2):** nucleophile **कम substituted** carbon पर attack करता है।
+- **Acidic conditions:** protonated epoxide काफ़ी SN1 character के साथ खुलता है, इसलिए nucleophile **ज़्यादा substituted** carbon पर attack करता है।
+
+<Eq ce="\text{2-methyloxirane} ->[CH3O^{-}Na+, CH3OH] CH3-CH(OH)-CH2-OCH3" />
+
+<Eq ce="\text{2-methyloxirane} ->[CH3OH, H+] CH3-CH(OCH3)-CH2-OH" />
+
+Grignard reagents basic nucleophiles की तरह behave करते हैं: CH₃MgBr, 2-methyloxirane को CH₂ वाले सिरे पर खोलता है, और work-up से butan-2-ol मिलता है।
+
+<ExamTip>
+Ether + HI के किसी भी question में तीन चीज़ें लिखें: protonation, कौन-सा group alcohol बनकर निकलता है, और iodide किस carbon पर जाता है। Aryl alkyl ethers के लिए answer हमेशा phenol + alkyl iodide होता है।
+</ExamTip>
+
+## Limitations और exceptions
+
+- Room temperature पर reaction धीमा है और इसके लिए गर्मी और concentrated acid चाहिए।
+- कमज़ोर nucleophilic acids (जैसे trifluoroacetic acid) के साथ tertiary ethers substitution की जगह E1 elimination से alkene देते हैं।
+- Excess HX और high temperature दोनों groups को alkyl halides में बदल देते हैं (aryl group को छोड़कर, जो phenol ही रहता है)।
+
+## Related reactions
+
+- [Williamson ether synthesis](/hi/reactions/williamson-ether-synthesis/): ethers सबसे पहले कैसे बनते हैं।
+- [SN1 reaction](/hi/reactions/sn1-reaction/) और [SN2 reaction](/hi/reactions/sn2-reaction/): दोनों संभावित रास्ते।
+- [Lucas test](/hi/tests/lucas-test/): HCl के साथ alcohols में वही protonate-फिर-substitute logic।
+- [Grignard reagent](/hi/reactions/grignard-reagent/): RMgX से epoxides का ring opening।
+- [Nucleophilic substitution](/hi/mechanisms/nucleophilic-substitution/): substitution reactions का hub।

@@ -1,0 +1,94 @@
+---
+title: "Carbenes: Singlet, Triplet और उनकी Reactions (कार्बीन)"
+description: "JEE के लिए carbenes: singlet vs triplet carbene, chloroform से :CCl₂, cyclopropanation, insertion, Reimer–Tiemann, carbylamine, Simmons–Smith और diazomethane।"
+faq:
+  - q: "Singlet और triplet carbene में क्या अंतर है?"
+    a: "Singlet carbene में दोनों non-bonding electrons एक sp² orbital में paired होते हैं, यह diamagnetic होता है और alkenes पर एक ही concerted, stereospecific step में जुड़ता है। Triplet carbene में दो unpaired electrons होते हैं, यह paramagnetic होता है, diradical की तरह steps में react करता है, और alkene की geometry बनाए नहीं रखता।"
+  - q: "Singlet और triplet carbene में कौन ज़्यादा stable है?"
+    a: ":CH₂ जैसे simple carbenes के लिए triplet ground state है, जो Hund's rule के अनुसार लगभग 33 kJ/mol कम energy पर है। Gas phase में triplets favoured होते हैं, जबकि solution में singlets ज़्यादा मिलते हैं, और lone pairs वाले substituents (जैसे :CCl₂ में Cl) singlet को ground state बना देते हैं।"
+  - q: "Dichlorocarbene कैसे बनता है?"
+    a: "Chloroform से α-elimination द्वारा: strong base CHCl₃ से proton हटाता है, और CCl₃⁻ ion Cl⁻ खोकर :CCl₂ देता है। Reimer–Tiemann और carbylamine reactions में यही reactive species है।"
+  - q: "क्या triplet carbene का alkene पर addition anti होता है?"
+    a: "नहीं। Triplet carbene diradical के through दो steps में जुड़ता है, इसलिए bond rotation हो सकता है और cis और trans cyclopropanes का mixture बनता है; addition anti नहीं, बल्कि non-stereospecific होता है। सिर्फ़ singlet carbenes साफ़ syn (stereospecific) addition देते हैं।"
+translated: 2026-11-22
+---
+
+## Carbene क्या है?
+
+**Carbene** एक neutral species है जिसमें **सिर्फ़ छह valence electrons वाला divalent carbon** होता है: दो bonds और दो non-bonding electrons, जिसे R₂C: लिखते हैं। सबसे simple carbene **methylene, :CH₂** है। Carbenes कम समय तक रहने वाले, बहुत reactive intermediates हैं; इनकी मुख्य reactions **C=C bonds पर addition (cyclopropanation)** और **σ bonds में insertion** हैं। JEE syllabus में ये Reimer–Tiemann और carbylamine reactions के छिपे हुए intermediate के रूप में आते हैं।
+
+## Carbenes कैसे बनाए जाते हैं
+
+- **Chloroform से α-elimination:** strong base proton हटाता है, और CCl₃⁻ Cl⁻ खो देता है। दोनों groups एक ही carbon से निकलते हैं, इसलिए "α"।
+- **Diazomethane से N₂ का निकलना:** light, heat या copper CH₂N₂ को :CH₂ और nitrogen gas में तोड़ देते हैं।
+- **Carbenoids:** zinc और CH₂I₂ से ICH₂ZnI बनता है, जो carbene की तरह behave करता है ([Simmons–Smith reaction](/hi/reactions/simmons-smith-reaction/))।
+
+<Eq ce="CHCl3 + OH- -> CCl3^- + H2O" />
+
+<Eq ce="CCl3^- -> :CCl2 + Cl-" />
+
+<Eq ce="CH2N2 ->[h\nu or \Delta] :CH2 + N2" />
+
+## Singlet vs triplet carbene
+
+| Property | Singlet carbene | Triplet carbene |
+|---|---|---|
+| Electrons | एक orbital में paired (↑↓) | अलग-अलग orbitals में दो unpaired (↑ ↑) |
+| Hybridisation और shape | sp², bent (:CH₂ के लिए लगभग 102°) | Exam answers में अक्सर sp और linear दिखाया जाता है; :CH₂ के लिए measured angle 125–140° |
+| Magnetism | Diamagnetic | Paramagnetic |
+| Hund's rule | Follow नहीं होता | Follow होता है |
+| Character | Electrophile; खाली p orbital Lewis-acid जैसा behaviour देता है | Diradical की तरह react करता है |
+| Stability | :CH₂ के लिए कम stable | :CH₂ के लिए ground state (लगभग 33 kJ/mol कम) |
+| Alkenes पर addition | Concerted, syn, stereospecific | Stepwise, non-stereospecific (cis/trans mixture) |
+
+<KeyPoint title="Phase और substituents">
+Triplet carbenes gas phase में ज़्यादा stable होते हैं; singlets solution में ज़्यादा मिलते हैं। Lone pairs वाले substituents (Cl, O, N) खाली p orbital में electrons धकेलकर singlet को stabilise करते हैं, इसलिए dichlorocarbene एक bent, diamagnetic singlet है।
+</KeyPoint>
+
+## Alkenes पर addition: cyclopropanation
+
+Singlet carbene alkene के दोनों carbons पर एक साथ जुड़ता है, इसलिए **cis-but-2-ene से सिर्फ़ cis-1,2-dimethylcyclopropane** बनता है और trans से trans। Triplet carbene पहले एक bond बनाता है, जिससे diradical बनता है जो ring बंद होने से पहले घूम सकता है, इसलिए दोनों isomers बनते हैं। इसी अंतर से पता लगाया जाता है कि कौन-सी spin state ने react किया।
+
+<Eq ce="CH2=CH2 + :CH2 -> C3H6" />
+
+<ExamTip title="Common mistake">
+Triplet addition को "anti" कहना। यह non-stereospecific (mixture) है, साफ़ anti addition नहीं। लिखें: singlet → syn, stereospecific; triplet → non-stereospecific।
+</ExamTip>
+
+Dichlorocarbene भी इसी तरह जुड़कर 1,1-dichlorocyclopropanes देता है। Pyrrole के साथ :CCl₂ ring पर जुड़ता है और ring फैलकर 3-chloropyridine बन जाती है ("abnormal Reimer–Tiemann" या Ciamician–Dennstedt reaction)।
+
+## σ bonds में insertion
+
+Free :CH₂ पहले से मौजूद bond में ख़ुद को घुसा सकता है। Preference **पहले X–H (X = O, N), फिर C–H, फिर C–C** है। Methylene इतना reactive है कि यह primary, secondary और tertiary C–H bonds में मुश्किल से फ़र्क करता है।
+
+<Eq ce="R-OH + :CH2 -> R-O-CH3" />
+
+<Eq ce="R2N-H + :CH2 -> R2N-CH3" />
+
+<Eq ce="R-H + :CH2 -> R-CH3" />
+
+## Carbonyl compounds के साथ diazomethane और sulphur ylides
+
+इन्हें अक्सर carbene reactions के साथ रखा जाता है; असल में ये ylide carbon के C=O पर **nucleophilic additions** हैं, carbene insertions नहीं।
+
+- **Alcohols + CH₂N₂:** methyl ethers सिर्फ़ **BF₃** जैसे Lewis acid catalyst के साथ बनते हैं। इसके बिना diazomethane ज़्यादा acidic carboxylic acids और phenols को methylate करता है।
+- **Ketones + CH₂N₂ (Buchner–Curtius–Schlotterbeck reaction):** diazomethane का carbon C=O पर जुड़ता है, N₂ निकलता है, और या तो एक alkyl group shift होकर **homologated ketone** R–CO–CH₂–R (major) देता है, या oxygen carbon पर बंद होकर **epoxide** देता है।
+- **Ketones + sulphur ylide, CH₂⁻–S⁺R₂ (Corey–Chaykovsky reaction):** ylide C=O पर जुड़ता है और oxygen sulphide को हटा देता है, जिससे मुख्य product **epoxide** बनता है।
+
+<Eq ce="R2C=O + CH2N2 -> R-CO-CH2-R + N2" />
+
+<Eq ce="R2C=O + CH2=S(CH3)2 -> R2C(O)CH2 + (CH3)2S" />
+
+## Carbene का behaviour तय करने वाले factors
+
+- **Spin state:** singlet (concerted, stereospecific) vs triplet (stepwise, radical जैसा)।
+- **Substituents:** halogens और heteroatoms singlet को stabilise करते हैं और carbene को ज़्यादा selective बनाते हैं; :CH₂ सबसे कम selective है।
+- **Metal:** zinc या copper carbenoids free carbenes से ज़्यादा साफ़ react करते हैं और पास के OH groups उन्हें direct कर सकते हैं।
+
+## Member reactions
+
+- [Reimer–Tiemann reaction](/hi/reactions/reimer-tiemann-reaction/): phenoxide के साथ :CCl₂ से salicylaldehyde बनता है।
+- [Carbylamine reaction](/hi/reactions/carbylamine-reaction/): primary amine के साथ :CCl₂ से isocyanide बनता है।
+- [Simmons–Smith reaction](/hi/reactions/simmons-smith-reaction/): zinc carbenoid से cyclopropanation।
+
+Related: [Wittig reaction](/hi/reactions/wittig-reaction/) (phosphorus ylide, sulphur ylides से तुलना) और [rearrangement reactions](/hi/mechanisms/rearrangement-reactions/) (diazomethane homologation में 1,2-shift)।

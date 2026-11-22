@@ -1,0 +1,101 @@
+---
+title: "Hunsdiecker Reaction (हुन्सडीकर अभिक्रिया)"
+description: "Hunsdiecker reaction में carboxylic acid का silver salt, CCl₄ में Br₂ के साथ CO₂ खोकर एक carbon कम वाला alkyl halide देता है।"
+aliases: ["हुन्सडीकर अभिक्रिया", "हंसडीकर रिएक्शन", "hunsdiecker reaction hindi", "borodin reaction hindi", "hunsdiecker borodin reaction hindi", "hunsdicker reaction hindi", "decarboxylative halogenation hindi"]
+reagents: "Carboxylic acid के सूखे silver salt पर Br₂ (या Cl₂) की क्रिया"
+conditions: "सूखे CCl₄ में reflux (heat या light); कोई protic solvent नहीं"
+byproducts: "CO₂, AgBr"
+reactantName: "Silver propanoate"
+productName: "Bromoethane"
+faq:
+  - q: "Silver propanoate के Hunsdiecker reaction का product क्या है?"
+    a: "Bromoethane, CH₃CH₂Br। Carboxyl carbon CO₂ के रूप में निकल जाता है, इसलिए alkyl bromide में acid से एक carbon कम होता है।"
+  - q: "Hunsdiecker reaction को step-down reaction क्यों कहते हैं?"
+    a: "क्योंकि product में starting carboxylic acid से एक carbon atom कम होता है। –COOAg group की जगह halogen atom आ जाता है और खोया हुआ carbon carbon dioxide के रूप में निकल जाता है।"
+  - q: "Hunsdiecker reaction में कौन-से alkyl halides सबसे अच्छी yield में मिलते हैं?"
+    a: "Yields primary > secondary > tertiary के क्रम में घटती हैं, इसलिए यह reaction primary alkyl bromides बनाने के लिए सबसे अच्छा काम करता है।"
+  - q: "Solvent के रूप में CCl₄ क्यों इस्तेमाल होता है?"
+    a: "Intermediate acyl hypobromite protic solvents में decompose हो जाता है, इसलिए CCl₄ जैसा सूखा, inert, non-polar solvent चाहिए। Silver salt भी शुद्ध और सूखा होना चाहिए।"
+  - q: "Bromine की जगह iodine इस्तेमाल करने पर क्या होता है?"
+    a: "Silver salt और iodine के 1:1 ratio पर alkyl iodide बनता है, लेकिन 2:1 ratio पर मुख्य product ester RCOOR होता है। इस variant को Simonini reaction कहते हैं।"
+  - q: "क्या optically active acid का Hunsdiecker reaction optically active alkyl halide देता है?"
+    a: "नहीं। Reaction एक planar alkyl radical से होकर गुज़रता है, इसलिए bromine किसी भी face से जुड़ सकता है और racemic alkyl bromide बनता है।"
+translated: 2026-11-22
+---
+
+## Hunsdiecker reaction क्या है?
+
+**Hunsdiecker reaction** (जिसे **Borodin** या **Hunsdiecker–Borodin reaction** भी कहते हैं) में **carboxylic acid के silver salt** को सूखे carbon tetrachloride में **bromine** (या chlorine) के साथ गर्म करके **alkyl halide** में बदला जाता है। Carbon dioxide निकल जाता है, इसलिए product में acid से **एक carbon atom कम** होता है। यह एक साथ **decarboxylation** और **halogenation** दोनों है, और यह **free-radical** mechanism से चलता है।
+
+<Eq ce="R-COOAg + Br2 ->[CCl4][\Delta] R-Br + CO2 + AgBr" />
+
+Alexander Borodin, जो composer के रूप में ज़्यादा जाने जाते हैं, ने 1861 में इसी तरह silver acetate से पहली बार methyl bromide बनाया था; Cläre और Heinz Hunsdiecker ने 1930s में इसे एक general method के रूप में विकसित किया।
+
+## Mechanism
+
+1. **Silver salt।** पहले acid को उसके silver salt, R–COOAg, में बदला जाता है। (कभी-कभी इसे AgOH के साथ R–COOH लिखा जाता है; असल में silver(I) base इस्तेमाल होता है, और salt शुद्ध व सूखा होना चाहिए।)
+2. **Acyl hypobromite।** Silver salt, Br₂ के साथ react करता है; AgBr precipitate होता है और **acyl hypobromite**, R–CO–O–Br, बनता है।
+3. **Homolysis।** कमज़ोर O–Br bond गर्म करने पर या light में टूटता है, जिससे **carboxyl radical** R–CO–O• और Br• बनते हैं।
+4. **Decarboxylation।** Carboxyl radical CO₂ खो देता है और **alkyl radical** R• बचता है।
+5. **Halogen transfer।** R• एक bromine atom से जुड़ता है (या Br₂ या hypobromite से Br लेकर chain आगे बढ़ाता है) और R–Br बनता है।
+
+<Eq ce="R-COOAg + Br2 -> R-CO-O-Br + AgBr" />
+<Eq ce="R-CO-O-Br -> R-CO-O^{.} + Br^{.}" />
+<Eq ce="R-CO-O^{.} -> R^{.} + CO2" />
+<Eq ce="R^{.} + Br^{.} -> R-Br" />
+
+<KeyPoint>
+मुख्य बातें: (1) यह एक **decarboxylation** reaction है, (2) यह एक **step-down** reaction है (एक carbon कम), और (3) halide की yield **1° > 2° > 3°** के क्रम में होती है।
+</KeyPoint>
+
+## Stereochemistry: racemic product
+
+जो carbon आखिर में bromine से जुड़ता है, वह एक free **alkyl radical** से होकर गुज़रता है, जो planar (या लगभग planar) होता है। Bromine इसके किसी भी face से bond बना सकता है, इसलिए original carbon का configuration खो जाता है। जब किसी ऐसे **optically active acid** का silver salt brominate किया जाता है जिसका stereocentre α-carbon है, तो alkyl bromide **racemic mixture** (enantiomers का 1 : 1 mixture) के रूप में मिलता है। Optical activity का यह खोना radical mechanism का एक classic सबूत है, क्योंकि concerted substitution में configuration बना रहता।
+
+Exam का एक पसंदीदा उदाहरण ऐसे carbon का है जो सिर्फ़ isotopes की वजह से chiral है। (H)(D)(T)C–COOH का silver salt, light में CCl₄ में Br₂ के साथ treat करने पर, (H)(D)(T)C–Br के दोनों enantiomers बराबर मात्रा में देता है।
+
+<Eq ce="(H)(D)(T)C-COOAg ->[Br2, CCl4][h\nu] (H)(D)(T)C-Br + CO2 + AgBr" />
+
+<ExamTip>
+अगर question में acid का एक ही enantiomer दिखाया गया हो और Hunsdiecker reaction का product पूछा जाए, तो answer "racemic alkyl bromide" लिखें: दोनों mirror-image products बनते हैं, और product optically inactive होता है।
+</ExamTip>
+
+## Examples
+
+**1. Silver propanoate से bromoethane**
+
+<Eq ce="CH3CH2COOAg + Br2 ->[CCl4][\Delta] CH3CH2Br + CO2 + AgBr" />
+
+**2. Silver acetate से bromomethane (Borodin का original example)**
+
+<Eq ce="CH3COOAg + Br2 ->[CCl4][\Delta] CH3Br + CO2 + AgBr" />
+
+**3. Silver octanoate से 1-bromoheptane**
+
+<Eq ce="CH3(CH2)6COOAg + Br2 ->[CCl4][\Delta] CH3(CH2)5CH2Br + CO2 + AgBr" />
+
+<ExamTip>
+Homologous series में नीचे जाने के लिए सोचें "acid → silver salt → Br₂/CCl₄"। Carbons गिनें: alkyl bromide में हमेशा acid से एक carbon कम होता है। Kolbe electrolysis से तुलना करें, जिसमें दो decarboxylated alkyl groups जुड़ते हैं, और Hofmann bromamide degradation से, जो भी एक carbon हटाता है लेकिन amine देता है।
+</ExamTip>
+
+## Variations
+
+- **Simonini reaction (iodine):** silver salt : I₂ = 1 : 1 पर alkyl iodide बनता है; 2 : 1 पर मुख्य product ester RCOOR होता है, और 3 : 2 पर दोनों का 1 : 1 mixture मिलता है।
+- **Mercuric oxide (Cristol–Firth) modification:** free acid को red HgO और Br₂ के साथ लेने से शुद्ध, सूखा silver salt बनाने की ज़रूरत नहीं रहती।
+- **Kochi reaction:** LiCl (या LiBr) के साथ lead(IV) acetate यही halodecarboxylation करता है।
+
+## Limitations और exceptions
+
+- Silver salt **शुद्ध और सूखा** होना चाहिए, जो अक्सर मुश्किल होता है; यही मुख्य practical कमी है।
+- **Protic solvents** (पानी, alcohols) acyl hypobromite को decompose कर देते हैं, इसलिए CCl₄ जैसा सूखा inert solvent इस्तेमाल होता है।
+- **Tertiary** acids कम yield देते हैं (1° > 2° > 3°)।
+- जिन acids में **C=C** होता है, उनमें hypobromite इसकी जगह double bond पर add हो सकता है, और **α,β-unsaturated** acids polymerise होने लगते हैं, जिससे yield कम मिलती है।
+- Iodine से परिणाम बदल जाता है (ester बनता है), जैसा ऊपर बताया गया है। यह method X = Cl या Br के लिए इस्तेमाल होता है।
+
+## Related reactions
+
+- [Kolbe electrolysis](/hi/reactions/kolbe-electrolysis/): carboxylate radicals CO₂ खोते हैं और alkyl radicals dimerise होते हैं।
+- [Decarboxylation](/hi/reactions/decarboxylation/): soda-lime decarboxylation भी एक carbon हटाता है और alkane देता है।
+- [Free radical halogenation](/hi/reactions/free-radical-halogenation/) और [NBS allylic bromination](/hi/reactions/nbs-allylic-bromination/): alkyl halides तक पहुँचने के दूसरे radical रास्ते।
+- [Hofmann bromamide degradation](/hi/reactions/hofmann-bromamide-degradation/): एक और one-carbon step-down reaction।
+- [Free radical reactions](/hi/mechanisms/free-radical-reactions/) hub।

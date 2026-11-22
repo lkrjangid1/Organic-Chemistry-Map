@@ -1,0 +1,94 @@
+---
+title: "Reductive Amination (अपचायक ऐमीनीकरण)"
+description: "Reductive amination में aldehyde या ketone, ammonia या amine के साथ imine बनाकर H₂/Ni, LiAlH₄ या NaBH₃CN से amine देता है; oxime reduction भी।"
+aliases: ["अपचायक ऐमीनीकरण", "रिडक्टिव एमिनेशन", "reductive amination hindi", "borch reduction hindi", "imine reduction hindi", "oxime reduction hindi", "carbonyl se amine kaise banaye"]
+reagents: "NH₃ या R–NH₂; फिर H₂/Ni (या Pt, Pd), LiAlH₄, या NaBH₃CN"
+conditions: "Neutral से हल्का acidic (NaBH₃CN के लिए लगभग pH 6–7); one pot या पहले imine को अलग करके"
+byproducts: "H₂O"
+reactantName: "Acetophenone (1-phenylethan-1-one)"
+productName: "1-Phenylethan-1-amine"
+faq:
+  - q: "Reductive amination क्या है?"
+    a: "इसमें aldehyde या ketone को पहले ammonia या amine के साथ imine बनाकर और फिर C=N bond को reduce करके amine में बदला जाता है। Ammonia से primary amine, primary amine से secondary amine, और secondary amine से tertiary amine बनती है।"
+  - q: "Reductive amination में NaBH₃CN क्यों इस्तेमाल होता है?"
+    a: "Sodium cyanoborohydride एक mild hydride donor है जो लगभग pH 6–7 पर protonated imine (iminium ion) को starting aldehyde या ketone से कहीं ज़्यादा तेज़ी से reduce करता है। इसलिए carbonyl compound, amine और reductant को एक ही pot में मिलाया जा सकता है, और carbonyl पहले alcohol में reduce नहीं होता।"
+  - q: "Oxime के reduction का product क्या है?"
+    a: "Primary amine। Carbonyl compound और hydroxylamine से बना oxime R₁R₂C=N–OH, Na/C₂H₅OH, H₂/Ni या LiAlH₄ से reduce होकर R₁R₂CH–NH₂ देता है; N–O bond टूट जाता है।"
+  - q: "Acetaldehyde से ethanamine कैसे बनाते हैं?"
+    a: "Ethanal को ammonia और nickel पर hydrogen के साथ treat करें (या NH₂OH से oxime बनाकर उसे Na/ethanol से reduce करें)। दोनों रास्ते CH₃CH₂NH₂ देते हैं, जिसमें aldehyde जितने ही carbons होते हैं।"
+  - q: "क्या ketone reductive amination से secondary amine दे सकता है?"
+    a: "हाँ। Ketone primary amine के साथ, जैसे propanone methanamine के साथ, N-substituted imine बनाता है जो reduce होकर secondary amine (CH₃)₂CH–NH–CH₃ देता है।"
+translated: 2026-11-22
+---
+
+## Reductive amination क्या है?
+
+**Reductive amination** (reductive alkylation) में **aldehyde या ketone को amine में** बदला जाता है। Carbonyl compound पहले **ammonia या amine** के साथ condense होकर **imine** (Schiff base) और पानी देता है; फिर C=N bond को **reduce** किया जाता है, Ni/Pt/Pd पर H₂ से, LiAlH₄ से, या सबसे आसान तरीके से neutral से हल्की acidic conditions में **sodium cyanoborohydride (NaBH₃CN)** से। इससे मिलती-जुलती **oximes की reduction** primary amines देती है।
+
+<Eq ce="R1R2C=O + H2N-R3 <=> R1R2C=N-R3 + H2O" />
+<Eq ce="R1R2C=N-R3 ->[H2/Ni, LiAlH4 or NaBH3CN] R1R2CH-NH-R3" />
+
+## Mechanism
+
+1. **Addition।** Nitrogen का lone pair carbonyl carbon पर attack करता है, जिससे hemiaminal (carbinolamine), R₁R₂C(OH)–NHR₃, बनता है।
+2. **Dehydration।** पानी निकलने से imine बनता है (या mild acid में iminium ion)। यह step reversible है; पानी हटाने से reaction आगे बढ़ता है।
+3. **Reduction।** Hydride (या metal surface पर H₂) C=N carbon पर जुड़ता है और nitrogen protonate होता है, जिससे amine बनती है।
+
+<KeyPoint>
+कौन-सी class की amine बनेगी, यह nitrogen partner तय करता है: **NH₃ → 1° amine, R–NH₂ → 2° amine, R₂NH → 3° amine**। Carbon skeleton carbonyl compound से आता है, और पुराना C=O carbon ही C–N carbon बनता है।
+</KeyPoint>
+
+## Reducing agent का चुनाव
+
+| Reducing agent | Selectivity | कब इस्तेमाल होता है |
+|---|---|---|
+| Ni, Pt या Pd के साथ H₂ | कम (C=C, C=O भी reduce करता है) | industrial और one-pot; classic textbook method |
+| [LiAlH₄](/hi/reagents/lithium-aluminium-hydride/) | कम; C=O भी reduce करता है | अलग किया गया imine या oxime, अलग step में reduce |
+| [NaBH₄](/hi/reagents/sodium-borohydride/) | imines और carbonyls दोनों reduce करता है | पहले imine बनाया जाता है, फिर reduce |
+| NaBH₃CN | ज़्यादा: लगभग pH 6–7 पर iminium ions reduce करता है, carbonyls सिर्फ़ कम pH पर | one-pot "direct" reductive amination (Borch) |
+| NaBH(OAc)₃ | ज़्यादा, NaBH₃CN से कम toxic | modern lab alternative |
+
+<ExamTip title="Common mistake">
+Reagent sodium cyanoborohydride, NaBH₃CN (Na⁺[BH₃CN]⁻) है: BH₄⁻ के एक hydrogen की जगह एक cyano group आता है। यह NaBH₄ से weak है, इसीलिए यह aldehyde या ketone को छोड़ देता है और सिर्फ़ iminium ion को reduce करता है। Work-up में toxic HCN निकल सकता है।
+</ExamTip>
+
+## Oximes की reduction
+
+Aldehyde या ketone **hydroxylamine (NH₂OH)** के साथ पानी खोकर **oxime**, R₁R₂C=N–OH, बनाता है। Oxime को reduce करने पर N–O bond टूटता है और C=N saturate हो जाता है, जिससे **primary amine** मिलती है।
+
+<Eq ce="R1R2C=O + NH2OH -> R1R2C=N-OH + H2O" />
+<Eq ce="R1R2C=N-OH ->[Na/C2H5OH or H2/Ni or LiAlH4] R1R2CH-NH2" />
+
+Sodium (ethanol या किसी दूसरे alcohol में), sodium amalgam, catalytic hydrogenation और metal hydrides, सभी काम करते हैं। Aldoximes के साथ, अगर conditions control न हों, तो primary और कुछ secondary amine का mixture बन सकता है। यही Na/ethanol system [Mendius reduction](/hi/reactions/mendius-reduction/) में nitriles को reduce करता है।
+
+## Examples
+
+**Ethanal से ethanamine (1° amine)**
+
+<Eq ce="CH3CHO + NH3 + H2 ->[Ni] CH3CH2NH2 + H2O" />
+
+**Acetophenone से 1-phenylethan-1-amine (Mignonac reaction)**
+
+<Eq ce="C6H5COCH3 + NH3 + H2 ->[Ni] C6H5CH(NH2)CH3 + H2O" />
+
+**Propanone और methanamine से 2° amine**
+
+<Eq ce="(CH3)2C=O + CH3NH2 ->[NaBH3CN][pH 6-7] (CH3)2CH-NH-CH3" />
+
+**Cyclohexanone oxime से cyclohexanamine**
+
+<Eq ce="C6H10=N-OH ->[Na, C2H5OH] C6H11-NH2" />
+
+## Limitations
+
+- Imine बनना एक equilibrium है; पानी मौजूद हो तो imine hydrolyse होकर वापस carbonyl compound बन सकता है।
+- Unselective reductants (H₂/catalyst, NaBH₄) imine बनने से पहले ही aldehyde या ketone को alcohol में, या दूसरे reducible groups को, reduce कर सकते हैं।
+- NH₃ से बनी primary amines carbonyl compound के साथ फिर से react कर सकती हैं, इसलिए कुछ over-alkylation हो सकता है।
+- Reductant की जगह acid से treat किया गया oxime amine नहीं, बल्कि [Beckmann rearrangement](/hi/reactions/beckmann-rearrangement/) से amide देता है।
+
+## Related reactions
+
+- [Mendius reduction](/hi/reactions/mendius-reduction/): Na/ethanol से nitriles का primary amines में reduction।
+- [Catalytic hydrogenation](/hi/reactions/catalytic-hydrogenation/): industrial version में इस्तेमाल होने वाला H₂/metal reduction।
+- [Beckmann rearrangement](/hi/reactions/beckmann-rearrangement/): acid में oximes क्या करते हैं।
+- [Preparation of amines](/hi/preparation/preparation-of-amines/): सभी methods की तुलना।

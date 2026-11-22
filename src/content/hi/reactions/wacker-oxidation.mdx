@@ -1,0 +1,92 @@
+---
+title: "Wacker Oxidation (वैकर ऑक्सीकरण)"
+description: "Wacker oxidation में alkene, PdCl₂, CuCl₂, H₂O और O₂ से carbonyl compound बनता है: ethene से acetaldehyde और propene से acetone (Markovnikov) मिलता है।"
+aliases: ["वैकर ऑक्सीकरण", "वाकर प्रोसेस", "wacker oxidation hindi", "wacker process hindi", "hoechst wacker process hindi", "wacker tsuji oxidation hindi", "ethene se acetaldehyde", "propene se acetone"]
+reagents: "PdCl₂ (catalytic), CuCl₂ (co-catalyst), H₂O, O₂ या हवा"
+conditions: "Aqueous acidic chloride solution (lab में aqueous DMF), industry में लगभग 100–130 °C, lab में room temperature से 50 °C"
+byproducts: "Net में कोई नहीं (HCl और CuCl recycle होते हैं); Cu(II) न हो तो Pd(0)"
+reactantName: "Propene"
+productName: "Acetone (propanone)"
+faq:
+  - q: "Ethene के Wacker oxidation का product क्या है?"
+    a: "Acetaldehyde (ethanal)। Ethene, oxygen और पानी aqueous PdCl₂ और CuCl₂ पर react करते हैं; यही industrial Wacker (Hoechst–Wacker) process है।"
+  - q: "Propene के Wacker oxidation का product क्या है?"
+    a: "Acetone। Terminal alkenes methyl ketones देते हैं क्योंकि oxygen ज़्यादा substituted carbon पर जाता है (Markovnikov orientation), इसलिए propene से propanone बनता है, propanal नहीं।"
+  - q: "Wacker process में CuCl₂ का क्या role है?"
+    a: "Alkene को oxidise करते समय PdCl₂ reduce होकर Pd metal बन जाता है। CuCl₂, Pd(0) को वापस Pd(II) में oxidise करता है और खुद reduce होकर CuCl बनता है, जिसे oxygen फिर से CuCl₂ में बदल देता है। इसलिए सिर्फ़ alkene और O₂ खपते हैं।"
+  - q: "क्या Wacker oxidation में carbocation rearrangement होता है?"
+    a: "नहीं। Oxygen palladium से बँधे alkene तक पहुँचाया जाता है, किसी free carbocation तक नहीं, इसलिए कोई hydride या alkyl shift नहीं होता और carbon skeleton नहीं बदलता।"
+  - q: "क्या Wacker oxidation में enol intermediate बनता है?"
+    a: "कोई free enol नहीं बनता। Labelling experiments दिखाते हैं कि D₂O में ethene बिना deuterium वाला सामान्य CH₃CHO देता है, जिससे keto–enol tautomerisation एक step के रूप में ख़ारिज हो जाता है।"
+translated: 2026-11-22
+---
+
+## Wacker oxidation क्या है?
+
+**Wacker oxidation** एक **alkene को aldehyde या ketone में** बदलता है, जिसमें **palladium(II) chloride** catalyst, **copper(II) chloride** co-catalyst, **पानी** oxygen atom का source और **O₂ (हवा)** final oxidant होते हैं। Ethene से **acetaldehyde** बनता है (industrial **Wacker** या Hoechst–Wacker process), और propene जैसे terminal alkenes **methyl ketones** देते हैं (laboratory वाला **Wacker–Tsuji oxidation**)। Carbon skeleton rearrange नहीं होता।
+
+## General reaction
+
+<Eq ce="CH2=CH2 + 1/2O2 ->[PdCl2, CuCl2][H2O] CH3CHO" />
+
+<Eq ce="R-CH=CH2 + 1/2O2 ->[PdCl2, CuCl2][H2O] R-CO-CH3" />
+
+## Mechanism और copper का role
+
+इस reaction को तीन जुड़े हुए redox steps के रूप में समझना सबसे आसान है।
+
+1. **Pd(II) द्वारा alkene oxidation।** Alkene palladium से π-complex के रूप में बँधता है। पानी coordinated alkene पर attack करता है (**hydroxypalladation**), जिससे एक carbon पर OH और दूसरे पर Pd आ जाता है। Terminal alkene में OH **ज़्यादा substituted carbon** पर जाता है।
+2. **β-Hydride elimination।** एक hydrogen carbon से palladium पर जाता है और palladium से बँधा C=O बनता है; carbonyl compound और HCl के निकलने के बाद **Pd(0)** बचता है।
+
+<Eq ce="[PdCl4]^2- + C2H4 + H2O -> CH3CHO + Pd + 2HCl + 2Cl-" />
+
+3. **Copper(II) द्वारा palladium का re-oxidation।** इस step के बिना एक turnover के बाद Pd metal precipitate हो जाता।
+
+<Eq ce="Pd + 2CuCl2 + 2Cl- -> [PdCl4]^2- + 2CuCl" />
+
+4. **Oxygen द्वारा copper का re-oxidation।**
+
+<Eq ce="2CuCl + 1/2O2 + 2HCl -> 2CuCl2 + H2O" />
+
+सभी steps जोड़ने पर सिर्फ़ alkene और oxygen खपते हैं: Pd और Cu दोनों catalytic हैं।
+
+<KeyPoint>
+Carbonyl का oxygen पानी से आता है; O₂ सिर्फ़ catalysts को regenerate करता है। चूँकि alkene पर attack तब होता है जब वह palladium से बँधा होता है, कोई free carbocation नहीं बनता और कोई rearrangement नहीं होता।
+</KeyPoint>
+
+<ExamTip title="Common mistake">
+Enol CH₂=C(OH)CH₃ को ऐसे intermediate की तरह बनाना जो tautomerise होकर acetone बनता है। Deuterium-labelling experiments इसे ख़ारिज करते हैं: D₂O में ethene बिना deuterium वाला CH₃CHO देता है, इसलिए carbonyl palladium पर hydride shifts से बनता है, किसी free enol के through नहीं। Final product, propene से acetone, वही रहता है।
+</ExamTip>
+
+## Examples
+
+**1. Ethene से acetaldehyde (industrial)।** Ethene और oxygen को लगभग 130 °C पर aqueous PdCl₂/CuCl₂ में से गुज़ारा जाता है (one-stage process); acetaldehyde की yield लगभग 95 % होती है।
+
+<Eq ce="CH2=CH2 ->[PdCl2, CuCl2, H2O][O2] CH3CHO" />
+
+**2. Propene से acetone।** Oxygen C-2 पर जाता है, इसलिए product ketone है, propanal नहीं:
+
+<Eq ce="CH3CH=CH2 ->[PdCl2, CuCl2, H2O][O2] CH3COCH3" />
+
+**3. Oct-1-ene से octan-2-one (Wacker–Tsuji)।** 1 atm O₂ के नीचे aqueous DMF में long-chain terminal alkenes methyl ketones देते हैं:
+
+<Eq ce="CH3(CH2)5CH=CH2 ->[PdCl2, CuCl2, O2][DMF/H2O] CH3(CH2)5COCH3" />
+
+## Regioselectivity
+
+Terminal alkenes सामान्यतः **Markovnikov product**, यानी methyl ketone, देते हैं। Simple process में सिर्फ़ ethene ही aldehyde दे सकता है, क्योंकि उसके दोनों carbons एक जैसे हैं। Special ligands या directing groups कुछ substrates को aldehyde की ओर धकेल सकते हैं, पर यह JEE level से आगे की बात है।
+
+## Limitations और exceptions
+
+- **Chloride और CuCl₂ की high concentrations** ethene को **ethylene chlorohydrin** (2-chloroethanol) की ओर मोड़ देती हैं।
+- Industrial by-products में chlorinated aldehydes, acetic acid और थोड़ी CO₂ शामिल हैं।
+- Higher alkenes पानी में insoluble हैं, इसलिए lab versions में aqueous DMF जैसे mixed solvents इस्तेमाल होते हैं।
+- Catalyst solution बहुत corrosive है; plants में titanium और ceramic-lined equipment लगाए जाते हैं।
+
+## Related reactions
+
+- [Kucherov reaction](/hi/reactions/kucherov-reaction/): alkynes का Hg²⁺-catalysed hydration; propyne भी acetone देता है (Markovnikov)।
+- [Oxymercuration–demercuration](/hi/reactions/oxymercuration-demercuration/): alkene से बिना rearrangement के Markovnikov alcohol।
+- [Hydroboration–oxidation](/hi/reactions/hydroboration-oxidation/): anti-Markovnikov alcohol।
+- [Ozonolysis](/hi/reactions/ozonolysis/): सभी carbons रखने की बजाय C=C को तोड़ देता है।
+- [Markovnikov rule](/hi/reactions/markovnikov-rule/) और overview hub [Oxidation reactions](/hi/mechanisms/oxidation-reactions/)।

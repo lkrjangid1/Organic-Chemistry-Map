@@ -1,0 +1,91 @@
+---
+title: "Nucleophilic Substitution Reactions (नाभिकस्नेही प्रतिस्थापन)"
+description: "JEE और NEET के लिए nucleophilic substitution: SN1 vs SN2, SNi, neighbouring group participation, SNAr, benzyne और acyl substitution, reactivity factors के साथ।"
+faq:
+  - q: "SN1 और SN2 reactions में क्या अंतर है?"
+    a: "SN2 एक step में होता है: nucleophile पीछे से attack करता है और साथ-साथ leaving group निकलता है, rate = k[RX][Nu⁻], और inversion होता है। SN1 दो steps में carbocation के through होता है, rate = k[RX], जिससे racemisation और rearrangement की संभावना होती है।"
+  - q: "कैसे तय करें कि reaction SN1 से होगा या SN2 से?"
+    a: "पहले substrate देखें: methyl और 1° halides SN2 से जाते हैं, 3° SN1 से, और 2° conditions पर निर्भर करते हैं। Polar aprotic solvent में strong anionic nucleophile SN2 को favour करता है; polar protic solvent में weak neutral nucleophile SN1 को favour करता है।"
+  - q: "अच्छा leaving group किसे कहते हैं?"
+    a: "ऐसा weak base जिसका anion stable हो। Leaving-group ability लगभग basicity के उल्टे अनुपात में होती है, इसलिए I⁻ > Br⁻ > Cl⁻ > F⁻, और N₂ तथा H₂O (–N₂⁺ और –OH₂⁺ से) बहुत अच्छे leaving groups हैं।"
+  - q: "Aryl halides, nucleophilic substitution के लिए खराब substrates क्यों हैं?"
+    a: "C–X bond में partial double-bond character होता है, ring पीछे से attack को रोकती है, और aryl cations unstable होते हैं। ये सिर्फ़ तब react करते हैं जब ortho/para positions पर electron-withdrawing groups हों (SNAr) या बहुत strong bases हों (benzyne)।"
+translated: 2026-11-22
+---
+
+## Nucleophilic substitution क्या है?
+
+**Nucleophilic substitution** में एक electron-rich species (**nucleophile**, Nu⁻ या Nu:) किसी electron-poor carbon पर लगे **leaving group** (Lg) की जगह ले लेती है। Alkyl halides इसके classic substrates हैं: C–X bond polarised होता है, इसलिए carbon पर δ+ होता है और halide, X⁻ के रूप में निकल जाता है।
+
+<Eq ce="Nu- + R-X -> R-Nu + X-" />
+
+ज़्यादातर exam questions एक ही बात पूछते हैं: **कौन-सा mechanism चलेगा**, क्योंकि उसी से rate law, stereochemistry और skeleton rearrange होगा या नहीं, यह तय होता है।
+
+## SN1 vs SN2
+
+| Feature | [SN2](/hi/reactions/sn2-reaction/) | [SN1](/hi/reactions/sn1-reaction/) |
+|---|---|---|
+| Steps | एक, concerted | दो (या ज़्यादा), carbocation के through |
+| Rate law | k[RX][Nu⁻] | k[RX] |
+| Substrate order | CH₃ > 1° > 2° > 3° | 3° > 2° > 1° > CH₃ (allyl, benzyl तेज़) |
+| Nucleophile | Strong, आमतौर पर anionic | Weak, अक्सर neutral (solvent) |
+| Solvent | Polar aprotic (acetone, DMF, DMSO) | Polar protic (पानी, alcohols, acetic acid) |
+| Stereochemistry | Inversion (Walden) | Racemisation, कुछ excess inversion के साथ |
+| Rearrangement | कभी नहीं | संभव (hydride या alkyl shift) |
+
+<KeyPoint>
+SN2 reactivity ∝ transition state की stability ∝ 1/steric hindrance। SN1 reactivity ∝ carbocation की stability। दोनों को अच्छा leaving group चाहिए: leaving-group ability ∝ 1/basicity ∝ anion की stability।
+</KeyPoint>
+
+## Pathway तय करने वाले factors
+
+- **Substrate।** Steric crowding SN2 को रोकती है; carbocation stability SN1 को आगे बढ़ाती है। Tertiary, aryl, vinyl और bridgehead halides SN2 नहीं देते।
+- **Nucleophile।** Negative charge और कम electronegativity से nucleophilicity बढ़ती है (OH⁻, H₂O से बेहतर है)। Tert-butoxide जैसे bulky bases इसकी जगह elimination को favour करते हैं।
+- **Solvent।** Protic solvents anions से hydrogen bond बनाकर SN2 को धीमा करते हैं, पर SN1 के लिए carbocations को stabilise करते हैं।
+- **Leaving group।** इसका conjugate base character जितना कमज़ोर, यह उतनी आसानी से निकलता है: I⁻ > Br⁻ > Cl⁻ > F⁻; tosylate, –N₂⁺ और protonated –OH बहुत अच्छे हैं।
+
+## Retention के साथ substitution
+
+दो खास mechanisms inversion की जगह **retention** देते हैं:
+
+- [SNi mechanism](/hi/reactions/sni-mechanism/): SOCl₂, alcohol को एक chlorosulfite और tight ion pair के through alkyl chloride में बदलता है; chlorine सामने की ओर से आता है। Pyridine के साथ रास्ता SN2 (inversion) बन जाता है।
+- [Neighbouring group participation](/hi/reactions/neighbouring-group-participation/): molecule के अंदर का कोई lone pair या π bond पहले leaving group को हटाता है, फिर बाहर का nucleophile bridged ring को खोलता है। दो inversions मिलकर retention देते हैं, और rate अक्सर बहुत ज़्यादा होता है।
+
+## Aromatic rings पर substitution
+
+- [Nucleophilic aromatic substitution (SNAr / ArSN2)](/hi/reactions/nucleophilic-aromatic-substitution/): Meisenheimer carbanion के through addition–elimination; इसके लिए ortho/para positions पर –NO₂ जैसे groups चाहिए, या chlorobenzene के लिए 623 K और 300 atm। ArSN1, diazonium salts का aryl-cation वाला रास्ता है।
+- [Benzyne mechanism](/hi/reactions/benzyne-mechanism/): liquid NH₃ में NaNH₂ के साथ elimination–addition, जिससे direct और cine products मिलते हैं।
+
+## Carbonyl carbon पर substitution (SN2AE)
+
+Acid derivatives R–CO–G (G = –X, –OCOR, –OR, –NH₂, –OH, पर H या R नहीं) **addition–elimination** से react करते हैं, जिसे exam answers में SN2AE या SN2th (tetrahedral intermediate के through) लिखा जाता है:
+
+1. Nu⁻, sp² carbonyl carbon पर add होता है और एक **tetrahedral sp³ intermediate** R–C(O⁻)(Nu)–G बनता है।
+2. C=O फिर से बनता है और G⁻ बाहर निकलता है, जिससे R–CO–Nu मिलता है।
+
+<Eq ce="R-CO-G + Nu- <=> R-C(O^-)(Nu)-G -> R-CO-Nu + G-" />
+
+दोनों steps reversible हैं। Reactivity, G की leaving ability और intermediate बनने पर resonance के खोने पर निर्भर करती है: **acid chloride > anhydride > ester > amide**। Aldehydes और ketones substitution नहीं करते, क्योंकि H⁻ और R⁻ leaving groups नहीं हैं; वे addition पर रुक जाते हैं। Exam answers में acyl carbon पर SN2th को sp³ carbon पर SN2 से तेज़ बताया जाता है, क्योंकि planar और strongly δ+ carbonyl carbon attack के लिए खुला रहता है (reactivity ∝ sp² carbon पर positive charge ∝ 1/steric hindrance)।
+
+## Alkyl halides की आम substitution reactions
+
+| Reagent | Product | Page |
+|---|---|---|
+| Acetone में NaI | Alkyl iodide | [Finkelstein reaction](/hi/reactions/finkelstein-reaction/) |
+| AgF, Hg₂F₂, SbF₃ | Alkyl fluoride | [Swarts reaction](/hi/reactions/swarts-reaction/) |
+| NaOR′ | Ether | [Williamson ether synthesis](/hi/reactions/williamson-ether-synthesis/) |
+| KCN / AgCN | Nitrile / isocyanide | [SN2 reaction](/hi/reactions/sn2-reaction/) |
+| KNO₂ / AgNO₂ | Alkyl nitrite / nitroalkane | [SN2 reaction](/hi/reactions/sn2-reaction/) |
+| NH₃ (excess RX) | 1°, 2°, 3° amines, फिर R₄N⁺X⁻ | यही page |
+
+**Ammonolysis।** NH₃, R–X पर attack करके primary amine देता है। Amine खुद एक nucleophile है, इसलिए यह और R–X से react करके secondary और tertiary amines और अंत में एक **quaternary ammonium salt** देता है। NH₃ की बड़ी excess primary amine को favour करती है; alkyl halide की excess reaction को R₄N⁺X⁻ तक ले जाती है।
+
+<Eq ce="RX ->[NH3] RNH2 ->[RX] R2NH ->[RX] R3N ->[RX] R4N+X-" />
+
+**Gem-dihalides का hydrolysis।** Aqueous KOH, R–CHX₂ के एक halogen को OH से बदल देता है; फिर oxygen का lone pair दूसरे halide को बाहर धकेलता है, इसलिए product aldehyde R–CHO होता है (अंदर वाले carbon पर gem-dihalide से ketone बनता है)।
+
+इन्हीं mechanisms से चलने वाली alcohols और ethers की reactions [Lucas test](/hi/tests/lucas-test/) (HCl/ZnCl₂ के साथ 3° alcohols का SN1) और [ether cleavage with HX](/hi/reactions/ether-cleavage-with-hx/) pages पर दी गई हैं।
+
+<ExamTip>
+Question को इस order में पढ़ें: substrate (1°/2°/3°, allylic, aryl) → nucleophile की strength और size → solvent → temperature। गर्म conditions और strong bulky bases, substitution को elimination में बदल देते हैं; देखें [elimination reactions](/hi/mechanisms/elimination-reactions/)।
+</ExamTip>

@@ -1,0 +1,98 @@
+---
+title: "Degree of Unsaturation (Double Bond Equivalent, असंतृप्तता की कोटि)"
+description: "Degree of unsaturation (double bond equivalent) rings और π bonds गिनता है: DU = [(2C + 2) − H − X + N]/2। Halogens, O, N, ions के नियम और solved examples।"
+aliases: ["असंतृप्तता की कोटि", "डबल बॉन्ड इक्विवेलेंट", "degree of unsaturation hindi", "dbe formula hindi", "double bond equivalent hindi", "ihd hindi", "degree of unsaturation kaise nikale"]
+memoryTricks:
+  - text: "X → +H ; O, S → हटा दे ; N → −H"
+    meaning: "हर halogen को एक extra hydrogen गिनें, oxygen और sulphur को बस हटा दें, और हर nitrogen के लिए एक hydrogen घटा दें, फिर DU = [(2C + 2) − H]/2 लगाएँ।"
+faq:
+  - q: "Degree of unsaturation का formula क्या है?"
+    a: "DU = [(2C + 2) + N − H − X]/2, जहाँ C, H, N और X carbon, hydrogen, nitrogen और halogen atoms की संख्या हैं। Oxygen और sulphur को ignore किया जाता है। इसी expression को C − H/2 − X/2 + N/2 + 1 भी लिख सकते हैं।"
+  - q: "Benzene का degree of unsaturation कितना है?"
+    a: "Benzene, C₆H₆, का DU = (14 − 6)/2 = 4 है: एक ring और तीन C=C double bonds।"
+  - q: "Triple bond कितने degrees of unsaturation के बराबर है?"
+    a: "दो। Triple bond में दो π bonds होते हैं, और हर π bond या ring एक degree of unsaturation गिनी जाती है। C=O या C=N double bond, C=C की तरह, एक गिना जाता है।"
+  - q: "Degree of unsaturation निकालते समय oxygen को ignore क्यों करते हैं?"
+    a: "Oxygen दो bonds बनाता है, इसलिए इसे chain में डालने से saturation के लिए ज़रूरी hydrogens की संख्या नहीं बदलती। Ethanol, C₂H₆O, में ethane जितने ही छह hydrogens हैं, इसलिए दोनों का DU = 0 है।"
+  - q: "किसी ion का degree of unsaturation कैसे निकालते हैं?"
+    a: "Ion को उस neutral molecule में बदलें जिससे वह बना है, फिर सामान्य formula लगाएँ। Carbocation या carbanion के लिए हर charge पर एक H जोड़ें; ammonium या pyridinium ion जैसी protonated species के लिए extra H हटा दें।"
+translated: 2026-11-22
+---
+
+## Degree of unsaturation क्या है?
+
+**Degree of unsaturation (DU)**, जिसे **double bond equivalent (DBE)** या index of hydrogen deficiency भी कहते हैं, किसी molecule में **rings और π bonds** की कुल संख्या है। इसे सिर्फ़ molecular formula से निकाला जाता है: हर ring या double bond saturated open-chain formula CₙH₂ₙ₊₂ से दो hydrogens घटा देता है, इसलिए DU गिनता है कि hydrogens के कितने जोड़े कम हैं।
+
+<KeyPoint title="Formula">
+Hydrocarbon CₓHᵧ के लिए **DU = [(2C + 2) − H]/2**।
+
+दूसरे elements के साथ: **DU = [(2C + 2) + N − H − X]/2**, या इसी के बराबर **C − H/2 − X/2 + N/2 + 1**।
+</KeyPoint>
+
+## दूसरे atoms को कैसे गिनें
+
+| Formula में atom | क्या करें | क्यों |
+|---|---|---|
+| Halogen (F, Cl, Br, I) | हर एक को H गिनें | halogen एक hydrogen की जगह लेता है (एक bond) |
+| Oxygen, sulphur | ignore करें | दो bonds: H की गिनती बदले बिना chain में फिट हो जाता है |
+| Nitrogen | हर N के लिए एक H घटाएँ | तीन bonds: saturated amine में एक extra H होता है |
+
+इस logic का example: chloroethane C₂H₅Cl, C₂H₆ जैसा behave करता है, ethanol C₂H₆O भी C₂H₆ जैसा, और propylamine C₃H₉N, C₃H₈ जैसा। तीनों saturated हैं (DU = 0)।
+
+## हर unit का मतलब
+
+| Structural feature | DU में योगदान |
+|---|---|
+| Ring | 1 |
+| C=C, C=O, C=N double bond | 1 |
+| C≡C या C≡N triple bond | 2 |
+| Benzene ring (एक ring + तीन C=C) | 4 |
+
+DU सिर्फ़ total बताता है, type नहीं। C₄H₆ (DU = 2) एक alkyne, diene, cycloalkene या bicyclic alkane हो सकता है। फ़ैसला करने के लिए दूसरे clues (H₂ के साथ reaction, Br₂ water, ozonolysis) इस्तेमाल करें।
+
+## Solved examples
+
+| Formula | किस तरह गिनें | DU | एक संभव structure |
+|---|---|---|---|
+| C₆H₁₀ | C₆H₁₀ | (14 − 10)/2 = 2 | cyclohexene |
+| C₆H₆ | C₆H₆ | (14 − 6)/2 = 4 | benzene |
+| C₃H₆O | C₃H₆ | (8 − 6)/2 = 1 | acetone (एक C=O) |
+| C₂H₃N | C₂H₂ | (6 − 2)/2 = 2 | acetonitrile (C≡N) |
+| C₄H₆Br₂ | C₄H₈ | (10 − 8)/2 = 1 | एक dibromobutene |
+| C₆H₅NO₂ | C₆H₄ | (14 − 4)/2 = 5 | nitrobenzene (ring 4 + N=O 1) |
+| C₇H₆O₂ | C₇H₆ | (16 − 6)/2 = 5 | benzoic acid (ring 4 + C=O 1) |
+| C₁₀H₈ | C₁₀H₈ | (22 − 8)/2 = 7 | naphthalene (2 rings + 5 C=C) |
+| C₁₆H₁₃ClN₂O | C₁₆H₁₂ | (34 − 12)/2 = 11 | diazepam (3 rings + 8 double bonds) |
+
+**C₉H₉NO₄ के लिए step-by-step:** चारों O atoms हटा दें, फिर N के लिए एक H घटाएँ, तो C₉H₈ मिलता है। DU = (20 − 8)/2 = 6।
+
+<Trick>
+X → +H ; O, S → हटा दे ; N → −H। (हर halogen के लिए एक hydrogen जोड़ें, O और S हटा दें, हर nitrogen के लिए एक hydrogen घटा दें।)
+</Trick>
+
+## Charged species
+
+किसी ion के लिए पहले उसे **उस neutral molecule में बदलें जिससे वह बना है**, फिर formula लगाएँ। यह इस general rule से आता है कि हर atom (bonds की संख्या − 2)/2 का योगदान देता है, इसलिए मायने यह रखता है कि charged atom असल में कितने bonds बनाता है।
+
+| Ion | Neutral parent | DU |
+|---|---|---|
+| CH₃⁺ (carbocation, H⁻ खोया) | CH₄: एक H जोड़ें | 0 |
+| CH₃O⁻ (alkoxide, H⁺ खोया) | CH₃OH: एक H जोड़ें | 0 |
+| C₂H₅NH₃⁺ (ammonium, H⁺ लिया) | C₂H₅NH₂: एक H हटाएँ | 0 |
+| C₅H₆N⁺ (pyridinium, H⁺ लिया) | C₅H₅N: एक H हटाएँ | 4 |
+
+<ExamTip title="Common mistake">
+"Positive charge: H जोड़ें, negative charge: H घटाएँ" जैसा कोई एक rule नहीं है। यह carbocation के लिए काम करता है, लेकिन alkoxide ions, carbanions और protonated amines के लिए ग़लत जवाब देता है। हमेशा neutral parent पर वापस जाएँ।
+</ExamTip>
+
+## Exam tips
+
+- किसी सामान्य neutral molecule के लिए जवाब हमेशा पूर्ण संख्या (whole number) होता है। Fraction आए तो मतलब calculation में गलती, ग़लत formula या radical है।
+- Exam problems में, छह या ज़्यादा carbons वाले formula में DU 4 या ज़्यादा हो तो यह benzene ring का पक्का इशारा है।
+- Catalytic hydrogenation C=C और C≡C bonds पर H₂ जोड़ता है, लेकिन सामान्य rings को नहीं खोलता। इसलिए जो C₆H₁₀ compound (DU = 2) H₂ का सिर्फ़ एक mole लेता है, उसमें एक ring और एक C=C है, जैसे cyclohexene में।
+
+## Related pages
+
+- [Aromaticity](/hi/concepts/aromaticity/): benzene की चार units of unsaturation अलग तरह से क्यों behave करती हैं।
+- [Catalytic hydrogenation](/hi/reactions/catalytic-hydrogenation/) और [ozonolysis](/hi/reactions/ozonolysis/): π bonds की जगह पता करने के tests।
+- [Functional group priority in IUPAC nomenclature](/hi/concepts/iupac-functional-group-priority/)।

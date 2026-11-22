@@ -1,0 +1,80 @@
+---
+title: "Robinson Annulation (रॉबिन्सन एनुलेशन)"
+description: "Robinson annulation एक नई cyclohexenone ring बनाता है: ketone enolate, methyl vinyl ketone पर Michael addition करता है, फिर intramolecular aldol condensation होता है।"
+aliases: ["रॉबिन्सन एनुलेशन", "रॉबिन्सन वलय निर्माण", "robinson annulation hindi", "robinson annelation hindi", "michael aldol annulation hindi", "tandem michael aldol hindi"]
+reagents: "Base (OH⁻, NaOEt या KOH); acid catalysis (H₂SO₄) भी काम करता है"
+conditions: "पहले Michael addition, फिर गुनगुना करने पर intramolecular aldol और dehydration"
+byproducts: "H₂O"
+reactantName: "Cyclohexanone + methyl vinyl ketone (but-3-en-2-one)"
+productName: "Δ¹,⁹-Octal-2-one (4,4a,5,6,7,8-hexahydronaphthalen-2(3H)-one)"
+faq:
+  - q: "Robinson annulation के दो steps कौन-से हैं?"
+    a: "पहले किसी ketone enolate का methyl vinyl ketone जैसे α,β-unsaturated ketone पर Michael (1,4-) addition होता है, जिससे 1,5-diketone बनता है। फिर उस diketone का intramolecular aldol condensation छह सदस्यों वाली ring बंद करता है और पानी निकलकर cyclohexenone बनता है।"
+  - q: "Base में cyclohexanone और methyl vinyl ketone से क्या product बनता है?"
+    a: "पहले Michael adduct 2-(3-oxobutyl)cyclohexanone बनता है। फिर यह cyclise और dehydrate होकर bicyclic enone Δ¹,⁹-octal-2-one देता है, जिसमें नया C=C ring fusion पर होता है और C=O से conjugated रहता है।"
+  - q: "Robinson annulation में छह सदस्यों वाली ring ही क्यों बनती है?"
+    a: "Michael step से 1,5-diketone बनता है। इसके आखिरी CH₃ का enolate पाँच atoms दूर वाले ring C=O पर attack करता है, जिससे strain-free छह सदस्यों वाली ring बंद होती है। Aldol reactions में 1,5-diketones से cyclohexenones बनते हैं।"
+  - q: "Wieland–Miescher ketone क्या है?"
+    a: "यह 2-methylcyclohexane-1,3-dione और methyl vinyl ketone का Robinson annulation product है। यह bicyclic enedione steroid synthesis का एक classic starting material है।"
+translated: 2026-11-22
+---
+
+## Robinson annulation क्या है?
+
+**Robinson annulation** एक ring बनाने वाला reaction है जो किसी ketone पर α,β-unsaturated ketone (cyclohex-2-enone) वाली एक **नई छह सदस्यों वाली ring** जोड़ता है। इसमें दो reactions एक के बाद एक होते हैं: किसी ketone enolate का α,β-unsaturated ketone, आमतौर पर **methyl vinyl ketone (MVK)**, पर **Michael addition**, और उसके बाद **intramolecular aldol condensation**। Robert Robinson ने 1935 में इसे report किया था, और steroids और terpenes में fused rings बनाने का यह एक key रास्ता है। *Annulus* Latin में "ring" को कहते हैं।
+
+## Mechanism
+
+**Stage 1: Michael addition (1,4-addition)**
+
+1. OH⁻, cyclohexanone से एक α-H हटाता है और उसका enolate बनता है।
+2. Enolate का carbon, CH₂=CH–CO–CH₃ के **β-CH₂** पर attack करता है (conjugate addition), जिससे MVK वाले हिस्से पर एक नया enolate बनता है।
+3. Proton transfer (tautomerisation) से **1,5-diketone** 2-(3-oxobutyl)cyclohexanone बनता है।
+
+<Eq ce="cyclohexanone + CH2=CHCOCH3 ->[OH-] 2-(3-oxobutyl)cyclohexanone" />
+
+**Stage 2: Intramolecular aldol condensation**
+
+4. OH⁻, side-chain ketone के आखिरी CH₃ से एक H हटाता है, जिससे ⁻CH₂–CO– बनता है।
+5. यह carbanion ring C=O पर attack करता है, छह सदस्यों वाली ring बंद होती है और एक bicyclic β-hydroxy ketone (keto alcohol) बनता है।
+6. Dehydration (E1cB, गुनगुना करने पर) से conjugated enone मिलता है: **Δ¹,⁹-octal-2-one**, जिसमें C=C ring fusion पर है।
+
+<Eq ce="2-(3-oxobutyl)cyclohexanone ->[OH-] bicyclic keto alcohol ->[\Delta][-H2O] octalone" />
+
+<KeyPoint>
+नई ring में methyl vinyl ketone की CH₂=CH–CO–CH₃ unit के चार carbons एक four-carbon bridge बनाते हैं, और original ketone के दो carbons (उसका C=O carbon और उसका α-carbon) छह सदस्यों वाली ring पूरी करते हैं। नया C=C हमेशा नए ring C=O से conjugated होता है।
+</KeyPoint>
+
+## Examples
+
+| Donor (enolate source) | Acceptor | Annulation product |
+|---|---|---|
+| Cyclohexanone | Methyl vinyl ketone | Δ¹,⁹-Octal-2-one (bicyclic enone) |
+| 2-Methylcyclohexanone | Methyl vinyl ketone | Methyl-substituted octalone (ring fusion पर angular CH₃) |
+| 2-Methylcyclohexane-1,3-dione | Methyl vinyl ketone | Wieland–Miescher ketone (steroid building block) |
+| 2-Methylcyclopentane-1,3-dione | Aryl-substituted enone | Estrone की synthesis में इस्तेमाल होने वाली ring C/D unit |
+
+β-Diketone या β-keto ester donor के साथ deprotonation उस CH पर होता है जो दो carbonyl groups के बीच है। इससे तय हो जाता है कि Michael addition कहाँ होगा।
+
+<ExamTip>
+Cyclohexenone product से पीछे की ओर जाने के लिए पहले aldol को undo करें: C=C (α,β-bond) तोड़ें और β-carbon पर C=O वापस बनाएँ। इससे 1,5-diketone मिलता है। फिर original ketone के α-carbon और MVK से आए CH₂ के बीच वाले bond पर Michael addition को undo करें।
+</ExamTip>
+
+## Conditions और practical points
+
+- **Base या acid:** reaction आमतौर पर base (NaOH, KOH, NaOEt) के साथ किया जाता है, लेकिन acid (H₂SO₄) से भी मिलते-जुलते results मिलते हैं। Michael step enamine के through neutral conditions में भी हो सकता है (तुलना करें [Stork enamine reaction](/hi/reactions/stork-enamine-reaction/) से)।
+- **दो अलग steps:** Michael adduct को अक्सर पहले isolate किया जाता है और फिर अलग step में cyclise किया जाता है। इससे starting enolate, enone product से react नहीं कर पाता।
+- **MVK आसानी से polymerise होता है।** β-chloroketone या Mannich base जैसा कोई precursor इस्तेमाल किया जा सकता है, जो enone को धीरे-धीरे release करता है।
+- **Asymmetric versions:** proline और दूसरे chiral amines enantioselective annulation को catalyse करते हैं, उदाहरण के लिए Wieland–Miescher ketone को enantiopure रूप में बनाने के लिए।
+
+## Limitations
+
+- Unsymmetrical ketones दो अलग enolates बना सकते हैं, इसलिए Michael step किसी भी तरफ़ हो सकता है। Equilibrating conditions में आमतौर पर thermodynamic enolate react करता है।
+- Enone product खुद एक Michael acceptor है, इसलिए excess enolate के साथ side reactions हो सकते हैं।
+
+## Related reactions
+
+- [Michael addition](/hi/reactions/michael-addition/), पहला stage
+- [Aldol condensation](/hi/reactions/aldol-condensation/), जिसमें ring बंद करने वाला intramolecular aldol भी शामिल है
+- [Claisen condensation](/hi/reactions/claisen-condensation/) और [Dieckmann condensation](/hi/reactions/dieckmann-condensation/), ring बनाने वाले दूसरे condensations
+- Hub: [Carbonyl condensation reactions](/hi/mechanisms/carbonyl-condensation-reactions/)

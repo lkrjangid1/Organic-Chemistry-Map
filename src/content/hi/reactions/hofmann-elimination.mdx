@@ -1,0 +1,79 @@
+---
+title: "Hofmann Elimination (हॉफमैन विलोपन)"
+description: "Hofmann elimination में amine से सबसे कम substituted alkene बनता है: exhaustive methylation, Ag₂O, फिर quaternary ammonium hydroxide को गर्म करना (E2)।"
+aliases: ["हॉफमैन विलोपन", "हॉफमैन एलिमिनेशन", "hofmann elimination hindi", "hoffman elimination hindi", "hofmann exhaustive methylation hindi", "hofmann rule hindi", "HEM hindi"]
+reagents: "Excess CH₃I, फिर moist Ag₂O (OH⁻ देता है)"
+conditions: "गर्म करना (Δ)"
+byproducts: "Trimethylamine, पानी"
+reactantName: "Butan-2-yltrimethylammonium hydroxide"
+productName: "But-1-ene (Hofmann product)"
+faq:
+  - q: "Hofmann elimination का major product क्या है?"
+    a: "सबसे कम substituted alkene (Hofmann product)। उदाहरण के लिए, butan-2-yltrimethylammonium hydroxide मुख्य रूप से but-2-ene की जगह but-1-ene देता है, और by-product trimethylamine होता है।"
+  - q: "Hofmann elimination कम substituted alkene क्यों देता है?"
+    a: "–N(CH₃)₃⁺ leaving group बहुत bulky है, इसलिए hydroxide सबसे आसानी से पहुँचने वाला β-hydrogen हटाता है, जो सबसे कम substituted carbon पर होता है। Saytzeff alkene के लिए ज़रूरी conformation भीड़ वाला और ज़्यादा energy वाला होता है।"
+  - q: "Hofmann elimination में Ag₂O का क्या काम है?"
+    a: "Moist silver oxide, quaternary ammonium iodide के iodide को hydroxide से बदल देता है (AgI precipitate होता है)। यही hydroxide वह base है जो गर्म करने पर E2 elimination करता है।"
+  - q: "Hofmann exhaustive methylation क्या है?"
+    a: "Quaternary ammonium salt बनाने के लिए amine को बार-बार excess methyl iodide से treat करना, फिर Ag₂O और गर्म करना। Cyclic amine में यह cycle तब तक दोहराया जाता है जब तक nitrogen पूरी तरह trimethylamine के रूप में निकल न जाए और एक diene बच जाए।"
+  - q: "Hofmann elimination और Hofmann bromamide degradation में क्या अंतर है?"
+    a: "Hofmann elimination एक quaternary ammonium hydroxide के रास्ते amine को alkene में बदलता है। Hofmann bromamide degradation, Br₂ और NaOH से amide को एक carbon कम वाले primary amine में बदलता है।"
+translated: 2026-11-22
+---
+
+## Hofmann elimination क्या है?
+
+**Hofmann elimination** एक **amine को alkene में** बदलता है। पहले amine को excess methyl iodide से methylate करके quaternary ammonium iodide बनाया जाता है, फिर moist **silver oxide** से iodide को hydroxide से बदला जाता है, और फिर **quaternary ammonium hydroxide** को गर्म किया जाता है। C–N bond टूटता है, trimethylamine निकलता है, और **सबसे कम substituted alkene** (Hofmann product) बनता है, जो सामान्य Saytzeff preference का उल्टा है।
+
+इसका नाम August Wilhelm von Hofmann पर है, जिन्होंने इसे 1851 में report किया था।
+
+## Mechanism
+
+1. **Exhaustive methylation।** Nitrogen का lone pair CH₃–I पर बार-बार attack करता है (SN2), जब तक quaternary ammonium iodide न बन जाए: R–NH₂ → R–N⁺(CH₃)₃ I⁻।
+2. **Ion exchange।** Moist Ag₂O (असल में AgOH) AgI को precipitate कर देता है और R–N⁺(CH₃)₃ OH⁻ बचता है।
+3. **गर्म करने पर E2 elimination।** Hydroxide एक β-hydrogen हटाता है, उसी समय neutral amine N(CH₃)₃ निकलता है और C=C बनता है, सब एक ही step में। आमतौर पर geometry anti होती है, हालाँकि इन salts में syn elimination भी देखा जाता है।
+
+<Eq ce="R-CH2-CH2-N(CH3)3+ OH- ->[\Delta] R-CH=CH2 + N(CH3)3 + H2O" />
+
+<KeyPoint>
+–N⁺(CH₃)₃ group बड़ा है। Saytzeff alkene के लिए ज़रूरी anti-periplanar arrangement तक पहुँचने में alkyl groups इससे टकराते हैं, इसलिए base सबसे खुला hydrogen लेता है, जो आमतौर पर CH₃ group पर होता है। यही **Hofmann rule** है: सबसे कम substituted alkene major product होता है।
+</KeyPoint>
+
+## Examples
+
+**1. Butan-2-yltrimethylammonium hydroxide।** β-Hydrogens C-1 (एक CH₃) और C-3 (एक CH₂) पर मौजूद हैं। ज़्यादा आसानी से पहुँचने वाला C-1 hydrogen हटता है, इसलिए मुख्य alkene **but-1-ene** है।
+
+<Eq ce="CH3CH2CH(CH3)N(CH3)3+ OH- ->[\Delta] CH2=CHCH2CH3 (major) + N(CH3)3 + H2O" />
+
+**2. 1-Methylbutylamine।** Exhaustive methylation और Ag₂O के बाद गर्म करने पर pent-2-ene की जगह मुख्य रूप से **pent-1-ene** मिलता है।
+
+**3. Cyclic amine का Hofmann exhaustive methylation (HEM)।** N-Methylpyrrolidine को दो पूरे cycles चाहिए:
+
+- CH₃I से N,N-dimethylpyrrolidinium iodide बनता है; OH⁻/Δ ring को खोलकर N,N-dimethylbut-3-en-1-amine (CH₂=CH–CH₂–CH₂–N(CH₃)₂) देता है।
+- दूसरा CH₃I open-chain quaternary salt देता है; OH⁻/Δ nitrogen को trimethylamine के रूप में हटा देता है और **buta-1,3-diene** बचता है।
+
+<Eq ce="C4H8N-CH3 ->[1) CH3I, 2) Ag2O, \Delta] CH2=CHCH2CH2N(CH3)2 ->[1) CH3I, 2) Ag2O, \Delta] CH2=CH-CH=CH2 + N(CH3)3" />
+
+Exam answers में nitrogen हटाने के लिए ज़रूरी methylation–elimination cycles की संख्या उतनी ही होती है जितने C–N bonds तोड़ने हैं: open-chain amine के लिए एक, और pyrrolidine जैसे ring nitrogen के लिए दो।
+
+<ExamTip>
+Hofmann product निकालने के लिए: हर उस β-carbon की list बनाएँ जिस पर hydrogen है, फिर सबसे कम substituted वाले से H हटाएँ (पहले CH₃, फिर CH₂)। हर N–H bond के लिए CH₃I का एक mole लगता है, और quaternise करने के लिए एक और; ring nitrogen में हर cycle में एक ring opening होता है।
+</ExamTip>
+
+## Onium leaving groups Hofmann alkene को क्यों favour करते हैं
+
+किसी भी β-elimination में तीन स्थितियों में Hofmann alkene major बनता है: खराब या positively charged leaving group (F, –NR₃⁺, –SR₂⁺), potassium tert-butoxide जैसा bulky base, और ज़्यादा substituted β-carbon के पास भीड़ वाला substrate। Hofmann elimination में पहली और तीसरी दोनों बातें एक साथ हैं: substrate पर ही एक charged, bulky leaving group।
+
+## Limitations
+
+- सिर्फ़ β-hydrogen वाले amines ही eliminate कर सकते हैं; अगर β-hydrogen न हो, तो गर्म करने पर salt इसकी जगह CH₃ खो देता है (substitution)।
+- जब दो β-carbons मिलते-जुलते हों तो mixtures बन सकते हैं।
+- आज यह method मुख्य रूप से historical और exam महत्व का है; amine oxides का हल्का [Cope elimination](/hi/reactions/cope-elimination/) भी वैसी ही Hofmann-type selectivity देता है।
+
+## Related reactions
+
+- [Cope elimination](/hi/reactions/cope-elimination/): amine oxides, syn elimination, यह भी Hofmann selectivity देता है।
+- [E2 reaction](/hi/reactions/e2-reaction/): elimination step का mechanism।
+- [E1cB mechanism](/hi/reactions/e1cb-mechanism/): elimination spectrum का carbanion वाला सिरा।
+- [Hofmann bromamide degradation](/hi/reactions/hofmann-bromamide-degradation/): एक अलग Hofmann reaction (amide से amine); दोनों को confuse न करें।
+- [Elimination reactions hub](/hi/mechanisms/elimination-reactions/)।

@@ -1,0 +1,103 @@
+---
+title: "Baeyer–Villiger Oxidation (बेयर-विलिगर ऑक्सीकरण)"
+description: "Baeyer–Villiger oxidation में mCPBA जैसे peroxyacid से ketone, ester में और cyclic ketone, lactone में बदलता है। Mechanism और migratory aptitude।"
+aliases: ["बेयर विलिगर ऑक्सीकरण", "बेयर विलिगर अभिक्रिया", "baeyer villiger oxidation hindi", "baeyer villiger reaction hindi", "bayer villiger hindi", "ketone to ester hindi", "mcpba oxidation hindi"]
+reagents: "Peroxyacid R–CO₃H (mCPBA, peracetic acid, trifluoroperacetic acid) या Lewis acid के साथ H₂O₂"
+conditions: "CH₂Cl₂ जैसा inert solvent, room temperature"
+byproducts: "RCOOH (जैसे m-chlorobenzoic acid)"
+reactantName: "Cyclohexanone"
+productName: "ε-Caprolactone (oxepan-2-one)"
+steps:
+  - title: "Carbonyl activation"
+    text: "Peroxyacid (mCPBA) cyclohexanone के C=O oxygen को protonate करता है, जिससे carbonyl carbon ज़्यादा electrophilic हो जाता है।"
+    arrows: "Carbonyl O का lone pair → peroxyacid का acidic H।"
+  - title: "Criegee intermediate"
+    text: "Peroxyacid carbonyl carbon पर जुड़ता है, जिससे tetrahedral peroxy (Criegee) intermediate, R₂C(OH)–O–O–COAr, बनता है।"
+    arrows: "Peroxy O का lone pair → carbonyl carbon; C=O का π pair oxygen पर चला जाता है, और फिर peroxy O, H⁺ खो देता है।"
+  - title: "Concerted migration (slow)"
+    text: "एक ring carbon, carbinol carbon से पास वाले peroxide oxygen पर चला जाता है, जबकि O–O bond टूटता है और carboxylate निकल जाता है; इसे rate-determining माना जाता है। Migrate होने वाला group अपना configuration बनाए रखता है।"
+    arrows: "Ring का एक C–C bond pair पास वाले O पर shift होता है, जबकि O–O bond pair carboxylate के साथ निकल जाता है।"
+  - title: "Deprotonation से lactone"
+    text: "Oxocarbenium ion H⁺ खोता है और ε-caprolactone बनता है: एक oxygen जुड़ने से ring छह से सात atoms की हो गई है।"
+    arrows: "H⁺ निकलने पर O–H bond pair oxygen पर लौट आता है, और C=O पूरा हो जाता है।"
+faq:
+  - q: "Ketone के Baeyer–Villiger oxidation का product क्या है?"
+    a: "एक ester। Carbonyl carbon और उसके एक group के बीच एक oxygen atom जुड़ जाता है; cyclic ketone से lactone बनता है, इसलिए cyclohexanone से ε-caprolactone मिलता है।"
+  - q: "Baeyer–Villiger oxidation में migratory aptitude क्या है?"
+    a: "Tertiary alkyl > cyclohexyl (secondary) > phenyl > primary alkyl > methyl। जो group positive charge को बेहतर stabilise करता है, वही oxygen पर migrate करता है।"
+  - q: "Acetophenone mCPBA के साथ क्या देता है?"
+    a: "Phenyl acetate, CH₃COOC₆H₅। Phenyl, methyl से पहले migrate करता है, इसलिए oxygen carbonyl carbon और ring के बीच जुड़ता है।"
+  - q: "Baeyer–Villiger oxidation में aldehyde क्या देता है?"
+    a: "आमतौर पर carboxylic acid, क्योंकि carbon group की तुलना में hydrogen पहले oxygen पर migrate करता है।"
+  - q: "क्या Baeyer–Villiger oxidation में configuration retain होता है?"
+    a: "हाँ। Chiral migrating group बिना configuration बदले oxygen पर चला जाता है।"
+translated: 2026-11-22
+---
+
+## Baeyer–Villiger oxidation क्या है?
+
+**Baeyer–Villiger oxidation** में carbonyl group के बगल में एक oxygen atom जोड़कर **ketone को ester में** बदला जाता है। Oxidant एक **peroxyacid (R–CO₃H)** होता है, सबसे ज़्यादा **mCPBA** (meta-chloroperoxybenzoic acid), peracetic acid या trifluoroperacetic acid; Lewis acid catalyst के साथ H₂O₂ भी काम करता है। **Cyclic ketones से lactones बनते हैं**, इसलिए cyclohexanone, ε-caprolactone बन जाता है। Adolf von Baeyer और Victor Villiger ने इसे 1899 में report किया था।
+
+<Eq ce="R-CO-R' + R''CO3H -> R-CO-O-R' + R''COOH" />
+
+## Mechanism
+
+1. **Carbonyl का activation।** Peroxyacid C=O oxygen को protonate करता है, जिससे carbonyl carbon ज़्यादा electrophilic हो जाता है।
+2. **Addition (Criegee intermediate)।** Peroxyacid carbonyl carbon पर जुड़ता है, जिससे एक tetrahedral peroxy intermediate बनता है जिसे **Criegee intermediate**, R₂C(OH)–O–O–COR'', कहते हैं।
+3. **Concerted migration।** Carbinol carbon पर लगा एक group पास वाले peroxide oxygen पर चला जाता है, जबकि O–O bond टूटता है और एक carboxylate निकल जाता है। इस step को rate-determining माना जाता है।
+4. **Deprotonation।** बना हुआ oxocarbenium ion H⁺ खोता है और ester मिलता है।
+
+<Eq ce="R2C=O ->[R''CO3H] R2C(OH)-O-O-COR'' ->[\text{R migrates}][-R''COOH] R-CO-O-R" />
+
+<KeyPoint>
+**Migratory aptitude:** tertiary alkyl &gt; cyclohexyl (secondary) &gt; phenyl &gt; primary alkyl &gt; methyl। जो groups positive charge को बेहतर stabilise करते हैं, वही migrate करते हैं। Migrate होने वाला group अपना configuration बनाए रखता है (retention)।
+</KeyPoint>
+
+## Examples
+
+1. **Cyclohexanone → ε-caprolactone (ring expansion होकर सात सदस्यों वाला lactone):**
+
+<Eq ce="\text{cyclohexanone} ->[mCPBA][CH2Cl2] \text{ε-caprolactone}" />
+
+2. **Acetophenone → phenyl acetate:** phenyl की aptitude methyl से ज़्यादा है, इसलिए O, C=O और ring के बीच जाता है।
+
+<Eq ce="C6H5COCH3 ->[mCPBA] CH3COOC6H5" />
+
+3. **tert-Butyl methyl ketone (pinacolone) → tert-butyl acetate:** tertiary group migrate करता है।
+
+<Eq ce="(CH3)3C-CO-CH3 ->[RCO3H] CH3-CO-O-C(CH3)3" />
+
+4. **Cyclopentanone → छह सदस्यों वाला lactone (δ-valerolactone)।**
+
+<ExamTip>
+Carbonyl carbon पर लगे groups में से ज़्यादा migratory aptitude वाला group ढूँढें और नया oxygen उसके और C=O के बीच लगाएँ। वह group ester का **alkoxy (–OR) हिस्सा** बनता है। Cyclic ketone में ज़्यादा substituted α-carbon ही lactone में ring oxygen से जुड़ा होता है।
+</ExamTip>
+
+## Unsymmetrical ketone का product predict करना
+
+तीन checks करें:
+
+1. Carbonyl carbon पर लगे **दोनों groups लिखें** और उन्हें migratory aptitude से rank करें।
+2. Carbonyl carbon और higher-ranked group के बीच **O लगाएँ**। अब वह group oxygen से जुड़ा है, इसलिए वह ester का alcohol वाला हिस्सा बनता है।
+3. **Stereochemistry बनाए रखें**: अगर migrate होने वाला carbon stereocentre है, तो उसका configuration नहीं बदलता, क्योंकि उससे जुड़ा कोई bond नहीं टूटता, सिवाय उस bond के जो पूरा का पूरा oxygen पर चला जाता है।
+
+**2-Methylcyclohexanone** में ring का CH(CH₃) carbon (secondary), ring के CH₂ carbon (primary) से ऊपर है, इसलिए oxygen substituted side पर जाता है। Product सात सदस्यों वाला lactone है जिसमें methyl group ring oxygen के बगल वाले carbon पर है (7-methyloxepan-2-one)। **3-Methylbutan-2-one** में isopropyl, methyl से ऊपर है, इसलिए product isopropyl acetate, CH₃COOCH(CH₃)₂, है।
+
+<KeyPoint>
+mCPBA, C=C bonds को भी epoxidise करता है। जिस molecule में ketone और alkene दोनों हों, उसमें product बनाने से पहले check करें कि question कौन-सा बदलाव चाहता है।
+</KeyPoint>
+
+## Limitations और exceptions
+
+- Aldehydes भी oxidise होते हैं; hydrogen preferentially migrate करता है, इसलिए ज़्यादातर aldehydes carboxylic acids देते हैं।
+- Ring strain और stereoelectronic effects simple migratory-aptitude order को बदल सकते हैं।
+- Peroxyacids C=C bonds को भी epoxidise करते हैं (Prilezhaev reaction), इसलिए molecule में कहीं और मौजूद alkene पहले react कर सकता है।
+- Plain H₂O₂ बहुत कम reactive है और इसे catalyst चाहिए; primary group का migration बढ़ाने के लिए H₂O₂ के साथ BF₃ इस्तेमाल होता है।
+
+## Related reactions
+
+- [Prilezhaev epoxidation](/hi/reactions/prilezhaev-epoxidation/): यही peroxyacids alkenes को epoxides में oxidise करते हैं।
+- [Beckmann rearrangement](/hi/reactions/beckmann-rearrangement/): nitrogen वाला analogue (oxime से amide)।
+- [Schmidt reaction](/hi/reactions/schmidt-reaction/): HN₃ से ketones में NH insertion।
+- [Pinacol–pinacolone rearrangement](/hi/reactions/pinacol-pinacolone-rearrangement/)
+- [Rearrangement reactions hub](/hi/mechanisms/rearrangement-reactions/)

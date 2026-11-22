@@ -1,0 +1,92 @@
+---
+title: "Dakin Reaction (Dakin Oxidation, डाकिन अभिक्रिया)"
+description: "Dakin reaction: o- या p-hydroxy (या amino) aryl aldehyde या ketone, H₂O₂ और base से benzenediol और carboxylate देता है, जैसे salicylaldehyde से catechol।"
+aliases: ["डाकिन अभिक्रिया", "डाकिन ऑक्सीकरण", "dakin reaction hindi", "dakin oxidation hindi", "salicylaldehyde se catechol", "hydroxybenzaldehyde to benzenediol hindi", "dakin reaction mechanism hindi"]
+reagents: "Aqueous base (NaOH) में H₂O₂; acidic H₂O₂ वाले variants भी ज्ञात हैं"
+conditions: "Aqueous alkaline solution; base बहुत ज़्यादा strong नहीं होना चाहिए (लगभग pH 13.5 से ऊपर reaction नहीं होता)"
+byproducts: "Carboxylate ion: aldehydes से HCOO⁻, methyl ketones से CH₃COO⁻"
+reactantName: "Salicylaldehyde (2-hydroxybenzaldehyde)"
+productName: "Catechol (benzene-1,2-diol)"
+faq:
+  - q: "Salicylaldehyde के Dakin reaction का product क्या है?"
+    a: "Catechol (benzene-1,2-diol) और formate ion। –CHO group की जगह –OH आ जाता है, क्योंकि aryl group carbon से oxygen पर migrate करता है और बना हुआ aryl formate hydrolyse हो जाता है।"
+  - q: "Dakin reaction के लिए carbonyl के ortho या para पर OH या NH₂ group क्यों चाहिए?"
+    a: "Ortho या para पर electron-donating group, C=O से जुड़े ring carbon पर electron density धकेलता है, जिससे उसकी migratory aptitude बढ़ जाती है। इसके बिना (या meta OH के साथ) hydrogen migrate करता है और carboxylic acid बनता है।"
+  - q: "Dakin reaction का Baeyer–Villiger oxidation से क्या संबंध है?"
+    a: "दोनों में peroxide adduct और oxygen पर 1,2-shift के through carbonyl carbon और aryl group के बीच एक oxygen atom घुस जाता है। Dakin reaction में बनने वाला ester एक aryl ester होता है, जो basic medium में hydrolyse होकर phenol देता है।"
+  - q: "Dakin conditions में m-hydroxybenzaldehyde का क्या होता है?"
+    a: "यह resorcinol नहीं देता। Meta position से aryl group migration के लिए activate नहीं होता, इसलिए hydride migrate करता है और m-hydroxybenzoic acid बनता है।"
+  - q: "4-Hydroxyacetophenone के Dakin reaction का by-product क्या है?"
+    a: "Acetate ion (acidification के बाद acetic acid)। दूसरा product hydroquinone है।"
+translated: 2026-11-22
+---
+
+## Dakin reaction क्या है?
+
+**Dakin reaction (Dakin oxidation)** में **aqueous base में hydrogen peroxide** से **ortho- या para-hydroxy (या amino) aryl aldehyde या ketone** एक **phenol** में बदल जाता है। –CHO या –COR group की जगह **–OH** आ जाता है, और carbonyl carbon **carboxylate** के रूप में निकल जाता है। इसलिए **salicylaldehyde से catechol** बनता है, और **4-hydroxybenzaldehyde से hydroquinone**। इसका नाम Henry Drysdale Dakin के नाम पर है और यह [Baeyer–Villiger oxidation](/hi/reactions/baeyer-villiger-oxidation/) से बहुत मिलती-जुलती है।
+
+## General reaction
+
+<Eq ce="HO-C6H4-CO-R + H2O2 + OH- -> HO-C6H4-OH + R-COO- + H2O" />
+
+R = H (aldehyde, formate देता है) या alkyl (ketone, acetate आदि देता है)। Activating group (OH या NH₂) carbonyl के **ortho या para** पर होना चाहिए।
+
+## Mechanism
+
+1. **Hydroperoxide ion बनना।** OH⁻, H₂O₂ से एक proton हटाता है, जिससे HOO⁻ बनता है, जो H₂O₂ से कहीं ज़्यादा strong nucleophile है।
+2. **Nucleophilic addition।** HOO⁻ carbonyl carbon पर add होता है, जिससे tetrahedral intermediate, Ar–C(O⁻)(R)–O–OH, बनता है।
+3. **[1,2]-Aryl migration।** Intermediate टूटता है: C=O फिर से बनता है, aryl group carbon से पड़ोसी oxygen पर जाता है, और O–O bond से OH⁻ निकल जाता है। Product एक **aryl ester**, R–CO–O–Ar, है।
+4. **Ester hydrolysis।** OH⁻ ester carbonyl पर attack करता है, और tetrahedral intermediate **phenoxide ion** को बाहर निकालता है।
+5. **Proton transfer।** Phenoxide, carboxylic acid का acidic proton ले लेता है, जिससे phenoxide और carboxylate मिलते हैं। Acid work-up से free benzenediol मिलता है।
+
+<Eq ce="Ar-CHO ->[HOO-] Ar-CH(O-)-O-OH ->[\text{aryl shift}][- OH-] H-CO-O-Ar ->[OH-] Ar-O- + HCOOH" />
+
+<KeyPoint>
+दो slow steps हैं **HOO⁻ का addition** और **aryl migration**। Carbonyl के ortho या para पर OH या NH₂ group migrate होने वाले ring carbon को electron density देता है, इसलिए hydrogen की जगह aryl group migrate करता है। इसीलिए सिर्फ़ o- और p-hydroxy/amino carbonyl compounds ही phenols देते हैं।
+</KeyPoint>
+
+## Examples
+
+**1. Salicylaldehyde → catechol:**
+
+<Eq ce="2-HOC6H4CHO ->[H2O2, NaOH] 1,2-C6H4(OH)2 + HCOO-" />
+
+**2. 4-Hydroxybenzaldehyde → hydroquinone:**
+
+<Eq ce="4-HOC6H4CHO ->[H2O2, NaOH] 1,4-C6H4(OH)2 + HCOO-" />
+
+**3. 4-Hydroxyacetophenone → hydroquinone + acetate:** ketones, aldehydes से धीरे react करते हैं, लेकिन गुनगुना करने से इसकी भरपाई हो जाती है।
+
+<Eq ce="4-HOC6H4COCH3 ->[H2O2, OH-] 1,4-C6H4(OH)2 + CH3COO-" />
+
+**4. 4-Aminoacetophenone → 4-aminophenol:** NH₂ group ring को OH की तरह ही activate करता है।
+
+<Eq ce="4-H2NC6H4COCH3 ->[H2O2, OH-] 4-H2NC6H4OH + CH3COO-" />
+
+## Reaction को control करने वाले factors
+
+| Factor | असर |
+|---|---|
+| Aldehyde बनाम ketone | Aldehydes तेज़ react करते हैं (ज़्यादा electrophilic C=O) |
+| OH ortho बनाम para | Weak base में ortho तेज़ react करता है (internal H-bond C=O को activate करता है) |
+| OH meta | इसकी जगह hydrogen migrate करता है; diol नहीं, hydroxybenzoic acid बनता है |
+| Ortho/para पर EWG (जैसे NO₂) | Aryl migration धीमा; acid product favour होता है |
+| pH | ज़्यादा HOO⁻ बनने से तेज़; लगभग pH 13.5 से ऊपर रुक जाता है |
+
+<ExamTip>
+इसे activated aromatic carbonyl पर Baeyer–Villiger की तरह समझें: ring और carbonyl carbon के बीच O घुसता है, फिर base aryl ester को काट देता है। Product = जहाँ carbonyl group था वहाँ OH वाली ring; by-product = RCOO⁻। Check करें कि activating group ortho या para पर है; अगर meta पर है, तो इसकी जगह carboxylic acid की उम्मीद करें।
+</ExamTip>
+
+## Limitations और variants
+
+- m-Hydroxy और electron-poor aryl carbonyls phenols की जगह carboxylic acids देते हैं।
+- बहुत strong base (लगभग pH 13.5 से ऊपर) reaction रोक देता है, शायद इसलिए कि doubly deprotonated peroxide, O²⁻ नहीं खो पाता।
+- **Acid-catalysed version:** methanol में थोड़े H₂SO₄ के साथ H₂O₂ उसी aryl-shift रास्ते से काम करता है; boric acid डालने से phenol की yield बढ़ती है।
+- Ionic liquids में methyltrioxorhenium जैसे catalysts, या solid urea–H₂O₂ complex, oxidation को तेज़ करते हैं।
+
+## Related reactions
+
+- [Baeyer–Villiger oxidation](/hi/reactions/baeyer-villiger-oxidation/): parent reaction; peracid carbonyl के बगल में O घुसाकर esters या lactones देता है।
+- [Cumene process](/hi/reactions/cumene-process/): phenyl carbon से electron-deficient oxygen पर migrate करता है, जिससे phenol और acetone मिलते हैं।
+- [Elbs persulphate oxidation](/hi/reactions/elbs-persulphate-oxidation/): phenol से dihydroxybenzene तक का एक और रास्ता।
+- [Reactions of phenols](/hi/mechanisms/reactions-of-phenols/), [Oxidation reactions](/hi/mechanisms/oxidation-reactions/) और [Rearrangement reactions](/hi/mechanisms/rearrangement-reactions/)।

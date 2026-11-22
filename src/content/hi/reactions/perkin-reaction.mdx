@@ -1,0 +1,111 @@
+---
+title: "Perkin Reaction (पर्किन अभिक्रिया)"
+description: "Perkin reaction में aromatic aldehyde को acid anhydride और उसके sodium salt के साथ गर्म करने पर α,β-unsaturated acid, जैसे cinnamic acid, बनता है।"
+aliases: ["पर्किन अभिक्रिया", "पर्किन रिएक्शन", "perkin reaction hindi", "perkin condensation hindi", "cinnamic acid banana", "perkin reaction cinnamic acid hindi"]
+reagents: "Acetic anhydride (CH₃CO)₂O, base के रूप में sodium या potassium acetate के साथ; फिर H₃O⁺"
+conditions: "गर्म करें; acid work-up"
+byproducts: "Acetic acid (CH₃COOH)"
+reactantName: "Benzaldehyde"
+productName: "Cinnamic acid (3-phenylprop-2-enoic acid)"
+steps:
+  - title: "Carbanion बनना"
+    text: "Exam answers वाले mechanism में (असली pathway पर अभी भी बहस है), acetate, acetic anhydride से एक α-hydrogen हटाता है और carbanion बनता है।"
+    arrows: "Acetate का O⁻ lone pair → anhydride का α-H; C–H bond pair carbon पर ही रहता है।"
+  - title: "Benzaldehyde पर addition"
+    text: "Carbanion benzaldehyde के C=O carbon पर attack करता है। Protonation के बाद aldol-type adduct C₆H₅CH(OH)CH₂COOCOCH₃ बनता है, और condensation step यहीं ख़त्म होता है ('Perkin यहीं तक है')।"
+    arrows: "Carbanion lone pair → aldehyde का carbonyl C; C=O का π pair → O⁻, जो फिर protonate होता है।"
+  - title: "Anhydride का hydrolysis"
+    text: "Acid work-up (H₃O⁺) anhydride वाले हिस्से को तोड़ देता है, जिससे β-hydroxy acid C₆H₅CH(OH)CH₂COOH और acetic acid मिलते हैं।"
+    arrows: "पानी anhydride के एक C=O carbon पर attack करता है और acyl–O bond टूटता है, जिससे acetic acid निकलता है।"
+  - title: "Dehydration से cinnamic acid"
+    text: "गर्म करने पर OH और एक α-H पानी के रूप में निकलते हैं, और ऐसा C=C बनता है जो benzene ring और COOH group दोनों के साथ conjugated है: cinnamic acid।"
+    arrows: "जैसे ही C–OH bond टूटता है और पानी निकलता है, α C–H bond pair C=C का π bond बना देता है।"
+memoryTricks:
+  - text: "Perkin यहीं तक है"
+    meaning: "C–C bond बनाने वाला असली condensation step anhydride के aldol-type adduct पर ही रुक जाता है; उसके बाद hydrolysis और पानी का निकलना मिलकर cinnamic acid देते हैं।"
+faq:
+  - q: "Benzaldehyde के Perkin reaction का product क्या है?"
+    a: "Cinnamic acid, C₆H₅CH=CHCOOH, जो तब बनता है जब benzaldehyde को acetic anhydride और sodium acetate के साथ गर्म करके mixture को acidify किया जाता है। By-product acetic acid है।"
+  - q: "Perkin reaction में sodium acetate का क्या role है?"
+    a: "Acetate base है। यह acetic anhydride से एक α-hydrogen हटाकर वह carbanion बनाता है जो aldehyde पर attack करता है। Salt को anhydride से match किया जाता है (acetic anhydride के साथ acetate) ताकि mixed products न बनें; दूसरे bases भी इस्तेमाल हो सकते हैं।"
+  - q: "Perkin reaction में aromatic aldehyde ही क्यों चाहिए?"
+    a: "Benzaldehyde जैसे aromatic aldehyde में α-hydrogen नहीं होता, इसलिए यह carbanion बनाकर ख़ुद से condense नहीं कर सकता। यह सिर्फ़ electrophile की तरह काम करता है, जिससे reaction साफ़ रहता है।"
+  - q: "Anhydride के लिए structural requirements क्या हैं?"
+    a: "Anhydride में α-hydrogens होने चाहिए, एक ही carbon पर कम से कम दो, क्योंकि एक carbanion बनाने में हटता है और दूसरा C=C double bond बनते समय निकलता है।"
+  - q: "Perkin reaction से coumarin कैसे बनाया जाता है?"
+    a: "Salicylaldehyde (2-hydroxybenzaldehyde) को acetic anhydride और sodium acetate के साथ गर्म किया जाता है। Cinnamic acid जैसा intermediate पास वाले phenol OH के साथ cyclise होकर lactone coumarin देता है।"
+translated: 2026-11-22
+---
+
+## Perkin reaction क्या है?
+
+**Perkin reaction** में किसी **aromatic aldehyde** को **acid anhydride** और **उसी acid के sodium (या potassium) salt** के साथ गर्म करके **α,β-unsaturated aromatic acid** बनाया जाता है। Salt base का काम करता है। Benzaldehyde, acetic anhydride और sodium acetate से **cinnamic acid**, C₆H₅CH=CHCOOH, बनता है। इसे William Henry Perkin ने 1868 में विकसित किया था, और यह एक aldol-type condensation है।
+
+## General reaction
+
+<Eq ce="ArCHO + (RCH2CO)2O ->[RCH2COONa][\Delta] ArCH=C(R)COOH + RCH2COOH" />
+
+Acetic anhydride के साथ R = H होता है और product cinnamic acid है। Propanoic anhydride और sodium propanoate के साथ R = CH₃ होता है और product α-methylcinnamic acid है।
+
+<KeyPoint>
+Substrate का नियम: एक **aromatic aldehyde** (α-H नहीं, इसलिए self-condense नहीं कर सकता) और एक **ऐसा anhydride जिसमें α-hydrogens हों**। Base उसी acid का carboxylate salt होता है जो anhydride से match करता है।
+</KeyPoint>
+
+## Mechanism
+
+नीचे दिए steps exam answers वाला version हैं। असली pathway पर अभी भी बहस है (acetyl group के transfer के साथ और बिना, दोनों तरह के versions दिए गए हैं), लेकिन product वही रहता है।
+
+1. **Carbanion बनना।** Acetate, acetic anhydride से एक α-hydrogen हटाता है, जिससे ⁻CH₂–CO–O–CO–CH₃ बनता है।
+2. **Aldehyde पर addition।** Carbanion benzaldehyde के C=O carbon पर attack करता है। Protonation के बाद aldol-type adduct C₆H₅–CH(OH)–CH₂–CO–O–CO–CH₃ बनता है। Condensation step यहीं ख़त्म होता है।
+3. **Hydrolysis।** Acid work-up (H₃O⁺) anhydride को तोड़ता है, जिससे β-hydroxy acid C₆H₅–CH(OH)–CH₂–COOH और acetic acid मिलते हैं।
+4. **Dehydration।** गर्म करने पर OH और एक α-H पानी के रूप में निकलते हैं, और ऐसा C=C बनता है जो benzene ring और COOH group दोनों के साथ conjugated है।
+
+<Eq ce="(CH3CO)2O + CH3COO- <=> ^-CH2COOCOCH3 + CH3COOH" />
+<Eq ce="C6H5CHO + ^-CH2COOCOCH3 -> C6H5CH(OH)CH2COOCOCH3" />
+<Eq ce="C6H5CH(OH)CH2COOCOCH3 ->[H3O+] C6H5CH(OH)CH2COOH ->[\Delta][-H2O] C6H5CH=CHCOOH" />
+
+<Trick>
+**Perkin यहीं तक है**: असली condensation anhydride के aldol-type adduct पर ही रुक जाता है। Hydrolysis और dehydration ही इसे cinnamic acid में बदलते हैं।
+</Trick>
+
+## Examples
+
+**1. Benzaldehyde से cinnamic acid।**
+
+<Eq ce="C6H5CHO + (CH3CO)2O ->[CH3COONa][\Delta] C6H5CH=CHCOOH + CH3COOH" />
+
+Product मुख्य रूप से ज़्यादा stable *trans* (E) isomer होता है।
+
+**2. Salicylaldehyde से coumarin।** 2-Hydroxybenzaldehyde के साथ नई acid side chain पास वाले OH पर बंद होकर छह सदस्यों वाला lactone, coumarin, बनाती है, जो एक fragrance compound है। Perkin ने पहली बार इसी context में यह reaction report किया था।
+
+**3. α-Substituted cinnamic acids।** Propanoic anhydride और sodium propanoate के साथ α-carbon पर methyl group आता है, और C₆H₅CH=C(CH₃)COOH बनता है। Aryl-substituted partners के साथ यही idea stilbene resveratrol की laboratory syntheses में इस्तेमाल हुआ है।
+
+<Eq ce="C6H5CHO + (CH3CH2CO)2O ->[CH3CH2COONa][\Delta] C6H5CH=C(CH3)COOH + CH3CH2COOH" />
+
+<ExamTip>
+Product निकालने के लिए aldehyde carbon को anhydride के α-carbon से **double bond** से जोड़ें, और anhydride का carbonyl **–COOH** के रूप में रखें। Benzaldehyde + acetic anhydride → C₆H₅–CH=CH–COOH।
+</ExamTip>
+
+## Limitations
+
+- **α-hydrogens वाले aliphatic aldehydes** अच्छे substrates नहीं हैं, क्योंकि वे ख़ुद aldol reactions कर लेते हैं।
+- Anhydride में एक ही carbon पर **दो α-hydrogens** चाहिए; सिर्फ़ एक α-H वाले (CH₃)₂CH–CO anhydrides इस तरह C=C bond नहीं बना सकते।
+- आमतौर पर high temperature और लंबे समय तक गर्म करना पड़ता है, और yields moderate हो सकती हैं।
+
+## Related condensations से तुलना
+
+| Reaction | Nucleophile का source | Base | Typical product |
+|---|---|---|---|
+| Perkin | Acid anhydride | Carboxylate salt | α,β-Unsaturated aromatic acid |
+| [Knoevenagel](/hi/reactions/knoevenagel-condensation/) | Active methylene (malonate) | Weak amine (piperidine, pyridine) | α,β-Unsaturated diester या acid |
+| [Claisen–Schmidt (cross aldol)](/hi/reactions/cross-aldol-condensation/) | Ketone | Aqueous NaOH | α,β-Unsaturated ketone |
+
+Pyridine में malonic acid वाला Knoevenagel route (Doebner modification) भी cinnamic acid देता है, इसलिए exam questions में इन दोनों की अक्सर तुलना होती है।
+
+## Related reactions
+
+- [Aldol condensation](/hi/reactions/aldol-condensation/) और [cross aldol condensation](/hi/reactions/cross-aldol-condensation/): वही addition–dehydration pattern।
+- [Knoevenagel condensation](/hi/reactions/knoevenagel-condensation/): cinnamic acids बनाने का एक और तरीका।
+- [Claisen condensation](/hi/reactions/claisen-condensation/): ester enolates का ester carbonyls पर attack।
+- [Wittig reaction](/hi/reactions/wittig-reaction/): Ph₃P=CHCOOEt जैसा stabilised ylide benzaldehyde को (E)-cinnamate ester में बदल देता है, यह वही C=C बनाने का एक और तरीका है।
+- Hub: [Carbonyl condensation reactions](/hi/mechanisms/carbonyl-condensation-reactions/)

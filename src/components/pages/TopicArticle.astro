@@ -66,7 +66,7 @@ const titleOptions: Record<TopicKey, string[]> = {
   preparation: [`${d.title}: Methods, Reagents & Examples`, `${d.title}: Methods & Reagents`, d.title],
   reagents: [`${d.title}: Uses, Reactions & Mechanism`, `${d.title}: Uses & Reactions`, `${d.title} Reagent`, d.title],
 };
-const pageTitle = lang === 'hi' ? d.title : titleOptions[section].find((t) => t.length <= 65) ?? d.title;
+const pageTitle = lang === 'hi' ? [d.title, `${entry.data.title} हिंदी में`, entry.data.title].find((t) => t.length <= 65) ?? entry.data.title : titleOptions[section].find((t) => t.length <= 65) ?? d.title;
 const relatedLocal = await Promise.all(related.map((r) => localiseRef(r, lang)));
 
 const crumbs = [{ label: info.label, href: url(info.path) }, { label: d.title }];

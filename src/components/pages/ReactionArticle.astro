@@ -133,7 +133,8 @@ const titleOptions = section === 'tests'
   ? [`${d.title}: Reagent, Procedure & Observations`, `${d.title}: Reagent & Observations`, `${d.title}: Procedure & Result`, d.title]
   : [`${d.title}: Mechanism, Reagents & Examples`, `${d.title}: Mechanism & Examples`, `${d.title} Mechanism`, d.title];
 const hiTitle = section === 'tests' ? `${d.title}: Reagent, Procedure और Observations` : `${d.title}: Mechanism, Reagents और Examples`;
-const pageTitle = lang === 'hi' ? (hiTitle.length <= 65 ? hiTitle : d.title) : titleOptions.find((t) => t.length <= 65) ?? d.title;
+const enInHindi = `${entry.data.title} हिंदी में`;
+const pageTitle = lang === 'hi' ? [hiTitle, d.title, enInHindi, entry.data.title].find((t) => t.length <= 65) ?? entry.data.title : titleOptions.find((t) => t.length <= 65) ?? d.title;
 const pyqs = questionsFor(`${section}/${entry.id}`);
 const practice = lang === 'hi' ? [] : practiceFor(`${section}/${entry.id}`);
 ---

@@ -1,0 +1,103 @@
+---
+title: "Solvent Effects (विलायक प्रभाव): Polar Protic vs Polar Aprotic Solvents"
+description: "Polar protic solvents (पानी, alcohols) दोनों ions को solvate करके SN1 को favour करते हैं; polar aprotic solvents (DMSO, DMF, acetone) SN2 तेज़ करते हैं।"
+aliases: ["विलायक प्रभाव", "सॉल्वेंट इफ़ेक्ट", "solvent effect hindi", "polar protic aprotic hindi", "protic vs aprotic solvent hindi", "SN1 SN2 solvent hindi", "DMSO DMF hindi"]
+memoryTricks:
+  - text: "Ploar protic me cation, anion ko stability mil jati h but polar aprotic me cation ko he stability mil pati h anion ko nhi"
+    meaning: "Polar protic solvents में cation और anion दोनों stabilise (solvate) होते हैं, लेकिन polar aprotic solvents में सिर्फ़ cation stabilise होता है, anion नहीं।"
+faq:
+  - q: "Polar protic और polar aprotic solvents में क्या अंतर है?"
+    a: "दोनों polar हैं, लेकिन protic solvent में O या N पर hydrogen होता है (पानी, methanol, acetic acid) और यह anions के साथ hydrogen bond बना सकता है। Aprotic solvent (acetone, DMSO, DMF, acetonitrile) में ऐसा acidic hydrogen नहीं होता, इसलिए यह cations को अच्छी तरह solvate करता है लेकिन anions को बहुत कम।"
+  - q: "Polar aprotic solvents SN2 reactions को क्यों favour करते हैं?"
+    a: "ये nucleophile के salt को उसके cation को solvate करके घोल देते हैं, लेकिन anion लगभग unsolvated रह जाता है और इसलिए बहुत reactive होता है। उदाहरण के लिए, azide 1-bromobutane के साथ DMF या acetonitrile में methanol की तुलना में हज़ारों गुना तेज़ी से react करता है।"
+  - q: "Polar protic solvents SN1 reactions को क्यों favour करते हैं?"
+    a: "SN1 का rate-determining step एक neutral molecule से carbocation और anion बनाता है। Protic solvents दोनों ions को stabilise करते हैं, anion को hydrogen bonding से और cation को lone pairs से, जिससे ionisation step की energy कम होती है; tert-butyl chloride पानी में acetic acid की तुलना में लगभग 150,000 गुना तेज़ी से solvolyse होता है।"
+  - q: "Acetone protic solvent है या aprotic?"
+    a: "Acetone एक polar aprotic solvent है: इसका dipole strong है लेकिन इसमें O–H या N–H hydrogen नहीं है। Finkelstein reaction (acetone में NaI) के लिए यही आम solvent है।"
+  - q: "Fluoride पानी में poor nucleophile लेकिन DMSO में अच्छा nucleophile क्यों है?"
+    a: "छोटा, ज़्यादा charge वाला F⁻ ion पानी में hydrogen bonds से बहुत कसकर पकड़ा रहता है, इसलिए यह आसानी से attack नहीं कर पाता। DMSO में anion के साथ कोई hydrogen bond नहीं होता, और F⁻, जो halides में सबसे strong base है, सबसे अच्छा halide nucleophile बन जाता है।"
+translated: 2026-11-22
+---
+
+## Solvent effects क्या हैं?
+
+**Solvent effects** वे बदलाव हैं जो solvent बदलने पर किसी reaction के rate, mechanism या equilibrium में दिखते हैं। Substitution reactions के लिए मुख्य सवाल यह है कि solvent शामिल ions को कितनी अच्छी तरह **solvate** करता है (घेरकर stabilise करता है)। **Polar protic** solvents cations और anions दोनों को stabilise करते हैं और SN1 को favour करते हैं; **polar aprotic** solvents सिर्फ़ cations को stabilise करते हैं, anions को "naked" छोड़ देते हैं और SN2 को favour करते हैं।
+
+## Solvents का classification
+
+Solvents को पहले polarity (dipole moment μ और dielectric constant) के आधार पर बाँटा जाता है, और फिर polar हों तो इस आधार पर कि O या N पर acidic hydrogen है या नहीं।
+
+| Class | मुख्य feature | Examples |
+|---|---|---|
+| Non-polar | μ ≈ 0, कम dielectric constant; salts को नहीं घोल सकते | benzene, CCl₄, n-hexane |
+| Polar protic | μ ≠ 0 और O–H या N–H मौजूद; hydrogen bonds donate करते हैं | पानी, methanol, ethanol, acetic acid, formic acid |
+| Polar aprotic | μ ≠ 0 लेकिन acidic H नहीं; hydrogen bonds accept करते हैं पर donate नहीं | acetone, DMSO, DMF, DMA, acetonitrile, THF |
+
+Diethyl ether और THF aprotic हैं लेकिन सिर्फ़ weakly polar। तीन polar aprotic solvents उनके abbreviation से पूछे जाते हैं:
+
+| Abbreviation | नाम | Structure | Dielectric constant |
+|---|---|---|---|
+| DMSO | dimethyl sulfoxide | (CH₃)₂S=O | लगभग 47 |
+| DMF | N,N-dimethylformamide | H–CO–N(CH₃)₂ | लगभग 37 |
+| DMA (DMAc) | N,N-dimethylacetamide | CH₃–CO–N(CH₃)₂ | लगभग 38 |
+
+तुलना के लिए, पानी का dielectric constant लगभग 80, methanol का 33, ethanol का 25, acetone का 21 और acetic acid का सिर्फ़ लगभग 6 है।
+
+## हर solvent cations और anions के साथ कैसा व्यवहार करता है
+
+**पानी जैसे polar protic solvent में**, Na⁺ जैसे cation को पानी के molecules घेर लेते हैं जिनके oxygen lone pairs उसकी ओर होते हैं, और Cl⁻ जैसे anion को पानी के molecules घेर लेते हैं जिनके δ+ hydrogens उसकी ओर होते हैं (hydrogen bonds)। दोनों ions stabilise होते हैं।
+
+**Acetone या DMSO जैसे polar aprotic solvent में**, dipole का negative सिरा (C=O या S=O का oxygen) खुला रहता है और cation को अच्छी तरह bind करता है। Positive सिरा (carbonyl carbon या sulphur) molecule के अंदर methyl groups के पीछे छिपा रहता है, इसलिए anion उसके पास नहीं पहुँच पाता। Anion poorly solvated रहता है और कहीं ज़्यादा reactive होता है।
+
+<KeyPoint title="सारांश">
+Polar protic: cation solvated ✓, anion solvated ✓ (H-bonding से)। Polar aprotic: cation solvated ✓, anion solvated ✗। Poorly solvated anion ज़्यादा strong nucleophile होता है।
+</KeyPoint>
+
+## SN1 reactions पर असर
+
+SN1 का slow step एक neutral alkyl halide को carbocation और halide ion में बदलता है। जो solvent दोनों ions को stabilise करे, वह इस ionisation की energy कम करता है, इसलिए **polar protic solvents SN1 को तेज़ करते हैं**। tert-Butyl chloride के relative solvolysis rates इसे साफ़ दिखाते हैं:
+
+| Solvent | Dielectric constant | Relative rate |
+|---|---|---|
+| Acetic acid | 6 | 1 |
+| Methanol | 33 | 4 |
+| पानी | 78 | लगभग 150,000 |
+
+Protic solvents निकलते हुए halide के साथ भी hydrogen bond बनाते हैं, जिससे उसे निकलने में मदद मिलती है। जब solvent खुद nucleophile हो, तो reaction को **solvolysis** कहते हैं।
+
+## SN2 reactions पर असर
+
+SN2 में nucleophile को rate-determining step में attack करना होता है। Protic solvent anion को hydrogen bonds के एक पिंजरे (cage) में बंद कर देता है, इसलिए react करने से पहले nucleophile को इस shell का कुछ हिस्सा छोड़ना पड़ता है। Aprotic solvent यह cage हटा देता है, इसलिए **polar aprotic solvents SN2 को तेज़ करते हैं**। Azide ion के साथ 1-bromobutane के लिए:
+
+| Solvent | Type | Relative rate |
+|---|---|---|
+| Methanol | protic | 1 |
+| पानी | protic | 7 |
+| DMSO | aprotic | 1,300 |
+| DMF | aprotic | 2,800 |
+| Acetonitrile | aprotic | 5,000 |
+
+यही idea बताता है कि [Finkelstein reaction](/hi/reactions/finkelstein-reaction/) acetone में क्यों किया जाता है और KCN या NaN₃ वाले substitutions अक्सर DMSO या DMF में क्यों किए जाते हैं।
+
+## Halide nucleophilicity के order पर असर
+
+| Solvent type | Halide ions की nucleophilicity | कारण |
+|---|---|---|
+| Polar protic (पानी, alcohols) | I⁻ > Br⁻ > Cl⁻ > F⁻ | छोटा F⁻ सबसे strongly hydrogen-bonded होता है; बड़ा, polarisable I⁻ सबसे कम पकड़ा जाता है |
+| Polar aprotic (DMSO, DMF, acetone) | F⁻ > Cl⁻ > Br⁻ > I⁻ | anions खुले होते हैं, इसलिए nucleophilicity basicity के अनुसार चलती है |
+
+<ExamTip>
+किसी भी SN1/SN2 question में solvent ज़रूर पढ़ें: पानी, alcohols या acetic acid SN1 की ओर इशारा करते हैं (और I⁻ सबसे अच्छा halide nucleophile); acetone, DMSO, DMF या acetonitrile SN2 की ओर इशारा करते हैं (और basicity order)। और orders के लिए देखें [nucleophilicity vs basicity](/hi/comparisons/nucleophilicity-vs-basicity/)।
+</ExamTip>
+
+## Exceptions और बारीक बातें
+
+- Hexane जैसे **non-polar solvents** ionic substitutions के लिए बेकार हैं क्योंकि ये nucleophile के salt को घोल ही नहीं सकते।
+- **Acetone** practically थोड़ा protic है (keto–enol tautomerism और पानी के traces), और strong bases के साथ react करता है, लेकिन exams के लिए इसे polar aprotic ही माना जाता है।
+- **एक general rule (Hughes–Ingold):** ज़्यादा polar solvent उन reactions को तेज़ करता है जिनमें transition state में charge बनता है (neutral substrate का SN1), और उन reactions को धीमा करता है जिनमें charge फैल जाता है या खत्म हो जाता है (anion और neutral alkyl halide का SN2)।
+
+## Related pages
+
+- [SN1 vs SN2](/hi/comparisons/sn1-vs-sn2/), [SN1 reaction](/hi/reactions/sn1-reaction/) और [SN2 reaction](/hi/reactions/sn2-reaction/)
+- [Electrophiles and nucleophiles](/hi/concepts/electrophiles-and-nucleophiles/) और [leaving group ability](/hi/concepts/leaving-group-ability/)
+- [Nucleophilic substitution reactions](/hi/mechanisms/nucleophilic-substitution/)

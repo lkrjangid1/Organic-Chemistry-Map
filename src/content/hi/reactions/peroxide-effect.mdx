@@ -1,0 +1,126 @@
+---
+title: "Peroxide Effect (Kharasch Effect, परॉक्साइड प्रभाव)"
+description: "Peroxide (Kharasch) effect: peroxide की उपस्थिति में HBr unsymmetrical alkene पर Markovnikov's rule के उल्टा जुड़ता है, इसलिए propene से 1-bromopropane बनता है।"
+aliases: ["परॉक्साइड प्रभाव", "खराश प्रभाव", "peroxide effect hindi", "kharasch effect hindi", "anti markovnikov addition of hbr hindi", "hbr peroxide addition hindi", "free radical addition of hbr hindi"]
+reagents: "HBr के साथ कोई organic peroxide, जैसे benzoyl peroxide, (C₆H₅CO)₂O₂"
+conditions: "O–O bond तोड़ने के लिए light या हल्की heat; non-polar solvent"
+reactantName: "Propene"
+productName: "1-Bromopropane"
+steps:
+  - title: "Peroxide homolysis"
+    text: "गर्म करने पर या light में benzoyl peroxide का कमज़ोर O–O bond homolytically टूटता है और दो radicals बनते हैं (initiation)।"
+    arrows: "Fish-hook arrows: O–O bond pair बँट जाता है, एक electron हर oxygen पर जाता है।"
+  - title: "Bromine atom बनना"
+    text: "Oxygen radical HBr से hydrogen atom हटा लेता है, जिससे एक bromine atom, Br•, बनता है।"
+    arrows: "H–Br का एक electron O• के electron से जुड़कर O–H बनाता है; दूसरा Br पर रहता है।"
+  - title: "Br• का CH₂ सिरे पर जुड़ना"
+    text: "Br• propene के terminal CH₂ पर जुड़ता है, जिससे unpaired electron secondary carbon पर रहता है, जो ज़्यादा stable radical है। यही step regiochemistry तय करता है और exam answers में अक्सर इसे slow step माना जाता है।"
+    arrows: "एक π electron Br• के साथ जुड़कर C-1 पर C–Br बनाता है; दूसरा π electron C-2 पर रहता है।"
+  - title: "HBr से H abstraction"
+    text: "Carbon radical दूसरे HBr से hydrogen atom लेता है, जिससे 1-bromopropane और एक नया Br• बनता है जो chain को आगे बढ़ाता है। कोई carbocation नहीं बनता, इसलिए कोई rearrangement नहीं होता।"
+    arrows: "Radical electron H–Br के एक electron से जुड़कर C–H बनाता है; दूसरा electron Br पर Br• के रूप में रहता है।"
+  - title: "Termination"
+    text: "Chain तब रुकती है जब दो radicals मिलकर pair बना लेते हैं, जैसे Br• + Br• → Br₂, या कोई carbon radical Br• के साथ।"
+    arrows: "हर radical नया bond बनाने के लिए एक electron देता है।"
+memoryTricks:
+  - text: "HBr मे ही केवल peroxide effect लागू होता है"
+    meaning: "Peroxide effect सिर्फ़ HBr पर लागू होता है।"
+faq:
+  - q: "Peroxide की उपस्थिति में propene और HBr के reaction का product क्या है?"
+    a: "1-Bromopropane (n-propyl bromide)। Peroxide के बिना यही reaction 2-bromopropane देता है, जो Markovnikov product है।"
+  - q: "Peroxide effect सिर्फ़ HBr क्यों दिखाता है, HCl या HI क्यों नहीं?"
+    a: "Radical chain चलने के लिए दोनों propagation steps energetically downhill होने चाहिए। HCl में H–Cl bond strong होने से H-abstraction step uphill है, और HI में alkene पर iodine atom का जुड़ना uphill है, इसलिए सिर्फ़ HBr काम करता है।"
+  - q: "क्या peroxide effect एक electrophilic addition है?"
+    a: "नहीं। Peroxide की उपस्थिति में HBr free-radical chain mechanism से जुड़ता है, carbocation के through नहीं बल्कि carbon radical के through। Peroxide के बिना होने वाला सामान्य HBr addition electrophilic होता है।"
+  - q: "यह addition anti-Markovnikov क्यों है?"
+    a: "Bromine atom पहले terminal CH₂ carbon पर जुड़ता है, क्योंकि इससे unpaired electron ज़्यादा substituted, ज़्यादा stable secondary carbon पर रहता है। Hydrogen आखिर में जुड़ता है, इसलिए Br उस carbon पर पहुँचता है जिस पर ज़्यादा hydrogens हैं।"
+translated: 2026-11-22
+---
+
+## Peroxide effect क्या है?
+
+**Peroxide effect**, जिसे **Kharasch effect** भी कहते हैं, organic peroxide की उपस्थिति में unsymmetrical alkene पर **HBr का anti-Markovnikov addition** है। Bromine उस carbon पर पहुँचता है जिस पर **ज़्यादा hydrogens** हैं, इसलिए propene से 2-bromopropane की जगह **1-bromopropane** बनता है। Peroxide mechanism को ionic (carbocation) रास्ते से बदलकर **free-radical chain** रास्ते में बदल देता है। Morris Kharasch, जिन्होंने 1930s में इसे समझाया, ने इसे "peroxide effect" नाम दिया।
+
+<Eq ce="CH3-CH=CH2 + HBr ->[(C6H5CO)2O2] CH3-CH2-CH2Br" />
+
+## Mechanism
+
+यह reaction एक radical chain है जिसमें initiation, propagation और termination steps होते हैं।
+
+**I. Initiation**
+
+1. गर्म करने पर या light में peroxide का कमज़ोर O–O bond **homolytically** टूटता है और दो alkoxy radicals बनते हैं।
+2. एक alkoxy radical HBr से hydrogen atom हटाता है, जिससे एक **bromine atom** (Br•) बनता है।
+
+<Eq ce="R-O-O-R ->[light or heat] 2 R-O^{.}" />
+<Eq ce="R-O^{.} + H-Br -> R-OH + Br^{.}" />
+
+**II. Propagation**
+
+3. Br• propene के **terminal CH₂** पर जुड़ता है। दो radicals संभव हैं; जिसमें unpaired electron **secondary carbon** पर है वह ज़्यादा stable है (ज़्यादा hyperconjugation), इसलिए वही बनता है।
+4. यह carbon radical **HBr के दूसरे molecule** से hydrogen atom हटाता है, जिससे 1-bromopropane और एक नया Br• बनता है, जो chain को आगे बढ़ाता है।
+
+<Eq ce="CH3-CH=CH2 + Br^{.} -> CH3-\dot{C}H-CH2Br" />
+<Eq ce="CH3-\dot{C}H-CH2Br + HBr -> CH3-CH2-CH2Br + Br^{.}" />
+
+**III. Termination**
+
+5. Chain तब रुकती है जब कोई भी दो radicals मिलकर pair बना लेते हैं, जैसे Br• + Br• → Br₂, या कोई carbon radical Br• के साथ।
+
+<KeyPoint>
+Regiochemistry step 3 में तय होती है। Br• वहाँ जुड़ता है जहाँ **ज़्यादा stable radical** बचे (1° की जगह 2°)। चूँकि Br पहले और H आखिर में जुड़ता है, final product में Br कम substituted carbon पर होता है। Exam answers में Br• के इस addition को अक्सर slow step माना जाता है।
+</KeyPoint>
+
+## सिर्फ़ HBr ही peroxide effect क्यों दिखाता है
+
+Radical chain तभी अच्छे से चलती है जब **दोनों** propagation steps energy release करें।
+
+- **HBr:** दोनों steps exothermic हैं, इसलिए chain तेज़ है और धीमे ionic addition को पीछे छोड़ देती है, ख़ासकर non-polar solvents में।
+- **HCl:** H–Cl bond strong है, इसलिए carbon radical HCl से आसानी से H नहीं ले पाता (step 4 endothermic है)।
+- **HI:** iodine atom बहुत कमज़ोर attacker है, इसलिए C=C पर I• का जुड़ना (step 3) endothermic है।
+- **HF:** radical बनना बेहद unfavourable है।
+
+<Trick>
+HBr मे ही केवल peroxide effect लागू होता है: peroxide effect सिर्फ़ HBr पर लागू होता है।
+</Trick>
+
+## Examples
+
+**1. Propene, peroxide के साथ और बिना**
+
+<Eq ce="CH3-CH=CH2 + HBr -> CH3-CHBr-CH3" />
+<Eq ce="CH3-CH=CH2 + HBr ->[H2O2 or (C6H5CO)2O2] CH3-CH2-CH2Br" />
+<Eq ce="CH3-CH=CH2 + HCl ->[peroxide] CH3-CHCl-CH3" />
+
+HCl के साथ product 2-chloropropane ही होता है, peroxide हो या न हो।
+
+**2. 2-Methylpropene (isobutylene)**
+
+<Eq ce="(CH3)2C=CH2 + HBr ->[peroxide] (CH3)2CH-CH2Br" />
+
+Peroxide के बिना product 2-bromo-2-methylpropane है; peroxide के साथ यह 1-bromo-2-methylpropane है।
+
+**3. But-1-ene**
+
+<Eq ce="CH3CH2CH=CH2 + HBr ->[peroxide] CH3CH2CH2CH2Br" />
+
+इतिहास में, शुरुआती chemists को 1-bromobutane तभी मिलता था जब उनके samples में peroxides की मिलावट होती थी, और इसी तरह यह effect खोजा गया।
+
+<ExamTip>
+किसी भी HX + alkene question में तीन चीज़ें check करें: (i) क्या reagent HBr है, (ii) क्या कोई peroxide (R₂O₂, H₂O₂, benzoyl peroxide) दिया है, और (iii) क्या alkene unsymmetrical है? तीनों सही हों तभी product anti-Markovnikov होगा। But-2-ene जैसे symmetrical alkene में दोनों रास्तों से एक ही product बनता है।
+</ExamTip>
+
+## Limitations और exceptions
+
+- इस रास्ते से सिर्फ़ **HBr** anti-Markovnikov addition देता है; HCl, HI और HF peroxide के साथ भी Markovnikov's rule follow करते हैं।
+- Intermediate carbocation नहीं बल्कि radical है, इसलिए **कोई carbocation rearrangement** (hydride या methyl shift) नहीं होता।
+- Oxygen जैसे radical traps chain को धीमा करते हैं, और concentrated alkenes radical polymerisation भी कर सकते हैं।
+- पानी के लिए anti-Markovnikov alcohol hydroboration–oxidation से बनाया जाता है, peroxide से नहीं।
+
+## Related reactions
+
+- [Markovnikov's rule](/hi/reactions/markovnikov-rule/): HX का सामान्य, ionic addition।
+- [Free radical halogenation](/hi/reactions/free-radical-halogenation/): वही initiation–propagation–termination pattern।
+- [NBS allylic bromination](/hi/reactions/nbs-allylic-bromination/): propene का एक और bromine-radical reaction, पर यह substitution है।
+- [Hydroboration–oxidation](/hi/reactions/hydroboration-oxidation/): पानी का anti-Markovnikov addition।
+- [Electrophilic addition reactions](/hi/mechanisms/electrophilic-addition/) और [free radical reactions](/hi/mechanisms/free-radical-reactions/) hubs।

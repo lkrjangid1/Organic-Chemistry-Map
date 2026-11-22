@@ -1,0 +1,90 @@
+---
+title: "NBS Allylic Bromination (Wohl–Ziegler Reaction, ऐलिलिक ब्रोमीनीकरण)"
+description: "NBS allylic bromination (Wohl–Ziegler reaction) में N-bromosuccinimide और light से alkene का allylic H, Br से बदलता है; propene से 3-bromopropene बनता है।"
+aliases: ["ऐलिलिक ब्रोमीनीकरण", "एनबीएस अभिक्रिया", "nbs allylic bromination hindi", "wohl ziegler reaction hindi", "allylic substitution hindi", "nbs reaction hindi", "propene nbs product"]
+reagents: "N-Bromosuccinimide (NBS), light (hν) या benzoyl peroxide या AIBN जैसे radical initiator के साथ"
+conditions: "Anhydrous CCl₄ में reflux"
+byproducts: "Succinimide"
+reactantName: "Propene"
+productName: "3-Bromoprop-1-ene (allyl bromide)"
+faq:
+  - q: "Light में propene और NBS का product क्या है?"
+    a: "3-Bromoprop-1-ene (allyl bromide), CH₂=CH–CH₂Br। C=C bond बचा रहता है; सिर्फ़ एक allylic hydrogen बदलता है, और by-product succinimide है।"
+  - q: "Allylic bromination के लिए Br₂ की जगह NBS क्यों इस्तेमाल होता है?"
+    a: "NBS पूरे reaction में Br₂ (और HBr) का concentration बहुत कम रखता है। कम Br₂ concentration पर allylic carbon पर radical substitution, double bond पर Br₂ के ionic addition से जीत जाता है।"
+  - q: "Bromination allylic position पर ही क्यों होता है?"
+    a: "Allylic C–H bond weak होता है, क्योंकि H हटने के बाद बना allyl radical resonance से stabilise होता है। Reactivity radical stability के हिसाब से चलती है, इसलिए allylic और benzylic hydrogens सबसे पहले बदलते हैं।"
+  - q: "Wohl–Ziegler reaction में CCl₄ का क्या role है?"
+    a: "NBS CCl₄ में कम घुलता है और succinimide ऊपर तैरने लगता है, जिससे reagent का concentration कम रहता है और पता चलता है कि reaction कब पूरा हुआ। CCl₄ toxic है, इसलिए अब acetonitrile जैसे solvents इस्तेमाल होते हैं।"
+translated: 2026-11-22
+---
+
+## NBS allylic bromination क्या है?
+
+**NBS allylic bromination**, जिसे **Wohl–Ziegler reaction** कहते हैं, **N-bromosuccinimide (NBS)** और light या radical initiator से **allylic carbon** (C=C के बगल वाला sp³ carbon) पर एक hydrogen को bromine से बदल देता है। Double bond वैसा ही रहता है। Propene से **3-bromoprop-1-ene (allyl bromide)** बनता है, और by-product succinimide बनता है। यह **free-radical substitution** है, addition नहीं।
+
+<Eq ce="CH2=CH-CH3 ->[NBS][light, CCl4] CH2=CH-CH2Br" />
+
+## Mechanism
+
+Commercial NBS में हमेशा Br₂ की थोड़ी मात्रा होती है, और असल में वही Br₂ chain शुरू करता है।
+
+1. **Initiation।** Light (या peroxide/AIBN initiator) Br₂ को दो bromine atoms में तोड़ता है।
+2. **H-abstraction।** Br• एक **allylic hydrogen** हटाता है, जिससे HBr और **allyl radical** बनते हैं। यह radical resonance-stabilised है, इसीलिए allylic position पर attack होता है। Exam answers में इसे slow step माना जाता है।
+3. **Br₂ का दोबारा बनना।** अभी बना HBr, NBS के साथ react करके succinimide और Br₂ का नया molecule देता है।
+4. **Bromination।** Allyl radical Br₂ से एक Br atom लेता है, जिससे allyl bromide और एक नया Br• बनता है जो step 2 दोहराता है।
+
+<Eq ce="Br2 ->[light] 2 Br^{.}" />
+<Eq ce="CH2=CH-CH3 + Br^{.} -> CH2=CH-CH2^{.} + HBr" />
+<Eq ce="(CH2CO)2NBr + HBr -> (CH2CO)2NH + Br2" />
+<Eq ce="CH2=CH-CH2^{.} + Br2 -> CH2=CH-CH2Br + Br^{.}" />
+
+<KeyPoint>
+NBS मुख्य रूप से एक **bromine reservoir** है। यह Br₂ और HBr को बहुत कम, स्थिर level पर रखता है। C=C पर Br₂ के addition के लिए ज़्यादा Br₂ concentration चाहिए, इसलिए कम concentration पर allylic carbon पर radical **substitution** जीतता है।
+</KeyPoint>
+
+<ExamTip title="Common mistake">
+पुराना picture बनाना, जिसमें NBS ख़ुद टूटकर succinimidyl radical (N•) बनाता है जो allylic H हटाता है। आजकल यह नहीं माना जाता, क्योंकि N–Br bond, Br–Br bond से काफ़ी strong है; ऊपर दिया Br• chain ही accepted mechanism है।
+</ExamTip>
+
+<KeyPoint>
+Reactivity ∝ बनने वाले free radical की stability। Allylic और benzylic hydrogens सबसे पहले बदलते हैं, और allylic positions में ज़्यादा substituted वाली तेज़ react करती है। इन conditions में **सिर्फ़ monobromination** होता है।
+</KeyPoint>
+
+## Examples
+
+**1. Propene**
+
+<Eq ce="CH3-CH=CH2 ->[NBS][light] Br-CH2-CH=CH2" />
+
+**2. Chlorine analogue और high-temperature route**
+
+Exam answers में light के साथ N-chlorosuccinimide (NCS) को chlorine analogue लिखा जाता है, जो allyl chloride देता है। Industry में propene और chlorine लगभग 500 °C पर free-radical रास्ते से allyl chloride देते हैं, जबकि कम temperature पर मुख्य product addition product, 1,2-dichloropropane, होता है।
+
+<Eq ce="CH3-CH=CH2 + Cl2 ->[500 °C] Cl-CH2-CH=CH2 + HCl" />
+
+**3. Cyclohexene**
+
+<Eq ce="C6H10 ->[NBS][light, CCl4] C6H9Br" />
+
+Cyclohexene से 3-bromocyclohexene बनता है; ring का double bond बना रहता है और Br उसके बगल वाले CH₂ पर जाता है।
+
+<ExamTip>
+Reagent ध्यान से पढ़ें: room temperature पर अँधेरे में CCl₄ में Br₂, C=C पर जुड़ता है (vicinal dibromide), लेकिन **hν या peroxide के साथ NBS** allylic carbon पर substitute करता है। High temperature (लगभग 500 °C) पर Br₂ भी allylic substitution देता है।
+</ExamTip>
+
+## Limitations और exceptions
+
+- **Unsymmetrical allylic radicals** किसी भी सिरे पर react कर सकते हैं, इसलिए allylic bromides का mixture (shifted double bond के साथ) बन सकता है; ज़्यादा substituted position पर bromination favoured है।
+- CCl₄ **anhydrous** होना चाहिए; पानी allylic bromide को hydrolyse कर सकता है। Mixture को सूखा और acid-free रखने के लिए कभी-कभी barium carbonate डाला जाता है।
+- बहुत ज़्यादा free Br₂ या HBr होने पर double bond पर ionic addition फिर से होने लगता है।
+- Safety और environment की वजह से अब CCl₄ से ज़्यादातर बचा जाता है; acetonitrile एक इस्तेमाल करने लायक replacement है।
+- Benzylic C–H (जैसे toluene का CH₃) भी इसी तरह react करता है और benzyl bromide देता है।
+
+## Related reactions
+
+- [Free radical halogenation](/hi/reactions/free-radical-halogenation/): वही initiation–propagation–termination chain, alkanes पर।
+- [Peroxide effect](/hi/reactions/peroxide-effect/): HBr और peroxide के साथ propene; radical **addition**, substitution नहीं।
+- [Hunsdiecker reaction](/hi/reactions/hunsdiecker-reaction/): alkyl bromides तक पहुँचने का एक और radical रास्ता।
+- [Markovnikov's rule](/hi/reactions/markovnikov-rule/): उसी alkene पर HBr का ionic addition।
+- [Free radical reactions](/hi/mechanisms/free-radical-reactions/) hub।

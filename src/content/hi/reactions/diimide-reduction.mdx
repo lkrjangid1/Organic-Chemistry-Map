@@ -1,0 +1,95 @@
+---
+title: "Diimide Reduction (डाइइमाइड अपचयन)"
+description: "Diimide reduction में hydrazine और H₂O₂ से बना HN=NH non-polar C=C या C≡C पर दो H atoms syn जोड़ता है, और बिना metal के alkane और N₂ देता है।"
+aliases: ["डाइइमाइड अपचयन", "डाइइमाइड रिडक्शन", "diimide reduction hindi", "diazene reduction hindi", "hydrazine h2o2 reduction hindi", "N2H2 reduction hindi"]
+reagents: "HN=NH, in situ बनाया गया: N₂H₄ + H₂O₂ (या Cu²⁺ के साथ O₂), या potassium azodicarboxylate + acid"
+conditions: "Room temperature या हल्का गर्म; न H₂ gas, न metal catalyst"
+byproducts: "N₂ gas (और hydrazine के oxidation से H₂O)"
+reactantName: "Oleic acid ((Z)-octadec-9-enoic acid)"
+productName: "Stearic acid (octadecanoic acid)"
+faq:
+  - q: "Diimide क्या है और इसे कैसे बनाते हैं?"
+    a: "Diimide (diazene) HN=NH है। यह unstable है, इसलिए इसे reaction flask में ही बनाया जाता है, सबसे आसानी से hydrazine को hydrogen peroxide से oxidise करके: N₂H₄ + H₂O₂ से N₂H₂ + 2H₂O बनता है।"
+  - q: "Diimide reduction syn addition है या anti?"
+    a: "Syn। HN=NH का cis form छह सदस्यों वाली cyclic transition state के through एक ही concerted step में दोनों hydrogens C=C bond के एक ही face पर दे देता है।"
+  - q: "Diimide कौन-से groups reduce करता है?"
+    a: "Non-polar multiple bonds: C=C, C≡C और allenes। C=O, C≡N और NO₂ जैसे polar groups आमतौर पर reduce नहीं होते, और O–O और N–O bonds बचे रहते हैं।"
+  - q: "Diimide reduction का by-product क्या है?"
+    a: "Nitrogen gas। बहुत stable N≡N triple bond वाली इस gas का बनना ही reaction को आगे बढ़ाता है।"
+translated: 2026-11-22
+---
+
+## Diimide reduction क्या है?
+
+**Diimide reduction** में **diimide, HN=NH**, से **alkene (या alkyne) को alkane में** बदला जाता है; diimide अपने दोनों hydrogens दे देता है और **nitrogen gas** के रूप में निकल जाता है। Diimide इतना unstable है कि इसे store नहीं किया जा सकता, इसलिए इसे flask में ही बनाया जाता है, classic तरीके से **hydrazine को hydrogen peroxide से** oxidise करके। दोनों hydrogens C=C bond के **एक ही face** पर जुड़ते हैं (**syn addition**), जिससे catalytic hydrogenation जैसी ही stereochemistry मिलती है, लेकिन **बिना H₂ gas या metal catalyst के**।
+
+## Diimide बनाना
+
+<Eq ce="H2N-NH2 + H2O2 -> HN=NH + 2H2O" />
+
+यहाँ H₂O₂ oxidising agent है। Diimide बनाने के दूसरे तरीके हैं: copper(II) catalyst के साथ hydrazine का air oxidation, और acid से potassium azodicarboxylate का decarboxylation।
+
+## Mechanism
+
+1. **cis-Diimide बनना।** HN=NH, cis और trans isomers के रूप में होता है। सिर्फ़ cis form react कर सकता है, और acids दोनों forms को आपस में बदलने में मदद करते हैं।
+2. **Concerted hydrogen transfer।** cis-Diimide alkene के एक face के पास आता है। छह सदस्यों वाली cyclic transition state के through दोनों N–H hydrogens एक ही समय पर alkene के दोनों carbons पर चले जाते हैं, और N=N, N≡N बन जाता है।
+3. **Nitrogen का निकलना।** N₂ gas निकल जाती है, जिससे यह step irreversible हो जाता है। Product में दोनों नए H atoms एक ही तरफ़ होते हैं।
+
+<Eq ce=">C=C< + HN=NH -> >CH-CH< + N#N" />
+
+पूरे process में diimide का बनना slow step है।
+
+<KeyPoint>
+Diimide reduction दो H atoms का **syn addition** है, बिना metal के, और hydrogen transfer का एकमात्र by-product **N₂ gas** है।
+</KeyPoint>
+
+## Examples
+
+**Oleic acid से stearic acid।** Hydrazine से देखा गया यह पहला reduction था (1929), diimide को reagent के रूप में पहचाने जाने से बहुत पहले।
+
+<Eq ce="C17H33COOH ->[N2H4, H2O2] C17H35COOH" />
+
+**Alkyne से alkane।** But-2-yne diimide के दो molecules लेता है। बीच में बनी cis-but-2-ene लगभग उतनी ही तेज़ी से react करती है जितनी तेज़ी से बनती है, इसलिए product butane है।
+
+<Eq ce="CH3-C#C-CH3 ->[2 HN=NH] CH3CH2CH2CH3 + 2N2" />
+
+**Selective reduction।** जिस molecule में C=C bond के साथ peroxide (O–O) या N–O bond हो, उसका C=C diimide से reduce हो सकता है और O–O या N–O bond बचा रहता है; metal hydrogenation उसे तोड़ देता।
+
+## Scope और selectivity
+
+| Substrate | HN=NH के साथ result |
+|---|---|
+| Alkyne | Alkane (बीच वाली alkene को अलग करना मुश्किल है) |
+| Allene | Alkene, फिर alkane |
+| Terminal या strained alkene | तेज़ reduction |
+| Highly substituted alkene | धीमा |
+| trans-Alkene vs cis-alkene | trans तेज़ react करती है |
+| C=O, C≡N, NO₂ | आमतौर पर reduce नहीं होते |
+| O–O, N–O bonds | कोई असर नहीं |
+
+Reactivity का order: **alkynes, allenes > terminal या strained alkenes > substituted alkenes**।
+
+<ExamTip title="Common mistake">
+HN=NH **diimide (diazene)** है, azine नहीं; azine R₂C=N–N=CR₂ होता है। और diimide सिर्फ़ alkenes को reduce नहीं करता: यह alkynes समेत **कोई भी non-polar C=C या C≡C** reduce करता है। यह जिन्हें छोड़ देता है वे C=O जैसे **polar** multiple bonds हैं।
+</ExamTip>
+
+## Limitations
+
+- Diimide disproportionation से ख़ुद को भी नष्ट करता है (2 HN=NH से N₂H₄ + N₂ बनता है), इसलिए precursor की बहुत ज़्यादा मात्रा चाहिए।
+- Reactions धीमी हो सकती हैं, और भीड़ वाली (tri- या tetrasubstituted) alkenes धीरे react करती हैं।
+- Alkyne को alkene stage पर रोकना मुश्किल है; इसके लिए [Lindlar catalyst](/hi/reagents/lindlar-catalyst/) इस्तेमाल करें।
+
+## दूसरे methods से तुलना
+
+| Method | Reagent | Addition | Metal चाहिए |
+|---|---|---|---|
+| [Catalytic hydrogenation](/hi/reactions/catalytic-hydrogenation/) | H₂, Ni/Pd/Pt | Syn | हाँ |
+| [Wilkinson's catalyst](/hi/reagents/wilkinsons-catalyst/) | H₂, RhCl(PPh₃)₃ | Syn | हाँ (Rh) |
+| Diimide reduction | HN=NH | Syn | नहीं |
+| Alkynes का [Birch reduction](/hi/reactions/birch-reduction/) | Na, liquid NH₃ | Anti (trans-alkene) | Alkali metal |
+
+## Related reactions
+
+- [Wolff–Kishner reduction](/hi/reactions/wolff-kishner-reduction/): यहाँ भी hydrazine, लेकिन यह strong base में C=O group को CH₂ में बदलता है, और इसमें भी N₂ निकलता है।
+- [Catalytic hydrogenation](/hi/reactions/catalytic-hydrogenation/)
+- [Reduction reactions hub](/hi/mechanisms/reduction-reactions/)
