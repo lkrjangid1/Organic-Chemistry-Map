@@ -1,0 +1,50 @@
+{
+ "page": "concepts/addition-polymers",
+ "questions": [
+  {
+   "q": "High density polythene (HDPE) is obtained from ethene under which conditions?",
+   "options": [
+    "Trace O₂ or peroxide, 1000–2000 atm, 350–570 K",
+    "Et₃Al + TiCl₄ in a hydrocarbon solvent, 6–7 atm, 333–343 K",
+    "Benzoyl peroxide, very high pressure, 570 K",
+    "Persulphate initiator, high pressure"
+   ],
+   "answer": 1,
+   "explain": "HDPE needs the Ziegler–Natta catalyst (triethylaluminium + TiCl₄) at low pressure; the high-pressure trace-O₂ route gives branched LDPE."
+  },
+  {
+   "q": "Which addition polymer is used as a substitute for wool?",
+   "options": [
+    "PMMA",
+    "PVC",
+    "Teflon",
+    "Polyacrylonitrile"
+   ],
+   "answer": 3,
+   "explain": "Polyacrylonitrile (Orlon, Acrilan), made from CH₂=CH–CN with a peroxide initiator, gives fibres used in place of wool."
+  },
+  {
+   "q": "Which statement is INCORRECT?",
+   "options": [
+    "HDPE is formed by an anionic polymerisation mechanism",
+    "LDPE is branched because a growing radical abstracts an H atom from another chain",
+    "PMMA is used for intraocular lenses",
+    "Chlorinated PVC is used for hot-water pipes"
+   ],
+   "answer": 0,
+   "explain": "HDPE forms by coordination polymerisation: ethene coordinates to titanium and inserts into the Ti–C bond. It is not an anionic process."
+  },
+  {
+   "q": "The repeating unit –CH₂–C(CH₃)(COOCH₃)– belongs to a polymer whose monomer is",
+   "options": [
+    "CH₂=CH–COOCH₃",
+    "CH₂=CH–CN",
+    "CH₂=C(CH₃)COOCH₃",
+    "CH₂=CHCl"
+   ],
+   "answer": 2,
+   "explain": "Putting the double bond back between the two main-chain carbons gives methyl methacrylate, the monomer of PMMA (Perspex, Plexiglas).",
+   "smiles": "C=C(C)C(=O)OC"
+  }
+ ]
+}

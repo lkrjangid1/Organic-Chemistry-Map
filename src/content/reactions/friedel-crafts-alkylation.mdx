@@ -1,0 +1,160 @@
+---
+title: "Friedel–Crafts Alkylation"
+description: "Friedel–Crafts alkylation attaches an alkyl group to benzene using an alkyl halide and anhydrous AlCl₃, giving alkylbenzenes such as toluene or cumene."
+aliases: ["Friedel Crafts alkylation", "Friedel Craft alkylation", "Friedel-Crafts alkylation of benzene", "Alkylation of benzene"]
+kind: "named-reaction"
+family: "electrophilic-aromatic-substitution"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["fc_alkylation_benzene_cumene"]
+reactant:
+  name: "Benzene"
+  smiles: "c1ccccc1"
+product:
+  name: "Toluene (methylbenzene)"
+  smiles: "Cc1ccccc1"
+byproducts: "HCl"
+reagents: "Alkyl halide (R–X) with anhydrous AlCl₃ (or another Lewis acid)"
+conditions: "Anhydrous; excess arene to limit polyalkylation"
+equation: "C6H6 + CH3Cl ->[anhyd. AlCl3] C6H5CH3 + HCl"
+notesPages: [5, 20]
+steps:
+  - title: "Electrophile generation"
+    text: "Anhydrous AlCl₃ takes chloride from chloromethane, giving the methyl electrophile and AlCl₄⁻. It is written as R⁺, or as a strongly polarised R–Cl–AlCl₃ complex that behaves like one."
+    arrows: "Cl lone pair of CH₃Cl → empty orbital on Al; the C–Cl bond pair leaves with chlorine as AlCl₄⁻."
+    species:
+      - smiles: "CCl"
+        label: "Chloromethane"
+        highlight: "[CH3]Cl"
+      - smiles: "Cl[Al](Cl)Cl"
+        label: "AlCl₃"
+        highlight: "[Al]"
+  - title: "Attack by the ring"
+    text: "The π electrons of benzene attack the electrophile, forming a resonance-stabilised arenium ion (σ-complex). Aromaticity is lost in this step, so it is the slow step."
+    arrows: "A π pair of benzene → CH₃⁺, forming the new ring C–C bond."
+    species:
+      - smiles: "c1ccccc1"
+        label: "Benzene"
+      - smiles: "[CH3+]"
+        label: "Methyl cation (electrophile)"
+        highlight: "[CH3+]"
+  - title: "Deprotonation"
+    text: "AlCl₄⁻ removes the proton from the sp³ ring carbon, restoring aromaticity. Toluene and HCl form and AlCl₃ is regenerated, so it acts as a true catalyst."
+    arrows: "A Cl lone pair of AlCl₄⁻ → ring C–H; the C–H bond pair → ring, rebuilding the aromatic π system."
+    species:
+      - smiles: "CC1C=CC=C[CH+]1"
+        label: "Arenium ion (σ-complex)"
+        highlight: "[CX4;R]"
+      - smiles: "Cl[Al-](Cl)(Cl)Cl"
+        label: "AlCl₄⁻"
+memoryTricks: []
+faq:
+  - q: "What is the product of benzene with CH₃Cl and anhydrous AlCl₃?"
+    a: "Toluene (methylbenzene) and HCl. AlCl₃ pulls chloride off CH₃Cl to give a methyl electrophile, which substitutes one ring hydrogen."
+  - q: "Why does 1-chloropropane give isopropylbenzene instead of n-propylbenzene?"
+    a: "The primary propyl cation (or its AlCl₃ complex) rearranges by a 1,2-hydride shift to the more stable secondary isopropyl cation before it attacks the ring, so isopropylbenzene (cumene) is the major product."
+  - q: "Why is anhydrous AlCl₃ used in Friedel–Crafts alkylation?"
+    a: "AlCl₃ is a Lewis acid that accepts the halide from R–X and generates the carbocation electrophile. Water would hydrolyse AlCl₃ and destroy the catalyst."
+  - q: "Why does Friedel–Crafts alkylation fail with nitrobenzene and aniline?"
+    a: "Nitrobenzene is too strongly deactivated for the weak carbocation electrophile to attack. In aniline the basic NH₂ group binds AlCl₃, which places a positive charge next to the ring and deactivates it."
+  - q: "What is the difference between Friedel–Crafts alkylation and acylation?"
+    a: "Alkylation adds an alkyl group through a carbocation that can rearrange, and the product is more reactive, so polyalkylation occurs. Acylation adds an acyl group through a resonance-stabilised acylium ion that does not rearrange, and the ketone product is deactivated, so it stops after one substitution."
+related: ["friedel-crafts-acylation", "wolff-kishner-reduction", "dehydration-of-alcohols", "sn1-reaction", "markovnikov-rule"]
+sources:
+  - title: "Friedel–Crafts reaction"
+    url: "https://en.wikipedia.org/wiki/Friedel%E2%80%93Crafts_reaction"
+    publisher: "Wikipedia"
+  - title: "16.3: Alkylation and Acylation of Aromatic Rings – The Friedel–Crafts Reaction"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/16:_Chemistry_of_Benzene_-_Electrophilic_Aromatic_Substitution/16.03:_Alkylation_and_Acylation_of_Aromatic_Rings_-_The_Friedel-Crafts_Reaction"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "Friedel-Crafts Alkylation"
+    url: "https://www.organic-chemistry.org/namedreactions/friedel-crafts-alkylation.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "18.10: Limitations on Electrophilic Substitution Reactions with Substituted Benzenes"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Map:_Organic_Chemistry_(Smith)/Chapter_18:_Electrophilic_Aromatic_Substitution/18.10:_Limitations_on_Electrophilic_Substitution_Reactions_with_Substituted_Benzenes"
+    publisher: "Chemistry LibreTexts"
+  - title: "Nitrobenzene"
+    url: "https://en.wikipedia.org/wiki/Nitrobenzene"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 5
+  note: "Notes list R–OH/H⁺ and R–NH₂/HNO₂ as carbocation sources for alkylation; the sources read only confirm alkyl halides and alkenes, so these are kept as exam convention."
+---
+
+## What is Friedel–Crafts alkylation?
+
+**Friedel–Crafts alkylation** is the electrophilic aromatic substitution in which an **alkyl group replaces a ring hydrogen** of benzene or another arene. The arene is treated with an **alkyl halide** in the presence of a Lewis acid, usually **anhydrous AlCl₃**, and the product is an **alkylbenzene** plus HX. Benzene with chloromethane gives toluene; benzene with 2-chloropropane gives cumene (isopropylbenzene). It was discovered by Charles Friedel and James Crafts in 1877.
+
+## General reaction
+
+<Eq ce="Ar-H + R-X ->[anhyd. AlCl3] Ar-R + HX" />
+
+The electrophile in every case is a **carbocation, R⁺** (or a strongly polarised R–X–AlCl₃ complex that behaves like one). The usual ways to make it:
+
+| Starting material | Reagent | Electrophile formed |
+|---|---|---|
+| Alkyl halide, R–X | Lewis acid (AlCl₃, FeCl₃) | R⁺ |
+| Alkene | H⁺ | carbocation (Markovnikov) |
+| Alcohol, R–OH | H⁺ | R⁺ after loss of water |
+| Aliphatic amine, R–NH₂ | HNO₂ | R⁺ after loss of N₂ |
+
+The alkyl-halide and alkene routes are the textbook ones. The alcohol and amine routes are used in exam answers as other ways of generating the same carbocation.
+
+## Mechanism
+
+1. **Electrophile generation.** AlCl₃ takes chloride from the alkyl halide, giving the carbocation and AlCl₄⁻.
+2. **Attack by the ring.** The π electrons of benzene attack R⁺, forming a resonance-stabilised arenium ion (σ-complex). Aromaticity is lost in this step, so it is the slow step.
+3. **Deprotonation.** AlCl₄⁻ removes the proton from the sp³ ring carbon, restoring aromaticity, releasing HCl and regenerating AlCl₃.
+
+<Eq ce="(CH3)2CHCl + AlCl3 -> (CH3)2CH+ + AlCl4-" />
+<Eq ce="C6H6 + (CH3)2CH+ -> C6H5CH(CH3)2 + H+" />
+
+<KeyPoint>
+Because AlCl₃ is regenerated in the last step, it acts as a true catalyst in alkylation. This is different from acylation, where the ketone product ties up the AlCl₃.
+</KeyPoint>
+
+## Examples
+
+**1. Toluene from benzene (NCERT example).**
+
+<Eq ce="C6H6 + CH3Cl ->[anhyd. AlCl3] C6H5CH3 + HCl" />
+
+**2. Cumene from benzene and 2-chloropropane.**
+
+<Eq ce="C6H6 + CH3CHClCH3 ->[AlCl3] C6H5CH(CH3)2 + HCl" />
+
+**3. Alkene as the alkylating agent.** Protonating 2,3-dimethylbut-2-ene gives the tertiary 2,3-dimethylbutan-2-yl cation, which then alkylates benzene. Industrially, ethylbenzene and cumene are made from benzene with ethene and propene over solid acid catalysts.
+
+<Eq ce="(CH3)2C=C(CH3)2 ->[H+] (CH3)2C+-CH(CH3)2" />
+
+## Limitations and exceptions
+
+- **Carbocation rearrangement.** Primary alkyl halides rearrange by hydride or methyl shifts. 1-Chlorobutane with benzene at 0 °C gives roughly a 2:1 ratio of sec-butylbenzene to n-butylbenzene, and 1-chloropropane gives mainly isopropylbenzene.
+- **Polyalkylation.** An alkyl group activates the ring, so the product reacts faster than benzene. A large excess of benzene is used to favour the mono-alkylated product.
+- **Deactivated rings fail.** Rings carrying strongly electron-withdrawing groups such as –NO₂, –CN or C=O do not react, because the weak carbocation electrophile cannot attack such an electron-poor ring.
+- **Amino groups block the reaction.** –NH₂, –NHR and –NR₂ groups are Lewis bases; they bind AlCl₃ and deactivate the ring. Aniline therefore does not undergo Friedel–Crafts reactions.
+
+The same two reasons explain every "no reaction" case with R–X/AlCl₃ and, equally, with RCOCl/AlCl₃:
+
+| Group on the ring | Example | Why Friedel–Crafts fails |
+|---|---|---|
+| –NO₂, –N⁺R₃, –CN, –SO₃H | nitrobenzene | Strongly electron-withdrawing; R⁺ and RCO⁺ are weak electrophiles and cannot attack the electron-poor ring |
+| –CHO, –COR, –COOH, –COOR | acetophenone, benzaldehyde | C=O withdraws electrons by resonance, deactivating the ring |
+| –NH₂, –NHR, –NR₂ | aniline | N lone pair binds AlCl₃; the resulting –N⁺ group strongly deactivates the ring |
+
+Nitrobenzene is unreactive enough that it is sometimes used in the laboratory as a solvent for reactions with electrophilic reagents.
+- **Aryl and vinyl halides cannot be used.** Their cations are too unstable to form, so chlorobenzene or vinyl chloride will not alkylate benzene.
+- **Reversibility.** Alkylation can be reversed under the reaction conditions, which allows transalkylation.
+
+<ExamTip>
+When a question uses a primary alkyl halide (n-propyl, n-butyl, neopentyl), always check for a 1,2-hydride or 1,2-methyl shift first. To put an unrearranged straight chain on benzene, do Friedel–Crafts acylation and then reduce the C=O by Clemmensen or Wolff–Kishner reduction.
+</ExamTip>
+
+## Related reactions
+
+- [Friedel–Crafts acylation](/reactions/friedel-crafts-acylation/) adds an acyl group without rearrangement or polysubstitution.
+- [Wolff–Kishner reduction](/reactions/wolff-kishner-reduction/) converts the acylation product into the straight-chain alkylbenzene.
+- [Dehydration of alcohols](/reactions/dehydration-of-alcohols/) and the [SN1 reaction](/reactions/sn1-reaction/) involve the same carbocation chemistry and the same rearrangements.
+- [Markovnikov's rule](/reactions/markovnikov-rule/) decides which carbocation forms when an alkene is the alkylating agent.
+- [Electrophilic aromatic substitution](/mechanisms/electrophilic-aromatic-substitution/) covers nitration, sulphonation, halogenation and directing effects.

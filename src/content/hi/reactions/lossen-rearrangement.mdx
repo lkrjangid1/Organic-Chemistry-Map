@@ -1,0 +1,77 @@
+---
+title: "Lossen Rearrangement (लॉसेन पुनर्विन्यास)"
+description: "Lossen rearrangement में O-activated hydroxamic acid, base से isocyanate में बदलता है, जिसे पानी एक carbon कम वाली primary amine में बदल देता है।"
+aliases: ["लॉसेन पुनर्विन्यास", "लॉसेन रीअरेंजमेंट", "lossen rearrangement hindi", "lossen reaction hindi", "hydroxamic acid rearrangement hindi", "lossen hofmann curtius difference hindi"]
+reagents: "Hydroxamic acid + activator (Ac₂O, RCOCl, RSO₂Cl या CDI); base (OH⁻); फिर H₂O"
+conditions: "Base, गुनगुना करें; isocyanate को hydrolyse करने के लिए पानी"
+byproducts: "Leaving group से carboxylate (R′COO⁻); hydrolysis पर CO₂"
+reactantName: "O-Acetylbenzohydroxamic acid (एक acyl hydroxamate)"
+productName: "Aniline (phenyl isocyanate के रास्ते)"
+faq:
+  - q: "Lossen rearrangement का product क्या है?"
+    a: "एक isocyanate, R–N=C=O। पानी में यह carbamic acid के through hydrolyse होता है, जो CO₂ खो देता है, इसलिए final product एक primary amine R–NH₂ है जिसमें hydroxamic acid से एक carbon कम होता है।"
+  - q: "Lossen rearrangement में leaving group क्या है?"
+    a: "Hydroxamic acid के oxygen पर लगा एक carboxylate (या sulfonate)। Free hydroxamic acid के OH को पहले acylate या sulfonylate किया जाता है; निकलने वाला acid जितना ज़्यादा acidic, rearrangement उतना तेज़।"
+  - q: "क्या Lossen rearrangement में configuration retain होता है?"
+    a: "हाँ। Migrating group उसी molecule के अंदर carbon से nitrogen पर जाता है और कभी free नहीं होता, इसलिए chiral migrating carbon अपना configuration बनाए रखता है, बिल्कुल Hofmann और Curtius rearrangements की तरह।"
+  - q: "Lossen, Hofmann और Curtius rearrangements में क्या अंतर है?"
+    a: "तीनों carbon से electron-deficient nitrogen पर 1,2-shift से isocyanate देते हैं। फ़र्क starting material और leaving group में है: Hofmann में N-bromoamide (Br⁻ निकलता है), Curtius में acyl azide (N₂ निकलता है), और Lossen में O-acyl hydroxamic acid (carboxylate निकलता है)।"
+translated: 2026-11-22
+---
+
+## Lossen rearrangement क्या है?
+
+**Lossen rearrangement** में base की मदद से एक **O-activated hydroxamic acid** (acyl hydroxamate, R–CO–NH–O–COR′) एक **isocyanate**, R–N=C=O, में बदलता है। पानी में isocyanate hydrolyse होकर CO₂ खो देता है, इसलिए कुल result एक ऐसी **primary amine है जिसमें starting acid derivative से एक carbon कम** होता है। Wilhelm Lossen ने 1870 के दशक में इसका वर्णन किया था, और यह [Hofmann](/hi/reactions/hofmann-bromamide-degradation/) और [Curtius](/hi/reactions/curtius-rearrangement/) rearrangements की family का ही हिस्सा है।
+
+## General reaction
+
+Hydroxamic acid, R–CO–NH–OH, किसी ester (या acid chloride) और hydroxylamine से बनाया जाता है। फिर इसके OH को बेहतर leaving group में बदला जाता है, आमतौर पर acetic anhydride या किसी acid chloride से acylation करके, या sulfonyl chloride या CDI से। इसके बाद base rearrangement शुरू कर देता है।
+
+<Eq ce="R-CO-OR'' ->[NH2OH] R-CO-NH-OH ->[Ac2O] R-CO-NH-O-COCH3" />
+
+## Mechanism
+
+1. **Deprotonation।** Base, N–H proton हटाता है, जो C=O के बगल में होने से acidic है, और conjugate base R–CO–N⁻–O–COR′ बनता है।
+2. **Leaving group के निकलने के साथ 1,2-shift।** एक ही concerted step में group R, carbonyl carbon से nitrogen पर चला जाता है, N–O bond टूटता है और carboxylate R′COO⁻ निकल जाता है। Nitrogen का lone pair isocyanate का C=N bond बनाता है। Exam answers में इसी migration step को rate-determining step माना जाता है।
+3. **Hydrolysis।** पानी isocyanate पर add होकर carbamic acid, R–NH–COOH, देता है, जो CO₂ खोकर amine बन जाता है।
+
+<Eq ce="R-CO-N^--O-COR' -> R-N=C=O + R'COO^-" />
+<Eq ce="R-N=C=O + H2O -> [R-NH-COOH] -> R-NH2 + CO2" />
+
+<KeyPoint>
+Lossen एक **step-down** reaction है: C=O carbon, CO₂ के रूप में निकल जाता है, इसलिए amine में एक carbon कम होता है। Migrating group अपना **configuration** बनाए रखता है, क्योंकि shift के दौरान वह molecule से कभी अलग नहीं होता।
+</KeyPoint>
+
+<ExamTip title="Common mistake">
+Hydroxide एक खराब leaving group है, इसलिए free hydroxamic acid anion सीधे OH⁻ बाहर नहीं निकालता। Oxygen को पहले activate करना पड़ता है (O-acyl, O-sulfonyl); तब leaving group एक carboxylate या sulfonate होता है। निकलने वाला acid जितना strong होता है, rate उतना बढ़ता है।
+</ExamTip>
+
+## Rate को प्रभावित करने वाले factors
+
+- **Leaving group:** leaving group का conjugate acid जितना strong (कम pKa, ज़्यादा electron-withdrawing substituents), rearrangement उतना तेज़।
+- **Migrating group:** exam answers में कहा जाता है कि migrating group पर electron-releasing groups shift को तेज़ करते हैं, क्योंकि group अपने bonding pair के साथ electron-poor nitrogen पर जाता है।
+- **Stereochemistry:** chiral migrating carbon **retention of configuration** दिखाता है।
+
+## Examples
+
+**Benzohydroxamic acid से aniline।** O-acetyl derivative, base में rearrange होकर phenyl isocyanate देता है, जिसे पानी aniline में बदल देता है।
+
+<Eq ce="C6H5-CO-NH-O-COCH3 ->[OH-] C6H5-N=C=O ->[H2O] C6H5-NH2 + CO2" />
+
+**Isocyanate को trap करना।** पानी न हो तो isocyanate को पकड़ा जा सकता है: alcohol से carbamate (urethane) बनता है, और amine से substituted urea।
+
+<Eq ce="R-N=C=O + R'OH -> R-NH-CO-OR'" />
+
+## Limitations और practical notes
+
+- Acyl hydroxamate को शायद ही कभी अलग किया जाता है; आमतौर पर activator को hydroxamic acid में डाला जाता है और rearrangement उसी pot में हो जाता है।
+- Curtius रास्ते (azides, explosive) और Hofmann रास्ते (bromine/hypobromite oxidant) की तुलना में Lossen रास्ता इन दोनों खतरनाक reagents से बचाता है।
+- Free hydroxamic acid से एक "self-propagating" version भी ज्ञात है, पर उसके लिए खास conditions (strong base और एक added electrophile) चाहिए, सिर्फ़ aqueous hydroxide काफ़ी नहीं।
+
+## Related reactions
+
+- [Hofmann bromamide degradation](/hi/reactions/hofmann-bromamide-degradation/): amide + Br₂/NaOH; Br⁻ leaving group है।
+- [Curtius rearrangement](/hi/reactions/curtius-rearrangement/): गर्म करने पर acyl azide; N₂ leaving group है।
+- [Schmidt reaction](/hi/reactions/schmidt-reaction/): acid में carboxylic acid + HN₃।
+- [Beckmann rearrangement](/hi/reactions/beckmann-rearrangement/): oximes में acid-catalysed shift, जो isocyanates की जगह amides देता है।
+- [Amines बनाने के तरीके](/hi/preparation/preparation-of-amines/) और [rearrangement reactions hub](/hi/mechanisms/rearrangement-reactions/)।

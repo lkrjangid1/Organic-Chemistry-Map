@@ -1,0 +1,50 @@
+{
+ "page": "reagents/dibal-h",
+ "questions": [
+  {
+   "q": "Methyl dodecanoate is treated with one equivalent of DIBAL-H in toluene at −78 °C, followed by H₃O⁺. The products are:",
+   "options": [
+    "Dodecan-1-ol and methanol",
+    "Dodecanoic acid and methanol",
+    "Dodecanal and methanol",
+    "Dodecane and methanol"
+   ],
+   "answer": 2,
+   "explain": "At −78 °C with one equivalent, DIBAL-H reduces the ester only to the aldehyde and releases the alcohol part. Warming or excess reagent gives the 1° alcohol."
+  },
+  {
+   "q": "Benzonitrile is treated with (1) DIBAL-H and (2) H₃O⁺. What is formed, and what would LiAlH₄ give instead?",
+   "options": [
+    "Benzaldehyde; LiAlH₄ gives benzylamine",
+    "Benzylamine; LiAlH₄ gives benzaldehyde",
+    "Benzyl alcohol; LiAlH₄ gives benzylamine",
+    "Benzaldehyde; LiAlH₄ gives benzoic acid"
+   ],
+   "answer": 0,
+   "explain": "DIBAL-H delivers one hydride to give an aluminium-bound imine, which work-up hydrolyses to C₆H₅CHO. LiAlH₄ adds two hydrides and gives the primary amine."
+  },
+  {
+   "q": "Why does DIBAL-H stop at the aldehyde when it reduces an ester, while LiAlH₄ goes on to the alcohol?",
+   "options": [
+    "DIBAL-H is a stronger nucleophile than AlH₄⁻",
+    "The aldehyde precipitates out of toluene at −78 °C",
+    "DIBAL-H cannot reduce aldehydes under any conditions",
+    "DIBAL-H has one hydride per Al and, used as one equivalent at −78 °C, is not reactive enough to attack the aldehyde"
+   ],
+   "answer": 3,
+   "explain": "LiAlH₄ has four reactive hydrides and reduces the intermediate aldehyde faster than the ester. DIBAL-H does reduce aldehydes in general, so temperature and stoichiometry control are essential."
+  },
+  {
+   "q": "Ethyl but-2-enoate is fully reduced with DIBAL-H and worked up. The product is:",
+   "smiles": "CC=CC(=O)OCC",
+   "options": [
+    "Butan-1-ol",
+    "But-2-en-1-ol",
+    "Butanal",
+    "Butane-1,2-diol"
+   ],
+   "answer": 1,
+   "explain": "DIBAL-H does not reduce an isolated C=C, so full reduction of the α,β-unsaturated ester gives the allylic alcohol with the double bond kept."
+  }
+ ]
+}

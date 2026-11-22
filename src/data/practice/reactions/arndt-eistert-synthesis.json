@@ -1,0 +1,49 @@
+{
+ "page": "reactions/arndt-eistert-synthesis",
+ "questions": [
+  {
+   "q": "Benzoic acid is treated in sequence with (i) SOCl₂, (ii) excess CH₂N₂, (iii) Ag₂O, H₂O, heat. The final product is:",
+   "options": [
+    "Acetophenone",
+    "Methyl benzoate",
+    "Phenylacetic acid",
+    "3-Phenylpropanoic acid"
+   ],
+   "answer": 2,
+   "explain": "Arndt–Eistert synthesis adds one CH₂ between the R group and COOH, so C₆H₅COOH becomes C₆H₅CH₂COOH. Only one carbon is added, so 3-phenylpropanoic acid is wrong."
+  },
+  {
+   "q": "Why is an excess of diazomethane used in the Arndt–Eistert synthesis?",
+   "options": [
+    "To remove the HCl formed, which would otherwise convert the diazoketone into R–CO–CH₂Cl",
+    "To methylate the carboxylic acid before it reacts with SOCl₂",
+    "To act as the catalyst for the Wolff rearrangement",
+    "To reduce the ketene to an aldehyde"
+   ],
+   "answer": 0,
+   "explain": "The second equivalent of CH₂N₂ destroys HCl as CH₃Cl + N₂; with too little diazomethane the HCl gives the unwanted chloromethyl ketone. Ag(I), heat or light, not CH₂N₂, drives the Wolff step."
+  },
+  {
+   "q": "The Wolff rearrangement of an α-diazoketone R–CO–CHN₂ with Ag₂O gives which intermediate?",
+   "options": [
+    "An acyl nitrene",
+    "An isocyanate, R–N=C=O",
+    "A carbocation, R–CO–CH₂⁺",
+    "A ketene, R–CH=C=O"
+   ],
+   "answer": 3,
+   "explain": "N₂ is lost and R shifts from the carbonyl carbon to the neighbouring carbon, giving the ketene R–CH=C=O, which water converts into RCH₂COOH. An isocyanate is the product of the Curtius rearrangement, where the shift is to nitrogen."
+  },
+  {
+   "q": "Which statement about the Arndt–Eistert synthesis is NOT correct?",
+   "options": [
+    "A chiral migrating group keeps its configuration",
+    "Acetic acid can equally be stepped up to propanoic acid by making BrCH₂COOH and treating it with CH₃MgBr",
+    "Trapping the ketene with ethanol gives the homologous ethyl ester",
+    "The Wolff step can be induced by Ag(I), heat or UV light"
+   ],
+   "answer": 1,
+   "explain": "CH₃MgBr reacts first with the acidic COOH proton, giving methane, so no C–C bond forms; that route fails. The other three statements are true features of the Arndt–Eistert sequence."
+  }
+ ]
+}

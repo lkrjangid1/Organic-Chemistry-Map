@@ -1,0 +1,50 @@
+{
+ "page": "reagents/lithium-aluminium-hydride",
+ "questions": [
+  {
+   "q": "Ethanamide (CH₃CONH₂) is reduced with LiAlH₄ in dry ether followed by water work-up. The product is:",
+   "options": [
+    "Methylamine",
+    "Ethylamine",
+    "Ethanol",
+    "Ethanenitrile"
+   ],
+   "answer": 1,
+   "explain": "LiAlH₄ turns the amide C=O into CH₂ and keeps every carbon, giving CH₃CH₂NH₂. Methylamine (one carbon fewer) is the Hofmann bromamide product, the usual trap."
+  },
+  {
+   "q": "Methyl isocyanide (CH₃–NC) is reduced with LiAlH₄. The product is:",
+   "options": [
+    "Ethylamine",
+    "Methylamine",
+    "Ethanal",
+    "N-Methylmethanamine (dimethylamine)"
+   ],
+   "answer": 3,
+   "explain": "In an isocyanide the carbon of NC ends up as a methyl group on nitrogen, giving the 2° amine CH₃–NH–CH₃. The isomeric nitrile CH₃CN would give the 1° amine ethylamine."
+  },
+  {
+   "q": "What does nitrobenzene give with LiAlH₄?",
+   "options": [
+    "Azobenzene, C₆H₅–N=N–C₆H₅",
+    "Aniline",
+    "N-Phenylhydroxylamine",
+    "No reaction"
+   ],
+   "answer": 0,
+   "explain": "Aromatic nitro compounds give azo compounds with metal hydrides, so aniline is made with Sn/HCl or catalytic hydrogenation. Aliphatic nitro compounds, by contrast, are reduced to amines."
+  },
+  {
+   "q": "Ethyl but-3-enoate, CH₂=CH–CH₂–COOC₂H₅, is treated with LiAlH₄ and then H₃O⁺. The products are:",
+   "smiles": "C=CCC(=O)OCC",
+   "options": [
+    "Butan-1-ol and ethanol",
+    "But-3-enal and ethanol",
+    "But-3-en-1-ol and ethanol",
+    "Butanoic acid and ethanol"
+   ],
+   "answer": 2,
+   "explain": "LiAlH₄ reduces the ester to the primary alcohol plus R′OH; the isolated C=C has no polarity for hydride to attack, so it survives. The aldehyde intermediate cannot be isolated with LiAlH₄."
+  }
+ ]
+}

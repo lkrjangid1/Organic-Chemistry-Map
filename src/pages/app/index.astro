@@ -1,0 +1,19 @@
+---
+// Old address of the map. Forwards to /map/, keeping ?reaction= / ?compound= deep links.
+import { absUrl, url } from '../../lib/site';
+const target = url('map/');
+---
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Moved to the interactive map</title>
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href={absUrl('map/')} />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <script is:inline define:vars={{ target }}>
+      location.replace(target + location.search + location.hash);
+    </script>
+  </head>
+  <body><p>The map has moved to <a href={target}>{target}</a>.</p></body>
+</html>

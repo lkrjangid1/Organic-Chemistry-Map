@@ -1,0 +1,114 @@
+---
+title: "Kucherov Reaction"
+description: "Kucherov reaction is the HgSO₄/dilute H₂SO₄ catalysed hydration of an alkyne to a ketone via an enol; acetylene gives acetaldehyde, propyne gives acetone."
+aliases: ["Kucherov rxn", "Kutscheroff reaction", "Hydration of alkynes", "Acid catalysed hydration of alkyne", "Mercury catalysed alkyne hydration"]
+kind: "named-reaction"
+family: "electrophilic-addition"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["reaction_6"]
+reactant:
+  name: "Propyne"
+  smiles: "CC#C"
+product:
+  name: "Acetone (propan-2-one)"
+  smiles: "CC(C)=O"
+reagents: "HgSO₄ (Hg²⁺) in dilute H₂SO₄, H₂O"
+conditions: "Aqueous acid, warm"
+equation: "CH3-C#CH + H2O ->[HgSO4, dil. H2SO4] CH3-CO-CH3"
+notesPages: [17, 67]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Kucherov reaction of propyne?"
+    a: "Acetone (propan-2-one). Water adds in the Markovnikov sense to give the enol CH₃–C(OH)=CH₂, which tautomerises to the ketone."
+  - q: "Which alkyne gives an aldehyde on hydration?"
+    a: "Only acetylene (ethyne). It gives acetaldehyde (ethanal); every other alkyne gives a ketone."
+  - q: "What is the role of HgSO₄ in the hydration of alkynes?"
+    a: "Hg²⁺ is the catalyst. Alkynes add water only slowly with acid alone; the mercury(II) ion attacks the triple bond first and makes it much easier for water to add."
+  - q: "Why does alkyne hydration give a ketone instead of an alcohol?"
+    a: "The first product is an enol, an OH on a C=C carbon. Enols rapidly rearrange (keto–enol tautomerism) to the more stable carbonyl compound."
+related: ["oxymercuration-demercuration", "markovnikov-rule", "hydroboration-oxidation", "haloform-reaction"]
+sources:
+  - title: "Hydration of Alkynes and Tautomerism"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Alkynes/Reactivity_of_Alkynes/Hydration_of_Alkynes_and_Tautomerism"
+    publisher: "Chemistry LibreTexts"
+  - title: "Acetylene (Kucherov reaction: hydration of acetylene to acetaldehyde)"
+    url: "https://en.wikipedia.org/wiki/Kucherov_reaction"
+    publisher: "Wikipedia"
+  - title: "9.4: Hydration of Alkynes"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/09:_Alkynes_-_An_Introduction_to_Organic_Synthesis/9.04:_Hydration_of_Alkynes"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 3
+  note: "Treating the attack of water on the Hg²⁺–alkyne complex as the rate-determining step is exam convention; the sources read do not state the slow step."
+---
+
+## What is the Kucherov reaction?
+
+The **Kucherov reaction** is the **acid-catalysed hydration of an alkyne** in the presence of a mercury(II) salt, usually **HgSO₄ in dilute H₂SO₄**. Water adds across the C≡C bond to give an **enol**, which immediately tautomerises to a **carbonyl compound**. Acetylene gives **acetaldehyde**; all other alkynes give **ketones**, and terminal alkynes give **methyl ketones**. The Russian chemist Mikhail Kucherov described the hydration of acetylene with mercury salts in 1881.
+
+For propyne, the product is **acetone**.
+
+## Mechanism
+
+1. **Attack by Hg²⁺.** The mercury(II) ion acts as the electrophile and coordinates to the triple bond (a bridged π-complex). The positive charge develops on the **more substituted carbon**, as in Markovnikov addition.
+2. **Water adds.** A water molecule bonds to that more substituted carbon and loses a proton, giving a mercury-containing enol, CH₃–C(OH)=CH–Hg⁺. In exam answers this attack of water is usually marked as the slow (rate-determining) step.
+3. **Mercury is replaced by H.** In the acidic medium the C–Hg bond is protonated off, releasing Hg²⁺ (so it acts as a catalyst) and leaving a neutral **enol**.
+4. **Keto–enol tautomerism.** The enol, CH₃–C(OH)=CH₂, shifts its OH hydrogen to carbon and becomes the ketone. The keto form is far more stable, so the equilibrium lies almost entirely on the ketone side.
+
+<Eq ce="CH3-C#CH ->[H2O, Hg^2+, H+] CH3-C(OH)=CH2 <=> CH3-CO-CH3" />
+
+<ExamTip title="Common mistake">
+Kucherov hydration is classed as an **electrophilic addition**: the first species to attack the alkyne is the Hg²⁺ electrophile. Water does act as a nucleophile in the second step, but that does not make the overall reaction a nucleophilic addition.
+</ExamTip>
+
+<KeyPoint>
+Kucherov hydration follows **Markovnikov's rule**: the oxygen ends up on the more substituted carbon of the triple bond. That is why a terminal alkyne gives a **methyl ketone** and never an aldehyde.
+</KeyPoint>
+
+## Why is the mercury salt needed?
+
+Adding water to a triple bond needs strong acid, and even then it is slow without help. The Hg²⁺ ion coordinates to the triple bond first and makes the attack by water fast; it is released again at the end, so only a catalytic amount is consumed in principle. In exam answers, the reagent is written as HgSO₄ with dilute H₂SO₄ over the arrow.
+
+## Examples
+
+**1. Acetylene to acetaldehyde** (the only aldehyde case):
+
+<Eq ce="HC#CH + H2O ->[HgSO4, dil. H2SO4] [CH2=CH-OH] -> CH3-CHO" />
+
+**2. Propyne to acetone**:
+
+<Eq ce="CH3-C#CH + H2O ->[Hg^2+/H2SO4] CH3-CO-CH3" />
+
+**3. 3-Phenylprop-1-yne to phenylacetone (1-phenylpropan-2-one):**
+
+<Eq ce="C6H5CH2-C#CH + H2O ->[HgSO4, H2SO4] C6H5CH2-CO-CH3" />
+
+**Internal alkynes.** But-2-yne is symmetrical and gives a single ketone, butan-2-one. An unsymmetrical internal alkyne such as pent-2-yne gives a **mixture** of pentan-2-one and pentan-3-one, because the two carbons of the triple bond are similarly substituted.
+
+<ExamTip>
+The reagents may be written in three equivalent ways: Hg²⁺ + H⁺, Hg²⁺/dil. H₂SO₄, or HgSO₄/H₂SO₄. All mean the same Kucherov conditions. To get an aldehyde from a terminal alkyne instead, use hydroboration–oxidation (anti-Markovnikov).
+</ExamTip>
+
+## Comparison: alkyne hydration methods
+
+| Method | Reagents | Product from propyne |
+|---|---|---|
+| Kucherov (Markovnikov) | HgSO₄, dil. H₂SO₄ | Acetone (methyl ketone) |
+| Hydroboration–oxidation (anti-Markovnikov) | Bulky borane, then H₂O₂/OH⁻ | Propanal (aldehyde) |
+
+## Limitations and exceptions
+
+- Acetylene is the exception that gives an aldehyde, not a ketone.
+- **Formaldehyde cannot be made this way.** Even the smallest alkyne, ethyne, has two carbons, so the smallest product is acetaldehyde (C₂).
+- Unsymmetrical internal alkynes give mixtures of two ketones, so the reaction is useful mainly for terminal and symmetrical alkynes.
+- Mercury salts are toxic. Industrially, acetaldehyde made this way was replaced by the Wacker oxidation of ethylene.
+
+## Related reactions
+
+- [Oxymercuration–demercuration](/reactions/oxymercuration-demercuration/) is the Hg²⁺-based Markovnikov hydration of alkenes.
+- [Hydroboration–oxidation](/reactions/hydroboration-oxidation/) gives the anti-Markovnikov product.
+- [Markovnikov's rule](/reactions/markovnikov-rule/) explains why the O goes to the inner carbon.
+- [Haloform reaction](/reactions/haloform-reaction/) is a test for the methyl ketones that Kucherov hydration produces.
+- Overview: [Electrophilic addition reactions](/mechanisms/electrophilic-addition/).

@@ -1,0 +1,159 @@
+---
+title: "Hofmann Bromamide Degradation"
+description: "Hofmann bromamide degradation converts a primary amide into a primary amine with one carbon fewer using Br₂ and NaOH, via an isocyanate. Mechanism and examples."
+aliases: ["Hofmann rearrangement", "Hoffmann bromamide reaction", "Hofmann degradation of amides", "Hoffman bromamide degradation", "Hofmann bromamide reaction"]
+kind: "rearrangement"
+family: "rearrangement-reactions"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["hofmann_bromamide_degradation", "hofmann_rearrangement", "hofmann_degradation_butanamide", "hofmann_bromamide"]
+reactant:
+  name: "Ethanamide (acetamide)"
+  smiles: "CC(N)=O"
+product:
+  name: "Methanamine (methylamine)"
+  smiles: "CN"
+byproducts: "Na₂CO₃, NaBr, H₂O"
+reagents: "Br₂ + aqueous NaOH (NaOBr formed in situ)"
+conditions: "Warm"
+equation: "R-CO-NH2 + Br2 + 4NaOH -> R-NH2 + Na2CO3 + 2NaBr + 2H2O"
+notesPages: [40, 41]
+steps:
+  - title: "First deprotonation"
+    text: "Hydroxide removes an N–H proton from ethanamide, giving the amide anion CH₃–CO–NH⁻. Br₂ and NaOH together also form sodium hypobromite in the mixture."
+    arrows: "Lone pair of OH⁻ → N–H; the N–H bond pair stays on nitrogen."
+    species:
+      - smiles: "CC(N)=O"
+        label: "Ethanamide"
+        highlight: "[NH2]"
+      - smiles: "[OH-]"
+        label: "Hydroxide"
+  - title: "N-Bromination"
+    text: "The amide anion attacks bromine, giving the N-bromoamide CH₃–CO–NH–Br and bromide ion."
+    arrows: "N⁻ lone pair → Br; the Br–Br bond pair leaves as Br⁻."
+    species:
+      - smiles: "CC(=O)[NH-]"
+        label: "Amide anion"
+        highlight: "[NH1-]"
+      - smiles: "BrBr"
+        label: "Bromine"
+  - title: "Second deprotonation"
+    text: "Hydroxide removes the remaining, now more acidic, N–H proton, giving the N-bromoamide anion CH₃–CO–N⁻–Br."
+    arrows: "Lone pair of OH⁻ → N–H; the N–H bond pair stays on nitrogen."
+    species:
+      - smiles: "CC(=O)NBr"
+        label: "N-Bromoamide"
+        highlight: "[NH1]Br"
+      - smiles: "[OH-]"
+        label: "Hydroxide"
+  - title: "Rearrangement to the isocyanate"
+    text: "The methyl group migrates from carbon to nitrogen as Br⁻ leaves, in a single step, giving methyl isocyanate CH₃–N=C=O. No free acyl nitrene forms, and the migrating group keeps its configuration (retention)."
+    arrows: "C–CH₃ bond pair → nitrogen as the N–Br bond pair leaves with Br⁻; the N⁻ lone pair forms C=N."
+    species:
+      - smiles: "CC(=O)[N-]Br"
+        label: "N-Bromoamide anion"
+        highlight: "[CH3]C(=O)[N-]Br"
+  - title: "Hydrolysis of the isocyanate"
+    text: "Hydroxide adds to the isocyanate carbon and proton transfer gives the carbamate ion CH₃–NH–COO⁻, in equilibrium with the carbamic acid CH₃–NH–COOH."
+    arrows: "Lone pair of OH⁻ → isocyanate carbon; the C=N π pair → nitrogen, which then takes a proton."
+    species:
+      - smiles: "CN=C=O"
+        label: "Methyl isocyanate"
+        highlight: "N=C=O"
+      - smiles: "[OH-]"
+        label: "Hydroxide"
+  - title: "Decarboxylation"
+    text: "The carbamic acid loses CO₂, which NaOH takes up as Na₂CO₃, leaving methanamine. The amine has one carbon fewer than the amide."
+    arrows: "O–H bond pair forms a second C=O as the C–N bond pair moves onto nitrogen, releasing CO₂."
+    species:
+      - smiles: "CNC(=O)O"
+        label: "Carbamic acid"
+        highlight: "NC(=O)[OH1]"
+memoryTricks: []
+faq:
+  - q: "What is the product of Hofmann bromamide degradation of acetamide?"
+    a: "Methanamine (methylamine), CH₃NH₂, together with Na₂CO₃, NaBr and water. The carbonyl carbon is removed as carbonate."
+  - q: "Why is Hofmann bromamide reaction called a degradation or step-down reaction?"
+    a: "The amine formed has one carbon atom fewer than the starting amide, because the C=O carbon leaves as CO₂ (trapped as Na₂CO₃)."
+  - q: "What is the intermediate in Hofmann bromamide degradation?"
+    a: "An isocyanate, R–N=C=O, formed when R migrates from carbon to nitrogen as bromide leaves the N-bromoamide anion. It is hydrolysed to a carbamic acid that loses CO₂."
+  - q: "Is a nitrene formed in the Hofmann rearrangement?"
+    a: "No free nitrene is formed in the accepted mechanism; the migration of R and the loss of Br⁻ happen together. Some older textbooks draw an acyl nitrene, but its expected by-products are not observed."
+  - q: "Can Hofmann bromamide degradation be used to make aniline?"
+    a: "Yes. Benzamide with Br₂ and NaOH gives aniline, because the phenyl group migrates to nitrogen."
+related: ["schmidt-reaction", "beckmann-rearrangement", "carbylamine-reaction", "nbs-allylic-bromination"]
+sources:
+  - title: "Hofmann rearrangement"
+    url: "https://en.wikipedia.org/wiki/Hofmann_rearrangement"
+    publisher: "Wikipedia"
+  - title: "23.12: Synthesis of Amines (Basic Principles of Organic Chemistry, Roberts and Caserio)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Basic_Principles_of_Organic_Chemistry_(Roberts_and_Caserio)/23:_Organonitrogen_Compounds_I_-_Amines/23.12:_Synthesis_of_Amines"
+    publisher: "LibreTexts"
+  - title: "30.8: Rearrangements of Cationic or Electron Deficient Nitrogen (Virtual Textbook of Organic Chemistry, Reusch)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Book:_Virtual_Textbook_of_OChem_(Reusch)_UNDER_CONSTRUCTION/30:_Cationic_Rearrangements/30.8:_Rearrangements_of_Cationic_or_Electron_Deficient_Nitrogen"
+    publisher: "LibreTexts"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 3
+  note: "Notes' NBS + NaOH/Br₂ example (ring opening then Hofmann to 3-aminopropanoate) and the NaOD example giving CH₃ND₂ are not covered by the sources; kept as exam questions."
+---
+
+## What is Hofmann bromamide degradation?
+
+**Hofmann bromamide degradation** (the **Hofmann rearrangement**) converts a **primary amide (R–CO–NH₂) into a primary amine (R–NH₂) with one carbon atom fewer**. The amide is warmed with **bromine and aqueous sodium hydroxide**, which together form sodium hypobromite. The carbonyl carbon leaves as carbonate, and the alkyl or aryl group moves from carbon to nitrogen through an **isocyanate** intermediate. It is named after A. W. von Hofmann (1881).
+
+<Eq ce="R-CO-NH2 + Br2 + 4NaOH -> R-NH2 + Na2CO3 + 2NaBr + 2H2O" />
+
+## Mechanism
+
+1. **First deprotonation.** OH⁻ removes an N–H proton, giving the amide anion R–CO–NH⁻.
+2. **N-Bromination.** The anion attacks Br₂, giving the **N-bromoamide** R–CO–NH–Br.
+3. **Second deprotonation.** OH⁻ removes the remaining, now more acidic, N–H proton: R–CO–N⁻–Br.
+4. **Rearrangement.** R migrates from carbon to nitrogen **as Br⁻ leaves**, giving the **isocyanate** R–N=C=O. The nitrogen has become electron-deficient, and that is what drives the shift. A free acyl nitrene (R–CO–N:) is **not** formed.
+5. **Hydrolysis.** OH⁻ adds to the isocyanate carbon; proton transfer gives a carbamate/carbamic acid, R–NH–COO⁻ ⇌ R–NH–COOH.
+6. **Decarboxylation.** The carbamic acid loses CO₂ (taken up by NaOH as Na₂CO₃), giving R–NH₂.
+
+<Eq ce="R-CO-NH2 ->[Br2, OH-] R-CO-NHBr ->[OH-] R-CO-N^{-}Br ->[-Br-] R-N=C=O ->[H2O] R-NH-COOH ->[-CO2] R-NH2" />
+
+<KeyPoint>
+The rearrangement happens because the nitrogen is electron-deficient. The migrating group keeps its configuration (**retention**), so a chiral R gives a chiral amine of the same configuration. In exam answers the reaction is said to be faster when the migrating group is electron-releasing.
+</KeyPoint>
+
+## Examples
+
+1. **Ethanamide → methanamine:**
+
+<Eq ce="CH3CONH2 + Br2 + 4NaOH -> CH3NH2 + Na2CO3 + 2NaBr + 2H2O" />
+
+2. **Butanamide → propan-1-amine:**
+
+<Eq ce="CH3CH2CH2CONH2 ->[Br2, NaOH] CH3CH2CH2NH2" />
+
+3. **Benzamide → aniline:**
+
+<Eq ce="C6H5CONH2 ->[Br2, NaOH] C6H5NH2" />
+
+Other textbook uses: phthalimide gives anthranilic acid, and nicotinamide gives 3-aminopyridine.
+
+<ExamTip>
+Count carbons: the amine has one fewer than the amide. If the question uses **NaOD/D₂O** with Br₂, the N–H hydrogens exchange with deuterium, so acetamide is drawn as giving CH₃ND₂. If the solvent is **methanol**, the isocyanate is trapped as a methyl carbamate (R–NH–COOCH₃) instead of giving the amine.
+</ExamTip>
+
+## Cyclic imides: an exam twist
+
+A cyclic imide treated with NaOH and Br₂ first has its ring opened by OH⁻, which gives a carboxylate at one end and an amide at the other. The amide end then undergoes Hofmann degradation. For N-bromosuccinimide (NBS, a **five-membered** ring), the ring-opened ⁻OOC–CH₂–CH₂–CO–NHBr gives **3-aminopropanoate (β-alanine anion)**, H₂N–CH₂–CH₂–COO⁻. Similarly, phthalimide gives anthranilic acid.
+
+## Limitations and exceptions
+
+- Only **primary** amides (–CONH₂) work; the nitrogen needs two H atoms to lose.
+- Other reagents can replace Br₂/NaOH: NaOCl, NBS, lead tetraacetate or hypervalent iodine reagents.
+- Nucleophilic solvents trap the isocyanate: methanol gives carbamates, tert-butanol gives Boc-protected amines.
+- Some α,β-unsaturated or α-hydroxy amides stop at carbamates or other products.
+
+## Related reactions
+
+- [Schmidt reaction](/reactions/schmidt-reaction/): acid to amine with one carbon fewer via the same isocyanate.
+- [Beckmann rearrangement](/reactions/beckmann-rearrangement/): another carbon-to-nitrogen shift, ending in an amide.
+- [Carbylamine reaction](/reactions/carbylamine-reaction/): test that confirms the primary amine product.
+- [NBS allylic bromination](/reactions/nbs-allylic-bromination/): the usual use of NBS, unrelated to the ring-opening twist above.
+- [Rearrangement reactions hub](/mechanisms/rearrangement-reactions/)

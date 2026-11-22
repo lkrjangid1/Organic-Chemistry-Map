@@ -1,0 +1,119 @@
+---
+title: "NBS Allylic Bromination (Wohl–Ziegler Reaction)"
+description: "NBS allylic bromination (Wohl–Ziegler reaction) swaps an allylic H of an alkene for Br using N-bromosuccinimide and light; propene gives 3-bromopropene."
+aliases: ["Wohl–Ziegler reaction", "Wohl-Ziegler bromination", "Allylic substitution", "Allylic bromination", "N-bromosuccinimide bromination", "NBS reaction"]
+kind: "named-reaction"
+family: "free-radical-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["allylic_bromination"]
+reactant:
+  name: "Propene"
+  smiles: "C=CC"
+product:
+  name: "3-Bromoprop-1-ene (allyl bromide)"
+  smiles: "C=CCBr"
+byproducts: "Succinimide"
+reagents: "N-Bromosuccinimide (NBS) with light (hν) or a radical initiator such as benzoyl peroxide or AIBN"
+conditions: "Reflux in anhydrous CCl₄"
+equation: "CH2=CH-CH3 + (CH2CO)2NBr ->[light, CCl4] CH2=CH-CH2Br + (CH2CO)2NH"
+notesPages: [9, 33]
+memoryTricks: []
+faq:
+  - q: "What is the product of propene with NBS in light?"
+    a: "3-Bromoprop-1-ene (allyl bromide), CH₂=CH–CH₂Br. The C=C bond survives; only an allylic hydrogen is replaced, and succinimide is the by-product."
+  - q: "Why is NBS used instead of Br₂ for allylic bromination?"
+    a: "NBS keeps the concentration of Br₂ (and HBr) very low throughout the reaction. At low Br₂ concentration, radical substitution at the allylic carbon wins over ionic addition of Br₂ across the double bond."
+  - q: "Why does bromination occur at the allylic position?"
+    a: "The allylic C–H bond is weak because the allyl radical formed after H removal is stabilised by resonance. Reactivity follows radical stability, so allylic and benzylic hydrogens are replaced first."
+  - q: "What is the role of CCl₄ in the Wohl–Ziegler reaction?"
+    a: "NBS dissolves poorly in CCl₄ and succinimide floats on top, which keeps the reagent concentration low and shows when the reaction is complete. Because CCl₄ is toxic, solvents such as acetonitrile are now used."
+related: ["free-radical-halogenation", "peroxide-effect", "hunsdiecker-reaction", "markovnikov-rule"]
+sources:
+  - title: "Wohl–Ziegler bromination"
+    url: "https://en.wikipedia.org/wiki/Wohl%E2%80%93Ziegler_bromination"
+    publisher: "Wikipedia"
+  - title: "Wohl-Ziegler Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/wohl-ziegler-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "N-Bromosuccinimide (Allylic and benzylic bromination)"
+    url: "https://en.wikipedia.org/wiki/N-Bromosuccinimide"
+    publisher: "Wikipedia"
+  - title: "Allyl chloride (industrial production)"
+    url: "https://en.wikipedia.org/wiki/Allyl_chloride"
+    publisher: "Wikipedia"
+verified:
+  status: "conflict"
+  checked: 2026-11-21
+  sourceCount: 4
+  note: "Notes show a succinimidyl (N•) radical removing the allylic H (older Bloomfield picture). Sources say Br• removes the H and NBS acts as a source of low-concentration Br₂ (Goldfinger mechanism). Page uses the sources' mechanism."
+---
+
+## What is NBS allylic bromination?
+
+**NBS allylic bromination**, named the **Wohl–Ziegler reaction**, replaces a hydrogen on the **allylic carbon** (the sp³ carbon next to a C=C) with bromine, using **N-bromosuccinimide (NBS)** and light or a radical initiator. The double bond is left intact. Propene gives **3-bromoprop-1-ene (allyl bromide)**, and succinimide is formed as the by-product. It is a **free-radical substitution**, not an addition.
+
+<Eq ce="CH2=CH-CH3 ->[NBS][light, CCl4] CH2=CH-CH2Br" />
+
+## Mechanism
+
+Commercial NBS always contains a trace of Br₂, and that Br₂ is the species that actually starts the chain.
+
+1. **Initiation.** Light (or a peroxide/AIBN initiator) splits Br₂ into two bromine atoms.
+2. **H-abstraction.** Br• removes an **allylic hydrogen**, giving HBr and the **allyl radical**. This radical is resonance-stabilised, which is why the allylic position is attacked. In exam answers this is marked as the slow step.
+3. **Br₂ regeneration.** The HBr just formed reacts with NBS to give succinimide and a fresh molecule of Br₂.
+4. **Bromination.** The allyl radical takes a Br atom from Br₂, giving allyl bromide and a new Br• that repeats step 2.
+
+<Eq ce="Br2 ->[light] 2 Br^{.}" />
+<Eq ce="CH2=CH-CH3 + Br^{.} -> CH2=CH-CH2^{.} + HBr" />
+<Eq ce="(CH2CO)2NBr + HBr -> (CH2CO)2NH + Br2" />
+<Eq ce="CH2=CH-CH2^{.} + Br2 -> CH2=CH-CH2Br + Br^{.}" />
+
+<KeyPoint>
+NBS is mainly a **bromine reservoir**. It keeps Br₂ and HBr at a very low, steady level. Addition of Br₂ across C=C needs a high Br₂ concentration, so at low concentration the radical **substitution** at the allylic carbon wins.
+</KeyPoint>
+
+<ExamTip title="Common mistake">
+Drawing the older picture in which NBS itself splits into a succinimidyl radical (N•) that removes the allylic H. Current accounts reject this because the N–Br bond is much stronger than the Br–Br bond; the Br• chain above is the accepted mechanism.
+</ExamTip>
+
+<KeyPoint>
+Reactivity ∝ stability of the free radical formed. Allylic and benzylic hydrogens are replaced first, and among allylic positions the more substituted one reacts faster. Under these conditions **only monobromination** takes place.
+</KeyPoint>
+
+## Examples
+
+**1. Propene**
+
+<Eq ce="CH3-CH=CH2 ->[NBS][light] Br-CH2-CH=CH2" />
+
+**2. Chlorine analogue and the high-temperature route**
+
+In exam answers, N-chlorosuccinimide (NCS) with light is written as the chlorine analogue, giving allyl chloride. Industrially, propene and chlorine at about 500 °C give allyl chloride by a free-radical path, while at lower temperature the main product is the addition product, 1,2-dichloropropane.
+
+<Eq ce="CH3-CH=CH2 + Cl2 ->[500 °C] Cl-CH2-CH=CH2 + HCl" />
+
+**3. Cyclohexene**
+
+<Eq ce="C6H10 ->[NBS][light, CCl4] C6H9Br" />
+
+Cyclohexene gives 3-bromocyclohexene; the ring double bond stays and Br goes on the CH₂ next to it.
+
+<ExamTip>
+Read the reagent carefully: Br₂ in CCl₄ at room temperature in the dark adds across C=C (vicinal dibromide), but **NBS with hν or peroxide** substitutes at the allylic carbon. Br₂ at high temperature (about 500 °C) also gives allylic substitution.
+</ExamTip>
+
+## Limitations and exceptions
+
+- **Unsymmetrical allylic radicals** can react at either end, so mixtures of allylic bromides (with a shifted double bond) may form; bromination is favoured at the more substituted position.
+- The CCl₄ must be **anhydrous**; water can hydrolyse the allylic bromide. Barium carbonate is sometimes added to keep the mixture dry and acid-free.
+- Too much free Br₂ or HBr brings back ionic addition to the double bond.
+- CCl₄ is now largely avoided for safety and environmental reasons; acetonitrile is one usable replacement.
+- Benzylic C–H (for example the CH₃ of toluene) reacts in the same way, giving benzyl bromide.
+
+## Related reactions
+
+- [Free radical halogenation](/reactions/free-radical-halogenation/): the same initiation–propagation–termination chain, applied to alkanes.
+- [Peroxide effect](/reactions/peroxide-effect/): propene with HBr and peroxide; a radical **addition**, not substitution.
+- [Hunsdiecker reaction](/reactions/hunsdiecker-reaction/): another radical route to alkyl bromides.
+- [Markovnikov's rule](/reactions/markovnikov-rule/): ionic addition of HBr to the same alkene.
+- [Free radical reactions](/mechanisms/free-radical-reactions/) hub.

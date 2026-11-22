@@ -1,0 +1,26 @@
+---
+/** Hindi pages: /hi/<section>/<slug>/ for every translated page. */
+import { getCollection, getEntry } from 'astro:content';
+import ReactionArticle from '../../components/pages/ReactionArticle.astro';
+import TopicArticle from '../../components/pages/TopicArticle.astro';
+import HubArticle from '../../components/pages/HubArticle.astro';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('hindi');
+  const out = [];
+  for (const hi of pages) {
+    const [section, slug] = hi.id.split('/');
+    const entry = await getEntry(section as 'reactions', slug);
+    if (!entry) throw new Error(`Hindi page ${hi.id} has no English page`);
+    out.push({ params: { path: hi.id }, props: { section, entry } });
+  }
+  return out;
+}
+
+const { section, entry } = Astro.props;
+---
+{section === 'mechanisms'
+  ? <HubArticle entry={entry as never} lang="hi" />
+  : (section === 'reactions' || section === 'tests')
+    ? <ReactionArticle entry={entry} section={section} lang="hi" />
+    : <TopicArticle entry={entry as never} section={section as never} lang="hi" />}

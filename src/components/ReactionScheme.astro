@@ -1,0 +1,21 @@
+---
+import Mol from './Mol.astro';
+interface Props {
+  reactant?: { name: string; smiles?: string };
+  product?: { name: string; smiles?: string };
+  reagents: string;
+  conditions?: string;
+}
+const { reactant, product, reagents, conditions } = Astro.props;
+---
+{reactant && product && (
+  <div class="scheme" role="group" aria-label={`${reactant.name} to ${product.name}`}>
+    <Mol name={reactant.name} smiles={reactant.smiles} />
+    <div class="arrow">
+      <span>{reagents}</span>
+      <span class="arrow-line" aria-hidden="true"></span>
+      {conditions && <span>{conditions}</span>}
+    </div>
+    <Mol name={product.name} smiles={product.smiles} />
+  </div>
+)}

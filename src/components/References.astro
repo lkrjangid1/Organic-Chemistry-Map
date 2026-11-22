@@ -1,0 +1,27 @@
+---
+interface Props {
+  sources: { title: string; url: string; publisher?: string }[];
+  checked?: Date;
+  status?: 'verified' | 'conflict' | 'pending';
+}
+import { langOf, t as tr, fmtDate } from '../lib/i18n';
+const { sources, checked, status } = Astro.props;
+const lang = langOf(Astro.url);
+const s = tr(lang);
+const date = fmtDate(checked, lang);
+---
+{sources.length > 0 && (
+  <section class="refs" aria-labelledby="refs-h">
+    <h2 id="refs-h">{s.references}</h2>
+    {status && date && (
+      <p>
+        {status === 'verified' ? s.verifiedAgainst(sources.length) : s.checkedAgainst} · {s.lastChecked} {date}
+      </p>
+    )}
+    <ol>
+      {sources.map((s) => (
+        <li><a href={s.url} rel="noopener nofollow">{s.title}</a>{s.publisher && <> · {s.publisher}</>}</li>
+      ))}
+    </ol>
+  </section>
+)}

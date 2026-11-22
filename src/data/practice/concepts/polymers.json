@@ -1,0 +1,49 @@
+{
+ "page": "concepts/polymers",
+ "questions": [
+  {
+   "q": "Which of the following is a copolymer?",
+   "options": [
+    "Teflon",
+    "PVC",
+    "Polyacrylonitrile (PAN)",
+    "Buna-N"
+   ],
+   "answer": 3,
+   "explain": "Buna-N is made from two different monomers, 1,3-butadiene and acrylonitrile. Teflon, PVC and PAN each come from a single monomer, so they are homopolymers even though they contain atoms other than C and H."
+  },
+  {
+   "q": "The correct increasing order of intermolecular forces is:",
+   "options": [
+    "Neoprene < PVC < Nylon-6",
+    "PVC < Neoprene < Nylon-6",
+    "Nylon-6 < PVC < Neoprene",
+    "Neoprene < Nylon-6 < PVC"
+   ],
+   "answer": 0,
+   "explain": "Neoprene is an elastomer (weakest forces), PVC a thermoplastic (intermediate) and Nylon-6 a fibre (strongest, hydrogen bonding)."
+  },
+  {
+   "q": "Which polymer is a condensation polymer?",
+   "options": [
+    "Polystyrene",
+    "Glyptal",
+    "Neoprene",
+    "PMMA"
+   ],
+   "answer": 1,
+   "explain": "Glyptal is a polyester from ethylene glycol and phthalic acid, formed with loss of water. Polystyrene, neoprene and PMMA have all-carbon main chains and are addition polymers."
+  },
+  {
+   "q": "Which pairing of polymer and chain structure is correct?",
+   "options": [
+    "LDPE – linear",
+    "HDPE – branched",
+    "PVC – cross-linked",
+    "Bakelite – cross-linked"
+   ],
+   "answer": 3,
+   "explain": "Bakelite is a cross-linked network formed from phenol and formaldehyde. LDPE is branched, HDPE and PVC are linear."
+  }
+ ]
+}

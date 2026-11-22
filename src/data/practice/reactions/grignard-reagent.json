@@ -1,0 +1,52 @@
+{
+ "page": "reactions/grignard-reagent",
+ "questions": [
+  {
+   "q": "Butan-2-one is treated with ethylmagnesium bromide in dry ether, followed by H₃O⁺. The product is:",
+   "smiles": "CCC(C)=O",
+   "options": [
+    "Butan-2-ol",
+    "3-Methylpentan-3-ol",
+    "Hexan-3-ol",
+    "3-Methylpentan-2-ol"
+   ],
+   "answer": 1,
+   "explain": "The ethyl group adds to the carbonyl carbon and work-up protonates the alkoxide, so the ketone gives a tertiary alcohol, (C₂H₅)₂C(OH)CH₃. A secondary alcohol would come from an aldehyde."
+  },
+  {
+   "q": "How many moles of methane are released when one mole of prop-2-yn-1-ol, HC≡C–CH₂OH, is treated with excess CH₃MgBr?",
+   "smiles": "C#CCO",
+   "options": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "answer": 2,
+   "explain": "Each acidic hydrogen destroys one CH₃MgBr and releases one CH₄; this molecule has one O–H and one terminal alkyne C–H. The CH₂ hydrogens are not acidic."
+  },
+  {
+   "q": "But-3-en-2-one (CH₂=CH–CO–CH₃) is treated with CH₃MgBr in the presence of CuBr, then H₃O⁺. The main product is:",
+   "smiles": "C=CC(C)=O",
+   "options": [
+    "2-Methylbut-3-en-2-ol",
+    "Pent-3-en-2-ol",
+    "Pentan-2-one",
+    "3-Methylbutan-2-one"
+   ],
+   "answer": 2,
+   "explain": "With copper(I) the reagent becomes a soft organocopper nucleophile and adds 1,4; the enolate formed tautomerises to the saturated ketone. Without CuBr the hard Grignard reagent adds 1,2 to give 2-methylbut-3-en-2-ol."
+  },
+  {
+   "q": "Which halide does NOT form a Grignard reagent with ordinary magnesium in dry ether?",
+   "options": [
+    "CH₃CH₂F",
+    "C₆H₅Br",
+    "CH₃CH₂I",
+    "CH₃Br"
+   ],
+   "answer": 0,
+   "explain": "The C–F bond is too strong for ordinary magnesium, so alkyl fluorides are not used. Chlorides, bromides and iodides, including aryl bromides, react."
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "page": "reactions/gattermann-aldehyde-synthesis",
+ "questions": [
+  {
+   "q": "In the Gattermann aldehyde synthesis, benzene is treated with HCN, HCl and AlCl₃. The species formed before water is added is:",
+   "options": [
+    "The aldimine hydrochloride, C₆H₅CH=NH₂⁺Cl⁻",
+    "Benzonitrile, C₆H₅CN",
+    "Benzyl chloride, C₆H₅CH₂Cl",
+    "Benzylamine, C₆H₅CH₂NH₂"
+   ],
+   "answer": 0,
+   "explain": "The iminium-type electrophile H–C⁺=NH substitutes the ring to give the aldimine, held as its hydrochloride in the acidic mixture; hydrolysis then gives benzaldehyde and NH₄⁺."
+  },
+  {
+   "q": "Which substrate can be formylated by the Gattermann (HCN/HCl) method but NOT by the Gattermann–Koch (CO/HCl) method?",
+   "options": [
+    "Benzene",
+    "Nitrobenzene",
+    "Anisole",
+    "Benzonitrile"
+   ],
+   "answer": 2,
+   "explain": "The HCN version works well on electron-rich phenols and phenol ethers, which the Gattermann–Koch reaction cannot handle. Nitrobenzene and benzonitrile are deactivated and fail in both."
+  },
+  {
+   "q": "When Zn(CN)₂ and HCl are used in place of HCN, the zinc compound serves to:",
+   "options": [
+    "reduce the aldimine to an amine",
+    "act as the hydrolysing agent in the second step",
+    "oxidise the ring before formylation",
+    "generate HCN in the flask and supply ZnCl₂ as the Lewis acid catalyst"
+   ],
+   "answer": 3,
+   "explain": "Solid Zn(CN)₂ is safer than gaseous HCN; with HCl it gives HCN in situ, and the ZnCl₂ formed is the Lewis acid. Mesitylene is formylated to mesitaldehyde this way."
+  },
+  {
+   "q": "In the closely related Houben–Hoesch reaction, a nitrile R–C≡N is used in place of H–C≡N. The final product after hydrolysis is:",
+   "options": [
+    "An aryl aldehyde",
+    "An aryl ketone",
+    "An aryl amine",
+    "An aryl nitrile"
+   ],
+   "answer": 1,
+   "explain": "Both reactions form an imine first and hydrolyse it at work-up; with R–C≡N the carbon carries R, so the product is Ar–CO–R, a ketone. H–C≡N gives the aldehyde."
+  }
+ ]
+}

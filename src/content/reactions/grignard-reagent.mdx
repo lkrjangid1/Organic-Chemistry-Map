@@ -1,0 +1,185 @@
+---
+title: "Grignard Reagent (RMgX)"
+description: "Grignard reagent RMgX is made from an alkyl halide and Mg in dry ether; it adds to aldehydes and ketones to give alcohols and is destroyed by water or acids."
+aliases: ["Grignard reaction", "RMgX", "Alkyl magnesium halide", "Organomagnesium halide", "Grignard reagent reactions"]
+kind: "general-reaction"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["grignard_reagent_formation", "grignard_reaction_with_ketone", "reaction4", "reaction1", "reaction3", "reaction5", "grignard_carbonation"]
+reactant:
+  name: "Butan-2-one + ethylmagnesium bromide"
+  smiles: "CCC(C)=O"
+product:
+  name: "3-Methylpentan-3-ol"
+  smiles: "CCC(C)(O)CC"
+byproducts: "Mg(OH)X after aqueous acid work-up"
+reagents: "R–X + Mg in dry ether (to make RMgX); then the electrophile, then H₃O⁺"
+conditions: "Strictly anhydrous diethyl ether or THF; acidic aqueous work-up"
+equation: "CH3COC2H5 ->[1) C2H5MgBr, dry ether][2) H3O+] (C2H5)2C(OH)CH3"
+notesPages: [9, 13, 52, 83, 84, 146]
+memoryTricks:
+  - text: "Is ko H chahiye"
+    meaning: "This (Grignard reagent) wants an acidic H: every acidic hydrogen in the molecule destroys one RMgX and releases one R–H."
+faq:
+  - q: "How is a Grignard reagent prepared?"
+    a: "By reacting an alkyl or aryl halide (chloride, bromide or iodide) with magnesium metal in dry ether, for example CH3Br + Mg → CH3MgBr. The ether stabilises the reagent by coordinating to magnesium."
+  - q: "Why must Grignard reactions be carried out in dry conditions?"
+    a: "RMgX is a very strong base. Any water, alcohol or other compound with an acidic hydrogen protonates it at once to give the alkane R–H, destroying the reagent."
+  - q: "What alcohol is formed when a Grignard reagent reacts with a ketone?"
+    a: "A tertiary alcohol. Methanal gives a primary alcohol, other aldehydes give secondary alcohols, and ketones give tertiary alcohols after acidic work-up."
+  - q: "How is a carboxylic acid made using a Grignard reagent?"
+    a: "The Grignard reagent is added to solid CO2 (dry ice) and the salt is then acidified. For example, C6H5MgBr gives benzoic acid, one carbon more than the starting halide."
+  - q: "Why are alkyl fluorides not used to make Grignard reagents?"
+    a: "The C–F bond is too strong; fluorides do not react with ordinary magnesium. Chlorides, bromides and iodides are used."
+related: ["wurtz-reaction", "ether-cleavage-with-hx", "decarboxylation", "corey-house-synthesis"]
+sources:
+  - title: "Haloalkanes and Haloarenes (Class XII Chemistry, Unit 6)"
+    url: "https://ncert.nic.in/textbook/pdf/lech201.pdf"
+    publisher: "NCERT"
+  - title: "Alcohols, Phenols and Ethers (Class XII Chemistry, Unit 7)"
+    url: "https://ncert.nic.in/textbook/pdf/lech202.pdf"
+    publisher: "NCERT"
+  - title: "Grignard reagent"
+    url: "https://en.wikipedia.org/wiki/Grignard_reagent"
+    publisher: "Wikipedia"
+  - title: "Grignard reaction"
+    url: "https://en.wikipedia.org/wiki/Grignard_reaction"
+    publisher: "Wikipedia"
+  - title: "Grignard Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/grignard-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "Conjugate Addition Reactions"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Aldehydes_and_Ketones/Reactivity_of_Aldehydes_and_Ketones/Conjugate_Addition_Reactions"
+    publisher: "Chemistry LibreTexts"
+  - title: "Thiol (preparation from Grignard reagents and sulfur)"
+    url: "https://en.wikipedia.org/wiki/Thiol"
+    publisher: "Wikipedia"
+  - title: "Monochloramine (amination of nucleophiles)"
+    url: "https://en.wikipedia.org/wiki/Monochloramine"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 8
+  note: "RMgX + SO₃ → RSO₃H and RMgX + ClCN → RCN are exam conventions not found in the sources read. Uncatalysed RMgX + R–X coupling by SN2 is exam teaching; sources say Grignard reagents do not normally couple with alkyl halides without a metal catalyst."
+---
+
+## What is a Grignard reagent?
+
+A **Grignard reagent** is an **alkyl or aryl magnesium halide, RMgX**, made by reacting an **alkyl or aryl halide with magnesium metal in dry ether**. The C–Mg bond is polar, with the carbon carrying a partial negative charge, so the R group behaves like a carbanion: a **strong nucleophile and a strong base**. Its most important use is adding to **aldehydes and ketones to form alcohols** after acidic work-up. The reagents were discovered by Victor Grignard in 1900.
+
+## Preparation
+
+<Eq ce="R-X + Mg ->[dry ether] R-MgX" />
+
+<Eq ce="C6H5Br + Mg ->[dry ether] C6H5MgBr" />
+
+- **R** is an alkyl, vinyl or aryl group, not hydrogen.
+- **X** is Cl, Br or I. Alkyl fluorides do not react with ordinary magnesium because the C–F bond is too strong.
+- **Solvent:** dry diethyl ether or THF. The ether oxygen coordinates to Mg and stabilises the reagent.
+
+## Reaction with protic compounds (why everything must be dry)
+
+RMgX is a much stronger base than water, alcohols, phenols, amines or terminal alkynes. Any compound with an acidic hydrogen (written HA) protonates it and releases the alkane:
+
+<Eq ce="R-MgX + H-A -> R-H + Mg(A)X" />
+
+<Eq ce="CH3MgBr + H2O -> CH4 + Mg(OH)Br" />
+
+<KeyPoint>
+Grignard reactions must be run under strictly anhydrous conditions. Even moist air converts RMgX into R–H. The same reaction can be used on purpose to convert R–X into the alkane R–H (via RMgX and water).
+</KeyPoint>
+
+## Mechanism of addition to a carbonyl group
+
+1. **Nucleophilic attack.** The carbanion-like R group attacks the electrophilic carbonyl carbon; the C=O π electrons move onto oxygen.
+2. **Alkoxide adduct.** A magnesium alkoxide (R–C–O–MgX) forms.
+3. **Acidic work-up.** Dilute acid protonates the alkoxide to give the alcohol and Mg(OH)X.
+
+<Eq ce="R'2C=O + RMgX -> R'2C(R)-OMgX ->[H3O+] R'2C(R)-OH + Mg(OH)X" />
+
+## Which alcohol forms?
+
+| Carbonyl compound | Product after H₃O⁺ |
+|---|---|
+| Methanal (HCHO) | 1° alcohol |
+| Other aldehydes (RCHO) | 2° alcohol |
+| Ketones (R₂CO) | 3° alcohol |
+
+## α,β-Unsaturated carbonyls: 1,2- or 1,4-addition?
+
+An α,β-unsaturated aldehyde or ketone has two electrophilic carbons: the C=O carbon (1,2-addition) and the β-carbon (1,4- or conjugate addition). A Grignard reagent is a strong base and a **hard** nucleophile; its additions are irreversible, so the faster **1,2-addition** wins (kinetic control). Adding a copper(I) salt (CuBr or CuI) converts it into an organocopper species, a **soft** nucleophile that adds **1,4**, like a Gilman reagent R₂CuLi.
+
+<Eq ce="CH2=CH-CO-CH3 ->[1) CH3MgBr][2) H3O+] CH2=CH-C(OH)(CH3)2" />
+
+<Eq ce="CH2=CH-CO-CH3 ->[1) CH3MgBr, CuBr][2) H3O+] CH3-CH2-CH2-CO-CH3" />
+
+The 1,4-product first forms as an enol(ate), which tautomerises to the saturated ketone. Acrolein (CH₂=CH–CHO) with CH₃MgBr likewise gives the 1,2-product, but-3-en-2-ol.
+
+| Hard nucleophiles (mainly 1,2) | Soft nucleophiles (mainly 1,4) |
+|---|---|
+| CH₃Li, CH₃Na, RMgX (no copper) | R₂CuLi (Gilman), RMgX/CuX, amines, water, alcohols, thiols, CN⁻ |
+
+## Reactions with other electrophiles
+
+The carbanion-like R group attacks many electrophiles besides C=O; an acidic work-up then gives the product:
+
+| Electrophile | Intermediate | Product after H₃O⁺ |
+|---|---|---|
+| CO₂ (dry ice) | R–COOMgX | R–COOH (carboxylic acid) |
+| Sulphur (S₈) | R–SMgX | R–SH (thiol) |
+| O₂ | R–O–O–MgX | R–OOH or R–OH (poor yields) |
+| NH₂Cl (chloramine) | — | R–NH₂ (amine) |
+| SO₃ (exam questions) | R–SO₂–OMgX | R–SO₃H (sulphonic acid) |
+| Cl–C≡N (exam questions) | — | R–C≡N (nitrile) |
+
+<Eq ce="RMgX + S -> R-S-MgX ->[H3O+] R-SH" />
+
+**Alkyl halides.** Exam answers sometimes write RMgX + R–X → R–R as an SN2 attack, with 1° halides substituting, 3° halides eliminating (E2) and 2° halides giving both.
+
+<ExamTip title="Common mistake">
+Ordinary Grignard reagents do **not** couple efficiently with simple alkyl halides. The coupling works well only with reactive halides (allyl, benzyl) or with a metal catalyst such as Li₂CuCl₄; for a clean R–R′ bond, use the [Corey–House synthesis](/reactions/corey-house-synthesis/).
+</ExamTip>
+
+## Counting active hydrogens (CH₃MgBr and CH₄)
+
+Each acidic hydrogen (O–H, N–H, COOH, S–H, terminal ≡C–H) destroys one molecule of CH₃MgBr and releases **one mole of methane**. A C=O group uses up CH₃MgBr by addition but releases no CH₄. Glycerol (three OH groups) gives 3 mol CH₄; prop-2-yn-1-ol, HC≡C–CH₂OH, gives 2 mol CH₄ (one O–H, one alkyne C–H).
+
+<Eq ce="CH3MgBr + R-OH -> CH4 + R-OMgBr" />
+
+## Examples
+
+**Ketone → tertiary alcohol** (butan-2-one with ethylmagnesium bromide):
+
+<Eq ce="CH3COC2H5 + C2H5MgBr -> (C2H5)2C(OMgBr)CH3 ->[H3O+] (C2H5)2C(OH)CH3" />
+
+**Benzophenone → triphenylmethanol:**
+
+<Eq ce="(C6H5)2CO + C6H5MgBr ->[1) dry ether][2) H3O+] (C6H5)3COH" />
+
+**Carbonation → carboxylic acid** (one carbon added):
+
+<Eq ce="C6H5MgBr + CO2 -> C6H5COOMgBr ->[H3O+] C6H5COOH" />
+
+**Nitrile → ketone** via an imine salt:
+
+<Eq ce="C6H5CN + CH3MgBr -> C6H5C(=NMgBr)CH3 ->[H3O+] C6H5COCH3" />
+
+**Epoxide ring opening:** RMgX attacks the less hindered carbon of the epoxide (SN2-like), giving an alcohol with the new C–C bond two carbons away from oxygen.
+
+**Acid chlorides and esters:** the first addition gives a ketone, which reacts with a second molecule of RMgX. With excess reagent the product is a tertiary alcohol with two identical R groups.
+
+<ExamTip>
+To design a Grignard synthesis, cut the bond between the carbinol carbon and one of its R groups. That R group comes from RMgX; the rest is the aldehyde or ketone. Never put an OH, NH or COOH group in the same molecule as the Grignard reagent.
+</ExamTip>
+
+## Limitations and exceptions
+
+- Substrates with acidic hydrogens (–OH, –NH₂, –COOH, terminal alkyne C–H) quench the reagent instead of reacting at the carbonyl group.
+- With very hindered ketones, RMgX can act as a base (forming the enolate) or deliver a hydride (reduction) instead of adding.
+
+## Related reactions
+
+- [Wurtz reaction](/reactions/wurtz-reaction/): another reaction of alkyl halides with a metal.
+- [Corey–House synthesis](/reactions/corey-house-synthesis/): an organocopper route to C–C bonds.
+- [Ether cleavage with HX](/reactions/ether-cleavage-with-hx/): includes epoxide ring opening by RMgX.
+- [Decarboxylation](/reactions/decarboxylation/): the reverse idea, removing CO₂ instead of adding it.

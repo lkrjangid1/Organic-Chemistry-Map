@@ -1,0 +1,115 @@
+---
+title: "Cannizzaro Reaction (कैनिज़ारो अभिक्रिया)"
+description: "Cannizzaro reaction में α-hydrogen रहित aldehyde, concentrated NaOH में hydride transfer से primary alcohol और carboxylate salt में बदलता है।"
+aliases: ["कैनिज़ारो अभिक्रिया", "कैनिजारो रिएक्शन", "cannizzaro reaction hindi", "cannizaro reaction hindi", "crossed cannizzaro hindi", "intramolecular cannizzaro hindi", "tollens condensation hindi", "pentaerythritol synthesis hindi"]
+reagents: "Concentrated NaOH या KOH (जैसे 50% NaOH)"
+conditions: "Aldehyde में कोई α-hydrogen नहीं होना चाहिए; strongly basic, गुनगुना"
+byproducts: "Sodium benzoate, C₆H₅COONa (oxidation product)"
+reactantName: "Benzaldehyde"
+productName: "Benzyl alcohol (sodium benzoate के साथ)"
+steps:
+  - title: "Hydroxide का carbonyl पर addition"
+    text: "Hydroxide एक benzaldehyde molecule के carbonyl carbon पर attack करता है, जिससे tetrahedral alkoxide बनता है। जिस molecule पर OH⁻ attack करता है, वही oxidise होगा।"
+    arrows: "OH⁻ का lone pair → carbonyl carbon; C=O का π pair → oxygen।"
+  - title: "Hydride transfer"
+    text: "Alkoxide फिर से C=O बनाता है और एक hydride ion को सीधे दूसरे benzaldehyde के carbonyl carbon पर धकेल देता है, जिससे benzoic acid और benzyl alkoxide ion बनते हैं। Exam answers में यही rate-determining step है; D₂O experiment दिखाता है कि नया C–H hydrogen दूसरे aldehyde से आता है, solvent से नहीं।"
+    arrows: "O⁻ का lone pair C=O दोबारा बनाता है और C–H bond pair (H⁻) को दूसरे carbonyl carbon पर धकेलता है; उस C=O का π pair → oxygen।"
+  - title: "Proton exchange"
+    text: "Benzoic acid अपना proton alkoxide को दे देता है, जिससे benzoate (sodium benzoate, oxidation product) और benzyl alcohol (reduction product) बचते हैं। कुल मिलाकर aldehyde का disproportionation हुआ है।"
+    arrows: "Alkoxide O⁻ का lone pair → benzoic acid का acidic O–H; O–H bond pair carboxylate oxygen पर ही रहता है।"
+memoryTricks:
+  - text: "Cannizzaro → Concn Base, α-H नहीं"
+    meaning: "Cannizzaro के लिए concentrated base और ऐसा aldehyde चाहिए जिसमें कोई α-hydrogen न हो।"
+faq:
+  - q: "Cannizzaro reaction क्या है?"
+    a: "यह concentrated alkali में α-hydrogen रहित aldehyde का disproportionation है। एक molecule reduce होकर primary alcohol बनता है और दूसरा oxidise होकर carboxylic acid का salt बनता है, जैसे benzaldehyde से benzyl alcohol और sodium benzoate बनते हैं।"
+  - q: "α-hydrogen वाले aldehydes Cannizzaro reaction क्यों नहीं देते?"
+    a: "Strong base carbonyl पर add होने से पहले ही तेज़ी से α-hydrogen हटा देता है और enolate बनता है। फिर यह enolate hydride transfer की जगह aldol reactions में भाग लेता है।"
+  - q: "Crossed Cannizzaro reaction क्या है?"
+    a: "दो अलग-अलग non-enolisable aldehydes के बीच Cannizzaro reaction, आमतौर पर formaldehyde और एक ज़्यादा कीमती aldehyde के बीच। Formaldehyde oxidise होकर sodium formate बनता है और दूसरा aldehyde लगभग पूरा का पूरा अपने alcohol में reduce हो जाता है।"
+  - q: "Cannizzaro reaction का order क्या है?"
+    a: "सामान्यतः third order: aldehyde में second order और hydroxide में first order, rate = k[RCHO]²[OH⁻]। बहुत ज़्यादा base concentration पर एक fourth-order रास्ता, जो hydroxide में second order है, महत्वपूर्ण हो जाता है।"
+  - q: "Acetaldehyde से pentaerythritol कैसे बनाया जाता है?"
+    a: "Acetaldehyde, formaldehyde के साथ लगातार तीन aldol additions करके (HOCH₂)₃C–CHO देता है। इसमें कोई α-hydrogen नहीं होता, इसलिए चौथे formaldehyde के साथ crossed Cannizzaro reaction इसे pentaerythritol, C(CH₂OH)₄, में reduce कर देता है और formate बनता है।"
+translated: 2026-11-22
+---
+
+## Cannizzaro reaction क्या है?
+
+**Cannizzaro reaction** एक **ऐसे aldehyde का base-induced disproportionation है जिसमें कोई α-hydrogen नहीं होता**। **Concentrated NaOH या KOH** में दो molecules react करते हैं: एक **reduce होकर primary alcohol** बनता है और दूसरा **oxidise होकर carboxylate salt** बनता है। उदाहरण के लिए, benzaldehyde से benzyl alcohol और sodium benzoate मिलते हैं। Stanislao Cannizzaro ने यह reaction 1853 में report किया था।
+
+Typical substrates हैं formaldehyde, benzaldehyde और दूसरे aromatic aldehydes, (CH₃)₃C–CHO और furfural; इन सभी में α-hydrogen नहीं होता।
+
+## Mechanism
+
+Formaldehyde सबसे सरल उदाहरण है।
+
+1. **Hydroxide का carbonyl पर addition।** OH⁻ पहले HCHO के carbonyl carbon पर attack करता है, जिससे tetrahedral alkoxide बनता है।
+2. **Hydride transfer।** Alkoxide फिर से C=O बनाता है और एक hydride ion (H⁻) को दूसरे HCHO के carbonyl carbon पर धकेल देता है। Exam answers में यही rate-determining step है।
+3. **Proton exchange।** बना हुआ formic acid अपना proton methoxide ion को दे देता है, जिससे formate और methanol बचते हैं।
+
+<Eq ce="HCHO + OH- <=> H2C(OH)O-" />
+<Eq ce="H2C(OH)O- + HCHO -> HCOOH + CH3O-" />
+<Eq ce="HCOOH + CH3O- -> HCOO- + CH3OH" />
+
+<KeyPoint>
+जिस molecule पर OH⁻ attack करता है, वही **oxidise** होता है (वह H⁻ खोकर carboxylate बनता है)। जो molecule hydride लेता है, वह **reduce** होकर alcohol बनता है। यह एक ही compound का अपने आप से redox reaction है, यानी disproportionation।
+</KeyPoint>
+
+Hydride सीधे एक carbon से दूसरे carbon पर जाता है। जब reaction D₂O में किया जाता है, तो बने alcohol के carbon पर कोई deuterium नहीं होता, जिससे पता चलता है कि नया C–H hydrogen दूसरे aldehyde से आता है, solvent से नहीं।
+
+### Kinetics
+
+- सामान्य conditions: **rate = k[RCHO]²[OH⁻]**, overall order **3**।
+- बहुत ज़्यादा base concentration: tetrahedral alkoxide एक और proton खोकर **dianion** बनाता है, जो hydride और भी आसानी से transfer करता है। एक extra term **k′[RCHO]²[OH⁻]²** आ जाता है, इसलिए order **4** हो जाता है।
+
+## Examples
+
+**Formaldehyde:**
+
+<Eq ce="2 HCHO + NaOH ->[conc.] CH3OH + HCOONa" />
+
+**Benzaldehyde:**
+
+<Eq ce="2 C6H5CHO + KOH ->[conc.] C6H5CH2OH + C6H5COOK" />
+
+**Furfural** से furfuryl alcohol और 2-furoic acid मिलते हैं; यह conversion commercially इस्तेमाल होता है क्योंकि दोनों products उपयोगी हैं।
+
+## Crossed Cannizzaro reaction
+
+साधारण Cannizzaro reaction से ज़्यादा से ज़्यादा 50% alcohol मिल सकता है, क्योंकि आधा aldehyde acid बन जाता है। **Crossed (intermolecular) Cannizzaro reaction** में एक सस्ता "sacrificial" aldehyde, यानी **formaldehyde**, एक कीमती non-enolisable aldehyde के साथ मिलाया जाता है। Formaldehyde hydride donor की तरह काम करता है और **oxidise होकर sodium formate** बनता है, जबकि दूसरा aldehyde अच्छी yield में **अपने alcohol में reduce** हो जाता है।
+
+<Eq ce="C6H5CHO + HCHO ->[conc. NaOH] C6H5CH2OH + HCOONa" />
+
+<ExamTip>
+HCHO वाले किसी भी crossed Cannizzaro question में formate (HCOO⁻) को oxidation product और दूसरे aldehyde के alcohol को reduction product लिखें।
+</ExamTip>
+
+## Tollens condensation: pentaerythritol का synthesis
+
+Acetaldehyde में α-hydrogens होते हैं, इसलिए excess formaldehyde और base के साथ यह पहले **तीन aldol additions** करता है, हर α-hydrogen के लिए एक। Product, (HOCH₂)₃C–CHO (pentaerythrose), में कोई α-hydrogen नहीं बचता, इसलिए चौथे formaldehyde के साथ **crossed Cannizzaro reaction** इसे **pentaerythritol** में reduce कर देता है। Bernhard Tollens ने यह compound पहली बार 1891 में report किया था, और exam books में aldol-फिर-Cannizzaro वाले इस sequence को अक्सर Tollens condensation कहा जाता है।
+
+<Eq ce="CH3CHO + 3 HCHO ->[OH-] (HOCH2)3C-CHO" />
+<Eq ce="(HOCH2)3C-CHO + HCHO + OH- -> C(CH2OH)4 + HCOO-" />
+
+## Intramolecular Cannizzaro reaction
+
+जब aldehyde-level वाले दोनों carbons एक ही molecule में हों, तो hydride molecule के अंदर ही shift होता है। α-Keto aldehydes इस तरह α-hydroxy acids देते हैं; phenylglyoxal, acidification के बाद mandelic acid देता है।
+
+<Eq ce="C6H5COCHO ->[1. OH-][2. H3O+] C6H5CH(OH)COOH" />
+
+यह benzilic acid rearrangement वाला pattern है, जिसमें migrating group hydride है।
+
+## Limitations और exceptions
+
+- **α-hydrogen वाले** aldehydes (जैसे CH₃CHO) base में Cannizzaro products नहीं, बल्कि **aldol** products देते हैं।
+- Hydroxide की जगह **alkoxide या aluminium alkoxide** हो तो दो aldehydes जुड़कर ester बनाते हैं: [Tishchenko reaction](/hi/reactions/tishchenko-reaction/)।
+- आज दूसरे reagents aldehydes को ज़्यादा साफ़ तरीके से reduce या oxidise करते हैं, इसलिए यह reaction मुख्य रूप से एक concept के रूप में और तब side reaction के रूप में महत्वपूर्ण है जब भी aldehydes strong base से मिलते हैं।
+
+## Related reactions
+
+- [Aldol condensation](/hi/reactions/aldol-condensation/) और [cross-aldol condensation](/hi/reactions/cross-aldol-condensation/): α-hydrogen वाले aldehydes यही रास्ता लेते हैं। देखें [aldol vs Cannizzaro](/hi/comparisons/aldol-vs-cannizzaro/)।
+- [Tishchenko reaction](/hi/reactions/tishchenko-reaction/): ester बनाने वाला variant।
+- [Benzilic acid rearrangement](/hi/reactions/benzilic-acid-rearrangement/): वही OH⁻ addition और 1,2-shift, बस hydride की जगह aryl group migrate करता है।
+- [Meerwein–Ponndorf–Verley reduction](/hi/reactions/meerwein-ponndorf-verley-reduction/): एक और hydride-transfer reduction।
+- Hub: [nucleophilic addition](/hi/mechanisms/nucleophilic-addition/)।

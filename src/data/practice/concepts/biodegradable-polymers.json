@@ -1,0 +1,49 @@
+{
+ "page": "concepts/biodegradable-polymers",
+ "questions": [
+  {
+   "q": "The monomers of PHBV are",
+   "options": [
+    "Glycine and 6-aminohexanoic acid",
+    "3-Hydroxybutanoic acid and 3-hydroxypentanoic acid",
+    "Lactic acid and glycolic acid",
+    "Ethylene glycol and phthalic acid"
+   ],
+   "answer": 1,
+   "explain": "PHBV is a biodegradable polyester copolymer of 3-hydroxybutanoic and 3-hydroxypentanoic acids. Glycine + 6-aminohexanoic acid gives nylon-2-nylon-6, and ethylene glycol + phthalic acid gives non-biodegradable glyptal."
+  },
+  {
+   "q": "Which polymer is NOT biodegradable?",
+   "options": [
+    "Polyglycolic acid",
+    "Nylon-2-nylon-6",
+    "Nylon-6",
+    "Polycaprolactone"
+   ],
+   "answer": 2,
+   "explain": "Nylon-6, made from caprolactam, resists biodegradation. Nylon-2-nylon-6 is biodegradable because its glycine units give peptide-like amide links."
+  },
+  {
+   "q": "Which polymer, made from glycolic acid, was the first synthetic absorbable surgical suture (Dexon)?",
+   "options": [
+    "PLA",
+    "PHBV",
+    "PCL",
+    "PGA"
+   ],
+   "answer": 3,
+   "explain": "Polyglycolic acid, –(O–CH₂–CO)ₙ–, is the simplest aliphatic polyester and was the first synthetic absorbable suture. PLA comes from lactic acid and PCL from ε-caprolactone."
+  },
+  {
+   "q": "Polylactic acid slowly breaks down inside the body, whereas polythene persists for centuries. The best reason is that",
+   "options": [
+    "PLA has ester links in the main chain that water and enzymes can hydrolyse; polythene has only C–C and C–H bonds",
+    "PLA is an addition polymer and polythene is a condensation polymer",
+    "PLA has a lower molecular mass than any polythene",
+    "Polythene contains amide links that enzymes cannot cleave"
+   ],
+   "answer": 0,
+   "explain": "Biodegradable polymers carry hydrolysable ester or amide links in the backbone; PLA hydrolyses back to lactic acid, a normal metabolite. Polythene's C–C and C–H bonds cannot be attacked by water or enzymes."
+  }
+ ]
+}

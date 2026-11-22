@@ -1,0 +1,46 @@
+---
+import { moleculeSvg } from '../lib/structure';
+import { answerText, type PyqQuestion } from '../lib/pyq';
+import { resolveRelated } from '../lib/sections';
+
+interface Props { q: PyqQuestion }
+const { q } = Astro.props;
+const svg = (smiles: string) => moleculeSvg(smiles, { width: 200, height: 150 });
+const figures = await Promise.all((q.figures ?? []).map(async (f) => ({ ...f, svg: await svg(f.smiles) })));
+const options = await Promise.all((q.options ?? []).map(async (o) => ({ ...o, svg: o.smiles ? await svg(o.smiles) : null })));
+const topics = await resolveRelated(q.topics);
+const TYPE = { single: 'Single correct', multiple: 'One or more correct', numerical: 'Numerical answer', matching: 'Matching', paragraph: 'Paragraph based' };
+const lines = (s: string) => s.split('\n');
+---
+<article class="pyq" id={`q${q.number}`}>
+  <header class="pyq-head"><strong>Q.{q.number}</strong> <span class="tag">{TYPE[q.type]}</span></header>
+  {q.passage && <div class="pyq-passage">{lines(q.passage).map((l) => <p>{l}</p>)}</div>}
+  <div class="pyq-stem">{lines(q.stem).map((l) => <p>{l}</p>)}</div>
+  {figures.length > 0 && (
+    <div class="step-species">
+      {figures.map((f) => (
+        <figure class="mol">
+          {f.svg ? <Fragment set:html={f.svg} /> : <div class="mol-text">{f.label ?? f.smiles}</div>}
+          {f.label && <figcaption>{f.label}</figcaption>}
+        </figure>
+      ))}
+    </div>
+  )}
+  {options.length > 0 && (
+    <ol class="pyq-options">
+      {options.map((o) => (
+        <li>
+          <span class="pyq-key">({o.key})</span>
+          {o.svg && <figure class="mol"><Fragment set:html={o.svg} /></figure>}
+          {o.text && <span>{o.text}</span>}
+        </li>
+      ))}
+    </ol>
+  )}
+  <details class="pyq-answer">
+    <summary>Show answer and solution</summary>
+    <p><strong>Answer: {answerText(q.answer)}</strong></p>
+    {lines(q.solution).map((l) => <p>{l}</p>)}
+    {topics.length > 0 && <p class="pyq-topics">Revise: {topics.map((t, i) => <>{i > 0 && ' · '}<a href={t.href}>{t.title}</a></>)}</p>}
+  </details>
+</article>

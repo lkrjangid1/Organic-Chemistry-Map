@@ -1,0 +1,129 @@
+---
+title: "Hunsdiecker Reaction"
+description: "Hunsdiecker reaction converts the silver salt of a carboxylic acid into an alkyl halide with one carbon fewer, using Br₂ in CCl₄, with loss of CO₂."
+aliases: ["Borodin reaction", "Hunsdiecker–Borodin reaction", "Borodin–Hunsdiecker reaction", "Borodine Hunsdiecker reaction", "Hunsdicker reaction", "Decarboxylative halogenation"]
+kind: "named-reaction"
+family: "free-radical-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["hunsdiecker_reaction"]
+reactant:
+  name: "Silver propanoate"
+  smiles: "CCC(=O)[O-].[Ag+]"
+product:
+  name: "Bromoethane"
+  smiles: "CCBr"
+byproducts: "CO₂, AgBr"
+reagents: "Br₂ (or Cl₂) acting on the dry silver salt of a carboxylic acid"
+conditions: "Reflux in dry CCl₄ (heat or light); no protic solvent"
+equation: "CH3CH2COOAg + Br2 ->[CCl4][\\Delta] CH3CH2Br + CO2 + AgBr"
+notesPages: [10, 34, 85]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Hunsdiecker reaction of silver propanoate?"
+    a: "Bromoethane, CH₃CH₂Br. The carboxyl carbon leaves as CO₂, so the alkyl bromide has one carbon fewer than the acid."
+  - q: "Why is the Hunsdiecker reaction called a step-down reaction?"
+    a: "Because the product has one carbon atom less than the starting carboxylic acid. The –COOAg group is replaced by a halogen atom and the lost carbon goes off as carbon dioxide."
+  - q: "Which alkyl halides are obtained in the best yield in the Hunsdiecker reaction?"
+    a: "Yields fall in the order primary > secondary > tertiary, so the reaction works best for making primary alkyl bromides."
+  - q: "Why is CCl₄ used as the solvent?"
+    a: "The intermediate acyl hypobromite decomposes in protic solvents, so a dry, inert, non-polar solvent such as CCl₄ is needed. The silver salt must also be pure and dry."
+  - q: "What happens if iodine is used instead of bromine?"
+    a: "With a 1:1 ratio of silver salt to iodine an alkyl iodide forms, but with a 2:1 ratio an ester RCOOR is the main product. This variant is called the Simonini reaction."
+  - q: "Does the Hunsdiecker reaction of an optically active acid give an optically active alkyl halide?"
+    a: "No. The reaction passes through a planar alkyl radical, so bromine can attach from either face and a racemic alkyl bromide is formed."
+related: ["kolbe-electrolysis", "decarboxylation", "free-radical-halogenation", "nbs-allylic-bromination", "hofmann-bromamide-degradation"]
+sources:
+  - title: "Hunsdiecker reaction"
+    url: "https://en.wikipedia.org/wiki/Hunsdiecker_reaction"
+    publisher: "Wikipedia"
+  - title: "Hunsdiecker Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/hunsdiecker-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "18.5: Decarboxylation of Carboxylic Acids (Roberts and Caserio)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Basic_Principles_of_Organic_Chemistry_(Roberts_and_Caserio)/18%3A_Carboxylic_Acids_and_Their_Derivatives/18.05%3A_Decarboxylation_of_Carboxylic_Acids"
+    publisher: "Chemistry LibreTexts"
+  - title: "Decarboxylative Halogenation of Organic Compounds (Chem. Rev. 2021, 121, 412–484)"
+    url: "https://doi.org/10.1021/acs.chemrev.0c00813"
+    publisher: "American Chemical Society (Chemical Reviews)"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 4
+---
+
+## What is the Hunsdiecker reaction?
+
+The **Hunsdiecker reaction** (also called the **Borodin** or **Hunsdiecker–Borodin reaction**) converts the **silver salt of a carboxylic acid** into an **alkyl halide** by heating it with **bromine** (or chlorine) in dry carbon tetrachloride. Carbon dioxide is lost, so the product has **one carbon atom fewer** than the acid. It is both a **decarboxylation** and a **halogenation**, and it runs by a **free-radical** mechanism.
+
+<Eq ce="R-COOAg + Br2 ->[CCl4][\Delta] R-Br + CO2 + AgBr" />
+
+Alexander Borodin, better known as a composer, first made methyl bromide this way from silver acetate in 1861; Cläre and Heinz Hunsdiecker developed it into a general method in the 1930s.
+
+## Mechanism
+
+1. **Silver salt.** The acid is first converted into its silver salt, R–COOAg. (It is sometimes written as R–COOH with AgOH; in practice a silver(I) base is used, and the salt must be pure and dry.)
+2. **Acyl hypobromite.** The silver salt reacts with Br₂; AgBr precipitates and an **acyl hypobromite**, R–CO–O–Br, is formed.
+3. **Homolysis.** The weak O–Br bond breaks on heating or in light, giving a **carboxyl radical** R–CO–O• and Br•.
+4. **Decarboxylation.** The carboxyl radical loses CO₂, leaving an **alkyl radical** R•.
+5. **Halogen transfer.** R• combines with a bromine atom (or takes Br from Br₂ or the hypobromite, continuing the chain) to give R–Br.
+
+<Eq ce="R-COOAg + Br2 -> R-CO-O-Br + AgBr" />
+<Eq ce="R-CO-O-Br -> R-CO-O^{.} + Br^{.}" />
+<Eq ce="R-CO-O^{.} -> R^{.} + CO2" />
+<Eq ce="R^{.} + Br^{.} -> R-Br" />
+
+<KeyPoint>
+Key facts: (1) it is a **decarboxylation** reaction, (2) it is a **step-down** reaction (one carbon fewer), and (3) the yield of halide follows **1° > 2° > 3°**.
+</KeyPoint>
+
+## Stereochemistry: racemic product
+
+The carbon that ends up bonded to bromine passes through a free **alkyl radical**, which is planar (or very nearly so). Bromine can bond to either face of it, so the configuration of the original carbon is lost. When the silver salt of an **optically active acid** whose stereocentre is the α-carbon is brominated, the alkyl bromide is obtained as a **racemic mixture** (a 1 : 1 mixture of enantiomers). This loss of optical activity is one of the classic pieces of evidence for the radical mechanism, since a concerted substitution would keep the configuration.
+
+A favourite exam example uses a carbon that is chiral only because of isotopes. The silver salt of (H)(D)(T)C–COOH, treated with Br₂ in CCl₄ under light, gives both enantiomers of (H)(D)(T)C–Br in equal amounts.
+
+<Eq ce="(H)(D)(T)C-COOAg ->[Br2, CCl4][h\nu] (H)(D)(T)C-Br + CO2 + AgBr" />
+
+<ExamTip>
+If the question shows a single enantiomer of the acid and asks for the product of the Hunsdiecker reaction, answer "racemic alkyl bromide": both mirror-image products form, and the product is optically inactive.
+</ExamTip>
+
+## Examples
+
+**1. Silver propanoate to bromoethane**
+
+<Eq ce="CH3CH2COOAg + Br2 ->[CCl4][\Delta] CH3CH2Br + CO2 + AgBr" />
+
+**2. Silver acetate to bromomethane (Borodin's original example)**
+
+<Eq ce="CH3COOAg + Br2 ->[CCl4][\Delta] CH3Br + CO2 + AgBr" />
+
+**3. Silver octanoate to 1-bromoheptane**
+
+<Eq ce="CH3(CH2)6COOAg + Br2 ->[CCl4][\Delta] CH3(CH2)5CH2Br + CO2 + AgBr" />
+
+<ExamTip>
+To go down a homologous series, think "acid → silver salt → Br₂/CCl₄". Count carbons: the alkyl bromide always has one carbon fewer than the acid. Compare with Kolbe electrolysis, where two decarboxylated alkyl groups join, and with the Hofmann bromamide degradation, which also removes one carbon but gives an amine.
+</ExamTip>
+
+## Variations
+
+- **Simonini reaction (iodine):** with silver salt : I₂ = 1 : 1 an alkyl iodide forms; with 2 : 1 an ester RCOOR is the main product, and 3 : 2 gives a 1 : 1 mixture of both.
+- **Mercuric oxide (Cristol–Firth) modification:** the free acid with red HgO and Br₂ avoids the need to make the pure, dry silver salt.
+- **Kochi reaction:** lead(IV) acetate with LiCl (or LiBr) carries out the same halodecarboxylation.
+
+## Limitations and exceptions
+
+- The silver salt must be **pure and dry**, which is often hard to achieve; this is the main practical drawback.
+- **Protic solvents** (water, alcohols) decompose the acyl hypobromite, so a dry inert solvent such as CCl₄ is used.
+- **Tertiary** acids give poor yields (1° > 2° > 3°).
+- Acids that contain a **C=C** may add the hypobromite across the double bond instead, and **α,β-unsaturated** acids tend to polymerise, giving low yields.
+- Iodine changes the outcome (ester formation), as described above. The method is used for X = Cl or Br.
+
+## Related reactions
+
+- [Kolbe electrolysis](/reactions/kolbe-electrolysis/): carboxylate radicals lose CO₂ and the alkyl radicals dimerise.
+- [Decarboxylation](/reactions/decarboxylation/): soda-lime decarboxylation also removes one carbon, giving an alkane.
+- [Free radical halogenation](/reactions/free-radical-halogenation/) and [NBS allylic bromination](/reactions/nbs-allylic-bromination/): other radical routes to alkyl halides.
+- [Hofmann bromamide degradation](/reactions/hofmann-bromamide-degradation/): another one-carbon step-down reaction.
+- [Free radical reactions](/mechanisms/free-radical-reactions/) hub.

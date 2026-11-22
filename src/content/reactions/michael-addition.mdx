@@ -1,0 +1,165 @@
+---
+title: "Michael Addition"
+description: "Michael addition is the 1,4-conjugate addition of a stabilised carbanion, such as a malonate enolate, to the β-carbon of an α,β-unsaturated carbonyl compound."
+aliases: ["Michael reaction", "Michael 1,4-addition", "Conjugate addition", "Michael condensation", "1,4-addition of enolates"]
+kind: "named-reaction"
+family: "carbonyl-condensation-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["robinson_annulation_michael"]
+reactant:
+  name: "Acrolein (prop-2-enal)"
+  smiles: "C=CC=O"
+product:
+  name: "Diethyl 2-(3-oxopropyl)malonate"
+  smiles: "CCOC(=O)C(CCC=O)C(=O)OCC"
+byproducts: "None (addition reaction)"
+reagents: "Michael donor CH₂(EWG)₂, e.g. diethyl malonate or ethyl acetoacetate, with a base such as NaOEt (C₂H₅O⁻Na⁺)"
+conditions: "Catalytic or stoichiometric base in ethanol; acid work-up"
+equation: "CH2=CHCHO + CH2(COOC2H5)2 ->[C2H5ONa] (C2H5OOC)2CH-CH2CH2CHO"
+notesPages: [74]
+steps:
+  - title: "Enolate formation"
+    text: "Ethoxide removes an acidic CH₂ proton of diethyl malonate. The carbanion (enolate) is stabilised by both ester groups, making it a soft Michael donor."
+    arrows: "Lone pair of EtO⁻ → α-H; the C–H bond pair stays on carbon, delocalised onto both C=O groups."
+    species:
+      - smiles: "CCOC(=O)CC(=O)OCC"
+        label: "Diethyl malonate"
+        highlight: "[CH2](C=O)C=O"
+      - smiles: "CC[O-]"
+        label: "Ethoxide"
+      - smiles: "CCOC(=O)[CH-]C(=O)OCC"
+        label: "Malonate carbanion"
+  - title: "Conjugate (1,4) addition"
+    text: "The carbanion attacks the β-carbon (the CH₂= end) of acrolein, not the C=O carbon. The π electrons move toward oxygen, giving a new enolate of the acceptor."
+    arrows: "Carbanion lone pair → β-carbon; C=C π pair → C–C; C=O π pair → O⁻."
+    species:
+      - smiles: "CCOC(=O)[CH-]C(=O)OCC"
+        label: "Malonate carbanion"
+        highlight: "[CH-]"
+      - smiles: "C=CC=O"
+        label: "Acrolein"
+        highlight: "[CH2]=C"
+      - smiles: "CCOC(=O)C(CC=C[O-])C(=O)OCC"
+        label: "Acceptor enolate"
+  - title: "Protonation"
+    text: "The enolate takes a proton from ethanol, regenerating ethoxide. Protonation on oxygen gives the enol (EtOOC)₂CH–CH₂–CH=CH–OH; protonation on carbon gives the aldehyde directly."
+    arrows: "Lone pair of enolate O⁻ → H of ethanol; the O–H bond pair moves onto the ethanol oxygen."
+    species:
+      - smiles: "CCOC(=O)C(CC=C[O-])C(=O)OCC"
+        label: "Acceptor enolate"
+        highlight: "C=C[O-]"
+      - smiles: "CCO"
+        label: "Ethanol"
+      - smiles: "CCOC(=O)C(CC=CO)C(=O)OCC"
+        label: "Enol"
+  - title: "Tautomerism to the aldehyde"
+    text: "The enol tautomerises to the aldehyde, giving the Michael adduct diethyl 2-(3-oxopropyl)malonate. The C=O stays and the original C=C is now a single bond."
+    arrows: "O–H lone pair forms C=O as the C=C π pair takes a proton onto carbon."
+    species:
+      - smiles: "CCOC(=O)C(CC=CO)C(=O)OCC"
+        label: "Enol"
+        highlight: "C=C[OH]"
+      - smiles: "CCOC(=O)C(CCC=O)C(=O)OCC"
+        label: "Diethyl 2-(3-oxopropyl)malonate"
+memoryTricks: []
+faq:
+  - q: "What is a Michael addition?"
+    a: "It is the addition of a nucleophile, classically a stabilised enolate, to the β-carbon of an α,β-unsaturated carbonyl compound. Because the nucleophile and a proton add across the ends of the C=C–C=O system, it is called a 1,4- or conjugate addition."
+  - q: "What are Michael donors and Michael acceptors?"
+    a: "Donors are carbanion sources with acidic CH groups, such as diethyl malonate, ethyl acetoacetate, β-diketones, β-keto nitriles and nitroalkanes. Acceptors are alkenes conjugated with an electron-withdrawing group: α,β-unsaturated aldehydes, ketones, esters, nitriles, amides and nitro compounds."
+  - q: "What is the product of diethyl malonate and acrolein in a Michael reaction?"
+    a: "The malonate carbanion adds to the CH₂ end of acrolein. The enol formed tautomerises back to the aldehyde, giving (EtOOC)₂CH–CH₂–CH₂–CHO, diethyl 2-(3-oxopropyl)malonate."
+  - q: "Why does the enolate attack the β-carbon and not the C=O carbon?"
+    a: "Stabilised enolates are soft nucleophiles, and the β-carbon of an enone carries a large share of the LUMO, so orbital control favours 1,4-addition. The product also keeps the strong C=O bond, making conjugate addition thermodynamically favourable."
+  - q: "How is the Michael addition related to the Robinson annulation?"
+    a: "The Robinson annulation starts with a Michael addition of an enolate to an α,β-unsaturated ketone such as methyl vinyl ketone, giving a 1,5-diketone. An intramolecular aldol condensation of that diketone then closes a cyclohexenone ring."
+related: ["robinson-annulation", "stork-enamine-reaction", "knoevenagel-condensation", "aldol-condensation", "claisen-condensation", "henry-reaction", "mechanisms/carbonyl-condensation-reactions"]
+sources:
+  - title: "Michael addition reaction"
+    url: "https://en.wikipedia.org/wiki/Michael_reaction"
+    publisher: "Wikipedia"
+  - title: "23.10: Conjugate Carbonyl Additions – The Michael Reaction"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/23:_Carbonyl_Condensation_Reactions/23.10:_Conjugate_Carbonyl_Additions_-_The_Michael_Reaction"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "Michael Addition"
+    url: "https://www.organic-chemistry.org/namedreactions/michael-addition.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "23.12: The Robinson Annulation Reaction"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/23:_Carbonyl_Condensation_Reactions/23.12:_The_Robinson_Annulation_Reaction"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 4
+---
+
+## What is the Michael addition?
+
+The **Michael addition** (Michael reaction) is the **1,4- or conjugate addition** of a carbon nucleophile, usually a **stabilised enolate**, to the **β-carbon of an α,β-unsaturated carbonyl compound**. The nucleophile is called the **Michael donor**, the unsaturated compound the **Michael acceptor**, and the product the **Michael adduct**. It was studied by Arthur Michael in 1887 and is one of the mildest ways to make a new C–C bond.
+
+## General reaction
+
+<Eq ce="CH2(EWG)2 + CH2=CH-CO-R ->[base] (EWG)2CH-CH2-CH2-CO-R" />
+
+The new C–C bond joins the **α-carbon of the donor** to the **β-carbon of the acceptor**. With a carbonyl group on each side, the product has a **1,5-dicarbonyl** pattern.
+
+| Michael donors | Michael acceptors |
+|---|---|
+| Diethyl malonate, CH₂(COOEt)₂ | Propenal (acrolein), CH₂=CHCHO |
+| Ethyl acetoacetate (β-keto ester) | But-3-en-2-one (methyl vinyl ketone) |
+| β-Diketones, e.g. pentane-2,4-dione | Ethyl propenoate (ethyl acrylate) |
+| β-Keto nitriles | Propenenitrile (acrylonitrile) |
+| Nitroalkanes | Propenamide; nitroethylene |
+
+<KeyPoint>
+The best Michael reactions use a **doubly stabilised donor** (a 1,3-dicarbonyl compound such as a malonate or β-keto ester) and an **unhindered acceptor** such as an enone or enal. Simple ketone enolates add less cleanly; for them the enamine route of the Stork reaction works better.
+</KeyPoint>
+
+## Mechanism
+
+1. **Enolate formation.** Ethoxide removes the acidic CH₂ proton of diethyl malonate. The carbanion is stabilised by both ester groups.
+2. **Conjugate addition.** The carbanion attacks the **β-carbon** (the CH₂= end) of acrolein. The π electrons move toward oxygen, giving a new enolate of the acceptor.
+3. **Protonation and tautomerism.** The enolate takes a proton from ethanol. Protonation on oxygen gives the enol (EtOOC)₂CH–CH₂–CH=CH–OH, which tautomerises to the aldehyde; protonation on carbon gives the aldehyde directly. Ethoxide is regenerated.
+
+<Eq ce="CH2(COOEt)2 + EtO- <=> ^-CH(COOEt)2 + EtOH" />
+<Eq ce="^-CH(COOEt)2 + CH2=CHCHO -> (EtOOC)2CH-CH2-CH=CH-O^-" />
+<Eq ce="(EtOOC)2CH-CH2-CH=CH-OH <=> (EtOOC)2CH-CH2-CH2-CHO" />
+
+Why 1,4 and not 1,2? Stabilised enolates are **soft** nucleophiles, and the LUMO of an α,β-unsaturated carbonyl has a large coefficient on the β-carbon, so orbital interactions direct the attack there. The product also keeps its C=O bond, which makes the 1,4-adduct more stable.
+
+## Examples
+
+**1. Diethyl malonate and acrolein.**
+
+<Eq ce="CH2(COOEt)2 + CH2=CHCHO ->[EtONa] (EtOOC)2CHCH2CH2CHO" />
+
+**2. Ethyl acetoacetate and methyl vinyl ketone.** This is the textbook example; the product is a 1,5-diketone carrying an ester.
+
+<Eq ce="CH3COCH2COOEt + CH2=CHCOCH3 ->[EtONa] CH3COCH(COOEt)CH2CH2COCH3" />
+
+**3. First step of the Robinson annulation.** The enolate of a ketone adds to methyl vinyl ketone; the resulting 1,5-diketone then undergoes an intramolecular aldol condensation to give a cyclohexenone ring.
+
+<ExamTip>
+To find the Michael product, draw the acceptor as C=C–C=O, number the carbonyl carbon 1, and attach the donor carbon to carbon 4 of the O=C–C=C chain (the β-carbon). The C=O stays; the C=C becomes a single bond.
+</ExamTip>
+
+## Variations
+
+- **Aza-Michael and oxa-Michael:** amines, alcohols and water can also add 1,4 to α,β-unsaturated carbonyls. Some authors restrict the name "Michael" to carbon nucleophiles.
+- **Enamine donors:** neutral enamines add in the same way in the [Stork enamine reaction](/reactions/stork-enamine-reaction/).
+- **Asymmetric versions:** chiral catalysts give enantioselective Michael additions, widely used in modern synthesis.
+
+## Limitations
+
+- Strongly basic, hard nucleophiles (Grignard and organolithium reagents) usually add **1,2** to the C=O instead.
+- Hindered acceptors react poorly.
+- If the product can still enolise, it may react further, for example in an intramolecular aldol step.
+
+## Related reactions
+
+- [Robinson annulation](/reactions/robinson-annulation/): Michael addition followed by intramolecular aldol condensation.
+- [Stork enamine reaction](/reactions/stork-enamine-reaction/): Michael addition with an enamine as the donor.
+- [Knoevenagel condensation](/reactions/knoevenagel-condensation/): makes doubly activated Michael acceptors.
+- [Aldol condensation](/reactions/aldol-condensation/) and [Claisen condensation](/reactions/claisen-condensation/): 1,2-additions of enolates to C=O.
+- [Henry reaction](/reactions/henry-reaction/): gives nitroalkenes, strong Michael acceptors.
+- Hub: [Carbonyl condensation reactions](/mechanisms/carbonyl-condensation-reactions/)

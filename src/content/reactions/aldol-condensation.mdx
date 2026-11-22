@@ -1,0 +1,194 @@
+---
+title: "Aldol Condensation"
+description: "Aldol condensation joins two aldehyde or ketone molecules with α-H in dilute base to give a β-hydroxy carbonyl, which on heating loses water to an enone."
+aliases: ["Aldol reaction", "Aldol addition", "Self aldol condensation", "Intramolecular aldol", "Retro-aldol reaction", "Directed aldol"]
+kind: "named-reaction"
+family: "carbonyl-condensation-reactions"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["aldol_condensation_acetone", "aldol_condensation_propanal"]
+reactant:
+  name: "Acetaldehyde (ethanal)"
+  smiles: "CC=O"
+product:
+  name: "Crotonaldehyde (but-2-enal), via 3-hydroxybutanal"
+  smiles: "C/C=C/C=O"
+byproducts: "H₂O (in the dehydration step)"
+reagents: "Dilute base: dil. NaOH, Na₂CO₃ or Ba(OH)₂ (acid catalysis also works)"
+conditions: "At least one α-H needed; cold for the aldol, warm/heat (Δ) for dehydration"
+equation: "2 CH3CHO ->[dil. NaOH] CH3CH(OH)CH2CHO ->[\\Delta] CH3CH=CHCHO + H2O"
+notesPages: [70, 71, 72, 80]
+steps:
+  - title: "Enolate formation"
+    text: "Hydroxide removes an acidic α-hydrogen from ethanal, giving a resonance-stabilised enolate ion and water. Only aldehydes and ketones with at least one α-H can do this."
+    arrows: "Lone pair of OH⁻ → α-H; the C–H bond pair stays on carbon, giving the carbanion/enolate."
+    species:
+      - smiles: "CC=O"
+        label: "Ethanal"
+        highlight: "[CH3]C=O"
+      - smiles: "[OH-]"
+        label: "Hydroxide"
+  - title: "C–C bond formation"
+    text: "The enolate carbon attacks the carbonyl carbon of a second ethanal molecule, forming a new C–C bond and an alkoxide ion. In exam answers this is usually treated as the slow step, but real kinetics depend on the substrate and concentration."
+    arrows: "Carbanion lone pair → carbonyl carbon of the second ethanal; the C=O π pair → oxygen."
+    species:
+      - smiles: "[CH2-]C=O"
+        label: "Enolate (carbanion form)"
+        highlight: "[CH2-]"
+      - smiles: "CC=O"
+        label: "Ethanal"
+        highlight: "[CX3]=O"
+  - title: "Protonation to the aldol"
+    text: "Water protonates the alkoxide, giving the aldol 3-hydroxybutanal and regenerating OH⁻. Every step up to this point is reversible."
+    arrows: "O⁻ lone pair → H of water; the O–H bond pair goes back to oxygen as OH⁻."
+    species:
+      - smiles: "CC([O-])CC=O"
+        label: "Alkoxide ion"
+        highlight: "[O-]"
+      - smiles: "O"
+        label: "Water"
+  - title: "Second enolate (E1cB, on heating)"
+    text: "On warming, hydroxide removes another α-hydrogen from the aldol, giving a new enolate. This begins the E1cB dehydration."
+    arrows: "Lone pair of OH⁻ → α-H next to C=O; the C–H bond pair stays on carbon."
+    species:
+      - smiles: "CC(O)CC=O"
+        label: "3-Hydroxybutanal (aldol)"
+        highlight: "[CH2]C=O"
+      - smiles: "[OH-]"
+        label: "Hydroxide"
+  - title: "Loss of hydroxide"
+    text: "The enolate expels OH⁻ from the β-carbon, giving the conjugated α,β-unsaturated aldehyde but-2-enal (crotonaldehyde). This dehydration is practically irreversible, which drives the whole reaction forward."
+    arrows: "Carbanion lone pair → C–C, forming C=C; the C–OH bond pair leaves with OH⁻."
+    species:
+      - smiles: "CC(O)[CH-]C=O"
+        label: "Enolate of the aldol"
+        highlight: "[CH-]"
+memoryTricks:
+  - text: "α-β bond को तोड़े (मिलाकर)"
+    meaning: "To find the starting compound of an aldol product, break the bond between the α-carbon and the β-carbon (the one carrying OH) and put the two carbonyl pieces back."
+faq:
+  - q: "What is the product of aldol condensation of acetaldehyde?"
+    a: "In cold dilute NaOH two molecules of ethanal give 3-hydroxybutanal (aldol). On warming it loses water to give but-2-enal (crotonaldehyde), an α,β-unsaturated aldehyde."
+  - q: "Why must the carbonyl compound have an α-hydrogen?"
+    a: "The base has to remove an α-H to make the enolate ion, which is the nucleophile that attacks the second carbonyl group. Aldehydes with no α-H, such as HCHO and C₆H₅CHO, cannot do this and give the Cannizzaro reaction in concentrated alkali instead."
+  - q: "What is the difference between aldol addition and aldol condensation?"
+    a: "Aldol addition stops at the β-hydroxy aldehyde or ketone. Aldol condensation goes one step further: heating removes water to give the conjugated α,β-unsaturated carbonyl compound."
+  - q: "Which ring size forms in an intramolecular aldol reaction?"
+    a: "Five- and six-membered rings. A 1,4-diketone such as hexane-2,5-dione gives a cyclopentenone and a 1,5-diketone such as heptane-2,6-dione gives a cyclohexenone, because all steps are reversible and the least strained ring wins."
+  - q: "What does LDA do in a directed aldol reaction?"
+    a: "Lithium diisopropylamide removes the α-H completely and irreversibly at −78 °C, so one partner is turned fully into its lithium enolate before the second carbonyl compound is added. This gives one crossed aldol product instead of a mixture."
+related: ["cross-aldol-condensation", "claisen-condensation", "robinson-annulation", "cannizzaro-reaction", "e1cb-mechanism", "michael-addition", "knoevenagel-condensation", "comparisons/aldol-vs-cannizzaro"]
+sources:
+  - title: "Aldol condensation"
+    url: "https://en.wikipedia.org/wiki/Aldol_condensation"
+    publisher: "Wikipedia"
+  - title: "Aldol reaction"
+    url: "https://en.wikipedia.org/wiki/Aldol_reaction"
+    publisher: "Wikipedia"
+  - title: "Aldol Addition"
+    url: "https://www.organic-chemistry.org/namedreactions/aldol-addition.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "23.1: Carbonyl Condensations - The Aldol Reaction"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/23%3A_Carbonyl_Condensation_Reactions/23.01%3A_Carbonyl_Condensations_-_The_Aldol_Reaction"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "23.3: Dehydration of Aldol Products - Synthesis of Enones"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/23%3A_Carbonyl_Condensation_Reactions/23.03%3A_Dehydration_of_Aldol_Products_-_Synthesis_of_Enones"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "23.6: Intramolecular Aldol Reactions"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/23%3A_Carbonyl_Condensation_Reactions/23.06%3A_Intramolecular_Aldol_Reactions"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "Vinylogy"
+    url: "https://en.wikipedia.org/wiki/Vinylogy"
+    publisher: "Wikipedia"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 7
+  note: "Source material names LDA as 'lithium di-isobutyl amide'; all sources give lithium diisopropylamide. Its rate law (third order, enolate attack slow) was not confirmed by any approved source and is not stated as fact."
+---
+
+## What is the aldol condensation?
+
+The **aldol condensation** is the base-catalysed reaction in which two molecules of an aldehyde or ketone that has **at least one α-hydrogen** join to form a **β-hydroxy aldehyde or β-hydroxy ketone** (an "aldol", from *ald*ehyde + alcoh*ol*). On warming, the aldol loses water to give an **α,β-unsaturated carbonyl compound**. Dilute NaOH, Na₂CO₃ or Ba(OH)₂ are the usual catalysts; acids also work.
+
+Strictly, the first stage is an *addition* (nothing is lost). It becomes a *condensation* only when water is eliminated.
+
+## Mechanism
+
+1. **Enolate formation.** OH⁻ removes an acidic α-H, giving a resonance-stabilised enolate ion.
+2. **C–C bond formation.** The enolate carbon attacks the carbonyl carbon of a second molecule, giving an alkoxide.
+3. **Protonation.** Water protonates the alkoxide to give the aldol (3-hydroxybutanal from ethanal).
+4. **Dehydration (on heating).** Another α-H is removed and OH⁻ is expelled by an **E1cB** route, giving the conjugated C=C–C=O system. Under acid, dehydration goes through the enol instead.
+
+<Eq ce="CH3CHO + OH- <=> ^{-}CH2CHO + H2O" />
+<Eq ce="^{-}CH2CHO + CH3CHO -> CH3CH(O^{-})CH2CHO ->[H2O] CH3CH(OH)CH2CHO" />
+
+<KeyPoint>
+Every step up to the aldol is reversible. Heating drives the reaction forward because the dehydration to the conjugated enone is practically irreversible. That is why ketones such as acetone, whose aldol equilibrium is unfavourable, still give good yields of the condensation product.
+</KeyPoint>
+
+In exam answers the attack of the enolate on the second carbonyl group is usually treated as the slow step. Real kinetic studies show that the slow step depends on the substrate and the concentration, so learn this as an exam convention only.
+
+## Examples
+
+<Eq ce="2 CH3COCH3 <=>[Ba(OH)2] (CH3)2C(OH)CH2COCH3 ->[\Delta][-H2O] (CH3)2C=CHCOCH3" />
+
+Acetone gives diacetone alcohol (4-hydroxy-4-methylpentan-2-one) and then mesityl oxide (4-methylpent-3-en-2-one).
+
+<Eq ce="2 CH3CH2CHO ->[dil. NaOH] CH3CH2CH(OH)CH(CH3)CHO" />
+
+Propanal gives 3-hydroxy-2-methylpentanal: the α-carbon (C-2) of one molecule bonds to the carbonyl carbon of the other.
+
+## Intramolecular aldol condensation
+
+A molecule with two carbonyl groups can cyclise. Heptane-2,6-dione (a 1,5-diketone) forms a six-membered ring: the enolate at C-1 attacks the C-6 carbonyl, the β-hydroxy ketone forms, and heating gives 3-methylcyclohex-2-en-1-one. Hexane-2,5-dione (a 1,4-diketone) gives 3-methylcyclopent-2-en-1-one in the same way.
+
+<Eq ce="CH3CO(CH2)3COCH3 ->[OH-][\Delta] 3-methylcyclohex-2-enone + H2O" />
+
+<KeyPoint>
+Ring-size rule: **6 is preferred over 4 and 8; 5 is preferred over 3 and 7.** Because all steps are reversible, the strain-free five- or six-membered ring is the one that accumulates.
+</KeyPoint>
+
+## Retro-aldol reaction
+
+The **retro-aldol** reaction is the reverse: a base breaks the bond between the α-carbon and the β-carbon of an aldol, giving two carbonyl compounds. Diacetone alcohol, for example, splits back into two molecules of acetone.
+
+This is used in "equilibration" questions. 1-(2-Hydroxy-2-methylcyclobutyl)ethanone, a strained four-membered aldol, opens by retro-aldol to heptane-2,6-dione. The open diketone then closes again by aldol addition into the six-membered 3-hydroxy-3-methylcyclohexanone.
+
+<Trick>
+To find what an aldol came from, break the bond between the α-carbon and the carbon that carries the OH, and turn the OH carbon back into C=O.
+</Trick>
+
+## Vinylogous aldol condensation
+
+In crotonaldehyde (CH₃–CH=CH–CHO) the conjugated C=C passes the carbonyl's activating effect to the end CH₃ group, so these **γ-hydrogens** are acidic, like an α-H. The resulting extended enolate reacts at the γ-carbon. Each condensation adds a –CH=CH– unit:
+
+<Eq ce="CH3CH=CHCHO + CH3CHO ->[OH-][\Delta] CH3(CH=CH)2CHO + H2O" />
+
+The product is hexa-2,4-dienal. For polyene questions, the end CH₃ of one molecule of CH₃(CH=CH)ₙCHO attacks the CHO of another, so self-condensation gives CH₃(CH=CH)₂ₙ₊₁CHO. So n = 200 gives n = 401, and getting n = 201 needs a starting n of 100.
+
+## Directed aldol (LDA)
+
+With a strong, bulky base such as **LDA (lithium diisopropylamide)** in THF at −78 °C, one partner is converted completely and irreversibly into its **lithium enolate**. With an unsymmetrical ketone, the proton is removed from the less hindered side (the kinetic enolate). The second carbonyl compound is added afterwards, so only one crossed product forms.
+
+<Eq ce="CH3COCH3 ->[LDA][THF, -78 ^{\circ}C] CH2=C(OLi)CH3 ->[1. HCHO][2. H3O+] HOCH2CH2COCH3" />
+
+The same lithium enolate reacts with CH₃Cl by SN2 to give butan-2-one. That is α-alkylation, not an aldol reaction.
+
+<ExamTip title="Common mistake">
+LDA stands for lithium di**isopropyl**amide, LiN(CH(CH₃)₂)₂, not "di-isobutyl" amide. It is a strong base that is too hindered to act as a nucleophile.
+</ExamTip>
+
+## Limitations and exceptions
+
+- HCHO, C₆H₅CHO and (CH₃)₃C–CHO have no α-H, so they cannot self-condense. In concentrated alkali they undergo the [Cannizzaro reaction](/reactions/cannizzaro-reaction/) instead.
+- Aldols from R₂CH–CHO cannot dehydrate to an enone, because no α-H is left on the new quaternary carbon.
+- 1,3-Dicarbonyls such as pentane-2,4-dione are simply deprotonated to a stable enolate and do not self-condense.
+
+## Related reactions
+
+- [Cross aldol and Claisen–Schmidt condensation](/reactions/cross-aldol-condensation/)
+- [Claisen condensation](/reactions/claisen-condensation/), the ester version
+- [Robinson annulation](/reactions/robinson-annulation/), a Michael addition followed by an intramolecular aldol
+- [Aldol vs Cannizzaro reaction](/comparisons/aldol-vs-cannizzaro/)
+- [E1cB mechanism](/reactions/e1cb-mechanism/), the dehydration step
+- Hub: [Carbonyl condensation reactions](/mechanisms/carbonyl-condensation-reactions/)

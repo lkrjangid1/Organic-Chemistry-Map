@@ -1,0 +1,97 @@
+---
+title: "Birch Reduction (बर्च अपचयन)"
+description: "Birch reduction में liquid NH₃ और alcohol के साथ Na या Li से benzene, cyclohexa-1,4-diene बनता है; alkynes से trans-alkenes। EDG और EWG rules समझें।"
+aliases: ["बर्च अपचयन", "बर्च रिडक्शन", "birch reduction hindi", "birch reaction hindi", "metal ammonia reduction hindi", "dissolving metal reduction hindi", "na in liquid ammonia hindi"]
+reagents: "Liquid NH₃ में Na या Li metal, proton source के रूप में एक alcohol (ethanol या tert-butanol) के साथ"
+conditions: "Liquid ammonia, लगभग −33 °C (इसका boiling point) या उससे कम"
+byproducts: "Sodium alkoxide (जैसे NaOC₂H₅)"
+reactantName: "Benzene"
+productName: "Cyclohexa-1,4-diene"
+faq:
+  - q: "Benzene के Birch reduction का product क्या है?"
+    a: "Cyclohexa-1,4-diene, एक non-conjugated diene। दोनों नए hydrogens ring के आमने-सामने (para) carbons पर जाते हैं, और 1,3-diene नहीं बनता।"
+  - q: "Anisole के Birch reduction का product क्या है?"
+    a: "1-Methoxycyclohexa-1,4-diene। OCH₃ जैसा electron-donating group बचे हुए double bond के एक carbon पर रहता है।"
+  - q: "Benzoic acid के Birch reduction का product क्या है?"
+    a: "Cyclohexa-2,5-diene-1-carboxylic acid। COOH जैसा electron-withdrawing group sp³ carbon पर पहुँचता है, क्योंकि उसके बगल वाला carbanion stabilise होता है।"
+  - q: "Liquid NH₃ में Na किसी alkyne के साथ क्या करता है?"
+    a: "यह internal alkyne को trans (E) alkene में reduce करता है, जैसे 5-decyne से trans-5-decene। यह Lindlar catalyst के साथ H₂ का पूरक है, जो cis-alkene देता है।"
+  - q: "Liquid ammonia में sodium नीला क्यों होता है?"
+    a: "Sodium घुलकर Na⁺ ions और ammonia से solvated electrons देता है। ये solvated electrons light absorb करके गहरा नीला रंग देते हैं, और यही असली reducing agent हैं।"
+translated: 2026-11-22
+---
+
+## Birch reduction क्या है?
+
+**Birch reduction** में **liquid ammonia में घुले alkali metal (Na या Li)** और proton source के रूप में **alcohol** की मदद से **aromatic ring का cyclohexa-1,4-diene में partial reduction** होता है। Benzene से **cyclohexa-1,4-diene** बनता है, conjugated 1,3-diene नहीं, और ring आगे reduce नहीं होती। इसका नाम Australian chemist **Arthur J. Birch** के नाम पर है। Indian exams में यही reagent जब किसी **alkyne** पर काम करके **trans-alkene** देता है, तो उसे भी Birch reduction कहा जाता है; textbooks इस case को dissolving metal reduction कहती हैं।
+
+## Mechanism (benzene)
+
+1. **Solvated electrons।** Na, liquid NH₃ में घुलकर Na⁺ और नीले, ammonia-solvated electrons देता है: Na → Na⁺ + e⁻।
+2. **पहला electron transfer।** एक electron ring के π system में जाता है, जिससे **radical anion** बनता है।
+3. **पहला protonation।** Alcohol radical anion को protonate करता है, जिससे cyclohexadienyl radical बनता है। यही slow step है।
+4. **दूसरा electron transfer।** एक और electron radical को cyclohexadienyl **carbanion** में बदल देता है।
+5. **दूसरा protonation।** Carbanion पहले वाले carbon के **para** carbon पर protonate होता है, और 1,4-diene बनता है।
+
+<Eq ce="C6H6 ->[Na, liq. NH3][C2H5OH] C6H8 (cyclohexa-1,4-diene)" />
+
+<KeyPoint>
+Electron, proton, electron, proton। दोनों hydrogens एक-दूसरे के **1,4 (para)** पर जुड़ते हैं, इसलिए बचे हुए दो C=C bonds **isolated** होते हैं, conjugated नहीं।
+</KeyPoint>
+
+## Substituent effects: EDG vs EWG
+
+| Ring पर substituent | Example | कहाँ पहुँचता है | Product |
+|---|---|---|---|
+| Electron-donating (OCH₃, CH₃) | Anisole | **Double-bond (sp²) carbon** पर | 1-Methoxycyclohexa-1,4-diene |
+| Electron-withdrawing (COOH, COOR) | Benzoic acid | **sp³ carbon** पर | Cyclohexa-2,5-diene-1-carboxylic acid |
+
+कारण: electron donor के **ortho** पर protonation होता है, जिससे donor ज़्यादा substituted double bond पर बना रहता है। Electron-withdrawing group के साथ protonation उसके **para** पर होता है, इसलिए group उस carbon पर बैठता है जो sp³ बनता है, जहाँ वह बगल वाले carbanion को stabilise कर सकता है।
+
+<Eq ce="C6H5OCH3 ->[Na, liq. NH3, ROH] 1-methoxycyclohexa-1,4-diene" />
+
+<Eq ce="C6H5COOH ->[Na, liq. NH3, ROH] cyclohexa-2,5-diene-1-carboxylic acid" />
+
+Electron-withdrawing groups reduction को **तेज़** भी करते हैं (वे radical anion को stabilise करते हैं), जबकि electron-donating groups इसे धीमा करते हैं, जो electrophilic substitution का उल्टा है।
+
+<ExamTip>
+EDG: double bond पर। EWG: sp³ carbon पर। दोनों products में दोनों CH₂ groups एक-दूसरे के para पर होते हैं।
+</ExamTip>
+
+## Alkynes: trans-alkenes
+
+Liquid ammonia में sodium या lithium किसी internal alkyne को **trans (E) alkene** में reduce करता है, जैसे 5-decyne से trans-5-decene बनता है।
+
+1. Triple bond पर एक electron जुड़ता है, जिससे **radical anion** बनता है।
+2. NH₃ इसे protonate करता है, जिससे **vinyl radical** बनता है। Vinyl radicals cis और trans forms के बीच तेज़ी से पलटते रहते हैं।
+3. दूसरा electron **vinyl anion** देता है, जो कम hindered **trans** shape में बनता है।
+4. NH₃ vinyl anion को protonate करके **trans-alkene** देता है।
+
+<Eq ce="R-C#C-R' ->[Na, liq. NH3] trans-RCH=CHR'" />
+
+यह [Lindlar catalyst](/hi/reagents/lindlar-catalyst/) के साथ H₂ का counterpart है, जो cis-alkene देता है।
+
+## यह किसे reduce करता है और किसे नहीं
+
+- Reduce होते हैं: benzene rings, internal alkynes, aromatic ring के साथ conjugated C=C, ketones और nitro groups (ये ring से ज़्यादा आसानी से reduce होते हैं)।
+- Reduce नहीं होते: isolated alkenes (आमतौर पर), alcohols, ethers और carboxylic acid groups।
+
+<ExamTip title="Common mistake">
+**Liquid ammonia** में sodium ही Birch reagent है; alcohol सिर्फ़ proton source के रूप में डाला जाता है। सिर्फ़ ethanol में sodium एक अलग reduction है (esters के लिए [Bouveault–Blanc reduction](/hi/reactions/bouveault-blanc-reduction/) में इस्तेमाल होता है), Birch reduction नहीं।
+</ExamTip>
+
+## Catalytic hydrogenation से तुलना
+
+| Feature | Birch (Na/liq. NH₃) | [Catalytic hydrogenation](/hi/reactions/catalytic-hydrogenation/) |
+|---|---|---|
+| Benzene से बनता है | Cyclohexa-1,4-diene | Cyclohexane (सिर्फ़ high pressure पर) |
+| Alkyne से बनता है | trans-Alkene | Alkane (Lindlar के साथ cis-alkene) |
+| Mechanism | Electron transfer और protonation | Metal surface पर syn addition |
+
+## Related reactions
+
+- [Catalytic hydrogenation](/hi/reactions/catalytic-hydrogenation/)
+- [Lindlar catalyst](/hi/reagents/lindlar-catalyst/)
+- [Bouveault–Blanc reduction](/hi/reactions/bouveault-blanc-reduction/)
+- [Aromaticity](/hi/concepts/aromaticity/): benzene reduction का विरोध क्यों करता है
+- [Reduction reactions hub](/hi/mechanisms/reduction-reactions/)

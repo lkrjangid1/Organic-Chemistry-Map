@@ -1,0 +1,91 @@
+---
+title: "Rosenmund Reduction (रोज़ेनमुंड अपचयन)"
+description: "Rosenmund reduction में barium sulphate पर palladium, यानी poisoned catalyst, पर hydrogenation से acyl chloride, aldehyde में बदलता है। Mechanism और examples।"
+aliases: ["रोज़ेनमुंड अपचयन", "रोजेनमंड रिडक्शन", "rosenmund reduction hindi", "rosenmund reaction hindi", "pd baso4 reduction hindi", "acid chloride to aldehyde hindi", "rosenmund catalyst hindi"]
+reagents: "H₂, BaSO₄ पर Pd (Rosenmund catalyst), अक्सर thiourea जैसे sulfur poison के साथ"
+conditions: "Anhydrous solvent; acyl chloride के solution में से hydrogen gas गुज़ारी जाती है"
+byproducts: "HCl"
+reactantName: "Benzoyl chloride"
+productName: "Benzaldehyde"
+faq:
+  - q: "Rosenmund reduction क्या है?"
+    a: "यह barium sulphate पर लगे palladium के ऊपर hydrogen gas से acyl (acid) chloride का aldehyde में catalytic hydrogenation है। उदाहरण के लिए, benzoyl chloride से benzaldehyde और HCl मिलते हैं।"
+  - q: "Rosenmund reduction में BaSO₄ क्यों इस्तेमाल होता है?"
+    a: "अकेला palladium बहुत active है और aldehyde को आगे primary alcohol तक reduce कर देगा। Barium sulphate का surface area कम होता है और यह palladium की activity घटा देता है, इसलिए reaction aldehyde पर रुक जाता है। बहुत reactive acyl chlorides के लिए thiourea जैसे extra sulfur poisons डाले जाते हैं।"
+  - q: "Rosenmund reduction से formaldehyde क्यों नहीं बनाया जा सकता?"
+    a: "इसके लिए ज़रूरी acyl chloride, formyl chloride (HCOCl), room temperature पर unstable है और टूटकर CO और HCl बन जाता है, इसलिए reduce करने के लिए कोई starting material ही नहीं होता।"
+  - q: "Rosenmund reduction में कौन-सा catalyst इस्तेमाल होता है, Ni या Pd?"
+    a: "Palladium। Rosenmund catalyst, BaSO₄ पर जमा Pd है। इस reaction के लिए nickel इस्तेमाल नहीं होता।"
+  - q: "अगर Rosenmund catalyst को poison न किया जाए तो क्या होता है?"
+    a: "Aldehyde आगे primary alcohol तक reduce हो जाता है, और फिर यह alcohol बचे हुए acyl chloride से react करके side product के रूप में ester बना सकता है।"
+translated: 2026-11-22
+---
+
+## Rosenmund reduction क्या है?
+
+**Rosenmund reduction** एक **acyl chloride (acid chloride) का aldehyde में catalytic hydrogenation** है। Acyl chloride में से hydrogen gas **barium sulphate पर लगे palladium (Pd/BaSO₄)** की उपस्थिति में गुज़ारी जाती है। इस catalyst की activity जानबूझकर कम की गई होती है ताकि aldehyde आगे reduce न हो। By-product HCl है। Karl Wilhelm Rosenmund ने यह reaction 1918 में report किया था।
+
+## General reaction
+
+<Eq ce="R-COCl + H2 ->[Pd/BaSO4] R-CHO + HCl" />
+
+NCERT इसे acyl chlorides से aldehydes बनाने की पहली method के रूप में देता है।
+
+## यह कैसे काम करता है
+
+यह reaction एक **hydrogenolysis** है: palladium surface पर hydrogen acyl chloride के C–Cl bond को तोड़ता है और उसकी जगह C–H bond आ जाता है।
+
+1. Acyl chloride और H₂ दोनों palladium पर adsorb होते हैं।
+2. C–Cl bond टूटता है और hydrogen acyl carbon तक पहुँचता है, जिससे R–CHO बनता है।
+3. Chlorine, HCl के रूप में निकल जाता है।
+
+खतरा एक अगले step का है, जिसे पूरी तरह active catalyst कर देगा: aldehyde के C=O का hydrogenation होकर R–CH₂OH बनना। Catalyst की activity घटाने से यह रुक जाता है।
+
+<KeyPoint title="Catalyst को poison क्यों किया जाता है">
+Barium sulphate का surface area कम होता है, जो palladium की activity को नरम कर देता है। Indian textbooks में आमतौर पर BaSO₄ को ही "poison" कहा जाता है। ख़ास तौर पर reactive acyl chlorides के लिए thiourea जैसा extra sulfur poison डाला जाता है। इस deactivation के बिना aldehyde reduce होकर primary alcohol बन जाता है, जो फिर बचे हुए acyl chloride से react करके ester बना सकता है।
+</KeyPoint>
+
+<ExamTip title="Common mistake">
+Rosenmund catalyst में metal **palladium** है, nickel नहीं: H₂, Pd/BaSO₄ लिखें। Nickel भी एक hydrogenation catalyst है, लेकिन यह Rosenmund catalyst नहीं है।
+</ExamTip>
+
+## Examples
+
+**1. Benzoyl chloride से benzaldehyde।**
+
+<Eq ce="C6H5COCl + H2 ->[Pd/BaSO4] C6H5CHO + HCl" />
+
+**2. Ethanoyl chloride से ethanal।**
+
+<Eq ce="CH3COCl + H2 ->[Pd/BaSO4] CH3CHO + HCl" />
+
+**3. Carboxylic acid से दो step वाला रास्ता।** Acid को SOCl₂ से उसके chloride में बदलें, फिर reduce करें:
+
+<Eq ce="CH3CH2COOH ->[SOCl2] CH3CH2COCl ->[H2, Pd/BaSO4] CH3CH2CHO" />
+
+## Limitations और exceptions
+
+- **Formaldehyde नहीं बनता।** ज़रूरी starting material, formyl chloride (H–CO–Cl), room temperature पर unstable है और टूटकर CO और HCl बन जाता है, इसलिए methanal इस तरह नहीं बनाया जा सकता।
+
+<Eq ce="HCOCl -> CO + HCl" />
+
+- **Over-reduction।** अगर catalyst ठीक से poison न हो, तो product primary alcohol होता है, साथ में कुछ ester भी।
+- **नमी।** पूरी तरह anhydrous solvents recommend किए जाते हैं; पानी acyl chloride को hydrolyse करके वापस carboxylic acid बना देता है और side products देता है।
+
+## Aldehydes बनाने के दूसरे रास्तों से तुलना
+
+| Starting material | Reagent | Named method |
+|---|---|---|
+| Acyl chloride | H₂, Pd/BaSO₄ | Rosenmund reduction |
+| Nitrile | SnCl₂, HCl, फिर H₃O⁺ | Stephen reduction |
+| Nitrile या ester | DIBAL-H, फिर H₂O | DIBAL-H reduction |
+
+इस काम के लिए LiAlH₄ इस्तेमाल नहीं होता: यह acyl chlorides को सीधे primary alcohols तक reduce कर देता है।
+
+## Related reactions
+
+- [Stephen reduction](/hi/reactions/stephen-reduction/): nitrile से aldehyde।
+- [DIBAL-H](/hi/reagents/dibal-h/): कम temperature पर ester या nitrile से aldehyde।
+- [Lindlar catalyst](/hi/reagents/lindlar-catalyst/): एक और poisoned palladium catalyst, जो alkyne hydrogenation को cis-alkene पर रोकता है।
+- [Catalytic hydrogenation](/hi/reactions/catalytic-hydrogenation/): बिना poison वाला version।
+- [Preparation of aldehydes and ketones](/hi/preparation/preparation-of-aldehydes-and-ketones/) और [Reduction reactions](/hi/mechanisms/reduction-reactions/)।

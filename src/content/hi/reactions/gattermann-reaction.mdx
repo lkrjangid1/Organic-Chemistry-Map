@@ -1,0 +1,93 @@
+---
+title: "Gattermann Reaction (गाटरमान अभिक्रिया)"
+description: "Gattermann reaction में arenediazonium salt, copper powder और HCl या HBr के साथ aryl chloride या bromide में बदलता है। Mechanism और Sandmeyer से तुलना।"
+aliases: ["गाटरमान अभिक्रिया", "गाटरमैन रिएक्शन", "gattermann reaction hindi", "gatterman reaction hindi", "gattermann reaction diazonium hindi", "Cu HX reaction hindi", "diazonium se chlorobenzene"]
+reagents: "Copper powder + HCl या HBr"
+conditions: "Diazonium salt solution को Cu powder और halogen acid के साथ गुनगुना किया जाता है"
+byproducts: "N₂ (side product के रूप में biaryl)"
+reactantName: "Benzenediazonium chloride"
+productName: "Bromobenzene"
+faq:
+  - q: "Amines में Gattermann reaction क्या है?"
+    a: "इसमें arenediazonium salt solution को copper powder की उपस्थिति में संबंधित halogen acid से treat करके diazonium group को Cl या Br से बदला जाता है। Benzenediazonium chloride, Cu/HCl के साथ chlorobenzene देता है।"
+  - q: "Gattermann और Sandmeyer reactions में क्या अंतर है?"
+    a: "Gattermann में HCl या HBr के साथ metallic copper powder लिया जाता है, जबकि Sandmeyer में acid के साथ copper(I) salt (CuCl या CuBr) लिया जाता है। Sandmeyer reaction आमतौर पर बेहतर yield देता है।"
+  - q: "क्या Gattermann reaction, Gattermann–Koch या Gattermann formylation जैसा ही है?"
+    a: "नहीं। Diazonium salts का Gattermann reaction aryl halides बनाता है। Gattermann–Koch reaction (CO, HCl, AlCl₃/CuCl) और Gattermann formylation (HCN, HCl, Lewis acid) arene पर –CHO group लगाते हैं।"
+  - q: "क्या Gattermann reaction से fluorobenzene या iodobenzene बनाया जा सकता है?"
+    a: "नहीं। इस तरह सिर्फ़ Cl और Br लगाए जाते हैं। Iodobenzene KI से बनता है, और fluorobenzene Balz–Schiemann reaction से।"
+translated: 2026-11-22
+---
+
+## Gattermann reaction क्या है?
+
+**Gattermann reaction** एक **arenediazonium salt** को **aryl chloride या aryl bromide** में बदलता है, जिसमें diazonium salt solution को **copper powder की उपस्थिति में संबंधित halogen acid (HCl या HBr)** के साथ गुनगुना किया जाता है। Benzenediazonium chloride, Cu/HCl के साथ chlorobenzene और Cu/HBr के साथ bromobenzene देता है, और nitrogen gas निकलती है।
+
+Ludwig Gattermann ने इसे Sandmeyer reaction के एक बेहतर रूप की तरह विकसित किया, जिसमें copper(I) salt की जगह **metallic copper** इस्तेमाल होता है।
+
+<KeyPoint>
+इसे Gattermann–Koch reaction या Gattermann formylation से confuse न करें। वे arenes से aldehydes बनाते हैं; यह diazonium salts से aryl halides बनाता है।
+</KeyPoint>
+
+## General reaction
+
+<Eq ce="Ar-N2^+ Cl^- ->[Cu, HX] Ar-X + N2 ^ \quad (X = Cl, Br)" />
+
+Exam answers में इस branch को NCERT की तरह **Cu + HX, X → Cl, Br** लिखा जाता है।
+
+## Mechanism
+
+1. **Copper(I) in situ बनता है।** Copper metal कुछ diazonium ion को reduce करता है, जिससे Cu⁺ बनता है (और side product के रूप में कुछ biaryl)।
+2. **Electron transfer और N₂ का निकलना।** Cu⁺ एक electron ArN₂⁺ को देता है; radical nitrogen खोकर aryl radical बन जाता है।
+3. **Halogen transfer।** Aryl radical copper(II) halide से halogen लेता है, जिससे Ar–X बनता है और Cu⁺ वापस मिल जाता है।
+
+<Eq ce="2Cu + 2ArN2^+ -> 2Cu^+ + Ar-Ar + 2N2" />
+
+<Eq ce="ArN2^+ + HX ->[Cu^+] ArX + N2 + H^+" />
+
+यानी शुरू होने के बाद Gattermann reaction उसी Cu(I) chemistry पर चलता है जिस पर [Sandmeyer reaction](/hi/reactions/sandmeyer-reaction/)। यहाँ single aryl-cation mechanism मत बनाइए: copper-mediated halogenation इसकी जगह इस radical pathway से होता है।
+
+## Examples
+
+**1. Chlorobenzene:**
+
+<Eq ce="C6H5N2^+ Cl^- ->[Cu/HCl] C6H5Cl + N2 ^" />
+
+**2. Bromobenzene:**
+
+<Eq ce="C6H5N2^+ Cl^- ->[Cu/HBr] C6H5Br + N2 ^" />
+
+**3. p-Toluidine से p-bromotoluene (दो steps):**
+
+<Eq ce="CH3C6H4NH2 ->[NaNO2, HCl][273-278 K] CH3C6H4N2^+ Cl^- ->[Cu/HBr] CH3C6H4Br + N2" />
+
+<ExamTip>
+जब question में diazonium salt पर "Cu, HCl" या "Cu/HBr" दिखे, तो उसे **Gattermann** कहें; जब "CuCl/HCl", "Cu₂Cl₂/HCl" या "CuCN" दिखे, तो **Sandmeyer**। NCERT पूछता है कि कौन बेहतर yield देता है: Sandmeyer।
+</ExamTip>
+
+## Gattermann vs Sandmeyer
+
+| Feature | Gattermann | Sandmeyer |
+|---|---|---|
+| Copper source | Cu powder | CuCl, CuBr, CuCN |
+| लगाए जाने वाले groups | Cl, Br | Cl, Br, CN |
+| Yield | कम | ज़्यादा |
+| Key intermediate | Aryl radical (in situ बने Cu⁺ के through) | Aryl radical |
+
+## Synthesis में इसकी जगह
+
+Gattermann reaction सामान्यतः किसी arene से तीन-step route का आखिरी step होता है: nitration, –NO₂ का –NH₂ में reduction, फिर diazotization और replacement। चूँकि amino group हटाए जाने से पहले orientation तय कर देता है, halogen ऐसी position पर पहुँचता है जो direct halogenation से शायद न मिले। Questions में Gattermann और Sandmeyer दोनों options एक ही aryl halide तक ले जाते हैं; सिर्फ़ reagent label और yield अलग होते हैं।
+
+## Limitations और exceptions
+
+- सिर्फ़ chlorine और bromine लगाए जाते हैं; cyanide, iodide और fluoride के लिए दूसरे methods चाहिए।
+- Yields आमतौर पर Sandmeyer conditions से कम होती हैं, आंशिक रूप से इसलिए कि copper metal के diazonium ion को reduce करने पर biaryl बनता है।
+- Diazonium salt को ठंडे में बनाकर इस्तेमाल करना होता है; सिर्फ़ पानी में गुनगुना करने पर phenol बनता है।
+
+## Related reactions
+
+- [Sandmeyer reaction](/hi/reactions/sandmeyer-reaction/): copper(I) salt वाला version।
+- [Diazotization reaction](/hi/reactions/diazotization-reaction/): diazonium salt बनाना।
+- [Balz–Schiemann reaction](/hi/reactions/balz-schiemann-reaction/): aryl fluorides के लिए।
+- [Friedel–Crafts acylation](/hi/reactions/friedel-crafts-acylation/): ring को functionalise करने का एक अलग तरीका, जिसकी तुलना अक्सर Gattermann–Koch formylation से की जाती है।
+- [Reactions of diazonium salts](/hi/mechanisms/diazonium-salt-reactions/): family overview।

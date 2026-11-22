@@ -1,0 +1,148 @@
+---
+title: "SN2 Reaction"
+description: "The SN2 reaction is a one-step nucleophilic substitution: the nucleophile attacks from the back as the leaving group departs, inverting configuration."
+aliases: ["SN2 mechanism", "Bimolecular nucleophilic substitution", "Walden inversion", "Backside attack", "SN2 reaction mechanism"]
+kind: "mechanism-type"
+family: "nucleophilic-substitution"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["r3_sn2_reaction", "sn2_inversion", "SN2_(R)-2-bromopentane_to_(S)-2-azidopentane"]
+reactant:
+  name: "(R)-2-Bromobutane"
+  smiles: "C[C@@H](Br)CC"
+product:
+  name: "(S)-2-Azidobutane"
+  smiles: "C[C@H](N=[N+]=[N-])CC"
+byproducts: "NaBr"
+reagents: "Strong, unhindered nucleophile (OH-, CN-, N3-, I-, RO-)"
+conditions: "Polar aprotic solvent (acetone, DMF, DMSO); methyl or primary substrate preferred"
+equation: "CH3CH(Br)CH2CH3 + NaN3 ->[DMF] CH3CH(N3)CH2CH3 + NaBr"
+notesPages: [42, 51]
+steps:
+  - title: "Backside approach"
+    text: "Azide approaches the carbon from the side opposite bromine, 180° from the leaving group. The back side must be unhindered, which is why reactivity is CH₃X > 1° > 2° > 3°."
+    arrows: "Azide lone pair (HOMO) → back lobe of the C–Br σ* orbital (LUMO)."
+    species:
+      - smiles: "[N-]=[N+]=[N-]"
+        label: "Azide ion"
+      - smiles: "C[C@@H](Br)CC"
+        label: "(R)-2-Bromobutane"
+        highlight: "[CX4]Br"
+  - title: "Transition state (rate-determining)"
+    text: "Carbon is partly bonded to both N₃ and Br, five-coordinate with the other three groups lying in one plane and partial negative charge on N₃ and Br. Bond making and bond breaking happen in this one step, so rate = k[R–X][Nu⁻]."
+    arrows: "The new N–C bond forms as the C–Br bond pair moves onto bromine, at the same time."
+  - title: "Inversion"
+    text: "The C–Br bond breaks completely, Br⁻ leaves and the three groups snap over to the other side, giving an inverted sp³ carbon. (R)-2-Bromobutane gives (S)-2-azidobutane (Walden inversion)."
+    arrows: "The C–Br bond pair leaves with bromine as Br⁻."
+    species:
+      - smiles: "C[C@H](N=[N+]=[N-])CC"
+        label: "(S)-2-Azidobutane"
+        highlight: "[CX4]N"
+      - smiles: "[Br-]"
+        label: "Bromide"
+memoryTricks: []
+faq:
+  - q: "What is the rate law of an SN2 reaction?"
+    a: "Rate = k[R–X][Nu⁻]. Both the substrate and the nucleophile are present in the single transition state, so the reaction is second order overall."
+  - q: "Why does an SN2 reaction cause inversion of configuration?"
+    a: "The nucleophile must attack the carbon from the side opposite the leaving group. As the new bond forms and the old one breaks, the other three groups flip over like an umbrella in the wind, so the product has the inverted configuration (Walden inversion)."
+  - q: "Why do tertiary alkyl halides not react by SN2?"
+    a: "Three alkyl groups crowd the back of the carbon and block the nucleophile's approach. Reactivity therefore falls in the order CH₃X > 1° > 2° > 3°, and tertiary halides react by SN1 or E2 instead."
+  - q: "Why is a polar aprotic solvent preferred for SN2?"
+    a: "Solvents such as acetone, DMF and DMSO dissolve the ionic nucleophile but do not hydrogen-bond to the anion, so the nucleophile stays reactive. Protic solvents cage the anion and slow the reaction."
+  - q: "Why does KCN give an alkyl cyanide but AgCN give an isocyanide?"
+    a: "KCN is ionic, so free CN⁻ attacks through carbon and gives R–C≡N. AgCN is largely covalent with carbon bonded to silver, so the nitrogen lone pair attacks and R–N≡C (isocyanide) is the main product."
+related: ["sn1-reaction", "sni-mechanism", "finkelstein-reaction", "williamson-ether-synthesis", "e2-reaction", "neighbouring-group-participation"]
+sources:
+  - title: "Haloalkanes and Haloarenes (Class 12 Chemistry Part II, Unit 6)"
+    url: "https://ncert.nic.in/textbook/pdf/lech201.pdf"
+    publisher: "NCERT"
+  - title: "SN2 reaction"
+    url: "https://en.wikipedia.org/wiki/SN2_reaction"
+    publisher: "Wikipedia"
+  - title: "Nucleophilic substitution"
+    url: "https://en.wikipedia.org/wiki/Nucleophilic_substitution"
+    publisher: "Wikipedia"
+  - title: "Nitro compound"
+    url: "https://en.wikipedia.org/wiki/Nitro_compound"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 4
+  note: "The notes' detailed order α-halo ketone > α-alkoxy halide > benzyl > allyl > 1° is not ranked in the sources (they only say adjacent π systems and electron-withdrawing groups speed SN2); kept as exam convention. The notes' SN1 label for AgCN is likewise kept as exam teaching."
+---
+
+## What is the SN2 reaction?
+
+The **SN2 reaction** (substitution, nucleophilic, bimolecular) is a **single-step** nucleophilic substitution in which the nucleophile bonds to an sp³ carbon from the side opposite the leaving group while the leaving group departs. There is no intermediate, only one transition state, and a chiral carbon ends up with **inverted configuration** (Walden inversion). It works best with **methyl and primary halides**, a **strong nucleophile** and a **polar aprotic solvent**, and follows **rate = k[R–X][Nu⁻]**.
+
+## General reaction
+
+<Eq ce="Nu- + R-CH2-X -> [Nu^{\delta-}...CH2R...X^{\delta-}]^{\ddagger} -> Nu-CH2-R + X-" />
+
+## Mechanism
+
+1. **Backside approach.** The nucleophile's filled orbital (HOMO) overlaps with the back lobe of the empty C–X σ* orbital (LUMO), 180° away from the leaving group.
+2. **Transition state (rate-determining).** Carbon is partly bonded to both groups. It is five-coordinate and roughly sp² hybridised, with the three other groups lying in one plane and partial negative charge on Nu and X.
+3. **Inversion.** The C–X bond breaks completely, X⁻ leaves, and the three groups snap over to the other side, giving an inverted sp³ carbon.
+
+<KeyPoint>
+SN2 is a **one-step** reaction, rate = k[R–X][Nu⁻], and **inversion takes place**. It needs a **strong (negatively charged) nucleophile**, a **good leaving group** and a **polar aprotic solvent**. अभिक्रियाशीलता ∝ संक्रमण अवस्था का स्थायित्व ∝ 1/steric hindrance (reactivity ∝ stability of the transition state ∝ 1/steric hindrance).
+</KeyPoint>
+
+## Order of reactivity
+
+NCERT gives **CH₃X > 1° > 2° > 3°**, because bulky groups block the back of the carbon. Substrates next to a π system react faster, because conjugation stabilises the transition state, and electron-withdrawing groups next to the reaction centre also favour SN2.
+
+An extended order often used in exams:
+
+R–CO–CH₂–X > R–O–CH₂–X > C₆H₅CH₂–X (benzyl) > CH₂=CH–CH₂–X (allyl) > 1° > 2°, with **3°, aryl and bridgehead halides showing no SN2**. Aryl halides fail because the C–X bond lies in the ring plane and the back side is blocked by the ring; bridgehead carbons cannot invert.
+
+## Examples
+
+**1. Hydroxide and methyl chloride (NCERT).** The classic second-order case.
+
+<Eq ce="CH3Cl + OH- -> CH3OH + Cl-" />
+
+**2. Inversion at a stereocentre.** (R)-2-Bromobutane with sodium azide in DMF gives (S)-2-azidobutane. Azide is a strong nucleophile but a weak base, so elimination is minor.
+
+<Eq ce="(R)-CH3CH(Br)C2H5 + N3- ->[DMF] (S)-CH3CH(N3)C2H5 + Br-" />
+
+**3. Tosylate to bromide.** (S)-Butan-2-yl tosylate with NaBr in acetone gives (R)-2-bromobutane; the tosylate is an excellent leaving group.
+
+<Eq ce="(S)-CH3CH(OTs)C2H5 + NaBr ->[acetone] (R)-CH3CH(Br)C2H5 + NaOTs" />
+
+## Ambident nucleophiles
+
+Cyanide and nitrite each have two atoms that can donate an electron pair. NCERT gives the standard results:
+
+| Reagent | Attacking atom | Product |
+|---|---|---|
+| KCN / NaCN | C | Alkyl cyanide (nitrile) R–C≡N |
+| AgCN | N | Alkyl isocyanide R–N≡C |
+| KNO₂ / NaNO₂ | O | Alkyl nitrite R–O–N=O |
+| AgNO₂ | N | Nitroalkane R–NO₂ |
+
+The ionic salts give free anions, while the silver salts are covalent and attack through the other atom. Wikipedia's article on nitro compounds also says that alkali nitrites mostly give nitrite esters, while silver nitrite with primary halides is the classic route to nitroalkanes. In exam answers the NaCN reaction is marked SN2 and the AgCN reaction SN1-like: Ag⁺ is said to pull off the halide and give carbocation character.
+
+<ExamTip>
+For "KCN vs AgCN" or "KNO₂ vs AgNO₂" questions, remember: ionic salt → C-attack (or O-attack for nitrite); silver salt → N-attack. Write the product, then name it carefully (nitrile vs isocyanide, nitrite vs nitro).
+</ExamTip>
+
+## Hydrolysis of alkyl halides
+
+Hydrolysis with water in aqueous acetone or ethanol is a weak-nucleophile, protic-solvent reaction, so for tertiary halides it goes by SN1 and its rate follows carbocation stability. With hydroxide ion and a primary halide, the same overall conversion R–X → R–OH goes by SN2. Choosing between them depends on the substrate and nucleophile, not on the product.
+
+## Limitations and exceptions
+
+- **Tertiary, aryl, vinyl and bridgehead halides** do not react by SN2.
+- **Neopentyl halides** are primary but extremely slow, because the bulky tert-butyl group blocks the back side.
+- **Strong, bulky bases** (tert-butoxide) give E2 elimination instead of substitution.
+
+## Related reactions
+
+- [SN1 reaction](/reactions/sn1-reaction/): the two-step carbocation pathway.
+- [Finkelstein reaction](/reactions/finkelstein-reaction/) and [Williamson ether synthesis](/reactions/williamson-ether-synthesis/): named SN2 reactions.
+- [E2 reaction](/reactions/e2-reaction/): the competing one-step elimination.
+- [SNi mechanism](/reactions/sni-mechanism/): why SOCl₂ with pyridine gives inversion.
+- [Nucleophilic substitution overview](/mechanisms/nucleophilic-substitution/)

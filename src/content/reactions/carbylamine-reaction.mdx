@@ -1,0 +1,169 @@
+---
+title: "Carbylamine Reaction"
+description: "Carbylamine reaction (isocyanide test): a primary amine heated with chloroform and alcoholic KOH gives a foul-smelling isocyanide. Mechanism via :CCl₂."
+aliases: ["Isocyanide test", "Carbylamine test", "Hofmann isocyanide synthesis", "Saytzeff isocyanide test", "Carbylamin reaction"]
+kind: "test"
+family: "carbenes"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["carbylamine_reaction"]
+reactant:
+  name: "Aniline (benzenamine)"
+  smiles: "Nc1ccccc1"
+product:
+  name: "Phenyl isocyanide (isocyanobenzene)"
+  smiles: "[C-]#[N+]c1ccccc1"
+byproducts: "KCl, H₂O"
+reagents: "CHCl₃ + ethanolic (alcoholic) KOH; aqueous NaOH also works"
+conditions: "Heat (Δ)"
+equation: "C6H5NH2 + CHCl3 + 3KOH ->[\\Delta] C6H5NC + 3KCl + 3H2O"
+notesPages: [11]
+steps:
+  - title: "Deprotonation of chloroform"
+    text: "Hydroxide removes the acidic hydrogen of chloroform, giving the trichloromethanide ion, CCl₃⁻, and water."
+    arrows: "Lone pair of OH⁻ → H of CHCl₃; the C–H bond pair stays on carbon as CCl₃⁻."
+    species:
+      - smiles: "ClC(Cl)Cl"
+        label: "Chloroform"
+        highlight: "[CH1](Cl)(Cl)Cl"
+      - smiles: "[OH-]"
+        label: "Hydroxide"
+      - smiles: "Cl[C-](Cl)Cl"
+        label: "CCl₃⁻"
+  - title: "α-Elimination to dichlorocarbene"
+    text: "CCl₃⁻ loses a chloride ion from the same carbon (α-elimination), forming dichlorocarbene, :CCl₂, the key intermediate."
+    arrows: "The C–Cl bond pair leaves with Cl⁻, leaving the carbon with one lone pair and an empty orbital."
+    species:
+      - smiles: "Cl[C-](Cl)Cl"
+        label: "CCl₃⁻"
+        highlight: "[C-]Cl"
+      - smiles: "Cl[C]Cl"
+        label: "Dichlorocarbene"
+      - smiles: "[Cl-]"
+        label: "Chloride"
+  - title: "Nitrogen attacks the carbene"
+    text: "The lone pair on the nitrogen of aniline attacks the electron-poor carbene carbon, giving the zwitterion Ar–NH₂⁺–CCl₂⁻."
+    arrows: "Lone pair on N → empty orbital of the carbene carbon, forming a new N–C bond."
+    species:
+      - smiles: "Nc1ccccc1"
+        label: "Aniline"
+        highlight: "[NH2]"
+      - smiles: "Cl[C]Cl"
+        label: "Dichlorocarbene"
+        highlight: "[C](Cl)Cl"
+      - smiles: "[NH2+](c1ccccc1)[C-](Cl)Cl"
+        label: "Zwitterion"
+  - title: "Proton transfer"
+    text: "A proton moves from nitrogen to the negatively charged carbon, giving the neutral Ar–NH–CHCl₂."
+    arrows: "An N–H proton moves to the carbanion lone pair; the N–H bond pair returns to nitrogen."
+    species:
+      - smiles: "[NH2+](c1ccccc1)[C-](Cl)Cl"
+        label: "Zwitterion"
+        highlight: "[NH2+][C-]"
+      - smiles: "ClC(Cl)Nc1ccccc1"
+        label: "Ar–NH–CHCl₂"
+  - title: "Two dehydrochlorinations"
+    text: "The base removes HCl to give Ar–N=CHCl, then a second HCl to leave phenyl isocyanide, Ar–N⁺≡C⁻. Nitrogen loses both its hydrogens, which is why only primary amines give the test."
+    arrows: "Each time OH⁻ removes a proton and Cl⁻ leaves, one more C–N π bond forms."
+    species:
+      - smiles: "ClC(Cl)Nc1ccccc1"
+        label: "Ar–NH–CHCl₂"
+        highlight: "[NH]C(Cl)Cl"
+      - smiles: "ClC=Nc1ccccc1"
+        label: "Ar–N=CHCl"
+        highlight: "N=CCl"
+      - smiles: "[C-]#[N+]c1ccccc1"
+        label: "Phenyl isocyanide"
+memoryTricks: []
+faq:
+  - q: "What is the carbylamine reaction?"
+    a: "It is the reaction of a primary amine, aliphatic or aromatic, with chloroform and alcoholic KOH on heating to give an isocyanide (carbylamine). The foul smell of the isocyanide makes it a test for primary amines."
+  - q: "Why do secondary and tertiary amines not give the carbylamine test?"
+    a: "Forming the R–N≡C group requires the nitrogen to lose two hydrogens. Secondary amines have only one N–H and tertiary amines have none, so they cannot form an isocyanide."
+  - q: "What is the intermediate in the carbylamine reaction?"
+    a: "Dichlorocarbene, :CCl₂. The base removes a proton from chloroform, and the CCl₃⁻ ion then loses Cl⁻ (α-elimination) to give the carbene, which is attacked by the amine nitrogen."
+  - q: "What is the product when aniline undergoes the carbylamine reaction?"
+    a: "Phenyl isocyanide, C₆H₅NC, a foul-smelling compound. The by-products are KCl and water."
+  - q: "What is the difference between the carbylamine reaction and the Reimer–Tiemann reaction?"
+    a: "Both use chloroform and a strong base to make dichlorocarbene. In the carbylamine reaction a primary amine nitrogen attacks the carbene to give an isocyanide; in the Reimer–Tiemann reaction a phenoxide ring carbon attacks it, and hydrolysis gives an o-hydroxybenzaldehyde."
+related: ["reimer-tiemann-reaction", "diazotization-reaction", "hofmann-bromamide-degradation", "simmons-smith-reaction"]
+sources:
+  - title: "Amines (Class 12 Chemistry, Unit 9)"
+    url: "https://ncert.nic.in/textbook/pdf/lech204.pdf"
+    publisher: "NCERT"
+  - title: "Carbylamine reaction"
+    url: "https://en.wikipedia.org/wiki/Carbylamine_reaction"
+    publisher: "Wikipedia"
+  - title: "Dichlorocarbene"
+    url: "https://en.wikipedia.org/wiki/Dichlorocarbene"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 3
+---
+
+## What is the carbylamine reaction?
+
+The **carbylamine reaction**, also called the **isocyanide test**, is the reaction of a **primary amine** (aliphatic or aromatic) with **chloroform and ethanolic potassium hydroxide** on heating. The product is an **isocyanide (carbylamine), R–N≡C**, which has a strong, very unpleasant smell. Because **secondary and tertiary amines do not react**, the smell is used as a test for primary amines.
+
+In preparative chemistry the same reaction is known as the **Hofmann isocyanide synthesis**, where aqueous NaOH and a phase-transfer catalyst are often used.
+
+## General reaction
+
+<Eq ce="R-NH2 + CHCl3 + 3KOH ->[\Delta] R-NC + 3KCl + 3H2O" />
+
+The base may be written as NaOH (giving R–NC + NaCl + H₂O) or KOH; both work, and NCERT uses alcoholic KOH. With three equivalents of base the balanced equation has three KCl (or NaCl) and three water.
+
+## Mechanism
+
+1. **Making the carbene (α-elimination).** Hydroxide removes the acidic H of chloroform, giving CCl₃⁻, which loses Cl⁻ to form **dichlorocarbene, :CCl₂**.
+2. **Nucleophilic attack.** The lone pair on the amine nitrogen attacks the electron-poor carbene carbon, giving R–NH₂⁺–CCl₂⁻.
+3. **Proton transfer.** A proton moves from nitrogen to the carbanion carbon, giving R–NH–CHCl₂.
+4. **First dehydrochlorination.** The base removes HCl, giving R–N=CHCl.
+5. **Second dehydrochlorination.** The base removes a second HCl, leaving the isocyanide, R–N⁺≡C⁻.
+
+<Eq ce="CHCl3 + OH- -> CCl3^- + H2O" />
+
+<Eq ce="CCl3^- -> :CCl2 + Cl-" />
+
+<Eq ce="R-NH2 + :CCl2 -> R-NH-CHCl2 ->[- 2HCl] R-NC" />
+
+<KeyPoint>
+The nitrogen loses both of its hydrogens during the reaction (as two HCl, removed by the base). That is why only primary amines, with an –NH₂ group, can form an isocyanide.
+</KeyPoint>
+
+## Examples
+
+**1. Aniline gives phenyl isocyanide:**
+
+<Eq ce="C6H5NH2 + CHCl3 + 3KOH ->[\Delta] C6H5NC + 3KCl + 3H2O" />
+
+**2. Ethylamine gives ethyl isocyanide:**
+
+<Eq ce="C2H5NH2 + CHCl3 + 3KOH ->[\Delta] C2H5NC + 3KCl + 3H2O" />
+
+**3. tert-Butylamine (Hofmann isocyanide synthesis, phase-transfer conditions):**
+
+<Eq ce="(CH3)3CNH2 + CHCl3 + 3NaOH -> (CH3)3CNC + 3NaCl + 3H2O" />
+
+<ExamTip>
+Use the carbylamine test to tell a primary amine from secondary and tertiary amines, and remember it works for both aliphatic and aromatic primary amines. To separate 1°, 2° and 3° amines more fully, combine it with the Hinsberg test or the nitrous acid test.
+</ExamTip>
+
+## Isocyanide vs cyanide
+
+The product is an **isocyanide** (R–N≡C, carbon bonded through nitrogen), not a nitrile (R–C≡N). Alkyl cyanides are made from alkyl halides and KCN; isocyanides from the carbylamine reaction or from alkyl halides and AgCN.
+
+## Limitations and exceptions
+
+- Secondary and tertiary amines give no isocyanide, so no smell.
+- Isocyanides are toxic and foul-smelling, so the test is done on a very small scale in a fume cupboard.
+- Dichlorocarbene also reacts with alkenes (to dichlorocyclopropanes) and with phenoxides ([Reimer–Tiemann reaction](/reactions/reimer-tiemann-reaction/)), so other functional groups in the molecule can compete.
+
+## Related reactions
+
+- [Reimer–Tiemann reaction](/reactions/reimer-tiemann-reaction/): the same :CCl₂ intermediate, attacked by a phenoxide ring.
+- [Diazotization reaction](/reactions/diazotization-reaction/): the nitrous acid test that also distinguishes amine classes.
+- [Hofmann bromamide degradation](/reactions/hofmann-bromamide-degradation/): makes the primary amines that give this test.
+- [Simmons–Smith reaction](/reactions/simmons-smith-reaction/): carbene-type cyclopropanation.
+- [Carbenes](/mechanisms/carbenes/): singlet and triplet carbenes and their reactions.

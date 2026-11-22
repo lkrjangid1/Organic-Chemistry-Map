@@ -1,0 +1,7 @@
+{"page": "reactions/reimer-tiemann-reaction",
+ "questions": [
+  {"q": "The electrophile that attacks the phenoxide ion in the Reimer–Tiemann reaction is:", "options": ["CHCl₂⁺", ":CCl₂", "CCl₃⁻", "HCO⁺"], "answer": 1, "explain": "OH⁻ removes the proton of CHCl₃ and CCl₃⁻ loses Cl⁻ (α-elimination) to give neutral but electron-deficient dichlorocarbene."},
+  {"q": "Phenol is heated with CCl₄ and aqueous NaOH, then acidified. The main product is:", "options": ["Salicylaldehyde", "4-Hydroxybenzaldehyde", "Salicylic acid", "2-Chlorophenol"], "answer": 2, "explain": "Using CCl₄ instead of CHCl₃ introduces –COOH rather than –CHO, so phenol gives 2-hydroxybenzoic acid."},
+  {"q": "Pyrrole is treated with chloroform and KOH. The product is:", "options": ["Pyrrole-2-carbaldehyde", "2-Chloropyrrole", "Pyridine", "3-Chloropyridine"], "answer": 3, "explain": "In the abnormal Reimer–Tiemann reaction, :CCl₂ adds across a C=C and the ring expands by one carbon, keeping a chlorine (Ciamician–Dennstedt rearrangement)."},
+  {"q": "Which substrate is LEAST suitable for Reimer–Tiemann formylation?", "options": ["Benzene", "Phenol", "p-Cresol", "Sodium phenoxide"], "answer": 0, "explain": "Dichlorocarbene needs a very electron-rich ring such as a phenoxide ion; benzene itself is not attacked."}
+ ]}

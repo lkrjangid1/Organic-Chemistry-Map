@@ -1,0 +1,105 @@
+---
+title: "Neighbouring Group Participation (NGP)"
+description: "Neighbouring group participation is substitution assisted by a nearby lone pair or π bond; it speeds the reaction and gives retention by double inversion."
+aliases: ["NGP", "SNNGP", "Anchimeric assistance", "Neighboring group participation", "Double inversion mechanism"]
+kind: "mechanism-type"
+family: "nucleophilic-substitution"
+exams: ["jee-advanced"]
+mapEdges: []
+reactant:
+  name: "2-Chloroethyl phenyl sulfide"
+  smiles: "ClCCSc1ccccc1"
+product:
+  name: "2-(Phenylthio)ethanol"
+  smiles: "OCCSc1ccccc1"
+byproducts: "HCl"
+reagents: "Weak external nucleophile (H2O, ROH, RCOOH) at low concentration"
+conditions: "Neighbouring group (lone pair or π bond) anti-periplanar to the leaving group; solvolysis conditions"
+equation: "C6H5S-CH2CH2-Cl + H2O -> C6H5S-CH2CH2-OH + HCl"
+notesPages: [46]
+memoryTricks: []
+faq:
+  - q: "What is neighbouring group participation?"
+    a: "It is the help a lone pair or π bond within the same molecule gives to a substitution: the internal group pushes out the leaving group and forms a cyclic intermediate, which the external nucleophile then opens. IUPAC also calls it anchimeric assistance."
+  - q: "Why does NGP give retention of configuration?"
+    a: "There are two backside attacks. The neighbouring group displaces the leaving group with inversion, then the external nucleophile opens the three-membered ring with a second inversion. Two inversions cancel, so the net result is retention."
+  - q: "Which groups show neighbouring group participation?"
+    a: "Atoms with lone pairs such as S, N and O (including O⁻), C=C π bonds and aromatic rings placed so they can reach the carbon bearing the leaving group. Sulfur in mustard-type compounds and phenyl groups (phenonium ion) are classic examples."
+  - q: "How does NGP affect the rate?"
+    a: "It usually makes the reaction much faster. For example, PhS–CH₂CH₂–Cl reacts with water about 600 times faster than a comparable chloride without the sulfur."
+related: ["sn1-reaction", "sn2-reaction", "sni-mechanism"]
+sources:
+  - title: "Neighbouring group participation"
+    url: "https://en.wikipedia.org/wiki/Neighbouring_group_participation"
+    publisher: "Wikipedia"
+  - title: "Neighboring Group Participation (Shea, Organic Synthesis)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Synthesis_(Shea)/03:_Neighboring_Group_Participation_Rearrangements_and_Fragmentations/3.02:_Neighboring_Group_Participation"
+    publisher: "LibreTexts"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 2
+  note: "Two exam rules in the notes are not stated by the sources and are kept as exam convention: the external nucleophile opens the ring at the carbon that better holds positive charge, and low nucleophile concentration favours NGP while high concentration favours direct SN2."
+---
+
+## What is neighbouring group participation?
+
+**Neighbouring group participation (NGP)**, also called **anchimeric assistance** and often written SN(NGP), is a nucleophilic substitution in which a group **within the substrate** (a lone pair on S, N or O, or a C=C or aromatic π bond) attacks the carbon bearing the leaving group before the external nucleophile does. A **cyclic, bridged intermediate** forms and is then opened by the outside nucleophile. The two consecutive backside attacks give **retention of configuration**, and the reaction is usually **much faster** than ordinary substitution.
+
+## General reaction
+
+<Eq ce="Z-CR2-CR2-Lg ->[\text{-Lg-}] \text{bridged Z+ ion} ->[Nu-] Z-CR2-CR2-Nu" />
+
+## Mechanism
+
+1. **Internal attack (first inversion).** The neighbouring group Z: must sit **anti** to the leaving group. Its lone pair (or π electrons) attacks the back of the carbon bearing Lg, and Lg⁻ leaves.
+2. **Bridged intermediate.** A three-membered ring with positive charge on Z forms (a sulfonium, aziridinium or epoxide-type ring, or a phenonium ion for an aryl group). Both ring carbons carry partial positive charge.
+3. **Ring opening (second inversion).** The external nucleophile attacks a ring carbon from the back and opens the ring.
+4. **Net result.** Inversion followed by inversion gives overall **retention**.
+
+<KeyPoint>
+Remember: Z: Lg के anti position पर होना चाहिए (Z must be anti to the leaving group). Double inversion → retention.
+</KeyPoint>
+
+<KeyPoint>
+जहाँ +ve charge more stable वहाँ attack करेगा (the nucleophile attacks the ring carbon where positive charge is more stable). In exam answers this decides which carbon gets the nucleophile when the bridged ring is unsymmetrical.
+</KeyPoint>
+
+## Groups that show NGP
+
+The patterns most often tested:
+
+- **Heteroatom lone pair on the β-carbon:** –NH–, –S–, –O⁻ in Z–CH₂(β)–CH₂(α)–Lg. Sulfur and nitrogen mustards are the textbook cases.
+- **Alkene π bond further along the chain:** CH₂=CH–CH₂–CH₂–Lg, where the double bond stabilises the developing positive charge.
+- **Aryl groups:** a phenyl ring on the β-carbon forms a **phenonium ion**.
+
+<KeyPoint>
+Nu⁻ की कम सान्द्रता → SN(NGP); Nu⁻ की ज्यादा सान्द्रता → SN2 (low concentration of external nucleophile favours NGP; high concentration favours direct SN2). The internal group is always present, so it wins when the outside nucleophile is scarce.
+</KeyPoint>
+
+## Examples
+
+**1. Sulfur participation.** 2-Chloroethyl phenyl sulfide hydrolyses about 600 times faster than a comparable primary chloride, because sulfur first forms a cyclic sulfonium ion that water opens quickly.
+
+<Eq ce="C6H5S-CH2CH2-Cl ->[\text{via cyclic sulfonium ion}][H2O] C6H5S-CH2CH2-OH + HCl" />
+
+**2. Alkene participation.** In a rigid bicyclic tosylate whose C=C bond sits behind the reaction centre, the π electrons assist ionisation so strongly that aqueous solvolysis is about 10¹¹ times faster than for the saturated analogue. The π bond delocalises the developing positive charge even when it is a few carbons away.
+
+**3. Phenonium ion.** A β-phenyl tosylate in acetic acid ionises with help from the ring; the phenonium ion is then opened by acetate. In an optically active substrate where the phenonium ion is symmetrical, attack at either carbon gives a racemic product, which is a tell-tale sign of NGP.
+
+<ExamTip>
+If a question shows unexpected retention, an unusually fast rate, or a product where the nucleophile has ended up on the neighbouring carbon, look for a lone pair or π bond two carbons away from the leaving group.
+</ExamTip>
+
+## Limitations and exceptions
+
+- The neighbouring group must be able to reach the back of the C–Lg bond. In ring systems, the *trans* isomer (anti arrangement) shows NGP while the *cis* isomer cannot and reacts by normal SN2 with inversion; one LibreTexts example shows the participating isomer reacting 670 times faster.
+- A strong, concentrated external nucleophile can outcompete the internal group and give simple SN2 inversion.
+- When the bridged ion is opened at the other carbon, the product is **rearranged** (the nucleophile appears on the neighbouring carbon).
+
+## Related reactions
+
+- [SN2 reaction](/reactions/sn2-reaction/): each step of NGP is an SN2-type backside attack.
+- [SN1 reaction](/reactions/sn1-reaction/): NGP intermediates replace the free carbocation.
+- [SNi mechanism](/reactions/sni-mechanism/): another substitution that gives retention.
+- [Nucleophilic substitution overview](/mechanisms/nucleophilic-substitution/)

@@ -1,0 +1,248 @@
+{
+ "exam": "jee-advanced",
+ "year": 2021,
+ "paper": 1,
+ "source": "https://jeeadv.ac.in/past_qps/2021_1_English.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2021-p1-q1",
+   "number": 1,
+   "type": "single",
+   "stem": "The major product formed in the following reaction is\nCompound (shown) —NaNH₂; Na, liq. NH₃→ major product",
+   "figures": [
+    {
+     "smiles": "C#CCCCCC#CCCC"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "C=CCCCC/C=C/CCC"
+    },
+    {
+     "key": "B",
+     "smiles": "C#CCCCC/C=C/CCC"
+    },
+    {
+     "key": "C",
+     "smiles": "C#CCCCC/C=C\\CCC"
+    },
+    {
+     "key": "D",
+     "smiles": "C=CCCCC/C=C\\CCC"
+    }
+   ],
+   "answer": "B",
+   "solution": "NaNH₂ first removes the acidic terminal ≡C–H, so that end is held as a sodium acetylide. An acetylide anion does not accept electrons from Na, so only the internal triple bond is reduced. Dissolving-metal reduction goes through a radical anion and a vinyl radical that prefer the trans geometry, giving an (E)-alkene. On workup the acetylide is protonated back, so the product is (E)-undec-7-en-1-yne (B).",
+   "topics": [
+    "reactions/birch-reduction",
+    "mechanisms/reduction-reactions"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2021-p1-q2",
+   "number": 2,
+   "type": "single",
+   "stem": "Among the following, the conformation that corresponds to the most stable conformation of meso-butane-2,3-diol is\n(Each option is a staggered Newman projection. One carbon carries the groups at top, lower-left and lower-right; the other carbon carries the groups at upper-left, upper-right and bottom.)",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "Newman projection — top: OH; upper-right: Me; lower-right: H; bottom: OH; lower-left: Me; upper-left: H"
+    },
+    {
+     "key": "B",
+     "text": "Newman projection — top: OH; upper-right: OH; lower-right: Me; bottom: Me; lower-left: H; upper-left: H"
+    },
+    {
+     "key": "C",
+     "text": "Newman projection — top: OH; upper-right: OH; lower-right: Me; bottom: H; lower-left: H; upper-left: Me"
+    },
+    {
+     "key": "D",
+     "text": "Newman projection — top: OH; upper-right: OH; lower-right: H; bottom: Me; lower-left: Me; upper-left: H"
+    }
+   ],
+   "answer": "B",
+   "solution": "First check which projections are the meso isomer. Going counterclockwise, the two carbons show the same cyclic order of OH, Me and H in A and B, so these are meso. In C and D the order is opposite, so they are the chiral (±) diastereomer. A is the all-anti conformer. B keeps the two OH groups gauche, so an intramolecular O–H···O hydrogen bond can form, and this outweighs the gauche Me/Me strain. B is therefore the most stable meso conformer.",
+   "topics": [
+    "reactions/pinacol-coupling",
+    "comparisons/boiling-point-trends"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2021-p1-q5",
+   "number": 5,
+   "type": "numerical",
+   "stem": "For the following reaction scheme, percentage yields are given along the arrow:\nMg₂C₃ —H₂O→ P (4.0 g) —NaNH₂, MeI (75%)→ Q —red hot iron tube, 873 K (40%)→ R (x g)\nP —Hg²⁺/H⁺, 333 K (100%)→ S —Ba(OH)₂, heat (80%)→ T —NaOCl (80%)→ U (y g) (decolourises Baeyer's reagent)\nx g and y g are mass of R and U, respectively.\n(Use: Molar mass (in g mol⁻¹) of H, C and O as 1, 12 and 16, respectively)\nThe value of x is ___.",
+   "figures": [],
+   "options": [],
+   "answer": "1.62",
+   "solution": "Mg₂C₃ is hydrolysed to propyne P: 4.0 g ÷ 40 g mol⁻¹ = 0.10 mol. Deprotonation and methylation give but-2-yne Q, 0.075 mol at 75%. In a red-hot iron tube, three molecules of but-2-yne cyclise to hexamethylbenzene R (C₁₂H₁₈, 162 g mol⁻¹). That is 0.075/3 × 0.40 = 0.010 mol, so x = 1.62 g.",
+   "topics": [
+    "mechanisms/nucleophilic-substitution",
+    "reactions/sn2-reaction"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2021-p1-q6",
+   "number": 6,
+   "type": "numerical",
+   "stem": "For the following reaction scheme, percentage yields are given along the arrow:\nMg₂C₃ —H₂O→ P (4.0 g) —NaNH₂, MeI (75%)→ Q —red hot iron tube, 873 K (40%)→ R (x g)\nP —Hg²⁺/H⁺, 333 K (100%)→ S —Ba(OH)₂, heat (80%)→ T —NaOCl (80%)→ U (y g) (decolourises Baeyer's reagent)\nx g and y g are mass of R and U, respectively.\n(Use: Molar mass (in g mol⁻¹) of H, C and O as 1, 12 and 16, respectively)\nThe value of y is ___.",
+   "figures": [],
+   "options": [],
+   "answer": "3.20",
+   "solution": "Hydration of propyne (Hg²⁺/H⁺) gives acetone S, 0.10 mol. Ba(OH)₂ with heat brings about aldol condensation of two acetones to mesityl oxide T, (CH₃)₂C=CHCOCH₃: 0.05 × 0.80 = 0.040 mol. The haloform reaction with NaOCl turns the methyl ketone into 3-methylbut-2-enoic acid U, (CH₃)₂C=CHCOOH (100 g mol⁻¹). This acid still has a C=C, so it decolourises Baeyer's reagent. U = 0.040 × 0.80 = 0.032 mol, so y = 3.20 g.",
+   "topics": [
+    "reactions/kucherov-reaction",
+    "reactions/aldol-condensation",
+    "reactions/haloform-reaction"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2021-p1-q11",
+   "number": 11,
+   "type": "multiple",
+   "stem": "Given: D-Glucose —HNO₃→ P, [α]D = +52.7°\nThe compound(s), which on reaction with HNO₃ will give the product having degree of rotation, [α]D = −52.7° is(are)",
+   "figures": [
+    {
+     "smiles": "O=C[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO",
+     "label": "D-Glucose"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "O=C[C@@H](O)[C@@H](O)[C@H](O)[C@H](O)CO"
+    },
+    {
+     "key": "B",
+     "smiles": "O=C[C@@H](O)[C@@H](O)[C@H](O)[C@@H](O)CO"
+    },
+    {
+     "key": "C",
+     "smiles": "O=C[C@@H](O)[C@H](O)[C@@H](O)[C@@H](O)CO"
+    },
+    {
+     "key": "D",
+     "smiles": "O=C[C@H](O)[C@H](O)[C@@H](O)[C@H](O)CO"
+    }
+   ],
+   "answer": [
+    "C",
+    "D"
+   ],
+   "solution": "HNO₃ oxidises both CHO and CH₂OH to COOH, so P is D-glucaric acid. The −52.7° product is its enantiomer, L-glucaric acid. L-Glucose (C), the mirror image of D-glucose, gives it directly. Both ends of the product are COOH, so a sugar whose diacid is L-glucaric acid turned end-for-end also works. D-Gulose (D) is such a sugar, so it gives L-glucaric acid too. A (D-mannose) gives mannaric acid, and B (L-gulose) gives D-glucaric acid (+52.7°).",
+   "topics": [
+    "concepts/aldoses-and-epimers"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2021-p1-q12",
+   "number": 12,
+   "type": "multiple",
+   "stem": "The reaction of Q with PhSNa yields an organic compound (major product) that gives positive Carius test on treatment with Na₂O₂ followed by addition of BaCl₂. The correct option(s) for Q is(are)",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "[O-][N+](=O)c1ccc(F)c([N+](=O)[O-])c1"
+    },
+    {
+     "key": "B",
+     "smiles": "Ic1cc([N+](=O)[O-])cc([N+](=O)[O-])c1"
+    },
+    {
+     "key": "C",
+     "smiles": "CSc1cc(Br)cc([N+](=O)[O-])c1"
+    },
+    {
+     "key": "D",
+     "smiles": "CSc1cc(CCl)ccc1[N+](=O)[O-]"
+    }
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "solution": "The test detects sulfur: Na₂O₂ oxidises S to sulfate, and BaCl₂ then precipitates white BaSO₄. So the product only needs to contain S. In A, the F is activated by o- and p-NO₂, so PhS⁻ substitutes it (SNAr) to give an aryl phenyl sulfide. In B, the soft thiolate displaces one nitro group, which is activated by the other meta-NO₂ and the I. C and D already carry SMe, so their products contain S whatever happens (in D, PhS⁻ simply displaces the benzylic Cl by SN2).",
+   "topics": [
+    "reactions/nucleophilic-aromatic-substitution",
+    "reactions/sn2-reaction"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2021-p1-q17",
+   "number": 17,
+   "type": "numerical",
+   "stem": "The maximum number of possible isomers (including stereoisomers) which may be formed on mono-bromination of 1-methylcyclohex-1-ene using Br₂ and UV light is ___.",
+   "figures": [],
+   "options": [],
+   "answer": "13",
+   "solution": "Substitution of an H at each sp³ carbon gives five products: 3-, 4-, 5- and 6-bromo-1-methylcyclohexene, each chiral (2 each = 8), plus achiral 1-(bromomethyl)cyclohexene (1). The allylic radicals are delocalised, so bromine can also attach at the far end. The C3 radical gives 3-bromo-3-methylcyclohexene (chiral, 2). The CH₃ radical gives 2-bromo-1-methylidenecyclohexane (chiral, 2). The C6 radical gives back 6-bromo-1-methylcyclohexene, so nothing new. Total = 8 + 1 + 2 + 2 = 13.",
+   "topics": [
+    "reactions/free-radical-halogenation",
+    "reactions/nbs-allylic-bromination"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2021-p1-q18",
+   "number": 18,
+   "type": "numerical",
+   "stem": "In the reaction given below, the total number of atoms having sp² hybridization in the major product P is ___.\nCompound (shown) —1. O₃ (excess) then Zn/H₂O; 2. NH₂OH (excess)→ P",
+   "figures": [
+    {
+     "smiles": "C1CC2=C(C1)CCC1=C(CCC1)CC2"
+    }
+   ],
+   "options": [],
+   "answer": "8",
+   "solution": "Ozonolysis cleaves both tetrasubstituted C=C bonds of the central eight-membered ring. Each alkene carbon becomes a ketone, giving a 16-membered cyclic tetraketone. Excess NH₂OH turns all four C=O groups into C=N–OH. Each oxime has an sp² carbon and an sp² nitrogen. The O of N–OH is counted as sp³, so P has 4 + 4 = 8 sp² atoms.",
+   "topics": [
+    "reactions/ozonolysis"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": false,
+    "note": "Held back for review: low confidence"
+   }
+  }
+ ]
+}

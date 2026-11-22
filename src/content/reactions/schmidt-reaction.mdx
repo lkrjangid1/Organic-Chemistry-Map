@@ -1,0 +1,174 @@
+---
+title: "Schmidt Reaction"
+description: "Schmidt reaction: a carboxylic acid with hydrazoic acid (HN₃) and conc. H₂SO₄ gives a primary amine with one carbon fewer, plus CO₂ and N₂. Mechanism, examples."
+aliases: ["Schmidt rearrangement", "Smidth rearrangement", "Schmidt reaction of carboxylic acids", "Hydrazoic acid reaction"]
+kind: "rearrangement"
+family: "rearrangement-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["schmidt_reaction_butanoic_acid"]
+reactant:
+  name: "Butanoic acid"
+  smiles: "CCCC(=O)O"
+product:
+  name: "Propan-1-amine"
+  smiles: "CCCN"
+byproducts: "CO₂, N₂"
+reagents: "HN₃ (hydrazoic acid) with conc. H₂SO₄"
+conditions: "Warm"
+equation: "R-COOH + HN3 ->[conc. H2SO4] R-NH2 + CO2 + N2"
+notesPages: [38, 39]
+steps:
+  - title: "Protonation"
+    text: "Concentrated H₂SO₄ protonates the OH of butanoic acid, giving R–C(=O)–OH₂⁺."
+    arrows: "Lone pair of the –OH oxygen → H⁺."
+    species:
+      - smiles: "CCCC(=O)O"
+        label: "Butanoic acid"
+        highlight: "C(=O)[OH]"
+      - smiles: "[H+]"
+        label: "Proton"
+      - smiles: "CCCC(=O)[OH2+]"
+        label: "Protonated acid"
+  - title: "Acylium ion"
+    text: "Water leaves, giving the acylium ion R–C≡O⁺. In exam answers this step is often marked as rate-determining."
+    arrows: "C–O bond pair → oxygen as water departs; an O lone pair forms the C≡O⁺ bond."
+    species:
+      - smiles: "CCCC(=O)[OH2+]"
+        label: "Protonated acid"
+        highlight: "C[OH2+]"
+      - smiles: "CCCC#[O+]"
+        label: "Butanoyl acylium ion"
+      - smiles: "O"
+        label: "Water"
+  - title: "Attack of hydrazoic acid"
+    text: "The nitrogen bearing H in HN₃ attacks the acylium carbon, giving a protonated acyl azide, R–CO–NH–N⁺≡N."
+    arrows: "Lone pair of the N–H nitrogen → acylium carbon; C≡O⁺ π pair → O."
+    species:
+      - smiles: "CCCC#[O+]"
+        label: "Butanoyl acylium ion"
+        highlight: "C#[O+]"
+      - smiles: "N=[N+]=[N-]"
+        label: "Hydrazoic acid"
+        highlight: "[NH]"
+      - smiles: "CCCC(=O)N[N+]#N"
+        label: "Protonated acyl azide"
+  - title: "Rearrangement"
+    text: "The propyl group moves from carbon to nitrogen as N₂ leaves, with retention of configuration, giving a protonated isocyanate R–NH⁺=C=O. Loss of H⁺ gives the isocyanate R–N=C=O."
+    arrows: "C–propyl bond pair → N as the N–N bond pair leaves with N₂."
+    species:
+      - smiles: "CCCC(=O)N[N+]#N"
+        label: "Protonated acyl azide"
+        highlight: "[CH2]C(=O)N"
+      - smiles: "CCC[NH+]=C=O"
+        label: "Protonated isocyanate"
+      - smiles: "CCCN=C=O"
+        label: "Propyl isocyanate"
+  - title: "Hydrolysis"
+    text: "Water adds to the isocyanate carbon and proton transfer gives a carbamic acid, R–NH–COOH."
+    arrows: "Lone pair of water O → isocyanate carbon; C=N π pair → N, which takes a proton."
+    species:
+      - smiles: "CCCN=C=O"
+        label: "Propyl isocyanate"
+        highlight: "N=C=O"
+      - smiles: "O"
+        label: "Water"
+      - smiles: "CCCNC(=O)O"
+        label: "Propylcarbamic acid"
+  - title: "Decarboxylation"
+    text: "The carbamic acid loses CO₂, giving propan-1-amine, one carbon fewer than butanoic acid. In the acid it is present as its ammonium salt and is freed on basification."
+    arrows: "The C–N bond pair moves onto nitrogen (which takes the O–H proton) as CO₂ is released."
+    species:
+      - smiles: "CCCNC(=O)O"
+        label: "Propylcarbamic acid"
+        highlight: "C(=O)[OH]"
+      - smiles: "CCCN"
+        label: "Propan-1-amine"
+      - smiles: "O=C=O"
+        label: "Carbon dioxide"
+memoryTricks: []
+faq:
+  - q: "What is the product of the Schmidt reaction of a carboxylic acid?"
+    a: "A primary amine with one carbon fewer than the acid, together with CO₂ and N₂. For example, butanoic acid gives propan-1-amine."
+  - q: "What reagent is used in the Schmidt reaction?"
+    a: "Hydrazoic acid, HN₃ (often generated from sodium azide), with a strong acid catalyst such as concentrated H₂SO₄."
+  - q: "Is configuration retained in the Schmidt reaction?"
+    a: "Yes. The migrating alkyl group moves from carbon to nitrogen with its configuration unchanged, so an optically active acid gives an amine of the same configuration at that carbon."
+  - q: "What is the difference between the Schmidt and Hofmann reactions?"
+    a: "Both give an amine with one carbon fewer through an isocyanate. The Schmidt reaction starts from a carboxylic acid with HN₃ in acid; the Hofmann reaction starts from a primary amide with Br₂ and NaOH."
+  - q: "What does a ketone give in the Schmidt reaction?"
+    a: "An amide. The ketone adds HN₃, loses N₂ and undergoes a Beckmann-like shift, so the product is the same kind of amide as from the Beckmann rearrangement."
+related: ["hofmann-bromamide-degradation", "beckmann-rearrangement", "baeyer-villiger-oxidation", "decarboxylation"]
+sources:
+  - title: "Schmidt reaction"
+    url: "https://en.wikipedia.org/wiki/Schmidt_reaction"
+    publisher: "Wikipedia"
+  - title: "Schmidt Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/schmidt-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "30.8: Rearrangements of Cationic or Electron Deficient Nitrogen (Virtual Textbook of Organic Chemistry, Reusch)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Book:_Virtual_Textbook_of_OChem_(Reusch)_UNDER_CONSTRUCTION/30:_Cationic_Rearrangements/30.8:_Rearrangements_of_Cationic_or_Electron_Deficient_Nitrogen"
+    publisher: "LibreTexts"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 3
+  note: "Notes call acylium formation the RDS and say an electron-releasing migrating group speeds the reaction; no source states either, so both are kept as exam convention."
+---
+
+## What is the Schmidt reaction?
+
+The **Schmidt reaction** converts a **carboxylic acid into a primary amine with one carbon fewer**, using **hydrazoic acid (HN₃)** and a strong acid such as **concentrated H₂SO₄**. The carboxyl carbon leaves as **CO₂** and two nitrogen atoms leave as **N₂**. It is a "step-down" reaction, like the Hofmann bromamide degradation, and both pass through an **isocyanate** (R–N=C=O). Karl Friedrich Schmidt reported it in 1924.
+
+<Eq ce="CH3CH2CH2COOH + HN3 ->[conc. H2SO4] CH3CH2CH2NH2 + CO2 + N2" />
+
+## Mechanism
+
+Hydrazoic acid is a resonance hybrid, H–N=N⁺=N⁻ ↔ H–N⁻–N⁺≡N; the terminal N₂ unit is an excellent leaving group.
+
+1. **Protonation.** The acid protonates the OH of R–COOH, giving R–C(=O)–OH₂⁺.
+2. **Acylium ion.** Water leaves, giving the acylium ion R–C≡O⁺ (in concentrated H₂SO₄). In exam answers this step is often marked as rate-determining.
+3. **Attack of HN₃.** The nitrogen bearing H attacks the acylium carbon, giving a protonated acyl azide, R–CO–NH–N⁺≡N.
+4. **Rearrangement.** R moves from carbon to nitrogen as N₂ leaves, giving a protonated isocyanate R–NH⁺=C=O. Loss of H⁺ gives the **isocyanate** R–N=C=O.
+5. **Hydrolysis.** Water adds to the isocyanate carbon; proton transfer gives a **carbamic acid**, R–NH–COOH.
+6. **Decarboxylation.** The carbamic acid loses CO₂, giving the amine (as its ammonium salt in the acid, freed on basification).
+
+<Eq ce="R-COOH ->[H+][-H2O] R-C#O+ ->[HN3] R-CO-NH-N2+ ->[-N2][-H+] R-N=C=O ->[H2O] R-NH-COOH ->[-CO2] R-NH2" />
+
+<KeyPoint>
+The migrating group keeps its configuration (**retention**): an optically active acid gives an amine with the same configuration at the migrating carbon, which shows the shift is intramolecular. The N that carried H in HN₃ ends up in the amine; the other two N atoms leave as N₂.
+</KeyPoint>
+
+## Examples
+
+1. **Butanoic acid → propan-1-amine:**
+
+<Eq ce="CH3CH2CH2COOH ->[HN3, conc. H2SO4] CH3CH2CH2NH2 + CO2 + N2" />
+
+2. **Benzoic acid → aniline:**
+
+<Eq ce="C6H5COOH ->[HN3, H2SO4] C6H5NH2 + CO2 + N2" />
+
+3. **Ketone → amide:** with ketones the same reagent inserts NH next to the carbonyl. Schmidt's first example was benzophenone giving benzanilide.
+
+<Eq ce="(C6H5)2C=O + HN3 ->[H2SO4] C6H5-CO-NH-C6H5 + N2" />
+
+<ExamTip>
+For an acid, delete the COOH carbon and write NH₂ in its place, with configuration unchanged. Products: amine + CO₂ + N₂. Compare: Hofmann (amide, Br₂/NaOH) and Curtius (acyl azide, heat) give the same amine through the same isocyanate.
+</ExamTip>
+
+In exam answers the reaction is said to go faster when the migrating group is electron-releasing, since it can better support the electron-poor nitrogen during the shift.
+
+## Limitations and exceptions
+
+- **Hazard:** hydrazoic acid is highly toxic and explosive, so it is generated in situ (for example from NaN₃ and acid) and handled with care.
+- The strongly acidic conditions rule out acid-sensitive substrates; the Curtius rearrangement (acyl azide from an acid chloride and NaN₃, then heat) runs under neutral conditions instead.
+- With ketones, unsymmetrical substrates can give two amides, and the migrating group can change with the acid used.
+- Alkenes and tertiary alcohols also react with HN₃ under acid, giving imines.
+
+## Related reactions
+
+- [Hofmann bromamide degradation](/reactions/hofmann-bromamide-degradation/): amide to amine with one carbon fewer via the same isocyanate.
+- [Beckmann rearrangement](/reactions/beckmann-rearrangement/): oxime to amide; the ketone Schmidt reaction follows a Beckmann-like path.
+- [Baeyer–Villiger oxidation](/reactions/baeyer-villiger-oxidation/): the oxygen-insertion analogue.
+- [Decarboxylation](/reactions/decarboxylation/): another way to lose the carboxyl carbon as CO₂.
+- [Rearrangement reactions hub](/mechanisms/rearrangement-reactions/)

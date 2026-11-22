@@ -1,0 +1,50 @@
+{
+ "page": "reactions/benzidine-rearrangement",
+ "questions": [
+  {
+   "q": "Hydrazobenzene is treated with a mineral acid such as HCl. The major product is:",
+   "smiles": "c1ccc(NNc2ccccc2)cc1",
+   "options": [
+    "Azobenzene",
+    "4-Aminodiphenylamine (p-semidine)",
+    "Benzidine (biphenyl-4,4′-diamine)",
+    "2,2′-Diaminobiphenyl"
+   ],
+   "answer": 2,
+   "explain": "The N–N bond breaks and a new C–C bond joins the two para carbons, giving benzidine. p-Semidine forms only in small amounts, and diphenyline (2,4′-isomer) is the main side product."
+  },
+  {
+   "q": "The benzidine rearrangement of diprotonated hydrazobenzene is classified as a:",
+   "options": [
+    "[5,5] sigmatropic shift",
+    "[3,3] sigmatropic shift",
+    "[1,3] sigmatropic shift",
+    "[1,5] sigmatropic shift"
+   ],
+   "answer": 0,
+   "explain": "Numbering from each nitrogen (1 and 1′) round to the para carbon (5 and 5′), the N–N σ bond is replaced by a C5–C5′ bond. The [3,3] label belongs to the Claisen and Cope rearrangements."
+  },
+  {
+   "q": "Which sequence converts nitrobenzene into benzidine?",
+   "options": [
+    "Sn/HCl, then heat",
+    "Zn/NH₄Cl, then dil. H₂SO₄",
+    "Reduction in strongly acidic medium, then base",
+    "Reduction in alkaline medium to hydrazobenzene, then mineral acid"
+   ],
+   "answer": 3,
+   "explain": "Reduction in an alkaline medium couples two molecules and stops at hydrazobenzene, and acid then triggers the rearrangement. Reduction in acid gives aniline, and Zn/NH₄Cl followed by H₂SO₄ gives p-aminophenol by the Bamberger route."
+  },
+  {
+   "q": "Which statement about the benzidine rearrangement is correct?",
+   "options": [
+    "Only one nitrogen is protonated before the C–C bond forms",
+    "Crossover experiments give no mixed products, showing that the reaction is intramolecular",
+    "Pure benzidine is obtained with no isomeric side products",
+    "Hydrazobenzene first splits into two free anilino radicals that recombine at the para carbons"
+   ],
+   "answer": 1,
+   "explain": "Both rings stay attached throughout the concerted shift of the diprotonated substrate, so crossover gives no mixed products. Free fragments that recombine would give mixed products, and diphenyline and semidines always accompany benzidine."
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { url, absUrl } from '../../lib/site';
+import { breadcrumbLd } from '../../lib/seo';
+import { flashcards } from '../../lib/tools';
+
+const cards = await flashcards();
+const DECKS = [
+  { id: 'reactions', label: 'Named reactions' },
+  { id: 'reverse', label: 'Identify the reaction' },
+  { id: 'reagents', label: 'Reagents' },
+  { id: 'tests', label: 'Tests' },
+  { id: 'theory', label: 'Concepts & comparisons' },
+].map((d) => ({ ...d, count: cards.filter((c) => c.deck === d.id).length }));
+const path = 'tools/flashcards/';
+const title = 'Organic Chemistry Flashcards for JEE & NEET (Free)';
+const description = `${cards.length} free organic chemistry flashcards: named reactions, reagents, tests and GOC concepts, with spaced repetition that remembers what you know.`;
+const jsonLd = [
+  { '@type': 'WebApplication', name: title, url: absUrl(path), description, applicationCategory: 'EducationalApplication', operatingSystem: 'Any (web browser)', isAccessibleForFree: true, offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' }, inLanguage: 'en-IN' },
+  breadcrumbLd([{ name: 'Tools', path: 'tools/' }, { name: 'Flashcards', path }]),
+];
+---
+<Base title={title} description={description} path={path} jsonLd={jsonLd} section="tools">
+  <div class="container page tool">
+    <Breadcrumbs items={[{ label: 'Tools', href: url('tools/') }, { label: 'Flashcards' }]} />
+    <header class="page-head">
+      <h1>Organic chemistry flashcards</h1>
+      <p class="summary">Pick a deck, try to recall the answer, then flip the card. Cards you know come back less often; cards you miss come back soon. Progress is saved in this browser.</p>
+    </header>
+    <div class="tool-panel">
+      <fieldset class="seg" id="fc-decks" aria-label="Deck">
+        {DECKS.map((d, i) => <label><input type="radio" name="deck" value={d.id} checked={i === 0} /> {d.label} <small>({d.count})</small></label>)}
+      </fieldset>
+    </div>
+    <div class="fc-wrap">
+      <div class="fc-card" id="fc-card" tabindex="0" aria-live="polite">
+        <p class="fc-sub" id="fc-sub"></p>
+        <p class="fc-front" id="fc-front">Loading…</p>
+        <div class="fc-back" id="fc-back" hidden></div>
+      </div>
+      <div class="fc-actions">
+        <button class="btn btn-primary" id="fc-flip" type="button">Show answer <kbd>Space</kbd></button>
+        <button class="btn btn-ghost" id="fc-again" type="button" hidden>Again <kbd>1</kbd></button>
+        <button class="btn btn-primary" id="fc-know" type="button" hidden>I knew it <kbd>2</kbd></button>
+      </div>
+      <p class="fc-stats" id="fc-stats"></p>
+      <p class="tool-hint"><button type="button" class="btn-link" id="fc-reset">Reset progress for this deck</button></p>
+    </div>
+  </div>
+  <script type="application/json" id="fc-data" set:html={JSON.stringify(cards).replace(/</g, '\\u003c')} />
+</Base>
+
+<script>
+  import { notifyProgress } from '../../scripts/account';
+  type Card = { id: string; deck: string; front: string; sub?: string; back: string[]; href: string };
+  const cards: Card[] = JSON.parse(document.getElementById('fc-data')!.textContent!);
+  const KEY = 'ocm-flashcards-v1';
+  const load = (): Record<string, number> => { try { return JSON.parse(localStorage.getItem(KEY) ?? '{}'); } catch { return {}; } };
+  const save = (s: Record<string, number>) => { try { localStorage.setItem(KEY, JSON.stringify(s)); } catch { /* storage unavailable */ } };
+  let boxes = load();
+  let deck = 'reactions';
+  let current: Card | undefined;
+  let last = '';
+  const $ = (id: string) => document.getElementById(id)!;
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+
+  // Leitner boxes 1-5: lower boxes are picked more often.
+  function pick() {
+    const pool = cards.filter((c) => c.deck === deck && c.id !== last);
+    const weight = (c: Card) => [16, 8, 4, 2, 1][(boxes[c.id] ?? 1) - 1];
+    let r = Math.random() * pool.reduce((n, c) => n + weight(c), 0);
+    for (const c of pool) { r -= weight(c); if (r <= 0) return c; }
+    return pool[0];
+  }
+  function show() {
+    current = pick();
+    if (!current) return;
+    last = current.id;
+    $('fc-sub').textContent = current.sub ?? '';
+    $('fc-front').textContent = current.front;
+    $('fc-back').innerHTML = `<ul>${current.back.map((b) => `<li>${esc(b)}</li>`).join('')}</ul><a href="${current.href}">Open the full page →</a>`;
+    $('fc-back').hidden = true;
+    $('fc-flip').hidden = false;
+    $('fc-again').hidden = true;
+    $('fc-know').hidden = true;
+    stats();
+  }
+  function flip() {
+    if (!$('fc-back').hidden) return;
+    $('fc-back').hidden = false;
+    $('fc-flip').hidden = true;
+    $('fc-again').hidden = false;
+    $('fc-know').hidden = false;
+  }
+  function grade(knew: boolean) {
+    if (!current || $('fc-back').hidden) return;
+    boxes[current.id] = knew ? Math.min(5, (boxes[current.id] ?? 1) + 1) : 1;
+    save(boxes);
+    notifyProgress();
+    show();
+  }
+  function stats() {
+    const inDeck = cards.filter((c) => c.deck === deck);
+    const counts = [0, 0, 0, 0, 0];
+    for (const c of inDeck) counts[(boxes[c.id] ?? 1) - 1]++;
+    const mastered = counts[3] + counts[4];
+    $('fc-stats').textContent = `${inDeck.length} cards · ${mastered} well known · ${counts[0]} still new or missed`;
+  }
+  $('fc-flip').addEventListener('click', flip);
+  $('fc-card').addEventListener('click', flip);
+  $('fc-again').addEventListener('click', () => grade(false));
+  $('fc-know').addEventListener('click', () => grade(true));
+  $('fc-reset').addEventListener('click', () => { for (const c of cards) if (c.deck === deck) delete boxes[c.id]; save(boxes); show(); });
+  $('fc-decks').addEventListener('change', (e) => { deck = (e.target as HTMLInputElement).value; last = ''; show(); });
+  document.addEventListener('keydown', (e) => {
+    if ((e.target as HTMLElement).tagName === 'INPUT') return;
+    if (e.key === ' ') { e.preventDefault(); flip(); }
+    if (e.key === '1') grade(false);
+    if (e.key === '2') grade(true);
+  });
+  window.addEventListener('ocm:synced', () => { boxes = load(); stats(); });
+  show();
+</script>

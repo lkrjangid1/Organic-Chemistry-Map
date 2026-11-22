@@ -1,0 +1,169 @@
+---
+title: "Perkin Reaction"
+description: "The Perkin reaction condenses an aromatic aldehyde with an acid anhydride and its sodium salt on heating to give an α,β-unsaturated acid, e.g. cinnamic acid."
+aliases: ["Perkin condensation", "Perkin synthesis of cinnamic acid", "Perkin reaction cinnamic acid"]
+kind: "named-reaction"
+family: "carbonyl-condensation-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["perkin_reaction"]
+reactant:
+  name: "Benzaldehyde"
+  smiles: "O=Cc1ccccc1"
+product:
+  name: "Cinnamic acid (3-phenylprop-2-enoic acid)"
+  smiles: "OC(=O)/C=C/c1ccccc1"
+byproducts: "Acetic acid (CH₃COOH)"
+reagents: "Acetic anhydride (CH₃CO)₂O with sodium or potassium acetate as the base; then H₃O⁺"
+conditions: "Heat; acid work-up"
+equation: "C6H5CHO + (CH3CO)2O ->[CH3COONa][\\Delta] C6H5CH=CHCOOH + CH3COOH"
+notesPages: [74]
+steps:
+  - title: "Carbanion formation"
+    text: "In the mechanism used in exam answers (the exact pathway is still debated), acetate removes an α-hydrogen from acetic anhydride, giving a carbanion."
+    arrows: "Acetate O⁻ lone pair → α-H of the anhydride; the C–H bond pair stays on carbon."
+    species:
+      - smiles: "CC(=O)OC(C)=O"
+        label: "Acetic anhydride"
+        highlight: "[CH3]C(=O)O"
+      - smiles: "CC(=O)[O-]"
+        label: "Acetate (base)"
+        highlight: "[O-]"
+      - smiles: "[CH2-]C(=O)OC(C)=O"
+        label: "Anhydride carbanion"
+        highlight: "[CH2-]"
+  - title: "Addition to benzaldehyde"
+    text: "The carbanion attacks the C=O carbon of benzaldehyde. After protonation this gives the aldol-type adduct C₆H₅CH(OH)CH₂COOCOCH₃, where the condensation step itself ends ('Perkin यहीं तक है')."
+    arrows: "Carbanion lone pair → aldehyde carbonyl C; the C=O π pair → O⁻, which is then protonated."
+    species:
+      - smiles: "[CH2-]C(=O)OC(C)=O"
+        label: "Anhydride carbanion"
+        highlight: "[CH2-]"
+      - smiles: "O=Cc1ccccc1"
+        label: "Benzaldehyde"
+        highlight: "[CH]=O"
+      - smiles: "OC(CC(=O)OC(C)=O)c1ccccc1"
+        label: "Aldol-type adduct"
+  - title: "Hydrolysis of the anhydride"
+    text: "Acid work-up (H₃O⁺) cleaves the anhydride part, giving the β-hydroxy acid C₆H₅CH(OH)CH₂COOH and acetic acid."
+    arrows: "Water attacks an anhydride C=O carbon and the acyl–O bond breaks, releasing acetic acid."
+    species:
+      - smiles: "OC(CC(=O)OC(C)=O)c1ccccc1"
+        label: "Aldol-type adduct"
+        highlight: "C(=O)OC(=O)"
+      - smiles: "OC(CC(=O)O)c1ccccc1"
+        label: "β-Hydroxy acid"
+      - smiles: "CC(=O)O"
+        label: "Acetic acid"
+  - title: "Dehydration to cinnamic acid"
+    text: "On heating, the OH and an α-H are lost as water, giving a C=C conjugated with both the benzene ring and the COOH group: cinnamic acid."
+    arrows: "The α C–H bond pair forms the C=C π bond as the C–OH bond breaks and water leaves."
+    species:
+      - smiles: "OC(CC(=O)O)c1ccccc1"
+        label: "β-Hydroxy acid"
+        highlight: "[OX2H][CH][CH2]C(=O)"
+      - smiles: "OC(=O)/C=C/c1ccccc1"
+        label: "Cinnamic acid"
+        highlight: "C=CC(=O)O"
+      - smiles: "O"
+        label: "Water"
+memoryTricks:
+  - text: "Perkin यहीं तक है"
+    meaning: "\"Perkin goes only up to here\": the C–C bond-forming condensation step ends at the aldol-type adduct of the anhydride; hydrolysis and loss of water then finish the job to give cinnamic acid."
+faq:
+  - q: "What is the product of the Perkin reaction of benzaldehyde?"
+    a: "Cinnamic acid, C₆H₅CH=CHCOOH, formed when benzaldehyde is heated with acetic anhydride and sodium acetate and the mixture is then acidified. Acetic acid is the by-product."
+  - q: "What is the role of sodium acetate in the Perkin reaction?"
+    a: "Acetate is the base. It removes an α-hydrogen from acetic anhydride to make the carbanion that attacks the aldehyde. The salt matches the anhydride (acetate with acetic anhydride) so that no mixed products form; other bases can also be used."
+  - q: "Why does the Perkin reaction need an aromatic aldehyde?"
+    a: "An aromatic aldehyde such as benzaldehyde has no α-hydrogen, so it cannot form a carbanion and condense with itself. It can only act as the electrophile, which keeps the reaction clean."
+  - q: "What are the structural requirements for the anhydride?"
+    a: "The anhydride must have α-hydrogens, at least two on the same carbon, because one is removed to form the carbanion and a second is lost when the C=C double bond forms."
+  - q: "How is coumarin made by the Perkin reaction?"
+    a: "Salicylaldehyde (2-hydroxybenzaldehyde) is heated with acetic anhydride and sodium acetate. The cinnamic-acid-type intermediate cyclises with the neighbouring phenol OH to give the lactone coumarin."
+related: ["aldol-condensation", "cross-aldol-condensation", "knoevenagel-condensation", "claisen-condensation", "wittig-reaction", "mechanisms/carbonyl-condensation-reactions"]
+sources:
+  - title: "Perkin reaction"
+    url: "https://en.wikipedia.org/wiki/Perkin_reaction"
+    publisher: "Wikipedia"
+  - title: "Perkin Reaction"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Reactions/Organic_Reactions/Claisen_Condensation/Perkin_Reaction"
+    publisher: "Chemistry LibreTexts"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 2
+  note: "Both sources state the exact mechanism is not universally agreed; the page gives the standard exam mechanism (anhydride carbanion, addition, hydrolysis, dehydration)."
+---
+
+## What is the Perkin reaction?
+
+The **Perkin reaction** converts an **aromatic aldehyde** into an **α,β-unsaturated aromatic acid** by heating it with an **acid anhydride** and the **sodium (or potassium) salt of the same acid**. The salt acts as the base. Benzaldehyde, acetic anhydride and sodium acetate give **cinnamic acid**, C₆H₅CH=CHCOOH. It was developed by William Henry Perkin in 1868 and is an aldol-type condensation.
+
+## General reaction
+
+<Eq ce="ArCHO + (RCH2CO)2O ->[RCH2COONa][\Delta] ArCH=C(R)COOH + RCH2COOH" />
+
+With acetic anhydride, R = H and the product is a cinnamic acid. With propanoic anhydride and sodium propanoate, R = CH₃ and the product is an α-methylcinnamic acid.
+
+<KeyPoint>
+Substrate rule: an **aromatic aldehyde** (no α-H, so it cannot self-condense) plus an **anhydride that has α-hydrogens**. The base is the carboxylate salt of the acid that matches the anhydride.
+</KeyPoint>
+
+## Mechanism
+
+The steps below are the version used in exam answers. The exact pathway is still debated (versions with and without transfer of the acetyl group have been proposed), but the product is the same.
+
+1. **Carbanion formation.** Acetate removes an α-hydrogen from acetic anhydride, giving ⁻CH₂–CO–O–CO–CH₃.
+2. **Addition to the aldehyde.** The carbanion attacks the C=O carbon of benzaldehyde. After protonation, the aldol-type adduct is C₆H₅–CH(OH)–CH₂–CO–O–CO–CH₃. This is where the condensation step itself ends.
+3. **Hydrolysis.** Acid work-up (H₃O⁺) cleaves the anhydride, giving the β-hydroxy acid C₆H₅–CH(OH)–CH₂–COOH and acetic acid.
+4. **Dehydration.** The OH and an α-H are lost as water on heating, giving the C=C that is conjugated with both the benzene ring and the COOH group.
+
+<Eq ce="(CH3CO)2O + CH3COO- <=> ^-CH2COOCOCH3 + CH3COOH" />
+<Eq ce="C6H5CHO + ^-CH2COOCOCH3 -> C6H5CH(OH)CH2COOCOCH3" />
+<Eq ce="C6H5CH(OH)CH2COOCOCH3 ->[H3O+] C6H5CH(OH)CH2COOH ->[\Delta][-H2O] C6H5CH=CHCOOH" />
+
+<Trick>
+**Perkin यहीं तक है** ("Perkin goes only up to here"): the actual condensation stops at the aldol-type adduct of the anhydride. Hydrolysis and dehydration are what turn it into cinnamic acid.
+</Trick>
+
+## Examples
+
+**1. Cinnamic acid from benzaldehyde.**
+
+<Eq ce="C6H5CHO + (CH3CO)2O ->[CH3COONa][\Delta] C6H5CH=CHCOOH + CH3COOH" />
+
+The product is mainly the more stable *trans* (E) isomer.
+
+**2. Coumarin from salicylaldehyde.** With 2-hydroxybenzaldehyde the new acid side chain closes onto the neighbouring OH to form a six-membered lactone, coumarin, a fragrance compound. Perkin first reported the reaction in this context.
+
+**3. α-Substituted cinnamic acids.** With propanoic anhydride and sodium propanoate the α-carbon carries a methyl group, giving C₆H₅CH=C(CH₃)COOH. The same idea with aryl-substituted partners has been used in laboratory syntheses of the stilbene resveratrol.
+
+<Eq ce="C6H5CHO + (CH3CH2CO)2O ->[CH3CH2COONa][\Delta] C6H5CH=C(CH3)COOH + CH3CH2COOH" />
+
+<ExamTip>
+To predict the product, join the aldehyde carbon to the α-carbon of the anhydride with a **double bond**, and keep the carbonyl of the anhydride as **–COOH**. Benzaldehyde + acetic anhydride → C₆H₅–CH=CH–COOH.
+</ExamTip>
+
+## Limitations
+
+- **Aliphatic aldehydes with α-hydrogens** are poor substrates because they undergo their own aldol reactions.
+- The anhydride needs **two α-hydrogens** on the same carbon; (CH₃)₂CH–CO anhydrides with only one α-H cannot form the C=C bond this way.
+- High temperatures and long heating are typical, and yields can be moderate.
+
+## Comparison with related condensations
+
+| Reaction | Nucleophile source | Base | Typical product |
+|---|---|---|---|
+| Perkin | Acid anhydride | Carboxylate salt | α,β-Unsaturated aromatic acid |
+| [Knoevenagel](/reactions/knoevenagel-condensation/) | Active methylene (malonate) | Weak amine (piperidine, pyridine) | α,β-Unsaturated diester or acid |
+| [Claisen–Schmidt (cross aldol)](/reactions/cross-aldol-condensation/) | Ketone | Aqueous NaOH | α,β-Unsaturated ketone |
+
+The Knoevenagel route with malonic acid in pyridine (Doebner modification) also gives cinnamic acid, so the two are often compared in exam questions.
+
+## Related reactions
+
+- [Aldol condensation](/reactions/aldol-condensation/) and [cross aldol condensation](/reactions/cross-aldol-condensation/): the same addition–dehydration pattern.
+- [Knoevenagel condensation](/reactions/knoevenagel-condensation/): an alternative way to make cinnamic acids.
+- [Claisen condensation](/reactions/claisen-condensation/): ester enolates attacking ester carbonyls.
+- [Wittig reaction](/reactions/wittig-reaction/): a stabilised ylide such as Ph₃P=CHCOOEt turns benzaldehyde into an (E)-cinnamate ester, another way to build the same C=C.
+- Hub: [Carbonyl condensation reactions](/mechanisms/carbonyl-condensation-reactions/)

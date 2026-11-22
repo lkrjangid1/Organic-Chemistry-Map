@@ -1,0 +1,271 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { SITE, url, absUrl } from '../lib/site';
+import { edges, nodes, titleCase, pageCompounds } from '../lib/graph';
+import { getMasterList } from '../lib/master';
+import { faqLd, orgLd } from '../lib/seo';
+
+const master = await getMasterList();
+const reactionPages = await getCollection('reactions');
+const mechanisms = await getCollection('mechanisms');
+const tests = await getCollection('tests');
+const concepts = await getCollection('concepts');
+const comparisons = await getCollection('comparisons');
+const reagents = await getCollection('reagents');
+const preparation = await getCollection('preparation');
+const studyPages = reactionPages.length + tests.length + mechanisms.length + concepts.length + comparisons.length + reagents.length + preparation.length;
+const reactionCount = master.reduce((n, i) => n + Math.max(1, i.conversions.length), 0);
+const namedCount = master.length;
+const compoundCount = nodes.length;
+const classCount = new Set(nodes.filter((n) => n.type).map((n) => titleCase(n.type!))).size;
+
+const POPULAR = [
+  'Aldol Condensation', 'Cannizzaro Reaction', 'Reimer-Tiemann Reaction', 'Hofmann Bromamide Degradation',
+  'Friedel-Crafts Acylation', 'Sandmeyer Reaction', 'Wurtz Reaction', 'Clemmensen Reduction',
+  'Wolff-Kishner Reduction', 'Diels-Alder Reaction', 'Beckmann Rearrangement', 'Kolbe-Schmitt Reaction',
+  'Williamson Ether Synthesis', 'Carbylamine Reaction (Isocyanide Test)', 'Pinacol-Pinacolone Rearrangement', 'Finkelstein Reaction',
+  'Perkin Reaction', 'Rosenmund Reduction', 'Birch Reduction', 'Gabriel Phthalimide Synthesis', 'Hell-Volhard-Zelinsky Reaction', 'Tollens Test',
+];
+const norm = (s: string) => s.toLowerCase().replace(/[^a-z]/g, '');
+const popular = POPULAR.map((name) => {
+  const page = [...reactionPages, ...tests].find((r) => [r.data.title, ...r.data.aliases].some((t) => norm(t) === norm(name)));
+  if (page) return { name: page.data.title, href: url(`${page.collection}/${page.id}/`) };
+  const edge = edges.find((e) => norm(e.label) === norm(name));
+  return edge ? { name, href: url(`map/?reaction=${encodeURIComponent(edge.id)}`) } : null;
+}).filter((x): x is { name: string; href: string } => !!x);
+
+const FAQ = [
+  { q: 'Is Organic Chemistry Map free to use?', a: 'Yes. It is completely free, needs no sign-up, and is open source on GitHub. You can also install the map as an app on your phone or laptop and use it offline.' },
+  { q: 'Is this useful for JEE Main or only for JEE Advanced?', a: 'Both. JEE Main questions focus on standard NCERT conversions such as Aldol condensation, Cannizzaro, Hofmann bromamide degradation, Reimer–Tiemann and Friedel–Crafts reactions. JEE Advanced aspirants can go further with rearrangements, stereospecific eliminations and multi-step conversion chains.' },
+  { q: 'Can NEET aspirants use these organic chemistry notes?', a: 'Yes. NEET organic chemistry is NCERT-based and tests named reactions, reagents and conversions between functional groups such as alcohols, aldehydes, ketones, carboxylic acids and amines. Every reaction page lists reagents, conditions and the mechanism.' },
+  { q: 'Where do the notes come from?', a: 'The notes are Lokesh Jangid’s handwritten classroom notes, rewritten into structured pages. Every reaction is checked against at least two trusted references such as NCERT and LibreTexts, which are listed at the bottom of each page.' },
+  { q: 'How do I use the map to solve conversion (road map) questions?', a: 'Search for the starting compound, then follow the reaction arrows to the product you need. Each arrow shows the reagent and conditions, so a multi-step conversion becomes a path you can trace and revise visually.' },
+  { q: 'Does it work on mobile?', a: 'Yes. The pages are mobile-friendly, and the map supports pinch-to-zoom and touch panning and can be installed to your home screen.' },
+];
+
+const path = '';
+const jsonLd = [
+  { '@type': 'WebSite', '@id': absUrl('#website'), url: absUrl(), name: SITE.name, inLanguage: SITE.lang, publisher: orgLd() },
+  {
+    '@type': ['WebApplication', 'LearningResource'],
+    '@id': absUrl('#app'),
+    name: SITE.name,
+    url: absUrl('map/'),
+    description: `Interactive organic chemistry reaction map and notes with ${reactionCount} reactions and ${compoundCount} compounds for JEE Main, JEE Advanced and NEET.`,
+    applicationCategory: 'EducationalApplication',
+    operatingSystem: 'Any (web browser)',
+    isAccessibleForFree: true,
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
+    inLanguage: SITE.lang,
+    educationalLevel: 'Class 11–12, competitive entrance exams',
+    audience: { '@type': 'EducationalAudience', educationalRole: 'student', audienceType: 'JEE Main, JEE Advanced and NEET aspirants' },
+    image: absUrl('og-image.png'),
+  },
+  faqLd(FAQ, path),
+].filter(Boolean) as Record<string, unknown>[];
+---
+<Base
+  title="Organic Chemistry Notes & Reaction Map for JEE and NEET"
+  description={`Free organic chemistry notes and interactive reaction map: ${namedCount} reactions, ${compoundCount} compounds, mechanisms, reagents and conditions for JEE Main, JEE Advanced and NEET.`}
+  path={path}
+  jsonLd={jsonLd}
+>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Free · Verified · Works offline</p>
+        <h1>Organic chemistry notes &amp; reaction map for JEE Main, JEE Advanced &amp; NEET</h1>
+        <p class="lede">
+          Handwritten classroom notes turned into clear, verified pages, plus one connected, zoomable map of
+          {reactionCount} reactions and {compoundCount} compounds with reagents, conditions and mechanisms.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href={url('map/')}>Open the interactive map</a>
+          <a class="btn btn-ghost" href={url('reactions/')}>Browse all reactions</a>
+        </div>
+        <dl class="stats">
+          <div><dt>Reactions</dt><dd>{reactionCount}</dd></div>
+          <div><dt>Study pages</dt><dd>{studyPages}</dd></div>
+          <div><dt>Compounds</dt><dd>{compoundCount}</dd></div>
+          <div><dt>Compound classes</dt><dd>{classCount}</dd></div>
+        </dl>
+      </div>
+      <figure class="hero-figure">
+        <img src={url('screenshots/organic-chemistry-map.webp')} width="1440" height="900" alt="Interactive organic chemistry map showing compounds as structure cards connected by reaction arrows" fetchpriority="high" />
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="explore" aria-labelledby="explore-h">
+    <div class="container">
+      <h2 id="explore-h">Start revising</h2>
+      <div class="cards cards-3">
+        <a class="card feature card-link" href={url('reactions/')}><h3>Reactions A–Z</h3><p>{namedCount} named reactions, rearrangements and tests with mechanism, reagents and examples.</p></a>
+        <a class="card feature card-link" href={url('mechanisms/')}><h3>Mechanisms</h3><p>{mechanisms.length} mechanism types, from S<sub>N</sub>1/S<sub>N</sub>2 to free radicals and rearrangements.</p></a>
+        <a class="card feature card-link" href={url('concepts/')}><h3>Concepts</h3><p>{concepts.length} GOC, biomolecule, polymer and purification topics explained with exam examples.</p></a>
+        <a class="card feature card-link" href={url('comparisons/')}><h3>Order comparisons</h3><p>{comparisons.length} arrange-in-order topics: acidity, basicity, stability, boiling points, with reasons.</p></a>
+        <a class="card feature card-link" href={url('reagents/')}><h3>Reagents</h3><p>{reagents.length} reagents such as LiAlH₄, NaBH₄, PCC and KMnO₄: what each one does and does not touch.</p></a>
+        <a class="card feature card-link" href={url('tests/')}><h3>Functional group tests</h3><p>{tests.length} laboratory tests (Tollens, Fehling, Lucas, Hinsberg…) with reagents and observations.</p></a>
+        <a class="card feature card-link" href={url('preparation/')}><h3>Methods of preparation</h3><p>Every way to make aldehydes, ketones, amines and phenols, on one page per class.</p></a>
+        <a class="card feature card-link" href={url('compounds/')}><h3>Compounds</h3><p>{pageCompounds.length} key compounds: how to prepare them and what they turn into.</p></a>
+        <a class="card feature card-link" href={url('pyq/')}><h3>JEE Advanced PYQs</h3><p>Organic chemistry questions from every JEE Advanced paper since 2016, with solutions linked to each reaction.</p></a>
+        <a class="card feature card-link" href={url('tools/')}><h3>Study tools</h3><p>Conversion path finder, reagent finder, predict-the-product quiz and flashcards.</p></a>
+        <a class="card feature card-link" href={url('hi/')}><h3>हिंदी में पढ़ें</h3><p>Reactions, tests और concepts आसान हिंदी में, English technical terms के साथ।</p></a>
+        <a class="card feature card-link" href={url('notes/')}><h3>Handwritten notes PDF</h3><p>Download the original notebook pages for offline revision.</p></a>
+      </div>
+    </div>
+  </section>
+
+<section class="section" id="why" aria-labelledby="why-h">
+        <div class="container narrow">
+          <h2 id="why-h">Why a reaction map works better than a list</h2>
+          <p>
+            Organic chemistry questions in JEE and NEET rarely ask for one reaction in
+            isolation. They ask you to convert one compound into another, identify the
+            product of a two-step sequence, or pick the right reagent. That is a
+            <strong>path-finding</strong> problem, and paths are easiest to learn on a map.
+          </p>
+          <p>
+            Organic Chemistry Map puts every compound on a single canvas and draws each
+            reaction as an arrow from reactant to product. Follow arrows to build
+            conversion chains, compare reagents that lead to the same product, and see at a
+            glance which functional groups connect to which.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="exams" aria-labelledby="exams-h">
+        <div class="container">
+          <h2 id="exams-h">How it helps you in each exam</h2>
+          <div class="cards cards-3">
+            <article class="card exam-card">
+              <h3>JEE Main organic chemistry</h3>
+              <p>
+                JEE Main rewards quick, accurate recall of standard NCERT conversions and
+                reagents. Revise them by functional group instead of by chapter.
+              </p>
+              <ul class="ticks">
+                <li>Alcohol, aldehyde, ketone and acid interconversions in one view</li>
+                <li>Aldol, Cannizzaro, Reimer–Tiemann, Kolbe and Friedel–Crafts reactions</li>
+                <li>Diazonium salt reactions: Sandmeyer, Gattermann, Balz–Schiemann, azo coupling</li>
+                <li>Search any compound to see every reaction going in and out</li>
+              </ul>
+            </article>
+            <article class="card exam-card">
+              <h3>JEE Advanced organic chemistry</h3>
+              <p>
+                JEE Advanced tests multi-step conversions, mechanisms and stereochemistry.
+                Trace full reaction sequences and read the mechanism for each step.
+              </p>
+              <ul class="ticks">
+                <li>Rearrangements: Beckmann, Pinacol–Pinacolone, Hofmann, Curtius, Schmidt, Wolff, Claisen</li>
+                <li>Stereochemistry: S<sub>N</sub>2 inversion, anti-E2, Sharpless and CBS reactions</li>
+                <li>Kinetic vs thermodynamic control in sulfonation</li>
+                <li>Pericyclic reactions: Diels–Alder, electrocyclic ring opening, Oxy-Cope</li>
+              </ul>
+            </article>
+            <article class="card exam-card">
+              <h3>NEET organic chemistry</h3>
+              <p>
+                NEET organic chemistry is NCERT-based and leans on named reactions,
+                distinguishing tests and biomolecules. Revise them visually in minutes.
+              </p>
+              <ul class="ticks">
+                <li>Named reactions with reagents and conditions for every arrow</li>
+                <li>Tests for amines: Carbylamine (isocyanide) and Hinsberg tests</li>
+                <li>Biomolecules: osazone formation, mutarotation, Kiliani–Fischer, Ruff degradation</li>
+                <li>Polymers: condensation polymerisation and copolymerisation</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features" aria-labelledby="features-h">
+        <div class="container">
+          <h2 id="features-h">What you get</h2>
+          <div class="cards cards-4">
+            <div class="card feature">
+              <h3>Zoomable reaction map</h3>
+              <p>Pan and pinch-zoom across the whole syllabus. The map remembers where you left off.</p>
+            </div>
+            <div class="card feature">
+              <h3>Structures for every compound</h3>
+              <p>Each compound shows its drawn structure, IUPAC name and molecular formula.</p>
+            </div>
+            <div class="card feature">
+              <h3>Reagents, conditions &amp; mechanism</h3>
+              <p>Tap any arrow for reagents, conditions, a mechanism summary and the balanced equation.</p>
+            </div>
+            <div class="card feature">
+              <h3>Instant search</h3>
+              <p>Type a compound or reaction name and the map flies straight to it.</p>
+            </div>
+            <div class="card feature">
+              <h3>Reaction filters</h3>
+              <p>Narrow the map to one reaction type to revise a single concept at a time.</p>
+            </div>
+            <div class="card feature">
+              <h3>Works offline</h3>
+              <p>Install it on your phone or laptop and revise without an internet connection.</p>
+            </div>
+            <div class="card feature">
+              <h3>Light &amp; dark mode</h3>
+              <p>Comfortable for late-night revision sessions and bright classrooms alike.</p>
+            </div>
+            <div class="card feature">
+              <h3>Free &amp; open source</h3>
+              <p>No sign-up, no ads, no paywall. The data and code are on GitHub.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="how" aria-labelledby="how-h">
+        <div class="container narrow">
+          <h2 id="how-h">How to revise with the map</h2>
+          <ol class="steps">
+            <li>
+              <h3>Find your starting point</h3>
+              <p>Search for a compound such as <em>benzene</em> or <em>ethanol</em>, or a reaction such as <em>Cannizzaro</em>.</p>
+            </li>
+            <li>
+              <h3>Open a reaction</h3>
+              <p>Tap an arrow to read its reagents, conditions, mechanism and balanced equation.</p>
+            </li>
+            <li>
+              <h3>Follow the path</h3>
+              <p>Hop from product to product to build multi-step conversions, the same way exam questions are built.</p>
+            </li>
+          </ol>
+          <p class="center"><a class="btn btn-primary" href={url('map/')}>Start exploring the map</a></p>
+        </div>
+      </section>
+
+      
+  <section class="section" id="popular" aria-labelledby="popular-h">
+    <div class="container">
+      <h2 id="popular-h">Frequently asked named reactions</h2>
+      <p class="section-sub">Jump straight to a reaction.</p>
+      <ul class="pill-list">
+        {popular.map((p) => <li><a href={p.href}>{p.name}</a></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="faq" aria-labelledby="faq-h">
+    <div class="container narrow">
+      <h2 id="faq-h">Frequently asked questions</h2>
+      <div class="faq">{FAQ.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}</div>
+    </div>
+  </section>
+
+  <section class="section cta">
+    <div class="container narrow center">
+      <h2>Ready to see organic chemistry as one big picture?</h2>
+      <p>Free, no sign-up, and it works on any device.</p>
+      <a class="btn btn-primary" href={url('map/')}>Open the interactive map</a>
+    </div>
+  </section>
+</Base>

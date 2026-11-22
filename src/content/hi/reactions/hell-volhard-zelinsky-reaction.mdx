@@ -1,0 +1,111 @@
+---
+title: "Hell–Volhard–Zelinsky Reaction (HVZ अभिक्रिया)"
+description: "Hell–Volhard–Zelinsky (HVZ) reaction में α-hydrogen वाला carboxylic acid, Br₂ या Cl₂ और red phosphorus से α-halo acid बनता है। Mechanism और examples।"
+aliases: ["एचवीज़ेड अभिक्रिया", "हेल वोलहार्ड ज़ेलिंस्की अभिक्रिया", "hvz reaction hindi", "hell volhard zelinsky reaction hindi", "alpha halogenation of carboxylic acid hindi", "carboxylic acid ka alpha bromination"]
+reagents: "Br₂ या Cl₂ के साथ थोड़ा-सा red phosphorus (जो in situ PX₃ बनाता है), या catalytic PX₃ के साथ X₂"
+conditions: "गुनगुना करें; acid में कम से कम एक α-hydrogen ज़रूरी; पानी से work-up करने पर α-halo acyl halide hydrolyse होता है"
+byproducts: "HBr (HX)"
+reactantName: "Propanoic acid"
+productName: "2-Bromopropanoic acid"
+steps:
+  - title: "PBr₃ बनना"
+    text: "Red phosphorus bromine से react करता है: 2P + 3Br₂ → 2PBr₃। इसलिए red P + Br₂ और PBr₃ + Br₂ असल में एक ही reagent हैं।"
+    arrows: "यहाँ curly arrows की ज़रूरत नहीं; यह step सिर्फ़ in situ PBr₃ बनाता है।"
+  - title: "Acyl bromide बनना"
+    text: "PBr₃ propanoic acid को propanoyl bromide में बदल देता है। Free acid के विपरीत, acyl bromide में कोई acidic O–H नहीं होता और यह आसानी से enolise होता है।"
+    arrows: "कुल मिलाकर acid का C–OH bond, C–Br bond से replace हो जाता है।"
+  - title: "Enolisation"
+    text: "Acyl bromide, बने हुए HBr के catalysis से, अपने enol CH₃CH=C(OH)Br में tautomerise होता है। इसके लिए कम से कम एक α-hydrogen ज़रूरी है।"
+    arrows: "एक α-C–H bond pair खिसककर C=C बनाता है, जबकि C=O π pair oxygen पर H⁺ लेता है।"
+  - title: "α-Bromination"
+    text: "Enol का electron-rich C=C, Br₂ पर attack करता है; H⁺ निकलने पर 2-bromopropanoyl bromide बनता है। α-bromine free Br₂ से आता है, PBr₃ से नहीं।"
+    arrows: "C=C π electrons → Br₂ का Br, जिसका Br–Br pair Br⁻ बनकर निकल जाता है; फिर O–H से H⁺ हटता है और C=O दोबारा बनता है।"
+  - title: "α-Bromo acid में hydrolysis"
+    text: "पानी α-bromo acyl bromide को hydrolyse करके 2-bromopropanoic acid देता है। Enol में α-carbon flat था, इसलिए product racemic है; पानी के बिना, बिना react हुए acid के साथ exchange से acyl bromide फिर बन जाता है, इसलिए सिर्फ़ catalytic P चाहिए।"
+    arrows: "पानी के O का lone pair → acyl carbon; फिर उसी carbon से Br⁻ निकलता है और C=O दोबारा बनता है।"
+faq:
+  - q: "Propanoic acid के HVZ reaction का product क्या है?"
+    a: "Bromine और red phosphorus इस्तेमाल करने पर 2-bromopropanoic acid, CH₃CHBrCOOH। Bromine α-carbon पर जाता है, यानी COOH group के ठीक बगल वाले carbon पर।"
+  - q: "Hell–Volhard–Zelinsky reaction में red phosphorus क्यों लिया जाता है?"
+    a: "Red phosphorus halogen से react करके PX₃ (PBr₃ या PCl₃) बनाता है। PX₃ acid को acyl halide में बदलता है, जो free acid से कहीं ज़्यादा आसानी से enolise होता है, और फिर α-carbon halogenate हो सकता है।"
+  - q: "Trimethylacetic acid HVZ reaction क्यों नहीं देता?"
+    a: "HVZ reaction में enol बनाने के लिए α-carbon पर कम से कम एक hydrogen ज़रूरी है। (CH₃)₃C–COOH और benzoic acid में कोई α-hydrogen नहीं है, इसलिए ये halogenate नहीं होते।"
+  - q: "Acetic acid से glycine कैसे बनाते हैं?"
+    a: "पहले HVZ reaction (Br₂, red P) से acetic acid को bromoacetic acid में बदला जाता है। फिर bromoacetic acid को excess ammonia से treat करने पर Br की जगह NH₂ आ जाता है और glycine, H₂N–CH₂–COOH, बनता है।"
+  - q: "क्या HVZ product optically active होता है?"
+    a: "नहीं। Enol intermediate में α-carbon planar हो जाता है, इसलिए जब नया stereocentre बनता है (जैसे 2-bromopropanoic acid में) तो दोनों enantiomers बराबर मात्रा में बनते हैं और product racemic होता है।"
+translated: 2026-11-22
+---
+
+## Hell–Volhard–Zelinsky reaction क्या है?
+
+**Hell–Volhard–Zelinsky (HVZ) reaction** किसी **carboxylic acid का α-halogenation** है। जिस carboxylic acid में कम से कम एक **α-hydrogen** हो, उसे **थोड़े-से red phosphorus की उपस्थिति में bromine या chlorine** से treat किया जाता है, और एक α-hydrogen की जगह halogen आ जाता है जिससे **α-halocarboxylic acid** बनता है। NCERT इसे carboxylic acids के hydrocarbon हिस्से की मुख्य substitution reaction के रूप में बताता है।
+
+<Eq ce="R-CH2-COOH ->[X2, red P][then H2O] R-CHX-COOH + HX" />
+
+इस reaction का नाम Carl Magnus von Hell, Jacob Volhard और Nikolay Zelinsky के नाम पर है, जिन्होंने इसे 1880 के दशक में develop किया।
+
+## Acid को मदद की ज़रूरत क्यों है
+
+Ketones और aldehydes बस X₂ और acid से α-carbon पर halogenate हो जाते हैं, क्योंकि ये enols बनाते हैं। Free carboxylic acid मुश्किल से enolise होता है: base α-hydrogen से बहुत पहले O–H proton हटा देता है। HVZ reaction की trick यह है कि acid को **acyl halide** में बदल दिया जाए, जिसमें कोई acidic O–H नहीं होता और जो आसानी से enolise होता है।
+
+## Mechanism
+
+1. **PX₃ बनना।** Red phosphorus halogen से react करता है: 2P + 3X₂ → 2PX₃। इसलिए "red P + Br₂" और "PBr₃ + Br₂" असल में एक ही reagent हैं।
+2. **Acyl halide।** PX₃, R–CH₂–COOH को acyl halide R–CH₂–COX में बदलता है।
+3. **Enolisation।** Acyl halide (बने हुए HX के catalysis से) अपने enol, R–CH=C(OH)X, में tautomerise होता है।
+4. **α-Halogenation।** Enol का electron-rich C=C, X₂ पर attack करता है; H⁺ निकलने पर α-halo acyl halide R–CHX–COX बनता है।
+5. **वापस acid।** पानी R–CHX–COX को R–CHX–COOH में hydrolyse कर देता है। पानी के बिना R–CHX–COX बिना react हुए acid के साथ exchange भी कर सकता है, जिससे acyl halide फिर बन जाता है, इसलिए phosphorus की सिर्फ़ catalytic मात्रा चाहिए।
+
+<Eq ce="CH3CH2COOH ->[PBr3] CH3CH2COBr <=> CH3CH=C(OH)Br ->[Br2] CH3CHBrCOBr ->[H2O] CH3CHBrCOOH" />
+
+<KeyPoint>
+दो conditions याद रखें: (1) carboxylic acid में **कम से कम एक α-hydrogen** होना चाहिए, और (2) red phosphorus का काम सिर्फ़ **PX₃ बनाना** है, जो enolise हो सकने वाला acyl halide बनाता है।
+</KeyPoint>
+
+Enol में α-carbon flat होता है, इसलिए α-carbon पर बना नया stereocentre **racemic mixture** के रूप में बनता है। अगर reaction को पानी की जगह alcohol से quench किया जाए, तो **α-bromo ester** मिलता है।
+
+## Examples
+
+**1. Propanoic acid से 2-bromopropanoic acid**
+
+<Eq ce="CH3CH2COOH + Br2 ->[red P] CH3CHBrCOOH + HBr" />
+
+**2. Acetic acid से chloroacetic acid**
+
+<Eq ce="CH3COOH + Cl2 ->[red P] ClCH2COOH + HCl" />
+
+**3. Acetic acid से glycine (HVZ, फिर ammonolysis)**
+
+<Eq ce="CH3COOH ->[Br2, red P] BrCH2COOH ->[excess NH3] H2N-CH2-COOH" />
+
+Propanoic acid से यही दो-step रास्ता racemic alanine देता है, जो इस reaction का textbook उपयोग है। α-Halo acids SN2 reactions में बहुत reactive होते हैं, इसलिए halogen आसानी से NH₂, OH या CN से replace हो जाता है।
+
+## Exam questions में reagent के variations
+
+| Propanoic acid पर reagent | Product |
+|---|---|
+| Br₂, red P (फिर H₂O) | CH₃CHBrCOOH (2-bromopropanoic acid) |
+| Cl₂, red P (फिर H₂O) | CH₃CHClCOOH |
+| सिर्फ़ PCl₅ | CH₃CH₂COCl (acyl chloride, α-substitution नहीं) |
+| Br₂ + PCl₃ | CH₃CHBrCOOH |
+| Cl₂ + PBr₃ | CH₃CHClCOOH |
+| excess Br₂, red P | CH₃CBr₂COOH |
+
+<ExamTip>
+Exam answers में α-halogen हमेशा **free halogen X₂** से आता है, क्योंकि enol से X₂ ही react करता है; phosphorus halide सिर्फ़ acyl halide बनाता है। इसलिए Cl₂/PBr₃ से α-chloro acid और Br₂/PCl₃ से α-bromo acid बनता है। Excess halogen हो तो बाकी α-hydrogens भी replace हो सकते हैं।
+</ExamTip>
+
+## Limitations
+
+- **α-hydrogen नहीं, तो reaction नहीं:** benzoic acid, 2,2-dimethylpropanoic acid और formic acid α-halogenate नहीं होते।
+- सिर्फ़ **chlorine और bromine** इस्तेमाल होते हैं; iodination और fluorination इस तरह नहीं किए जाते।
+- अगर reaction के दौरान aqueous work-up किया जाए, तो PX₃ का पूरा एक equivalent चाहिए, क्योंकि पानी catalytic exchange cycle को तोड़ देता है।
+
+## Related reactions
+
+- [Haloform reaction](/hi/reactions/haloform-reaction/): base में methyl ketones का α-halogenation, उसके बाद C–C cleavage।
+- [Hunsdiecker reaction](/hi/reactions/hunsdiecker-reaction/): α-hydrogen की जगह पूरे COOH group को halogen से replace करता है।
+- [Ammonolysis of alkyl halides](/hi/reactions/ammonolysis-of-alkyl-halides/): वह step जो α-halo acid को amino acid में बदलता है; देखें [amino acids](/hi/concepts/amino-acids/)।
+- [Arndt–Eistert synthesis](/hi/reactions/arndt-eistert-synthesis/): acid chain में एक carbon जोड़ने का सही तरीका।
+- [Reactions of carboxylic acids](/hi/mechanisms/reactions-of-carboxylic-acids/) hub।

@@ -1,0 +1,12 @@
+---
+import { getCollection } from 'astro:content';
+import HubArticle from '../../components/pages/HubArticle.astro';
+
+export async function getStaticPaths() {
+  const items = await getCollection('mechanisms');
+  return items.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+---
+<HubArticle entry={entry} />

@@ -1,0 +1,12 @@
+---
+import { getCollection } from 'astro:content';
+import ReactionArticle from '../../components/pages/ReactionArticle.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('tests');
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+---
+<ReactionArticle entry={entry} section="tests" />

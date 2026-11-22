@@ -1,0 +1,114 @@
+---
+title: "Bouveault–Blanc Reduction"
+description: "Bouveault–Blanc reduction converts an ester into a primary alcohol (plus R′OH) using sodium metal in absolute ethanol, a cheap alternative to LiAlH₄."
+aliases: ["Bouveault Blanc reduction", "Bouvealt Blanc reduction", "BB reduction", "Sodium ethanol reduction of esters"]
+kind: "named-reaction"
+family: "reduction-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["bouveault-blanc-reduction"]
+reactant:
+  name: "Ethyl oleate"
+  smiles: "CCCCCCCC/C=C\\CCCCCCCC(=O)OCC"
+product:
+  name: "Oleyl alcohol ((Z)-octadec-9-en-1-ol)"
+  smiles: "CCCCCCCC/C=C\\CCCCCCCCO"
+byproducts: "R′OH (from the alkoxy part of the ester), sodium ethoxide, some H₂"
+reagents: "Sodium metal (Na, finely divided, in excess) and absolute ethanol"
+conditions: "Strictly anhydrous (dry ethanol); aqueous work-up"
+equation: "R-COOR' ->[Na, C2H5OH (absolute)] R-CH2OH + R'OH"
+notesPages: [99, 103]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Bouveault–Blanc reduction?"
+    a: "Two alcohols. The acyl part of the ester R–COOR′ becomes a primary alcohol R–CH₂OH, and the alkoxy part is released as R′OH. Ethyl oleate, for example, gives oleyl alcohol and ethanol."
+  - q: "Why must absolute ethanol be used in the Bouveault–Blanc reduction?"
+    a: "Sodium reacts rapidly with water, so wet ethanol wastes the metal and gives poor yields. Dry ethanol acts as the proton source while letting sodium supply electrons to the ester."
+  - q: "How many sodium atoms are needed per ester molecule?"
+    a: "Four. Converting the ester carbon to CH₂OH needs four electrons, each supplied by one sodium atom; in practice excess sodium is used because some is lost as H₂ by reaction with ethanol."
+  - q: "What is the difference between Bouveault–Blanc reduction and acyloin condensation?"
+    a: "Both use sodium and an ester. With ethanol as a proton donor, the ester is reduced to alcohols (Bouveault–Blanc). Without a proton donor, in an aprotic solvent, the radical intermediates couple and give an α-hydroxy ketone (acyloin)."
+  - q: "Why is the Bouveault–Blanc reduction still used when LiAlH₄ exists?"
+    a: "Sodium and ethanol are far cheaper and safer to handle in bulk than LiAlH₄, so the reaction is still used industrially, even though LiAlH₄ has largely replaced it in the laboratory."
+related: ["birch-reduction", "reagents/lithium-aluminium-hydride", "reagents/dibal-h", "ester-hydrolysis", "claisen-condensation"]
+sources:
+  - title: "Bouveault–Blanc reduction"
+    url: "https://en.wikipedia.org/wiki/Bouveault%E2%80%93Blanc_reduction"
+    publisher: "Wikipedia"
+  - title: "Bouveault-Blanc Reduction"
+    url: "https://www.organic-chemistry.org/namedreactions/bouveault-blanc-reduction.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 2
+  note: "Step-by-step SET mechanism (ketyl radical anion, aldehyde intermediate) is standard textbook teaching; Organic Chemistry Portal shows it only as an image and Wikipedia does not detail it."
+---
+
+## What is the Bouveault–Blanc reduction?
+
+The **Bouveault–Blanc reduction** converts an **ester (R–COOR′) into a primary alcohol (R–CH₂OH)** plus the alcohol R′OH, using **sodium metal in absolute ethanol**. Sodium supplies electrons one at a time and ethanol supplies the protons, so it is a **dissolving-metal reduction**, a close relative of the [Birch reduction](/reactions/birch-reduction/). It was reported by Louis Bouveault and Gustave Louis Blanc in 1903, who reduced ethyl oleate to oleyl alcohol.
+
+## General reaction
+
+<Eq ce="R-COOR' ->[Na, C2H5OH] R-CH2OH + R'-OH" />
+
+Written with the sodium salts that form before work-up, four sodium atoms are used per ester:
+
+<Eq ce="RCOOR' + 4Na + 2C2H5OH -> RCH2ONa + R'ONa + 2C2H5ONa" />
+
+Adding water then gives the free alcohols R–CH₂OH and R′–OH.
+
+## Mechanism
+
+Sodium transfers electrons at the metal surface, which is why finely divided sodium (or a sodium dispersion) is used. The usual textbook sequence is:
+
+1. **First electron.** Na gives one electron to the ester C=O, forming a **radical anion** (ketyl).
+2. **Protonation.** Ethanol protonates the oxygen anion, leaving a carbon radical.
+3. **Second electron.** Another Na reduces the radical to a carbanion, which ethanol protonates. The result is a hemiacetal-type intermediate.
+4. **Loss of R′O⁻.** This intermediate expels the alkoxide R′O⁻, giving an **aldehyde**.
+5. **Two more electrons and two protons.** The aldehyde is reduced in the same way (electron, proton, electron, proton) to the primary alcohol.
+
+<KeyPoint>
+Four electrons (four Na) and four hydrogens are added overall: R–CO–OR′ + 4[H] → R–CH₂OH + R′OH. The ethanol is the proton donor; if it is absent, the radical anions **couple** instead, which is the acyloin condensation.
+</KeyPoint>
+
+## Examples
+
+1. **The original 1903 example.** Ethyl oleate gives oleyl alcohol; the C=C double bond in the chain survives.
+<Eq ce="C17H33COOC2H5 ->[Na, C2H5OH] C17H33CH2OH + C2H5OH" />
+
+2. **A simple ester.** Ethyl butanoate gives butan-1-ol and ethanol.
+<Eq ce="CH3CH2CH2COOC2H5 ->[Na, C2H5OH] CH3CH2CH2CH2OH + C2H5OH" />
+
+3. **An aryl ether ester.** Ethyl phenoxyacetate gives 2-phenoxyethanol.
+<Eq ce="C6H5OCH2COOC2H5 ->[Na, C2H5OH] C6H5OCH2CH2OH + C2H5OH" />
+
+## Bouveault–Blanc vs LiAlH₄
+
+| Point | Bouveault–Blanc (Na/EtOH) | [LiAlH₄](/reagents/lithium-aluminium-hydride/) |
+|---|---|---|
+| Type | Dissolving metal, single-electron transfer | Hydride transfer |
+| Ester product | 1° alcohol + R′OH | 1° alcohol + R′OH |
+| Solvent | Absolute ethanol | Dry ether or THF |
+| Cost | Cheap; used industrially | Expensive; laboratory reagent |
+| Isolated C=C | Not reduced | Not reduced |
+
+Before metal hydrides were developed, this was the only practical way to reduce esters to alcohols. To stop at the aldehyde instead, use [DIBAL-H](/reagents/dibal-h/) at −78 °C.
+
+<ExamTip>
+Na/C₂H₅OH acting on an ester → **two alcohols**. Write the acyl carbon as CH₂OH and release the alkoxy group as its alcohol. Do not confuse it with the [Claisen condensation](/reactions/claisen-condensation/), where sodium ethoxide (a base, not sodium metal) joins two ester molecules into a β-keto ester.
+</ExamTip>
+
+## Limitations
+
+- **Water must be excluded.** Wet ethanol consumes sodium and gives low yields.
+- **Excess sodium** is needed, because some reacts with ethanol to give H₂.
+- **No proton donor, no reduction:** in an aprotic solvent, the ester couples to an acyloin instead.
+- Modern variants, such as alkali metal absorbed on silica gel, make the reaction safer while keeping its yields close to those of hydride reagents.
+
+## Related reactions
+
+- [Birch reduction](/reactions/birch-reduction/): the same dissolving-metal idea applied to aromatic rings.
+- [Lithium aluminium hydride](/reagents/lithium-aluminium-hydride/): the laboratory hydride method for ester → alcohol.
+- [DIBAL-H](/reagents/dibal-h/): partial reduction of esters to aldehydes.
+- [Reduction reactions hub](/mechanisms/reduction-reactions/).

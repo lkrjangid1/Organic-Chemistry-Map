@@ -1,0 +1,49 @@
+{
+ "page": "concepts/degree-of-unsaturation",
+ "questions": [
+  {
+   "q": "The degree of unsaturation of nitrobenzene, C₆H₅NO₂, is",
+   "options": [
+    "4",
+    "5",
+    "6",
+    "3"
+   ],
+   "answer": 1,
+   "explain": "Drop O and remove one H for the N: C₆H₄, so DU = (14 − 4)/2 = 5 (benzene ring 4 + N=O 1)."
+  },
+  {
+   "q": "What is the degree of unsaturation of C₉H₉NO₄?",
+   "options": [
+    "5",
+    "7",
+    "6",
+    "4.5"
+   ],
+   "answer": 2,
+   "explain": "Ignore the four O atoms and subtract one H for N, giving C₉H₈; DU = (20 − 8)/2 = 6. A fractional answer for a neutral molecule always signals an error."
+  },
+  {
+   "q": "The degree of unsaturation of the pyridinium ion, C₅H₆N⁺, is",
+   "options": [
+    "3",
+    "3.5",
+    "5",
+    "4"
+   ],
+   "answer": 3,
+   "explain": "Convert the ion to its neutral parent by removing the extra H⁺: pyridine C₅H₅N, which gives DU = 4. Applying a blanket 'positive charge: add H' rule is the trap."
+  },
+  {
+   "q": "A compound C₆H₁₀ takes up only one mole of H₂ on catalytic hydrogenation. Its structure contains",
+   "options": [
+    "One ring and one C=C",
+    "Two C=C bonds",
+    "One C≡C bond",
+    "Two rings and no π bond"
+   ],
+   "answer": 0,
+   "explain": "C₆H₁₀ has DU = (14 − 10)/2 = 2. Hydrogenation adds H₂ to π bonds but does not open ordinary rings, so one mole of H₂ means one C=C plus one ring, as in cyclohexene."
+  }
+ ]
+}

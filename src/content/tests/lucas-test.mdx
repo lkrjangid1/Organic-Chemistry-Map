@@ -1,0 +1,124 @@
+---
+title: "Lucas Test"
+description: "Lucas test distinguishes 1°, 2° and 3° alcohols using conc. HCl with anhydrous ZnCl2: tertiary alcohols turn turbid at once, primary not at room temperature."
+aliases: ["Lucas reagent test", "Lucas reagent", "Lucas test for alcohols", "Reaction of alcohol with HX"]
+kind: "test"
+family: "nucleophilic-substitution"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "2-Methylpropan-2-ol (tert-butyl alcohol)"
+  smiles: "CC(C)(C)O"
+product:
+  name: "2-Chloro-2-methylpropane (tert-butyl chloride)"
+  smiles: "CC(C)(C)Cl"
+byproducts: "H₂O"
+reagents: "Lucas reagent: concentrated HCl + anhydrous ZnCl₂"
+conditions: "Room temperature; note the time taken for turbidity"
+equation: "(CH3)3C-OH + HCl ->[anhydrous ZnCl2] (CH3)3C-Cl + H2O"
+observation: "White turbidity (cloudiness) or an oily layer of alkyl chloride: at once for 3°, in about 5 minutes for 2°, none at room temperature for 1°"
+distinguishes: "1°, 2° and 3° alcohols"
+notesPages: [8, 27, 28, 49, 99, 121]
+memoryTricks: []
+faq:
+  - q: "What is Lucas reagent?"
+    a: "Lucas reagent is a solution of anhydrous zinc chloride in concentrated hydrochloric acid. It converts alcohols into alkyl chlorides at a rate that depends on the class of the alcohol."
+  - q: "How does the Lucas test distinguish primary, secondary and tertiary alcohols?"
+    a: "Tertiary alcohols give turbidity immediately, secondary alcohols within about 5 minutes, and primary alcohols show no turbidity at room temperature. The cloudiness is the insoluble alkyl chloride separating out."
+  - q: "Why does turbidity appear in the Lucas test?"
+    a: "Low-molecular-mass alcohols dissolve in Lucas reagent, but the alkyl chlorides formed do not. The chloride separates as fine droplets or an oily layer, which makes the solution cloudy."
+  - q: "What is the role of ZnCl2 in Lucas reagent?"
+    a: "Anhydrous ZnCl2 is a Lewis acid. It coordinates to the oxygen of the OH group, making it a much better leaving group, so the weakly nucleophilic chloride ion can replace it."
+  - q: "Why do tertiary alcohols react fastest with Lucas reagent?"
+    a: "They react by the SN1 mechanism, and the slow step is formation of the carbocation. A tertiary carbocation is the most stable, so it forms fastest."
+related: ["sn1-reaction", "sn2-reaction", "dehydration-of-alcohols", "ether-cleavage-with-hx"]
+sources:
+  - title: "Alcohols, Phenols and Ethers (Class XII Chemistry, Unit 7)"
+    url: "https://ncert.nic.in/textbook/pdf/lech202.pdf"
+    publisher: "NCERT"
+  - title: "Lucas' reagent"
+    url: "https://en.wikipedia.org/wiki/Lucas%27_reagent"
+    publisher: "Wikipedia"
+  - title: "6.4D: Individual Tests (Lucas Test)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_Lab_Techniques_(Nichols)/06:_Miscellaneous_Techniques/6.04:_Chemical_Tests/6.4D:_Individual_Tests"
+    publisher: "LibreTexts Chemistry"
+  - title: "Reactions of alcohols with hydrohalic acids (HX)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Alcohols/Reactivity_of_Alcohols/Reactions_of_alcohols_with_hydrohalic_acids_(HX)"
+    publisher: "LibreTexts Chemistry"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 4
+  note: "Notes treat every R–OH + HX reaction as SN1; sources say 2°, 3°, allylic and benzylic alcohols react by SN1 but methanol and 1° alcohols by SN2. Notes call ZnCl2 a water absorber; sources describe it as a Lewis acid that activates the OH group. Page follows the sources."
+---
+
+## What is the Lucas test?
+
+The **Lucas test** distinguishes **primary, secondary and tertiary alcohols** by how quickly they react with **Lucas reagent**, a solution of **anhydrous ZnCl₂ in concentrated HCl**. The alcohol is converted into an alkyl chloride, which is insoluble in the reagent and makes the solution **turbid**. **Tertiary alcohols turn cloudy immediately, secondary alcohols within about five minutes, and primary alcohols show no turbidity at room temperature.** The test was reported by Howard Lucas in 1930.
+
+## Observations
+
+| Alcohol class | Example | Result with Lucas reagent at room temperature |
+|---|---|---|
+| 3° | 2-methylpropan-2-ol | Turbidity **immediately** |
+| 2° | propan-2-ol, butan-2-ol | Turbidity in **about 5 minutes** |
+| 1° | ethanol, propan-1-ol | **No turbidity** (reacts only on heating) |
+
+Benzylic and allylic alcohols behave like tertiary alcohols and give turbidity at once, because they also form stabilised carbocations.
+
+In exam answers the primary-alcohol result is often written as "turbidity only after about 30 minutes, or no reaction". Laboratory descriptions say primary alcohols do not react appreciably at room temperature and give an oily chloride layer only on heating. Either way, the deciding observation is the same: **no cloudiness within the first few minutes at room temperature** means a primary alcohol.
+
+## The underlying reaction: alcohol + HX
+
+The Lucas test is a special case of the general conversion of alcohols into alkyl halides:
+
+<Eq ce="R-OH + HX -> R-X + H2O" />
+
+- **Reactivity of HX:** HI > HBr > HCl (HF is generally unreactive).
+- **Reactivity of alcohols:** 3° > 2° > 1° > methyl.
+- **NaX alone does not react** with alcohols, because there is no acid to protonate the OH. A mixture of NaBr or NaCl with conc. H₂SO₄ works, because it generates HX in situ.
+- **HCl is the weakest nucleophile** of the three acids, so it needs ZnCl₂ to react with primary and secondary alcohols. This is exactly why Lucas reagent separates the three classes so clearly.
+
+## Mechanism (SN1 for 2° and 3° alcohols)
+
+1. **Activation of OH.** The oxygen lone pair takes up H⁺ from HCl (or binds to ZnCl₂). The –OH becomes –OH₂⁺ (or –O(H)–ZnCl₂), a good leaving group.
+2. **Carbocation formation (slow, rate-determining).** The leaving group departs and a carbocation forms.
+3. **Capture by chloride (fast).** Cl⁻ attacks the carbocation to give the alkyl chloride, which separates as an oily, cloudy layer.
+
+<Eq ce="(CH3)3C-OH ->[H+] (CH3)3C-OH2+ ->[slow][-H2O] (CH3)3C+ ->[Cl-][fast] (CH3)3C-Cl" />
+
+<KeyPoint>
+The rate of the Lucas reaction follows carbocation stability: 3° > 2° > 1°. Carbocation formation is the rate-determining step, so the more stable the carbocation, the faster the turbidity.
+</KeyPoint>
+
+Primary alcohols cannot form a stable carbocation. When they do react (for example on heating), chloride displaces the activated OH group directly in an **SN2** step, which is slow with Cl⁻.
+
+## Role of anhydrous ZnCl₂
+
+ZnCl₂ is a **Lewis acid**. It complexes with an oxygen lone pair of the alcohol and makes the hydroxyl group leave more easily. It must be anhydrous so that the reagent stays strongly acidic and concentrated.
+
+## Examples
+
+<Eq ce="(CH3)3COH + HCl ->[ZnCl2][\text{at once}] (CH3)3CCl + H2O" />
+
+<Eq ce="CH3CH(OH)CH3 + HCl ->[ZnCl2][\text{about 5 min}] CH3CHClCH3 + H2O" />
+
+<Eq ce="CH3CH2CH2OH + HCl ->[ZnCl2][\text{room temp.}] \text{no turbidity}" />
+
+<ExamTip>
+Answer pattern: "Immediate turbidity: 3°; turbidity in 5 minutes: 2°; no turbidity at room temperature: 1°." Add the reason: rate depends on carbocation stability (SN1). For a 1° alcohol, mention that it reacts only on heating.
+</ExamTip>
+
+## Limitations and exceptions
+
+- The test works only for alcohols that dissolve in the reagent, roughly up to five or six carbons. Larger alcohols form a separate layer whether or not they react.
+- Carbocations can rearrange, so the chloride formed from some secondary alcohols may have a rearranged carbon skeleton.
+- Allylic and benzylic primary alcohols give a positive result immediately, so a fast result does not always mean a tertiary alcohol.
+
+## Related reactions
+
+- [SN1 reaction](/reactions/sn1-reaction/): the pathway for 2° and 3° alcohols.
+- [SN2 reaction](/reactions/sn2-reaction/): the pathway for methanol and 1° alcohols.
+- [Dehydration of alcohols](/reactions/dehydration-of-alcohols/): the competing acid-catalysed elimination.
+- [Ether cleavage with HX](/reactions/ether-cleavage-with-hx/): the same protonate-then-substitute logic applied to ethers.
+- [Nucleophilic substitution](/mechanisms/nucleophilic-substitution/): hub page for substitution reactions.

@@ -1,0 +1,172 @@
+---
+title: "Hydroboration–Oxidation"
+description: "Hydroboration–oxidation converts an alkene into an anti-Markovnikov alcohol using BH₃ in THF, then H₂O₂/NaOH: syn addition with no rearrangement. Mechanism."
+aliases: ["Hydroboration oxidation", "Brown hydroboration", "Hydroboration", "Anti-Markovnikov hydration"]
+kind: "named-reaction"
+family: "electrophilic-addition"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["hydroboration_oxidation"]
+reactant:
+  name: "Propene"
+  smiles: "CC=C"
+product:
+  name: "Propan-1-ol"
+  smiles: "CCCO"
+byproducts: "Boric acid / borate"
+reagents: "(i) B₂H₆ or BH₃·THF; (ii) H₂O₂, NaOH (aq)"
+conditions: "Step (i) in THF or ether; step (ii) aqueous alkaline H₂O₂"
+equation: "3CH3-CH=CH2 ->[B2H6 / THF] (CH3CH2CH2)3B ->[H2O2, NaOH] 3CH3CH2CH2OH"
+notesPages: [15]
+steps:
+  - title: "Four-centred syn addition"
+    text: "The empty p orbital of boron accepts the π electrons of propene while a hydride moves from boron to the other carbon. B–C and C–H form together on the same face, with no carbocation; boron goes to the less substituted CH₂."
+    arrows: "Alkene π electrons → empty p orbital of B; at the same time a B–H bond pair moves to C-2 as H."
+    species:
+      - smiles: "CC=C"
+        label: "Propene"
+        highlight: "C=[CH2]"
+      - smiles: "B"
+        label: "BH₃"
+      - smiles: "CCCB"
+        label: "Propylborane"
+  - title: "Trialkylborane"
+    text: "Each BH₃ has three B–H bonds, so with an unhindered alkene the addition happens three times to give tripropylborane, (CH₃CH₂CH₂)₃B."
+    arrows: "The same four-centred addition repeats with the remaining B–H bonds."
+    species:
+      - smiles: "CCCB"
+        label: "Propylborane"
+        highlight: "[BH2]"
+      - smiles: "CCCB(CCC)CCC"
+        label: "Tripropylborane"
+  - title: "Hydroperoxide attacks boron"
+    text: "In alkaline H₂O₂, the hydroperoxide ion HOO⁻ attacks the electron-deficient boron, giving a tetracoordinate borate."
+    arrows: "Lone pair of HOO⁻ → empty p orbital of boron."
+    species:
+      - smiles: "CCCB(CCC)CCC"
+        label: "Tripropylborane"
+        highlight: "[BX3]"
+      - smiles: "[O-]O"
+        label: "Hydroperoxide ion"
+      - smiles: "CCC[B-](CCC)(CCC)OO"
+        label: "Borate adduct"
+  - title: "Alkyl shift from B to O"
+    text: "A propyl group migrates from boron to oxygen with retention of configuration, pushing out OH⁻. No rearrangement of the carbon chain occurs."
+    arrows: "The B–C bond pair moves to the nearer O as the O–O bond pair leaves with OH⁻."
+    species:
+      - smiles: "CCC[B-](CCC)(CCC)OO"
+        label: "Borate adduct"
+        highlight: "[B-]OO"
+      - smiles: "CCCOB(CCC)CCC"
+        label: "Alkoxyborane"
+      - smiles: "[OH-]"
+        label: "Hydroxide"
+  - title: "Borate ester and hydrolysis"
+    text: "After three such steps the trialkyl borate (PrO)₃B forms, and NaOH hydrolyses it to propan-1-ol and borate. Overall H and OH have added syn and anti-Markovnikov."
+    arrows: "Repeat of the attack and shift steps, then hydroxide cleaves each B–O bond."
+    species:
+      - smiles: "CCCOB(OCCC)OCCC"
+        label: "Tripropyl borate"
+        highlight: "B(O)(O)O"
+      - smiles: "CCCO"
+        label: "Propan-1-ol"
+      - smiles: "OB(O)O"
+        label: "Boric acid"
+memoryTricks: []
+faq:
+  - q: "What is the product of hydroboration–oxidation of propene?"
+    a: "Propan-1-ol. Boron adds to the terminal CH₂ carbon and is later replaced by OH, so the overall result is anti-Markovnikov addition of water."
+  - q: "Is hydroboration–oxidation syn or anti addition?"
+    a: "Syn. B and H add to the same face of the alkene in one concerted step, and the oxidation replaces boron by OH with retention of configuration, so H and OH end up on the same side."
+  - q: "Why does hydroboration–oxidation not show rearrangement?"
+    a: "BH₃ adds through a four-centred transition state without forming a carbocation, so there is nothing to undergo a hydride or alkyl shift."
+  - q: "Why is the addition called anti-Markovnikov when boron is the electrophile?"
+    a: "Boron, the electrophilic part, does go to the less substituted carbon as Markovnikov's idea predicts. But since boron is finally replaced by OH, the OH ends up on the less substituted carbon, which is the opposite of acid-catalysed hydration."
+related: ["oxymercuration-demercuration", "markovnikov-rule", "peroxide-effect", "prilezhaev-epoxidation"]
+sources:
+  - title: "Hydroboration–oxidation reaction"
+    url: "https://en.wikipedia.org/wiki/Hydroboration%E2%80%93oxidation_reaction"
+    publisher: "Wikipedia"
+  - title: "Hydroboration-Oxidation of Alkenes"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Alkenes/Reactivity_of_Alkenes/Hydroboration-Oxidation_of_Alkenes"
+    publisher: "Chemistry LibreTexts"
+  - title: "Brown Hydroboration"
+    url: "https://www.organic-chemistry.org/namedreactions/brown-hydroboration.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "Organoborane"
+    url: "https://en.wikipedia.org/wiki/Organoborane"
+    publisher: "Wikipedia"
+verified:
+  status: "conflict"
+  checked: 2026-11-21
+  sourceCount: 4
+  note: "Notes convert the trialkylborane to an amine with NH₃; sources give chloramine (NH₂Cl) or hydroxylamine-O-sulfonic acid as the aminating reagent. The AgNO₃ coupling step in the notes is not covered by the sources read."
+---
+
+## What is hydroboration–oxidation?
+
+**Hydroboration–oxidation** is a two-step conversion of an **alkene into an alcohol** in which water is added in the **anti-Markovnikov** sense. In step (i) **diborane (B₂H₆)** or its THF complex **BH₃·THF** adds across the C=C bond to give a trialkylborane. In step (ii) **alkaline hydrogen peroxide (H₂O₂/NaOH)** replaces each C–B bond with a C–OH bond. The addition is **syn**, and there is **no rearrangement**. The reaction was introduced by H. C. Brown in the late 1950s (Nobel Prize, 1979).
+
+Propene gives **propan-1-ol**, the alcohol that acid-catalysed hydration cannot make.
+
+## Mechanism
+
+**Step (i): hydroboration**
+
+1. **Concerted four-centred addition.** The empty p orbital of boron accepts the π electrons of the alkene. At the same moment a hydride moves from boron to the other alkene carbon. B–C and C–H bonds form together on the **same face** (syn addition), and no carbocation is formed.
+2. **Regiochemistry.** Boron attaches to the **less substituted (less hindered) carbon**; H goes to the more substituted carbon.
+3. **Repeat.** Each BH₃ has three B–H bonds, so with an unhindered alkene it adds three times to give a trialkylborane, R₃B.
+
+<Eq ce="3CH3-CH=CH2 + BH3 ->[THF] (CH3CH2CH2)3B" />
+
+**Step (ii): oxidation**
+
+4. Hydroperoxide ion (HOO⁻) attacks boron. An alkyl group then migrates from boron to oxygen with **retention of configuration**, pushing out OH⁻. After three such steps a trialkyl borate forms, which NaOH hydrolyses to the alcohol and borate.
+
+<Eq ce="(CH3CH2CH2)3B + 3H2O2 ->[OH-] 3CH3CH2CH2OH + B(OH)3" />
+
+<KeyPoint>
+Three facts to write for hydroboration–oxidation: **syn addition**, **no rearrangement**, **anti-Markovnikov** orientation of H and OH.
+</KeyPoint>
+
+## Other reactions of the trialkylborane
+
+The same trialkylborane, (CH₃CH₂CH₂)₃B, can be converted into different products. Checked against the sources:
+
+| Reagent on R₃B | Product from propene | Status |
+|---|---|---|
+| H₂O₂ / NaOH | Propan-1-ol (H, OH added) | Confirmed |
+| RCOOH (protonolysis) | Propane (H, H added) | Confirmed: organoboranes are cleaved by acids |
+| NH₂Cl or NH₂OSO₃H | Propan-1-amine (H, NH₂ added) | Confirmed with NH₂Cl or NH₂OSO₃H; NH₃ alone is a common mistake |
+| X₂ / NaOH | 1-Halopropane (H, X added) | Confirmed: base activation, then halogen |
+| AgNO₃ / NaOH | n-Hexane (two propyl groups joined) | Not covered by the sources read |
+
+In exam answers, alkaline AgNO₃ is given as a reagent that couples two alkyl groups of the borane to form an alkane with double the carbon count (propyl + propyl = hexane).
+
+## Examples
+
+**1. Propene to propan-1-ol**:
+
+<Eq ce="CH3-CH=CH2 ->[(i) B2H6/THF][(ii) H2O2, NaOH] CH3-CH2-CH2-OH" />
+
+**2. Styrene to 2-phenylethan-1-ol.** Boron goes to the terminal CH₂, so OH ends up away from the ring:
+
+<Eq ce="C6H5-CH=CH2 ->[(i) BH3·THF][(ii) H2O2, NaOH] C6H5-CH2-CH2-OH" />
+
+**3. 1-Methylcyclopentene to trans-2-methylcyclopentan-1-ol.** H and OH add to the same face (syn), so the new H and OH are cis to each other; the methyl group and OH are therefore trans.
+
+<ExamTip>
+Compare with acid-catalysed hydration: propene + H₃O⁺ gives propan-2-ol, while propene + B₂H₆ then H₂O₂/OH⁻ gives propan-1-ol. Oxymercuration–demercuration also gives propan-2-ol, but without rearrangement.
+</ExamTip>
+
+## Limitations and exceptions
+
+- With very hindered alkenes, BH₃ may add only once or twice; bulky boranes such as 9-BBN or disiamylborane are used in practice to sharpen the regioselectivity.
+- Diborane is toxic and catches fire in air, so it is handled as the BH₃·THF solution.
+- Terminal alkynes undergo hydroboration–oxidation to give aldehydes (via the enol), again anti-Markovnikov.
+
+## Related reactions
+
+- [Oxymercuration–demercuration](/reactions/oxymercuration-demercuration/) gives the Markovnikov alcohol without rearrangement.
+- [Markovnikov's rule](/reactions/markovnikov-rule/) and the [peroxide effect](/reactions/peroxide-effect/) are the other two orientation rules for additions to propene.
+- [Prilezhaev epoxidation](/reactions/prilezhaev-epoxidation/) is another stereospecific syn addition to alkenes.
+- Overview: [Electrophilic addition reactions](/mechanisms/electrophilic-addition/).

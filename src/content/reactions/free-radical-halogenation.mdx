@@ -1,0 +1,184 @@
+---
+title: "Free Radical Halogenation of Alkanes"
+description: "Free radical halogenation turns an alkane R–H into an alkyl halide R–X with Cl₂ or Br₂ under UV light by a chain mechanism; methane gives chloromethane and HCl."
+aliases: ["Free radical substitution of alkanes", "Halogenation of alkanes", "Chlorination of methane", "Photochemical halogenation", "Radical chlorination", "Radical bromination"]
+kind: "general-reaction"
+family: "free-radical-reactions"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "Methane"
+  smiles: "C"
+product:
+  name: "Chloromethane"
+  smiles: "CCl"
+byproducts: "HX (HCl or HBr); polyhalogenated alkanes"
+reagents: "X₂ (Cl₂ or Br₂)"
+conditions: "UV light (hν) or heat"
+equation: "CH4 + Cl2 ->[UV light] CH3Cl + HCl"
+notesPages: [9, 10, 30, 35]
+steps:
+  - title: "Initiation"
+    text: "UV light breaks the weakest bond present, Cl–Cl, homolytically into two chlorine atoms."
+    arrows: "Fishhook arrows: one electron of the Cl–Cl bond goes to each chlorine atom."
+    species:
+      - smiles: "ClCl"
+        label: "Chlorine"
+        highlight: "ClCl"
+      - smiles: "[Cl]"
+        label: "Chlorine atom"
+  - title: "Propagation: hydrogen abstraction"
+    text: "A chlorine atom removes a hydrogen atom from methane, giving a methyl radical and HCl. In exam answers this is the slow, rate-determining step."
+    arrows: "Fishhook arrows: Cl• pairs with one electron of a C–H bond; the other electron stays on carbon."
+    species:
+      - smiles: "C"
+        label: "Methane"
+        highlight: "[CH4]"
+      - smiles: "[Cl]"
+        label: "Chlorine atom"
+      - smiles: "[CH3]"
+        label: "Methyl radical"
+  - title: "Propagation: chlorine transfer"
+    text: "The methyl radical takes a Cl atom from Cl₂, giving chloromethane and a new chlorine atom, which repeats the previous step. Thousands of molecules react for each photon absorbed."
+    arrows: "Fishhook arrows: CH₃• pairs with one electron of the Cl–Cl bond; the other electron stays on the leaving Cl atom."
+    species:
+      - smiles: "[CH3]"
+        label: "Methyl radical"
+        highlight: "[CH3]"
+      - smiles: "ClCl"
+        label: "Chlorine"
+      - smiles: "CCl"
+        label: "Chloromethane"
+  - title: "Termination"
+    text: "Two radicals meet and pair up, ending the chain: Cl• + Cl•, CH₃• + Cl•, or CH₃• + CH₃•. The last gives ethane as an impurity."
+    arrows: "Fishhook arrows: one electron from each radical forms the new bond."
+    species:
+      - smiles: "[CH3]"
+        label: "Methyl radical"
+      - smiles: "[Cl]"
+        label: "Chlorine atom"
+      - smiles: "CC"
+        label: "Ethane"
+memoryTricks:
+  - text: "फ्लोरीनेशन प्रक्रम बहुत ज्यादा Exothermic होता है।"
+    meaning: "Fluorination is a very highly exothermic process."
+faq:
+  - q: "What are the three steps of free radical halogenation?"
+    a: "Initiation (light splits X₂ into two halogen atoms), propagation (X• removes H from the alkane to give R•, which then takes X from X₂) and termination (two radicals combine)."
+  - q: "Why is bromination more selective than chlorination?"
+    a: "A bromine atom is much less reactive than a chlorine atom, so it removes only the most weakly held hydrogens, those that give the most stable radical. Lower reactivity means higher selectivity."
+  - q: "What is the product of monobromination of propane?"
+    a: "Mainly 2-bromopropane (about 97% under light at 25 °C), with only about 3% 1-bromopropane. Chlorination of propane gives about 55% 2-chloropropane and 45% 1-chloropropane."
+  - q: "Why are fluorination and iodination of alkanes not done directly?"
+    a: "Fluorination is so exothermic that it is explosive and breaks C–C bonds unless fluorine is heavily diluted with an inert gas. Iodination is endothermic and practically does not occur."
+  - q: "Which step is rate-determining in free radical halogenation?"
+    a: "In exam answers the hydrogen-abstraction step, X• + R–H → R• + HX, is taken as the slow step, which is why the rate depends on the stability of the radical formed."
+related: ["nbs-allylic-bromination", "peroxide-effect", "hunsdiecker-reaction", "wurtz-reaction", "kolbe-electrolysis"]
+sources:
+  - title: "Free-radical halogenation"
+    url: "https://en.wikipedia.org/wiki/Free-radical_halogenation"
+    publisher: "Wikipedia"
+  - title: "Halogenation of Alkanes (W. Reusch)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Alkanes/Reactivity_of_Alkanes/Halogenation_of_Alkanes"
+    publisher: "Chemistry LibreTexts"
+  - title: "5.11: Reactivity and Selectivity"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Map%3A_Organic_Chemistry_(Wade)_Complete_and_Semesters_I_and_II/Map%3A_Organic_Chemistry_(Wade)/05%3A_An_Introduction_to_Organic_Reactions_using_Free_Radical_Halogenation_of_Alkanes/5.11%3A_Reactivity_and_Selectivity"
+    publisher: "Chemistry LibreTexts"
+  - title: "Radical disproportionation"
+    url: "https://en.wikipedia.org/wiki/Radical_disproportionation"
+    publisher: "Wikipedia"
+verified:
+  status: "conflict"
+  checked: 2026-11-21
+  sourceCount: 4
+  note: "Notes say disproportionation has Ea ≠ 0 and needs high temperature; sources say both combination and disproportionation need little or no activation energy. Page follows the sources. Bromination ratio 1 : 82 : 1600 and fluorination 1 : 1 : 1 are kept as exam figures; sources checked confirm only chlorination 1 : 3.8 : 5."
+---
+
+## What is free radical halogenation?
+
+**Free radical halogenation** is the substitution of a hydrogen atom of an **alkane** by a halogen atom when the alkane is treated with **chlorine or bromine** under **UV light** or at high temperature. The general change is **R–H + X₂ → R–X + HX**. It goes by a **free-radical chain mechanism**, and with larger alkanes it gives a mixture of isomeric alkyl halides, plus more highly halogenated products if halogen is in excess.
+
+<ExamTip title="Common mistake">
+Calling this "free radical substitution of alkene". The substrate is an **alkane**.
+</ExamTip>
+
+## Mechanism
+
+Using the chlorination of methane:
+
+1. **Initiation.** UV light breaks the weakest bond present, Cl–Cl, homolytically into two chlorine atoms.
+2. **Propagation (a).** Cl• removes a hydrogen atom from methane, giving a methyl radical and HCl. In exam answers this is the slow, rate-determining step.
+3. **Propagation (b).** The methyl radical takes a Cl atom from Cl₂, giving chloromethane and a new Cl•, which repeats step 2. Thousands of molecules react for each photon absorbed.
+4. **Termination.** Two radicals meet and pair up: Cl• + Cl•, CH₃• + Cl•, or CH₃• + CH₃• (the last gives ethane as an impurity).
+
+<Eq ce="Cl2 ->[UV light] 2 Cl^{.}" />
+<Eq ce="CH4 + Cl^{.} -> CH3^{.} + HCl" />
+<Eq ce="CH3^{.} + Cl2 -> CH3Cl + Cl^{.}" />
+<Eq ce="CH3^{.} + CH3^{.} -> CH3-CH3" />
+
+Oxygen is a radical trap and slows the reaction; peroxides (radical initiators) speed it up.
+
+### How radicals end the chain: combination and disproportionation
+
+- **Combination:** two radicals join, R• + R• → R–R (two ethyl radicals give butane).
+- **Disproportionation:** one radical takes a β-hydrogen from the other, giving an alkane and an alkene. The radical that loses H is oxidised (to the alkene); the one that gains H is reduced (to the alkane).
+
+<Eq ce="2 CH3-CH2^{.} -> CH2=CH2 + CH3-CH3" />
+
+Both processes are exothermic and need little or no activation energy. Disproportionation becomes more important as the number of transferable β-hydrogens rises, so tertiary radicals disproportionate more readily than primary ones, while unhindered primary radicals combine more readily.
+
+<ExamTip title="Common mistake">
+Saying that disproportionation needs high temperature and a non-zero Ea. Combination and disproportionation are both nearly barrier-free.
+</ExamTip>
+
+## Reactivity and selectivity
+
+<KeyPoint>
+**Reactivity of halogens:** F₂ much greater than Cl₂ greater than Br₂ greater than I₂. **Reactivity of hydrogens** ∝ stability of the radical formed: 3° greater than 2° greater than 1° greater than CH₃–H. **Selectivity ∝ 1/Reactivity**: the less reactive the halogen atom, the more selective it is.
+</KeyPoint>
+
+Relative rate of attack per hydrogen (1° : 2° : 3°):
+
+| Halogen | 1° | 2° | 3° | Comment |
+|---|---|---|---|---|
+| Fluorination | 1 | about 1 | about 1 | almost no selectivity (exam figure) |
+| Chlorination | 1 | 3.8 | 5 | slightly selective |
+| Bromination | 1 | about 80 | about 1600 | highly selective (often quoted as 1 : 82 : 1600) |
+
+**Fluorination** releases so much heat that it can be explosive and can cleave C–C bonds. It is done only with fluorine heavily diluted by an inert gas (written F₂ + N₂; low-temperature methods use helium). **Iodination** is endothermic and essentially does not occur directly.
+
+## Examples
+
+**1. Chlorination of propane (light, 25 °C)**
+
+<Eq ce="CH3CH2CH3 + Cl2 ->[light] CH3CH2CH2Cl (45\%) + CH3CHClCH3 (55\%)" />
+
+Six primary hydrogens against two secondary ones would predict 75 : 25; the real result shows secondary H is about 3.8 times more reactive.
+
+**2. Bromination of propane (light, 25 °C)**
+
+<Eq ce="CH3CH2CH3 + Br2 ->[light] CH3CH2CH2Br (3\%) + CH3CHBrCH3 (97\%)" />
+
+**3. Chlorination of 2-methylpropane**
+
+<Eq ce="(CH3)3CH + Cl2 ->[light] (CH3)3CCl (36\%) + (CH3)2CHCH2Cl (64\%)" />
+
+The single tertiary hydrogen reacts about five times faster than each primary one, but there are nine primary hydrogens: 9 × 1 = 9 against 1 × 5 = 5, so isobutyl chloride (about 64%) is the major product.
+
+<ExamTip>
+For product-percentage questions multiply (number of equivalent H) × (relative rate) for each type, then convert to percentages. Use 1 : 3.8 : 5 for chlorination. With bromination, assume the most stable radical's product is almost the only one.
+</ExamTip>
+
+## Limitations and exceptions
+
+- Chlorination rarely stops at one substitution; methane gives CH₃Cl, CH₂Cl₂, CHCl₃ and CCl₄. A large excess of alkane favours the monochloro product.
+- Unsymmetrical alkanes give all possible isomers, so the reaction is poor for making a single pure product unless bromination's selectivity is used.
+- Allylic and benzylic C–H bonds are weaker and react preferentially (see NBS bromination).
+
+## Related reactions
+
+- [NBS allylic bromination](/reactions/nbs-allylic-bromination/): selective radical substitution at the allylic carbon.
+- [Peroxide effect](/reactions/peroxide-effect/): a radical chain addition of HBr to alkenes.
+- [Hunsdiecker reaction](/reactions/hunsdiecker-reaction/): alkyl halides from silver carboxylates via radicals.
+- [Wurtz reaction](/reactions/wurtz-reaction/) and [Kolbe electrolysis](/reactions/kolbe-electrolysis/): coupling reactions that build alkanes, often from the alkyl halides made here.
+- [Free radical reactions](/mechanisms/free-radical-reactions/) hub.

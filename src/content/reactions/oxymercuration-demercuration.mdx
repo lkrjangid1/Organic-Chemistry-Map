@@ -1,0 +1,110 @@
+---
+title: "Oxymercuration–Demercuration"
+description: "Oxymercuration–demercuration converts an alkene into a Markovnikov alcohol using Hg(OAc)₂/H₂O then NaBH₄, with no carbocation rearrangement, plus mechanism."
+aliases: ["Oxymercuration demercuration", "Oxymercuration-reduction", "Oxymercuration reaction", "Hydration of alkene with mercuric acetate"]
+kind: "named-reaction"
+family: "electrophilic-addition"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["oxymercuration_demercuration_norbornene"]
+reactant:
+  name: "Propene"
+  smiles: "CC=C"
+product:
+  name: "Propan-2-ol"
+  smiles: "CC(C)O"
+byproducts: "Hg (metal), acetic acid"
+reagents: "(i) Hg(OAc)₂ (mercuric acetate), H₂O/THF; (ii) NaBH₄, OH⁻"
+conditions: "Room temperature, two steps"
+equation: "CH3-CH=CH2 ->[(i) Hg(OAc)2, H2O/THF][(ii) NaBH4, OH-] CH3-CH(OH)-CH3"
+notesPages: [15]
+memoryTricks: []
+faq:
+  - q: "What is the product of oxymercuration–demercuration of propene?"
+    a: "Propan-2-ol. Water is added across the double bond in the Markovnikov sense, so the OH goes to the more substituted carbon (C-2) and H goes to C-1."
+  - q: "Why is there no rearrangement in oxymercuration–demercuration?"
+    a: "The intermediate is a bridged mercurinium ion, not a free carbocation. Because no open carbocation forms, hydride and alkyl shifts do not occur, unlike acid-catalysed hydration."
+  - q: "Is oxymercuration a syn or anti addition?"
+    a: "The oxymercuration step is an anti addition: water attacks the mercurinium ion from the face opposite to mercury. The demercuration step with NaBH₄ goes through radicals and is not stereospecific, so the overall H and OH may end up cis or trans."
+  - q: "What is the difference between oxymercuration–demercuration and hydroboration–oxidation?"
+    a: "Both hydrate an alkene without rearrangement, but oxymercuration–demercuration gives the Markovnikov alcohol while hydroboration–oxidation gives the anti-Markovnikov alcohol (and is a syn addition)."
+related: ["hydroboration-oxidation", "markovnikov-rule", "kucherov-reaction", "dehydration-of-alcohols"]
+sources:
+  - title: "Oxymercuration reaction"
+    url: "https://en.wikipedia.org/wiki/Oxymercuration_reaction"
+    publisher: "Wikipedia"
+  - title: "9.5: Hydration- Oxymercuration-Demercuration"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Map:_Organic_Chemistry_(Wade)_Complete_and_Semesters_I_and_II/Map:_Organic_Chemistry_(Wade)/09:_Reactions_of_Alkenes/9.05:_Hydration-_Oxymercuration-Demercuration"
+    publisher: "Chemistry LibreTexts"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 2
+---
+
+## What is oxymercuration–demercuration?
+
+**Oxymercuration–demercuration** is a two-step method for adding water across a C=C bond to make an **alcohol** with **Markovnikov** orientation. In step (i) the alkene reacts with **mercuric acetate, Hg(OAc)₂**, in aqueous THF; in step (ii) the organomercury intermediate is reduced with **sodium borohydride (NaBH₄)** in base. Because the reaction passes through a bridged mercurinium ion rather than a free carbocation, the carbon skeleton **does not rearrange**.
+
+For propene, the product is **propan-2-ol**: OH on the more substituted carbon, H on the CH₂ end.
+
+## Mechanism
+
+**Step (i): oxymercuration**
+
+1. **Electrophilic attack.** Hg(OAc)₂ loses an acetate ion, and the electrophilic ⁺HgOAc is attacked by the π electrons of the alkene. A three-membered **mercurinium ion** forms, with mercury bridging both carbons.
+2. **Attack by water.** Water opens the bridge at the **more substituted carbon**, because that carbon carries more of the partial positive charge. It approaches from the side opposite to mercury, so this step is an **anti addition**.
+3. **Deprotonation.** Acetate (or water) removes a proton from the oxonium ion, giving a neutral β-hydroxyalkylmercury acetate.
+
+<Eq ce="CH3-CH=CH2 + Hg(OAc)2 + H2O -> CH3-CH(OH)-CH2-HgOAc + CH3COOH" />
+
+**Step (ii): demercuration**
+
+4. **Reduction.** NaBH₄ in aqueous base replaces the –HgOAc group with H, and metallic mercury separates out. This step goes through radical intermediates and is not stereospecific.
+
+<Eq ce="CH3-CH(OH)-CH2-HgOAc ->[NaBH4, OH-] CH3-CH(OH)-CH3 + Hg" />
+
+<KeyPoint>
+Oxymercuration–demercuration = Markovnikov hydration **without rearrangement**. The first step is an anti addition, but the overall stereochemistry is scrambled by the radical demercuration step.
+</KeyPoint>
+
+## Examples
+
+**1. Propene to propan-2-ol:**
+
+<Eq ce="CH3-CH=CH2 ->[(i) Hg(OAc)2, H2O][(ii) NaBH4] CH3-CH(OH)-CH3" />
+
+**2. 3,3-Dimethylbut-1-ene to 3,3-dimethylbutan-2-ol.** With dilute acid this alkene gives mainly the rearranged 2,3-dimethylbutan-2-ol through a methyl shift. Oxymercuration–demercuration gives the **unrearranged** alcohol:
+
+<Eq ce="(CH3)3C-CH=CH2 ->[(i) Hg(OAc)2, H2O][(ii) NaBH4] (CH3)3C-CH(OH)-CH3" />
+
+**3. Norbornene to exo-norborneol.** In this rigid bicyclic alkene, water attacks from the less hindered **exo** face, so the OH ends up exo.
+
+<ExamTip>
+If a question shows an alkene that would rearrange under H₃O⁺ (a 2° carbocation next to a quaternary or 3° carbon), and asks for the alcohol **without** rearrangement, the answer is oxymercuration–demercuration (Markovnikov) or hydroboration–oxidation (anti-Markovnikov).
+</ExamTip>
+
+## Alkoxymercuration: making ethers
+
+If an alcohol is used as the solvent instead of water, the alcohol oxygen opens the mercurinium ion. After NaBH₄ reduction the product is an **ether** with the OR group on the more substituted carbon. For example, propene with Hg(OAc)₂ in methanol, then NaBH₄, gives 2-methoxypropane.
+
+## Comparison of alkene hydration methods
+
+| Method | Reagents | Orientation | Rearrangement? | Stereochemistry |
+|---|---|---|---|---|
+| Acid-catalysed hydration | dil. H₂SO₄ / H₃O⁺ | Markovnikov | Yes (carbocation) | Not stereospecific |
+| Oxymercuration–demercuration | Hg(OAc)₂, H₂O; NaBH₄ | Markovnikov | No | Anti in step (i); overall scrambled |
+| Hydroboration–oxidation | BH₃·THF; H₂O₂, NaOH | Anti-Markovnikov | No | Syn |
+
+## Limitations and exceptions
+
+- Mercury compounds are highly toxic, so the method is used less in industry today; it remains a favourite in exam questions.
+- Only the hydration step is anti. Do not write a fixed cis or trans relationship for the final H and OH unless the substrate is rigid (as with norbornene).
+- The mercury salt may be written generally as (RCOO)₂Hg; mercuric acetate (R = CH₃) is the standard choice, and either form is accepted in exam answers as long as it is followed by NaBH₄.
+
+## Related reactions
+
+- [Hydroboration–oxidation](/reactions/hydroboration-oxidation/) gives the anti-Markovnikov alcohol from the same alkene.
+- [Markovnikov's rule](/reactions/markovnikov-rule/) explains the orientation.
+- [Kucherov reaction](/reactions/kucherov-reaction/) is the Hg²⁺-catalysed hydration of alkynes to ketones.
+- [Dehydration of alcohols](/reactions/dehydration-of-alcohols/) is the reverse direction: alcohol to alkene.
+- Overview: [Electrophilic addition reactions](/mechanisms/electrophilic-addition/).

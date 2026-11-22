@@ -1,0 +1,8 @@
+---
+import 'katex/dist/katex.min.css';
+import { renderCe } from '../lib/chem';
+interface Props { ce: string; inline?: boolean }
+const { ce, inline = false } = Astro.props;
+const html = renderCe(ce, !inline);
+---
+{inline ? <span set:html={html} /> : <div class="equation" set:html={html} />}

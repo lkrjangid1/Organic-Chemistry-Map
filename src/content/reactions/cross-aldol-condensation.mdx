@@ -1,0 +1,128 @@
+---
+title: "Cross Aldol Condensation"
+description: "Cross aldol condensation joins two different carbonyl compounds in dilute base. Ethanal and propanal give four aldols; Claisen–Schmidt gives one clean enone."
+aliases: ["Crossed aldol condensation", "Mixed aldol reaction", "Claisen–Schmidt condensation", "Claisen Schmidt reaction", "Chalcone synthesis"]
+kind: "named-reaction"
+family: "carbonyl-condensation-reactions"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["claisen_schmidt_condensation"]
+reactant:
+  name: "Benzaldehyde + acetophenone"
+  smiles: "O=Cc1ccccc1.CC(=O)c1ccccc1"
+product:
+  name: "Chalcone ((E)-1,3-diphenylprop-2-en-1-one)"
+  smiles: "O=C(/C=C/c1ccccc1)c1ccccc1"
+byproducts: "H₂O"
+reagents: "Dilute NaOH or KOH (aqueous or ethanolic)"
+conditions: "Room temperature, then warming for dehydration; best when one partner has no α-H"
+equation: "C6H5CHO + CH3COC6H5 ->[dil. NaOH][\\Delta] C6H5CH=CHCOC6H5 + H2O"
+notesPages: [71]
+memoryTricks: []
+faq:
+  - q: "How many products form in the cross aldol reaction of ethanal and propanal?"
+    a: "Four β-hydroxy aldehydes: two from self-condensation (3-hydroxybutanal and 3-hydroxy-2-methylpentanal) and two crossed products (3-hydroxypentanal and 3-hydroxy-2-methylbutanal)."
+  - q: "What is the Claisen–Schmidt condensation?"
+    a: "It is a cross aldol condensation between an aromatic aldehyde with no α-H, such as benzaldehyde, and an aldehyde or ketone that has α-H. Because only one partner can form an enolate, one main α,β-unsaturated product forms."
+  - q: "What is formed when benzaldehyde reacts with acetaldehyde in dilute NaOH?"
+    a: "Cinnamaldehyde (3-phenylprop-2-enal). The enolate of acetaldehyde attacks benzaldehyde, and the aldol loses water easily because the new C=C is conjugated with both the ring and the C=O."
+  - q: "How can a crossed aldol be made to give a single product?"
+    a: "Use a partner with no α-H (HCHO or ArCHO) as the acceptor, use a donor that is much more acidic (such as ethyl acetoacetate), or form one enolate completely first with LDA at −78 °C and then add the other carbonyl compound."
+related: ["aldol-condensation", "claisen-condensation", "cannizzaro-reaction", "perkin-reaction", "knoevenagel-condensation", "comparisons/aldol-vs-cannizzaro"]
+sources:
+  - title: "Claisen–Schmidt condensation"
+    url: "https://en.wikipedia.org/wiki/Claisen%E2%80%93Schmidt_condensation"
+    publisher: "Wikipedia"
+  - title: "Aldol condensation"
+    url: "https://en.wikipedia.org/wiki/Aldol_condensation"
+    publisher: "Wikipedia"
+  - title: "Aldol reaction"
+    url: "https://en.wikipedia.org/wiki/Aldol_reaction"
+    publisher: "Wikipedia"
+  - title: "23.5: Mixed Aldol Reactions"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/23%3A_Carbonyl_Condensation_Reactions/23.05%3A_Mixed_Aldol_Reactions"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "Chalcone"
+    url: "https://en.wikipedia.org/wiki/Chalcone"
+    publisher: "Wikipedia"
+  - title: "Cinnamaldehyde"
+    url: "https://en.wikipedia.org/wiki/Cinnamaldehyde"
+    publisher: "Wikipedia"
+  - title: "Dibenzylideneacetone"
+    url: "https://en.wikipedia.org/wiki/Dibenzylideneacetone"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 7
+---
+
+## What is the cross aldol condensation?
+
+A **cross (crossed or mixed) aldol condensation** is an aldol reaction between **two different** aldehydes or ketones in dilute base. If both partners have α-hydrogens, each can act as the enolate donor and as the carbonyl acceptor, so a **mixture of four products** forms. It is useful only when one partner cannot form an enolate. The most important useful case is the **Claisen–Schmidt condensation**, between an aromatic aldehyde (no α-H) and an aldehyde or ketone that has α-H.
+
+## Mechanism
+
+The steps are the same as in the [aldol condensation](/reactions/aldol-condensation/):
+
+1. OH⁻ removes an α-H from the enolisable partner to give its enolate.
+2. The enolate attacks the carbonyl carbon of the other partner.
+3. Protonation gives the β-hydroxy carbonyl compound.
+4. On warming, water is lost by E1cB to give the α,β-unsaturated product.
+
+## Why four products: ethanal + propanal
+
+Both ethanal (CH₃CHO) and propanal (CH₃CH₂CHO) have α-H, so there are two enolates (⁻CH₂CHO and CH₃C⁻HCHO) and two acceptors.
+
+| Enolate from | Attacks | Aldol product | Type |
+|---|---|---|---|
+| Ethanal | Ethanal | CH₃CH(OH)CH₂CHO (3-hydroxybutanal) | Self |
+| Propanal | Propanal | CH₃CH₂CH(OH)CH(CH₃)CHO (3-hydroxy-2-methylpentanal) | Self |
+| Ethanal | Propanal | CH₃CH₂CH(OH)CH₂CHO (3-hydroxypentanal) | Cross |
+| Propanal | Ethanal | CH₃CH(OH)CH(CH₃)CHO (3-hydroxy-2-methylbutanal) | Cross |
+
+<ExamTip>
+For "how many aldol products" questions, count the enolisable partners (donors) and all the partners (acceptors) and multiply. Two enolisable aldehydes give 2 × 2 = 4. If one partner has no α-H, the count drops to 1 × 2 = 2 (one self, one cross), and the cross product usually dominates.
+</ExamTip>
+
+## Claisen–Schmidt condensation
+
+Benzaldehyde has no α-H but its C=O is unhindered, so it is a good acceptor that cannot act as a donor. Its aldols also dehydrate very easily, because the new C=C is conjugated with both the benzene ring and the carbonyl group.
+
+<Eq ce="C6H5CHO + CH3CHO ->[dil. NaOH] C6H5CH=CHCHO + H2O" />
+
+Benzaldehyde and ethanal give **cinnamaldehyde** (3-phenylprop-2-enal).
+
+<Eq ce="C6H5CHO + CH3COC6H5 ->[dil. NaOH] C6H5CH=CHCOC6H5 + H2O" />
+
+Benzaldehyde and acetophenone give **chalcone** (benzylideneacetophenone). The reaction is reliable enough to be run even without solvent.
+
+<Eq ce="2 C6H5CHO + CH3COCH3 ->[NaOH][EtOH/H2O] C6H5CH=CHCOCH=CHC6H5 + 2 H2O" />
+
+Acetone has α-H on both sides, so with two equivalents of benzaldehyde it condenses twice to give **dibenzalacetone** (1,5-diphenylpenta-1,4-dien-3-one). With one equivalent the main product is benzalacetone, C₆H₅CH=CHCOCH₃.
+
+<KeyPoint>
+When an aldehyde and a ketone that both have α-H are mixed, the ketone usually supplies the enolate and the aldehyde, the better electrophile, is the acceptor. Adding the aldehyde slowly to the ketone and base keeps the aldehyde from condensing with itself.
+</KeyPoint>
+
+## Other ways to get one product
+
+| Strategy | Example |
+|---|---|
+| Acceptor with no α-H | HCHO or ArCHO as the electrophile |
+| Donor much more acidic than the other partner | Ethyl acetoacetate is deprotonated in preference to a simple ketone |
+| Preformed enolate (directed aldol) | Ketone + LDA at −78 °C, then the aldehyde is added |
+
+With formaldehyde, every α-H of the donor can be replaced. Acetaldehyde with three HCHO gives (HOCH₂)₃C–CHO, and a further crossed [Cannizzaro reaction](/reactions/cannizzaro-reaction/) with more HCHO gives pentaerythritol, C(CH₂OH)₄.
+
+## Limitations
+
+- Two enolisable aldehydes give statistical mixtures that are useless for synthesis.
+- The base must stay dilute. In concentrated alkali, an aldehyde without α-H such as benzaldehyde can undergo the Cannizzaro reaction instead.
+- Hindered ketones react slowly. Stronger bases or polar aprotic solvents (KOH in DMSO, for example) may be needed.
+
+## Related reactions
+
+- [Aldol condensation](/reactions/aldol-condensation/): self-condensation, intramolecular and directed aldol
+- [Perkin reaction](/reactions/perkin-reaction/) and [Knoevenagel condensation](/reactions/knoevenagel-condensation/): other ways to build ArCH=C bonds from aromatic aldehydes
+- [Claisen condensation](/reactions/claisen-condensation/): the ester analogue. Do not confuse it with Claisen–Schmidt or with the [Claisen rearrangement](/reactions/claisen-rearrangement/)
+- [Aldol vs Cannizzaro reaction](/comparisons/aldol-vs-cannizzaro/)

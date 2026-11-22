@@ -1,0 +1,7 @@
+{"page": "reactions/mendius-reduction",
+ "questions": [
+  {"q": "Propanenitrile (CH₃CH₂C≡N) is reduced with sodium and ethanol. The product is:", "options": ["Ethanamine", "Propanal", "Propanamide", "Propan-1-amine"], "answer": 3, "explain": "Four hydrogen atoms add across C≡N, and the nitrile carbon becomes the CH₂ bonded to nitrogen, giving CH₃CH₂CH₂NH₂. No carbon is lost."},
+  {"q": "Methyl isocyanide, CH₃–N≡C, is fully reduced. The product is:", "options": ["Ethanamine", "N-Methylmethanamine", "Methanamine", "Acetaldehyde"], "answer": 1, "explain": "In an isocyanide the carbon ends up on nitrogen as a methyl group, so a secondary amine R–NH–CH₃ forms. The isomeric nitrile CH₃C≡N would give the primary amine ethanamine."},
+  {"q": "Which reagent does NOT convert R–C≡N into the primary amine R–CH₂–NH₂?", "options": ["Na / C₂H₅OH", "LiAlH₄, then H₂O", "SnCl₂ / HCl, then H₃O⁺", "H₂ / Ni"], "answer": 2, "explain": "SnCl₂/HCl followed by hydrolysis is the Stephen reduction, which stops at the aldehyde R–CHO. The other three all give the same primary amine."},
+  {"q": "CH₃CH₂Cl →(KCN)→ A →(Na, C₂H₅OH)→ B. Compared with chloroethane, B is:", "options": ["Propan-1-amine, with one carbon more", "Ethanamine, with the same number of carbons", "Methanamine, with one carbon fewer", "Propanenitrile, unchanged by Na/C₂H₅OH"], "answer": 0, "explain": "Cyanide adds one carbon to give propanenitrile, and Mendius reduction keeps every carbon, so B is propan-1-amine. This is an ascent of the amine series; Hofmann bromamide degradation goes the other way."}
+ ]}

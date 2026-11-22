@@ -1,0 +1,126 @@
+---
+title: "Clemmensen Reduction"
+description: "Clemmensen reduction converts the C=O of an aldehyde or ketone into CH₂, giving an alkane, with zinc amalgam and conc. HCl. Conditions, mechanism, examples."
+aliases: ["Clemenson reduction", "Clemmenson reduction", "Clemmensen reaction", "Zn-Hg HCl reduction", "Zinc amalgam reduction"]
+kind: "named-reaction"
+family: "reduction-reactions"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["clemmensen_reduction"]
+reactant:
+  name: "Acetophenone (1-phenylethan-1-one)"
+  smiles: "CC(=O)c1ccccc1"
+product:
+  name: "Ethylbenzene"
+  smiles: "CCc1ccccc1"
+byproducts: "H₂O, ZnCl₂"
+reagents: "Zinc amalgam (Zn-Hg) and concentrated HCl"
+conditions: "Heat under reflux; strongly acidic medium"
+equation: "R-CO-R' ->[Zn-Hg, conc. HCl][\\Delta] R-CH2-R' + H2O"
+notesPages: [62]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Clemmensen reduction?"
+    a: "An alkane or alkylbenzene: the C=O group of the aldehyde or ketone becomes CH₂. For example, acetophenone gives ethylbenzene."
+  - q: "Which reagent is used in the Clemmensen reduction?"
+    a: "Zinc amalgam (zinc treated with mercury) and concentrated hydrochloric acid, usually heated under reflux. The amalgam gives a clean, reactive zinc surface on which the reduction takes place."
+  - q: "What is the difference between Clemmensen and Wolff–Kishner reduction?"
+    a: "Both turn C=O into CH₂. Clemmensen works in hot concentrated HCl, so it suits compounds that survive acid but not base. Wolff–Kishner uses hydrazine and KOH in hot ethylene glycol, so it suits compounds that survive base but not acid."
+  - q: "Is an alcohol an intermediate in the Clemmensen reduction?"
+    a: "No. The corresponding alcohols are generally not reduced to alkanes under Clemmensen conditions, so they cannot be the intermediate. The reduction is believed to happen on the zinc surface through organozinc (zinc carbenoid) species."
+  - q: "Why is Clemmensen reduction used after Friedel–Crafts acylation?"
+    a: "Acylation followed by Clemmensen reduction puts a straight alkyl chain on a benzene ring without the carbocation rearrangements and polyalkylation that trouble direct Friedel–Crafts alkylation."
+related: ["wolff-kishner-reduction", "mozingo-reduction", "friedel-crafts-acylation", "friedel-crafts-alkylation", "reagents/hi-and-red-phosphorus"]
+sources:
+  - title: "Aldehydes, Ketones and Carboxylic Acids (Class XII Chemistry, Unit 8)"
+    url: "https://ncert.nic.in/textbook/pdf/lech203.pdf"
+    publisher: "NCERT"
+  - title: "Clemmensen reduction"
+    url: "https://en.wikipedia.org/wiki/Clemmensen_reduction"
+    publisher: "Wikipedia"
+  - title: "Clemmensen Reduction"
+    url: "https://www.organic-chemistry.org/namedreactions/clemmensen-reduction.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "16.7: Reduction of Carbonyl Compounds to Hydrocarbons (Roberts and Caserio)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Basic_Principles_of_Organic_Chemistry_(Roberts_and_Caserio)/16:_Carbonyl_Compounds_I-_Aldehydes_and_Ketones._Addition_Reactions_of_the_Carbonyl_Group/16.07:_Reduction_of_Carbonyl_Compounds_to_Hydrocarbons"
+    publisher: "Chemistry LibreTexts"
+  - title: "Amines (Class XII Chemistry, Unit 9)"
+    url: "https://ncert.nic.in/textbook/pdf/lech204.pdf"
+    publisher: "NCERT"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 5
+  note: "Classroom mechanism via an alcohol and carbocation conflicts with sources (alcohols are not intermediates). 'Ketone > aldehyde' reactivity, reduction of alcohols/alkyl halides and full reduction of acrolein to propane are not confirmed; rearrangement with 1,3-diketones kept as exam teaching."
+---
+
+## What is the Clemmensen reduction?
+
+The **Clemmensen reduction** converts the **carbonyl group of an aldehyde or ketone into a CH₂ group**, so the carbonyl compound becomes an **alkane** (or an alkylbenzene). The reagent is **zinc amalgam (Zn-Hg) with concentrated hydrochloric acid**, heated under reflux. Because the medium is strongly acidic, the method is used for compounds that are stable to acid. It was reported by the Danish-American chemist Erik Christian Clemmensen in 1913.
+
+## General reaction
+
+<Eq ce="R-CO-R' ->[Zn-Hg, conc. HCl][\Delta] R-CH2-R' + H2O" />
+
+NCERT lists it together with the Wolff–Kishner reduction under "reduction to hydrocarbons" of aldehydes and ketones.
+
+## Mechanism
+
+The mechanism is not fully known, because the reaction happens on the surface of solid zinc (a heterogeneous reaction). The currently accepted picture is:
+
+1. **Protonation.** The acid protonates the carbonyl oxygen, making the carbonyl carbon more electron-poor.
+2. **Electron transfer from zinc.** Zinc gives electrons to the carbonyl carbon at the metal surface, and the carbon becomes bonded to zinc.
+3. **Loss of oxygen.** After further protonation the oxygen leaves as water, giving a **zinc carbenoid** (a carbon attached to zinc with carbene-like character).
+4. **Protonation steps.** More electron transfer from zinc and protonation by HCl convert the carbenoid into the CH₂ group.
+
+<KeyPoint>
+The alcohol R–CH(OH)–R′ is **not** an intermediate. When the alcohol itself is treated with Zn-Hg and HCl it is generally not reduced to the alkane, so a pathway through the alcohol cannot explain the reaction.
+</KeyPoint>
+
+<ExamTip title="Common mistake">
+Do not write the Clemmensen mechanism as carbonyl → alcohol → carbocation → alkane. That sequence would need the alcohol to be reduced under the same conditions, which does not happen. Write "reduction on the zinc surface via organozinc (carbenoid) intermediates".
+</ExamTip>
+
+## Examples
+
+**1. Acetophenone to ethylbenzene.** Aryl alkyl ketones, such as those made by Friedel–Crafts acylation, respond particularly well.
+
+<Eq ce="C6H5COCH3 ->[Zn-Hg, conc. HCl][\Delta] C6H5CH2CH3 + H2O" />
+
+**2. Propiophenone to propylbenzene.** This acylation–reduction sequence gives an unrearranged n-propyl group on benzene.
+
+<Eq ce="C6H5COCH2CH3 ->[Zn-Hg, conc. HCl] C6H5CH2CH2CH3" />
+
+**3. An aldehyde.** Butanal is reduced to butane in the same way; the CHO group becomes CH₃.
+
+<Eq ce="CH3CH2CH2CHO ->[Zn-Hg, HCl] CH3CH2CH2CH3" />
+
+## Clemmensen versus Wolff–Kishner
+
+| Feature | Clemmensen | Wolff–Kishner |
+|---|---|---|
+| Reagents | Zn-Hg, conc. HCl | NH₂NH₂, KOH, ethylene glycol |
+| Medium | strongly acidic | strongly basic |
+| Temperature | reflux | about 180–200 °C |
+| Choose it when the substrate is | stable to acid, unstable to base | stable to base, unstable to acid |
+| Overall change | C=O to CH₂ | C=O to CH₂ |
+
+If a compound is sensitive to both acid and base, the **Mozingo reduction** (thioacetal, then Raney nickel) is the mild alternative.
+
+<ExamTip>
+Spot the sensitive group first. An ester or an amide that hot KOH would hydrolyse points to Clemmensen; an acetal, a tertiary alcohol that would dehydrate, or another acid-sensitive group points to Wolff–Kishner.
+</ExamTip>
+
+## Limitations and exceptions
+
+- **Acid-sensitive groups** do not survive 37% HCl at reflux.
+- **Nitro groups** are also reduced. Metals in acidic medium reduce –NO₂ to –NH₂, so a nitro group in the substrate ends up as an amino group: R–NO₂ → R–NH₂.
+- **Aliphatic and cyclic ketones** are reduced less efficiently than aryl alkyl ketones under the classical conditions. A modified version with activated zinc dust and dry HCl in ether works better for them.
+- **α,β-Unsaturated and 1,3-dicarbonyl compounds** behave unusually. In exam answers, Clemmensen is flagged as a reaction where rearranged products are possible, particularly with 1,3-diketones; such substrates are best avoided in simple "predict the product" questions.
+
+## Related reactions
+
+- [Wolff–Kishner reduction](/reactions/wolff-kishner-reduction/): the basic-medium partner of Clemmensen.
+- [Mozingo reduction](/reactions/mozingo-reduction/): thioacetal plus Raney nickel, for substrates sensitive to both acid and base.
+- [Friedel–Crafts acylation](/reactions/friedel-crafts-acylation/) followed by Clemmensen reduction gives straight-chain alkylbenzenes that [Friedel–Crafts alkylation](/reactions/friedel-crafts-alkylation/) cannot.
+- [HI and red phosphorus](/reagents/hi-and-red-phosphorus/): another strongly acidic reducing system that removes oxygen completely.
+- Overview of all methods: [Reduction reactions](/mechanisms/reduction-reactions/).

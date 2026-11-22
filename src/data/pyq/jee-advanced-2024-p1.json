@@ -1,0 +1,282 @@
+{
+ "exam": "jee-advanced",
+ "year": 2024,
+ "paper": 1,
+ "source": "https://jeeadv.ac.in/past_qps/2024_1_English.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2024-p1-q3",
+   "number": 3,
+   "type": "single",
+   "stem": "Aspartame, an artificial sweetener, is a dipeptide aspartyl phenylalanine methyl ester. The structure of aspartame is\n(Structures of phenylalanine and aspartic acid are given below.)",
+   "figures": [
+    {
+     "smiles": "N[C@@H](Cc1ccccc1)C(=O)O",
+     "label": "Phenylalanine"
+    },
+    {
+     "smiles": "N[C@@H](CC(=O)O)C(=O)O",
+     "label": "Aspartic acid"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "N[C@@H](CC(=O)N[C@@H](Cc1ccccc1)C(=O)OC)C(=O)O"
+    },
+    {
+     "key": "B",
+     "smiles": "N[C@@H](CC(=O)O)C(=O)N[C@@H](Cc1ccccc1)C(=O)OC"
+    },
+    {
+     "key": "C",
+     "smiles": "N[C@@H](Cc1ccccc1)C(=O)N[C@@H](CC(=O)O)C(=O)OC"
+    },
+    {
+     "key": "D",
+     "smiles": "N[C@@H](CC(=O)OC)C(=O)N[C@@H](Cc1ccccc1)C(=O)O"
+    }
+   ],
+   "answer": "B",
+   "solution": "“Aspartyl phenylalanine methyl ester” means the α-COOH of aspartic acid forms the peptide bond with the NH₂ of phenylalanine, and phenylalanine’s COOH is the methyl ester; aspartic acid keeps its free α-NH₂ and its side-chain CH₂COOH. Option (B) shows exactly this, with both residues in the L configuration as in the given structures. (A) links through the side-chain (β) carboxyl of aspartic acid, (C) is a Phe–Asp dipeptide, and (D) puts the methyl ester on aspartic acid’s side chain and leaves phenylalanine as a free acid.",
+   "topics": [
+    "concepts/amino-acids"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2024-p1-q6",
+   "number": 6,
+   "type": "multiple",
+   "stem": "Reaction of iso-propylbenzene with O₂ followed by the treatment with H₃O⁺ forms phenol and a by-product P. Reaction of P with 3 equivalents of Cl₂ gives compound Q. Treatment of Q with Ca(OH)₂ produces compound R and calcium salt S.\nThe correct statement(s) regarding P, Q, R and S is(are)",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "Reaction of P with R in the presence of KOH followed by acidification gives the compound shown",
+     "smiles": "CC(C)(O)C(Cl)(Cl)Cl"
+    },
+    {
+     "key": "B",
+     "text": "Reaction of R with O₂ in the presence of light gives phosgene gas"
+    },
+    {
+     "key": "C",
+     "text": "Q reacts with aqueous NaOH to produce Cl₃CCH₂OH and Cl₃CCOONa"
+    },
+    {
+     "key": "D",
+     "text": "S on heating gives P"
+    }
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "solution": "The cumene process gives phenol and acetone (P). Three Cl₂ chlorinate one methyl group to give 1,1,1-trichloroacetone (Q), which Ca(OH)₂ cleaves in the haloform reaction to chloroform (R) and calcium acetate (S). (A) Base deprotonates CHCl₃ and CCl₃⁻ adds to acetone, giving chloretone, (CH₃)₂C(OH)CCl₃ — true. (B) Chloroform is oxidised by air in light to phosgene, COCl₂ — true. (C) Aqueous NaOH again effects the haloform cleavage of Q, giving CHCl₃ and CH₃COONa, not Cl₃CCH₂OH and Cl₃CCOONa — false. (D) Dry distillation of calcium acetate gives acetone — true.",
+   "topics": [
+    "reactions/cumene-process",
+    "reactions/haloform-reaction"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2024-p1-q10",
+   "number": 10,
+   "type": "numerical",
+   "stem": "Complete reaction of acetaldehyde with excess formaldehyde, upon heating with conc. NaOH solution, gives P and Q. Compound P does not give Tollens’ test, whereas Q on acidification gives positive Tollens’ test. Treatment of P with excess cyclohexanone in the presence of catalytic amount of p-toluenesulfonic acid (PTSA) gives product R.\nSum of the number of methylene groups (-CH₂-) and oxygen atoms in R is ______.",
+   "figures": [],
+   "answer": "18",
+   "solution": "Three crossed aldol additions of HCHO to the α-carbon of acetaldehyde give (HOCH₂)₃C–CHO, and a crossed Cannizzaro reaction with more HCHO reduces it to pentaerythritol C(CH₂OH)₄ (P) while HCHO becomes formate (Q; formic acid gives Tollens’ test). With excess cyclohexanone and PTSA, each pair of CH₂OH groups forms a 1,3-dioxane ketal, giving a dispiro bis-ketal R. CH₂ count: 4 from pentaerythritol + 5 in each cyclohexane ring × 2 = 14; oxygen atoms = 4. Sum = 18.",
+   "topics": [
+    "reactions/cross-aldol-condensation",
+    "reactions/cannizzaro-reaction"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2024-p1-q12",
+   "number": 12,
+   "type": "numerical",
+   "stem": "In the following reaction sequence, the major product P is formed.\nHC≡C–(CH₂)₁₅–CO₂Et —i) Hg²⁺, H₃O⁺ ii) Zn-Hg/HCl iii) H₃O⁺, Δ→ P\nGlycerol reacts completely with excess P in the presence of an acid catalyst to form Q. Reaction of Q with excess NaOH followed by the treatment with CaCl₂ yields Ca-soap R, quantitatively.\nStarting with one mole of Q, the amount of R produced in gram is ______.\n[Given, atomic weight: H = 1, C = 12, N = 14, O = 16, Na = 23, Cl = 35, Ca = 40]",
+   "figures": [
+    {
+     "smiles": "C#CCCCCCCCCCCCCCCCC(=O)OCC"
+    }
+   ],
+   "answer": "909",
+   "solution": "Hg²⁺-catalysed hydration of the terminal alkyne gives the methyl ketone CH₃CO(CH₂)₁₅CO₂Et; Clemmensen reduction turns C=O into CH₂, and acid hydrolysis of the ester gives stearic acid, CH₃(CH₂)₁₆COOH (P). Glycerol + 3 P → tristearin (Q). Saponification gives 3 mol sodium stearate per mole of Q, and CaCl₂ precipitates calcium stearate (C₁₇H₃₅COO)₂Ca, M = 606. Three stearate ions give 1.5 mol of R: 1.5 × 606 = 909 g.",
+   "topics": [
+    "reactions/kucherov-reaction",
+    "reactions/clemmensen-reduction",
+    "reactions/ester-hydrolysis"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2024-p1-q16",
+   "number": 16,
+   "type": "matching",
+   "stem": "List-I contains various reaction sequences and List-II contains the possible products. Match each entry in List-I with the appropriate entry in List-II and choose the correct option.\nList-I\n(P) Cyclohexene —i) O₃, Zn ii) aq. NaOH, Δ iii) ethylene glycol, PTSA iv) a) BH₃, b) H₂O₂, NaOH v) H₃O⁺ vi) NaBH₄→\n(Q) 1-Methylcyclohexene —i) O₃, Zn ii) aq. NaOH, Δ iii) ethylene glycol, PTSA iv) a) BH₃, b) H₂O₂, NaOH v) H₃O⁺ vi) NaBH₄→\n(R) 2-Methylcyclopent-2-en-1-one —i) ethylene glycol, PTSA ii) a) Hg(OAc)₂, H₂O, b) NaBH₄ iii) H₃O⁺ iv) NaBH₄→\n(S) 2-Methylcyclopent-2-en-1-one —i) ethylene glycol, PTSA ii) a) BH₃, b) H₂O₂, NaOH iii) H₃O⁺ iv) NaBH₄→\nList-II: (1)–(5) structures shown",
+   "figures": [
+    {
+     "smiles": "C1=CCCCC1",
+     "label": "P"
+    },
+    {
+     "smiles": "CC1=CCCCC1",
+     "label": "Q"
+    },
+    {
+     "smiles": "CC1=CCCC1=O",
+     "label": "R"
+    },
+    {
+     "smiles": "CC1=CCCC1=O",
+     "label": "S"
+    },
+    {
+     "smiles": "CC1C(O)CCC1O",
+     "label": "1"
+    },
+    {
+     "smiles": "CC1C(O)CCC1CO",
+     "label": "2"
+    },
+    {
+     "smiles": "OCC1CCCC1O",
+     "label": "3"
+    },
+    {
+     "smiles": "CC1(O)CCCC1O",
+     "label": "4"
+    },
+    {
+     "smiles": "CC(O)C1CCCC1O",
+     "label": "5"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "P-3, Q-5, R-4, S-1"
+    },
+    {
+     "key": "B",
+     "text": "P-3, Q-2, R-4, S-1"
+    },
+    {
+     "key": "C",
+     "text": "P-3, Q-5, R-1, S-4"
+    },
+    {
+     "key": "D",
+     "text": "P-5, Q-2, R-4, S-1"
+    }
+   ],
+   "answer": "A",
+   "solution": "(P) Ozonolysis gives hexanedial; intramolecular aldol condensation gives cyclopent-1-enecarbaldehyde. After protecting CHO as an acetal, hydroboration puts OH on the ring carbon away from the substituent; deprotection and NaBH₄ give 2-(hydroxymethyl)cyclopentanol (3). (Q) Ozonolysis gives 6-oxoheptanal; the ketone’s CH₂ enolate attacks the more electrophilic aldehyde, giving 1-acetylcyclopentene, and the same sequence gives 1-(2-hydroxycyclopentyl)ethanol (5). (R) After ketal protection, oxymercuration–demercuration adds OH (Markovnikov) to the methyl-bearing carbon; deprotection and NaBH₄ give 1-methylcyclopentane-1,2-diol (4). (S) Hydroboration instead puts OH on the CH carbon (anti-Markovnikov), giving 2-methylcyclopentane-1,3-diol (1). So P-3, Q-5, R-4, S-1.",
+   "topics": [
+    "reactions/ozonolysis",
+    "reactions/hydroboration-oxidation",
+    "reactions/oxymercuration-demercuration"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2024-p1-q17",
+   "number": 17,
+   "type": "matching",
+   "stem": "List-I contains various reaction sequences and List-II contains different phenolic compounds. Match each entry in List-I with the appropriate entry in List-II and choose the correct option.\nList-I\n(P) Benzenesulfonic acid —i) molten NaOH, H₃O⁺ ii) Conc. HNO₃→\n(Q) Nitrobenzene —i) Conc. HNO₃ / Conc. H₂SO₄ ii) Sn / HCl iii) NaNO₂ /HCl, 0 - 5 °C, iv) H₂O v) Conc. HNO₃ / Conc. H₂SO₄→\n(R) Resorcinol —i) Conc. H₂SO₄ ii) Conc. HNO₃ iii) H₃O⁺, Δ→\n(S) Toluene —i) a) KMnO₄ / KOH, Δ; b) H₃O⁺ ii) Conc. HNO₃ / Conc. H₂SO₄, Δ iii) a) SOCl₂, b) NH₃ iv) Br₂, NaOH v) NaNO₂ / HCl, 0 - 5 °C vi) H₂O→\nList-II: (1)–(5) structures shown",
+   "figures": [
+    {
+     "smiles": "OS(=O)(=O)c1ccccc1",
+     "label": "P"
+    },
+    {
+     "smiles": "O=[N+]([O-])c1ccccc1",
+     "label": "Q"
+    },
+    {
+     "smiles": "Oc1cccc(O)c1",
+     "label": "R"
+    },
+    {
+     "smiles": "Cc1ccccc1",
+     "label": "S"
+    },
+    {
+     "smiles": "Oc1cc([N+](=O)[O-])cc([N+](=O)[O-])c1",
+     "label": "1"
+    },
+    {
+     "smiles": "Oc1ccc([N+](=O)[O-])cc1[N+](=O)[O-]",
+     "label": "2"
+    },
+    {
+     "smiles": "Oc1c([N+](=O)[O-])cc([N+](=O)[O-])cc1[N+](=O)[O-]",
+     "label": "3"
+    },
+    {
+     "smiles": "Oc1cccc(O)c1[N+](=O)[O-]",
+     "label": "4"
+    },
+    {
+     "smiles": "Oc1c([N+](=O)[O-])cc([N+](=O)[O-])c(O)c1[N+](=O)[O-]",
+     "label": "5"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "P-2, Q-3, R-4, S-5"
+    },
+    {
+     "key": "B",
+     "text": "P-2, Q-3, R-5, S-1"
+    },
+    {
+     "key": "C",
+     "text": "P-3, Q-5, R-4, S-1"
+    },
+    {
+     "key": "D",
+     "text": "P-3, Q-2, R-5, S-4"
+    }
+   ],
+   "answer": "C",
+   "solution": "(P) Alkali fusion gives phenol, and concentrated HNO₃ nitrates it fully to picric acid, 2,4,6-trinitrophenol (3). (Q) Nitration gives m-dinitrobenzene; Sn/HCl gives m-phenylenediamine, bis-diazotisation and hydrolysis give resorcinol, and nitration gives 2,4,6-trinitroresorcinol (5). (R) Sulfonation blocks the 4- and 6-positions of resorcinol, nitration then occurs at C-2, and steam/acid removes the SO₃H groups, giving 2-nitroresorcinol (4). (S) Toluene → benzoic acid; hot mixed acid gives 3,5-dinitrobenzoic acid (COOH is meta-directing) → amide → Hofmann degradation to 3,5-dinitroaniline → diazotisation/hydrolysis to 3,5-dinitrophenol (1). So P-3, Q-5, R-4, S-1.",
+   "topics": [
+    "preparation/preparation-of-phenols",
+    "mechanisms/electrophilic-aromatic-substitution",
+    "reactions/hofmann-bromamide-degradation"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  }
+ ]
+}

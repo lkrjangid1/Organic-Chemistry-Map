@@ -1,0 +1,156 @@
+---
+title: "Sandmeyer Reaction"
+description: "The Sandmeyer reaction replaces the –N₂⁺ group of an arenediazonium salt with Cl, Br or CN using CuCl, CuBr or CuCN. Radical mechanism, conditions and examples."
+aliases: ["Sandmayer reaction", "Sandmeyer reaction chlorobenzene", "Benzenediazonium chloride with CuCl", "Cu2Cl2 HCl reaction", "Sandmeyer cyanation"]
+kind: "named-reaction"
+family: "diazonium-salt-reactions"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["sandmeyer_reaction_cl"]
+reactant:
+  name: "Benzenediazonium chloride"
+  smiles: "[Cl-].N#[N+]c1ccccc1"
+product:
+  name: "Chlorobenzene"
+  smiles: "Clc1ccccc1"
+byproducts: "N₂"
+reagents: "CuCl/HCl, CuBr/HBr or CuCN/KCN (copper(I) salts; Cu₂X₂ + HX in older notation)"
+conditions: "Diazonium salt solution added to the Cu(I) salt, gentle warming"
+equation: "C6H5N2^+ Cl^- ->[CuCl/HCl] C6H5Cl + N2 ^"
+notesPages: [47]
+steps:
+  - title: "Electron transfer"
+    text: "Cu(I) gives one electron to the benzenediazonium ion, forming Cu(II) and a diazenyl radical. The Sandmeyer reaction is a radical-nucleophilic aromatic substitution, not an SN1 loss of N₂ through an aryl cation."
+    arrows: "Single electron from Cu⁺ → the diazonium ion (fish-hook arrow)."
+    species:
+      - smiles: "N#[N+]c1ccccc1"
+        label: "Benzenediazonium ion"
+        highlight: "N#[N+]"
+      - smiles: "[Cu+]"
+        label: "Cu(I)"
+  - title: "Loss of nitrogen"
+    text: "The diazenyl radical breaks down to a phenyl radical and N₂ gas. Biaryl (Ar–Ar) by-products are evidence for this radical route."
+    arrows: "The C–N bond splits homolytically: one electron stays on the ring carbon and N₂ leaves."
+    species:
+      - smiles: "[N]=Nc1ccccc1"
+        label: "Diazenyl radical"
+        highlight: "[N]=N"
+  - title: "Group transfer"
+    text: "The aryl radical takes Cl from the copper(II) species, giving chlorobenzene and regenerating Cu(I), so copper acts as a catalyst. CuBr/HBr gives bromobenzene and CuCN/KCN gives benzonitrile in the same way."
+    arrows: "Unpaired electron of the aryl radical + one electron of a Cu–Cl bond → new C–Cl bond."
+    species:
+      - smiles: "[c]1ccccc1"
+        label: "Phenyl radical"
+        highlight: "[c;H0]"
+      - smiles: "Cl[Cu]Cl"
+        label: "CuCl₂ (Cu(II))"
+memoryTricks: []
+faq:
+  - q: "What is the Sandmeyer reaction?"
+    a: "It is the replacement of the diazonium group of an arenediazonium salt by Cl, Br or CN using the corresponding copper(I) salt (CuCl, CuBr or CuCN). Benzenediazonium chloride with CuCl/HCl gives chlorobenzene and nitrogen gas."
+  - q: "What is the difference between the Sandmeyer and Gattermann reactions?"
+    a: "Sandmeyer uses a copper(I) salt such as CuCl or CuBr with the halogen acid, while Gattermann uses copper powder with the halogen acid. NCERT states that the Sandmeyer reaction gives the better yield."
+  - q: "Why can't iodobenzene and fluorobenzene be made by the Sandmeyer reaction?"
+    a: "Iodide reacts with the diazonium salt on its own, so KI alone gives iodobenzene without copper. Fluorobenzene needs the Balz–Schiemann route, in which the diazonium tetrafluoroborate is heated."
+  - q: "What is the mechanism of the Sandmeyer reaction?"
+    a: "It is a radical-nucleophilic aromatic substitution. Cu(I) transfers one electron to the diazonium ion, which loses N₂ to give an aryl radical; the radical takes Cl, Br or CN from the copper(II) species, regenerating Cu(I)."
+related: ["diazotization-reaction", "gattermann-reaction", "balz-schiemann-reaction", "nucleophilic-aromatic-substitution", "friedel-crafts-alkylation"]
+sources:
+  - title: "Amines (Class 12 Chemistry, Unit 9)"
+    url: "https://ncert.nic.in/textbook/pdf/lech204.pdf"
+    publisher: "NCERT"
+  - title: "Sandmeyer reaction"
+    url: "https://en.wikipedia.org/wiki/Sandmeyer_reaction"
+    publisher: "Wikipedia"
+  - title: "Sandmeyer Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/sandmeyer-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "Amines with Nitrous Acid (Roberts and Caserio)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Basic_Principles_of_Organic_Chemistry_(Roberts_and_Caserio)/23:_Organonitrogen_Compounds_I_-_Amines/23.10:_Amines_with_Nitrous_Acid"
+    publisher: "Chemistry LibreTexts"
+verified:
+  status: "conflict"
+  checked: 2026-11-21
+  sourceCount: 4
+  note: "Notes write KCN alone for ArN₂⁺ to ArCN; sources give the Sandmeyer cyanation with CuCN (Cu(I)). Notes draw one aryl-cation (SN1-type) mechanism for all diazonium replacements; sources describe the Sandmeyer reaction as a Cu(I)-catalysed radical process. The page follows the sources."
+---
+
+## What is the Sandmeyer reaction?
+
+The **Sandmeyer reaction** replaces the diazonium group (–N₂⁺) of an **arenediazonium salt** with **Cl, Br or CN** using the matching **copper(I) salt**: CuCl/HCl, CuBr/HBr or CuCN/KCN. Benzenediazonium chloride gives **chlorobenzene**, bromobenzene or benzonitrile, and nitrogen gas escapes. It was discovered by Traugott Sandmeyer in 1884, who obtained chlorobenzene while trying to make phenylacetylene with copper(I) acetylide.
+
+Together with [diazotization](/reactions/diazotization-reaction/), it converts an –NH₂ group on a ring into a halogen or cyano group.
+
+## General reaction
+
+<Eq ce="Ar-N2^+ X^- ->[CuX/HX] Ar-X + N2 ^ \quad (X = Cl, Br)" />
+
+<Eq ce="Ar-N2^+ Cl^- ->[CuCN/KCN] Ar-CN + N2 ^" />
+
+The copper(I) halide is sometimes written in the older dimer form, **Cu₂X₂ + HX** (X = Cl, Br); this is the same reagent as CuX.
+
+## Mechanism
+
+The Sandmeyer reaction is a **radical-nucleophilic aromatic substitution** (SRNAr), not a simple SN1 loss of N₂:
+
+1. **Electron transfer.** Cu(I) gives one electron to the diazonium ion, forming Cu(II).
+2. **Loss of nitrogen.** The resulting diazenyl radical breaks down to an **aryl radical** and N₂ gas.
+3. **Group transfer.** The aryl radical picks up Cl, Br or CN from the copper(II) species, giving Ar–X and regenerating Cu(I). So copper acts as a catalyst.
+
+<Eq ce="ArN2^+ + Cu^+ -> Ar^. + N2 + Cu^2+" />
+
+<Eq ce="Ar^. + CuCl2 -> ArCl + CuCl" />
+
+<KeyPoint>
+Evidence for the radical route: biaryl (Ar–Ar) by-products form, and Cu(II) is needed for the halide transfer step.
+</KeyPoint>
+
+<ExamTip title="Common mistake">
+Drawing an aryl cation for every diazonium replacement. That picture fits hydrolysis to phenol and the Balz–Schiemann reaction, but not the copper-catalysed Sandmeyer reaction.
+</ExamTip>
+
+## Examples
+
+**1. Chlorobenzene from benzenediazonium chloride:**
+
+<Eq ce="C6H5N2^+ Cl^- ->[CuCl/HCl] C6H5Cl + N2 ^" />
+
+**2. Bromobenzene:**
+
+<Eq ce="C6H5N2^+ Cl^- ->[CuBr/HBr] C6H5Br + N2 ^" />
+
+**3. Benzonitrile (cyanation):**
+
+<Eq ce="C6H5N2^+ Cl^- ->[CuCN/KCN] C6H5CN + N2 ^" />
+
+Benzonitrile can be hydrolysed to benzoic acid, so the Sandmeyer cyanation is a standard step in conversions such as aniline → benzoic acid.
+
+<ExamTip>
+In conversion questions, the sequence ArNO₂ → ArNH₂ → ArN₂⁺ → ArX lets you put Cl, Br or CN at positions that direct electrophilic substitution cannot reach, because the –NH₂ group sets the orientation first and is then replaced.
+</ExamTip>
+
+## Sandmeyer vs Gattermann vs other replacements
+
+| Product | Reagent | Name |
+|---|---|---|
+| ArCl, ArBr | CuCl/HCl, CuBr/HBr | Sandmeyer |
+| ArCl, ArBr | Cu powder + HCl/HBr | Gattermann |
+| ArCN | CuCN/KCN | Sandmeyer |
+| ArI | KI (no copper) | not Sandmeyer |
+| ArF | HBF₄, then heat | Balz–Schiemann |
+
+NCERT states that the Sandmeyer reaction gives better yields than the Gattermann reaction.
+
+## Limitations and exceptions
+
+- **Iodine**: KI alone reacts with the diazonium salt, so no copper is needed; this is usually not called a Sandmeyer reaction.
+- **Fluorine**: copper fluorides do not work; use the [Balz–Schiemann reaction](/reactions/balz-schiemann-reaction/).
+- **Cyanide**: a common mistake is writing KCN alone; in the Sandmeyer method the cyanide is delivered by **CuCN** (often dissolved in KCN).
+- The diazonium salt must be freshly prepared in the cold; warming it with water alone gives phenol instead.
+
+## Related reactions
+
+- [Diazotization reaction](/reactions/diazotization-reaction/): makes the diazonium salt from aniline.
+- [Gattermann reaction](/reactions/gattermann-reaction/): the copper-powder version.
+- [Balz–Schiemann reaction](/reactions/balz-schiemann-reaction/): the route to aryl fluorides.
+- [Nucleophilic aromatic substitution](/reactions/nucleophilic-aromatic-substitution/): the other way to replace groups on a ring.
+- [Reactions of diazonium salts](/mechanisms/diazonium-salt-reactions/): all replacements of –N₂⁺ in one place.

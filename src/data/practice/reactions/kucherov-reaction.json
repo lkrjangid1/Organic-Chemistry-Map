@@ -1,0 +1,7 @@
+{"page": "reactions/kucherov-reaction",
+ "questions": [
+  {"q": "Propyne reacts with water in the presence of HgSO₄ and dilute H₂SO₄. The product is:", "options": ["Propanal", "Propan-2-ol", "Acetone", "Propanoic acid"], "answer": 2, "explain": "Water adds in the Markovnikov sense to give the enol CH₃–C(OH)=CH₂, which tautomerises to acetone. Propanal is the anti-Markovnikov (hydroboration) product."},
+  {"q": "Which alkyne gives an aldehyde on hydration with HgSO₄/dil. H₂SO₄?", "options": ["Propyne", "Ethyne", "But-2-yne", "3-Phenylprop-1-yne"], "answer": 1, "explain": "Only ethyne (acetylene) gives an aldehyde, acetaldehyde. Every other alkyne gives a ketone; terminal alkynes give methyl ketones."},
+  {"q": "Pent-2-yne is hydrated using HgSO₄ in dilute H₂SO₄. The product is:", "options": ["Pentan-2-one only", "Pentan-3-one only", "Pentanal", "A mixture of pentan-2-one and pentan-3-one"], "answer": 3, "explain": "The two carbons of this unsymmetrical internal triple bond are similarly substituted, so water adds at either one and a mixture of two ketones forms. A symmetrical alkyne such as but-2-yne gives a single ketone."},
+  {"q": "To convert propyne into propanal instead of acetone, the reagent to choose is:", "options": ["A bulky borane, then H₂O₂/OH⁻", "HgSO₄, dil. H₂SO₄", "Hg²⁺ and H⁺ at higher temperature", "Dilute H₂SO₄ alone"], "answer": 0, "explain": "Hydroboration–oxidation adds water anti-Markovnikov and gives the aldehyde. All the mercury/acid conditions are Kucherov conditions and give the methyl ketone."}
+ ]}

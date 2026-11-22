@@ -1,0 +1,49 @@
+{
+ "page": "tests/victor-meyer-test",
+ "questions": [
+  {
+   "q": "In the Victor Meyer test, propan-2-ol gives:",
+   "options": [
+    "A blood-red colour",
+    "A blue colour",
+    "No colour",
+    "A green colour"
+   ],
+   "answer": 1,
+   "explain": "The 2° nitroalkane (CH₃)₂CH–NO₂ has one α-hydrogen; nitrosation gives the pseudonitrole (CH₃)₂C(NO₂)NO, whose blue colour is due to its C–N=O group (RBC: Red, Blue, Colourless)."
+  },
+  {
+   "q": "Why is silver nitrite, and not potassium nitrite, used to convert the alkyl iodide in the Victor Meyer test?",
+   "options": [
+    "KNO₂ does not dissolve in organic solvents",
+    "AgNO₂ also oxidises the alkyl iodide to an aldehyde",
+    "KNO₂ attacks through oxygen and gives the alkyl nitrite R–O–N=O, which is useless for the test",
+    "AgNO₂ supplies the nitrous acid needed in the next step"
+   ],
+   "answer": 2,
+   "explain": "Nitrite is an ambident nucleophile: AgNO₂ bonds through nitrogen to give the nitroalkane R–NO₂ that the test needs, while KNO₂ gives the alkyl nitrite."
+  },
+  {
+   "q": "Why does 2-methylpropan-2-ol give no colour in the Victor Meyer test?",
+   "options": [
+    "Its nitroalkane has no α-hydrogen, so it cannot be nitrosated by nitrous acid",
+    "It cannot be converted into an alkyl iodide by red P and I₂",
+    "Its nitrolic acid is colourless in NaOH",
+    "It is dehydrated by HNO₂ to an alkene"
+   ],
+   "answer": 0,
+   "explain": "(CH₃)₃C–NO₂ has no hydrogen on the carbon bearing NO₂, so no nitronate forms and HNO₂ does not react; the solution stays colourless."
+  },
+  {
+   "q": "Which alcohol gives a blood-red colour in the Victor Meyer test?",
+   "options": [
+    "2-Methylpropan-2-ol",
+    "Propan-2-ol",
+    "Butan-2-ol",
+    "2-Methylpropan-1-ol"
+   ],
+   "answer": 3,
+   "explain": "2-Methylpropan-1-ol is primary (R–CH₂–OH); its nitroalkane has two α-hydrogens and forms a nitrolic acid whose sodium salt is red. The branching is a distractor: only the carbon bearing OH matters."
+  }
+ ]
+}

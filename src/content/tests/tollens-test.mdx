@@ -1,0 +1,129 @@
+---
+title: "Tollens' Test (Silver Mirror Test)"
+description: "Tollens' test uses ammoniacal silver nitrate to tell aldehydes from ketones: an aldehyde is oxidised to a carboxylate and a silver mirror coats the tube."
+aliases: ["Tollens test", "Tollen's test", "Tollens' reagent", "Silver mirror test", "Ammoniacal silver nitrate test", "Diamminesilver(I) test"]
+kind: "test"
+family: "nucleophilic-addition"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "Ethanal (acetaldehyde)"
+  smiles: "CC=O"
+product:
+  name: "Ethanoate ion (acetate)"
+  smiles: "CC(=O)[O-]"
+byproducts: "Ag (silver mirror), NH₃, H₂O"
+reagents: "Tollens' reagent: freshly prepared ammoniacal silver nitrate, [Ag(NH₃)₂]⁺OH⁻ (AgNO₃ + NaOH, then NH₃(aq) until the precipitate just dissolves)"
+conditions: "Warm gently in a water bath; alkaline medium; clean test tube"
+equation: "RCHO + 2[Ag(NH3)2]+ + 3OH- -> RCOO- + 2Ag v + 4NH3 + 2H2O"
+observation: "Bright silver mirror on the inner wall of the test tube (or a black precipitate of silver)"
+distinguishes: "Aldehydes from ketones"
+notesPages: [81, 120]
+memoryTricks: []
+faq:
+  - q: "What is Tollens' reagent?"
+    a: "Tollens' reagent is a freshly prepared ammoniacal silver nitrate solution. Its active species is the diamminesilver(I) ion, [Ag(NH₃)₂]⁺, in alkaline solution."
+  - q: "Why do aldehydes give the silver mirror test but ketones do not?"
+    a: "An aldehyde has a hydrogen on the carbonyl carbon and is easily oxidised to a carboxylate ion. The Ag⁺ ions are reduced to metallic silver, which deposits as a mirror. Ordinary ketones resist mild oxidation, so nothing happens."
+  - q: "Which ketones give a positive Tollens' test?"
+    a: "α-Hydroxy ketones (such as fructose) give a positive test. In the alkaline reagent they tautomerise to aldehydes, which are then oxidised."
+  - q: "Does formic acid give Tollens' test?"
+    a: "Yes. Formic acid (HCOOH) has an H–C=O unit and is easily oxidised, so it reduces Tollens' reagent to silver. Other carboxylic acids do not."
+  - q: "Why must Tollens' reagent be freshly prepared?"
+    a: "It has a short shelf life, and on standing it can form explosive silver compounds. It is made just before use and destroyed with dilute acid afterwards."
+related: ["tests/fehling-test", "tests/benedict-test", "tests/schiff-test", "tests/2-4-dnp-test", "cannizzaro-reaction", "mechanisms/oxidation-reactions", "concepts/aldoses-and-epimers"]
+sources:
+  - title: "Aldehydes, Ketones and Carboxylic Acids (Class XII Chemistry, Unit 8)"
+    url: "https://ncert.nic.in/textbook/pdf/lech203.pdf"
+    publisher: "NCERT"
+  - title: "Tollens' reagent"
+    url: "https://en.wikipedia.org/wiki/Tollens%27_reagent"
+    publisher: "Wikipedia"
+  - title: "6.4D: Individual Tests (Tollens Test)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_Lab_Techniques_(Nichols)/06:_Miscellaneous_Techniques/6.04:_Chemical_Tests/6.4D:_Individual_Tests"
+    publisher: "LibreTexts Chemistry"
+  - title: "24.4: Polyfunctional Chemistry of Sugars: Oxidation to Carboxylic Acids"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Map%3A_Organic_Chemistry_(Vollhardt_and_Schore)/24%3A_Carbohydrates%3A_Polyfunctional_Compounds_in_Nature/24.04%3A_Polyfunctional__Chemistry__of_Sugars%3A__Oxidation__to_Carboxylic__Acids"
+    publisher: "LibreTexts Chemistry"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 4
+  note: "Positive results for R–CHCl₂ (via hydrolysis to RCHO) and the statement that C=C is untouched are exam teaching not stated in the sources; kept with that framing."
+---
+
+## What is the Tollens' test?
+
+The **Tollens' test** (silver mirror test) distinguishes **aldehydes from ketones**. The sample is warmed with **Tollens' reagent**, a freshly prepared **ammoniacal silver nitrate** solution containing [Ag(NH₃)₂]⁺. An aldehyde is oxidised to its **carboxylate ion**, and the silver(I) ions are reduced to **metallic silver**, which forms a shiny **silver mirror** on the inside of the tube. Both aliphatic and aromatic aldehydes respond; ordinary ketones do not.
+
+## Reagent and how to prepare it
+
+Tollens' reagent cannot be stored, so it is made just before the test:
+
+1. Add a few drops of dilute NaOH to aqueous AgNO₃. A brown precipitate of silver(I) oxide forms.
+2. Add dilute aqueous ammonia drop by drop until the precipitate **just dissolves**. The clear solution contains the diamminesilver(I) complex.
+
+<Eq ce="2AgNO3 + 2NaOH -> Ag2O v + 2NaNO3 + H2O" />
+
+<Eq ce="Ag2O + 4NH3 + H2O -> 2[Ag(NH3)2]+ + 2OH-" />
+
+Adding ammonia directly to AgNO₃ also works: the first drops precipitate Ag₂O, and more ammonia redissolves it.
+
+## Procedure
+
+1. Take about 2 mL of freshly prepared Tollens' reagent in a clean test tube.
+2. Add a few drops of the sample (dissolved in a little water or ether if needed).
+3. Warm in a water bath for a few minutes. Do not heat strongly.
+4. After the test, acidify the mixture with dilute acid before discarding it.
+
+## Observations and inference
+
+| Compound type | Observation | Inference |
+|---|---|---|
+| Aliphatic aldehyde (ethanal) | Silver mirror or black precipitate | Positive |
+| Aromatic aldehyde (benzaldehyde) | Silver mirror | Positive |
+| Simple ketone (propanone) | No change, clear solution | Negative |
+| α-Hydroxy ketone (fructose) | Silver mirror | Positive |
+| Formic acid (HCOOH) | Silver mirror | Positive |
+| Reducing sugars (glucose, maltose) | Silver mirror | Positive |
+| Terminal alkyne (R–C≡CH) | White precipitate of silver acetylide, no mirror | Acidic C–H, not oxidation |
+
+## Chemistry behind it
+
+The diamminesilver(I) ion is a mild oxidising agent. The aldehyde loses its C–H hydrogen and becomes a carboxylate (the medium is alkaline, so the free acid is not formed until the mixture is acidified). Each Ag⁺ gains one electron:
+
+<Eq ce="RCHO + 2[Ag(NH3)2]+ + 3OH- -> RCOO- + 2Ag v + 4NH3 + 2H2O" />
+
+<Eq ce="CH3CHO + 2[Ag(NH3)2]+ + 3OH- -> CH3COO- + 2Ag v + 4NH3 + 2H2O" />
+
+α-Hydroxy ketones and ketoses react because the base in the reagent converts them, through an enediol, into an aldehyde that is then oxidised. Cyclic hemiacetals (for example 2-hydroxytetrahydropyran, or the ring form of glucose) are in equilibrium with an open-chain aldehyde, so they also reduce the reagent.
+
+Terminal alkynes give a white precipitate for a different reason: the acidic ≡C–H hydrogen is replaced by silver.
+
+<Eq ce="R-C#CH + [Ag(NH3)2]+ -> R-C#C-Ag v + NH4+ + NH3" />
+
+<KeyPoint>
+Tollens' reagent oxidises the –CHO group selectively. In exam questions an unsaturated aldehyde such as hex-4-enal is converted (after acidification) into hex-4-enoic acid with the C=C left intact. This makes Tollens' reagent useful when a stronger oxidant like KMnO₄ would also attack the double bond.
+</KeyPoint>
+
+<ExamTip title="Common mistake">
+Fehling's and Benedict's solutions do not oxidise aromatic aldehydes, but Tollens' reagent does. So benzaldehyde is Tollens-positive and Fehling-negative, which is a favourite way to separate aliphatic from aromatic aldehydes.
+</ExamTip>
+
+In exam answers, a gem-dichloride with a terminal CHCl₂ group (R–CHCl₂) is also listed as Tollens-positive, because in the alkaline reagent it can hydrolyse to the aldehyde R–CHO, which is then oxidised.
+
+## Limitations
+
+- Most ketones are negative, but α-hydroxy ketones, 1,2-dicarbonyl compounds, hydrazines and formic acid are positive, so a mirror does not prove an aldehyde by itself.
+- The reagent must be fresh and the tube clean; old reagent may form explosive silver compounds, and dirty glass gives a black precipitate instead of a mirror.
+- Water-insoluble aldehydes react slowly; a co-solvent such as ether helps.
+- Confirm a carbonyl group first with the [2,4-DNP test](/tests/2-4-dnp-test/); then use Tollens' test to decide between aldehyde and ketone.
+
+## Related tests
+
+- [Fehling's test](/tests/fehling-test/): copper(II) tartrate complex; aromatic aldehydes negative.
+- [Benedict's test](/tests/benedict-test/): copper(II) citrate complex; used mainly for reducing sugars.
+- [Schiff's test](/tests/schiff-test/): colour test that responds to aldehydes.
+- [2,4-DNP test](/tests/2-4-dnp-test/): detects both aldehydes and ketones.
+- [Cannizzaro reaction](/reactions/cannizzaro-reaction/): what aldehydes without α-hydrogen do in strong base.
+- [Oxidation reactions](/mechanisms/oxidation-reactions/): hub page for organic oxidations.

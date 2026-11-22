@@ -1,0 +1,51 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PyqQuestion from '../../components/PyqQuestion.astro';
+import LibgenCard from '../../components/LibgenCard.astro';
+import { url, absUrl } from '../../lib/site';
+import { breadcrumbLd } from '../../lib/seo';
+import { papers, paperSlug, paperTitle, answerText, type PyqPaper } from '../../lib/pyq';
+
+export function getStaticPaths() {
+  return papers.map((paper) => ({ params: { slug: paperSlug(paper) }, props: { paper } }));
+}
+
+const { paper } = Astro.props as { paper: PyqPaper };
+const name = paperTitle(paper);
+const path = `pyq/${paperSlug(paper)}/`;
+const title = `${name} Organic Chemistry Questions with Solutions`;
+const description = `All ${paper.questions.length} organic chemistry questions from ${name}, with structures, answers and step-by-step solutions linked to each reaction page.`;
+const jsonLd = [
+  {
+    '@type': 'Quiz',
+    name: `${name}: organic chemistry`,
+    url: absUrl(path),
+    inLanguage: 'en-IN',
+    educationalLevel: 'Class 12, JEE Advanced',
+    isBasedOn: { '@type': 'CreativeWork', name: `${name} (official question paper)`, url: paper.source },
+    hasPart: paper.questions.map((q) => ({
+      '@type': 'Question',
+      name: q.stem.slice(0, 150),
+      url: absUrl(`${path}#q${q.number}`),
+      acceptedAnswer: { '@type': 'Answer', text: `${answerText(q.answer)}. ${q.solution.slice(0, 300)}` },
+    })),
+  },
+  breadcrumbLd([{ name: 'Previous year questions', path: 'pyq/' }, { name, path }]),
+];
+---
+<Base title={title.length <= 65 ? title : `${name} Organic Chemistry Solutions`} description={description} path={path} ogType="article" jsonLd={jsonLd}>
+  <div class="container page">
+    <Breadcrumbs items={[{ label: 'Previous year questions', href: url('pyq/') }, { label: name }]} />
+    <header class="page-head">
+      <h1>{name}: organic chemistry questions</h1>
+      <p class="summary">{description}</p>
+      <p class="pyq-credit">Questions are reproduced from the official {name} paper published by the Joint Admission Board on <a href={paper.source} rel="noopener nofollow">jeeadv.ac.in</a>, for practice with attribution. The structures were redrawn and the solutions were written for this site.</p>
+    </header>
+    <div class="prose pyq-list">
+      {paper.questions.map((q) => <PyqQuestion q={q} />)}
+      <p class="pyq-credit">Answers were not archived by the exam board, so every answer here was worked out twice, independently, and only questions where both solutions agree are shown. If you spot an error, use the report link in the footer of any page.</p>
+      <LibgenCard />
+    </div>
+  </div>
+</Base>

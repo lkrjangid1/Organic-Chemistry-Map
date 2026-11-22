@@ -1,0 +1,49 @@
+{
+ "page": "concepts/leaving-group-ability",
+ "questions": [
+  {
+   "q": "Which is the best leaving group in an SN2 reaction at an sp³ carbon?",
+   "options": [
+    "F⁻",
+    "CH₃COO⁻",
+    "I⁻",
+    "OH⁻"
+   ],
+   "answer": 2,
+   "explain": "I⁻ is large, polarisable and the weakest base of these, so it leaves most easily. Acetate is a trap: it is the conjugate base of a weak acid and ranks below even F⁻."
+  },
+  {
+   "q": "The correct order of decreasing leaving-group ability is",
+   "options": [
+    "OH⁻ > Cl⁻ > CH₃COO⁻ > NH₂⁻",
+    "CH₃COO⁻ > Cl⁻ > OH⁻ > NH₂⁻",
+    "NH₂⁻ > OH⁻ > CH₃COO⁻ > Cl⁻",
+    "Cl⁻ > CH₃COO⁻ > OH⁻ > NH₂⁻"
+   ],
+   "answer": 3,
+   "explain": "The weaker the base, the better it leaves: Cl⁻ (from strong HCl) > acetate > hydroxide > amide ion."
+  },
+  {
+   "q": "Which treatment makes the –OH group of an alcohol leave easily in a nucleophilic substitution?",
+   "options": [
+    "Treating the alcohol with NaOH",
+    "Converting it to R–OTs with TsCl in pyridine",
+    "Converting it to the sodium alkoxide with Na",
+    "Treating it with NH₃"
+   ],
+   "answer": 1,
+   "explain": "A tosylate ester leaves as the very weakly basic sulfonate ion, whose charge is spread over three oxygens; alkoxide formation makes the group even more basic and worse at leaving."
+  },
+  {
+   "q": "In nucleophilic aromatic substitution (SNAr), the usual halide order is reversed. Which aryl halide reacts fastest, and why?",
+   "options": [
+    "Ar–F, because the strong –I effect of F stabilises the anionic intermediate formed in the slow addition step",
+    "Ar–I, because the C–I bond is the weakest",
+    "Ar–Br, because bromide is the most polarisable leaving group",
+    "Ar–Cl, because chloride balances bond strength and basicity"
+   ],
+   "answer": 0,
+   "explain": "In SNAr the slow step is addition of the nucleophile, not loss of the halide, so fluorine's electron withdrawal speeds the reaction. Applying the SN2 order I > Br > Cl > F here is the trap."
+  }
+ ]
+}

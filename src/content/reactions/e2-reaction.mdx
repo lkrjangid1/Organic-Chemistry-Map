@@ -1,0 +1,163 @@
+---
+title: "E2 Reaction"
+description: "E2 reaction: a one-step bimolecular elimination where a strong base removes a β-H anti to the leaving group, turning an alkyl halide into an alkene."
+aliases: ["E2 mechanism", "Bimolecular elimination", "E2 elimination", "Dehydrohalogenation", "Anti elimination"]
+kind: "mechanism-type"
+family: "elimination-reactions"
+exams: [jee-main, jee-advanced, neet]
+mapEdges: ["E2_2-bromopentane_to_pent-2-ene", "e2_stereospecific"]
+reactant:
+  name: "2-Bromopentane"
+  smiles: "CCCC(C)Br"
+product:
+  name: "(E)-Pent-2-ene (major, Saytzeff product)"
+  smiles: "C/C=C/CC"
+byproducts: "Ethanol, NaBr"
+reagents: "Strong base: alcoholic KOH, NaOEt/EtOH, or bulky KOtBu"
+conditions: "Heat, alcoholic (non-aqueous) solvent"
+equation: "CH3CH(Br)CH2CH2CH3 + C2H5O- ->[C2H5OH][\\Delta] CH3CH=CHCH2CH3 + C2H5OH + Br-"
+notesPages: [17, 18, 38]
+steps:
+  - title: "Base lines up with an anti-periplanar β-H"
+    text: "A strong base such as ethoxide approaches a β-hydrogen of 2-bromopentane that is anti-periplanar to Br (H–C–C–Br dihedral angle 180°). Both the substrate and the base are in the slow step, so rate = k[RX][Base]."
+    arrows: "The EtO⁻ lone pair is aimed at a C-3 hydrogen lying anti to the C–Br bond."
+    species:
+      - smiles: "CC[O-]"
+        label: "Ethoxide (strong base)"
+        highlight: "[O-]"
+      - smiles: "CCCC(C)Br"
+        label: "2-Bromopentane"
+        highlight: "[CH2][CH](C)Br"
+  - title: "One concerted step"
+    text: "In a single transition state the C–H bond breaks, the C=C π bond forms and Br⁻ leaves; there is no intermediate. The large primary deuterium isotope effect shows the C–H bond breaks in the rate-determining step."
+    arrows: "EtO⁻ lone pair → β-H; the C–H bond pair → C2–C3 π bond; the C–Br bond pair → Br, which leaves as Br⁻, all at once."
+    species:
+      - smiles: "C/C=C/CC"
+        label: "(E)-Pent-2-ene"
+        highlight: "C=C"
+      - smiles: "CCO"
+        label: "Ethanol"
+      - smiles: "[Br-]"
+        label: "Bromide"
+  - title: "Saytzeff versus Hofmann alkene"
+    text: "With a small base the more substituted pent-2-ene (mostly E) is the major Saytzeff product; removing a C-1 hydrogen gives pent-1-ene as the minor alkene. A bulky base such as KOtBu, or an F or onium leaving group, makes the less substituted Hofmann alkene major."
+    arrows: "The same three arrows starting from a C-1 hydrogen give pent-1-ene."
+    species:
+      - smiles: "C/C=C/CC"
+        label: "Pent-2-ene (major, Saytzeff)"
+        highlight: "C=C"
+      - smiles: "C=CCCC"
+        label: "Pent-1-ene (minor, Hofmann)"
+        highlight: "[CH2]=C"
+  - title: "Stereospecific anti elimination"
+    text: "Because H and Br must be anti, the substrate's configuration fixes the alkene geometry: (1R,2R)-1,2-dibromo-1,2-diphenylethane gives only (Z)-1-bromo-1,2-diphenylethene, while the meso isomer gives only the E alkene. In cyclohexanes H and the leaving group must be trans-diaxial."
+    arrows: "Base removes the H anti to one C–Br; that C–H pair forms the π bond as the anti Br leaves."
+    species:
+      - smiles: "Br[C@H](c1ccccc1)[C@H](Br)c1ccccc1"
+        label: "(1R,2R)-1,2-Dibromo-1,2-diphenylethane"
+        highlight: "[CH](Br)[CH]Br"
+      - smiles: "Br/C(c1ccccc1)=C\\c1ccccc1"
+        label: "(Z)-1-Bromo-1,2-diphenylethene"
+        highlight: "BrC=C"
+memoryTricks: []
+faq:
+  - q: "What is the E2 reaction?"
+    a: "E2 is a one-step (concerted) elimination in which a strong base removes a β-hydrogen while the leaving group departs and the C=C bond forms, all in the same transition state. Its rate depends on both substrate and base."
+  - q: "Why does E2 need anti-periplanar geometry?"
+    a: "The breaking C–H and C–X orbitals must lie in one plane to turn into the new π bond. The anti arrangement (180°) is staggered and lower in energy than the eclipsed syn arrangement, so E2 normally occurs from it."
+  - q: "What is the product of alkyl halide with alcoholic KOH?"
+    a: "An alkene, by dehydrohalogenation. Chloroethane with alcoholic KOH gives ethene, while aqueous KOH gives ethanol by substitution, because in water OH⁻ acts mainly as a nucleophile."
+  - q: "When does E2 give the Hofmann product instead of the Saytzeff product?"
+    a: "With a bulky base such as potassium tert-butoxide, with poor or charged leaving groups such as F, –NR₃⁺ or –SR₂⁺, and with crowded substrates. In these cases the less substituted alkene becomes the major product."
+  - q: "What alkene does (1R,2R)-1,2-dibromo-1,2-diphenylethane give by E2?"
+    a: "Only (Z)-1-bromo-1,2-diphenylethene. The meso diastereomer gives only the E isomer. This stereospecificity is evidence for anti-periplanar elimination."
+related: ["e1-reaction", "e1cb-mechanism", "hofmann-elimination", "sn2-reaction", "dehydration-of-alcohols"]
+sources:
+  - title: "Elimination reaction"
+    url: "https://en.wikipedia.org/wiki/Elimination_reaction"
+    publisher: "Wikipedia"
+  - title: "11.8: The E2 Reaction and the Deuterium Isotope Effect"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/11:_Reactions_of_Alkyl_Halides-_Nucleophilic_Substitutions_and_Eliminations/11.08:_The_E2_Reaction_and_the_Deuterium_Isotope_Effect"
+    publisher: "LibreTexts (OpenStax Organic Chemistry)"
+  - title: "Zaitsev's rule"
+    url: "https://en.wikipedia.org/wiki/Zaitsev%27s_rule"
+    publisher: "Wikipedia"
+  - title: "Dehydrohalogenation"
+    url: "https://en.wikipedia.org/wiki/Dehydrohalogenation"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 4
+---
+
+## What is the E2 reaction?
+
+The **E2 reaction** (elimination, bimolecular) is a **one-step, concerted β-elimination**: a strong base pulls off a hydrogen from the β-carbon at the same moment as the leaving group leaves from the α-carbon, and the C=C bond forms in a single transition state. It is the usual way an **alkyl halide is converted into an alkene** with alcoholic KOH or sodium ethoxide on heating (dehydrohalogenation).
+
+Both the substrate and the base appear in the slow step, so **rate = k[RX][Base]**.
+
+## Mechanism
+
+1. The base (B⁻) approaches a β-hydrogen that is **anti-periplanar** to the leaving group (H–C–C–X dihedral angle 180°).
+2. In one step the C–H bond breaks, the C=C π bond forms and the C–X bond breaks; X leaves with its electron pair.
+3. Products: alkene + B–H + X⁻.
+
+<Eq ce="B- + H-CR2-CR2-X -> R2C=CR2 + B-H + X-" />
+
+<KeyPoint>
+E2 is an **anti elimination**, it is a **concerted one-step mechanism**, and its **major product is the Saytzeff alkene** (the more substituted alkene) when a small base is used.
+</KeyPoint>
+
+Evidence for the single step: second-order kinetics and a large primary deuterium isotope effect (a C–D bond breaks more slowly than C–H), because the C–H bond is broken in the rate-determining step.
+
+## Examples
+
+**1. Aqueous versus alcoholic KOH.** The same alkyl halide gives different products depending on the solvent:
+
+<Eq ce="CH3CH2Cl ->[aq. KOH] CH3CH2OH (substitution)" />
+<Eq ce="CH3CH2Cl ->[alc. KOH][\Delta] CH2=CH2 (elimination)" />
+
+In exam answers the reason given is that in water OH⁻ is heavily solvated and acts mainly as a nucleophile, while alcoholic KOH contains ethoxide ions, a stronger base, so elimination wins. In practice some alkene also forms with aqueous base and some substitution with alcoholic base.
+
+**2. 2-Bromopentane with sodium ethoxide.** Removal of H from C-3 gives pent-2-ene (Saytzeff, mostly the *E* isomer); removal from C-1 gives pent-1-ene (minor).
+
+<Eq ce="CH3CHBrCH2CH2CH3 ->[NaOEt, EtOH][\Delta] CH3CH=CHCH2CH3 (major) + CH2=CHCH2CH2CH3 (minor)" />
+
+**3. Small base versus bulky base.** 2-Bromo-2-methylbutane with NaOEt gives mainly 2-methylbut-2-ene (Saytzeff). With bulky potassium tert-butoxide the more exposed CH₃ hydrogens are removed and 2-methylbut-1-ene (Hofmann product) becomes major.
+
+## Stereospecificity
+
+Because H and X must be anti, the configuration of the substrate fixes the geometry of the alkene. *meso*-1,2-Dibromo-1,2-diphenylethane gives only (*E*)-1-bromo-1,2-diphenylethene, while the (1*R*,2*R*) or (1*S*,2*S*) isomer gives only the (*Z*) alkene.
+
+<Eq ce="(1R,2R)-PhCHBr-CHBrPh ->[KOEt][\Delta] (Z)-PhCBr=CHPh + HBr" />
+
+In cyclohexanes the H and leaving group must both be **axial (trans-diaxial)**. If no such β-H exists, E2 cannot give the Saytzeff alkene and may give the less substituted one instead.
+
+## Saytzeff or Hofmann?
+
+| Condition | Major alkene |
+|---|---|
+| Small strong base (OH⁻, EtO⁻, MeO⁻), halide leaving group | Saytzeff (more substituted) |
+| Bulky base (KOtBu, Et₃N) | Hofmann (less substituted) |
+| Leaving group F, –NR₃⁺, –SR₂⁺ | Hofmann |
+| Crowded substrate near the more substituted β-carbon | Hofmann |
+
+<ExamTip>
+For an E2 question, first find every β-hydrogen that can be anti-periplanar to the leaving group, then apply Saytzeff unless the base is bulky or the leaving group is F or an onium group. For cyclohexyl halides, draw the chair and look only at axial β-hydrogens.
+</ExamTip>
+
+## Limitations and exceptions
+
+- **Competition with SN2:** many bases (OH⁻, EtO⁻) are also nucleophiles. Elimination is favoured by a 2° or 3° substrate, a stronger or bulkier base, an alcoholic solvent and higher temperature.
+- **Primary halides** with small bases give mainly SN2; with KOtBu they give mainly alkene.
+- **Fluorides** react slowly because F⁻ is a poor leaving group, and they tend to give Hofmann products.
+
+## Related reactions
+
+- [E1 reaction](/reactions/e1-reaction/): two-step, carbocation pathway.
+- [E1cB mechanism](/reactions/e1cb-mechanism/): carbanion pathway with acidic β-H.
+- [Hofmann elimination](/reactions/hofmann-elimination/): E2 of quaternary ammonium hydroxides giving the less substituted alkene.
+- [SN2 reaction](/reactions/sn2-reaction/): the substitution that competes with E2.
+- [Dehydration of alcohols](/reactions/dehydration-of-alcohols/): primary alcohols in acid, and POCl₃/pyridine dehydrations, follow an E2 path.
+- [Elimination reactions hub](/mechanisms/elimination-reactions/).

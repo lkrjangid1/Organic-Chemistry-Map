@@ -1,0 +1,107 @@
+---
+title: "SN2 Reaction (द्वि-अणुक नाभिकस्नेही प्रतिस्थापन)"
+description: "SN2 reaction एक step वाला nucleophilic substitution है: nucleophile पीछे से attack करता है, leaving group निकलता है और configuration उलट (inversion) जाता है।"
+aliases: ["एसएन2 अभिक्रिया", "द्वि-अणुक नाभिकस्नेही प्रतिस्थापन", "sn2 reaction hindi", "sn2 mechanism hindi", "walden inversion hindi", "backside attack hindi", "sn2 kya hai"]
+reagents: "Strong, unhindered nucleophile (OH⁻, CN⁻, N₃⁻, I⁻, RO⁻)"
+conditions: "Polar aprotic solvent (acetone, DMF, DMSO); methyl या primary substrate बेहतर"
+byproducts: "NaBr"
+reactantName: "(R)-2-Bromobutane"
+productName: "(S)-2-Azidobutane"
+steps:
+  - title: "पीछे से approach (backside approach)"
+    text: "Azide carbon के पास bromine के उल्टी side से आता है, leaving group से 180° पर। Back side unhindered होनी चाहिए, इसीलिए reactivity CH₃X > 1° > 2° > 3° है।"
+    arrows: "Azide का lone pair (HOMO) → C–Br σ* orbital (LUMO) का पीछे वाला lobe।"
+  - title: "Transition state (rate-determining)"
+    text: "Carbon, N₃ और Br दोनों से आंशिक रूप से जुड़ा होता है, five-coordinate, बाकी तीन groups एक plane में और N₃ व Br पर partial negative charge। Bond बनना और bond टूटना इसी एक step में होता है, इसलिए rate = k[R–X][Nu⁻]।"
+    arrows: "नया N–C bond बनता है और उसी समय C–Br bond pair bromine पर चला जाता है।"
+  - title: "Inversion"
+    text: "C–Br bond पूरी तरह टूटता है, Br⁻ निकलता है और तीनों groups पलटकर दूसरी side आ जाते हैं, जिससे inverted sp³ carbon मिलता है। (R)-2-Bromobutane से (S)-2-azidobutane बनता है (Walden inversion)।"
+    arrows: "C–Br bond pair bromine के साथ Br⁻ के रूप में निकल जाता है।"
+faq:
+  - q: "SN2 reaction का rate law क्या है?"
+    a: "Rate = k[R–X][Nu⁻]। Substrate और nucleophile दोनों एक ही transition state में मौजूद होते हैं, इसलिए reaction overall second order है।"
+  - q: "SN2 reaction में configuration का inversion क्यों होता है?"
+    a: "Nucleophile को carbon पर leaving group की उल्टी side से attack करना पड़ता है। जैसे-जैसे नया bond बनता है और पुराना टूटता है, बाकी तीन groups हवा में उलटे छाते की तरह पलट जाते हैं, इसलिए product का configuration उल्टा होता है (Walden inversion)।"
+  - q: "Tertiary alkyl halides SN2 से react क्यों नहीं करते?"
+    a: "तीन alkyl groups carbon के पीछे भीड़ बना देते हैं और nucleophile का रास्ता रोक देते हैं। इसलिए reactivity CH₃X > 1° > 2° > 3° के order में घटती है, और tertiary halides इसकी जगह SN1 या E2 से react करते हैं।"
+  - q: "SN2 के लिए polar aprotic solvent क्यों बेहतर है?"
+    a: "Acetone, DMF और DMSO जैसे solvents ionic nucleophile को घोल लेते हैं लेकिन anion से hydrogen bond नहीं बनाते, इसलिए nucleophile reactive बना रहता है। Protic solvents anion को घेर (cage) लेते हैं और reaction धीमा कर देते हैं।"
+  - q: "KCN से alkyl cyanide लेकिन AgCN से isocyanide क्यों मिलता है?"
+    a: "KCN ionic है, इसलिए free CN⁻ carbon से attack करता है और R–C≡N देता है। AgCN काफ़ी हद तक covalent है और उसमें carbon silver से जुड़ा होता है, इसलिए nitrogen का lone pair attack करता है और R–N≡C (isocyanide) main product बनता है।"
+translated: 2026-11-22
+---
+
+## SN2 reaction क्या है?
+
+**SN2 reaction** (substitution, nucleophilic, bimolecular) एक **single-step** nucleophilic substitution है जिसमें nucleophile sp³ carbon से leaving group की उल्टी side से bond बनाता है और उसी समय leaving group निकल जाता है। इसमें कोई intermediate नहीं होता, सिर्फ़ एक transition state होती है, और chiral carbon का configuration **उलट (inversion)** जाता है (Walden inversion)। यह **methyl और primary halides**, **strong nucleophile** और **polar aprotic solvent** के साथ सबसे अच्छा चलता है, और **rate = k[R–X][Nu⁻]** follow करता है।
+
+## General reaction
+
+<Eq ce="Nu- + R-CH2-X -> [Nu^{\delta-}...CH2R...X^{\delta-}]^{\ddagger} -> Nu-CH2-R + X-" />
+
+## Mechanism
+
+1. **पीछे से approach।** Nucleophile का भरा हुआ orbital (HOMO), खाली C–X σ* orbital (LUMO) के पीछे वाले lobe से overlap करता है, leaving group से 180° दूर।
+2. **Transition state (rate-determining)।** Carbon दोनों groups से आंशिक रूप से जुड़ा होता है। यह five-coordinate और लगभग sp² hybridised होता है, बाकी तीन groups एक plane में होते हैं और Nu व X पर partial negative charge होता है।
+3. **Inversion।** C–X bond पूरी तरह टूटता है, X⁻ निकलता है, और तीनों groups पलटकर दूसरी side आ जाते हैं, जिससे inverted sp³ carbon मिलता है।
+
+<KeyPoint>
+SN2 एक **one-step** reaction है, rate = k[R–X][Nu⁻], और **inversion होता है**। इसके लिए **strong (negatively charged) nucleophile**, **अच्छा leaving group** और **polar aprotic solvent** चाहिए। अभिक्रियाशीलता ∝ संक्रमण अवस्था का स्थायित्व ∝ 1/steric hindrance (reactivity ∝ transition state की stability ∝ 1/steric hindrance)।
+</KeyPoint>
+
+## Reactivity का order
+
+NCERT **CH₃X > 1° > 2° > 3°** देता है, क्योंकि bulky groups carbon का पिछला हिस्सा block कर देते हैं। π system के बगल वाले substrates तेज़ react करते हैं, क्योंकि conjugation transition state को stabilise करता है, और reaction centre के बगल में electron-withdrawing groups भी SN2 को favour करते हैं।
+
+Exams में अक्सर इस्तेमाल होने वाला extended order:
+
+R–CO–CH₂–X > R–O–CH₂–X > C₆H₅CH₂–X (benzyl) > CH₂=CH–CH₂–X (allyl) > 1° > 2°, और **3°, aryl और bridgehead halides में SN2 नहीं होता**। Aryl halides इसलिए fail होते हैं क्योंकि C–X bond ring के plane में होता है और पीछे की side ring से block रहती है; bridgehead carbons invert नहीं हो सकते।
+
+## Examples
+
+**1. Hydroxide और methyl chloride (NCERT)।** Classic second-order case।
+
+<Eq ce="CH3Cl + OH- -> CH3OH + Cl-" />
+
+**2. Stereocentre पर inversion।** (R)-2-Bromobutane, DMF में sodium azide के साथ (S)-2-azidobutane देता है। Azide strong nucleophile है लेकिन weak base, इसलिए elimination बहुत कम होता है।
+
+<Eq ce="(R)-CH3CH(Br)C2H5 + N3- ->[DMF] (S)-CH3CH(N3)C2H5 + Br-" />
+
+**3. Tosylate से bromide।** (S)-Butan-2-yl tosylate, acetone में NaBr के साथ (R)-2-bromobutane देता है; tosylate एक बहुत अच्छा leaving group है।
+
+<Eq ce="(S)-CH3CH(OTs)C2H5 + NaBr ->[acetone] (R)-CH3CH(Br)C2H5 + NaOTs" />
+
+## Ambident nucleophiles
+
+Cyanide और nitrite दोनों में दो atoms होते हैं जो electron pair दे सकते हैं। NCERT के standard results:
+
+| Reagent | Attack करने वाला atom | Product |
+|---|---|---|
+| KCN / NaCN | C | Alkyl cyanide (nitrile) R–C≡N |
+| AgCN | N | Alkyl isocyanide R–N≡C |
+| KNO₂ / NaNO₂ | O | Alkyl nitrite R–O–N=O |
+| AgNO₂ | N | Nitroalkane R–NO₂ |
+
+Ionic salts free anions देते हैं, जबकि silver salts covalent होते हैं और दूसरे atom से attack करते हैं। Nitro compounds पर Wikipedia का article भी कहता है कि alkali nitrites ज़्यादातर nitrite esters देते हैं, जबकि primary halides के साथ silver nitrite nitroalkanes बनाने का classic route है। Exam answers में NaCN reaction को SN2 और AgCN reaction को SN1-like माना जाता है: कहा जाता है कि Ag⁺ halide को खींच लेता है और carbocation character देता है।
+
+<ExamTip>
+"KCN vs AgCN" या "KNO₂ vs AgNO₂" वाले questions में याद रखें: ionic salt → C-attack (nitrite के लिए O-attack); silver salt → N-attack। Product लिखें, फिर उसका नाम ध्यान से दें (nitrile vs isocyanide, nitrite vs nitro)।
+</ExamTip>
+
+## Alkyl halides का hydrolysis
+
+Aqueous acetone या ethanol में पानी से hydrolysis एक weak-nucleophile, protic-solvent reaction है, इसलिए tertiary halides के लिए यह SN1 से होता है और इसका rate carbocation stability के हिसाब से चलता है। Hydroxide ion और primary halide के साथ वही overall बदलाव R–X → R–OH, SN2 से होता है। इनमें से कौन-सा रास्ता होगा, यह substrate और nucleophile पर निर्भर है, product पर नहीं।
+
+## Limitations और exceptions
+
+- **Tertiary, aryl, vinyl और bridgehead halides** SN2 से react नहीं करते।
+- **Neopentyl halides** primary हैं लेकिन बहुत ही धीमे हैं, क्योंकि bulky tert-butyl group पीछे की side block कर देता है।
+- **Strong, bulky bases** (tert-butoxide) substitution की जगह E2 elimination देते हैं।
+
+## Related reactions
+
+- [SN1 reaction](/hi/reactions/sn1-reaction/): दो steps वाला carbocation pathway।
+- [Finkelstein reaction](/hi/reactions/finkelstein-reaction/) और [Williamson ether synthesis](/hi/reactions/williamson-ether-synthesis/): नाम वाली SN2 reactions।
+- [E2 reaction](/hi/reactions/e2-reaction/): competition करने वाला one-step elimination।
+- [SNi mechanism](/hi/reactions/sni-mechanism/): pyridine के साथ SOCl₂ inversion क्यों देता है।
+- [Nucleophilic substitution overview](/hi/mechanisms/nucleophilic-substitution/)

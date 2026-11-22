@@ -1,0 +1,223 @@
+{
+ "exam": "jee-advanced",
+ "year": 2020,
+ "paper": 2,
+ "source": "https://jeeadv.ac.in/past_qps/2020_2_English.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2020-p2-q5",
+   "number": 5,
+   "type": "numerical",
+   "stem": "The structure of a peptide is given below.\nIf the absolute values of the net charge of the peptide at pH = 2, pH = 6, and pH = 11 are |z₁|, |z₂|, and |z₃|, respectively, then what is |z₁| + |z₂| + |z₃|?",
+   "figures": [
+    {
+     "smiles": "N[C@@H](Cc1ccc(O)cc1)C(=O)N[C@@H](CC(=O)O)C(=O)N[C@@H](CCCCN)C(=O)O"
+    }
+   ],
+   "options": [],
+   "answer": "5",
+   "solution": "The peptide is Tyr–Asp–Lys. Its ionisable groups are the N-terminal NH₂, the Lys ε-NH₂, the Asp side-chain COOH, the C-terminal COOH and the Tyr phenol OH. At pH 2 both amines are protonated and both acids are neutral: z = +2. At pH 6 both amines are still NH₃⁺ and both carboxyls are COO⁻: z = 0. At pH 11 both amines are essentially neutral, and both COO⁻ plus the phenoxide (pKa ≈ 10) are negative: z = −3. Sum = 2 + 0 + 3 = 5.",
+   "topics": [
+    "concepts/amino-acids"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2020-p2-q6",
+   "number": 6,
+   "type": "numerical",
+   "stem": "An organic compound (C₈H₁₀O₂) rotates plane-polarized light. It produces pink color with neutral FeCl₃ solution. What is the total number of all the possible isomers for this compound?",
+   "figures": [],
+   "options": [],
+   "answer": "6",
+   "solution": "C₈H₁₀O₂ has 4 degrees of unsaturation, which fits a benzene ring. The FeCl₃ colour shows a phenolic OH. The remaining C₂H₅O must contain a stereocentre, and the only option is –CH(OH)CH₃. HO–C₆H₄–CH(OH)CH₃ can be ortho, meta or para, and each is a pair of enantiomers. Total 3 × 2 = 6.",
+   "topics": [
+    "tests/ferric-chloride-test"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2020-p2-q8",
+   "number": 8,
+   "type": "multiple",
+   "stem": "Which of the following plots is(are) correct for the given reaction?\n([P]₀ is the initial concentration of P)\nP + NaOH → Q + NaBr",
+   "figures": [
+    {
+     "smiles": "CC(C)(C)Br",
+     "label": "P"
+    },
+    {
+     "smiles": "CC(C)(C)O",
+     "label": "Q"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "Plot of t₁/₂ (y-axis) versus [P]₀ (x-axis): a horizontal straight line."
+    },
+    {
+     "key": "B",
+     "text": "Plot of initial rate (y-axis) versus [P]₀ (x-axis): a horizontal straight line."
+    },
+    {
+     "key": "C",
+     "text": "Plot of [Q]/[P]₀ (y-axis) versus time (x-axis): a curve starting at the origin and bending upwards (slope increasing with time)."
+    },
+    {
+     "key": "D",
+     "text": "Plot of ln([P]/[P]₀) (y-axis) versus time (x-axis): a straight line through the origin with positive slope."
+    }
+   ],
+   "answer": "A",
+   "solution": "tert-Butyl bromide reacts with OH⁻ by SN1, so rate = k[P] (first order in P only). For a first-order reaction t₁/₂ = 0.693/k, which does not depend on [P]₀ (A correct). The initial rate rises linearly with [P]₀, so B is wrong. [Q]/[P]₀ = 1 − e^(−kt) rises steeply at first and then levels off, not upwards-curving (C wrong). ln([P]/[P]₀) = −kt is a line with negative slope (D wrong).",
+   "topics": [
+    "reactions/sn1-reaction",
+    "comparisons/sn1-vs-sn2"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2020-p2-q11",
+   "number": 11,
+   "type": "multiple",
+   "stem": "Consider the following four compounds I, II, III, and IV.\nChoose the correct statement(s).",
+   "figures": [
+    {
+     "smiles": "Nc1ccccc1",
+     "label": "I"
+    },
+    {
+     "smiles": "CN(C)c1ccccc1",
+     "label": "II"
+    },
+    {
+     "smiles": "Nc1c([N+](=O)[O-])cc([N+](=O)[O-])cc1[N+](=O)[O-]",
+     "label": "III"
+    },
+    {
+     "smiles": "CN(C)c1c([N+](=O)[O-])cc([N+](=O)[O-])cc1[N+](=O)[O-]",
+     "label": "IV"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "The order of basicity is II > I > III > IV."
+    },
+    {
+     "key": "B",
+     "text": "The magnitude of pK_b difference between I and II is more than that between III and IV."
+    },
+    {
+     "key": "C",
+     "text": "Resonance effect is more in III than in IV."
+    },
+    {
+     "key": "D",
+     "text": "Steric effect makes compound IV more basic than III."
+    }
+   ],
+   "answer": [
+    "C",
+    "D"
+   ],
+   "solution": "In IV the bulky NMe₂ lies between two ortho-NO₂ groups, so it twists out of the ring plane (steric inhibition of resonance). Its lone pair is then no longer delocalised into the strongly electron-poor ring. So IV is far more basic than III, while in III the NH₂ lone pair is fully conjugated with three nitro groups (C and D true). The basicity order is II > I > IV > III, so A is false. I and II differ only slightly in pKb, while III and IV differ by many units, so B is false.",
+   "topics": [
+    "comparisons/basic-strength-of-amines",
+    "concepts/steric-inhibition-of-resonance"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2020-p2-q12",
+   "number": 12,
+   "type": "multiple",
+   "stem": "Consider the following transformations of a compound P.\nP (C₉H₁₂) —(i) NaNH₂ (ii) C₆H₅COCH₃ (iii) H₃O⁺/Δ→ R (Optically active)\nP —(i) X (reagent) (ii) KMnO₄/H₂SO₄/Δ→ Q (C₈H₁₂O₆) (Optically active acid)\nP —Pt/H₂→ propylcyclohexane (shown)\nChoose the correct option(s).",
+   "figures": [
+    {
+     "smiles": "CCCC1CCCCC1"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "P is",
+     "smiles": "C#CCC1CCC=CC1"
+    },
+    {
+     "key": "B",
+     "text": "X is Pd-C/quinoline/H₂"
+    },
+    {
+     "key": "C",
+     "text": "P is",
+     "smiles": "C#CCC1CCCC=C1"
+    },
+    {
+     "key": "D",
+     "text": "R is",
+     "smiles": "C=C(C#CCC1CCC=CC1)c1ccccc1"
+    }
+   ],
+   "answer": [
+    "B",
+    "C"
+   ],
+   "solution": "Hydrogenation to propylcyclohexane fixes the carbon skeleton. C₉H₁₂ has 4 degrees of unsaturation: the ring, a ring C=C and a terminal C≡C (needed for NaNH₂ to form an acetylide). Lindlar reduction (X) turns the alkyne into CH=CH₂. KMnO₄ then cleaves both C=C bonds, losing one carbon as CO₂, to give the triacid C₈H₁₂O₆. With the side chain at C4 (A), the triacid has two identical CH₂COOH arms and is achiral. With the side chain at the allylic C3 (C), the product HOOC–CH(CH₂COOH)–(CH₂)₃–COOH is chiral, so P is C. R, made from that P via the acetylide, acetophenone addition and dehydration, must keep the 3-substituted ring, so D (a 4-substituted ring) is wrong.",
+   "topics": [
+    "reagents/lindlar-catalyst",
+    "reagents/potassium-permanganate",
+    "reactions/catalytic-hydrogenation"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2020-p2-q16",
+   "number": 16,
+   "type": "numerical",
+   "stem": "Consider the reaction sequence from P to Q shown below. The overall yield of the major product Q from P is 75%. What is the amount in grams of Q obtained from 9.3 mL of P? (Use density of P = 1.00 g mL⁻¹; Molar mass of C = 12.0, H = 1.0, O = 16.0 and N = 14.0 g mol⁻¹)\nP —(i) NaNO₂ + HCl / 0-5 °C (ii) 2-naphthol (shown) + NaOH (iii) CH₃CO₂H/H₂O→ Q",
+   "figures": [
+    {
+     "smiles": "Nc1ccccc1",
+     "label": "P"
+    },
+    {
+     "smiles": "Oc1ccc2ccccc2c1"
+    }
+   ],
+   "options": [],
+   "answer": "18.6",
+   "solution": "P is aniline: 9.3 g ÷ 93 g mol⁻¹ = 0.10 mol. Diazotisation gives benzenediazonium chloride, which couples with alkaline 2-naphthol at C1. Acidification gives the orange-red dye 1-(phenylazo)-2-naphthol, C₁₆H₁₂N₂O (248 g mol⁻¹). At 75% yield: 0.075 × 248 = 18.6 g.",
+   "topics": [
+    "reactions/diazotization-reaction",
+    "reactions/diazo-coupling-reaction"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  }
+ ]
+}

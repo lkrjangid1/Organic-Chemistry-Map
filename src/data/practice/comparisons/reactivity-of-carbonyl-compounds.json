@@ -1,0 +1,49 @@
+{
+ "page": "comparisons/reactivity-of-carbonyl-compounds",
+ "questions": [
+  {
+   "q": "Arrange in increasing reactivity towards nucleophilic addition: ethanal, propanal, propanone, butanone.",
+   "options": [
+    "Ethanal < propanal < propanone < butanone",
+    "Butanone < propanal < propanone < ethanal",
+    "Propanone < butanone < ethanal < propanal",
+    "Butanone < propanone < propanal < ethanal"
+   ],
+   "answer": 3,
+   "explain": "Ketones are less reactive than aldehydes (more hindrance, two electron-releasing groups), and within each class the larger alkyl group lowers reactivity further."
+  },
+  {
+   "q": "Which aldehyde is the most reactive towards nucleophilic addition?",
+   "options": [
+    "Benzaldehyde",
+    "p-Tolualdehyde",
+    "p-Methoxybenzaldehyde",
+    "p-Nitrobenzaldehyde"
+   ],
+   "answer": 3,
+   "explain": "The nitro group withdraws electrons by −I and −R effects, making the carbonyl carbon more positive; –CH₃ and –OCH₃ donate electrons and lower reactivity."
+  },
+  {
+   "q": "Arrange towards HCN addition in increasing reactivity: acetaldehyde, acetone, di-tert-butyl ketone, methyl tert-butyl ketone.",
+   "options": [
+    "Acetaldehyde < acetone < methyl tert-butyl ketone < di-tert-butyl ketone",
+    "Di-tert-butyl ketone < acetone < methyl tert-butyl ketone < acetaldehyde",
+    "Di-tert-butyl ketone < methyl tert-butyl ketone < acetone < acetaldehyde",
+    "Methyl tert-butyl ketone < di-tert-butyl ketone < acetaldehyde < acetone"
+   ],
+   "answer": 2,
+   "explain": "Steric hindrance dominates: each tert-butyl group blocks the approach of CN⁻, and di-tert-butyl ketone barely reacts at all."
+  },
+  {
+   "q": "CH₃MgBr (1 equivalent) is added to a compound containing both a free –COOH group and a ketone C=O. The first reaction is:",
+   "options": [
+    "Deprotonation of –COOH, giving RCOO⁻MgBr⁺ and methane",
+    "Nucleophilic acyl substitution at the –COOH group, giving a methyl ketone",
+    "Nucleophilic addition to the ketone C=O, giving a tertiary alkoxide",
+    "Coupling at the carbon next to the C=O by SN2"
+   ],
+   "answer": 0,
+   "explain": "A Grignard reagent is a strong base, so any acidic hydrogen reacts first and RMgX is destroyed as R–H; a free –COOH does not undergo acyl substitution with RMgX, it simply protonates it."
+  }
+ ]
+}

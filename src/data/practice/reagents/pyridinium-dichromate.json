@@ -1,0 +1,49 @@
+{
+ "page": "reagents/pyridinium-dichromate",
+ "questions": [
+  {
+   "q": "Octan-1-ol is treated with PDC in DMF. The product is:",
+   "options": [
+    "Octanal",
+    "Octan-2-one",
+    "Octanoic acid",
+    "No reaction"
+   ],
+   "answer": 2,
+   "explain": "In DMF, PDC is a stronger oxidant and takes a saturated 1° alcohol to the carboxylic acid. In CH₂Cl₂ the same reagent stops at octanal, so the solvent decides."
+  },
+  {
+   "q": "Benzyl alcohol is treated with PDC in DMF. The product is:",
+   "options": [
+    "Benzaldehyde",
+    "Benzoic acid",
+    "Benzene-1,2-diol",
+    "Toluene"
+   ],
+   "answer": 0,
+   "explain": "Even in DMF, allylic and benzylic primary alcohols stop at the aldehyde; only saturated 1° alcohols are taken on to acids. Choosing benzoic acid is the trap."
+  },
+  {
+   "q": "Why is PDC preferred over PCC for oxidising an alcohol that also carries an acid-sensitive acetal group?",
+   "options": [
+    "PDC is a Cr(III) reagent and therefore milder",
+    "PDC does not form a chromate ester",
+    "PDC dissolves completely in CH₂Cl₂",
+    "PDC is nearly neutral, while PCC is slightly acidic"
+   ],
+   "answer": 3,
+   "explain": "PDC is only slightly acidic (from the pyridinium ion), so acid-sensitive groups such as acetals and silyl ethers survive. Both are Cr(VI) salts that act through chromate esters."
+  },
+  {
+   "q": "Which statement about PDC is INCORRECT?",
+   "options": [
+    "Its formula is (C₅H₅NH⁺)₂Cr₂O₇²⁻, with two Cr atoms bridged by O",
+    "It is prepared by adding pyridine to CrO₃ dissolved in concentrated HCl",
+    "It is only sparingly soluble in CH₂Cl₂ and is used there as a suspension",
+    "It does not oxidise tertiary alcohols"
+   ],
+   "answer": 1,
+   "explain": "PDC is made by adding aqueous CrO₃ to pyridine with cooling; the CrO₃/HCl/pyridine route gives PCC, which has one Cr and a Cl."
+  }
+ ]
+}

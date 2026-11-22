@@ -1,0 +1,75 @@
+---
+title: "Dieckmann Condensation (डीकमान संघनन)"
+description: "Dieckmann condensation एक intramolecular Claisen है: 1,6- या 1,7-diester NaOEt से cyclic β-keto ester बनाता है; diethyl adipate से cyclopentanone मिलता है।"
+aliases: ["डीकमान संघनन", "डिकमैन संघनन", "dieckmann condensation hindi", "dieckmann cyclisation hindi", "intramolecular claisen condensation hindi", "dickmann condensation hindi"]
+reagents: "Ethanol में C₂H₅O⁻Na⁺ (या NaH), फिर H₃O⁺"
+conditions: "Intramolecular; 5- और 6-सदस्यों वाली rings के लिए सबसे अच्छा; hydrolysis और गर्म करने (Δ) से ester group CO₂ के रूप में हट जाता है"
+byproducts: "C₂H₅OH"
+reactantName: "Diethyl adipate (diethyl hexanedioate)"
+productName: "Ethyl 2-oxocyclopentane-1-carboxylate"
+faq:
+  - q: "Diethyl adipate के Dieckmann condensation का product क्या है?"
+    a: "Ethyl 2-oxocyclopentane-1-carboxylate, जो पाँच सदस्यों वाला cyclic β-keto ester है। Hydrolysis के बाद गर्म करने पर ester group CO₂ के रूप में निकल जाता है और cyclopentanone मिलता है।"
+  - q: "Claisen और Dieckmann condensation में क्या अंतर है?"
+    a: "दोनों में ester enolate किसी ester carbonyl से जुड़ता है और एक alkoxide बाहर निकलता है। Claisen reaction दो अलग molecules के बीच होता है। Dieckmann reaction एक ही diester molecule के अंदर होता है, इसलिए ring बनती है।"
+  - q: "Dieckmann condensation में कौन-से diesters सबसे अच्छे काम करते हैं?"
+    a: "1,6-Diesters (adipates), जो पाँच सदस्यों वाली rings देते हैं, और 1,7-diesters (pimelates), जो छह सदस्यों वाली rings देते हैं। बड़ी rings मुश्किल से बनती हैं।"
+  - q: "Dieckmann condensation में ring size कैसे predict करें?"
+    a: "Enolate बनाने वाले α-carbon से दूसरे ester के carbonyl carbon तक atoms गिनें, दोनों को शामिल करके। यही संख्या नई ring का size है।"
+translated: 2026-11-22
+---
+
+## Dieckmann condensation क्या है?
+
+**Dieckmann condensation** किसी diester का **intramolecular Claisen condensation** है। Sodium ethoxide जैसा base एक ester group को उसके enolate में बदलता है, और यह enolate उसी molecule के दूसरे ester group पर attack करता है। Product एक **cyclic β-keto ester** होता है। यह **पाँच और छह सदस्यों वाली rings** के लिए सबसे अच्छा काम करता है: 1,6-diester (diethyl adipate) से cyclopentanone ring मिलती है, और 1,7-diester (diethyl pimelate) से cyclohexanone ring।
+
+## Mechanism
+
+Steps वही हैं जो [Claisen condensation](/hi/reactions/claisen-condensation/) में होते हैं, फ़र्क बस इतना है कि दोनों ester groups एक ही molecule में हैं।
+
+1. **Enolate बनना।** C₂H₅O⁻ एक ester group के बगल वाला α-H हटाता है।
+2. **Ring closure।** Enolate का carbon दूसरे ester group के carbonyl carbon पर attack करता है (adipate के लिए 5-exo-trig attack), जिससे cyclic tetrahedral alkoxide बनता है।
+3. **Ethoxide का निकलना।** Intermediate C₂H₅O⁻ बाहर निकालता है और cyclic β-keto ester बनता है।
+4. **Deprotonation और work-up।** Ring C=O और ester के बीच का acidic CH, ethoxide हटा देता है, और यही reaction को आगे धकेलता है। फिर dilute acid से neutral β-keto ester मिलता है।
+
+<Eq ce="C2H5OOC(CH2)4COOC2H5 ->[C2H5ONa] cyclic beta-keto ester + C2H5OH" />
+
+## Hydrolysis और decarboxylation से cyclic ketone
+
+इसके बाद ester group हटाया जा सकता है। Acid hydrolysis से cyclic β-keto acid बनता है, और हल्का गर्म करने पर CO₂ निकल जाता है:
+
+<Eq ce="ethyl 2-oxocyclopentanecarboxylate ->[H3O+] 2-oxocyclopentanecarboxylic acid ->[\Delta] cyclopentanone + CO2" />
+
+यानी diethyl adipate → (Dieckmann) → β-keto ester → (H₃O⁺) → β-keto acid → (Δ) → **cyclopentanone**।
+
+<KeyPoint>
+Ring-size rule: नई ring में α-carbon, उसके और दूसरे ester carbonyl के बीच के सभी carbons, और वह carbonyl carbon ख़ुद शामिल होते हैं। Diethyl adipate (hexanedioate) में C-2, C-6 पर attack करता है, इसलिए ring पाँच सदस्यों वाली होती है। Diethyl pimelate (heptanedioate) में C-2, C-7 पर attack करता है, इसलिए ring छह सदस्यों वाली होती है।
+</KeyPoint>
+
+## Examples
+
+| Diester | Dieckmann product | Hydrolysis और Δ के बाद |
+|---|---|---|
+| Diethyl adipate, EtOOC(CH₂)₄COOEt | Ethyl 2-oxocyclopentane-1-carboxylate | Cyclopentanone |
+| Diethyl pimelate, EtOOC(CH₂)₅COOEt | Ethyl 2-oxocyclohexane-1-carboxylate | Cyclohexanone |
+
+Hydrolysis और decarboxylation से पहले β-keto ester को दोनों carbonyls के बीच वाले acidic carbon पर alkylate भी किया जा सकता है। यह रास्ता (Dieckmann, फिर alkylation, फिर decarboxylation) **2-substituted cyclopentanones और cyclohexanones** देता है।
+
+<ExamTip>
+Conversion questions में "diester + NaOEt, फिर H₃O⁺, Δ" का मतलब लगभग हमेशा Dieckmann cyclisation और उसके बाद decarboxylation होता है। Ring ketone लिखें, और ethanol के साथ एक carbon CO₂ के रूप में घटा हुआ गिनें।
+</ExamTip>
+
+## Limitations और exceptions
+
+- **Ring size:** पाँच, छह और (थोड़ी मुश्किल से) सात सदस्यों वाली rings अच्छी बनती हैं। बड़ी rings मुश्किल से बनती हैं, और तीन या चार सदस्यों वाली rings में strain बहुत ज़्यादा है।
+- **Enolisable product चाहिए:** yield तभी अच्छी आती है जब cyclic β-keto ester के दोनों carbonyls के बीच एक acidic H बचा रहे। वरना उल्टा ring-opening (retro-Claisen) competition करता है।
+- **Unsymmetrical diesters:** अगर दोनों ester groups में α-H हों और वे अलग-अलग हों, तो हर एक donor या acceptor बन सकता है, इसलिए दो β-keto esters का mixture बन सकता है।
+- **Base का चुनाव:** Claisen reaction की तरह, alkoxide या NaH लें, aqueous NaOH नहीं, क्योंकि वह esters को hydrolyse कर देगा।
+
+## Related reactions
+
+- [Claisen condensation](/hi/reactions/claisen-condensation/), इसका intermolecular version
+- [Intramolecular aldol condensation](/hi/reactions/aldol-condensation/), इसी ring closure का ketone analogue
+- [Thorpe reaction](/hi/reactions/thorpe-reaction/), इसका nitrile analogue
+- β-Keto acids का [decarboxylation](/hi/reactions/decarboxylation/)
+- Hub: [Carbonyl condensation reactions](/hi/mechanisms/carbonyl-condensation-reactions/)

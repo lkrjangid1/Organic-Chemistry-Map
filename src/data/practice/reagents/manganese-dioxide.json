@@ -1,0 +1,50 @@
+{
+ "page": "reagents/manganese-dioxide",
+ "questions": [
+  {
+   "q": "Allyl alcohol, CH₂=CH–CH₂OH, is stirred with activated MnO₂. The product is:",
+   "options": [
+    "Propan-1-ol",
+    "Propenoic acid",
+    "Propenal (acrolein)",
+    "Propane-1,2,3-triol"
+   ],
+   "answer": 2,
+   "explain": "Activated MnO₂ oxidises the allylic alcohol only to the aldehyde and leaves the C=C untouched; it does not go on to the carboxylic acid."
+  },
+  {
+   "q": "Hex-2-ene-1,6-diol, HO–CH₂–CH₂–CH₂–CH=CH–CH₂–OH, is treated with activated MnO₂. Which product is expected?",
+   "smiles": "OCCCC=CCO",
+   "options": [
+    "HO–CH₂–CH₂–CH₂–CH=CH–CHO",
+    "OHC–CH₂–CH₂–CH=CH–CHO",
+    "HO–CH₂–CH₂–CH₂–CH=CH–COOH",
+    "OHC–CH₂–CH₂–CH₂–CH=CH–CH₂OH"
+   ],
+   "answer": 0,
+   "explain": "Only the allylic CH₂OH, whose C–H bond is weakened by the neighbouring π system, is oxidised; the saturated CH₂OH at the other end survives, and oxidation stops at the aldehyde."
+  },
+  {
+   "q": "Which statement correctly contrasts SeO₂ and MnO₂?",
+   "options": [
+    "Both oxidise saturated primary alcohols to aldehydes",
+    "MnO₂ puts an OH at the allylic carbon of an alkene, while SeO₂ oxidises allylic alcohols",
+    "SeO₂ cleaves C=C bonds, while MnO₂ forms epoxides",
+    "SeO₂ puts an OH at the allylic carbon of an alkene, while MnO₂ oxidises an existing allylic OH to C=O"
+   ],
+   "answer": 3,
+   "explain": "SeO₂ makes allylic alcohols from alkenes and MnO₂ converts an existing allylic OH into C=O; used one after the other they can turn an alkene into an α,β-unsaturated carbonyl compound."
+  },
+  {
+   "q": "Which alcohol is treated as unaffected by activated MnO₂ under the usual mild conditions?",
+   "options": [
+    "Benzyl alcohol",
+    "Cyclohexanol",
+    "Cinnamyl alcohol",
+    "But-3-en-2-ol"
+   ],
+   "answer": 1,
+   "explain": "Cyclohexanol is an ordinary saturated 2° alcohol and reacts very slowly. Benzylic and allylic alcohols, including cinnamyl alcohol and but-3-en-2-ol, are oxidised readily."
+  }
+ ]
+}

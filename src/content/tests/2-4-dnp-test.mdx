@@ -1,0 +1,124 @@
+---
+title: "2,4-DNP Test (Brady's Reagent)"
+description: "2,4-DNP test detects aldehydes and ketones: 2,4-dinitrophenylhydrazine (Brady's reagent) forms a yellow, orange or red 2,4-dinitrophenylhydrazone precipitate."
+aliases: ["2,4-DNP test", "2,4-DNPH test", "Brady's test", "Brady's reagent", "Borche's reagent", "2,4-Dinitrophenylhydrazine test", "DNP test for carbonyl"]
+kind: "test"
+family: "nucleophilic-addition"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "Propanone (acetone)"
+  smiles: "CC(C)=O"
+product:
+  name: "Propanone 2,4-dinitrophenylhydrazone"
+  smiles: "CC(C)=NNc1ccc(cc1[N+](=O)[O-])[N+](=O)[O-]"
+byproducts: "H₂O"
+reagents: "Brady's reagent: 2,4-dinitrophenylhydrazine dissolved in methanol or ethanol with a little concentrated H₂SO₄"
+conditions: "Room temperature, shake; weakly acidic medium"
+equation: "(CH3)2C=O + H2NNHC6H3(NO2)2 -> (CH3)2C=NNHC6H3(NO2)2 v + H2O"
+observation: "Yellow, orange or red crystalline precipitate forms at once"
+distinguishes: "Aldehydes and ketones from other compounds (including other carbonyl compounds such as acids, esters and amides)"
+notesPages: [122]
+memoryTricks: []
+faq:
+  - q: "What is Brady's reagent?"
+    a: "Brady's reagent is a solution of 2,4-dinitrophenylhydrazine (2,4-DNPH) in methanol or ethanol containing some concentrated sulphuric acid. It is used to detect aldehydes and ketones."
+  - q: "What is the precipitate formed in the 2,4-DNP test?"
+    a: "It is the 2,4-dinitrophenylhydrazone of the aldehyde or ketone, a C=N compound formed by condensation with loss of water. It is a yellow, orange or red solid."
+  - q: "Why do carboxylic acids and esters not give the 2,4-DNP test?"
+    a: "In acids, esters and amides the carbonyl carbon is stabilised by resonance with the lone pair on the attached O or N, so it is much less electrophilic. Acids also lose a proton to form an unreactive carboxylate."
+  - q: "Can the 2,4-DNP test distinguish an aldehyde from a ketone?"
+    a: "No. Both give a positive result. After a positive 2,4-DNP test, Tollens' or Fehling's test is used to decide whether the compound is an aldehyde or a ketone."
+  - q: "Why is a red precipitate obtained with benzaldehyde?"
+    a: "The colour deepens with conjugation. Aliphatic carbonyl compounds usually give yellow to orange hydrazones, while conjugated or aromatic ones such as benzaldehyde and cinnamaldehyde give orange-red to red precipitates."
+related: ["tests/tollens-test", "tests/fehling-test", "tests/schiff-test", "haloform-reaction", "wolff-kishner-reduction", "mechanisms/nucleophilic-addition", "comparisons/reactivity-of-carbonyl-compounds"]
+sources:
+  - title: "Aldehydes, Ketones and Carboxylic Acids (Class XII Chemistry, Unit 8)"
+    url: "https://ncert.nic.in/textbook/pdf/lech203.pdf"
+    publisher: "NCERT"
+  - title: "2,4-Dinitrophenylhydrazine"
+    url: "https://en.wikipedia.org/wiki/2,4-Dinitrophenylhydrazine"
+    publisher: "Wikipedia"
+  - title: "6.4D: Individual Tests (2,4-DNPH (Brady's) Test)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_Lab_Techniques_(Nichols)/06:_Miscellaneous_Techniques/6.04:_Chemical_Tests/6.4D:_Individual_Tests"
+    publisher: "LibreTexts Chemistry"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 3
+---
+
+## What is the 2,4-DNP test?
+
+The **2,4-DNP test** (Brady's test) detects the **carbonyl group of aldehydes and ketones**. The sample is shaken with **Brady's reagent**, an acidified alcoholic solution of **2,4-dinitrophenylhydrazine (2,4-DNPH)**. Any aldehyde or ketone condenses with it to give a **2,4-dinitrophenylhydrazone**, which separates as a **yellow, orange or red precipitate**. Carboxylic acids, esters and amides do not respond, so the test is specific for aldehydes and ketones.
+
+## Reagent and how to prepare it
+
+**2,4-Dinitrophenylhydrazine** is a red-orange solid, C₆H₃(NO₂)₂NHNH₂: a hydrazine carrying a benzene ring with nitro groups at positions 2 and 4.
+
+<Mol smiles="NNc1ccc(cc1[N+](=O)[O-])[N+](=O)[O-]" name="2,4-Dinitrophenylhydrazine" />
+
+**Brady's reagent** is made by dissolving 2,4-DNPH in methanol (or ethanol and water) with a little concentrated sulphuric acid. The acid catalyses the condensation.
+
+<ExamTip title="Safety">
+Dry 2,4-DNPH is sensitive to shock and friction and can explode, so it is always stored and handled wet.
+</ExamTip>
+
+## Procedure
+
+1. Take about 1 mL of Brady's reagent in a test tube.
+2. Add 2–3 drops of the liquid sample, or a few mg of a solid dissolved in a little ethanol.
+3. Shake and observe. A heavy, brightly coloured precipitate that forms at once is a positive result.
+
+## Observations and inference
+
+| Compound type | Observation | Inference |
+|---|---|---|
+| Aliphatic aldehyde or ketone (ethanal, propanone, butanone) | Yellow to orange precipitate | Positive: C=O of aldehyde/ketone |
+| Aromatic or conjugated carbonyl (benzaldehyde, acetophenone, cinnamaldehyde) | Orange-red to red precipitate | Positive |
+| Carboxylic acid, ester, amide | No precipitate; clear yellow-orange solution | Negative |
+| Alcohol, ether, alkene | No precipitate | Negative |
+
+## Chemistry behind it
+
+The 2,4-DNP test is a **nucleophilic addition–elimination** (condensation) reaction, the same type that forms oximes, hydrazones and semicarbazones:
+
+1. **Activation.** The acid protonates the carbonyl oxygen, making the carbonyl carbon more electrophilic.
+2. **Addition.** The terminal –NH₂ of 2,4-DNPH attacks the carbonyl carbon, giving a tetrahedral carbinolamine intermediate.
+3. **Elimination.** Water is lost, forming a C=N bond. The product is the 2,4-dinitrophenylhydrazone.
+
+<Eq ce="R2C=O + H2N-NH-C6H3(NO2)2 ->[H+] R2C=N-NH-C6H3(NO2)2 v + H2O" />
+
+<Eq ce="CH3CHO + H2N-NH-C6H3(NO2)2 -> CH3CH=N-NH-C6H3(NO2)2 v + H2O" />
+
+<Eq ce="C6H5CHO + H2N-NH-C6H3(NO2)2 -> C6H5CH=N-NH-C6H3(NO2)2 v + H2O" />
+
+Acids, esters and amides fail because the lone pair on the attached O or N is delocalised into the C=O group. This resonance makes their carbonyl carbon less electrophilic, and adding the reagent would destroy that extra stability. A carboxylic acid also simply gives up its proton to form a carboxylate ion, which repels nucleophiles.
+
+<KeyPoint>
+2,4-DNP derivatives are crystalline solids with sharp, characteristic melting points. Before spectroscopy, an unknown aldehyde or ketone was identified by making its 2,4-DNP derivative and matching the melting point.
+</KeyPoint>
+
+## Using it in identification problems
+
+A standard sequence in organic analysis questions:
+
+1. **2,4-DNP positive** → the compound is an aldehyde or ketone.
+2. **Tollens' or Fehling's test** → positive means aldehyde; negative means ketone.
+3. **Iodoform test** → positive means a methyl ketone (CH₃CO–) or acetaldehyde.
+
+For example, a compound C₈H₈O that gives an orange-red 2,4-DNP precipitate and a yellow iodoform precipitate, but does not reduce Tollens' or Fehling's reagent, is acetophenone (C₆H₅COCH₃).
+
+## Limitations
+
+- It does not separate aldehydes from ketones; both are positive.
+- A few very hindered or highly enolised carbonyl compounds react slowly.
+- Colour is only a rough guide to conjugation; a melting point of the derivative is needed for identification.
+
+## Related tests
+
+- [Tollens' test](/tests/tollens-test/) and [Fehling's test](/tests/fehling-test/): tell the aldehyde from the ketone after a positive 2,4-DNP test.
+- [Schiff's test](/tests/schiff-test/): a colour test for aldehydes.
+- [Haloform reaction](/reactions/haloform-reaction/): the iodoform test for methyl ketones.
+- [Wolff–Kishner reduction](/reactions/wolff-kishner-reduction/): another reaction that starts by forming a hydrazone.
+- [Nucleophilic addition](/mechanisms/nucleophilic-addition/): hub for carbonyl addition reactions.

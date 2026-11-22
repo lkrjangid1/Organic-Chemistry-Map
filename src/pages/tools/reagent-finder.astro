@@ -1,0 +1,73 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { url, absUrl } from '../../lib/site';
+import { breadcrumbLd } from '../../lib/seo';
+import { reagentIndex } from '../../lib/tools';
+
+const index = await reagentIndex();
+const CHIPS = ['LiAlH₄', 'NaBH₄', 'PCC', 'KMnO₄', 'K₂Cr₂O₇', 'DIBAL-H', 'H₂/Pd', 'Na/liq. NH₃', 'Zn-Hg', 'NaNO₂', 'SOCl₂', 'PCl₅', 'Br₂', 'NBS', 'O₃', 'HIO₄', 'SeO₂', 'CHCl₃', 'conc. H₂SO₄', 'Lindlar'];
+const path = 'tools/reagent-finder/';
+const title = 'Organic Reagent Finder: What Does This Reagent Do?';
+const description = 'Type any organic reagent (LiAlH₄, PCC, KMnO₄, NaNO₂/HCl…) and see every reaction and conversion on the site that uses it, with links. Free for JEE and NEET.';
+const jsonLd = [
+  { '@type': 'WebApplication', name: title, url: absUrl(path), description, applicationCategory: 'EducationalApplication', operatingSystem: 'Any (web browser)', isAccessibleForFree: true, offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' }, inLanguage: 'en-IN' },
+  breadcrumbLd([{ name: 'Tools', path: 'tools/' }, { name: 'Reagent finder', path }]),
+];
+---
+<Base title={title} description={description} path={path} jsonLd={jsonLd} section="tools">
+  <div class="container page tool">
+    <Breadcrumbs items={[{ label: 'Tools', href: url('tools/') }, { label: 'Reagent finder' }]} />
+    <header class="page-head">
+      <h1>Reagent finder</h1>
+      <p class="summary">Type a reagent to see what it does: every reaction page, conversion and map reaction on this site that uses it.</p>
+    </header>
+    <div class="tool-panel">
+      <label class="search"><span class="sr-only">Reagent</span><input id="rf-q" type="search" placeholder="e.g. LiAlH4, PCC, NaNO2 + HCl, Zn-Hg" autocomplete="off" /></label>
+      <p class="chips" id="rf-chips">{CHIPS.map((c) => <button type="button">{c}</button>)}</p>
+    </div>
+    <p id="rf-count" class="tool-hint" aria-live="polite"></p>
+    <ul id="rf-out" class="rf-list"></ul>
+    <section class="prose tool-about">
+      <h2>About this tool</h2>
+      <p>The index covers {index.length} entries: reagent pages, the conversion steps used by the <a href={url('tools/path-finder/')}>path finder</a>, every reaction and test page, and map reactions that do not have a page yet. Formulas match with or without subscripts, so <code>LiAlH4</code> finds LiAlH₄.</p>
+    </section>
+  </div>
+  <script type="application/json" id="rf-data" set:html={JSON.stringify(index).replace(/</g, '\\u003c')} />
+</Base>
+
+<script>
+  type E = { r: string; what: string; conv: string; href: string; kind: string; extra: string };
+  const data: E[] = JSON.parse(document.getElementById('rf-data')!.textContent!);
+  const SYN: Record<string, string> = { lah: 'lialh4', sbh: 'nabh4', lda: 'lithium diisopropylamide', jones: 'cro3', ozone: 'o3', baeyer: 'kmno4', clemmensen: 'znhg', lucas: 'zncl2', tollens: 'agno3' };
+  const norm = (s: string) => s.normalize('NFKD').toLowerCase().replace(/[^a-z0-9+]/g, '');
+  const rows = data.map((e) => ({ e, key: norm(`${e.r} ${e.what} ${e.extra}`), rkey: norm(e.r) }));
+  const q = document.getElementById('rf-q') as HTMLInputElement;
+  const out = document.getElementById('rf-out')!;
+  const count = document.getElementById('rf-count')!;
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+  const ORDER: Record<string, number> = { 'Reagent page': 0, Conversion: 1, 'Reaction page': 2, Test: 2, 'Map reaction': 3 };
+
+  function run() {
+    const raw = q.value.trim();
+    const n = norm(SYN[norm(raw)] ?? raw);
+    if (n.length < 2) { out.innerHTML = ''; count.textContent = 'Type at least two characters, or pick a common reagent.'; return; }
+    const parts = raw.split(/\s*(?:\+|,|\/| and )\s*/).map((p) => norm(SYN[norm(p)] ?? p)).filter((p) => p.length >= 2);
+    const hits = rows
+      .filter((r) => (parts.length > 1 ? parts.every((p) => r.key.includes(p)) : r.key.includes(n)))
+      .sort((a, b) => (ORDER[a.e.kind] - ORDER[b.e.kind]) || (Number(!a.rkey.includes(n)) - Number(!b.rkey.includes(n))));
+    count.textContent = hits.length ? `${hits.length} result${hits.length > 1 ? 's' : ''} for “${raw}”` : `Nothing found for “${raw}”. Try the formula without charges or conditions.`;
+    out.innerHTML = hits.slice(0, 80).map(({ e }) => `<li><a class="card" href="${e.href}"><span class="tag">${esc(e.kind)}</span><strong>${esc(e.what)}</strong><span class="rf-reagent">${esc(e.r)}</span><span>${esc(e.conv)}</span></a></li>`).join('');
+    history.replaceState(null, '', raw ? `?q=${encodeURIComponent(raw)}` : location.pathname);
+  }
+  q.addEventListener('input', run);
+  document.getElementById('rf-chips')!.addEventListener('click', (e) => {
+    const b = e.target as HTMLElement;
+    if (b.tagName !== 'BUTTON') return;
+    q.value = b.textContent!;
+    run();
+  });
+  const init = new URLSearchParams(location.search).get('q');
+  if (init) q.value = init;
+  run();
+</script>

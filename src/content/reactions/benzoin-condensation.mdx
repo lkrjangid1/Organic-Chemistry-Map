@@ -1,0 +1,152 @@
+---
+title: "Benzoin Condensation"
+description: "Benzoin condensation couples two aromatic aldehydes with cyanide catalyst (alc. KCN or NaCN) to form an α-hydroxy ketone; benzaldehyde gives benzoin."
+aliases: ["Benzoin reaction", "Benzoin addition", "Benzoin condensation mechanism", "Cyanide catalysed benzoin condensation"]
+kind: "named-reaction"
+family: "nucleophilic-addition"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["benzoin_condensation"]
+reactant:
+  name: "Benzaldehyde"
+  smiles: "O=Cc1ccccc1"
+product:
+  name: "Benzoin (2-hydroxy-1,2-diphenylethan-1-one)"
+  smiles: "O=C(c1ccccc1)C(O)c1ccccc1"
+byproducts: "None (CN⁻ is regenerated)"
+reagents: "Catalytic KCN or NaCN in aqueous ethanol (alc. KCN)"
+conditions: "Reflux; aromatic aldehyde required"
+equation: "2 C6H5CHO ->[alc. KCN][\\Delta] C6H5CH(OH)COC6H5"
+notesPages: [78]
+steps:
+  - title: "Cyanide adds to benzaldehyde"
+    text: "CN⁻ attacks the carbonyl carbon of the first benzaldehyde, giving the cyanohydrin anion C₆H₅CH(O⁻)CN."
+    arrows: "Carbon lone pair of CN⁻ → carbonyl C; the C=O π pair → O⁻."
+    species:
+      - smiles: "O=Cc1ccccc1"
+        label: "Benzaldehyde"
+        highlight: "[CH]=O"
+      - smiles: "[C-]#N"
+        label: "Cyanide"
+        highlight: "[C-]"
+      - smiles: "[O-]C(C#N)c1ccccc1"
+        label: "Cyanohydrin anion"
+  - title: "Proton transfer (umpolung)"
+    text: "The H on the former carbonyl carbon is now acidic because the carbanion is stabilised by –CN and the phenyl ring. A proton shift gives C₆H₅C⁻(OH)CN: the once-electrophilic carbon is now a nucleophile."
+    arrows: "The C–H proton moves to O⁻; the C–H bond pair stays on carbon as a carbanion."
+    species:
+      - smiles: "[O-]C(C#N)c1ccccc1"
+        label: "Cyanohydrin anion"
+        highlight: "[CH]([O-])C#N"
+      - smiles: "O[C-](C#N)c1ccccc1"
+        label: "Carbanion (umpolung)"
+        highlight: "[C-]"
+  - title: "Attack on a second aldehyde"
+    text: "The carbanion adds to the carbonyl carbon of a second benzaldehyde, forming C₆H₅C(OH)(CN)–CH(O⁻)C₆H₅."
+    arrows: "Carbanion lone pair → carbonyl C of the second PhCHO; the C=O π pair → O⁻."
+    species:
+      - smiles: "O[C-](C#N)c1ccccc1"
+        label: "Carbanion"
+        highlight: "[C-]"
+      - smiles: "O=Cc1ccccc1"
+        label: "Benzaldehyde"
+        highlight: "[CH]=O"
+      - smiles: "OC(C#N)(c1ccccc1)C([O-])c1ccccc1"
+        label: "Adduct"
+  - title: "Proton transfer and loss of cyanide"
+    text: "The proton moves from the OH to the alkoxide. The new alkoxide re-forms C=O and expels CN⁻, giving benzoin and regenerating the catalyst."
+    arrows: "O⁻ lone pair re-forms C=O; the C–CN bond pair leaves as CN⁻."
+    species:
+      - smiles: "[O-]C(C#N)(c1ccccc1)C(O)c1ccccc1"
+        label: "Alkoxide after proton shift"
+        highlight: "[O-]C(C#N)"
+      - smiles: "O=C(c1ccccc1)C(O)c1ccccc1"
+        label: "Benzoin"
+        highlight: "O=CC[OH]"
+      - smiles: "[C-]#N"
+        label: "Cyanide (regenerated)"
+memoryTricks:
+  - text: "ब्रह्मास्त्र"
+    meaning: "'Brahmastra' (ultimate weapon): shortcut — move the aldehydic H of one Ph–CHO onto the carbonyl O of the other and join the two carbonyl carbons."
+faq:
+  - q: "What is the product of benzoin condensation?"
+    a: "Benzoin, C₆H₅CH(OH)COC₆H₅, an α-hydroxy ketone (acyloin). Two molecules of benzaldehyde are joined through a new C–C bond between their former carbonyl carbons."
+  - q: "What is the role of KCN in benzoin condensation?"
+    a: "Cyanide is a catalyst. It adds to the aldehyde and makes the former carbonyl carbon acidic enough to be deprotonated, so that carbon becomes a nucleophile (umpolung). At the end cyanide is expelled and can start another cycle."
+  - q: "Why does benzoin condensation need an aromatic aldehyde?"
+    a: "The carbanion formed after cyanide addition is stabilised by both the cyano group and the benzene ring. Aliphatic aldehydes lack this stabilisation and with base mostly undergo aldol reactions instead; they need thiazolium (thiamine-type) catalysts."
+  - q: "What is umpolung in benzoin condensation?"
+    a: "Umpolung means polarity reversal. The carbonyl carbon is normally electrophilic, but after cyanide adds and the C–H proton is removed it becomes a nucleophilic carbanion that attacks a second aldehyde."
+related: ["cannizzaro-reaction", "benzilic-acid-rearrangement", "aldol-condensation", "perkin-reaction"]
+sources:
+  - title: "Benzoin condensation"
+    url: "https://en.wikipedia.org/wiki/Benzoin_condensation"
+    publisher: "Wikipedia"
+  - title: "Benzoin Condensation"
+    url: "https://www.organic-chemistry.org/namedreactions/benzoin-condensation.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "26.4: Some Aromatic Side-Chain Compounds"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Basic_Principles_of_Organic_Chemistry_(Roberts_and_Caserio)/26:_More_on_Aromatic_Compounds/26.04:_Some_Aromatic_Side-Chain_Compounds"
+    publisher: "Chemistry LibreTexts (Roberts and Caserio)"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 3
+---
+
+## What is the benzoin condensation?
+
+The **benzoin condensation** is the cyanide-catalysed coupling of **two aromatic aldehyde molecules** to give an **α-hydroxy ketone** (an acyloin). With **benzaldehyde and a catalytic amount of KCN or NaCN in aqueous ethanol**, the product is **benzoin**, C₆H₅CH(OH)COC₆H₅. A new C–C bond forms between the two former carbonyl carbons; nothing is lost, so it is strictly an addition, even though it is traditionally called a condensation. Liebig and Wöhler first observed it in 1832, and the mechanism was proposed by Lapworth in 1903.
+
+## Mechanism
+
+1. **Cyanide adds.** CN⁻ attacks the carbonyl carbon of the first benzaldehyde, giving the cyanohydrin anion C₆H₅CH(O⁻)CN.
+2. **Proton transfer (umpolung).** The hydrogen on the former carbonyl carbon is now acidic, because the resulting carbanion is stabilised by the –CN group and the phenyl ring. A proton shift gives the carbanion C₆H₅C⁻(OH)CN. The once-electrophilic carbonyl carbon has become a nucleophile.
+3. **Attack on a second aldehyde.** The carbanion adds to the carbonyl carbon of a second benzaldehyde, forming C₆H₅C(OH)(CN)–CH(O⁻)C₆H₅.
+4. **Proton transfer and loss of cyanide.** The proton moves from the OH to the alkoxide. The resulting alkoxide re-forms C=O and expels CN⁻, giving benzoin and regenerating the catalyst.
+
+<Eq ce="C6H5CHO + CN- -> C6H5CH(O-)CN -> C6H5C-(OH)CN" />
+<Eq ce="C6H5C-(OH)CN + C6H5CHO -> C6H5C(OH)(CN)CH(O-)C6H5 -> C6H5COCH(OH)C6H5 + CN-" />
+
+<KeyPoint>
+Cyanide does three jobs: it is a good nucleophile, its electron-withdrawing nature makes the C–H acidic, and it is a good leaving group at the end. That is why CN⁻ (and thiazolium carbenes such as vitamin B₁) catalyse this reaction while OH⁻ does not.
+</KeyPoint>
+
+<Trick>
+Shortcut (ब्रह्मास्त्र): take two Ph–CHO molecules, move the aldehydic H of one onto the carbonyl oxygen of the other, and join the two carbonyl carbons. The first becomes C=O, the second becomes CH–OH: Ph–CO–CH(OH)–Ph.
+</Trick>
+
+## Examples
+
+**Benzaldehyde to benzoin:**
+
+<Eq ce="2 C6H5CHO ->[KCN, C2H5OH/H2O] C6H5COCH(OH)C6H5" />
+
+**Mixed (crossed) benzoins.** Two different aromatic aldehydes can give an unsymmetrical benzoin in good yield when one acts mainly as the carbanion donor and the other as the acceptor. The two aryl groups in the product are then different.
+
+**Benzoin to benzil.** Benzoin is oxidised by nitric acid to the 1,2-diketone benzil, the starting material of the [benzilic acid rearrangement](/reactions/benzilic-acid-rearrangement/):
+
+<Eq ce="C6H5COCH(OH)C6H5 ->[[O]] C6H5COCOC6H5" />
+
+## Conditions and limitations
+
+| Point | Detail |
+|---|---|
+| Essential condition | An aromatic aldehyde (or a glyoxal) |
+| Catalyst | KCN or NaCN, only a small amount |
+| Solvent | Aqueous ethanol, under reflux |
+| Reversibility | Reversible; product ratio is set by thermodynamic stability |
+| Aliphatic aldehydes | Need thiazolium salt catalysts with base |
+
+<ExamTip>
+Cyanide is a catalyst, so it does not appear in the product. If an exam question gives benzaldehyde with "alc. KCN", the answer is benzoin; with "conc. NaOH" it is the Cannizzaro products; with "(CH₃CO)₂O / CH₃COONa" it is the Perkin product, cinnamic acid.
+</ExamTip>
+
+The reverse reaction (retro-benzoin) is also catalysed by cyanide, so an acyloin made by another route can be split back into aldehydes.
+
+## Related reactions
+
+- [Cannizzaro reaction](/reactions/cannizzaro-reaction/): benzaldehyde in concentrated alkali disproportionates instead of coupling.
+- [Benzilic acid rearrangement](/reactions/benzilic-acid-rearrangement/): benzoin → benzil → benzilic acid is a classic three-step sequence.
+- [Aldol condensation](/reactions/aldol-condensation/): the C–C coupling route for aldehydes that have α-hydrogen.
+- [Perkin reaction](/reactions/perkin-reaction/): another named reaction of benzaldehyde.
+- Hub: [nucleophilic addition](/mechanisms/nucleophilic-addition/).

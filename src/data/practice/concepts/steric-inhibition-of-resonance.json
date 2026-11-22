@@ -1,0 +1,49 @@
+{
+ "page": "concepts/steric-inhibition-of-resonance",
+ "questions": [
+  {
+   "q": "The correct decreasing order of basicity is:",
+   "options": [
+    "N,N,2,6-Tetramethylaniline > N,N-dimethylaniline > aniline > 2,6-dimethylaniline",
+    "N,N-Dimethylaniline > N,N,2,6-tetramethylaniline > aniline > 2,6-dimethylaniline",
+    "2,6-Dimethylaniline > aniline > N,N-dimethylaniline > N,N,2,6-tetramethylaniline",
+    "Aniline > 2,6-dimethylaniline > N,N,2,6-tetramethylaniline > N,N-dimethylaniline"
+   ],
+   "answer": 0,
+   "explain": "The ortho methyls twist the bulky –NMe₂ group out of plane (SIR), localising its lone pair, while with the small –NH₂ group they mainly crowd the –NH₃⁺ ion (ortho effect) and lower basicity."
+  },
+  {
+   "q": "Which compound is the more acidic of the pair, and why? 2,6-dimethyl-4-nitrophenol (P) or 3,5-dimethyl-4-nitrophenol (Q).",
+   "options": [
+    "Q, because methyl groups beside NO₂ increase its −M effect",
+    "P, because in Q the methyls twist the NO₂ group out of plane and its −M effect is lost",
+    "Q, because methyl groups beside OH destabilise the phenoxide ion in P",
+    "Both are equally acidic because the methyl groups have the same +I effect"
+   ],
+   "answer": 1,
+   "explain": "In Q the methyl groups flank the nitro group and force it out of the ring plane, so it can no longer delocalise the phenoxide charge. In P the nitro group stays coplanar and acidity is similar to p-nitrophenol."
+  },
+  {
+   "q": "In which compound does the SIR effect NOT significantly change the property compared with the parent compound without ortho methyl groups?",
+   "options": [
+    "4-Cyano-3,5-dimethylphenol (acidity)",
+    "3,5-Dimethyl-4-nitrophenol (acidity)",
+    "N,N,2,6-Tetramethylaniline (basicity)",
+    "o-Toluic acid (acidity)"
+   ],
+   "answer": 0,
+   "explain": "A cyano group is linear, so flanking methyl groups cannot twist it out of plane and the acidity changes very little. In the other three, an ortho group twists a resonance-active group and changes the property."
+  },
+  {
+   "q": "o-Toluic acid (pKa 3.9) is stronger than benzoic acid (pKa 4.2). The steric inhibition of resonance explanation is:",
+   "options": [
+    "The ortho methyl group increases conjugation of COOH with the ring, stabilising the anion",
+    "The ortho methyl group twists COOH out of the ring plane, removing ring–C=O conjugation that stabilises the undissociated acid",
+    "The methyl group withdraws electrons by −I effect from the carboxyl group",
+    "The methyl group hydrogen-bonds to the carboxylate oxygen"
+   ],
+   "answer": 1,
+   "explain": "Ring–C=O conjugation normally stabilises the un-ionised acid; twisting COOH out of plane removes this, so the acid ionises more easily. Note that SIR here raises acidity, unlike the nitrophenol case where it lowers it."
+  }
+ ]
+}

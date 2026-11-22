@@ -1,0 +1,13 @@
+---
+import { SITE } from '../lib/site';
+import { langOf, t as tr } from '../lib/i18n';
+const s = tr(langOf(Astro.url));
+---
+<a class="promo" href={SITE.libgen.url} rel="noopener" target="_blank">
+  <span class="promo-icon" aria-hidden="true">📚</span>
+  <span>
+    <span class="promo-label">{s.libgenLabel}</span>
+    <strong>{SITE.libgen.name}</strong>
+    <small>{SITE.libgen.line}. {s.libgenSmall}</small>
+  </span>
+</a>

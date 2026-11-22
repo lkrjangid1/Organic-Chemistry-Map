@@ -1,0 +1,249 @@
+{
+ "exam": "jee-advanced",
+ "year": 2018,
+ "paper": 1,
+ "source": "https://jeeadv.ac.in/past_qps/2018_1.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2018-p1-q4",
+   "number": 4,
+   "type": "multiple",
+   "stem": "In the following reaction sequence, the correct structure(s) of X is (are)\nX —(1) PBr₃, Et₂O (2) NaI, Me₂CO (3) NaN₃, HCONMe₂→ product (enantiomerically pure, shown)",
+   "figures": [
+    {
+     "smiles": "C[C@@H]1CC[C@@H](N=[N+]=[N-])C1",
+     "label": "Product (enantiomerically pure)"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "C[C@@H]1CC[C@@H](O)C1"
+    },
+    {
+     "key": "B",
+     "smiles": "C[C@@H]1CC[C@H](O)C1"
+    },
+    {
+     "key": "C",
+     "smiles": "C[C@H]1CC[C@H](O)C1"
+    },
+    {
+     "key": "D",
+     "smiles": "C[C@H]1CC[C@@H](O)C1"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "solution": "All three steps are SN2 reactions at the same secondary carbon, and each one inverts it: PBr₃ replaces OH by Br with inversion, iodide in acetone displaces bromide with inversion (Finkelstein), and azide in DMF displaces iodide with inversion. Three inversions give an overall inversion, while the methyl-bearing carbon is never touched. The product has Me and N₃ trans (Me wedged, N₃ hashed), so X must carry the OH on the wedge, cis to Me, in the same absolute frame. That is structure B. Structure D is the mirror image of B and would give the enantiomeric azide; A and C are trans alcohols that would give the cis azide.",
+   "topics": [
+    "reactions/sn2-reaction",
+    "reactions/finkelstein-reaction",
+    "mechanisms/nucleophilic-substitution"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2018-p1-q5",
+   "number": 5,
+   "type": "multiple",
+   "stem": "The reaction(s) leading to the formation of 1,3,5-trimethylbenzene is (are)",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "CC(C)=O",
+     "text": "Conc. H₂SO₄, Δ"
+    },
+    {
+     "key": "B",
+     "smiles": "CC#C",
+     "text": "heated iron tube, 873 K"
+    },
+    {
+     "key": "C",
+     "smiles": "CC(=O)c1cc(C(C)=O)cc(C(C)=O)c1",
+     "text": "1) Br₂, NaOH  2) H₃O⁺  3) sodalime, Δ"
+    },
+    {
+     "key": "D",
+     "smiles": "O=Cc1cc(C=O)cc(C=O)c1",
+     "text": "Zn/Hg, HCl"
+    }
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "solution": "Acetone heated with conc. H₂SO₄ undergoes three acid-catalysed aldol condensations and dehydrations that close into mesitylene. Propyne passed through a red-hot iron tube trimerises to the benzene ring, giving 1,3,5-trimethylbenzene. In (C) the haloform reaction turns each acetyl group into CO₂H, and soda-lime then removes all three carboxyl groups, so the product is benzene, not mesitylene. In (D) Clemmensen reduction converts each CHO group into CH₃, giving mesitylene.",
+   "topics": [
+    "reactions/aldol-condensation",
+    "reactions/haloform-reaction",
+    "reactions/clemmensen-reduction"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2018-p1-q15",
+   "number": 15,
+   "type": "paragraph",
+   "passage": "Treatment of benzene with CO/HCl in the presence of anhydrous AlCl₃/CuCl followed by reaction with Ac₂O/NaOAc gives compound X as the major product. Compound X upon reaction with Br₂/Na₂CO₃, followed by heating at 473 K with moist KOH furnishes Y as the major product. Reaction of X with H₂/Pd-C, followed by H₃PO₄ treatment gives Z as the major product.",
+   "stem": "The compound Y is",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "O=C(Br)C=Cc1ccccc1"
+    },
+    {
+     "key": "B",
+     "smiles": "OC(c1ccccc1)C(Br)C(=O)O"
+    },
+    {
+     "key": "C",
+     "smiles": "C#Cc1ccccc1"
+    },
+    {
+     "key": "D",
+     "smiles": "O=C(Br)C(Br)C(Br)c1ccccc1"
+    }
+   ],
+   "answer": "C",
+   "solution": "Gattermann–Koch formylation converts benzene into benzaldehyde, and Perkin condensation with Ac₂O/NaOAc gives cinnamic acid, X = PhCH=CHCO₂H. Br₂ in Na₂CO₃ adds across the double bond and the carboxylate is lost (bromodecarboxylation), giving β-bromostyrene. Heating with KOH at 473 K then eliminates HBr from the vinyl bromide, so Y is phenylacetylene, PhC≡CH.",
+   "topics": [
+    "reactions/gattermann-koch-reaction",
+    "reactions/perkin-reaction",
+    "mechanisms/elimination-reactions"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2018-p1-q16",
+   "number": 16,
+   "type": "paragraph",
+   "passage": "Treatment of benzene with CO/HCl in the presence of anhydrous AlCl₃/CuCl followed by reaction with Ac₂O/NaOAc gives compound X as the major product. Compound X upon reaction with Br₂/Na₂CO₃, followed by heating at 473 K with moist KOH furnishes Y as the major product. Reaction of X with H₂/Pd-C, followed by H₃PO₄ treatment gives Z as the major product.",
+   "stem": "The compound Z is",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "O=C1CCc2ccccc21"
+    },
+    {
+     "key": "B",
+     "smiles": "O=C1C=Cc2ccccc21"
+    },
+    {
+     "key": "C",
+     "smiles": "O=C1CC(O)c2ccccc21"
+    },
+    {
+     "key": "D",
+     "smiles": "C1Cc2ccccc2C1"
+    }
+   ],
+   "answer": "A",
+   "solution": "X is cinnamic acid (from Gattermann–Koch formylation then Perkin condensation). H₂/Pd-C saturates the C=C, giving 3-phenylpropanoic acid. Hot H₃PO₄ then makes the acyl cation, which attacks the ortho position of the same ring (intramolecular Friedel–Crafts acylation) to close a five-membered ring. Z is indan-1-one.",
+   "topics": [
+    "reactions/perkin-reaction",
+    "reactions/catalytic-hydrogenation",
+    "reactions/friedel-crafts-acylation"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2018-p1-q17",
+   "number": 17,
+   "type": "paragraph",
+   "passage": "An organic acid P (C₁₁H₁₂O₂) can easily be oxidized to a dibasic acid which reacts with ethyleneglycol to produce a polymer dacron. Upon ozonolysis, P gives an aliphatic ketone as one of the products. P undergoes the following reaction sequences to furnish R via Q. The compound P also undergoes another set of reactions to produce S.\nP —1) H₂/Pd-C 2) SOCl₂ 3) MeMgBr, CdCl₂ 4) NaBH₄→ Q —1) HCl 2) Mg/Et₂O 3) CO₂ (dry ice) 4) H₃O⁺→ R\nP —1) H₂/Pd-C 2) NH₃/Δ 3) Br₂/NaOH 4) CHCl₃, KOH, Δ 5) H₂/Pd-C→ S",
+   "stem": "The compound R is",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "CC(C)Cc1ccc(C(C)C(=O)O)cc1"
+    },
+    {
+     "key": "B",
+     "smiles": "CC(C)Cc1ccccc1CCC(=O)O"
+    },
+    {
+     "key": "C",
+     "smiles": "CCC(C)c1ccc(C(C)C(=O)O)cc1"
+    },
+    {
+     "key": "D",
+     "smiles": "CC(C)Cc1ccccc1C(C)C(=O)O"
+    }
+   ],
+   "answer": "A",
+   "solution": "Oxidation to terephthalic acid (dacron) means P is a para-disubstituted benzoic acid, and ozonolysis giving an aliphatic ketone means the side chain ends in C=C(CH₃)₂. With C₁₁H₁₂O₂, P is 4-(2-methylprop-1-enyl)benzoic acid. Hydrogenation gives 4-isobutylbenzoic acid; SOCl₂ gives the acid chloride, and the organocadmium reagent stops at the methyl ketone, which NaBH₄ reduces to the secondary alcohol Q. HCl converts Q into the benzylic chloride, the Grignard reagent adds to CO₂, and acidification gives 2-(4-isobutylphenyl)propanoic acid (ibuprofen).",
+   "topics": [
+    "reactions/grignard-reagent",
+    "reactions/ozonolysis",
+    "concepts/terylene-and-glyptal"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2018-p1-q18",
+   "number": 18,
+   "type": "paragraph",
+   "passage": "An organic acid P (C₁₁H₁₂O₂) can easily be oxidized to a dibasic acid which reacts with ethyleneglycol to produce a polymer dacron. Upon ozonolysis, P gives an aliphatic ketone as one of the products. P undergoes the following reaction sequences to furnish R via Q. The compound P also undergoes another set of reactions to produce S.\nP —1) H₂/Pd-C 2) SOCl₂ 3) MeMgBr, CdCl₂ 4) NaBH₄→ Q —1) HCl 2) Mg/Et₂O 3) CO₂ (dry ice) 4) H₃O⁺→ R\nP —1) H₂/Pd-C 2) NH₃/Δ 3) Br₂/NaOH 4) CHCl₃, KOH, Δ 5) H₂/Pd-C→ S",
+   "stem": "The compound S is",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "CCC(C)c1ccc(CN)cc1"
+    },
+    {
+     "key": "B",
+     "smiles": "CNc1ccc(CC(C)C)cc1"
+    },
+    {
+     "key": "C",
+     "smiles": "CCC(C)c1ccccc1CN"
+    },
+    {
+     "key": "D",
+     "smiles": "CNc1ccccc1CC(C)C"
+    }
+   ],
+   "answer": "B",
+   "solution": "Oxidation to terephthalic acid (dacron) means P is a para-disubstituted benzoic acid, and ozonolysis giving an aliphatic ketone means the side chain ends in C=C(CH₃)₂. With C₁₁H₁₂O₂, P is 4-(2-methylprop-1-enyl)benzoic acid. Hydrogenation gives 4-isobutylbenzoic acid, which with NH₃/Δ forms the amide. Hofmann bromamide degradation removes the carbonyl carbon to give 4-isobutylaniline. The carbylamine reaction turns the NH₂ into an isocyanide (–N≡C), and catalytic hydrogenation reduces the isocyanide to the N-methyl amine, ArNHCH₃.",
+   "topics": [
+    "reactions/hofmann-bromamide-degradation",
+    "reactions/carbylamine-reaction",
+    "reactions/catalytic-hydrogenation"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  }
+ ]
+}

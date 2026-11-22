@@ -1,0 +1,116 @@
+---
+title: "Arndt–Eistert Synthesis"
+description: "Arndt–Eistert synthesis converts a carboxylic acid into its next higher homologue (RCOOH to RCH₂COOH) via acid chloride, diazomethane and Wolff rearrangement."
+aliases: ["Arndt-Eistert reaction", "Arndt Eistert homologation", "Arnst Eistert reaction", "Arndt–Eistert homologation", "Step-up of carboxylic acids", "Wolff rearrangement"]
+kind: "named-reaction"
+family: "reactions-of-carboxylic-acids"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["arndt_eistert_synthesis_step1", "wolff_rearrangement"]
+reactant:
+  name: "Butanoic acid"
+  smiles: "CCCC(=O)O"
+product:
+  name: "Pentanoic acid"
+  smiles: "CCCCC(=O)O"
+byproducts: "N₂ (and CH₃Cl + N₂ from the second equivalent of CH₂N₂ that removes HCl)"
+reagents: "1. SOCl₂ or PCl₅; 2. CH₂N₂ (excess); 3. Ag₂O (or another Ag(I) salt), heat or light, with H₂O"
+conditions: "Diazoketone formation in dry ether; Wolff rearrangement catalysed by Ag(I), heat or UV light; water traps the ketene"
+equation: "CH3CH2CH2COCl + 2 CH2N2 -> CH3CH2CH2COCHN2 + CH3Cl + N2"
+notesPages: [90, 94]
+memoryTricks: []
+faq:
+  - q: "What is the Arndt–Eistert synthesis used for?"
+    a: "It adds one CH₂ group between the carbon chain and the COOH group, converting a carboxylic acid RCOOH into its next homologue RCH₂COOH. It is the standard step-up (ascent) reaction for acids."
+  - q: "What is the role of Ag₂O in the Arndt–Eistert reaction?"
+    a: "Silver(I) oxide catalyses the Wolff rearrangement of the α-diazoketone: N₂ is lost, the R group shifts to the neighbouring carbon and a ketene, R–CH=C=O, is formed. Heat or UV light can do the same job."
+  - q: "Why is excess diazomethane used?"
+    a: "The first equivalent of CH₂N₂ is acylated by the acid chloride and releases HCl. A second equivalent destroys this HCl (giving CH₃Cl and N₂); otherwise HCl would convert the diazoketone into an unwanted chloromethyl ketone."
+  - q: "What product is obtained if the ketene is trapped with ethanol or ammonia?"
+    a: "With an alcohol the homologous ester RCH₂COOR′ forms, and with ammonia or an amine the homologous amide RCH₂CONH₂ (or RCH₂CONHR′) forms. Water gives the acid."
+  - q: "Is the configuration of a chiral R group retained?"
+    a: "Yes. The migrating group keeps its configuration, so the Arndt–Eistert method converts natural α-amino acids into β-amino acids without loss of optical purity."
+related: ["hell-volhard-zelinsky-reaction", "curtius-rearrangement", "hunsdiecker-reaction", "hofmann-bromamide-degradation", "mechanisms/carbenes", "mechanisms/rearrangement-reactions"]
+sources:
+  - title: "Arndt–Eistert reaction"
+    url: "https://en.wikipedia.org/wiki/Arndt%E2%80%93Eistert_reaction"
+    publisher: "Wikipedia"
+  - title: "Arndt-Eistert Synthesis"
+    url: "https://www.organic-chemistry.org/namedreactions/arndt-eistert-synthesis.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "Wolff rearrangement"
+    url: "https://en.wikipedia.org/wiki/Wolff_rearrangement"
+    publisher: "Wikipedia"
+  - title: "Haloalkanes and Haloarenes (Class XII Chemistry, Unit 6)"
+    url: "https://ncert.nic.in/textbook/pdf/lech201.pdf"
+    publisher: "NCERT"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 4
+  note: "A worked route drew OH⁻ deprotonating RCOCH₂N₂⁺ during the Ag₂O step; sources place HCl removal by excess CH₂N₂ in diazoketone formation and make the Wolff step Ag(I)/heat/light induced. A suggested BrCH₂COOH + CH₃MgX route is invalid because the Grignard reagent is destroyed by the COOH proton. Page follows the sources."
+---
+
+## What is the Arndt–Eistert synthesis?
+
+The **Arndt–Eistert synthesis** is a **one-carbon homologation of carboxylic acids**: it converts an acid **R–COOH into R–CH₂–COOH**. The acid is turned into its **acid chloride**, the acid chloride reacts with **diazomethane** to give an **α-diazoketone**, and the diazoketone undergoes the silver-catalysed **Wolff rearrangement** to a **ketene**, which water converts into the higher acid. It was introduced by Fritz Arndt and Bernd Eistert in 1935.
+
+<Eq ce="R-COOH ->[SOCl2] R-COCl ->[CH2N2] R-CO-CHN2 ->[Ag2O, H2O][\Delta] R-CH2-COOH + N2" />
+
+## Mechanism
+
+1. **Acid chloride.** SOCl₂ (or PCl₅) converts R–COOH into R–COCl.
+2. **Acylation of diazomethane.** The nucleophilic carbon of CH₂N₂ (best written ⁻CH₂–N⁺≡N) attacks the acyl carbon and Cl⁻ leaves, giving R–CO–CH₂–N₂⁺.
+3. **Diazoketone.** Loss of H⁺ gives the neutral α-diazoketone R–CO–CH=N₂. The proton ends up as HCl, which a **second equivalent of diazomethane** removes as CH₃Cl + N₂. Most diazoketones are stable enough to isolate.
+4. **Wolff rearrangement.** With Ag₂O (or silver benzoate), heat or UV light, N₂ leaves and the R group **migrates from the carbonyl carbon to the neighbouring carbon** in a 1,2-shift. The product is a **ketene**, R–CH=C=O.
+5. **Trapping the ketene.** Water adds across the C=C of the ketene to give R–CH₂–COOH.
+
+<Eq ce="R-CO-CHN2 ->[Ag2O] R-CH=C=O + N2" />
+<Eq ce="R-CH=C=O + H2O -> R-CH2-COOH" />
+
+<KeyPoint>
+The **Wolff rearrangement** (diazoketone → ketene) is the key step. It may be concerted or go through an α-ketocarbene; either way the migrating group keeps its configuration and the new carbon from CH₂N₂ ends up next to the COOH.
+</KeyPoint>
+
+## Examples
+
+**1. Acetic acid to propanoic acid**
+
+<Eq ce="CH3COOH ->[SOCl2] CH3COCl ->[CH2N2] CH3COCHN2 ->[Ag2O, H2O] CH3CH2COOH" />
+
+**2. Butanoic acid to pentanoic acid**
+
+<Eq ce="CH3CH2CH2COCl + 2 CH2N2 -> CH3CH2CH2COCHN2 + CH3Cl + N2" />
+<Eq ce="CH3CH2CH2COCHN2 ->[Ag2O, H2O][\Delta] CH3CH2CH2CH2COOH + N2" />
+
+**3. Trapping with other nucleophiles**
+
+<Eq ce="C6H5CH=C=O + C2H5OH -> C6H5CH2COOC2H5" />
+
+Benzoic acid gives phenylacetic acid with water, ethyl phenylacetate with ethanol, and phenylacetamide with ammonia.
+
+<ExamTip title="Common mistake">
+Do not "step up" acetic acid by making BrCH₂COOH (HVZ) and then adding CH₃MgBr. A Grignard reagent reacts first with the acidic COOH proton (giving methane), so no C–C bond forms. For adding one carbon to a carboxylic acid, the Arndt–Eistert sequence is the answer.
+</ExamTip>
+
+## Ascent and descent of carboxylic acids
+
+| Change | Reaction | Product from RCOOH |
+|---|---|---|
+| Add one carbon | Arndt–Eistert | RCH₂COOH |
+| Remove one carbon, give halide | [Hunsdiecker](/reactions/hunsdiecker-reaction/) | RX |
+| Remove one carbon, give amine | [Hofmann](/reactions/hofmann-bromamide-degradation/), [Curtius](/reactions/curtius-rearrangement/), [Schmidt](/reactions/schmidt-reaction/) | RNH₂ |
+| Remove CO₂, give alkane | [Decarboxylation](/reactions/decarboxylation/) | RH |
+
+## Limitations
+
+- **Diazomethane is toxic and explosive**; safer reagents such as trimethylsilyldiazomethane are used in modern work.
+- If too little diazomethane is used, HCl converts the diazoketone into R–CO–CH₂Cl.
+- Higher diazoalkanes (R′CHN₂) are less reliable and give side products.
+- The thermal Wolff rearrangement needs high temperatures (around 180 °C); silver catalysis or light is preferred.
+
+## Related reactions
+
+- [Curtius rearrangement](/reactions/curtius-rearrangement/): another loss of N₂ with a 1,2-shift, but to nitrogen, giving an isocyanate.
+- [Hell–Volhard–Zelinsky reaction](/reactions/hell-volhard-zelinsky-reaction/): substitution at the α-carbon without changing chain length.
+- [Carbenes](/mechanisms/carbenes/) hub and [rearrangement reactions](/mechanisms/rearrangement-reactions/) hub.
+- [Reactions of carboxylic acids](/mechanisms/reactions-of-carboxylic-acids/) hub.

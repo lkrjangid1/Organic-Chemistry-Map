@@ -1,0 +1,117 @@
+---
+title: "Thorpe Reaction"
+description: "The Thorpe reaction is the base-catalysed self-condensation of nitriles into β-enaminonitriles; the Thorpe–Ziegler version cyclises dinitriles to ketones."
+aliases: ["Thorpe condensation", "Thorpe nitrile condensation", "Tharpe reaction", "Thorpe–Ziegler reaction", "Ziegler method", "Cyano-aldol condensation"]
+kind: "named-reaction"
+family: "carbonyl-condensation-reactions"
+exams: ["jee-advanced"]
+mapEdges: []
+reactant:
+  name: "Acetonitrile (ethanenitrile)"
+  smiles: "CC#N"
+product:
+  name: "3-Aminobut-2-enenitrile (enamine form of 3-iminobutanenitrile)"
+  smiles: "CC(N)=CC#N"
+byproducts: "None (two nitrile molecules combine)"
+reagents: "A strong base (B⁻); exam answers often write OH⁻"
+conditions: "Anhydrous; for Thorpe–Ziegler, a dinitrile and then acid hydrolysis"
+equation: "2 CH3C#N ->[base] CH3C(=NH)CH2C#N <=> CH3C(NH2)=CHC#N"
+notesPages: [73, 74]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Thorpe reaction?"
+    a: "Two nitrile molecules combine to give a β-iminonitrile, which tautomerises to the more stable conjugated β-enaminonitrile. Acetonitrile gives CH₃C(=NH)CH₂CN, isolated mainly as 3-aminobut-2-enenitrile, CH₃C(NH₂)=CHCN."
+  - q: "What is the Thorpe–Ziegler reaction?"
+    a: "It is the intramolecular Thorpe reaction of a dinitrile. The ring closes to a cyclic enaminonitrile, and acid hydrolysis then converts it into a cyclic ketone. It is the nitrile counterpart of the Dieckmann condensation."
+  - q: "Why is the Thorpe reaction compared with the aldol and Claisen reactions?"
+    a: "In all three, a base forms a carbanion next to an electron-withdrawing group, and that carbanion attacks an electrophilic carbon of a second molecule. In the Thorpe reaction the electrophile is the C≡N carbon instead of a C=O carbon."
+  - q: "Which base is used in the Thorpe reaction?"
+    a: "The α-hydrogen of a simple nitrile is only weakly acidic (pKa about 25), so a strong base is needed to form the carbanion; nitrile anions in general are made with bases such as LDA or butyllithium. Exam answers often just show OH⁻."
+related: ["claisen-condensation", "dieckmann-condensation", "aldol-condensation", "ester-hydrolysis", "stephen-reduction", "mechanisms/carbonyl-condensation-reactions"]
+sources:
+  - title: "Thorpe reaction"
+    url: "https://en.wikipedia.org/wiki/Thorpe_reaction"
+    publisher: "Wikipedia"
+  - title: "Nitrile"
+    url: "https://en.wikipedia.org/wiki/Nitrile"
+    publisher: "Wikipedia"
+  - title: "20.7: Chemistry of Nitriles"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/20%3A_Carboxylic_Acids_and_Nitriles/20.07%3A_Chemistry_of_Nitriles"
+    publisher: "Chemistry LibreTexts"
+  - title: "22.5: Acidity of Alpha Hydrogen Atoms – Enolate Ion Formation"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/22:_Carbonyl_Alpha-Substitution_Reactions/22.05:_Acidity_of_Alpha_Hydrogen_Atoms-_Enolate_Ion_Formation"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 4
+  note: "Sources say 'base' and that alkyl nitriles need strong bases to deprotonate; OH⁻/CN⁻ kept only as the exam shorthand. The nitrile-anion + aldehyde (cyano-aldol) pattern is presented as exam teaching; no source names it."
+---
+
+## What is the Thorpe reaction?
+
+The **Thorpe reaction** is the **base-catalysed self-condensation of aliphatic nitriles**. The base removes an α-hydrogen from one nitrile, and the carbanion adds to the C≡N carbon of a second nitrile, giving a **β-iminonitrile** that tautomerises to a **β-enaminonitrile**. It was discovered by Jocelyn Field Thorpe in the early 1900s. Its intramolecular version on dinitriles, the **Thorpe–Ziegler reaction**, is a route to cyclic ketones.
+
+## General reaction
+
+<Eq ce="2 RCH2C#N ->[base] RCH2C(=NH)CH(R)C#N <=> RCH2C(NH2)=C(R)C#N" />
+
+Think of it as the nitrile version of the [Claisen condensation](/reactions/claisen-condensation/): one molecule supplies the carbanion, the other supplies the electrophilic carbon. Because C≡N has no leaving group, nothing is lost, and the product keeps the nitrogen as =NH (or –NH₂ in the enamine form).
+
+## Mechanism
+
+1. **Carbanion formation.** The base removes a proton from the carbon next to C≡N. The negative charge is shared with nitrogen: ⁻CH₂–C≡N ⟷ CH₂=C=N⁻.
+2. **Addition to the nitrile carbon.** The carbanion attacks the electrophilic carbon of a second nitrile. The C≡N π bond breaks and an **imine anion** forms, just as an alkoxide forms when a nucleophile adds to C=O.
+3. **Protonation.** The imine anion picks up a proton, giving the β-iminonitrile, CH₃–C(=NH)–CH₂–C≡N.
+4. **Tautomerism.** The imine shifts a hydrogen to become the enamine, CH₃–C(NH₂)=CH–C≡N. The enamine is favoured because its C=C is conjugated with C≡N.
+
+<Eq ce="CH3C#N + B- -> ^-CH2C#N + BH" />
+<Eq ce="^-CH2C#N + CH3C#N -> CH3C(=N^-)CH2C#N ->[BH] CH3C(=NH)CH2C#N" />
+
+<KeyPoint>
+The α-hydrogen of a simple nitrile has a pKa of about 25, similar to an ester and much less acidic than a ketone (about 19). That is why a strong base is needed; nitrile anions in general are made with bases such as LDA or butyllithium. Exam answers often write OH⁻ for simplicity.
+</KeyPoint>
+
+## Thorpe–Ziegler reaction (intramolecular version)
+
+When both nitrile groups sit in the same molecule, the carbanion formed at one end attacks the C≡N at the other end and closes a ring. Acid hydrolysis of the cyclic enaminonitrile then gives a **cyclic ketone**. The relationship to the [Dieckmann condensation](/reactions/dieckmann-condensation/) is exact: Dieckmann closes a diester to a cyclic β-keto ester, Thorpe–Ziegler closes a dinitrile to a cyclic β-enaminonitrile.
+
+<Eq ce="NC(CH2)4CN ->[base] \text{2-aminocyclopent-1-ene-1-carbonitrile} ->[H3O+][\Delta] \text{cyclopentanone}" />
+
+Hydrolysis turns the enamine into C=O and the remaining nitrile into –COOH. That acid is now a β-keto acid, so it loses CO₂ on warming, leaving the plain cyclic ketone. Ziegler used this method to make large-ring ketones with more than six ring atoms.
+
+## Cyano-aldol: a nitrile carbanion meeting an aldehyde
+
+If the electrophile is an aldehyde instead of a second nitrile, the same nitrile carbanion adds to C=O. In exam answers this is sometimes called a **cyano-aldol** condensation: the β-hydroxy nitrile forms first and then dehydrates on heating to an α,β-unsaturated nitrile.
+
+<Eq ce="CH3CHO + ^-CH2C#N -> CH3CH(OH)CH2C#N ->[OH-][\Delta] CH3CH=CHC#N + H2O" />
+
+<ExamTip title="Common mistake">
+Do not assume that OH⁻ alone deprotonates acetonitrile efficiently. Its α-H (pKa about 25) is far less acidic than the α-H of acetaldehyde (about 17), so with aqueous base the aldehyde mainly undergoes its own aldol reaction. In practice nitrile anions are made with strong bases such as LDA or butyllithium.
+</ExamTip>
+
+## Examples
+
+**1. Acetonitrile (self-condensation).**
+
+<Eq ce="2 CH3C#N ->[base] CH3C(NH2)=CHC#N" />
+
+**2. Propanenitrile.** The carbanion forms on the CH₂ next to C≡N, so the new bond joins that carbon to the nitrile carbon of the second molecule.
+
+<Eq ce="2 CH3CH2C#N ->[base] CH3CH2C(NH2)=C(CH3)C#N" />
+
+**3. Thorpe–Ziegler ring closure** of hexanedinitrile, as shown above, gives a five-membered ring and finally cyclopentanone.
+
+## Limitations
+
+- Only nitriles with **α-hydrogens** can supply the carbanion; benzonitrile, for example, can only act as the electrophile.
+- Strong, dry bases are needed, because simple nitriles are weak carbon acids.
+- For large rings in the Thorpe–Ziegler version, intermolecular condensation competes, so the ring closure must be favoured over chain-forming reactions.
+
+## Related reactions
+
+- [Claisen condensation](/reactions/claisen-condensation/) and [Dieckmann condensation](/reactions/dieckmann-condensation/): the ester analogues.
+- [Aldol condensation](/reactions/aldol-condensation/): the same carbanion-addition pattern with aldehydes and ketones.
+- [Ester hydrolysis](/reactions/ester-hydrolysis/): related acid hydrolysis steps used to unmask the ketone.
+- [Stephen reduction](/reactions/stephen-reduction/): another reaction that passes through an imine formed at a nitrile carbon.
+- Hub: [Carbonyl condensation reactions](/mechanisms/carbonyl-condensation-reactions/)

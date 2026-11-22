@@ -1,0 +1,120 @@
+---
+title: "Benedict's Test"
+description: "Benedict's test detects reducing sugars and aliphatic aldehydes: the blue copper(II) citrate solution gives a brick-red Cu₂O precipitate on heating."
+aliases: ["Benedict test", "Benedict's solution", "Benedict's reagent", "Benedict's qualitative reagent", "Test for reducing sugars"]
+kind: "test"
+family: "nucleophilic-addition"
+exams: ["jee-main", "neet"]
+mapEdges: []
+reactant:
+  name: "D-Glucose (open-chain form)"
+  smiles: "OC[C@@H](O)[C@@H](O)[C@H](O)[C@@H](O)C=O"
+product:
+  name: "D-Gluconate ion"
+  smiles: "OC[C@@H](O)[C@@H](O)[C@H](O)[C@@H](O)C(=O)[O-]"
+byproducts: "Cu₂O (brick-red precipitate), H₂O"
+reagents: "Benedict's solution: a single blue solution of copper(II) sulphate, sodium citrate and sodium carbonate"
+conditions: "Boiling water bath, 2–10 minutes"
+equation: "RCHO + 2Cu^2+ + 5OH- -> RCOO- + Cu2O v + 3H2O"
+observation: "Blue solution turns green, yellow, orange and finally gives a brick-red precipitate of Cu₂O"
+distinguishes: "Reducing sugars from non-reducing sugars"
+notesPages: [82, 120]
+memoryTricks: []
+faq:
+  - q: "What is Benedict's solution made of?"
+    a: "Benedict's solution is one deep blue solution containing copper(II) sulphate, sodium citrate and sodium carbonate. Citrate keeps Cu²⁺ dissolved, and carbonate makes the solution mildly alkaline."
+  - q: "What is the difference between Benedict's and Fehling's solution?"
+    a: "Both oxidise aldehydes with Cu²⁺ and give red Cu₂O. Fehling's uses tartrate in NaOH and is stored as two solutions (A and B), while Benedict's uses citrate in Na₂CO₃ and is a single, stable solution."
+  - q: "Why does sucrose not give Benedict's test?"
+    a: "In sucrose the anomeric carbons of glucose and fructose are both tied up in the glycosidic bond, so neither unit can open to a free carbonyl. After acid hydrolysis, the glucose and fructose formed do give a positive test."
+  - q: "Does fructose give a positive Benedict's test?"
+    a: "Yes. Fructose is an α-hydroxy ketone; the alkaline reagent converts it into aldoses, which reduce Cu²⁺ to Cu₂O."
+related: ["tests/fehling-test", "tests/tollens-test", "tests/bromine-water-test", "tests/schiff-test", "concepts/disaccharides", "concepts/aldoses-and-epimers", "concepts/polysaccharides"]
+sources:
+  - title: "Benedict's reagent"
+    url: "https://en.wikipedia.org/wiki/Benedict%27s_reagent"
+    publisher: "Wikipedia"
+  - title: "6.4D: Individual Tests (Benedict's Test)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_Lab_Techniques_(Nichols)/06:_Miscellaneous_Techniques/6.04:_Chemical_Tests/6.4D:_Individual_Tests"
+    publisher: "LibreTexts Chemistry"
+  - title: "25.6: Reactions of Monosaccharides"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/25%3A_Biomolecules_-_Carbohydrates/25.06%3A_Reactions_of_Monosaccharides"
+    publisher: "LibreTexts Chemistry"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 3
+  note: "Notes present Benedict's reagent as 'Benedict A + Benedict B' mixed at test time, like Fehling's. Sources describe one stable solution of CuSO₄, sodium citrate and Na₂CO₃ (the components are dissolved separately only while preparing it). Page follows the sources."
+---
+
+## What is Benedict's test?
+
+**Benedict's test** detects **reducing sugars** and other easily oxidised carbonyl compounds. The sample is heated with **Benedict's solution**, a blue alkaline solution of **copper(II) complexed with citrate**. Glucose, fructose, maltose, lactose and aliphatic aldehydes reduce Cu²⁺ to Cu⁺, which separates as a **brick-red precipitate of copper(I) oxide**. Its job is the same as that of [Fehling's solution](/tests/fehling-test/), but the reagent is milder and keeps well.
+
+## Reagent and how to prepare it
+
+Benedict's reagent is a **single deep blue solution** that is stored ready to use. One litre contains roughly:
+
+| Component | Amount | Role |
+|---|---|---|
+| Copper(II) sulphate pentahydrate | 17.3 g | Source of Cu²⁺, the oxidising agent |
+| Sodium citrate | 173 g | Complexes Cu²⁺ so that Cu(OH)₂ or CuCO₃ does not precipitate |
+| Anhydrous sodium carbonate | 100 g | Keeps the solution mildly alkaline |
+
+While making it, the carbonate and citrate are dissolved together first, and the copper sulphate solution is stirred in slowly.
+
+<ExamTip title="Common mistake">
+Unlike Fehling's reagent, Benedict's reagent is not used as two solutions "A" and "B" mixed at the time of the test. It is one stable solution. Its mild alkali (Na₂CO₃ rather than NaOH) and citrate ligand are what make it keep for a long time.
+</ExamTip>
+
+## Procedure
+
+1. Dissolve a little of the sample in about 0.5–1 mL of water.
+2. Add about 2–3 mL of Benedict's solution.
+3. Heat in a boiling water bath for a few minutes and let it cool.
+4. Note the colour of any precipitate.
+
+## Observations and inference
+
+| Sample | Observation | Inference |
+|---|---|---|
+| Glucose, fructose, galactose | Brick-red precipitate | Reducing sugar present |
+| Maltose, lactose | Brick-red precipitate | Reducing disaccharide |
+| Sucrose | Solution stays blue | Non-reducing sugar |
+| Starch | No change or very faint | Few reducing ends |
+| α-Hydroxy ketone, HCOOH | Red precipitate | Positive |
+| Simple ketone, aromatic aldehyde | Solution stays blue | Negative |
+
+The colour of the precipitate rises with the amount of sugar: green (low), yellow, orange, then brick-red (high). This makes Benedict's test **semi-quantitative**.
+
+## Chemistry behind it
+
+The citrate-bound Cu²⁺ oxidises the free aldehyde group (or the aldehyde formed from a hemiacetal) to a carboxylate:
+
+<Eq ce="RCHO + 2Cu^2+ + 5OH- -> RCOO- + Cu2O v + 3H2O" />
+
+For glucose the product is the gluconate ion:
+
+<Eq ce="C6H12O6 + 2Cu^2+ + 5OH- -> C5H11O5COO- + Cu2O v + 3H2O" />
+
+- **Hemiacetals** such as the ring forms of glucose are in equilibrium with the open-chain aldehyde, so they react.
+- **Ketoses** such as fructose are positive because the alkaline reagent converts them, through an enediol, into aldoses (glucose and mannose).
+- **Acetals** (glycosidic links at both anomeric carbons, as in sucrose) cannot open, so they are negative.
+
+<KeyPoint>
+Benedict's test gives the same positive list as Fehling's test: aliphatic aldehydes, α-hydroxy ketones, HCOOH, cyclic hemiacetals and reducing sugars. Aromatic aldehydes and simple ketones are negative with both.
+</KeyPoint>
+
+## Limitations
+
+- Fructose is positive, so Benedict's test cannot tell an aldose from a ketose. The [bromine water test](/tests/bromine-water-test/) does this.
+- In the lab, many simple water-insoluble aldehydes and conjugated aldehydes react poorly, so the test works best for water-soluble compounds such as sugars.
+- Other reducing substances (for example ascorbic acid) also give a positive result, which is why it is no longer used for diagnosing diabetes.
+- Sucrose gives a positive test only after it is hydrolysed by heating with dilute acid.
+
+## Related tests
+
+- [Fehling's test](/tests/fehling-test/): the two-solution copper(II) tartrate reagent.
+- [Tollens' test](/tests/tollens-test/): silver mirror; also detects aromatic aldehydes.
+- [Bromine water test](/tests/bromine-water-test/): oxidises aldoses but not ketoses.
+- [Disaccharides](/concepts/disaccharides/): which sugars are reducing and why.

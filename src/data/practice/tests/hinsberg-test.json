@@ -1,0 +1,49 @@
+{
+ "page": "tests/hinsberg-test",
+ "questions": [
+  {
+   "q": "Hinsberg's reagent is:",
+   "options": [
+    "C₆H₅CH₂SO₂Cl",
+    "C₆H₅SO₂Cl",
+    "C₆H₅COCl",
+    "CHCl₃ + alcoholic KOH"
+   ],
+   "answer": 1,
+   "explain": "Hinsberg's reagent is benzenesulphonyl chloride, with sulphur bonded directly to the ring. Benzylsulphonyl chloride (C₆H₅CH₂SO₂Cl) is the common naming trap, and CHCl₃/KOH is the carbylamine reagent."
+  },
+  {
+   "q": "An amine is shaken with C₆H₅SO₂Cl in excess aqueous NaOH. A solid separates that does not dissolve in the alkali and stays insoluble after adding dilute HCl. The amine is:",
+   "options": [
+    "Ethylamine",
+    "Triethylamine",
+    "Diethylamine",
+    "Methylamine"
+   ],
+   "answer": 2,
+   "explain": "A secondary amine gives C₆H₅SO₂NR₂, which has no N–H, so it cannot form a salt with NaOH. A primary amine gives an alkali-soluble sulphonamide, and a tertiary amine forms no sulphonamide and dissolves in acid."
+  },
+  {
+   "q": "The sulphonamide C₆H₅SO₂NHC₂H₅ dissolves in aqueous NaOH because:",
+   "options": [
+    "It is hydrolysed back to ethylamine",
+    "It forms a hydrogen-bonded hydrate",
+    "The ethyl group is oxidised",
+    "Its N–H hydrogen is made acidic by the strongly electron-withdrawing SO₂ group"
+   ],
+   "answer": 3,
+   "explain": "The SO₂ group pulls electron density from nitrogen and stabilises the negative charge left after deprotonation, so NaOH forms the soluble salt C₆H₅SO₂NC₂H₅⁻ Na⁺. Acidifying gives back the insoluble sulphonamide."
+  },
+  {
+   "q": "Triethylamine is subjected to the Hinsberg test under the usual conditions (short shaking at room temperature). What is observed?",
+   "options": [
+    "No sulphonamide forms; the amine stays insoluble in the alkali and dissolves on adding dilute HCl",
+    "A clear alkaline solution that precipitates on acidifying",
+    "A solid insoluble in both alkali and acid",
+    "A foul-smelling isocyanide"
+   ],
+   "answer": 0,
+   "explain": "A tertiary amine has no hydrogen on nitrogen, so it cannot form a stable sulphonamide; it simply dissolves as its salt when acid is added. The clear-then-precipitate pattern belongs to 1° amines and the insoluble solid to 2° amines."
+  }
+ ]
+}

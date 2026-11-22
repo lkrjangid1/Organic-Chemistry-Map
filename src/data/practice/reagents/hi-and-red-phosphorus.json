@@ -1,0 +1,49 @@
+{
+ "page": "reagents/hi-and-red-phosphorus",
+ "questions": [
+  {
+   "q": "Glucose on prolonged heating with HI gives n-hexane. This shows that:",
+   "options": [
+    "glucose has an aldehyde group",
+    "glucose has five –OH groups",
+    "glucose exists as a cyclic hemiacetal",
+    "the six carbon atoms of glucose form an unbranched chain"
+   ],
+   "answer": 3,
+   "explain": "HI removes all the oxygen without changing the carbon skeleton, and the product is the straight-chain alkane, so the carbons of glucose are in a straight chain."
+  },
+  {
+   "q": "What is the role of red phosphorus in the HI/red P reducing system?",
+   "options": [
+    "It converts the I₂ formed back into HI via PI₃, so it is the reductant actually used up",
+    "It acts as a Lewis acid catalyst that activates C–O bonds",
+    "It absorbs the water formed during the reduction",
+    "It reduces the substrate directly, without HI taking part"
+   ],
+   "answer": 0,
+   "explain": "HI is oxidised to I₂ as it reduces the substrate; red P forms PI₃, which water hydrolyses to H₃PO₃ and HI, so only a small amount of HI is needed."
+  },
+  {
+   "q": "Which reagent reduces an aldehyde or ketone only as far as the alcohol, unlike HI/red P?",
+   "options": [
+    "Zn-Hg/conc. HCl (Clemmensen)",
+    "NH₂NH₂/KOH (Wolff–Kishner)",
+    "NaBH₄",
+    "Prolonged heating with conc. HI/red P"
+   ],
+   "answer": 2,
+   "explain": "Hydride reagents such as NaBH₄ stop at the alcohol, whereas HI/red P also removes the OH group. Clemmensen and Wolff–Kishner both convert C=O to CH₂."
+  },
+  {
+   "q": "Under mild two-phase conditions (toluene–water, HI/red P), which compound is reduced to the hydrocarbon most readily?",
+   "options": [
+    "Butan-1-ol",
+    "1-Phenylethanol",
+    "Ethyl ethanoate",
+    "Propanone"
+   ],
+   "answer": 1,
+   "explain": "Benzylic alcohols are reduced easily; under mild conditions non-benzylic alcohols stop at the alkyl iodide, and ester and keto groups survive. Complete reduction to the alkane needs prolonged heating with concentrated HI."
+  }
+ ]
+}

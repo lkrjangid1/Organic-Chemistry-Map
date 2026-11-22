@@ -1,0 +1,88 @@
+---
+title: "Stork Enamine Reaction (स्टॉर्क इनैमीन अभिक्रिया)"
+description: "Stork enamine reaction में ketone को secondary amine से enamine बनाकर Michael acceptor या alkyl halide से जोड़ते हैं, फिर hydrolysis से वापस ketone मिलता है।"
+aliases: ["स्टॉर्क इनैमीन अभिक्रिया", "स्टॉर्क रिएक्शन", "stork enamine reaction hindi", "stork enamine synthesis hindi", "enamine formation hindi", "enamine kaise banta hai", "stork acylation hindi"]
+reagents: "Secondary amine (pyrrolidine, piperidine या morpholine); फिर एक electrophile (α,β-unsaturated carbonyl, reactive alkyl halide या acyl chloride); फिर H₃O⁺"
+conditions: "Enamine step में पानी हटाते रहें (ज़रूरत हो तो acid catalyst); dilute aqueous acid से hydrolysis"
+byproducts: "H₂O (enamine बनते समय); hydrolysis पर secondary amine वापस मुक्त होता है"
+reactantName: "Cyclohexanone"
+productName: "2-(3-Oxobutyl)cyclohexan-1-one (एक 1,5-diketone)"
+faq:
+  - q: "Stork enamine reaction क्या है?"
+    a: "यह ketone के α-carbon पर कोई group जोड़ने का तीन steps वाला तरीका है: secondary amine से enamine बनाएँ, enamine को α,β-unsaturated ketone जैसे electrophile से react कराएँ, फिर iminium product को dilute acid से hydrolyse करके substituted ketone वापस पाएँ।"
+  - q: "Enamine बनाने के लिए secondary amine ही क्यों इस्तेमाल होता है?"
+    a: "Secondary amine R₂NH में सिर्फ़ एक N–H होता है। C=O पर जुड़ने और पानी निकलने के बाद nitrogen पर imine बनाने के लिए कोई H नहीं बचता, इसलिए proton α-carbon से निकलता है और C=C–N enamine बनता है। Primary amines imines देते हैं।"
+  - q: "Acetone की secondary amine से reaction का product क्या है?"
+    a: "Enamine CH₃–C(NR₂)=CH₂ (पानी निकलने के साथ), जो carbinolamine (CH₃)₂C(OH)–NR₂ के रास्ते बनता है।"
+  - q: "Enolate की जगह enamine क्यों इस्तेमाल करें?"
+    a: "Enamine neutral होता है, बनाना और संभालना आसान है, और simple ketone का साफ़ mono-alkylation देता है। Simple monoketones के enolates charged होते हैं, उन्हें strong bases चाहिए, और वे अक्सर खराब Michael additions या multiple alkylation देते हैं।"
+  - q: "Acyl chloride के साथ Stork reaction क्या देता है?"
+    a: "α-carbon पर acylation। Hydrolysis के बाद product एक 1,3-diketone होता है; इस variant को Stork acylation कहते हैं।"
+translated: 2026-11-22
+---
+
+## Stork enamine reaction क्या है?
+
+**Stork enamine reaction** किसी **ketone (या aldehyde) के α-carbon** पर नया group लगाने का तीन steps वाला तरीका है। पहले ketone को pyrrolidine जैसे **secondary amine** से **enamine** में बदला जाता है। फिर enamine का nucleophilic α-carbon एक electrophile से react करता है, सबसे भरोसेमंद रूप से किसी **Michael acceptor** से, जिससे iminium ion बनता है, और **dilute aqueous acid** इसे hydrolyse करके वापस ketone बना देता है। इसका नाम Columbia University के Gilbert Stork के नाम पर है।
+
+## Step 1: enamine का बनना
+
+Secondary amine carbonyl group पर जुड़ता है, और बना हुआ carbinolamine फिर पानी खोता है। चूँकि nitrogen पर कोई hydrogen नहीं बचता, proton **α-carbon** से हटता है, और nitrogen से जुड़ा C=C बनता है।
+
+<Eq ce="(CH3)2C=O + HNR2 <=> (CH3)2C(OH)-NR2 ->[-H2O] CH3-C(NR2)=CH2" />
+
+1. **Addition।** Nitrogen का lone pair C=O carbon पर attack करता है; proton transfer से **carbinolamine** (CH₃)₂C(OH)–NR₂ बनता है।
+2. **पानी का निकलना।** OH (protonation के बाद) बाहर निकलता है, और iminium ion (CH₃)₂C=N⁺R₂ बनता है।
+3. **α-H का निकलना।** एक base (amine का दूसरा molecule) CH₃ group से proton हटाता है, और enamine CH₃–C(NR₂)=CH₂ बनता है।
+
+जब amine ज़्यादा basic न हो तब acid catalysis इस्तेमाल होता है; pyrrolidine जैसे strongly basic amines के साथ अक्सर इसकी ज़रूरत नहीं पड़ती। पानी हटाने से (जैसे drying agent से) equilibrium enamine की ओर खिसकता है।
+
+<KeyPoint>
+Primary amines (RNH₂) **imines** (C=N–R) देते हैं; secondary amines (R₂NH) **enamines** (C=C–NR₂) देते हैं। Tertiary amines में N–H नहीं होता और वे C=O से condense होते ही नहीं।
+</KeyPoint>
+
+## Enamines carbon पर nucleophilic क्यों होते हैं
+
+Nitrogen का lone pair C=C π bond से overlap करता है, इसलिए electron density α-carbon पर पहुँच जाती है:
+
+<Eq ce="R2N-C=CH2 <-> R2N^+=C-CH2^-" />
+
+इसलिए enamines neutral enolates की तरह behave करते हैं। इन्हें enolate ions से बनाना और संभालना आसान है, और simple monoketone से बना enamine Michael donor की तरह अच्छा काम करता है, जबकि enolates में सिर्फ़ β-dicarbonyl enolates ही अच्छी Michael reactions देते हैं।
+
+## Steps 2 और 3: electrophile से reaction, फिर hydrolysis
+
+**Michael addition (सबसे भरोसेमंद)।** Cyclohexanone और pyrrolidine से enamine बनता है; यह but-3-en-2-one (methyl vinyl ketone) के β-carbon पर जुड़ता है; hydrolysis से **1,5-diketone** मिलता है।
+
+<Eq ce="\text{cyclohexanone enamine} + CH2=CHCOCH3 -> \text{iminium adduct} ->[H3O+] \text{2-(3-oxobutyl)cyclohexanone}" />
+
+**Alkylation।** Benzylic, allylic और α-halo carbonyl halides जैसे reactive halides enamine carbon को alkylate करते हैं; hydrolysis से 2-alkylated ketone मिलता है।
+
+<Eq ce="R2N-CH=CHR' + R''X -> [R2N^+=CH-CHR'R'']X^- ->[H2O] R'R''CH-CHO + R2NH" />
+
+**Acylation।** Acyl chlorides carbon पर react करते हैं, और hydrolysis से **1,3-diketone** मिलता है (Stork acylation)।
+
+<ExamTip>
+Product निकालते समय amine को ignore करें: वह अंदर जाता है और बाहर आ जाता है। Net बदलाव यह है कि electrophile original ketone के **α-carbon** से जुड़ जाता है। α,β-unsaturated carbonyl acceptor के साथ answer हमेशा एक 1,5-dicarbonyl compound होता है।
+</ExamTip>
+
+## Examples
+
+**1. Acetone से enamine।** Acetone secondary amine के साथ CH₃–C(NR₂)=CH₂ (2-dialkylaminopropene) देता है।
+
+**2. Cyclopentanone enamine और ethyl propenoate।** Hydrolysis के बाद product ethyl 3-(2-oxocyclopentyl)propanoate होता है।
+
+**3. Cyclohexanone enamine और methyl vinyl ketone।** इससे 2-(3-oxobutyl)cyclohexanone मिलता है, वही 1,5-diketone जिसके रास्ते base-catalysed Robinson annulation गुज़रता है।
+
+## Limitations
+
+- Enamines **nitrogen** पर भी nucleophilic होते हैं। CH₃I जैसे simple primary alkyl halides अक्सर पहले N पर attack करते हैं, इसलिए C-alkylated product की yield कम से मध्यम ही मिलती है।
+- यह तरीका **Michael acceptors** और बहुत reactive halides के साथ सबसे अच्छा काम करता है।
+- Enamine बनते समय पानी हटाना ज़रूरी है; aqueous acid से enamine आसानी से hydrolyse हो जाता है।
+
+## Related reactions
+
+- [Michael addition](/hi/reactions/michael-addition/): key step का enolate version।
+- [Robinson annulation](/hi/reactions/robinson-annulation/): Michael addition के बाद intramolecular aldol; enamines donor का काम कर सकते हैं।
+- [Aldol condensation](/hi/reactions/aldol-condensation/): उसी α-carbon की enolate chemistry।
+- [Reductive amination](/hi/reactions/reductive-amination/): एक और reaction जो C=O पर amine addition से शुरू होता है।
+- Hub: [Carbonyl condensation reactions](/hi/mechanisms/carbonyl-condensation-reactions/)

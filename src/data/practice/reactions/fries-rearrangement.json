@@ -1,0 +1,51 @@
+{
+ "page": "reactions/fries-rearrangement",
+ "questions": [
+  {
+   "q": "Phenyl acetate is heated with anhydrous AlCl₃ at a LOW temperature and then worked up with aqueous acid. The major product is:",
+   "smiles": "CC(=O)Oc1ccccc1",
+   "options": [
+    "2-Hydroxyacetophenone",
+    "3-Hydroxyacetophenone",
+    "Acetophenone",
+    "4-Hydroxyacetophenone"
+   ],
+   "answer": 3,
+   "explain": "At low temperature the reaction is under kinetic control and para attack is faster and less hindered. Remember 'low–para, high–ortho'."
+  },
+  {
+   "q": "At high temperature the ortho product dominates in the Fries rearrangement because:",
+   "options": [
+    "the ortho position is less hindered than the para position",
+    "the o-hydroxy ketone forms a stable six-membered chelate with aluminium, making it the thermodynamic product",
+    "the acylium ion rearranges at high temperature",
+    "the reaction becomes purely intramolecular at high temperature"
+   ],
+   "answer": 1,
+   "explain": "The OH and C=O oxygens of the ortho product both grip the aluminium, so at high temperature the reaction reaches this more stable product. The para product is the kinetic one."
+  },
+  {
+   "q": "4-Methylphenyl acetate (p-tolyl acetate) undergoes the Fries rearrangement with AlCl₃. The product is:",
+   "smiles": "CC(=O)Oc1ccc(C)cc1",
+   "options": [
+    "2-Hydroxy-5-methylacetophenone",
+    "4-Hydroxy-3-methylacetophenone",
+    "4-Methylacetophenone",
+    "4-Hydroxyacetophenone"
+   ],
+   "answer": 0,
+   "explain": "The para position is blocked by the methyl group, so the acyl group can only enter ortho to the OH, giving 2-hydroxy-5-methylacetophenone whatever the temperature."
+  },
+  {
+   "q": "Phenol cannot be converted directly into a hydroxyaryl ketone by Friedel–Crafts acylation (RCOCl/AlCl₃) because:",
+   "options": [
+    "phenol is too deactivated towards electrophiles",
+    "AlCl₃ oxidises phenol to quinone",
+    "the phenolic oxygen reacts first, giving the phenyl ester",
+    "the acylium ion cannot form in the presence of phenol"
+   ],
+   "answer": 2,
+   "explain": "Under these conditions phenol is acylated on oxygen, giving the ester; the Fries rearrangement is then needed to move the acyl group onto the ring. Phenol is activated, not deactivated."
+  }
+ ]
+}

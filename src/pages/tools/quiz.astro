@@ -1,0 +1,101 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { url, absUrl } from '../../lib/site';
+import { breadcrumbLd } from '../../lib/seo';
+import { quizQuestions } from '../../lib/tools';
+
+const questions = await quizQuestions();
+const nStructure = questions.filter((q) => q.type === 'structure').length;
+const nGroup = questions.filter((q) => q.type === 'group').length;
+const nMcq = questions.filter((q) => q.type === 'mcq').length;
+const path = 'tools/quiz/';
+const title = 'Predict the Product Quiz: Organic Chemistry (JEE & NEET)';
+const description = `Free organic chemistry quiz: ${questions.length} questions (predict the product, reagents and concept MCQs) with instant answers and links to each page.`;
+const jsonLd = [
+  { '@type': ['WebApplication', 'Quiz'], name: title, url: absUrl(path), description, applicationCategory: 'EducationalApplication', operatingSystem: 'Any (web browser)', isAccessibleForFree: true, offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' }, inLanguage: 'en-IN', educationalLevel: 'Class 11–12, competitive entrance exams' },
+  breadcrumbLd([{ name: 'Tools', path: 'tools/' }, { name: 'Predict the product', path }]),
+];
+---
+<Base title={title} description={description} path={path} jsonLd={jsonLd} section="tools">
+  <div class="container page tool">
+    <Breadcrumbs items={[{ label: 'Tools', href: url('tools/') }, { label: 'Predict the product' }]} />
+    <header class="page-head">
+      <h1>Predict the product</h1>
+      <p class="summary">Ten questions per round. Choose the product of each reaction; after every answer you see the reaction name and a link to its page.</p>
+    </header>
+    <div class="tool-panel">
+      <fieldset class="seg" id="qz-type" aria-label="Question type">
+        <label><input type="radio" name="qt" value="all" checked /> Mixed</label>
+        <label><input type="radio" name="qt" value="structure" /> Structures ({nStructure})</label>
+        <label><input type="radio" name="qt" value="group" /> Functional groups ({nGroup})</label>
+        <label><input type="radio" name="qt" value="mcq" /> Concept MCQs ({nMcq})</label>
+      </fieldset>
+    </div>
+    <div id="qz" class="qz" aria-live="polite"></div>
+  </div>
+  <script type="application/json" id="qz-data" set:html={JSON.stringify(questions).replace(/</g, '\\u003c')} />
+</Base>
+
+<script>
+  import { notifyProgress } from '../../scripts/account';
+  type Opt = { name: string; svg: string };
+  type Q = { type: 'structure' | 'group' | 'mcq'; stem?: string; svg?: string; reactant?: Opt; from?: string; reagents: string; conditions?: string; options: (Opt | string)[]; answer: number; title: string; note?: string; href: string };
+  const all: Q[] = JSON.parse(document.getElementById('qz-data')!.textContent!);
+  const box = document.getElementById('qz')!;
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+  const BEST = 'ocm-quiz-best-v1';
+  let type = 'all';
+  let round: Q[] = [];
+  let i = 0;
+  let score = 0;
+
+  function start() {
+    const pool = all.filter((q) => type === 'all' || q.type === type);
+    round = [...pool].sort(() => Math.random() - 0.5).slice(0, 10);
+    i = 0;
+    score = 0;
+    ask();
+  }
+  function ask() {
+    const q = round[i];
+    const head = q.type === 'mcq'
+      ? `<div class="qz-q qz-q-text"><strong>${esc(q.stem!)}</strong>${q.svg ? `<figure class="mol"><img src="${q.svg}" alt="" width="220" height="160" /></figure>` : ''}</div>`
+      : q.type === 'structure'
+      ? `<div class="qz-q"><figure class="mol"><img src="${q.reactant!.svg}" alt="Structure of ${esc(q.reactant!.name)}" width="220" height="160" /><figcaption>${esc(q.reactant!.name)}</figcaption></figure><div class="qz-reagent"><span>${esc(q.reagents)}</span><span class="arrow-line" aria-hidden="true"></span></div><div class="qz-unknown">?</div></div>`
+      : `<div class="qz-q qz-q-text"><strong>${esc(q.from!)}</strong><div class="qz-reagent"><span>${esc(q.reagents)}</span><span class="arrow-line" aria-hidden="true"></span>${q.conditions ? `<small>${esc(q.conditions)}</small>` : ''}</div><div class="qz-unknown">?</div></div>`;
+    const opts = q.options.map((o, k) => typeof o === 'string'
+      ? `<button type="button" class="qz-opt" data-k="${k}">${esc(o)}</button>`
+      : `<button type="button" class="qz-opt qz-opt-mol" data-k="${k}"><img src="${o.svg}" alt="" width="220" height="160" class="mol-img" /><span>${esc(o.name)}</span></button>`).join('');
+    box.innerHTML = `<p class="qz-progress">Question ${i + 1} of ${round.length} · Score ${score}</p>${head}<div class="qz-opts ${q.type === 'structure' ? 'qz-opts-mol' : ''}">${opts}</div><div id="qz-fb"></div>`;
+  }
+  function answer(k: number) {
+    const q = round[i];
+    const buttons = [...box.querySelectorAll<HTMLButtonElement>('.qz-opt')];
+    if (buttons[0].disabled) return;
+    buttons.forEach((b, j) => { b.disabled = true; if (j === q.answer) b.classList.add('ok'); else if (j === k) b.classList.add('bad'); });
+    const right = k === q.answer;
+    if (right) score++;
+    document.getElementById('qz-fb')!.innerHTML = `<p class="qz-fb ${right ? 'ok' : 'bad'}">${right ? 'Correct.' : 'Not quite.'} ${q.type === 'mcq' ? `${esc(q.note ?? '')} Revise: <a href="${q.href}">${esc(q.title)}</a>.` : `This is the <a href="${q.href}">${esc(q.title)}</a>${q.note ? ` (${esc(q.note)})` : ''}.`}</p><button type="button" class="btn btn-primary" id="qz-next">${i + 1 < round.length ? 'Next question' : 'See score'}</button>`;
+    document.getElementById('qz-next')!.focus();
+  }
+  function finish() {
+    let best = 0;
+    try { best = Number(localStorage.getItem(BEST) ?? 0); if (score > best) { localStorage.setItem(BEST, String(score)); notifyProgress(); } } catch { /* storage unavailable */ }
+    box.innerHTML = `<div class="qz-end"><h2>You scored ${score} out of ${round.length}</h2><p>${score > best ? 'New best score!' : `Best so far: ${Math.max(best, score)}/10`}</p><button type="button" class="btn btn-primary" id="qz-again">Play another round</button></div>`;
+  }
+  box.addEventListener('click', (e) => {
+    const t = (e.target as HTMLElement).closest('button');
+    if (!t) return;
+    if (t.classList.contains('qz-opt')) answer(Number(t.dataset.k));
+    else if (t.id === 'qz-next') { i++; if (i < round.length) ask(); else finish(); }
+    else if (t.id === 'qz-again') start();
+  });
+  document.getElementById('qz-type')!.addEventListener('change', (e) => { type = (e.target as HTMLInputElement).value; start(); });
+  const urlType = new URLSearchParams(location.search).get('type');
+  if (urlType === 'structure' || urlType === 'group' || urlType === 'mcq') {
+    type = urlType;
+    (document.querySelector(`#qz-type input[value=${urlType}]`) as HTMLInputElement).checked = true;
+  }
+  start();
+</script>

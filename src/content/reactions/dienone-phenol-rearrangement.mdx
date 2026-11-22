@@ -1,0 +1,99 @@
+---
+title: "Dienone–Phenol Rearrangement"
+description: "Dienone–phenol rearrangement: acid converts a 4,4-disubstituted cyclohexa-2,5-dienone into a 3,4-disubstituted phenol by a 1,2-shift. Mechanism, examples."
+aliases: ["Dienone phenol rearrangement", "Dienone-phenal rearrangement", "Auwers–Inhoffen rearrangement", "Cyclohexadienone to phenol rearrangement"]
+kind: "rearrangement"
+family: "rearrangement-reactions"
+exams: ["jee-advanced"]
+mapEdges: []
+reactant:
+  name: "4,4-Dimethylcyclohexa-2,5-dien-1-one"
+  smiles: "CC1(C)C=CC(=O)C=C1"
+product:
+  name: "3,4-Dimethylphenol"
+  smiles: "Cc1ccc(O)cc1C"
+reagents: "H⁺ (Brønsted acid such as H₂SO₄, or a Lewis acid)"
+conditions: "Heat (Δ)"
+equation: "\\text{4,4-dimethylcyclohexa-2,5-dienone} ->[H+][\\Delta] \\text{3,4-dimethylphenol}"
+notesPages: [8, 29]
+memoryTricks:
+  - text: "Electron withdrawing group migrate hota h"
+    meaning: "The electron-withdrawing group migrates. True for an ester group (COOEt migrates ahead of phenyl or alkyl), but not a general rule; the real test is which shift leaves the more stable carbocation."
+faq:
+  - q: "What is the product of the dienone–phenol rearrangement of 4,4-dimethylcyclohexa-2,5-dienone?"
+    a: "3,4-Dimethylphenol. One methyl group moves from C-4 to C-3 and the ring becomes aromatic."
+  - q: "What is the driving force of the dienone–phenol rearrangement?"
+    a: "Formation of an aromatic phenol ring. The non-aromatic dienone cannot aromatise while C-4 carries two groups, so one group shifts and the ring then loses H⁺ to become a benzene ring."
+  - q: "Which group migrates in the dienone–phenol rearrangement?"
+    a: "The group whose shift gives the more stable carbocation intermediate. Reported orders under acid include COOEt over phenyl or alkyl, phenyl over methyl and vinyl over methyl."
+  - q: "Is the dienone–phenol rearrangement acid- or base-catalysed?"
+    a: "It is normally acid-catalysed (protic or Lewis acid, often with heat). A base-promoted version is also known but is rarely asked in exams."
+related: ["pinacol-pinacolone-rearrangement", "demjanov-rearrangement", "beckmann-rearrangement"]
+sources:
+  - title: "Dienone–phenol rearrangement"
+    url: "https://en.wikipedia.org/wiki/Dienone%E2%80%93phenol_rearrangement"
+    publisher: "Wikipedia"
+  - title: "Quinol–Enedione Rearrangement (Org. Lett. 2025, introduction on the dienone–phenol rearrangement)"
+    url: "https://doi.org/10.1021/acs.orglett.5c01266"
+    publisher: "American Chemical Society"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 2
+  note: "Notes' trick 'electron-withdrawing group migrates' is only partly supported: sources list COOEt > phenyl/alkyl, but also phenyl > methyl and methyl > alkoxy. Kept as a note-trick with that caveat."
+---
+
+## What is the dienone–phenol rearrangement?
+
+The **dienone–phenol rearrangement** is the acid-catalysed conversion of a **cyclohexadienone into a phenol**. In the standard case a **4,4-disubstituted cyclohexa-2,5-dienone** rearranges, on heating with acid, into a **3,4-disubstituted phenol**: one of the two groups on C-4 moves to C-3 and the ring becomes aromatic. It was first reported by Karl von Auwers and Karl Ziegler in 1921.
+
+The textbook example: **4,4-dimethylcyclohexa-2,5-dienone → 3,4-dimethylphenol** (H⁺, Δ).
+
+## Mechanism
+
+1. **Protonation of the carbonyl.** A lone pair on the C=O oxygen picks up H⁺, giving C=O⁺H.
+2. **Delocalised cation.** The positive charge spreads through the ring by resonance: onto C-1 (now bearing OH) and onto C-3/C-5, the carbons right next to the quaternary C-4.
+3. **1,2-Methyl shift.** A methyl group on C-4 moves, with its bonding pair, to the cationic C-3. The positive charge is now on C-4, which carries the remaining methyl (a tertiary, allylic, OH-stabilised cation).
+4. **Loss of H⁺ and aromatisation.** C-3 loses its H⁺, the ring becomes a benzene ring, and **3,4-dimethylphenol** is formed.
+
+<Eq ce="C8H10O ->[H+] [C8H11O]+ ->[\text{1,2-CH3 shift}] [C8H11O]+ ->[-H+] \text{3,4-(CH3)2C6H3OH}" />
+
+<KeyPoint>
+The driving force is **aromaticity**. A 4,4-disubstituted dienone cannot become aromatic because C-4 has no H to lose; shifting one group to C-3 puts an H-bearing carbon next to the cation, and losing that H⁺ gives a stable phenol.
+</KeyPoint>
+
+## Which group migrates?
+
+When the two groups on C-4 are different, the group that moves is the one whose shift gives the **more stable carbocation**. Orders reported for the acid-catalysed reaction include COOEt over phenyl or alkyl, phenyl over methyl, vinyl over methyl, and methyl over alkoxy.
+
+<Trick>
+**"Electron withdrawing group migrate hota h"**: the electron-withdrawing group migrates. It works for an ester (COOEt): if the ester stayed on C-4 it would destabilise the cation that forms there, so it moves away and leaves the electron-donating group behind. It is **not** a general rule (methyl migrates ahead of alkoxy), so check carbocation stability whenever in doubt.
+</Trick>
+
+## Examples
+
+1. **4,4-Dimethyl dienone (standard):**
+
+<Eq ce="\text{4,4-dimethylcyclohexa-2,5-dienone} ->[H+][\Delta] \text{3,4-dimethylphenol}" />
+
+2. **4-Methyl-4-phenyl dienone:** phenyl migrates in preference to methyl, giving mainly **4-methyl-3-phenylphenol** (methyl stays on C-4, phenyl moves to C-3).
+
+3. **Fused (bicyclic) dienones**, such as steroid dienones: a ring bond can migrate instead of a simple alkyl group, which changes the ring system. This is how the reaction is used in steroid, anthracene and phenanthrene synthesis.
+
+<ExamTip>
+Number the dienone with C=O as C-1. Protonate the oxygen, put the positive charge on C-3, shift the best migrating group from C-4 to C-3, then remove H⁺ from C-3. OH ends up at C-1, the migrated group at C-3, and the remaining group at C-4.
+</ExamTip>
+
+## Limitations and exceptions
+
+- The carbon receiving the migrating group must carry an H, or the final aromatising deprotonation is impossible (a quinol substrate then stops at a non-aromatic enedione instead).
+- Allyl and benzyl groups can move by a Cope-type pathway instead of a simple 1,2-shift.
+- Some substituents on C-4 (for example a dichloromethyl group) block the rearrangement.
+- 2,2-Disubstituted cyclohexadienones also rearrange, giving disubstituted phenols.
+- The reverse process (phenol to dienone) is the Zincke–Suhl reaction.
+
+## Related reactions
+
+- [Pinacol–pinacolone rearrangement](/reactions/pinacol-pinacolone-rearrangement/): another acid-catalysed 1,2-shift driven by forming a more stable product (C=O instead of an aromatic ring).
+- [Demjanov rearrangement](/reactions/demjanov-rearrangement/): 1,2-shift to a cation generated by loss of N₂.
+- [Rearrangement reactions hub](/mechanisms/rearrangement-reactions/)

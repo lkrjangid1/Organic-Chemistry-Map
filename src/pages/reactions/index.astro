@@ -1,0 +1,110 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { url, absUrl } from '../../lib/site';
+import { breadcrumbLd } from '../../lib/seo';
+import { getMasterList } from '../../lib/master';
+
+const items = await getMasterList();
+const withPages = items.filter((i) => i.slug);
+const conversions = items.reduce((n, i) => n + i.conversions.length, 0);
+const groups = new Map<string, typeof items>();
+for (const item of items) {
+  const first = item.title[0].toUpperCase();
+  const letter = /[A-Z]/.test(first) ? first : '#';
+  groups.set(letter, [...(groups.get(letter) ?? []), item]);
+}
+const path = 'reactions/';
+const jsonLd = [
+  {
+    '@type': 'CollectionPage',
+    name: 'Organic chemistry reactions A–Z',
+    url: absUrl(path),
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: withPages.length,
+      itemListElement: withPages.map((r, i) => ({ '@type': 'ListItem', position: i + 1, url: absUrl(r.path), name: r.title })),
+    },
+  },
+  breadcrumbLd([{ name: 'Reactions', path }]),
+];
+---
+<Base
+  title="Organic Chemistry Named Reactions List A–Z for JEE & NEET"
+  description={`All ${items.length} organic reactions for JEE Main, JEE Advanced and NEET, A–Z: named reactions, rearrangements and tests with reagents, conditions and mechanisms.`}
+  path={path}
+  jsonLd={jsonLd}
+  section="reactions"
+>
+  <div class="container page">
+    <Breadcrumbs items={[{ label: 'Reactions' }]} />
+    <header class="page-head">
+      <h1>Organic chemistry reactions A–Z</h1>
+      <p class="summary">
+        {items.length} reactions covering {conversions} conversions. {withPages.length} have a full page with mechanism, reagents and exam notes; the rest open on the interactive map while their pages are being written.
+      </p>
+    </header>
+    <div class="index-tools">
+      <label class="search">
+        <span class="sr-only">Filter reactions</span>
+        <input id="rxn-filter" type="search" placeholder="Filter by reaction, compound or reagent, e.g. aldol, phenol, NaBH₄" autocomplete="off" />
+      </label>
+      <nav class="letter-nav" aria-label="Reaction index letters">
+        {[...groups.keys()].map((l) => <a href={`#idx-${l === '#' ? 'other' : l}`}>{l}</a>)}
+      </nav>
+    </div>
+    <p id="rxn-empty" class="empty" hidden>No reactions match that search.</p>
+    <div class="rxn-index">
+      {[...groups.entries()].map(([letter, group]) => {
+        const id = letter === '#' ? 'other' : letter;
+        return (
+          <section class="idx-group" id={`idx-${id}`} aria-labelledby={`idx-h-${id}`}>
+            <h2 id={`idx-h-${id}`} class="idx-letter">{letter}</h2>
+            <div class="rxn-grid">
+              {group.map((item) => (
+                <article class="rxn" data-search={item.search}>
+                  <h3>{item.slug ? <a href={url(item.path)}>{item.title}</a> : item.title}</h3>
+                  {item.description && <p class="rxn-reagents">{item.description}</p>}
+                  {item.conversions.length > 0 && (
+                    <ul>
+                      {item.conversions.map((c) => (
+                        <li>
+                          <a href={url(`map/?reaction=${encodeURIComponent(c.edge.id)}`)}>{c.label}</a>
+                          {!item.slug && c.edge.reactionInfo?.reagents && <span class="rxn-reagents">{c.edge.reactionInfo.reagents}</span>}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </article>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  </div>
+</Base>
+
+<script>
+  const input = document.getElementById('rxn-filter') as HTMLInputElement | null;
+  const empty = document.getElementById('rxn-empty');
+  const groups = Array.from(document.querySelectorAll<HTMLElement>('.idx-group'));
+  const letterNav = document.querySelector<HTMLElement>('.letter-nav');
+  input?.addEventListener('input', () => {
+    const terms = input.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    let total = 0;
+    for (const group of groups) {
+      let visible = 0;
+      for (const item of Array.from(group.querySelectorAll<HTMLElement>('.rxn'))) {
+        const hay = item.dataset.search ?? '';
+        const match = terms.every((t) => hay.includes(t));
+        item.hidden = !match;
+        if (match) visible += 1;
+      }
+      group.hidden = visible === 0;
+      total += visible;
+    }
+    if (empty) empty.hidden = total > 0;
+    if (letterNav) letterNav.hidden = terms.length > 0;
+  });
+</script>

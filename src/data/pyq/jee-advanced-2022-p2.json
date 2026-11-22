@@ -1,0 +1,199 @@
+{
+ "exam": "jee-advanced",
+ "year": 2022,
+ "paper": 2,
+ "source": "https://jeeadv.ac.in/past_qps/2022_2_English.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2022-p2-q6",
+   "number": 6,
+   "type": "numerical",
+   "stem": "The number of isomeric tetraenes (NOT containing sp-hybridized carbon atoms) that can be formed from the following reaction sequence is ________.\n3-(but-2-yn-1-yl)cyclohex-1-ene —1. Na, liquid NH₃ 2. Br₂ (excess) 3. alc. KOH→",
+   "figures": [
+    {
+     "smiles": "CC#CCC1CCCC=C1"
+    }
+   ],
+   "answer": "2",
+   "solution": "Na/liquid NH₃ reduces only the alkyne, to the trans alkene ring–CH₂–CH=CH–CH₃. Excess Br₂ then adds to both C=C bonds, giving a tetrabromide (two Br on the ring, two on the chain). Removing four HBr without creating an alkyne or allene forces one pattern: in the ring, C=C forms toward the ring CH₂ and toward the substituted carbon (a ring 1,3-diene), and in the chain the ring-CH₂ and the CH₃ lose H, giving –CH=CH–CH=CH₂. The result is a single conjugated tetraene constitution; the only stereogenic unit is the disubstituted chain C=C next to the ring, which can be E or Z. So there are 2 isomers.",
+   "topics": [
+    "mechanisms/reduction-reactions",
+    "mechanisms/electrophilic-addition",
+    "mechanisms/elimination-reactions"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2022-p2-q7",
+   "number": 7,
+   "type": "numerical",
+   "stem": "The number of -CH₂- (methylene) groups in the product formed from the following reaction sequence is ________.\noct-4-ene —1. O₃, Zn/H₂O 2. KMnO₄ 3. NaOH, electrolysis 4. Cr₂O₃, 770 K, 20 atm→",
+   "figures": [
+    {
+     "smiles": "CCC/C=C/CCC"
+    }
+   ],
+   "answer": "0",
+   "solution": "Ozonolysis of the symmetrical oct-4-ene gives two molecules of butanal, and KMnO₄ oxidises them to butanoic acid. Kolbe electrolysis of sodium butanoate couples two propyl radicals to n-hexane. Cr₂O₃ at 770 K and 20 atm aromatises n-hexane to benzene, which has no CH₂ groups, so the answer is 0.",
+   "topics": [
+    "reactions/ozonolysis",
+    "reactions/kolbe-electrolysis",
+    "reagents/potassium-permanganate"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2022-p2-q8",
+   "number": 8,
+   "type": "numerical",
+   "stem": "The total number of chiral molecules formed from one molecule of P on complete ozonolysis (O₃, Zn/H₂O) is ________.",
+   "figures": [
+    {
+     "smiles": "C/C=C(\\C)[C@@](C)(O)/C(C)=C(\\C)[C@@](C)(O)/C=C(\\C)[C@@](C)(O)/C(C)=C/[C@@](C)(O)/C(C)=C(\\C)[C@](C)(O)/C(C)=C/C",
+     "label": "P"
+    }
+   ],
+   "answer": "2",
+   "solution": "Cutting all six C=C bonds gives two CH₃CHO from the chain ends plus five fragments, one for each carbinol carbon C(OH)(CH₃). Three carbinol carbons sit between two methyl-substituted alkene carbons, so they become CH₃CO–C(OH)(CH₃)–COCH₃, which has two identical acetyl groups and is achiral. The other two sit between a methyl-substituted and an unsubstituted (CH=) alkene carbon, so they become CH₃CO–C(OH)(CH₃)–CHO with four different groups, which is chiral. So 2 chiral molecules form.",
+   "topics": [
+    "reactions/ozonolysis"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2022-p2-q13",
+   "number": 13,
+   "type": "multiple",
+   "stem": "Considering the following reaction sequence, the correct statement(s) is(are)\nBenzene —succinic anhydride, AlCl₃→ P —Zn/Hg, HCl→ Q —SOCl₂→ R —AlCl₃→ S —Zn/Hg, HCl→ a hydrocarbon",
+   "figures": [
+    {
+     "smiles": "c1ccccc1"
+    },
+    {
+     "smiles": "O=C1CCC(=O)O1",
+     "label": "succinic anhydride"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "Compounds P and Q are carboxylic acids."
+    },
+    {
+     "key": "B",
+     "text": "Compound S decolorizes bromine water."
+    },
+    {
+     "key": "C",
+     "text": "Compounds P and S react with hydroxylamine to give the corresponding oximes."
+    },
+    {
+     "key": "D",
+     "text": "Compound R reacts with dialkylcadmium to give the corresponding tertiary alcohol."
+    }
+   ],
+   "answer": [
+    "A",
+    "C"
+   ],
+   "solution": "Friedel–Crafts acylation with succinic anhydride gives 4-oxo-4-phenylbutanoic acid (P), and Clemmensen reduction gives 4-phenylbutanoic acid (Q), so both are acids and (A) is true. SOCl₂ gives the acid chloride R, and intramolecular acylation gives α-tetralone (S); a final Clemmensen gives tetralin. S has no non-aromatic C=C, so it does not decolourise bromine water (B false). The ketones P and S form oximes with NH₂OH (C true). An acid chloride and R₂Cd give a ketone, not a tertiary alcohol (D false).",
+   "topics": [
+    "reactions/friedel-crafts-acylation",
+    "reactions/clemmensen-reduction",
+    "preparation/preparation-of-aldehydes-and-ketones"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2022-p2-q14",
+   "number": 14,
+   "type": "multiple",
+   "stem": "Among the following, the correct statement(s) about polymers is(are)",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "The polymerization of chloroprene gives natural rubber."
+    },
+    {
+     "key": "B",
+     "text": "Teflon is prepared from tetrafluoroethene by heating it with persulphate catalyst at high pressures."
+    },
+    {
+     "key": "C",
+     "text": "PVC are thermoplastic polymers."
+    },
+    {
+     "key": "D",
+     "text": "Ethene at 350-570 K temperature and 1000-2000 atm pressure in the presence of a peroxide initiator yields high density polythene."
+    }
+   ],
+   "answer": [
+    "B",
+    "C"
+   ],
+   "solution": "Chloroprene polymerises to neoprene, a synthetic rubber; natural rubber is cis-polyisoprene, so (A) is false. Teflon is made by heating tetrafluoroethene with a persulphate (free-radical) catalyst at high pressure, so (B) is true. PVC softens on heating and can be remoulded, so it is a thermoplastic and (C) is true. Free-radical polymerisation at 350–570 K and 1000–2000 atm with a peroxide gives branched low-density polythene; HDPE needs a Ziegler–Natta catalyst at low pressure, so (D) is false.",
+   "topics": [
+    "concepts/polymers",
+    "concepts/addition-polymers",
+    "concepts/natural-and-synthetic-rubber"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2022-p2-q18",
+   "number": 18,
+   "type": "single",
+   "stem": "Treatment of D-glucose with aqueous NaOH results in a mixture of monosaccharides, which are",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "O=C[C@@H](O)[C@@H](O)[C@H](O)[C@H](O)CO.O=C[C@H](O)[C@@H](O)[C@@H](O)[C@H](O)CO.O=C[C@@H](O)[C@@H](O)[C@@H](O)[C@H](O)CO"
+    },
+    {
+     "key": "B",
+     "smiles": "OCC(=O)[C@@H](O)[C@H](O)[C@H](O)CO.O=C[C@@H](O)[C@H](O)[C@H](O)[C@H](O)CO.O=C[C@@H](O)[C@@H](O)[C@@H](O)[C@H](O)CO"
+    },
+    {
+     "key": "C",
+     "smiles": "O=C[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO.OCC(=O)[C@@H](O)[C@H](O)[C@H](O)CO.O=C[C@@H](O)[C@@H](O)[C@H](O)[C@H](O)CO"
+    },
+    {
+     "key": "D",
+     "smiles": "O=C[C@H](O)[C@@H](O)[C@@H](O)[C@H](O)CO.O=C[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO.O=C[C@@H](O)[C@@H](O)[C@H](O)[C@H](O)CO"
+    }
+   ],
+   "answer": "C",
+   "solution": "Dilute base removes the α-H at C-2 of D-glucose and forms an enediol (Lobry de Bruyn–van Ekenstein rearrangement). Reprotonation at C-2 from either face gives back D-glucose or its C-2 epimer D-mannose, and tautomerisation toward C-2 gives the ketose D-fructose; C-3 to C-5 are untouched. Option (C) shows exactly D-glucose, D-fructose and D-mannose. The other options include sugars that differ at C-3 or C-4 (galactose, talose, altrose), which cannot form.",
+   "topics": [
+    "concepts/aldoses-and-epimers"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  }
+ ]
+}

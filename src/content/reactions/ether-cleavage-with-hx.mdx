@@ -1,0 +1,132 @@
+---
+title: "Ether Cleavage with HX (HI/HBr)"
+description: "Ether cleavage with HI or HBr splits R–O–R′ into an alcohol and an alkyl halide by SN2 (1°/methyl) or SN1 (3°, benzyl, allyl). Anisole gives phenol + CH3I."
+aliases: ["Acidic cleavage of ethers", "Reaction of ether with HI", "Zeisel method", "Cleavage of anisole with HI", "Acid catalysed hydrolysis of ether"]
+kind: "general-reaction"
+family: "nucleophilic-substitution"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["zeisel-ether-cleavage"]
+reactant:
+  name: "Methoxybenzene (anisole)"
+  smiles: "COc1ccccc1"
+product:
+  name: "Phenol"
+  smiles: "Oc1ccccc1"
+byproducts: "CH₃I (iodomethane)"
+reagents: "Concentrated HI or HBr (HI > HBr > HCl)"
+conditions: "Heat; excess HX converts the alcohol formed into a second alkyl halide"
+equation: "C6H5-O-CH3 + HI ->[\\Delta] C6H5OH + CH3I"
+notesPages: [8, 25, 50]
+memoryTricks: []
+faq:
+  - q: "What are the products when anisole is heated with HI?"
+    a: "Phenol and methyl iodide. Iodide attacks the methyl carbon by SN2; the O–C6H5 bond is not broken because the aryl carbon cannot undergo nucleophilic substitution."
+  - q: "What happens when methyl tert-butyl ether reacts with HI?"
+    a: "It gives methanol and tert-butyl iodide. The protonated ether loses methanol to form the stable tert-butyl carbocation (SN1), which is then captured by iodide."
+  - q: "Why is HI better than HBr or HCl for cleaving ethers?"
+    a: "HI is the strongest acid and iodide is the best nucleophile among the halides, so the order of reactivity is HI > HBr > HCl. HCl reacts only under harsh conditions."
+  - q: "Do ethers react with water or NaOH?"
+    a: "No. Ethers are inert to water and to aqueous base, which is why they are used as solvents. They are cleaved only by strong acids such as HI and HBr, usually on heating."
+  - q: "Which carbon does the nucleophile attack when an epoxide is opened?"
+    a: "Under basic conditions (CH3O−, Grignard reagents) the nucleophile attacks the less substituted carbon by SN2. Under acidic conditions it attacks the more substituted carbon, because that carbon carries more positive charge."
+related: ["williamson-ether-synthesis", "sn1-reaction", "sn2-reaction", "lucas-test", "grignard-reagent"]
+sources:
+  - title: "Alcohols, Phenols and Ethers (Class XII Chemistry, Unit 7)"
+    url: "https://ncert.nic.in/textbook/pdf/lech202.pdf"
+    publisher: "NCERT"
+  - title: "Ether cleavage"
+    url: "https://en.wikipedia.org/wiki/Ether_cleavage"
+    publisher: "Wikipedia"
+  - title: "18.3: Reactions of Ethers - Acidic Cleavage"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/18:_Ethers_and_Epoxides_Thiols_and_Sulfides/18.03:_Reactions_of_Ethers_-_Acidic_Cleavage"
+    publisher: "LibreTexts Chemistry"
+  - title: "18.6: Reactions of Epoxides - Ring-opening"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/18:_Ethers_and_Epoxides_Thiols_and_Sulfides/18.06:_Reactions_of_Epoxides_-_Ring-opening"
+    publisher: "LibreTexts Chemistry"
+verified:
+  status: "conflict"
+  checked: 2026-11-21
+  sourceCount: 4
+  note: "Notes say anhydrous HX gives SN2 and concentrated HX gives SN1; sources tie the mechanism to the alkyl groups, and NCERT describes SN2 cleavage with concentrated HI, so the page follows the sources. Acid hydrolysis of ethers with H2(18)O is kept as an exam-style SN1 problem; no source discusses the labelling directly."
+---
+
+## What is ether cleavage with HX?
+
+**Ether cleavage** is the breaking of a C–O bond of an ether by a **strong hydrogen halide, usually concentrated HI or HBr, on heating**. The ether R–O–R′ gives an **alcohol and an alkyl halide**. With excess HX the alcohol is converted into a second alkyl halide. The reaction is an acid-catalysed nucleophilic substitution: it goes by **SN2** when the groups are methyl or primary, and by **SN1** when one group is tertiary, benzylic or allylic.
+
+## General reaction
+
+<Eq ce="R-O-R' + HX ->[\Delta] R-OH + R'-X" />
+
+<Eq ce="R-OH + HX -> R-X + H2O \quad (\text{with excess HX})" />
+
+Order of reactivity of the acids: **HI > HBr > HCl**. HF does not cleave ethers.
+
+## Mechanism
+
+**Step 1: protonation.** The ether oxygen takes up H⁺ from HX to form an oxonium ion. This turns the poor leaving group (RO⁻) into a good one (ROH).
+
+**Step 2 (SN2 path, methyl and 1°/2° groups).** The halide ion attacks the **less hindered carbon** of the oxonium ion and pushes out the alcohol in one step. With methyl ethyl ether, for example, iodide attacks the methyl group, giving CH₃I and ethanol.
+
+<Eq ce="CH3-O-CH2CH3 + HI -> CH3I + CH3CH2OH" />
+
+**Step 2 (SN1 path, 3°, benzyl, allyl groups).** The oxonium ion breaks on its own to give the **more stable carbocation** and an alcohol. The halide then captures the carbocation. So the tertiary (or benzylic) group ends up as the halide.
+
+<Eq ce="(CH3)3C-O-CH3 + HI -> (CH3)3C-I + CH3OH" />
+
+<KeyPoint>
+Decide the path from the alkyl groups: if one group can give a stable carbocation (3°, benzyl, allyl), use SN1 and that group becomes the halide. Otherwise use SN2: the halide attacks the smaller group, which becomes the halide.
+</KeyPoint>
+
+## Examples
+
+**Anisole with HI** (Zeisel's method, map edges anisole → phenol): the O–CH₃ bond breaks, never the O–C₆H₅ bond, because the aryl carbon is sp² and the bond has partial double-bond character. Phenol does not react further to give an aryl halide.
+
+<Eq ce="C6H5OCH3 + HI ->[\Delta] C6H5OH + CH3I" />
+
+Measuring the CH₃I formed is the basis of **Zeisel's method** for counting methoxy groups in a compound.
+
+**Diethyl ether with excess HI:**
+
+<Eq ce="C2H5OC2H5 + 2 HI ->[\Delta] 2 C2H5I + H2O" />
+
+**Diaryl ethers** such as diphenyl ether are **not cleaved** by HI.
+
+## Acid-catalysed hydrolysis of ethers (isotope-labelling questions)
+
+Exam questions sometimes ask what happens when an ether with a carbocation-forming group is heated with H₂¹⁸O and acid. Following the SN1 logic above, the protonated ether breaks to give the more stable carbocation (R′⁺) and R–OH. Water then traps the carbocation, so the **¹⁸O label ends up in the alcohol formed from the carbocation group**:
+
+<Eq ce="R-O-R' ->[H2^{18}O, H+] R-OH + R'-^{18}OH" />
+
+Ethers do **not** react with water or OH⁻ alone; an acid is essential.
+
+## Ring opening of unsymmetrical epoxides
+
+Epoxides are cyclic ethers whose ring strain makes them far more reactive than ordinary ethers. For 2-methyloxirane the site of attack depends on the conditions:
+
+- **Basic or strongly nucleophilic conditions (SN2):** the nucleophile attacks the **less substituted** carbon.
+- **Acidic conditions:** the protonated epoxide opens with substantial SN1 character, so the nucleophile attacks the **more substituted** carbon.
+
+<Eq ce="\text{2-methyloxirane} ->[CH3O^{-}Na+, CH3OH] CH3-CH(OH)-CH2-OCH3" />
+
+<Eq ce="\text{2-methyloxirane} ->[CH3OH, H+] CH3-CH(OCH3)-CH2-OH" />
+
+Grignard reagents behave as basic nucleophiles: CH₃MgBr opens 2-methyloxirane at the CH₂ end, and work-up gives butan-2-ol.
+
+<ExamTip>
+For any ether + HI question, write three things: protonation, which group leaves as the alcohol, and which carbon the iodide ends up on. For aryl alkyl ethers the answer is always phenol + alkyl iodide.
+</ExamTip>
+
+## Limitations and exceptions
+
+- The reaction is slow at room temperature and needs heat and concentrated acid.
+- With poorly nucleophilic acids (for example trifluoroacetic acid), tertiary ethers undergo E1 elimination to an alkene instead of substitution.
+- Excess HX and high temperature convert both groups into alkyl halides (except an aryl group, which stays as phenol).
+
+## Related reactions
+
+- [Williamson ether synthesis](/reactions/williamson-ether-synthesis/): how ethers are made in the first place.
+- [SN1 reaction](/reactions/sn1-reaction/) and [SN2 reaction](/reactions/sn2-reaction/): the two possible pathways.
+- [Lucas test](/tests/lucas-test/): the same protonate-then-substitute logic for alcohols with HCl.
+- [Grignard reagent](/reactions/grignard-reagent/): ring opening of epoxides by RMgX.
+- [Nucleophilic substitution](/mechanisms/nucleophilic-substitution/): hub for substitution reactions.

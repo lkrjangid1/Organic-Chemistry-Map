@@ -1,0 +1,49 @@
+{
+ "page": "reagents/9-bbn",
+ "questions": [
+  {
+   "q": "Hex-1-ene is treated with (i) 9-BBN in THF and (ii) H₂O₂/NaOH. The main product is:",
+   "options": [
+    "Hexan-1-ol",
+    "Hexan-2-ol",
+    "Hexanal",
+    "Hexane"
+   ],
+   "answer": 0,
+   "explain": "The bulky borane places boron almost only on the terminal carbon, and oxidation replaces B by OH, giving the anti-Markovnikov alcohol. 9-BBN suppresses the small amount of hexan-2-ol seen with plain BH₃."
+  },
+  {
+   "q": "Each 9-BBN molecule hydroborates only one alkene molecule, whereas BH₃ can add to three. The reason is that 9-BBN:",
+   "options": [
+    "is a Lewis base rather than a Lewis acid",
+    "exists only as a dimer",
+    "has only one B–H bond, being a dialkylborane R₂BH",
+    "reacts by a carbocation mechanism"
+   ],
+   "answer": 2,
+   "explain": "In 9-BBN two of boron's bonds are tied up in the bicyclic ring, leaving a single B–H bond, so it cannot form trialkylboranes as BH₃ does."
+  },
+  {
+   "q": "9-BBN is prepared by double hydroboration of which compound with borane in THF?",
+   "options": [
+    "Cyclooctene",
+    "Cyclohexa-1,3-diene",
+    "Cycloocta-1,3,5,7-tetraene",
+    "Cycloocta-1,5-diene"
+   ],
+   "answer": 3,
+   "explain": "Both C=C bonds of cycloocta-1,5-diene add to the same boron; the second addition is intramolecular and locks the ring into the bicyclo[3.3.1] skeleton."
+  },
+  {
+   "q": "Which statement about hydroboration–oxidation with 9-BBN is INCORRECT?",
+   "options": [
+    "Boron adds to the less substituted alkene carbon",
+    "A carbocation intermediate forms, so rearranged alcohols are common",
+    "H and B add to the same face of the C=C (syn addition)",
+    "The alkyl group migrates from B to O with retention of configuration"
+   ],
+   "answer": 1,
+   "explain": "The B–H adds in one concerted four-centred step; no carbocation forms, so there is no rearrangement. The other three statements are correct."
+  }
+ ]
+}

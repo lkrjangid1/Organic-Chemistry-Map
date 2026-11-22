@@ -1,0 +1,219 @@
+{
+ "exam": "jee-advanced",
+ "year": 2025,
+ "paper": 2,
+ "source": "https://jeeadv.ac.in/past_qps/2025_2_English.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2025-p2-q3",
+   "number": 3,
+   "type": "single",
+   "stem": "Monocyclic compounds P, Q, R and S are the major products formed in the reaction sequences given below.\n3-Phenylpropanoic acid —(i) Br₂/Red phosphorus (ii) H₂O→ P\nBenzaldehyde + acetaldehyde —aq. NaOH, 293 K→ Q\nPhenylacetylene —(i) NaNH₂, allyl bromide (ii) Hg²⁺, H₃O⁺→ R\n2-Methylindene —(i) O₃, Zn-H₂O (ii) CH₃MgBr (2 equiv.) (iii) H⁺, Δ→ S\nThe product having the highest number of unsaturated carbon atom(s) is",
+   "figures": [
+    {
+     "smiles": "OC(=O)CCc1ccccc1",
+     "label": "3-Phenylpropanoic acid"
+    },
+    {
+     "smiles": "O=Cc1ccccc1",
+     "label": "Benzaldehyde"
+    },
+    {
+     "smiles": "CC=O",
+     "label": "Acetaldehyde"
+    },
+    {
+     "smiles": "C#Cc1ccccc1",
+     "label": "Phenylacetylene"
+    },
+    {
+     "smiles": "C=CCBr",
+     "label": "Allyl bromide"
+    },
+    {
+     "smiles": "CC1=Cc2ccccc2C1",
+     "label": "2-Methylindene"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "P"
+    },
+    {
+     "key": "B",
+     "text": "Q"
+    },
+    {
+     "key": "C",
+     "text": "R"
+    },
+    {
+     "key": "D",
+     "text": "S"
+    }
+   ],
+   "answer": "D",
+   "solution": "P (HVZ) is PhCH₂CHBrCOOH: 6 aromatic C + COOH = 7 unsaturated carbons. Q is the cross-aldol product of PhCHO and CH₃CHO (at most cinnamaldehyde, PhCH=CHCHO, 9). R: the acetylide is allylated to PhC≡CCH₂CH=CH₂, and Hg²⁺ hydration gives PhCOCH₂CH₂CH=CH₂: 6 + 1 + 2 = 9. S: ozonolysis opens the five-membered ring of 2-methylindene to o-(2-oxopropyl)benzaldehyde; two CH₃MgBr add to both carbonyls and acid/heat dehydrates both alcohols, giving o-CH₂=CH–C₆H₄–CH=C(CH₃)₂: 6 + 2 + 2 = 10. S has the most.",
+   "topics": [
+    "reactions/hell-volhard-zelinsky-reaction",
+    "reactions/ozonolysis",
+    "reactions/grignard-reagent"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (D)"
+   }
+  },
+  {
+   "id": "jee-advanced-2025-p2-q4",
+   "number": 4,
+   "type": "single",
+   "stem": "The correct reaction/reaction sequence that would produce a dicarboxylic acid as the major product is",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "(i) NaCN (ii) HO⁻, H₂O (iii) H₃O⁺",
+     "smiles": "OCCCl"
+    },
+    {
+     "key": "B",
+     "text": "Glucose (open chain) — Br₂, H₂O",
+     "smiles": "O=CC(O)C(O)C(O)C(O)CO"
+    },
+    {
+     "key": "C",
+     "text": "(i) KOH, EtOH (ii) KMnO₄, H₂SO₄, Δ",
+     "smiles": "BrC1CCCCC1"
+    },
+    {
+     "key": "D",
+     "text": "H₂CrO₄",
+     "smiles": "CC(C)C(=O)C(C)CO"
+    }
+   ],
+   "answer": "C",
+   "solution": "(A) 2-Chloroethanol → 3-hydroxypropanenitrile → 3-hydroxypropanoic acid: only one COOH. (B) Bromine water oxidises only the CHO of glucose, giving gluconic acid (one COOH). (C) Alcoholic KOH dehydrohalogenates bromocyclohexane to cyclohexene, and hot acidic KMnO₄ cleaves the C=C to give adipic acid, HOOC(CH₂)₄COOH, a dicarboxylic acid. (D) Chromic acid oxidises the CH₂OH to COOH, giving a β-keto monocarboxylic acid (the ketone is untouched).",
+   "topics": [
+    "reagents/potassium-permanganate",
+    "reactions/e2-reaction",
+    "mechanisms/oxidation-reactions"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (C)"
+   }
+  },
+  {
+   "id": "jee-advanced-2025-p2-q7",
+   "number": 7,
+   "type": "multiple",
+   "stem": "For the reaction sequence given below, the correct statement(s) is(are)\nTetralin —(i) KMnO₄, H⁺, Δ (ii) NH₃, Δ, −2H₂O→ X —(i) Strong heating (ii) Ethanolic KOH (iii) R-Br→ Y —NaOH→ Aromatic compound + Z",
+   "figures": [
+    {
+     "smiles": "C1CCc2ccccc2C1",
+     "label": "Tetralin"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "Both X and Y are oxygen containing compounds."
+    },
+    {
+     "key": "B",
+     "text": "Y on heating with CHCl₃/KOH forms isocyanide."
+    },
+    {
+     "key": "C",
+     "text": "Z reacts with Hinsberg’s reagent."
+    },
+    {
+     "key": "D",
+     "text": "Z is an aromatic primary amine."
+    }
+   ],
+   "answer": [
+    "A",
+    "C"
+   ],
+   "solution": "Hot acidic KMnO₄ oxidises both benzylic positions of tetralin to give phthalic acid; with NH₃ and loss of 2 H₂O this gives phthalamide/phthalimide (X), and strong heating gives phthalimide. Ethanolic KOH forms potassium phthalimide, which is N-alkylated by R–Br to N-alkylphthalimide (Y) — the Gabriel synthesis. NaOH hydrolysis releases sodium phthalate (the aromatic compound) and the primary aliphatic amine R–NH₂ (Z). X and Y both contain oxygen (A true); Y has no N–H₂ group, so no carbylamine reaction (B false); Z is a primary amine and reacts with Hinsberg's reagent (C true) but it is aliphatic, not aromatic (D false).",
+   "topics": [
+    "reactions/gabriel-phthalimide-synthesis",
+    "tests/hinsberg-test",
+    "reagents/potassium-permanganate"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (A, C)"
+   }
+  },
+  {
+   "id": "jee-advanced-2025-p2-q8",
+   "number": 8,
+   "type": "multiple",
+   "stem": "For the reaction sequence given below, the correct statement(s) is(are)\nLactone —LiAlH₄→ P —CrO₃-H₂SO₄→ Q —NaOH and CaO, Δ→ R; P —H₂SO₄, 443 K→ S",
+   "figures": [
+    {
+     "smiles": "O=C1C[C@H](Cc2ccccc2)CCO1",
+     "label": "Lactone"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "P is optically active."
+    },
+    {
+     "key": "B",
+     "text": "S gives Bayer’s test."
+    },
+    {
+     "key": "C",
+     "text": "Q gives effervescence with aq. NaHCO₃."
+    },
+    {
+     "key": "D",
+     "text": "R is an alkyne."
+    }
+   ],
+   "answer": [
+    "B",
+    "C"
+   ],
+   "solution": "LiAlH₄ opens the δ-lactone to the diol HOCH₂CH₂CH(CH₂Ph)CH₂CH₂OH (P). The carbon bearing the benzyl group now carries two identical CH₂CH₂OH arms, so P is achiral and optically inactive (A false). Jones oxidation converts both primary alcohols to COOH, giving 3-benzylpentanedioic acid (Q), which liberates CO₂ with NaHCO₃ (C true). Soda-lime decarboxylates both acids to (CH₃)₂CHCH₂Ph, an alkane, not an alkyne (D false). Concentrated H₂SO₄ at 443 K dehydrates both alcohols to the diene CH₂=CH–CH(CH₂Ph)–CH=CH₂, which decolourises Baeyer's reagent (B true).",
+   "topics": [
+    "reagents/lithium-aluminium-hydride",
+    "reagents/jones-reagent",
+    "reactions/decarboxylation"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (B, C)"
+   }
+  },
+  {
+   "id": "jee-advanced-2025-p2-q16",
+   "number": 16,
+   "type": "numerical",
+   "stem": "A linear octasaccharide (molar mass = 1024 g mol⁻¹) on complete hydrolysis produces three monosaccharides: ribose, 2-deoxyribose and glucose. The amount of 2-deoxyribose formed is 58.26 % (w/w) of the total amount of the monosaccharides produced in the hydrolyzed products. The number of ribose unit(s) present in one molecule of octasaccharide is ______.\nUse: Molar mass (in g mol⁻¹): ribose = 150, 2-deoxyribose = 134, glucose = 180; Atomic mass (in amu): H = 1, O = 16",
+   "figures": [],
+   "answer": "2",
+   "solution": "A linear octasaccharide has 7 glycosidic links, so hydrolysis adds 7 H₂O: total mass of monosaccharides = 1024 + 7 × 18 = 1150 g per mole. 2-Deoxyribose = 0.5826 × 1150 = 670 g = 670/134 = 5 units. The other 3 units weigh 1150 − 670 = 480 g; with a ribose and b glucose units, a + b = 3 and 150a + 180b = 480, giving a = 2, b = 1. So there are 2 ribose units.",
+   "topics": [
+    "concepts/polysaccharides",
+    "concepts/disaccharides"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (2)"
+   }
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "page": "concepts/electrophiles-and-nucleophiles",
+ "questions": [
+  {
+   "q": "Which species does NOT act as an electrophile?",
+   "options": [
+    "BF₃",
+    "NO₂⁺",
+    "NH₄⁺",
+    ":CCl₂"
+   ],
+   "answer": 2,
+   "explain": "NH₄⁺ is positively charged, but its nitrogen has a complete octet and no vacant orbital, so it cannot accept an electron pair. BF₃ and the carbene have incomplete octets, and NO₂⁺ is a cationic electrophile."
+  },
+  {
+   "q": "Which of the following is an ambident nucleophile?",
+   "options": [
+    "NO₂⁻",
+    "CO₃²⁻",
+    "NH₃",
+    "OH⁻"
+   ],
+   "answer": 0,
+   "explain": "Nitrite can attack through O (giving R–ONO) or through N (giving R–NO₂). Carbonate is the trap: its three donor atoms are equivalent oxygens, so all attacks give the same product."
+  },
+  {
+   "q": "Which species can act as a nucleophile?",
+   "options": [
+    "AlCl₃",
+    "BH₃",
+    "Ag⁺",
+    "Benzene"
+   ],
+   "answer": 3,
+   "explain": "Benzene donates its loosely held π electrons to electrophiles, which is why it undergoes electrophilic substitution. AlCl₃ and BH₃ have incomplete octets and Ag⁺ is a metal cation: all three are electrophiles."
+  },
+  {
+   "q": "An alkyl halide R–X is treated separately with KNO₂ and with AgNO₂. The main products are, respectively,",
+   "options": [
+    "R–NO₂ and R–ONO",
+    "R–ONO and R–NO₂",
+    "R–ONO in both cases",
+    "R–NO₂ in both cases"
+   ],
+   "answer": 1,
+   "explain": "Ionic KNO₂ gives a free nitrite ion that attacks through the O atom, forming the alkyl nitrite R–O–N=O; with AgNO₂ the attack is through N, giving the nitroalkane R–NO₂."
+  }
+ ]
+}

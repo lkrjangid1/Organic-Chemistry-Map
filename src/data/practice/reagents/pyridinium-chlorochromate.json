@@ -1,0 +1,49 @@
+{
+ "page": "reagents/pyridinium-chlorochromate",
+ "questions": [
+  {
+   "q": "Propan-1-ol is oxidised with PCC in dry CH₂Cl₂. The product is:",
+   "options": [
+    "Propanoic acid",
+    "Propanone",
+    "Propene",
+    "Propanal"
+   ],
+   "answer": 3,
+   "explain": "PCC is a mild Cr(VI) oxidant that stops a 1° alcohol at the aldehyde. Aqueous chromic acid reagents such as Jones reagent would give propanoic acid."
+  },
+  {
+   "q": "Why does PCC in CH₂Cl₂ not over-oxidise the aldehyde to a carboxylic acid?",
+   "options": [
+    "PCC is a Cr(III) compound",
+    "Over-oxidation goes through the aldehyde hydrate RCH(OH)₂, which cannot form without water",
+    "Pyridine reduces the acid back to the aldehyde",
+    "The aldehyde forms a stable complex with chloride"
+   ],
+   "answer": 1,
+   "explain": "An aldehyde is oxidised further only via its hydrate. In anhydrous CH₂Cl₂ no hydrate forms, so the aldehyde survives; in DMF, by contrast, PCC can give acids."
+  },
+  {
+   "q": "Which statement correctly describes Collins reagent?",
+   "options": [
+    "CrO₃·2C₅H₅N dissolved in CH₂Cl₂",
+    "Pyridine + CrO₃ + HCl, the salt C₅H₅NH⁺CrO₃Cl⁻",
+    "CrO₃·2C₅H₅N dissolved in pyridine",
+    "CrO₃ in dilute H₂SO₄ and acetone"
+   ],
+   "answer": 0,
+   "explain": "Collins and Sarett reagents share the neutral complex CrO₃·2py: Collins in CH₂Cl₂, Sarett in pyridine. Adding HCl gives PCC, and CrO₃/H₂SO₄/acetone is Jones reagent."
+  },
+  {
+   "q": "Which alcohol is NOT oxidised by PCC in CH₂Cl₂?",
+   "options": [
+    "Benzyl alcohol",
+    "Prop-2-en-1-ol",
+    "2-Methylpropan-2-ol",
+    "Cyclohexanol"
+   ],
+   "answer": 2,
+   "explain": "A 3° alcohol can form a chromate ester but has no α-hydrogen to remove, so no C=O can form. Benzyl and allylic alcohols give aldehydes and cyclohexanol gives cyclohexanone."
+  }
+ ]
+}

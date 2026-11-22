@@ -1,0 +1,7 @@
+{"page": "reactions/diimide-reduction",
+ "questions": [
+  {"q": "Diimide for the reduction of an alkene is most simply generated in situ from:", "options": ["Hydrazine and hydrogen peroxide", "Sodium azide and HCl", "Hydrazine and KOH at high temperature", "Sodium nitrite and HCl"], "answer": 0, "explain": "H₂O₂ oxidises N₂H₄ to HN=NH and water. Hydrazine with KOH and heat is the Wolff–Kishner reagent for C=O, not a diimide source."},
+  {"q": "1,2-Dimethylcyclohexene is reduced with diimide (N₂H₄/H₂O₂). The product is:", "options": ["trans-1,2-Dimethylcyclohexane", "A 1 : 1 mixture of cis and trans isomers", "1,2-Dimethylcyclohexane-1,2-diol", "cis-1,2-Dimethylcyclohexane"], "smiles": "CC1=C(C)CCCC1", "answer": 3, "explain": "cis-Diimide transfers both hydrogens to the same face of the C=C through a six-membered cyclic transition state (syn addition), so the two methyls end up cis."},
+  {"q": "Which group is generally NOT reduced by diimide?", "options": ["C≡C of an alkyne", "C=O of a ketone", "Terminal C=C", "C=C=C of an allene"], "answer": 1, "explain": "Diimide reduces non-polar C=C and C≡C bonds; polar multiple bonds such as C=O, C≡N and NO₂ are left alone."},
+  {"q": "But-2-yne is treated with excess diimide. The product isolated is:", "options": ["cis-But-2-ene", "trans-But-2-ene", "Butane", "But-1-ene"], "answer": 2, "explain": "The cis-alkene formed first reacts almost as fast as it forms, so two HN=NH are consumed and butane results; to stop at the alkene, Lindlar catalyst is used."}
+ ]}

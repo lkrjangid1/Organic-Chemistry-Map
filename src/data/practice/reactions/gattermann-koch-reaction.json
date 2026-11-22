@@ -1,0 +1,50 @@
+{
+ "page": "reactions/gattermann-koch-reaction",
+ "questions": [
+  {
+   "q": "What is the electrophile that attacks the ring in the Gattermann–Koch reaction?",
+   "options": [
+    "Iminium-type cation, HC⁺=NH",
+    "Dichlorocarbene, :CCl₂",
+    "Formyl cation, HC≡O⁺",
+    "Acylium ion, CH₃C≡O⁺"
+   ],
+   "answer": 2,
+   "explain": "CO is protonated by HCl and AlCl₃ takes up the chloride, giving HCO⁺. :CCl₂ belongs to Reimer–Tiemann and HC⁺=NH to the HCN version."
+  },
+  {
+   "q": "Toluene is treated with CO and HCl in the presence of anhydrous AlCl₃/CuCl. The major product is:",
+   "smiles": "Cc1ccccc1",
+   "options": [
+    "4-Methylbenzaldehyde",
+    "3-Methylbenzaldehyde",
+    "Benzaldehyde",
+    "Phenylacetaldehyde"
+   ],
+   "answer": 0,
+   "explain": "The methyl group activates the ring and directs ortho/para, and substitution goes mainly para, giving p-tolualdehyde. The –CHO goes on the ring, not on the side chain."
+  },
+  {
+   "q": "Which compound does NOT undergo the Gattermann–Koch reaction?",
+   "options": [
+    "Benzene",
+    "Anisole",
+    "Ethylbenzene",
+    "Toluene"
+   ],
+   "answer": 1,
+   "explain": "The Gattermann–Koch reaction is not applicable to phenols and phenol ethers such as anisole; for these the HCN/HCl method or Reimer–Tiemann is used. Benzene and alkylbenzenes are the typical substrates."
+  },
+  {
+   "q": "Why is a mixture of CO and HCl used instead of formyl chloride, the 'natural' Friedel–Crafts reagent for a –CHO group?",
+   "options": [
+    "Formyl chloride would chlorinate the ring",
+    "Formyl chloride gives ketones instead of aldehydes",
+    "Formyl chloride does not react with AlCl₃",
+    "Formyl chloride is too unstable to isolate"
+   ],
+   "answer": 3,
+   "explain": "HCOCl cannot be isolated, so CO + HCl is used to generate the formyl electrophile in situ. The modern view is that the formyl cation reacts directly."
+  }
+ ]
+}

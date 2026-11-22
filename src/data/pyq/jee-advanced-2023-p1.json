@@ -1,0 +1,247 @@
+{
+ "exam": "jee-advanced",
+ "year": 2023,
+ "paper": 1,
+ "source": "https://jeeadv.ac.in/past_qps/2023_1_English.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2023-p1-q2",
+   "number": 2,
+   "type": "multiple",
+   "stem": "In the following reactions, P, Q, R, and S are the major products.\nCH₃CH₂CH(CH₃)CH₂CN —(i) PhMgBr, then H₃O⁺ (ii) PhMgBr, then H₂O→ P\nPh–H + CH₃COCl —(i) anhyd. AlCl₃ (ii) PhMgBr, then H₂O→ Q\nCH₃CH₂COCl —(i) ½ (PhCH₂)₂Cd (ii) PhMgBr, then H₂O→ R\nPhCH₂CHO —(i) PhMgBr, then H₂O (ii) CrO₃, dil. H₂SO₄ (iii) HCN (iv) H₂SO₄, Δ→ S\nThe correct statement(s) about P, Q, R, and S is(are)",
+   "figures": [
+    {
+     "smiles": "CCC(C)CC#N"
+    },
+    {
+     "smiles": "c1ccccc1"
+    },
+    {
+     "smiles": "CC(=O)Cl"
+    },
+    {
+     "smiles": "CCC(=O)Cl"
+    },
+    {
+     "smiles": "O=CCc1ccccc1"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "Both P and Q have asymmetric carbon(s)."
+    },
+    {
+     "key": "B",
+     "text": "Both Q and R have asymmetric carbon(s)."
+    },
+    {
+     "key": "C",
+     "text": "Both P and R have asymmetric carbon(s)."
+    },
+    {
+     "key": "D",
+     "text": "P has asymmetric carbon(s), S does not have any asymmetric carbon."
+    }
+   ],
+   "answer": [
+    "C",
+    "D"
+   ],
+   "solution": "P: PhMgBr adds to the nitrile and hydrolysis gives the ketone CH₃CH₂CH(CH₃)CH₂COPh; a second PhMgBr gives CH₃CH₂CH(CH₃)CH₂C(OH)Ph₂, whose C-3 (H, CH₃, C₂H₅, CH₂–) is asymmetric. Q: Friedel–Crafts acylation gives acetophenone and PhMgBr then gives Ph₂C(OH)CH₃, which carries two identical phenyls and is achiral. R: the organocadmium reagent stops at the ketone CH₃CH₂COCH₂Ph; PhMgBr gives CH₃CH₂C(OH)(Ph)CH₂Ph with four different groups, so it is chiral. S: PhCH₂CH(OH)Ph is oxidised to PhCH₂COPh, HCN gives the cyanohydrin, and hot H₂SO₄ hydrolyses CN to COOH and dehydrates it to PhCH=C(Ph)COOH, which has no asymmetric carbon. Hence (C) and (D).",
+   "topics": [
+    "reactions/grignard-reagent",
+    "reactions/friedel-crafts-acylation",
+    "mechanisms/nucleophilic-addition"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2023-p1-q3",
+   "number": 3,
+   "type": "multiple",
+   "stem": "Consider the following reaction scheme and choose the correct option(s) for the major products Q, R and S.\nStyrene —(i) B₂H₆ (ii) NaOH, H₂O₂, H₂O→ P —(i) CrO₃, H₂SO₄ (ii) Cl₂, Red phosphorus (iii) H₂O→ Q\nP —(i) SOCl₂ (ii) NaCN (iii) H₃O⁺, Δ→ R —conc. H₂SO₄→ S",
+   "figures": [
+    {
+     "smiles": "C=Cc1ccccc1",
+     "label": "Styrene"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "Q = PhCH(Cl)COOH; R = PhCH₂CH₂CONH₂; S = 3-(4-sulfophenyl)propanamide, HO₃S–C₆H₄–CH₂CH₂CONH₂ (para)"
+    },
+    {
+     "key": "B",
+     "text": "Q = PhCH(Cl)COOH; R = PhCH₂CH₂COOH; S = indan-1-one"
+    },
+    {
+     "key": "C",
+     "text": "Q = PhCH₂COCl; R = PhCH₂CH₂COOH; S = indan-1-one"
+    },
+    {
+     "key": "D",
+     "text": "Q = PhCH₂COCl; R = PhCH₂CH₂CONH₂; S = 3-(4-sulfophenyl)propanamide, HO₃S–C₆H₄–CH₂CH₂CONH₂ (para)"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "solution": "Hydroboration–oxidation of styrene gives the anti-Markovnikov alcohol PhCH₂CH₂OH (P). CrO₃/H₂SO₄ oxidises P to PhCH₂COOH, and Cl₂/red P (HVZ) followed by water gives PhCH(Cl)COOH (Q); the acid chloride is only an intermediate. SOCl₂ converts P to PhCH₂CH₂Cl, NaCN gives the nitrile and acidic hydrolysis gives PhCH₂CH₂COOH (R), an acid, not an amide. Conc. H₂SO₄ effects intramolecular Friedel–Crafts acylation of R to indan-1-one (S). Only (B) fits.",
+   "topics": [
+    "reactions/hydroboration-oxidation",
+    "reactions/hell-volhard-zelinsky-reaction",
+    "reactions/friedel-crafts-acylation"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2023-p1-q7",
+   "number": 7,
+   "type": "single",
+   "stem": "In the given reaction scheme, P is a phenyl alkyl ether, Q is an aromatic compound; R and S are the major products.\nP —HI→ Q —(i) NaOH (ii) CO₂ (iii) H₃O⁺→ R —(i) (CH₃CO)₂O (ii) H₃O⁺→ S\nThe correct statement about S is",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "It primarily inhibits noradrenaline degrading enzymes."
+    },
+    {
+     "key": "B",
+     "text": "It inhibits the synthesis of prostaglandin."
+    },
+    {
+     "key": "C",
+     "text": "It is a narcotic drug."
+    },
+    {
+     "key": "D",
+     "text": "It is ortho-acetylbenzoic acid."
+    }
+   ],
+   "answer": "B",
+   "solution": "HI cleaves an aryl alkyl ether at the alkyl–O bond, so Q is phenol (plus an alkyl iodide). Kolbe–Schmitt carboxylation of sodium phenoxide with CO₂ followed by acidification gives salicylic acid (R). Acetylation of the phenolic OH with acetic anhydride gives acetylsalicylic acid, aspirin (S). Aspirin is a non-narcotic analgesic that works by inhibiting prostaglandin synthesis; it is o-acetoxybenzoic acid, not o-acetylbenzoic acid.",
+   "topics": [
+    "reactions/ether-cleavage-with-hx",
+    "reactions/kolbe-schmitt-reaction",
+    "mechanisms/reactions-of-phenols"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2023-p1-q13",
+   "number": 13,
+   "type": "numerical",
+   "stem": "The total number of sp² hybridised carbon atoms in the major product P (a non-heterocyclic compound) of the following reaction is ___.\nNC–CH(CN)–CH(CN)–CN —(i) LiAlH₄ (excess), then H₂O (ii) Acetophenone (excess)→ P",
+   "figures": [
+    {
+     "smiles": "N#CC(C#N)C(C#N)C#N"
+    }
+   ],
+   "answer": "28",
+   "solution": "Excess LiAlH₄ reduces all four C≡N groups to CH₂NH₂, giving (H₂NCH₂)₂CH–CH(CH₂NH₂)₂. With excess acetophenone each primary amine condenses to an imine, –CH₂–N=C(CH₃)Ph; the product is stated to be non-heterocyclic, so no cyclic aminal forms. Each imine unit contributes one sp² C=N carbon and six aromatic carbons, 7 in all, and the four units give 4 × 7 = 28.",
+   "topics": [
+    "reagents/lithium-aluminium-hydride",
+    "mechanisms/nucleophilic-addition",
+    "mechanisms/reduction-reactions"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2023-p1-q16",
+   "number": 16,
+   "type": "matching",
+   "stem": "Match the reactions in List-I with the features of their products in List-II and choose the correct option.\nList-I\n(P) (−)-1-Bromo-2-ethylpentane (single enantiomer) —aq. NaOH, SN2 reaction→\n(Q) (−)-2-Bromopentane (single enantiomer) —aq. NaOH, SN2 reaction→\n(R) (−)-3-Bromo-3-methylhexane (single enantiomer) —aq. NaOH, SN1 reaction→\n(S) the bromide shown (single enantiomer) —aq. NaOH, SN1 reaction→\nList-II\n(1) Inversion of configuration\n(2) Retention of configuration\n(3) Mixture of enantiomers\n(4) Mixture of structural isomers\n(5) Mixture of diastereomers",
+   "figures": [
+    {
+     "smiles": "CC[C@H](C)C[C@@](C)(Br)CC",
+     "label": "(S)"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "P → 1; Q → 2; R → 5; S → 3"
+    },
+    {
+     "key": "B",
+     "text": "P → 2; Q → 1; R → 3; S → 5"
+    },
+    {
+     "key": "C",
+     "text": "P → 1; Q → 2; R → 5; S → 4"
+    },
+    {
+     "key": "D",
+     "text": "P → 2; Q → 4; R → 3; S → 5"
+    }
+   ],
+   "answer": "B",
+   "solution": "(P) The SN2 attack happens at C-1 (CH₂Br), not at the stereocentre C-2, so the configuration of C-2 is retained → (2). (Q) SN2 at the stereocentre C-2 proceeds by backside attack → inversion (1). (R) SN1 at the tertiary stereocentre goes through a planar carbocation, giving both enantiomers of 3-methylhexan-3-ol → (3). (S) SN1 scrambles only the carbon bearing Br, while the other stereocentre (CH(CH₃)) is untouched, so the two products are diastereomers → (5). This is option (B).",
+   "topics": [
+    "reactions/sn2-reaction",
+    "reactions/sn1-reaction",
+    "comparisons/sn1-vs-sn2"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2023-p1-q17",
+   "number": 17,
+   "type": "matching",
+   "stem": "The major products obtained from the reactions in List-II are the reactants for the named reactions mentioned in List-I. Match List-I with List-II and choose the correct option.\nList-I\n(P) Etard reaction\n(Q) Gattermann reaction\n(R) Gattermann-Koch reaction\n(S) Rosenmund reduction\nList-II\n(1) Acetophenone —Zn-Hg, HCl→\n(2) Toluene —(i) KMnO₄, KOH, Δ (ii) SOCl₂→\n(3) Benzene —CH₃Cl, anhyd. AlCl₃→\n(4) Aniline —NaNO₂/HCl, 273-278 K→\n(5) Phenol —Zn, Δ→",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "P → 2; Q → 4; R → 1; S → 3"
+    },
+    {
+     "key": "B",
+     "text": "P → 1; Q → 3; R → 5; S → 2"
+    },
+    {
+     "key": "C",
+     "text": "P → 3; Q → 2; R → 1; S → 4"
+    },
+    {
+     "key": "D",
+     "text": "P → 3; Q → 4; R → 5; S → 2"
+    }
+   ],
+   "answer": "D",
+   "solution": "The Etard reaction (CrO₂Cl₂) needs toluene, made from benzene by Friedel–Crafts methylation (3). The Gattermann reaction (Cu/HX on ArN₂⁺) needs a diazonium salt, made by diazotising aniline at 273–278 K (4). The Gattermann–Koch reaction (CO/HCl, AlCl₃) needs benzene, obtained by distilling phenol with zinc dust (5). Rosenmund reduction needs an acid chloride, and toluene → benzoic acid → benzoyl chloride gives it (2). Clemmensen reduction of acetophenone (1) gives ethylbenzene, which is not needed. Answer (D).",
+   "topics": [
+    "reactions/etard-reaction",
+    "reactions/gattermann-reaction",
+    "reactions/rosenmund-reduction"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  }
+ ]
+}

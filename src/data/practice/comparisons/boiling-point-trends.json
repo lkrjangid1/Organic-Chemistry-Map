@@ -1,0 +1,49 @@
+{
+ "page": "comparisons/boiling-point-trends",
+ "questions": [
+  {
+   "q": "Arrange in increasing boiling point: propan-1-ol, acetone, n-butane, methoxyethane, propanal.",
+   "options": [
+    "n-Butane < methoxyethane < propanal < acetone < propan-1-ol",
+    "Methoxyethane < n-butane < acetone < propanal < propan-1-ol",
+    "n-Butane < propanal < methoxyethane < acetone < propan-1-ol",
+    "n-Butane < methoxyethane < acetone < propan-1-ol < propanal"
+   ],
+   "answer": 0,
+   "explain": "For similar molar mass (58–60), boiling point rises from non-polar alkane (273 K) to weakly polar ether (281 K), to the carbonyls with dipole–dipole forces (322 K and 329 K), to the hydrogen-bonded alcohol (370 K)."
+  },
+  {
+   "q": "Among the isomeric amines of formula C₄H₁₁N, which has the lowest boiling point?",
+   "options": [
+    "n-Butylamine",
+    "Diethylamine",
+    "All three boil at the same temperature",
+    "Ethyldimethylamine"
+   ],
+   "answer": 3,
+   "explain": "A tertiary amine has no N–H hydrogen for intermolecular hydrogen bonding, so ethyldimethylamine (310.5 K) boils below diethylamine (329.3 K) and n-butylamine (350.8 K)."
+  },
+  {
+   "q": "Which statement about the boiling points of C₂ hydrocarbons is correct?",
+   "options": [
+    "Ethane < ethene < ethyne, because polarity increases from ethane to ethyne",
+    "Ethene < ethane < ethyne (ethyne sublimes at about −84 °C), and polarity cannot explain the order since all three are non-polar",
+    "Ethyne < ethene < ethane, because molar mass decreases",
+    "All three have the same boiling point because they are non-polar"
+   ],
+   "answer": 1,
+   "explain": "The measured values are ethene (−103.7 °C) < ethane (−88.5 °C) < ethyne (sublimes about −84 °C). Explaining it by polarity is the common mistake, since all three are non-polar."
+  },
+  {
+   "q": "o-Nitrophenol can be separated from p-nitrophenol by steam distillation because:",
+   "options": [
+    "o-Nitrophenol forms an intramolecular hydrogen bond, so its molecules do not associate and it is steam volatile",
+    "p-Nitrophenol forms intramolecular hydrogen bonds and stays behind",
+    "o-Nitrophenol has intermolecular hydrogen bonds that make it volatile",
+    "o-Nitrophenol has a higher molar mass than p-nitrophenol"
+   ],
+   "answer": 0,
+   "explain": "In the ortho isomer –OH bonds to the neighbouring –NO₂ inside the same molecule, while p-nitrophenol associates through intermolecular hydrogen bonds and boils much higher."
+  }
+ ]
+}

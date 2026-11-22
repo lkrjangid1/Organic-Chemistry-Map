@@ -1,0 +1,110 @@
+---
+title: "Stephen Reduction"
+description: "Stephen reduction converts a nitrile into an aldehyde: SnCl₂ and HCl reduce R–C≡N to an imine salt, which is hydrolysed by water. Mechanism, examples, limits."
+aliases: ["Stephen reaction", "Stephen aldehyde synthesis", "Stephens reduction", "SnCl2 HCl reduction of nitriles"]
+kind: "named-reaction"
+family: "reduction-reactions"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "Benzonitrile"
+  smiles: "N#Cc1ccccc1"
+product:
+  name: "Benzaldehyde"
+  smiles: "O=Cc1ccccc1"
+byproducts: "NH₃ (present as NH₄Cl in the acid), tin(IV) salts"
+reagents: "1. SnCl₂ + HCl; 2. H₃O⁺ (hydrolysis)"
+conditions: "Reduction to the imine salt, then a separate hydrolysis step with water"
+equation: "R-C#N ->[SnCl2, HCl] R-CH=NH ->[H3O+] R-CHO + NH3"
+notesPages: [66, 67, 110]
+memoryTricks: []
+faq:
+  - q: "What is the Stephen reduction?"
+    a: "It converts a nitrile into an aldehyde. Stannous chloride and hydrochloric acid reduce R–C≡N to the imine R–CH=NH (as its salt), and hydrolysis with water then gives R–CHO and ammonia."
+  - q: "What is the product of the Stephen reduction of ethanenitrile?"
+    a: "Ethanal (acetaldehyde). CH₃CN is reduced to CH₃CH=NH, which is hydrolysed to CH₃CHO and NH₃."
+  - q: "Why does the Stephen reduction stop at the aldehyde?"
+    a: "The intermediate imine salt precipitates as a complex with tin chloride, which protects it from further reduction. The aldehyde is only released afterwards, in the separate hydrolysis step, when no reducing agent is acting on it."
+  - q: "What is the difference between Stephen and Mendius reduction?"
+    a: "Both start from a nitrile. Stephen (SnCl₂/HCl, then H₃O⁺) gives an aldehyde, R–CHO. Mendius (Na in ethanol) adds four hydrogen atoms and gives a primary amine, R–CH₂–NH₂."
+related: ["rosenmund-reduction", "mendius-reduction", "thorpe-reaction", "reagents/dibal-h", "reagents/lithium-aluminium-hydride", "preparation/preparation-of-aldehydes-and-ketones"]
+sources:
+  - title: "Aldehydes, Ketones and Carboxylic Acids (Class XII Chemistry, Unit 8)"
+    url: "https://ncert.nic.in/textbook/pdf/lech203.pdf"
+    publisher: "NCERT"
+  - title: "Stephen aldehyde synthesis"
+    url: "https://en.wikipedia.org/wiki/Stephen_aldehyde_synthesis"
+    publisher: "Wikipedia"
+  - title: "Nitrile reduction"
+    url: "https://en.wikipedia.org/wiki/Nitrile_reduction"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 3
+---
+
+## What is the Stephen reduction?
+
+The **Stephen reduction** converts a **nitrile (R–C≡N) into an aldehyde (R–CHO)**. The nitrile is reduced by **stannous chloride (SnCl₂) and hydrochloric acid** to an **imine** salt, R–CH=NH·HCl, and this is then **hydrolysed with water** to the aldehyde, releasing ammonia. It was reported by the British chemist Henry Stephen in 1925, and NCERT describes it as a standard method for preparing aldehydes from nitriles.
+
+## General reaction
+
+<Eq ce="R-C#N ->[SnCl2, HCl] R-CH=NH ->[H3O+] R-CHO + NH3" />
+
+In acid the ammonia is not set free as a gas; it stays in solution as ammonium chloride.
+
+## Mechanism
+
+1. **Activation by HCl.** Hydrogen chloride adds to the nitrile to give a salt, which is much more easily reduced than the neutral nitrile.
+2. **Reduction by SnCl₂.** Tin(II) transfers electrons (it is oxidised to tin(IV)) and, with protons from HCl, the C≡N carbon receives one hydrogen. The product is the iminium salt R–CH=NH₂⁺ Cl⁻.
+3. **Precipitation.** The iminium salt separates as a complex with tin chloride (an aldimine stannichloride). Because it is out of solution, it is not reduced further to the amine.
+4. **Hydrolysis.** Water adds to the C=N, giving a hemiaminal that loses ammonia to form the aldehyde.
+
+<Eq ce="R-CH=NH2+ + H2O -> R-CHO + NH4+" />
+
+<KeyPoint>
+Stephen reduction adds only **two** hydrogens to the nitrile (to the imine level). Reagents such as LiAlH₄, H₂/Ni or Na/ethanol add four hydrogens and give the primary amine R–CH₂–NH₂ instead.
+</KeyPoint>
+
+## Examples
+
+**1. Benzonitrile to benzaldehyde.**
+
+<Eq ce="C6H5CN ->[SnCl2, HCl] C6H5CH=NH ->[H3O+] C6H5CHO + NH3" />
+
+**2. Ethanenitrile to ethanal.**
+
+<Eq ce="CH3CN ->[SnCl2, HCl] CH3CH=NH ->[H3O+] CH3CHO + NH3" />
+
+**3. Step-up sequence.** An alkyl halide can be converted to an aldehyde with one more carbon: KCN gives the nitrile, and Stephen reduction gives the aldehyde.
+
+<Eq ce="CH3CH2Br ->[alc. KCN] CH3CH2CN ->[1. SnCl2, HCl][2. H3O+] CH3CH2CHO" />
+
+## What different reagents do to a nitrile
+
+| Reagent | Product | Name |
+|---|---|---|
+| SnCl₂ + HCl, then H₃O⁺ | R–CHO | Stephen reduction |
+| DIBAL-H, then H₂O | R–CHO | DIBAL-H reduction |
+| Na + C₂H₅OH | R–CH₂–NH₂ | Mendius reduction |
+| LiAlH₄, or H₂/Ni | R–CH₂–NH₂ | complete reduction |
+| H₃O⁺, heat (no reductant) | R–COOH | hydrolysis |
+
+<ExamTip>
+Read the reagent carefully: "SnCl₂/HCl then H₂O" on a nitrile means aldehyde; "Sn/HCl" (tin metal) on a nitro compound means amine. The two are easy to confuse.
+</ExamTip>
+
+## Limitations
+
+- **Aromatic nitriles work better** than aliphatic nitriles, which often give lower yields.
+- **Substituent effects.** Electron-donating groups on an aryl nitrile favour formation of the tin complex; strongly electron-withdrawing groups favour side products, and some substituted aryl nitriles give poor yields.
+- **Two separate steps.** The imine salt is formed first; water is added only for the final hydrolysis, which can be done directly in the reaction solution.
+
+## Related reactions
+
+- [Rosenmund reduction](/reactions/rosenmund-reduction/): acyl chloride to aldehyde.
+- [DIBAL-H](/reagents/dibal-h/): nitrile or ester to aldehyde.
+- [Mendius reduction](/reactions/mendius-reduction/): nitrile to primary amine with Na/ethanol.
+- [Thorpe reaction](/reactions/thorpe-reaction/): base-catalysed self-condensation of nitriles.
+- [Preparation of aldehydes and ketones](/preparation/preparation-of-aldehydes-and-ketones/) and [Reduction reactions](/mechanisms/reduction-reactions/).

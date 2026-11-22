@@ -1,0 +1,112 @@
+---
+title: "SNi Mechanism"
+description: "SNi (internal nucleophilic substitution) converts an alcohol into an alkyl chloride with SOCl₂ and retention of configuration; adding pyridine gives inversion."
+aliases: ["SNi reaction", "Internal nucleophilic substitution", "Substitution nucleophilic internal", "SOCl2 retention mechanism", "Darzens process"]
+kind: "mechanism-type"
+family: "nucleophilic-substitution"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: []
+reactant:
+  name: "(R)-Butan-2-ol"
+  smiles: "C[C@@H](O)CC"
+product:
+  name: "(R)-2-Chlorobutane (retention)"
+  smiles: "C[C@@H](Cl)CC"
+byproducts: "SO₂ and HCl (both gases)"
+reagents: "SOCl₂ (thionyl chloride), no base"
+conditions: "Neat or in ether/dioxane, without pyridine; with pyridine the path becomes SN2"
+equation: "R-OH + SOCl2 -> R-Cl + SO2 ^ + HCl ^"
+notesPages: [45, 50]
+memoryTricks: []
+faq:
+  - q: "What is the SNi mechanism?"
+    a: "SNi means substitution, nucleophilic, internal. The alcohol first becomes an alkyl chlorosulfite; this then loses SO₂ and the chlorine is delivered to carbon from the same side the oxygen left, through a tight ion pair, so configuration is retained."
+  - q: "Why does SOCl₂ with pyridine give inversion?"
+    a: "Pyridine traps HCl, forms a pyridinium intermediate with the chlorosulfite and releases free Cl⁻. That chloride attacks carbon from the back in an ordinary SN2 step, so the product has the inverted configuration."
+  - q: "Why is thionyl chloride preferred for making alkyl chlorides?"
+    a: "The by-products SO₂ and HCl are gases and escape, so the alkyl chloride is left nearly pure (NCERT)."
+  - q: "What is the Darzens process?"
+    a: "Conversion of an alcohol into an alkyl chloride by thionyl chloride in the presence of a small amount of pyridine or another tertiary amine. It follows the SN2 path."
+related: ["sn1-reaction", "sn2-reaction", "neighbouring-group-participation", "ether-cleavage-with-hx"]
+sources:
+  - title: "SNi"
+    url: "https://en.wikipedia.org/wiki/SNi"
+    publisher: "Wikipedia"
+  - title: "Reactions of Alcohols with Phosphorus Halides and Thionyl Chloride (Wade, Organic Chemistry)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Map:_Organic_Chemistry_(Wade)/12:_Reactions_of_Alcohols/11.08:_Reactions_of_Alcohols_with_Phosphorus_Halides"
+    publisher: "LibreTexts"
+  - title: "Darzens halogenation"
+    url: "https://en.wikipedia.org/wiki/Darzens_halogenation"
+    publisher: "Wikipedia"
+  - title: "Haloalkanes and Haloarenes (Class 12 Chemistry Part II, Unit 6)"
+    url: "https://ncert.nic.in/textbook/pdf/lech201.pdf"
+    publisher: "NCERT"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 4
+  note: "Sources confirm SNi (retention) only for SOCl₂ without base and SN2 (inversion) with pyridine or with PX₃. The notes' SNi label for PCl₅ (and for the second step of PCl₅ with ethers) is not covered by the sources and is kept as exam convention."
+---
+
+## What is the SNi mechanism?
+
+The **SNi mechanism** (substitution, nucleophilic, internal) is a nucleophilic substitution in which the nucleophile comes from **inside the same molecule** and attacks carbon from the **same side** that the leaving group departs. The classic case is an alcohol reacting with **thionyl chloride (SOCl₂) without a base**: the alcohol becomes an alkyl chloride with **retention of configuration**, and SO₂ and HCl escape as gases. If **pyridine** is added, the reaction switches to SN2 and gives **inversion**.
+
+## General reaction
+
+<Eq ce="R-OH + SOCl2 -> R-O-SO-Cl + HCl ; R-O-SO-Cl -> R-Cl + SO2" />
+
+## Mechanism (SOCl₂, no base)
+
+1. **Chlorosulfite formation.** The alcohol oxygen attacks sulphur and displaces Cl⁻; loss of H⁺ (as HCl) gives an **alkyl chlorosulfite**, R–O–S(=O)–Cl.
+2. **Tight ion pair.** The C–O bond weakens and the chlorosulfite begins to fall apart. The carbocation-like carbon and the departing –OSOCl group stay together as an **intimate ion pair**; no free carbocation forms.
+3. **Internal delivery.** SO₂ is lost and the chlorine that was on sulphur bonds to carbon from the front face, the side where oxygen was. The configuration is **retained**.
+
+<KeyPoint>
+SN1 vs SNi: in SN1 the ion pair separates and the planar cation is attacked from both faces (racemisation). In SNi the ion pair never separates, so chlorine can only reach the front face, giving retention.
+</KeyPoint>
+
+## With pyridine: SN2 and inversion
+
+Pyridine reacts with the chlorosulfite to form a pyridinium salt and supplies chloride ion. Free Cl⁻ then attacks the back of the carbon in a clean **SN2** step, so the alkyl chloride is **inverted**. This SOCl₂/pyridine method is the **Darzens process** (Darzens halogenation). The rule to remember: **without pyridine → SNi; with pyridine → SN2**.
+
+<Eq ce="(R)-CH3CH(OH)C2H5 ->[SOCl2] (R)-CH3CH(Cl)C2H5 ; (R)-CH3CH(OH)C2H5 ->[SOCl2, pyridine] (S)-CH3CH(Cl)C2H5" />
+
+## Alcohols with phosphorus halides
+
+The common chlorinating reagents compared:
+
+| Reagent | By-products | Exam label |
+|---|---|---|
+| SOCl₂ | SO₂↑ + HCl↑ | SNi (retention) |
+| SOCl₂ + pyridine | SO₂ + HCl (as pyridinium salt) | SN2 (inversion), Darzens process |
+| PCl₃ (or P₄ + Cl₂) | H₃PO₃ | SN2 (inversion) |
+| PCl₅ in ether | POCl₃ + HCl | SNi |
+| PCl₅ + pyridine | POCl₃ + HCl | SN2 |
+
+LibreTexts confirms that PBr₃ and PCl₃ react through an O–P intermediate that chloride or bromide displaces by backside attack, giving inversion. In exam answers the PCl₅ mechanism is drawn the same way as SOCl₂: R–O–PCl₄ forms, then a chlorine on phosphorus is delivered internally with P=O formation. In exam answers PCl₅ without a base is treated as SNi; the standard references do not settle this point.
+
+<ExamTip>
+NCERT asks why SOCl₂ is preferred: both by-products are gases, so the alkyl halide is obtained pure. JEE Advanced asks the stereochemistry: SOCl₂ alone → retention (SNi); SOCl₂/pyridine or PCl₃/PBr₃ → inversion (SN2).
+</ExamTip>
+
+## Reaction of PCl₅ with ethers
+
+Ethers are also cleaved by PCl₅ into two alkyl chlorides and POCl₃:
+
+<Eq ce="R1-O-R2 + PCl5 -> R1-Cl + R2-Cl + POCl3" />
+
+In the usual exam mechanism the ether oxygen attacks phosphorus; chloride then removes one alkyl group by SN2, and the remaining R–O–PCl₄ gives the second alkyl chloride by internal (SNi-type) delivery. This sequence is exam teaching rather than a sourced mechanism.
+
+## Limitations
+
+- Real stereochemical outcomes with SOCl₂ depend strongly on solvent. In ether or dioxane retention dominates; in other solvents mixtures of retention and inversion are found.
+- In a nucleophilic solvent such as dioxane, retention can also arise by two successive SN2 steps (double inversion) rather than true SNi.
+- The ion-pair carbon may rearrange, as in SN1.
+
+## Related reactions
+
+- [SN1 reaction](/reactions/sn1-reaction/) and [SN2 reaction](/reactions/sn2-reaction/): the two limiting pathways SNi sits between.
+- [Neighbouring group participation](/reactions/neighbouring-group-participation/): another route to retention, by double inversion.
+- [Ether cleavage with HX](/reactions/ether-cleavage-with-hx/): ethers are split by HI or HBr as well as by PCl₅.
+- [Nucleophilic substitution overview](/mechanisms/nucleophilic-substitution/)

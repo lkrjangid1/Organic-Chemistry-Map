@@ -1,0 +1,51 @@
+{
+ "page": "reactions/clemmensen-reduction",
+ "questions": [
+  {
+   "q": "Acetophenone is heated under reflux with zinc amalgam and concentrated HCl. The product is:",
+   "smiles": "CC(=O)c1ccccc1",
+   "options": [
+    "1-Phenylethanol",
+    "Styrene",
+    "Phenyl acetate",
+    "Ethylbenzene"
+   ],
+   "answer": 3,
+   "explain": "Clemmensen reduction turns C=O into CH₂, so C₆H₅COCH₃ becomes C₆H₅CH₂CH₃. Aryl alkyl ketones respond particularly well."
+  },
+  {
+   "q": "A keto ester must have its ketone C=O reduced to CH₂ without hydrolysing the ester, which hot KOH would do. The best reagent is:",
+   "options": [
+    "Zn-Hg and concentrated HCl",
+    "NH₂NH₂ and KOH in ethylene glycol",
+    "NaBH₄ in ethanol",
+    "H₂ with Lindlar catalyst"
+   ],
+   "answer": 0,
+   "explain": "An ester or amide that hot KOH would hydrolyse points to Clemmensen, which works in acid. Wolff–Kishner uses hot KOH, and NaBH₄ only reduces C=O to CH–OH."
+  },
+  {
+   "q": "4-Nitroacetophenone is treated with Zn-Hg and concentrated HCl under reflux. The product is:",
+   "smiles": "CC(=O)c1ccc(cc1)[N+](=O)[O-]",
+   "options": [
+    "1-Ethyl-4-nitrobenzene",
+    "4-Ethylaniline",
+    "4-Aminoacetophenone",
+    "1-(4-Nitrophenyl)ethanol"
+   ],
+   "answer": 1,
+   "explain": "The C=O becomes CH₂, and metal in acid also reduces –NO₂ to –NH₂. Keeping the nitro group intact is the trap."
+  },
+  {
+   "q": "Which statement about the mechanism of the Clemmensen reduction is correct?",
+   "options": [
+    "The ketone is first reduced to the alcohol, which then loses water to a carbocation that is reduced",
+    "It is a homogeneous reaction in which HCl acts as the hydride donor",
+    "It takes place on the zinc surface through organozinc (zinc carbenoid) intermediates; the alcohol is not an intermediate",
+    "Mercury is the reducing agent and zinc only a catalyst"
+   ],
+   "answer": 2,
+   "explain": "The alcohol R–CH(OH)–R′ is generally not reduced to the alkane under Clemmensen conditions, so it cannot be the intermediate. The accepted picture is electron transfer from the zinc surface via a zinc carbenoid."
+  }
+ ]
+}

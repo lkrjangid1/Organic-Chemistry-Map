@@ -1,0 +1,112 @@
+---
+title: "Aldol Condensation (एल्डोल संघनन)"
+description: "Aldol condensation में α-H वाले दो aldehyde या ketone dilute base में जुड़कर β-hydroxy carbonyl बनाते हैं, जो गर्म करने पर पानी खोकर enone देता है।"
+aliases: ["एल्डोल संघनन", "एल्डोल अभिक्रिया", "aldol condensation hindi", "aldol reaction hindi", "aldol addition hindi", "intramolecular aldol hindi", "retro aldol hindi"]
+reagents: "Dilute base: dil. NaOH, Na₂CO₃ या Ba(OH)₂ (acid catalysis भी काम करता है)"
+conditions: "कम से कम एक α-H ज़रूरी; aldol के लिए ठंडा, dehydration के लिए गुनगुना/गर्म (Δ)"
+byproducts: "H₂O (dehydration step में)"
+reactantName: "Ethanal (acetaldehyde)"
+productName: "Crotonaldehyde (but-2-enal), 3-hydroxybutanal के रास्ते"
+memoryTricks:
+  - text: "α-β bond को तोड़े (मिलाकर)"
+    meaning: "किसी aldol product का starting compound निकालना हो तो α-carbon और β-carbon (जिस पर OH है) के बीच का bond तोड़ें और दोनों carbonyl टुकड़ों को वापस बना दें।"
+faq:
+  - q: "Acetaldehyde के aldol condensation का product क्या है?"
+    a: "ठंडे dilute NaOH में ethanal के दो molecules 3-hydroxybutanal (aldol) देते हैं। गुनगुना करने पर यह पानी खोकर but-2-enal (crotonaldehyde) देता है, जो एक α,β-unsaturated aldehyde है।"
+  - q: "Carbonyl compound में α-hydrogen होना क्यों ज़रूरी है?"
+    a: "Base को एक α-H हटाकर enolate ion बनाना होता है, और यही nucleophile दूसरे carbonyl group पर attack करता है। जिन aldehydes में α-H नहीं होता, जैसे HCHO और C₆H₅CHO, वे यह नहीं कर पाते और concentrated alkali में इसकी जगह Cannizzaro reaction देते हैं।"
+  - q: "Aldol addition और aldol condensation में क्या अंतर है?"
+    a: "Aldol addition β-hydroxy aldehyde या ketone पर रुक जाता है। Aldol condensation एक step आगे जाता है: गर्म करने पर पानी निकलता है और conjugated α,β-unsaturated carbonyl compound बनता है।"
+  - q: "Intramolecular aldol reaction में कौन-सा ring size बनता है?"
+    a: "पाँच और छह सदस्यों वाली rings। Hexane-2,5-dione जैसा 1,4-diketone cyclopentenone देता है और heptane-2,6-dione जैसा 1,5-diketone cyclohexenone देता है, क्योंकि सभी steps reversible हैं और सबसे कम strain वाली ring जीतती है।"
+  - q: "Directed aldol reaction में LDA क्या करता है?"
+    a: "Lithium diisopropylamide −78 °C पर α-H को पूरी तरह और irreversibly हटा देता है, इसलिए दूसरा carbonyl compound डालने से पहले एक partner पूरा का पूरा अपने lithium enolate में बदल जाता है। इससे mixture की जगह एक ही crossed aldol product मिलता है।"
+translated: 2026-11-22
+---
+
+## Aldol condensation क्या है?
+
+**Aldol condensation** एक base-catalysed reaction है जिसमें किसी aldehyde या ketone के दो molecules, जिनमें **कम से कम एक α-hydrogen** हो, जुड़कर **β-hydroxy aldehyde या β-hydroxy ketone** बनाते हैं (इसे "aldol" कहते हैं: *ald*ehyde + alcoh*ol*)। गुनगुना करने पर aldol पानी खोता है और **α,β-unsaturated carbonyl compound** बनता है। आमतौर पर dilute NaOH, Na₂CO₃ या Ba(OH)₂ catalyst होते हैं; acids भी काम करते हैं।
+
+सही मायने में पहला stage एक *addition* है (कुछ भी बाहर नहीं निकलता)। यह *condensation* तभी बनता है जब पानी eliminate होता है।
+
+## Mechanism
+
+1. **Enolate बनना।** OH⁻ एक acidic α-H हटाता है, जिससे resonance-stabilised enolate ion बनता है।
+2. **C–C bond बनना।** Enolate का carbon दूसरे molecule के carbonyl carbon पर attack करता है, और एक alkoxide बनता है।
+3. **Protonation।** पानी alkoxide को protonate करता है और aldol बनता है (ethanal से 3-hydroxybutanal)।
+4. **Dehydration (गर्म करने पर)।** एक और α-H हटता है और **E1cB** रास्ते से OH⁻ बाहर निकलता है, जिससे conjugated C=C–C=O system बनता है। Acid में dehydration इसकी जगह enol के through होता है।
+
+<Eq ce="CH3CHO + OH- <=> ^{-}CH2CHO + H2O" />
+<Eq ce="^{-}CH2CHO + CH3CHO -> CH3CH(O^{-})CH2CHO ->[H2O] CH3CH(OH)CH2CHO" />
+
+<KeyPoint>
+Aldol तक का हर step reversible है। गर्म करने से reaction आगे बढ़ता है क्योंकि conjugated enone में dehydration लगभग irreversible है। इसीलिए acetone जैसे ketones, जिनका aldol equilibrium favourable नहीं होता, फिर भी condensation product अच्छी yield में देते हैं।
+</KeyPoint>
+
+Exam answers में आमतौर पर enolate का दूसरे carbonyl group पर attack slow step माना जाता है। असली kinetic studies बताती हैं कि slow step substrate और concentration पर निर्भर करता है, इसलिए इसे सिर्फ़ exam convention की तरह याद रखें।
+
+## Examples
+
+<Eq ce="2 CH3COCH3 <=>[Ba(OH)2] (CH3)2C(OH)CH2COCH3 ->[\Delta][-H2O] (CH3)2C=CHCOCH3" />
+
+Acetone पहले diacetone alcohol (4-hydroxy-4-methylpentan-2-one) देता है और फिर mesityl oxide (4-methylpent-3-en-2-one)।
+
+<Eq ce="2 CH3CH2CHO ->[dil. NaOH] CH3CH2CH(OH)CH(CH3)CHO" />
+
+Propanal से 3-hydroxy-2-methylpentanal बनता है: एक molecule का α-carbon (C-2) दूसरे molecule के carbonyl carbon से bond बनाता है।
+
+## Intramolecular aldol condensation
+
+जिस molecule में दो carbonyl groups हों, वह cyclise हो सकता है। Heptane-2,6-dione (एक 1,5-diketone) छह सदस्यों वाली ring बनाता है: C-1 पर बना enolate C-6 carbonyl पर attack करता है, β-hydroxy ketone बनता है, और गर्म करने पर 3-methylcyclohex-2-en-1-one मिलता है। Hexane-2,5-dione (एक 1,4-diketone) इसी तरह 3-methylcyclopent-2-en-1-one देता है।
+
+<Eq ce="CH3CO(CH2)3COCH3 ->[OH-][\Delta] 3-methylcyclohex-2-enone + H2O" />
+
+<KeyPoint>
+Ring-size rule: **6 को 4 और 8 से ज़्यादा prefer किया जाता है; 5 को 3 और 7 से।** चूँकि सभी steps reversible हैं, strain-free पाँच या छह सदस्यों वाली ring ही जमा होती है।
+</KeyPoint>
+
+## Retro-aldol reaction
+
+**Retro-aldol** reaction इसका उल्टा है: base किसी aldol के α-carbon और β-carbon के बीच का bond तोड़ देता है, जिससे दो carbonyl compounds मिलते हैं। उदाहरण के लिए diacetone alcohol टूटकर वापस acetone के दो molecules बन जाता है।
+
+इसका उपयोग "equilibration" वाले questions में होता है। 1-(2-Hydroxy-2-methylcyclobutyl)ethanone, जो strain वाला चार सदस्यों का aldol है, retro-aldol से खुलकर heptane-2,6-dione बनता है। फिर यह खुला diketone दोबारा aldol addition से बंद होकर छह सदस्यों वाला 3-hydroxy-3-methylcyclohexanone बनाता है।
+
+<Trick>
+कोई aldol किससे बना है, यह जानने के लिए α-carbon और OH वाले carbon के बीच का bond तोड़ें, और OH वाले carbon को वापस C=O बना दें।
+</Trick>
+
+## Vinylogous aldol condensation
+
+Crotonaldehyde (CH₃–CH=CH–CHO) में conjugated C=C, carbonyl का activating effect आखिरी CH₃ group तक पहुँचा देता है, इसलिए ये **γ-hydrogens** α-H की तरह acidic होते हैं। इससे बना extended enolate γ-carbon पर react करता है। हर condensation में एक –CH=CH– unit जुड़ती है:
+
+<Eq ce="CH3CH=CHCHO + CH3CHO ->[OH-][\Delta] CH3(CH=CH)2CHO + H2O" />
+
+Product hexa-2,4-dienal है। Polyene वाले questions में, CH₃(CH=CH)ₙCHO के एक molecule का आखिरी CH₃ दूसरे molecule के CHO पर attack करता है, इसलिए self-condensation से CH₃(CH=CH)₂ₙ₊₁CHO बनता है। यानी n = 200 से n = 401 मिलता है, और n = 201 पाने के लिए starting n = 100 चाहिए।
+
+## Directed aldol (LDA)
+
+**LDA (lithium diisopropylamide)** जैसे strong और bulky base के साथ THF में −78 °C पर एक partner पूरी तरह और irreversibly अपने **lithium enolate** में बदल जाता है। Unsymmetrical ketone में proton कम hindered side से हटता है (kinetic enolate)। दूसरा carbonyl compound बाद में डाला जाता है, इसलिए सिर्फ़ एक crossed product बनता है।
+
+<Eq ce="CH3COCH3 ->[LDA][THF, -78 ^{\circ}C] CH2=C(OLi)CH3 ->[1. HCHO][2. H3O+] HOCH2CH2COCH3" />
+
+यही lithium enolate CH₃Cl के साथ SN2 से react करके butan-2-one देता है। यह α-alkylation है, aldol reaction नहीं।
+
+<ExamTip title="Common mistake">
+LDA का मतलब lithium di**isopropyl**amide, LiN(CH(CH₃)₂)₂ है, "di-isobutyl" amide नहीं। यह एक strong base है जो इतना hindered है कि nucleophile की तरह काम नहीं कर पाता।
+</ExamTip>
+
+## Limitations और exceptions
+
+- HCHO, C₆H₅CHO और (CH₃)₃C–CHO में α-H नहीं होता, इसलिए ये self-condense नहीं कर सकते। Concentrated alkali में ये इसकी जगह [Cannizzaro reaction](/hi/reactions/cannizzaro-reaction/) देते हैं।
+- R₂CH–CHO से बने aldols dehydrate होकर enone नहीं बना सकते, क्योंकि नए quaternary carbon पर कोई α-H नहीं बचता।
+- Pentane-2,4-dione जैसे 1,3-dicarbonyls बस deprotonate होकर stable enolate बना लेते हैं और self-condense नहीं करते।
+
+## Related reactions
+
+- [Cross aldol और Claisen–Schmidt condensation](/hi/reactions/cross-aldol-condensation/)
+- [Claisen condensation](/hi/reactions/claisen-condensation/), इसका ester version
+- [Robinson annulation](/hi/reactions/robinson-annulation/), Michael addition के बाद intramolecular aldol
+- [Aldol vs Cannizzaro reaction](/hi/comparisons/aldol-vs-cannizzaro/)
+- [E1cB mechanism](/hi/reactions/e1cb-mechanism/), dehydration step
+- Hub: [Carbonyl condensation reactions](/hi/mechanisms/carbonyl-condensation-reactions/)

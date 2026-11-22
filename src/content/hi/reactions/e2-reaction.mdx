@@ -1,0 +1,106 @@
+---
+title: "E2 Reaction (द्वि-अणुक विलोपन)"
+description: "E2 reaction एक step वाला bimolecular elimination है: strong base leaving group के anti β-H को हटाता है और alkyl halide से alkene बनता है।"
+aliases: ["द्वि-अणुक विलोपन", "ई2 अभिक्रिया", "e2 reaction hindi", "e2 mechanism hindi", "dehydrohalogenation hindi", "anti elimination hindi", "e2 kya hai"]
+reagents: "Strong base: alcoholic KOH, NaOEt/EtOH, या bulky KOtBu"
+conditions: "गर्म करना, alcoholic (non-aqueous) solvent"
+byproducts: "Ethanol, NaBr"
+reactantName: "2-Bromopentane"
+productName: "(E)-Pent-2-ene (major, Saytzeff product)"
+steps:
+  - title: "Base anti-periplanar β-H की सीध में आता है"
+    text: "Ethoxide जैसा strong base 2-bromopentane के उस β-hydrogen के पास आता है जो Br से anti-periplanar है (H–C–C–Br dihedral angle 180°)। Substrate और base दोनों slow step में शामिल हैं, इसलिए rate = k[RX][Base]।"
+    arrows: "EtO⁻ का lone pair C-3 के उस hydrogen की ओर है जो C–Br bond के anti है।"
+  - title: "एक ही concerted step"
+    text: "एक ही transition state में C–H bond टूटता है, C=C π bond बनता है और Br⁻ निकलता है; कोई intermediate नहीं बनता। बड़ा primary deuterium isotope effect दिखाता है कि C–H bond rate-determining step में टूटता है।"
+    arrows: "EtO⁻ lone pair → β-H; C–H bond pair → C2–C3 π bond; C–Br bond pair → Br, जो Br⁻ बनकर निकलता है, सब एक साथ।"
+  - title: "Saytzeff बनाम Hofmann alkene"
+    text: "छोटे base के साथ ज़्यादा substituted pent-2-ene (ज़्यादातर E) major Saytzeff product है; C-1 का hydrogen हटने पर pent-1-ene minor alkene के रूप में बनता है। KOtBu जैसा bulky base, या F या onium leaving group, कम substituted Hofmann alkene को major बना देता है।"
+    arrows: "C-1 के hydrogen से शुरू होने वाले यही तीन arrows pent-1-ene देते हैं।"
+  - title: "Stereospecific anti elimination"
+    text: "H और Br का anti होना ज़रूरी है, इसलिए substrate का configuration alkene की geometry तय करता है: (1R,2R)-1,2-dibromo-1,2-diphenylethane से सिर्फ़ (Z)-1-bromo-1,2-diphenylethene बनता है, जबकि meso isomer से सिर्फ़ E alkene। Cyclohexanes में H और leaving group का trans-diaxial होना ज़रूरी है।"
+    arrows: "Base एक C–Br के anti वाला H हटाता है; वह C–H pair π bond बनाता है और anti Br निकल जाता है।"
+faq:
+  - q: "E2 reaction क्या है?"
+    a: "E2 एक step वाला (concerted) elimination है जिसमें strong base एक β-hydrogen हटाता है, उसी समय leaving group निकलता है और C=C bond बनता है, सब एक ही transition state में। इसका rate substrate और base दोनों पर निर्भर करता है।"
+  - q: "E2 को anti-periplanar geometry क्यों चाहिए?"
+    a: "टूटने वाले C–H और C–X orbitals को नया π bond बनाने के लिए एक ही plane में होना चाहिए। Anti arrangement (180°) staggered है और eclipsed syn arrangement से कम energy वाला है, इसलिए E2 आमतौर पर इसी से होता है।"
+  - q: "Alkyl halide और alcoholic KOH का product क्या है?"
+    a: "Dehydrohalogenation से एक alkene। Chloroethane alcoholic KOH से ethene देता है, जबकि aqueous KOH से substitution द्वारा ethanol मिलता है, क्योंकि पानी में OH⁻ मुख्य रूप से nucleophile की तरह काम करता है।"
+  - q: "E2 कब Saytzeff की जगह Hofmann product देता है?"
+    a: "Potassium tert-butoxide जैसे bulky base के साथ, F, –NR₃⁺ या –SR₂⁺ जैसे poor या charged leaving groups के साथ, और भीड़ वाले substrates के साथ। इन cases में कम substituted alkene major product बन जाता है।"
+  - q: "(1R,2R)-1,2-dibromo-1,2-diphenylethane E2 से कौन-सा alkene देता है?"
+    a: "सिर्फ़ (Z)-1-bromo-1,2-diphenylethene। Meso diastereomer सिर्फ़ E isomer देता है। यह stereospecificity anti-periplanar elimination का सबूत है।"
+translated: 2026-11-22
+---
+
+## E2 reaction क्या है?
+
+**E2 reaction** (elimination, bimolecular) एक **one-step, concerted β-elimination** है: strong base β-carbon से hydrogen खींचता है, ठीक उसी समय leaving group α-carbon से निकलता है, और एक ही transition state में C=C bond बनता है। गर्म करने पर alcoholic KOH या sodium ethoxide से **alkyl halide को alkene में बदलने** का यही आम तरीका है (dehydrohalogenation)।
+
+Substrate और base दोनों slow step में आते हैं, इसलिए **rate = k[RX][Base]**।
+
+## Mechanism
+
+1. Base (B⁻) उस β-hydrogen के पास आता है जो leaving group से **anti-periplanar** है (H–C–C–X dihedral angle 180°)।
+2. एक ही step में C–H bond टूटता है, C=C π bond बनता है और C–X bond टूटता है; X अपने electron pair के साथ निकलता है।
+3. Products: alkene + B–H + X⁻।
+
+<Eq ce="B- + H-CR2-CR2-X -> R2C=CR2 + B-H + X-" />
+
+<KeyPoint>
+E2 एक **anti elimination** है, यह **concerted one-step mechanism** है, और छोटे base के साथ इसका **major product Saytzeff alkene** (ज़्यादा substituted alkene) होता है।
+</KeyPoint>
+
+Single step का सबूत: second-order kinetics और बड़ा primary deuterium isotope effect (C–D bond, C–H से धीरे टूटता है), क्योंकि C–H bond rate-determining step में टूटता है।
+
+## Examples
+
+**1. Aqueous बनाम alcoholic KOH।** Solvent के हिसाब से एक ही alkyl halide अलग products देता है:
+
+<Eq ce="CH3CH2Cl ->[aq. KOH] CH3CH2OH (substitution)" />
+<Eq ce="CH3CH2Cl ->[alc. KOH][\Delta] CH2=CH2 (elimination)" />
+
+Exam answers में कारण यह दिया जाता है कि पानी में OH⁻ बहुत ज़्यादा solvated होता है और मुख्य रूप से nucleophile की तरह काम करता है, जबकि alcoholic KOH में ethoxide ions होते हैं, जो ज़्यादा strong base हैं, इसलिए elimination जीतता है। असल में aqueous base के साथ भी कुछ alkene बनता है और alcoholic base के साथ भी कुछ substitution होता है।
+
+**2. 2-Bromopentane और sodium ethoxide।** C-3 से H हटने पर pent-2-ene (Saytzeff, ज़्यादातर *E* isomer) बनता है; C-1 से हटने पर pent-1-ene (minor)।
+
+<Eq ce="CH3CHBrCH2CH2CH3 ->[NaOEt, EtOH][\Delta] CH3CH=CHCH2CH3 (major) + CH2=CHCH2CH2CH3 (minor)" />
+
+**3. छोटा base बनाम bulky base।** 2-Bromo-2-methylbutane, NaOEt के साथ मुख्य रूप से 2-methylbut-2-ene (Saytzeff) देता है। Bulky potassium tert-butoxide के साथ ज़्यादा खुले CH₃ hydrogens हटते हैं और 2-methylbut-1-ene (Hofmann product) major बन जाता है।
+
+## Stereospecificity
+
+H और X का anti होना ज़रूरी है, इसलिए substrate का configuration alkene की geometry तय करता है। *meso*-1,2-Dibromo-1,2-diphenylethane से सिर्फ़ (*E*)-1-bromo-1,2-diphenylethene बनता है, जबकि (1*R*,2*R*) या (1*S*,2*S*) isomer से सिर्फ़ (*Z*) alkene।
+
+<Eq ce="(1R,2R)-PhCHBr-CHBrPh ->[KOEt][\Delta] (Z)-PhCBr=CHPh + HBr" />
+
+Cyclohexanes में H और leaving group दोनों का **axial (trans-diaxial)** होना ज़रूरी है। अगर ऐसा कोई β-H नहीं है, तो E2 Saytzeff alkene नहीं दे सकता और इसकी जगह कम substituted alkene दे सकता है।
+
+## Saytzeff या Hofmann?
+
+| Condition | Major alkene |
+|---|---|
+| छोटा strong base (OH⁻, EtO⁻, MeO⁻), halide leaving group | Saytzeff (ज़्यादा substituted) |
+| Bulky base (KOtBu, Et₃N) | Hofmann (कम substituted) |
+| Leaving group F, –NR₃⁺, –SR₂⁺ | Hofmann |
+| ज़्यादा substituted β-carbon के पास भीड़ वाला substrate | Hofmann |
+
+<ExamTip>
+E2 question में पहले वे सारे β-hydrogens ढूँढें जो leaving group से anti-periplanar हो सकते हैं, फिर Saytzeff लगाएँ, जब तक base bulky न हो या leaving group F या onium group न हो। Cyclohexyl halides के लिए chair बनाएँ और सिर्फ़ axial β-hydrogens देखें।
+</ExamTip>
+
+## Limitations और exceptions
+
+- **SN2 से competition:** कई bases (OH⁻, EtO⁻) nucleophiles भी हैं। 2° या 3° substrate, ज़्यादा strong या bulky base, alcoholic solvent और ज़्यादा temperature elimination को favour करते हैं।
+- **Primary halides** छोटे bases के साथ मुख्य रूप से SN2 देते हैं; KOtBu के साथ मुख्य रूप से alkene देते हैं।
+- **Fluorides** धीरे react करते हैं क्योंकि F⁻ poor leaving group है, और ये Hofmann products देने की ओर झुकते हैं।
+
+## Related reactions
+
+- [E1 reaction](/hi/reactions/e1-reaction/): दो step वाला, carbocation रास्ता।
+- [E1cB mechanism](/hi/reactions/e1cb-mechanism/): acidic β-H के साथ carbanion रास्ता।
+- [Hofmann elimination](/hi/reactions/hofmann-elimination/): quaternary ammonium hydroxides का E2, जो कम substituted alkene देता है।
+- [SN2 reaction](/hi/reactions/sn2-reaction/): वह substitution जो E2 से compete करता है।
+- [Dehydration of alcohols](/hi/reactions/dehydration-of-alcohols/): acid में primary alcohols, और POCl₃/pyridine से dehydrations, E2 रास्ता follow करते हैं।
+- [Elimination reactions hub](/hi/mechanisms/elimination-reactions/)।

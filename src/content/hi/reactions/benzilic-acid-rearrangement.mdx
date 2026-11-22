@@ -1,0 +1,94 @@
+---
+title: "Benzilic Acid Rearrangement (बेंज़िलिक अम्ल पुनर्विन्यास)"
+description: "Benzilic acid rearrangement में benzil जैसा 1,2-diketone hydroxide और फिर acid से 1,2-aryl shift द्वारा α-hydroxy acid (benzilic acid) में बदलता है।"
+aliases: ["बेंज़िलिक अम्ल पुनर्विन्यास", "बेंजिलिक एसिड रीअरेंजमेंट", "benzilic acid rearrangement hindi", "benzil benzilic acid rearrangement hindi", "b2 rearrangement hindi", "benzil se benzilic acid", "benzilic ester rearrangement hindi"]
+reagents: "Concentrated KOH या NaOH, फिर H₃O⁺"
+conditions: "Aqueous या alcoholic base में गर्म करें; acid निकालने के लिए acidify करें"
+byproducts: "कोई नहीं"
+reactantName: "Benzil (1,2-diphenylethane-1,2-dione)"
+productName: "Benzilic acid (2-hydroxy-2,2-diphenylacetic acid)"
+memoryTricks:
+  - text: "ब्रह्मास्त्र"
+    meaning: "'ब्रह्मास्त्र' (सबसे बड़ा हथियार) वाला shortcut: Step I, दोनों C=O carbons के बीच एक phenyl को इधर से उधर ले जाएँ; Step II, Ph₂C(OH)–COOH लिख दें।"
+faq:
+  - q: "Benzilic acid rearrangement का product क्या है?"
+    a: "एक α-hydroxy carboxylic acid। Benzil, C₆H₅COCOC₆H₅, hydroxide और फिर acid से treat करने पर benzilic acid, (C₆H₅)₂C(OH)COOH, देता है।"
+  - q: "Benzilic acid rearrangement की ज़रूरी condition क्या है?"
+    a: "Substrate एक 1,2-dicarbonyl compound (–CO–CO–) होना चाहिए। यह सबसे अच्छा तब चलता है जब carbonyls के पास कोई enolisable hydrogen न हो, वरना aldol reactions competition करती हैं।"
+  - q: "Benzilic acid rearrangement में rate-determining step कौन-सा है?"
+    a: "Aryl group का alkoxide carbon से पास वाले carbonyl carbon पर 1,2-migration। उससे पहले का hydroxide addition एक fast equilibrium है, और rate diketone में first order और base में first order होता है।"
+  - q: "Cyclic 1,2-diketone का benzilic acid rearrangement में क्या होता है?"
+    a: "Ring एक carbon से छोटी हो जाती है (ring contraction)। उदाहरण के लिए, phenanthrene-9,10-quinone से 9-hydroxyfluorene-9-carboxylic acid मिलता है।"
+  - q: "Benzilic acid rearrangement का Cannizzaro reaction से क्या संबंध है?"
+    a: "दोनों में पहले hydroxide carbonyl पर जुड़ता है और alkoxide एक group को पास वाले carbonyl carbon पर धकेलता है। जब migrate होने वाला group hydride हो, जैसे α-keto aldehydes में, तो reaction एक intramolecular Cannizzaro reaction होता है।"
+translated: 2026-11-22
+---
+
+## Benzilic acid rearrangement क्या है?
+
+**Benzilic acid rearrangement** में base की मदद से **1,2-diketone एक α-hydroxy carboxylic acid** में बदलता है। Hydroxide एक carbonyl पर जुड़ता है, और उस carbon पर लगा कोई group (आमतौर पर aryl group) **पास वाले carbonyl carbon पर migrate** कर जाता है। फिर acidify करने पर free acid मिलता है। इसका नाम classic example से आया है: **benzil** KOH के साथ **benzilic acid**, (C₆H₅)₂C(OH)COOH, देता है। Liebig ने इसे 1838 में किया था, इसलिए यह अब तक report हुआ पहला rearrangement reaction है।
+
+ज़रूरी condition: एक **–CO–CO–** unit (1,2-dicarbonyl)। Reagent: **concentrated base**, फिर acid।
+
+## Mechanism
+
+1. **Hydroxide addition।** OH⁻ benzil के एक carbonyl carbon पर attack करता है, जिससे tetrahedral alkoxide, C₆H₅CO–C(O⁻)(OH)C₆H₅, बनता है। यह step एक fast, reversible equilibrium है।
+2. **1,2-Aryl shift।** Alkoxide फिर से C=O bond बनाता है और उसी समय उस carbon पर लगा phenyl group अपने bonding pair के साथ बगल वाले carbonyl carbon पर चला जाता है। उस carbonyl का oxygen alkoxide बन जाता है। यह migration **rate-determining step** है।
+3. **Proton transfer।** Intermediate (C₆H₅)₂C(O⁻)–COOH में एक carboxylic acid और उससे कहीं ज़्यादा basic alkoxide होता है, इसलिए proton खिसककर carboxylate (C₆H₅)₂C(OH)COO⁻ बनाता है।
+4. **Acid work-up।** H₃O⁺ carboxylate को protonate करके benzilic acid बनाता है।
+
+<Eq ce="C6H5COCOC6H5 + OH- <=> C6H5CO-C(O-)(OH)C6H5" />
+<Eq ce="C6H5CO-C(O-)(OH)C6H5 -> (C6H5)2C(O-)-COOH -> (C6H5)2C(OH)COO-" />
+<Eq ce="(C6H5)2C(OH)COO- + H3O+ -> (C6H5)2C(OH)COOH + H2O" />
+
+<KeyPoint>
+एक carbon oxidise होता है (वह COOH carbon बनता है) और दूसरा reduce होता है (वह C–OH carbon बनता है), इसलिए यह rearrangement एक intramolecular redox reaction है। Rate diketone में first order और hydroxide में first order होता है।
+</KeyPoint>
+
+<Trick>
+Shortcut (ब्रह्मास्त्र): Step I, एक phenyl को उधर ले जाएँ ताकि दोनों phenyls एक ही carbon पर आ जाएँ। Step II, उस carbon को C(OH) और दूसरे को COOH लिखें: Ph₂C(OH)–COOH।
+</Trick>
+
+## Hydride migration: intramolecular Cannizzaro
+
+अगर migrate होने वाला group aryl या alkyl की जगह **H (या D, T)** हो, तो यही pathway एक **intramolecular Cannizzaro reaction** बन जाता है। α-Keto aldehydes यह साफ़-साफ़ करते हैं; phenylglyoxal से mandelic acid मिलता है:
+
+<Eq ce="C6H5COCHO ->[1. OH-][2. H3O+] C6H5CH(OH)COOH" />
+
+अगर कोई और group migrate करे, तो इसे benzilic acid (B²) rearrangement कहते हैं।
+
+## Migratory aptitude
+
+- **Aryl groups, alkyl groups से ज़्यादा आसानी से migrate करते हैं।**
+- **Electron-withdrawing substituents वाले aryl groups सबसे तेज़ migrate करते हैं**, इसलिए unsymmetrical benzil में ज़्यादा electron-poor aryl group खिसकता है।
+
+## Examples
+
+**Benzil से benzilic acid:**
+
+<Eq ce="C6H5COCOC6H5 ->[1. KOH, \Delta][2. H3O+] (C6H5)2C(OH)COOH" />
+
+**Ring contraction।** Cyclic 1,2-diketone में migrate होने वाला group एक ring bond होता है, इसलिए ring एक carbon से छोटी हो जाती है। Phenanthrene-9,10-quinone से 9-hydroxyfluorene-9-carboxylic acid मिलता है (छह सदस्यों वाली बीच की ring पाँच सदस्यों वाली बन जाती है):
+
+<Eq ce="C14H8O2 ->[1. OH-][2. H3O+] C14H10O3" />
+
+यह quinone खुद 9(10H)-phenanthrenone में C=O के बगल वाले CH₂ को [selenium dioxide](/hi/reagents/selenium-dioxide/) से oxidise करके बनाया जा सकता है, इसलिए "SeO₂, फिर OH⁻" वाले questions का अंत इसी ring-contracted acid पर होता है।
+
+**Benzilic ester rearrangement।** Hydroxide की जगह alkoxide (RO⁻) लेने पर product **α-hydroxy ester** होता है, जैसे Ph₂C(OH)COOR। जो alkoxides आसानी से oxidise होते हैं, वे इसकी जगह Meerwein–Ponndorf–Verley जैसी side reaction से diketone को reduce कर सकते हैं।
+
+<ExamTip>
+Benzilic acid rearrangement के बाद, जो दो groups शुरू में अलग-अलग carbons पर थे, वे एक ही carbon पर आ जाते हैं, OH और COOH दोनों के बगल में। Carbons गिनें: product में उतने ही carbons होते हैं जितने diketone में (alkoxide इस्तेमाल हो तो ester का alkyl group अलग से)।
+</ExamTip>
+
+## Limitations
+
+- **Enolisable α-hydrogens** वाले diketones base में aldol condensation कर सकते हैं, जिससे yield घटती है।
+- दोनों carbonyl groups पास-पास के carbons पर होने चाहिए; shift के लिए alkoxide carbon के ठीक बगल में carbonyl carbon चाहिए।
+
+## Related reactions
+
+- [Benzoin condensation](/hi/reactions/benzoin-condensation/): benzoin बनाता है, जिसे nitric acid oxidise करके benzil बनाता है।
+- [Cannizzaro reaction](/hi/reactions/cannizzaro-reaction/): hydride-migration वाला analogue।
+- [Favorskii rearrangement](/hi/reactions/favorskii-rearrangement/): एक और base-promoted rearrangement जो carboxylic acid derivatives और ring contraction देता है।
+- [Pinacol–pinacolone rearrangement](/hi/reactions/pinacol-pinacolone-rearrangement/): anion की जगह cation के through होने वाला 1,2-shift।
+- Hub: [rearrangement reactions](/hi/mechanisms/rearrangement-reactions/)।

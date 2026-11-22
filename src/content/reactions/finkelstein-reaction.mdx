@@ -1,0 +1,113 @@
+---
+title: "Finkelstein Reaction"
+description: "Finkelstein reaction converts an alkyl chloride or bromide into an alkyl iodide with NaI in dry acetone by SN2 halogen exchange. Mechanism, scope and examples."
+aliases: ["Finkelstein halogen exchange", "Frinkelstein reaction", "NaI in acetone reaction", "Halogen exchange reaction"]
+kind: "named-reaction"
+family: "nucleophilic-substitution"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["finkelstein_reaction"]
+reactant:
+  name: "Bromoethane (ethyl bromide)"
+  smiles: "CCBr"
+product:
+  name: "Iodoethane (ethyl iodide)"
+  smiles: "CCI"
+byproducts: "NaBr or NaCl (precipitates from acetone)"
+reagents: "NaI (or KI)"
+conditions: "Dry acetone, warm or reflux"
+equation: "CH3CH2Br + NaI ->[dry acetone] CH3CH2I + NaBr v"
+notesPages: [43, 51]
+memoryTricks: []
+faq:
+  - q: "What is the Finkelstein reaction?"
+    a: "It is the conversion of an alkyl chloride or alkyl bromide into an alkyl iodide by heating with sodium iodide in dry acetone. It is an SN2 halogen exchange reaction."
+  - q: "Why is dry acetone used in the Finkelstein reaction?"
+    a: "Sodium iodide dissolves in acetone, but sodium chloride and sodium bromide do not. The NaCl or NaBr precipitates as it forms, which pulls the equilibrium towards the alkyl iodide (Le Chatelier's principle)."
+  - q: "Can alkyl fluorides be used in the Finkelstein reaction?"
+    a: "No. The C–F bond is very strong and fluoride is a poor leaving group, so iodide cannot displace it. The usable substrates are alkyl chlorides and bromides (and sulfonates)."
+  - q: "What is the difference between the Finkelstein and Swarts reactions?"
+    a: "Both are halogen exchange reactions. Finkelstein makes alkyl iodides using NaI in acetone, while Swarts makes alkyl fluorides by heating alkyl chlorides or bromides with metal fluorides such as AgF, Hg2F2, CoF2 or SbF3."
+  - q: "Do tertiary or aryl halides undergo the Finkelstein reaction?"
+    a: "No. Because the reaction is SN2, tertiary, vinyl and aryl halides are essentially unreactive. Primary halides react well, secondary halides react slowly."
+related: ["swarts-reaction", "sn2-reaction", "sn1-reaction", "williamson-ether-synthesis"]
+sources:
+  - title: "Haloalkanes and Haloarenes (Class XII Chemistry, Unit 6)"
+    url: "https://ncert.nic.in/textbook/pdf/lech201.pdf"
+    publisher: "NCERT"
+  - title: "Finkelstein reaction"
+    url: "https://en.wikipedia.org/wiki/Finkelstein_reaction"
+    publisher: "Wikipedia"
+  - title: "Finkelstein Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/finkelstein-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "conflict"
+  checked: 2026-11-21
+  sourceCount: 3
+  note: "Notes list X = Cl, Br, F as the halogen replaced; sources say only chlorides and bromides (and sulfonates) are converted, since fluoride is a very poor leaving group. Page follows the sources."
+---
+
+## What is the Finkelstein reaction?
+
+The **Finkelstein reaction** is a halogen exchange in which an **alkyl chloride or alkyl bromide is converted into an alkyl iodide** by treatment with **sodium iodide in dry acetone**. It follows an **SN2** mechanism. The reaction is an equilibrium, but it goes almost to completion because the NaCl or NaBr formed is insoluble in acetone and precipitates out. It is named after the German chemist Hans Finkelstein (1910).
+
+## General reaction
+
+<Eq ce="R-X + NaI ->[dry acetone] R-I + NaX v \quad (X = Cl, Br)" />
+
+Some books also allow DMSO as the polar aprotic solvent. The driving force, however, is the solubility difference in acetone: NaI dissolves, NaCl and NaBr do not.
+
+## Mechanism
+
+1. **Nucleophile.** Sodium iodide dissolves in acetone to give free iodide ions. Iodide is large, polarisable and a strong nucleophile in a polar aprotic solvent.
+2. **Backside attack (one step).** I⁻ attacks the carbon bearing the halogen from the side opposite the C–X bond. The C–I bond forms while the C–X bond breaks, through a single five-coordinate transition state.
+3. **Inversion.** As in every SN2 reaction, the configuration at the carbon is inverted (Walden inversion). A chiral secondary halide gives the iodide of opposite configuration.
+4. **Precipitation.** Na⁺ and the departing Cl⁻ or Br⁻ form NaCl or NaBr, which crash out of acetone. Removing a product shifts the equilibrium to the right (Le Chatelier's principle).
+
+<Eq ce="I- + CH3CH2-Br -> [I\cdots CH2(CH3)\cdots Br]^{-} -> I-CH2CH3 + Br-" />
+
+<KeyPoint>
+The Finkelstein reaction is SN2: rate depends on both R–X and I⁻, it works best on methyl and primary halides, and it inverts the configuration at a stereocentre.
+</KeyPoint>
+
+## Examples
+
+**Ethyl bromide to ethyl iodide** (the standard textbook example):
+
+<Eq ce="CH3CH2Br + NaI ->[acetone] CH3CH2I + NaBr v" />
+
+**Methyl chloride to methyl iodide:**
+
+<Eq ce="CH3Cl + NaI ->[acetone] CH3I + NaCl v" />
+
+**Benzyl chloride to benzyl iodide** (benzylic halides react very fast in SN2):
+
+<Eq ce="C6H5CH2Cl + NaI ->[acetone] C6H5CH2I + NaCl v" />
+
+## Reactivity order
+
+Because the reaction is SN2, steric hindrance at the carbon controls the rate:
+
+- **Fast:** methyl, primary, allyl, benzyl and α-halo carbonyl halides.
+- **Slow:** secondary halides.
+- **Practically no reaction:** tertiary, neopentyl, vinyl and aryl halides.
+
+This difference is the basis of the **sodium iodide in acetone test** in qualitative analysis: a quick white precipitate (NaCl or NaBr) indicates a reactive primary, allylic or benzylic halide.
+
+<ExamTip>
+If a question shows R–Cl or R–Br with NaI in acetone, write R–I and NaX as a precipitate, and say "SN2, driven by precipitation of NaX". For a chiral 2° halide, show the iodide with inverted configuration.
+</ExamTip>
+
+## Limitations and exceptions
+
+- **Fluorides do not react as substrates.** A common mistake is to include F among the halogens replaced, but iodide cannot displace fluoride: the C–F bond is very strong and F⁻ is a poor leaving group. Only chlorides, bromides and sulfonates (tosylates, mesylates) are converted.
+- **Tertiary and aryl halides** do not undergo SN2. Aryl chlorides and bromides need a copper(I) iodide catalyst (the so-called aromatic Finkelstein reaction), which is outside the JEE/NEET syllabus.
+- **Making fluorides by exchange** uses metal fluorides instead (Swarts reaction, or KF in a polar aprotic solvent). Fluoride is a poor leaving group, so once the C–F bond forms it stays.
+
+## Related reactions
+
+- [Swarts reaction](/reactions/swarts-reaction/): the other halogen exchange reaction in NCERT, used to make alkyl fluorides.
+- [SN2 reaction](/reactions/sn2-reaction/): the mechanism the Finkelstein reaction follows.
+- [SN1 reaction](/reactions/sn1-reaction/): why tertiary halides behave differently.
+- [Williamson ether synthesis](/reactions/williamson-ether-synthesis/): a catalytic amount of iodide is sometimes added to speed up slow alkyl chlorides by an in situ Finkelstein exchange.
+- [Nucleophilic substitution](/mechanisms/nucleophilic-substitution/): overview of all substitution pathways.

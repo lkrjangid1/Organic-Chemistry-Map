@@ -1,0 +1,163 @@
+---
+title: "Stability Order of Carbocations, Carbanions and Free Radicals"
+description: "Stability order of carbocations, carbanions and free radicals: 3° > 2° > 1° for cations and radicals, reverse for carbanions, plus resonance and aromatic cases."
+aliases: ["Carbocation stability order", "Free radical stability order", "Carbanion stability order", "Stability of reaction intermediates", "Hybridisation of methyl radical", "CF3- vs CCl3- stability", "Hydride ion affinity order"]
+category: "Stability and energy"
+exams: ["jee-main", "jee-advanced", "neet"]
+molecule:
+  name: "Cyclopropylmethyl cation"
+  smiles: "[CH2+]C1CC1"
+notesPages: [139, 155, 156]
+memoryTricks:
+  - text: "is me free radical ko hyb. में nhi lete h, free radical pure p orbital me hota h"
+    meaning: "For •CH₃ the odd electron is not counted in hybridisation; it sits in a pure p orbital, so the carbon is sp²."
+faq:
+  - q: "What is the order of stability of carbocations?"
+    a: "Among simple alkyl cations: tertiary > secondary > primary > methyl, because alkyl groups donate electrons by the inductive effect and hyperconjugation. Resonance-stabilised (allyl, benzyl), cyclopropyl-stabilised and aromatic cations (tropylium, cyclopropenyl) are more stable still, while vinyl and phenyl cations are among the least stable."
+  - q: "What is the order of stability of free radicals?"
+    a: "Allyl ≈ benzyl > tertiary > secondary > primary > methyl > vinyl ≈ phenyl. The order follows C–H bond dissociation energies: the weaker the C–H bond that is broken, the more stable the radical formed."
+  - q: "Why is the stability order of carbanions the reverse of carbocations?"
+    a: "Alkyl groups push electron density towards the charged carbon. That helps a positive centre but piles more charge onto a negative one, so CH₃⁻ > 1° > 2° > 3° for simple carbanions. Carbanions are stabilised instead by resonance, electron-withdrawing groups, greater s character and aromaticity."
+  - q: "What is the hybridisation of the methyl free radical?"
+    a: "The methyl radical is planar, so its carbon is described as sp² hybridised with the unpaired electron in an unhybridised p orbital. The methyl carbanion, in contrast, is pyramidal (sp³)."
+  - q: "Which is more stable, CF₃⁻ or CCl₃⁻?"
+    a: "CCl₃⁻. Chloroform (pKa 24.4 in DMSO) is a much stronger acid than fluoroform (pKa 30.5), so its conjugate base is more stable even though fluorine is more electronegative. Exam keys explain this by back-donation of the carbanion lone pair into chlorine's vacant 3d orbitals."
+related: ["concepts/carbocations", "concepts/aromaticity", "concepts/hyperconjugation", "concepts/inductive-effect", "concepts/resonance-effect", "mechanisms/free-radical-reactions", "reactions/free-radical-halogenation", "reactions/nbs-allylic-bromination", "comparisons/acidic-strength-order", "comparisons/alkene-stability-heat-of-hydrogenation"]
+sources:
+  - title: "Organic Chemistry: Some Basic Principles and Techniques (Class 11 Chemistry, Unit 8)"
+    url: "https://ncert.nic.in/textbook/pdf/kech202.pdf"
+    publisher: "NCERT"
+  - title: "7.9: Carbocation Structure and Stability"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/07:_Alkenes-_Structure_and_Reactivity/7.09:_Carbocation_Structure_and_Stability"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "10.3: Preparing Alkyl Halides from Alkenes - Allylic Bromination"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/10:_Organohalides/10.03:_Preparing_Alkyl_Halides_from_Alkenes_-_Allylic_Bromination"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "10.4: Stability of the Allyl Radical - Resonance Revisited"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/10:_Organohalides/10.04:_Stability_of_the_Allyl_Radical_-_Resonance_Revisited"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "Carbenium ion (hydride ion affinity table)"
+    url: "https://en.wikipedia.org/wiki/Carbenium_ion"
+    publisher: "Wikipedia"
+  - title: "Carbanion"
+    url: "https://en.wikipedia.org/wiki/Carbanion"
+    publisher: "Wikipedia"
+  - title: "Radical (chemistry)"
+    url: "https://en.wikipedia.org/wiki/Radical_(chemistry)"
+    publisher: "Wikipedia"
+  - title: "Bond-dissociation energy"
+    url: "https://en.wikipedia.org/wiki/Bond-dissociation_energy"
+    publisher: "Wikipedia"
+  - title: "Methyl radical"
+    url: "https://en.wikipedia.org/wiki/Methyl_radical"
+    publisher: "Wikipedia"
+  - title: "Bredt's rule"
+    url: "https://en.wikipedia.org/wiki/Bredt%27s_rule"
+    publisher: "Wikipedia"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 10
+  note: "Hydride-ion-affinity data contradict 'dancing resonance > aromatic' (cyclopropenyl cation 221 vs cyclopropylmethyl 249 kcal/mol) and the printed 'CH3+ > CH2=CH+' (vinyl 287 vs methyl 312). Benzyl > allyl > 3° is shown as the usual exam-key order beside gas-phase data (t-Bu 231, benzyl 234, allyl 256). Cyclopropyl series order and CCl3− = sp² kept as exam convention."
+---
+
+## What decides the stability of reaction intermediates?
+
+Carbocations, carbanions and free radicals are short-lived species with an electron-poor or electron-rich carbon. Anything that **spreads out the charge or the odd electron** stabilises them: resonance, hyperconjugation, inductive effects, hybridisation and aromaticity. Electron donation helps cations and radicals but hurts carbanions, so the alkyl orders run in opposite directions.
+
+<KeyPoint title="Final orders">
+**Carbocations:** aromatic (tropylium) and cyclopropyl- or resonance-stabilised > 3° > 2° > 1° > CH₃⁺; vinyl and phenyl cations are very unstable.
+**Free radicals:** allyl ≈ benzyl > 3° > 2° > 1° > CH₃• > vinyl ≈ phenyl.
+**Carbanions:** stabilised (aromatic C₅H₅⁻, resonance, sp carbon, –I groups) > CH₃⁻ > 1° > 2° > 3°.
+</KeyPoint>
+
+## Carbocations
+
+Alkyl groups stabilise a positive carbon by the inductive effect and hyperconjugation, so **(CH₃)₃C⁺ > (CH₃)₂CH⁺ > CH₃CH₂⁺ > CH₃⁺**. Gas-phase hydride ion affinity (HIA, the energy released when R⁺ captures H⁻) measures this directly: the **lower** the HIA, the **more stable** the cation.
+
+| Cation | HIA (kcal/mol) | Main reason |
+|---|---|---|
+| Tropylium, C₇H₇⁺ | 201 | aromatic, 6π |
+| Triphenylmethyl | 215 | resonance over three rings |
+| Cyclopropenyl, C₃H₃⁺ | 221 | aromatic, 2π |
+| tert-Butyl | 231 | 3°, nine C–H hyperconjugation |
+| Benzyl | 234 | resonance |
+| Isopropyl | 246 | 2° |
+| Cyclopropylmethyl | 249 | cyclopropyl donation ("dancing resonance") |
+| Allyl | 256 | resonance |
+| Ethyl | 273 | 1° |
+| Vinyl, CH₂=CH⁺ | 287 | charge on sp carbon |
+| Phenyl | 298 | charge in an in-plane sp² orbital |
+| Methyl | 312 | no stabilisation |
+
+**Cyclopropylmethyl series.** The bent C–C bonds of a cyclopropane ring donate into the empty p orbital when the charge sits just outside the ring. More rings give more stabilisation, so exam answers rank **tricyclopropylmethyl > dicyclopropylmethyl > cyclopropylmethyl**.
+
+**Bridgehead cations** of small bicyclic systems (such as the 1-norbornyl cation) cannot flatten, so Bredt's rule makes them extremely unstable, typically placed last in exam orders.
+
+<ExamTip title="Common mistake">
+"Dancing resonance beats aromaticity" is not supported by data: the aromatic cyclopropenyl cation (HIA 221) is more stable than the cyclopropylmethyl cation (249). Also, the vinyl cation is more stable than CH₃⁺ in the gas phase, though less stable than a primary alkyl cation.
+</ExamTip>
+
+**Exam convention versus data.** Most JEE answer keys use **benzyl > allyl > 3° > 2° > 1°**. Gas-phase HIA puts the unsubstituted benzyl cation close to, and slightly behind, tert-butyl, and the allyl cation near isopropyl. Follow the key's convention in objective questions, but remember that extra resonance wins clearly: the doubly benzylic diphenylmethyl cation (HIA 222) is well ahead of tert-butyl.
+
+## Free radicals
+
+Radical stability is read from the C–H bond dissociation energy (BDE) of the parent: a weaker bond means a more stable radical.
+
+| Radical formed | C–H BDE (kcal/mol) |
+|---|---|
+| Allyl | 89 |
+| Benzyl | 90 |
+| tert-Butyl (3°) | 96.5 |
+| Isopropyl (2°) | 99 |
+| Ethyl (1°) | 101 |
+| Methyl | 105 |
+| Vinyl | 111 |
+| Phenyl | 113 |
+
+So **allyl ≈ benzyl > 3° > 2° > 1° > CH₃• > vinyl ≈ phenyl**, which is also the order of ease of H abstraction in [free-radical halogenation](/reactions/free-radical-halogenation/) and why [NBS](/reactions/nbs-allylic-bromination/) brominates the allylic position. An allylic radical is about 40 kJ/mol more stable than an alkyl radical of the same substitution.
+
+## Carbanions
+
+Simple carbanions are **pyramidal (sp³)**. Alkyl groups destabilise them, so **CH₃⁻ > 1° > 2° > 3°**. Stabilising factors are the reverse of those for cations:
+
+| Factor | Example | Effect |
+|---|---|---|
+| Greater s character | HC≡C⁻ more stable than CH₂=CH⁻, more stable than CH₃CH₂⁻ | lone pair held closer to nucleus |
+| Resonance | benzyl, allyl, enolate anions | charge spread out |
+| Aromaticity | cyclopentadienyl anion (cyclopentadiene pKa 18 in DMSO) | 6π aromatic |
+| –I groups | CCl₃⁻, CF₃⁻ | charge pulled away |
+
+Because a stable carbanion means an acidic C–H, pKa values of the parent hydrocarbons rank carbanions directly.
+
+## Hybridisation of key intermediates
+
+| Species | Shape | Hybridisation |
+|---|---|---|
+| CH₃⁺ | trigonal planar | sp² (empty p) |
+| •CH₃ | planar | sp² (odd electron in pure p) |
+| CH₃⁻ | pyramidal | sp³ |
+| CF₃⁻ | pyramidal | sp³ |
+| CCl₃⁻ | treated as planar in exam keys | sp², by back-bonding into Cl 3d |
+
+The sp² label for CCl₃⁻ is an exam convention; the measurable fact is that CHCl₃ (pKa 24.4) is far more acidic than CHF₃ (pKa 30.5).
+
+## Solved examples
+
+**1. Arrange CH₃•, (CH₃)₃C•, CH₂=CH• and CH₂=CHCH₂• in decreasing stability.**
+Allyl has resonance; vinyl has its odd electron on an sp² carbon with no delocalisation.
+**Answer:** CH₂=CHCH₂• > (CH₃)₃C• > CH₃• > CH₂=CH•.
+
+**2. Arrange C₆H₅C≡C⁻, (C₆H₅)₃C⁻, C₆H₅CH₂⁻ and CH₃⁻ in decreasing stability.**
+Use parent pKa values (DMSO): phenylacetylene 28.8, triphenylmethane 30.6, toluene about 43, methane about 56.
+**Answer:** C₆H₅C≡C⁻ > (C₆H₅)₃C⁻ > C₆H₅CH₂⁻ > CH₃⁻.
+
+**3. Arrange CH₃⁺, C₂H₅⁺, (CH₃)₂CH⁺, (CH₃)₃C⁺ and C₇H₇⁺ (tropylium) in decreasing stability.**
+Aromatic tropylium first, then alkyl cations by number of alkyl groups.
+**Answer:** C₇H₇⁺ > (CH₃)₃C⁺ > (CH₃)₂CH⁺ > C₂H₅⁺ > CH₃⁺.
+
+## Related pages
+
+- [Carbocations: formation and rearrangement](/concepts/carbocations/) and [aromaticity](/concepts/aromaticity/).
+- [Hyperconjugation](/concepts/hyperconjugation/), [inductive effect](/concepts/inductive-effect/) and [resonance effect](/concepts/resonance-effect/).
+- [Free-radical reactions](/mechanisms/free-radical-reactions/) and [acidic strength order](/comparisons/acidic-strength-order/).

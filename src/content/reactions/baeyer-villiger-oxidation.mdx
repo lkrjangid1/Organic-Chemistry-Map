@@ -1,0 +1,159 @@
+---
+title: "Baeyer–Villiger Oxidation"
+description: "Baeyer–Villiger oxidation converts a ketone into an ester, or a cyclic ketone into a lactone, using a peroxyacid such as mCPBA. Mechanism, migratory aptitude."
+aliases: ["Baeyer-Villiger reaction", "Baeyer Villiger rearrangement", "Bayer Villiger oxidation", "Ketone to ester oxidation", "mCPBA oxidation of ketones"]
+kind: "named-reaction"
+family: "rearrangement-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["baeyer_villiger_oxidation"]
+reactant:
+  name: "Cyclohexanone"
+  smiles: "O=C1CCCCC1"
+product:
+  name: "ε-Caprolactone (oxepan-2-one)"
+  smiles: "O=C1CCCCCO1"
+byproducts: "RCOOH (e.g. m-chlorobenzoic acid)"
+reagents: "Peroxyacid R–CO₃H (mCPBA, peracetic acid, trifluoroperacetic acid) or H₂O₂ with a Lewis acid"
+conditions: "Inert solvent such as CH₂Cl₂, room temperature"
+equation: "R-CO-R' ->[RCO3H \\text{ (mCPBA)}] R-CO-O-R'"
+notesPages: [16]
+steps:
+  - title: "Carbonyl activation"
+    text: "The peroxyacid (mCPBA) protonates the C=O oxygen of cyclohexanone, making the carbonyl carbon more electrophilic."
+    arrows: "Lone pair on the carbonyl O → acidic H of the peroxyacid."
+    species:
+      - smiles: "O=C1CCCCC1"
+        label: "Cyclohexanone"
+        highlight: "[CX3]=O"
+      - smiles: "OOC(=O)c1cccc(Cl)c1"
+        label: "mCPBA"
+        highlight: "[OX2H]O"
+      - smiles: "[OH+]=C1CCCCC1"
+        label: "Protonated ketone"
+  - title: "Criegee intermediate"
+    text: "The peroxyacid adds to the carbonyl carbon, giving the tetrahedral peroxy (Criegee) intermediate, R₂C(OH)–O–O–COAr."
+    arrows: "Peroxy O lone pair → carbonyl carbon; the C=O π pair moves onto oxygen, and the peroxy O then loses H⁺."
+    species:
+      - smiles: "[OH+]=C1CCCCC1"
+        label: "Protonated ketone"
+        highlight: "[CX3]=[OH+]"
+      - smiles: "OOC(=O)c1cccc(Cl)c1"
+        label: "mCPBA"
+      - smiles: "OC1(CCCCC1)OOC(=O)c1cccc(Cl)c1"
+        label: "Criegee intermediate"
+  - title: "Concerted migration (slow)"
+    text: "A ring carbon moves from the carbinol carbon to the nearer peroxide oxygen as the O–O bond breaks and the carboxylate leaves; this is considered rate-determining. The migrating group keeps its configuration."
+    arrows: "A ring C–C bond pair shifts to the nearer O while the O–O bond pair leaves with the carboxylate."
+    species:
+      - smiles: "OC1(CCCCC1)OOC(=O)c1cccc(Cl)c1"
+        label: "Criegee intermediate"
+        highlight: "[CX4]([OH])OO"
+      - smiles: "[OH+]=C1CCCCCO1"
+        label: "Oxocarbenium ion"
+      - smiles: "[O-]C(=O)c1cccc(Cl)c1"
+        label: "3-Chlorobenzoate"
+  - title: "Deprotonation to the lactone"
+    text: "The oxocarbenium ion loses H⁺, giving ε-caprolactone: the ring has expanded from six to seven atoms by inserting one oxygen."
+    arrows: "The O–H bond pair returns to oxygen as H⁺ is lost, completing the C=O."
+    species:
+      - smiles: "[OH+]=C1CCCCCO1"
+        label: "Oxocarbenium ion"
+        highlight: "[OH+]"
+      - smiles: "O=C1CCCCCO1"
+        label: "ε-Caprolactone"
+memoryTricks: []
+faq:
+  - q: "What is the product of the Baeyer–Villiger oxidation of a ketone?"
+    a: "An ester. An oxygen atom is inserted between the carbonyl carbon and one of its groups; a cyclic ketone gives a lactone, so cyclohexanone gives ε-caprolactone."
+  - q: "What is the migratory aptitude in the Baeyer–Villiger oxidation?"
+    a: "Tertiary alkyl > cyclohexyl (secondary) > phenyl > primary alkyl > methyl. The group that better stabilises positive charge migrates to oxygen."
+  - q: "What does acetophenone give with mCPBA?"
+    a: "Phenyl acetate, CH₃COOC₆H₅. Phenyl migrates in preference to methyl, so the oxygen is inserted between the carbonyl carbon and the ring."
+  - q: "What does an aldehyde give in the Baeyer–Villiger oxidation?"
+    a: "Usually a carboxylic acid, because hydrogen migrates to oxygen in preference to the carbon group."
+  - q: "Is configuration retained in the Baeyer–Villiger oxidation?"
+    a: "Yes. A chiral migrating group moves to oxygen with its configuration unchanged."
+related: ["beckmann-rearrangement", "prilezhaev-epoxidation", "schmidt-reaction", "pinacol-pinacolone-rearrangement"]
+sources:
+  - title: "Baeyer–Villiger oxidation"
+    url: "https://en.wikipedia.org/wiki/Baeyer%E2%80%93Villiger_oxidation"
+    publisher: "Wikipedia"
+  - title: "Baeyer-Villiger Oxidation"
+    url: "https://www.organic-chemistry.org/namedreactions/baeyer-villiger-oxidation.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "3.03: Rearrangements (Organic Synthesis, Shea)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Synthesis_(Shea)/03:_Neighboring_Group_Participation_Rearrangements_and_Fragmentations/3.03:_Rearrangements"
+    publisher: "LibreTexts"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 3
+---
+
+## What is the Baeyer–Villiger oxidation?
+
+The **Baeyer–Villiger oxidation** converts a **ketone into an ester** by inserting an oxygen atom next to the carbonyl group. The oxidant is a **peroxyacid (R–CO₃H)**, most often **mCPBA** (meta-chloroperoxybenzoic acid), peracetic acid or trifluoroperacetic acid; H₂O₂ also works with a Lewis acid catalyst. **Cyclic ketones give lactones**, so cyclohexanone becomes ε-caprolactone. Adolf von Baeyer and Victor Villiger reported it in 1899.
+
+<Eq ce="R-CO-R' + R''CO3H -> R-CO-O-R' + R''COOH" />
+
+## Mechanism
+
+1. **Activation of the carbonyl.** The peroxyacid protonates the C=O oxygen, making the carbonyl carbon more electrophilic.
+2. **Addition (Criegee intermediate).** The peroxyacid adds to the carbonyl carbon, giving a tetrahedral peroxy intermediate called the **Criegee intermediate**, R₂C(OH)–O–O–COR''.
+3. **Concerted migration.** One group on the carbinol carbon moves to the nearer peroxide oxygen while the O–O bond breaks and a carboxylate leaves. This step is considered rate-determining.
+4. **Deprotonation.** The resulting oxocarbenium ion loses H⁺, giving the ester.
+
+<Eq ce="R2C=O ->[R''CO3H] R2C(OH)-O-O-COR'' ->[\text{R migrates}][-R''COOH] R-CO-O-R" />
+
+<KeyPoint>
+**Migratory aptitude:** tertiary alkyl &gt; cyclohexyl (secondary) &gt; phenyl &gt; primary alkyl &gt; methyl. Groups that better stabilise positive charge migrate. The migrating group keeps its configuration (retention).
+</KeyPoint>
+
+## Examples
+
+1. **Cyclohexanone → ε-caprolactone (ring expansion to a seven-membered lactone):**
+
+<Eq ce="\text{cyclohexanone} ->[mCPBA][CH2Cl2] \text{ε-caprolactone}" />
+
+2. **Acetophenone → phenyl acetate:** phenyl outranks methyl, so O goes between C=O and the ring.
+
+<Eq ce="C6H5COCH3 ->[mCPBA] CH3COOC6H5" />
+
+3. **tert-Butyl methyl ketone (pinacolone) → tert-butyl acetate:** the tertiary group migrates.
+
+<Eq ce="(CH3)3C-CO-CH3 ->[RCO3H] CH3-CO-O-C(CH3)3" />
+
+4. **Cyclopentanone → six-membered lactone (δ-valerolactone).**
+
+<ExamTip>
+Find the group on the carbonyl carbon with the higher migratory aptitude and put the new oxygen between it and the C=O. That group ends up as the **alkoxy (–OR) part** of the ester. For a cyclic ketone, the more substituted α-carbon is the one bonded to the ring oxygen in the lactone.
+</ExamTip>
+
+## Predicting the product of an unsymmetrical ketone
+
+Work through three checks:
+
+1. **List the two groups** on the carbonyl carbon and rank them by migratory aptitude.
+2. **Insert O** between the carbonyl carbon and the higher-ranked group. That group is now attached to oxygen, so it becomes the alcohol part of the ester.
+3. **Keep stereochemistry**: if the migrating carbon is a stereocentre, its configuration is unchanged, because no bond to it is broken except the one that moves intact to oxygen.
+
+For **2-methylcyclohexanone**, the ring CH(CH₃) carbon (secondary) outranks the ring CH₂ carbon (primary), so oxygen goes in on the substituted side. The product is the seven-membered lactone with the methyl group on the carbon next to the ring oxygen (7-methyloxepan-2-one). For **3-methylbutan-2-one**, isopropyl outranks methyl, so the product is isopropyl acetate, CH₃COOCH(CH₃)₂.
+
+<KeyPoint>
+mCPBA also epoxidises C=C bonds. In a molecule that contains both a ketone and an alkene, check which change the question intends before drawing the product.
+</KeyPoint>
+
+## Limitations and exceptions
+
+- Aldehydes are oxidised too; hydrogen migrates preferentially, so most aldehydes give carboxylic acids.
+- Ring strain and stereoelectronic effects can override the simple migratory-aptitude order.
+- Peroxyacids also epoxidise C=C bonds (Prilezhaev reaction), so an alkene elsewhere in the molecule may react first.
+- Plain H₂O₂ is much less reactive and needs a catalyst; BF₃ with H₂O₂ is used to encourage primary-group migration.
+
+## Related reactions
+
+- [Prilezhaev epoxidation](/reactions/prilezhaev-epoxidation/): the same peroxyacids oxidise alkenes to epoxides.
+- [Beckmann rearrangement](/reactions/beckmann-rearrangement/): the nitrogen analogue (oxime to amide).
+- [Schmidt reaction](/reactions/schmidt-reaction/): NH insertion into ketones with HN₃.
+- [Pinacol–pinacolone rearrangement](/reactions/pinacol-pinacolone-rearrangement/)
+- [Rearrangement reactions hub](/mechanisms/rearrangement-reactions/)

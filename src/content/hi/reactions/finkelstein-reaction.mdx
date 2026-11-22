@@ -1,0 +1,87 @@
+---
+title: "Finkelstein Reaction (फिंकेलस्टाइन अभिक्रिया)"
+description: "Finkelstein reaction में dry acetone में NaI से SN2 halogen exchange द्वारा alkyl chloride या bromide, alkyl iodide में बदलता है। Mechanism, scope और examples।"
+aliases: ["फिंकेलस्टाइन अभिक्रिया", "फिंकेलस्टीन रिएक्शन", "हैलोजन विनिमय अभिक्रिया", "finkelstein reaction hindi", "nai in acetone hindi", "halogen exchange reaction hindi", "alkyl iodide preparation hindi"]
+reagents: "NaI (या KI)"
+conditions: "Dry acetone, गुनगुना या reflux"
+byproducts: "NaBr या NaCl (acetone से precipitate होता है)"
+reactantName: "Bromoethane (ethyl bromide)"
+productName: "Iodoethane (ethyl iodide)"
+faq:
+  - q: "Finkelstein reaction क्या है?"
+    a: "इसमें alkyl chloride या alkyl bromide को dry acetone में sodium iodide के साथ गर्म करके alkyl iodide में बदला जाता है। यह एक SN2 halogen exchange reaction है।"
+  - q: "Finkelstein reaction में dry acetone क्यों इस्तेमाल होता है?"
+    a: "Sodium iodide acetone में घुलता है, लेकिन sodium chloride और sodium bromide नहीं घुलते। NaCl या NaBr बनते ही precipitate हो जाता है, जिससे equilibrium alkyl iodide की ओर खिसक जाता है (Le Chatelier's principle)।"
+  - q: "क्या Finkelstein reaction में alkyl fluorides इस्तेमाल हो सकते हैं?"
+    a: "नहीं। C–F bond बहुत strong है और fluoride एक खराब leaving group है, इसलिए iodide इसे displace नहीं कर सकता। इस्तेमाल होने वाले substrates alkyl chlorides और bromides (और sulfonates) हैं।"
+  - q: "Finkelstein और Swarts reactions में क्या अंतर है?"
+    a: "दोनों halogen exchange reactions हैं। Finkelstein acetone में NaI से alkyl iodides बनाता है, जबकि Swarts में alkyl chlorides या bromides को AgF, Hg2F2, CoF2 या SbF3 जैसे metal fluorides के साथ गर्म करके alkyl fluorides बनाए जाते हैं।"
+  - q: "क्या tertiary या aryl halides Finkelstein reaction देते हैं?"
+    a: "नहीं। Reaction SN2 है, इसलिए tertiary, vinyl और aryl halides लगभग unreactive हैं। Primary halides अच्छी तरह react करते हैं, secondary halides धीरे।"
+translated: 2026-11-22
+---
+
+## Finkelstein reaction क्या है?
+
+**Finkelstein reaction** एक halogen exchange है जिसमें **dry acetone में sodium iodide** से treat करके **alkyl chloride या alkyl bromide को alkyl iodide में बदला जाता है**। यह **SN2** mechanism follow करता है। Reaction एक equilibrium है, लेकिन लगभग पूरा हो जाता है क्योंकि बना हुआ NaCl या NaBr acetone में insoluble है और precipitate होकर निकल जाता है। इसका नाम German chemist Hans Finkelstein (1910) के नाम पर है।
+
+## General reaction
+
+<Eq ce="R-X + NaI ->[dry acetone] R-I + NaX v \quad (X = Cl, Br)" />
+
+कुछ books polar aprotic solvent के रूप में DMSO भी लिखती हैं। लेकिन असली driving force acetone में solubility का अंतर है: NaI घुलता है, NaCl और NaBr नहीं।
+
+## Mechanism
+
+1. **Nucleophile।** Sodium iodide acetone में घुलकर free iodide ions देता है। Iodide बड़ा, polarisable और polar aprotic solvent में strong nucleophile है।
+2. **Backside attack (एक step)।** I⁻ halogen वाले carbon पर C–X bond की उल्टी side से attack करता है। एक ही five-coordinate transition state के through C–I bond बनता है और C–X bond टूटता है।
+3. **Inversion।** हर SN2 reaction की तरह, carbon पर configuration उलट जाता है (Walden inversion)। Chiral secondary halide से opposite configuration वाला iodide मिलता है।
+4. **Precipitation।** Na⁺ और निकलने वाला Cl⁻ या Br⁻ मिलकर NaCl या NaBr बनाते हैं, जो acetone से बाहर गिर जाते हैं। एक product हटने से equilibrium right की ओर खिसकता है (Le Chatelier's principle)।
+
+<Eq ce="I- + CH3CH2-Br -> [I\cdots CH2(CH3)\cdots Br]^{-} -> I-CH2CH3 + Br-" />
+
+<KeyPoint>
+Finkelstein reaction SN2 है: rate, R–X और I⁻ दोनों पर निर्भर करता है, यह methyl और primary halides पर सबसे अच्छा चलता है, और stereocentre पर configuration उलट देता है।
+</KeyPoint>
+
+## Examples
+
+**Ethyl bromide से ethyl iodide** (standard textbook example):
+
+<Eq ce="CH3CH2Br + NaI ->[acetone] CH3CH2I + NaBr v" />
+
+**Methyl chloride से methyl iodide:**
+
+<Eq ce="CH3Cl + NaI ->[acetone] CH3I + NaCl v" />
+
+**Benzyl chloride से benzyl iodide** (benzylic halides SN2 में बहुत तेज़ react करते हैं):
+
+<Eq ce="C6H5CH2Cl + NaI ->[acetone] C6H5CH2I + NaCl v" />
+
+## Reactivity order
+
+Reaction SN2 है, इसलिए carbon पर steric hindrance rate को control करता है:
+
+- **तेज़:** methyl, primary, allyl, benzyl और α-halo carbonyl halides।
+- **धीमा:** secondary halides।
+- **लगभग कोई reaction नहीं:** tertiary, neopentyl, vinyl और aryl halides।
+
+यही अंतर qualitative analysis के **sodium iodide in acetone test** का आधार है: जल्दी सफ़ेद precipitate (NaCl या NaBr) आना reactive primary, allylic या benzylic halide बताता है।
+
+<ExamTip>
+अगर question में acetone में NaI के साथ R–Cl या R–Br दिया हो, तो R–I और precipitate के रूप में NaX लिखें, और कहें "SN2, NaX के precipitation से आगे बढ़ता है"। Chiral 2° halide के लिए iodide को inverted configuration के साथ दिखाएँ।
+</ExamTip>
+
+## Limitations और exceptions
+
+- **Fluorides substrate के रूप में react नहीं करते।** एक आम गलती है replace होने वाले halogens में F को शामिल करना, लेकिन iodide fluoride को displace नहीं कर सकता: C–F bond बहुत strong है और F⁻ खराब leaving group है। सिर्फ़ chlorides, bromides और sulfonates (tosylates, mesylates) बदलते हैं।
+- **Tertiary और aryl halides** SN2 नहीं करते। Aryl chlorides और bromides को copper(I) iodide catalyst चाहिए (तथाकथित aromatic Finkelstein reaction), जो JEE/NEET syllabus से बाहर है।
+- **Exchange से fluorides बनाने** के लिए इसकी जगह metal fluorides इस्तेमाल होते हैं (Swarts reaction, या polar aprotic solvent में KF)। Fluoride खराब leaving group है, इसलिए C–F bond एक बार बनने पर टिका रहता है।
+
+## Related reactions
+
+- [Swarts reaction](/hi/reactions/swarts-reaction/): NCERT का दूसरा halogen exchange reaction, alkyl fluorides बनाने के लिए।
+- [SN2 reaction](/hi/reactions/sn2-reaction/): वह mechanism जो Finkelstein reaction follow करता है।
+- [SN1 reaction](/hi/reactions/sn1-reaction/): tertiary halides अलग तरह से क्यों behave करते हैं।
+- [Williamson ether synthesis](/hi/reactions/williamson-ether-synthesis/): धीमे alkyl chlorides को तेज़ करने के लिए कभी-कभी थोड़ा iodide डाला जाता है, जो in situ Finkelstein exchange करता है।
+- [Nucleophilic substitution](/hi/mechanisms/nucleophilic-substitution/): सभी substitution रास्तों का overview।

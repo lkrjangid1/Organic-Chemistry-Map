@@ -1,0 +1,92 @@
+---
+title: "Fritsch–Buttenberg–Wiechell Rearrangement"
+description: "Fritsch–Buttenberg–Wiechell rearrangement: a strong base turns a 1,1-diaryl-2-haloalkene into a 1,2-diarylalkyne by a 1,2-shift. Mechanism, bases, examples."
+aliases: ["Fritsch rearrangement", "FBW rearrangement", "Frisch reaction", "Fritsch reaction", "Fritsch–Buttenberg–Wiechell reaction"]
+kind: "rearrangement"
+family: "rearrangement-reactions"
+exams: ["jee-advanced"]
+mapEdges: []
+reactant:
+  name: "2-Bromo-1,1-diphenylethene"
+  smiles: "BrC=C(c1ccccc1)c1ccccc1"
+product:
+  name: "Diphenylacetylene (1,2-diphenylethyne)"
+  smiles: "c1ccc(cc1)C#Cc1ccccc1"
+byproducts: "HBr (as its salt with the base)"
+reagents: "Strong base: alkoxide (R–O⁻Na⁺), organolithium (n-BuLi)"
+conditions: "Heat (Δ) for alkoxide; low temperature for organolithium"
+equation: "R1R2C=CH-X ->[\\text{strong base}][\\Delta] R1-C#C-R2 + HX"
+notesPages: [17]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Fritsch–Buttenberg–Wiechell rearrangement?"
+    a: "An alkyne. A 1,1-diaryl-2-bromoalkene such as 2-bromo-1,1-diphenylethene gives a 1,2-diarylalkyne such as diphenylacetylene."
+  - q: "Which base is used in the Fritsch–Buttenberg–Wiechell rearrangement?"
+    a: "A strong base. The classic reaction uses an alkoxide on heating; modern versions use organolithium reagents such as n-butyllithium."
+  - q: "Which group migrates in the Fritsch–Buttenberg–Wiechell rearrangement?"
+    a: "A group on the neighbouring carbon, usually an aryl group, shifts to the carbon that carried the halogen. The group trans to the leaving halogen is the one that migrates."
+  - q: "What intermediate is involved in the Fritsch–Buttenberg–Wiechell rearrangement?"
+    a: "Removal of the vinylic H gives a vinyl carbanion (a carbenoid when the metal is Li or Mg). Loss of halide (alpha-elimination) gives a vinylidene carbene or carbenoid, and the 1,2-shift turns it into the alkyne."
+related: ["e2-reaction", "benzyne-mechanism", "kucherov-reaction", "dienone-phenol-rearrangement"]
+sources:
+  - title: "Fritsch–Buttenberg–Wiechell rearrangement"
+    url: "https://en.wikipedia.org/wiki/Fritsch%E2%80%93Buttenberg%E2%80%93Wiechell_rearrangement"
+    publisher: "Wikipedia"
+  - title: "Fritsch–Buttenberg–Wiechell rearrangement of magnesium alkylidene carbenoids leading to the formation of alkynes (Beilstein J. Org. Chem. 2021, 17, 94)"
+    url: "https://doi.org/10.3762/bjoc.17.94"
+    publisher: "Beilstein Journal of Organic Chemistry"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 2
+  note: "Notes also list NaNH₂ as the base; the sources read name alkoxides and organolithiums only."
+---
+
+## What is the Fritsch–Buttenberg–Wiechell rearrangement?
+
+The **Fritsch–Buttenberg–Wiechell (FBW) rearrangement** converts a **1,1-disubstituted 2-haloalkene (R₁R₂C=CH–X) into a disubstituted alkyne (R₁–C≡C–R₂)** when it is treated with a **strong base**. In the classic version a **1,1-diaryl-2-bromoalkene** is heated with an alkoxide and gives a **1,2-diarylalkyne**; one aryl group moves across the double bond in a 1,2-shift. It was reported by Paul Fritsch, Wilhelm Buttenberg and Heinrich Wiechell in 1894.
+
+## Mechanism
+
+1. **Removal of the vinylic H.** The strong base pulls off the H on the carbon that carries the halogen, giving a **vinyl carbanion** (with Li or Mg it is a metal carbenoid).
+2. **α-Elimination.** The halide leaves from that same carbon. This leaves an electron-deficient vinylidene carbon (a vinylidene carbene or carbenoid, R₁R₂C=C:).
+3. **1,2-Shift.** A group on the neighbouring carbon (R₁, normally aryl) migrates to the electron-deficient carbon, and the C=C becomes a C≡C. The group **trans to the leaving halogen** is the one that migrates, and in carbenoids the shift happens as the halide leaves.
+
+<Eq ce="R1R2C=CH-Br ->[\text{base}][-H+] R1R2C=C^{-}-Br ->[-Br-] R1R2C=C: ->[\text{1,2-shift of }R1] R1-C#C-R2" />
+
+<KeyPoint>
+The FBW rearrangement is an **α-elimination** (H and X leave from the same carbon) followed by a 1,2-shift, not a normal β-elimination. That is why a substituent ends up on the other alkyne carbon.
+</KeyPoint>
+
+## How it differs from ordinary dehydrohalogenation
+
+In a normal elimination that makes an alkyne, H and X leave from **adjacent** carbons and no group moves. In the FBW rearrangement the carbon carrying X also carries the only H, and the other alkene carbon has two substituents and no H. A normal β-elimination is therefore impossible, so the molecule loses H and X from the **same** carbon and repairs the electron-deficient centre by shifting a group. The tell-tale sign in a product is that the two groups that started on one carbon finish on different carbons of the triple bond.
+
+## Examples
+
+1. **2-Bromo-1,1-diphenylethene → diphenylacetylene** (classic case):
+
+<Eq ce="(C6H5)2C=CHBr ->[\text{RO-Na+}][\Delta] C6H5-C#C-C6H5 + HBr" />
+
+2. **Mixed aryl substrates:** for (Ar)(Ar')C=CHBr the product is the unsymmetrical alkyne Ar–C≡C–Ar' whichever aryl migrates, because both end up on the triple bond.
+
+3. **Modern alkyne and polyyne synthesis:** 1,1-dibromoalkenes made from aldehydes or ketones (Corey–Fuchs type) are treated with n-butyllithium at low temperature. The lithium carbenoid formed by Li–Br exchange rearranges, and when an alkynyl group migrates this builds conjugated di- and triynes. The reaction also works with alkyl groups, not only aryl groups.
+
+<ExamTip>
+Recognise the pattern: a vinyl halide with H on the halogen-bearing carbon and two groups on the other carbon, plus a strong base. Delete H and X from the same carbon, move one group across, and write the alkyne R₁–C≡C–R₂.
+</ExamTip>
+
+## Limitations and exceptions
+
+- The halogen-bearing carbon must carry an H (or be converted into a metal carbenoid by halogen–metal exchange).
+- Geometry matters: a group trans to the leaving halogen migrates well; the cis group does not.
+- Free vinylidene carbenes are not always involved: with magnesium carbenoids the two geometric isomers react differently, which points to the shift happening from the carbenoid itself.
+- In exam questions NaNH₂ is sometimes drawn as the base as well; the classic literature conditions are alkoxide with heat or an organolithium.
+
+## Related reactions
+
+- [E2 reaction](/reactions/e2-reaction/): ordinary β-elimination of a vinyl halide, which needs a β-H and gives an alkyne without any shift.
+- [Benzyne mechanism](/reactions/benzyne-mechanism/): another strong-base elimination that creates a triple bond.
+- [Kucherov reaction](/reactions/kucherov-reaction/): hydration of the alkyne product.
+- [Dienone–phenol rearrangement](/reactions/dienone-phenol-rearrangement/)
+- [Rearrangement reactions hub](/mechanisms/rearrangement-reactions/)

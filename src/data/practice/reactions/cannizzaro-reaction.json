@@ -1,0 +1,49 @@
+{
+ "page": "reactions/cannizzaro-reaction",
+ "questions": [
+  {
+   "q": "Which aldehyde does NOT undergo the Cannizzaro reaction with concentrated NaOH?",
+   "options": [
+    "Formaldehyde",
+    "Acetaldehyde",
+    "Benzaldehyde",
+    "2,2-Dimethylpropanal"
+   ],
+   "answer": 1,
+   "explain": "Acetaldehyde has α-hydrogens, so strong base forms its enolate faster than it adds to the carbonyl, and aldol products result. The other three lack α-hydrogen."
+  },
+  {
+   "q": "A mixture of benzaldehyde and formaldehyde is warmed with concentrated NaOH. The main products are:",
+   "options": [
+    "Sodium benzoate and methanol",
+    "Benzoin and sodium formate",
+    "Benzyl alcohol and sodium benzoate only",
+    "Benzyl alcohol and sodium formate"
+   ],
+   "answer": 3,
+   "explain": "In a crossed Cannizzaro reaction the cheap HCHO acts as the hydride donor and is oxidised to formate, while the valuable aldehyde is reduced to its alcohol in high yield."
+  },
+  {
+   "q": "Under normal conditions the rate law and overall order of the Cannizzaro reaction are:",
+   "options": [
+    "rate = k[RCHO][OH⁻]; order 2",
+    "rate = k[RCHO]²; order 2",
+    "rate = k[RCHO]²[OH⁻]; order 3",
+    "rate = k[RCHO]²[OH⁻]²; order 4"
+   ],
+   "answer": 2,
+   "explain": "Two aldehyde molecules and one hydroxide are involved, giving third-order kinetics. The fourth-order term (second order in OH⁻) appears only at very high base concentration, via the dianion."
+  },
+  {
+   "q": "Acetaldehyde is treated with excess formaldehyde and base. The final organic product (besides formate) is:",
+   "options": [
+    "Pentaerythritol, C(CH₂OH)₄",
+    "(HOCH₂)₃C–CHO",
+    "Ethanol",
+    "But-2-enal"
+   ],
+   "answer": 0,
+   "explain": "Three aldol additions of HCHO use up all three α-hydrogens, giving (HOCH₂)₃C–CHO; having no α-H left, it is then reduced by a fourth HCHO in a crossed Cannizzaro reaction. Stopping at the trihydroxy aldehyde is the trap."
+  }
+ ]
+}

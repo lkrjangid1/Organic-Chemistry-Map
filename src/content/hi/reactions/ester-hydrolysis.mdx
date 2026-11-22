@@ -1,0 +1,112 @@
+---
+title: "Ester Hydrolysis Mechanisms (एस्टर जल-अपघटन: AAC2, BAC2, AAL1…)"
+description: "Ester hydrolysis के mechanisms: acid-catalysed AAC2, base-promoted BAC2 (saponification), tert-butyl esters का AAL1 और Ingold के बाकी रास्ते, ¹⁸O evidence के साथ।"
+aliases: ["एस्टर जल-अपघटन", "एस्टर का हाइड्रोलिसिस", "साबुनीकरण", "ester hydrolysis hindi", "saponification hindi", "aac2 bac2 mechanism hindi", "aal1 mechanism hindi", "acyl oxygen cleavage hindi"]
+reagents: "Excess पानी के साथ dilute acid (H₃O⁺, catalytic); या saponification के लिए NaOH/KOH (पूरा एक equivalent)"
+conditions: "Reflux पर गर्म करें; acid hydrolysis reversible है, base hydrolysis पूरा हो जाता है"
+byproducts: "Ethanol (ester का alcohol वाला हिस्सा)"
+reactantName: "Ethyl ethanoate (ethyl acetate)"
+productName: "Sodium ethanoate (ethanol के साथ)"
+steps:
+  - title: "Hydroxide का C=O पर जुड़ना (BAC2)"
+    text: "Saponification में OH⁻ ethyl ethanoate के carbonyl carbon पर जुड़ता है (slow step), जिससे एक tetrahedral alkoxide intermediate बनता है। यह acyl–oxygen attack है, ethyl carbon पर SN2 नहीं।"
+    arrows: "OH⁻ का lone pair → carbonyl carbon; C=O का π pair → O⁻।"
+  - title: "Ethoxide का निकलना"
+    text: "C=O दोबारा बनता है और ethoxide, EtO⁻, बाहर निकलता है, जिससे ethanoic acid बनता है। टूटने वाला bond acyl–oxygen bond है, इसीलिए alkoxy oxygen में लगा ¹⁸O label ethanol में पहुँचता है।"
+    arrows: "O⁻ का lone pair C=O दोबारा बनाता है; C–OEt bond pair EtO⁻ के साथ निकल जाता है।"
+  - title: "Proton transfer"
+    text: "Ethoxide ethanoic acid का acidic proton हटाता है, जिससे ethanoate ion और ethanol बनते हैं; NaOH के साथ product sodium ethanoate है। यही step reaction को पूरा कराता है, इसलिए base hydrolysis irreversible है और इसमें base का पूरा एक equivalent लगता है।"
+    arrows: "EtO⁻ का lone pair → acidic O–H; O–H bond pair carboxylate oxygen पर ही रहता है।"
+faq:
+  - q: "Ester का acid hydrolysis reversible और base hydrolysis irreversible क्यों है?"
+    a: "Acid hydrolysis बस उल्टी दिशा में चलता Fischer esterification है, इसलिए यह equilibrium तक पहुँचता है और इसमें excess पानी चाहिए। Base में बना carboxylic acid तुरंत deprotonate होकर carboxylate ion बन जाता है, जो इतना unreactive है कि alcohol उस पर attack नहीं कर पाता, इसलिए reaction पूरा हो जाता है।"
+  - q: "AAC2 और BAC2 का क्या मतलब है?"
+    a: "Ingold की notation में A या B का मतलब acid या base catalysis है, AC का मतलब acyl–oxygen bond cleavage है (AL होता तो alkyl–oxygen cleavage), और संख्या rate-determining step की molecularity है। AAC2 और BAC2 सामान्य acid और base mechanisms हैं, दोनों tetrahedral intermediate के through।"
+  - q: "¹⁸O labelling से कैसे पता चलता है कि saponification में कौन-सा bond टूटता है?"
+    a: "जब ester के alkoxy (ether-type) oxygen को ¹⁸O से label किया जाता है, तो hydrolysis के बाद label alcohol में मिलता है। यानी acyl–oxygen bond टूटता है, जैसा BAC2 में होता है; alkyl carbon पर SN2 attack होता तो label carboxylate में जाता।"
+  - q: "Acid में tert-butyl esters alkyl–oxygen cleavage से hydrolyse क्यों होते हैं?"
+    a: "tert-Butyl group एक stable tertiary carbocation बनकर निकल सकता है, इसलिए protonation के बाद O–C(alkyl) bond ionise हो जाता है (AAL1, SN1 जैसा)। Tracer studies बताती हैं कि पानी में tert-butyl acetate का 85–97% hydrolysis alkyl–oxygen fission से होता है।"
+  - q: "Saponification क्या है?"
+    a: "Aqueous alkali से ester का hydrolysis होकर carboxylate salt और alcohol बनना saponification कहलाता है। Fats (triglycerides) का NaOH से saponification glycerol और soap देता है, जो long-chain fatty acids के sodium salts हैं।"
+translated: 2026-11-22
+---
+
+## Ester hydrolysis क्या है?
+
+**Ester hydrolysis** में पानी एक ester, R–COO–R′, को तोड़कर **carboxylic acid (या उसका salt) और alcohol** बनाता है। यह **acid से catalyse** होता है (reversible, Fischer esterification का उल्टा) या **base से promote** होता है (irreversible; इसे **saponification** कहते हैं)। Mechanism के हिसाब से मुख्य सवाल ये हैं कि **कौन-सा C–O bond टूटता है**, acyl–oxygen bond या alkyl–oxygen bond, और **slow step में कितनी species भाग लेती हैं**। Ingold की notation इन सभी possibilities को label करती है।
+
+<Eq ce="RCOOR' + H2O <=>[H+] RCOOH + R'OH" />
+<Eq ce="RCOOR' + OH- -> RCOO- + R'OH" />
+
+## Ingold का classification
+
+हर label के तीन हिस्से होते हैं: **A** (acid) या **B** (base); **AC** (acyl–oxygen cleavage, R–CO–|–OR′) या **AL** (alkyl–oxygen cleavage, R–COO–|–R′); और **1 या 2**, यानी rate-determining step की molecularity।
+
+| Label | Medium | टूटने वाला bond | मुख्य intermediate | कब होता है |
+|---|---|---|---|---|
+| **AAC2** | acid | acyl–O | tetrahedral intermediate | सामान्य esters (general acid mechanism) |
+| AAC1 | acid | acyl–O | acylium ion R–C≡O⁺ | rare; strong acid में बहुत hindered acyl groups |
+| **AAL1** | acid | alkyl–O | carbocation R′⁺ | R′ stable cation बनाता है (tert-butyl) |
+| AAL2 | acid | alkyl–O | — | observed नहीं |
+| **BAC2** | base | acyl–O | tetrahedral alkoxide | सामान्य saponification (general base mechanism) |
+| BAC1 | base | acyl–O | — | observed नहीं |
+| BAL1 | neutral/weak base | alkyl–O | carbocation R′⁺ | पानी में tert-alkyl esters |
+| BAL2 | base | alkyl–O | SN2 transition state | strong nucleophiles के साथ methyl esters |
+
+<KeyPoint>
+लगभग हर exam question **AAC2** (acid) और **BAC2** (base) पर होता है। **Alkyl–oxygen cleavage** तभी लें जब R′ stable carbocation बना सके (AAL1, BAL1) या जब R′ methyl हो और कोई strong nucleophile उस पर SN2 करे (BAL2)।
+</KeyPoint>
+
+## AAC2: acid-catalysed hydrolysis
+
+1. **Carbonyl oxygen protonate होता है**, जिससे carbonyl carbon ज़्यादा electrophilic हो जाता है।
+2. **पानी carbonyl carbon पर attack करता है** (slow step), और –OH₂⁺ group वाला tetrahedral intermediate बनता है।
+3. एक **proton transfer** H⁺ को –OR′ oxygen पर ले जाता है।
+4. **R′OH निकलता है**, और protonated acid बनता है।
+5. **H⁺ निकलने** से R–COOH बनता है और catalyst वापस मिल जाता है।
+
+H₂¹⁸O लेने पर label **acid** में पहुँचता है, और alcohol में original alkoxy oxygen ही रहता है।
+
+## BAC2: saponification
+
+1. **OH⁻ carbonyl carbon पर जुड़ता है** (slow step), और tetrahedral alkoxide intermediate बनता है।
+2. C=O दोबारा बनता है और **R′O⁻ बाहर निकलता है**।
+3. Alkoxide, R–COOH का **acidic proton हटाता है**, जिससे R–COO⁻ और R′OH बनते हैं। यह आखिरी step reaction को पूरा कराता है, और base का पूरा एक equivalent खर्च होता है।
+
+<Eq ce="CH3COOC2H5 + NaOH ->[\Delta] CH3COONa + C2H5OH" />
+
+**Isotopic evidence:** जब ethyl propanoate के alkoxy oxygen को ¹⁸O से label किया जाता है, तो saponification के बाद label **ethanol** में मिलता है। इससे acyl–oxygen cleavage साबित होता है; ethyl carbon पर SN2 attack होता तो ¹⁸O propanoate में रह जाता।
+
+## Alkyl–oxygen cleavage: AAL1, BAL1 और BAL2
+
+- **AAL1 (SN1 जैसा):** protonation के बाद O–R′ bond ionise होकर acid और एक **carbocation R′⁺** देता है, जिसे फिर पानी पकड़ लेता है। H₂¹⁸O के साथ label **alcohol** R′–¹⁸OH में आता है। पानी में tert-butyl acetate पर tracer और kinetic studies में 85–97% alkyl–oxygen fission मिला। Exam answers में benzyl और cyclopropylmethyl esters को भी यहीं रखा जाता है क्योंकि उनके cations stabilised होते हैं।
+- **BAL1:** tert-alkyl esters acid के बिना भी ionise हो सकते हैं (पानी में uncatalysed solvolysis)।
+- **BAL2 (SN2 जैसा):** एक strong nucleophile methyl ester के **methyl carbon** पर attack करता है और carboxylate निकल जाता है; DMSO या DMF में halide salts methyl esters को इसी तरह तोड़ते हैं।
+- **AAC1:** जब acyl group बहुत hindered हो, तो protonated ester R′OH खोकर एक **acylium ion** बना सकता है, जिस पर फिर पानी attack करता है।
+
+<ExamTip>
+"¹⁸O कहाँ जाता है?" वाले questions में: AAC2/BAC2 में पानी (या OH⁻) का oxygen **acid/carboxylate** में जाता है; AAL1 में यह **alcohol** में जाता है। पहले check करें कि R′ tertiary है या नहीं।
+</ExamTip>
+
+## Examples
+
+**1. Methyl benzoate का acid hydrolysis**
+
+<Eq ce="C6H5COOCH3 + H2O <=>[H+] C6H5COOH + CH3OH" />
+
+**2. Fat का saponification (soap बनाना)**
+
+<Eq ce="(C17H33COO)3C3H5 + 3 NaOH -> 3 C17H33COONa + C3H5(OH)3" />
+
+Glyceryl trioleate से sodium oleate (soap) और glycerol बनते हैं।
+
+**3. Acid में tert-butyl acetate (AAL1)**
+
+<Eq ce="CH3COOC(CH3)3 + H2O ->[H+] CH3COOH + (CH3)3COH" />
+
+## Related reactions
+
+- [Claisen condensation](/hi/reactions/claisen-condensation/) और [Bouveault–Blanc reduction](/hi/reactions/bouveault-blanc-reduction/): ester carbonyl पर होने वाले दूसरे reactions।
+- [SN1 reaction](/hi/reactions/sn1-reaction/) और [SN2 reaction](/hi/reactions/sn2-reaction/): AAL1 और BAL2 के models।
+- [Biodegradable polymers](/hi/concepts/biodegradable-polymers/): polyesters ester hydrolysis से टूटते हैं।
+- [Reactions of carboxylic acids](/hi/mechanisms/reactions-of-carboxylic-acids/) hub।

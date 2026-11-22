@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { url } from '../lib/site';
+---
+<Base title="Saved pages" description="Pages you saved on Organic Chemistry Map. Saved pages stay in this browser and sync across devices when you sign in with Google." path="saved/" noindex>
+  <div class="container page">
+    <Breadcrumbs items={[{ label: 'Saved pages' }]} />
+    <header class="page-head">
+      <h1>Saved pages</h1>
+      <p class="summary">Use the ☆ Save button on any reaction, test or concept page. Saved pages stay in this browser; sign in with Google to see them on your other devices too.</p>
+    </header>
+    <ul class="list-cards" id="saved-list"></ul>
+    <p class="empty" id="saved-empty" hidden>Nothing saved yet. Browse the <a href={url('reactions/')}>reactions</a> and tap ☆ Save on the ones you want to revise.</p>
+  </div>
+</Base>
+<script>
+  import { getSaved, toggleSaved } from '../scripts/account';
+  const list = document.getElementById('saved-list')!;
+  const empty = document.getElementById('saved-empty')!;
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+  function render() {
+    const items = getSaved();
+    empty.hidden = items.length > 0;
+    list.innerHTML = items.map((p) => `<li><a class="card" href="${base}/${esc(p.path)}"><strong>${esc(p.title)}</strong><p>Saved ${new Date(p.at).toLocaleDateString('en-IN')}</p></a><button type="button" class="btn-link" data-remove="${esc(p.path)}">Remove</button></li>`).join('');
+  }
+  list.addEventListener('click', (e) => {
+    const path = (e.target as HTMLElement).dataset.remove;
+    if (!path) return;
+    const item = getSaved().find((p) => p.path === path);
+    if (item) toggleSaved(item);
+    render();
+  });
+  window.addEventListener('ocm:synced', render);
+  render();
+</script>

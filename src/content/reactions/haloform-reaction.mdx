@@ -1,0 +1,192 @@
+---
+title: "Haloform Reaction"
+description: "Haloform reaction converts a methyl ketone (R–CO–CH3) with X2 and NaOH into a carboxylate with one carbon fewer plus CHX3. Iodoform test, mechanism, examples."
+aliases: ["Iodoform reaction", "Iodoform test", "Lieben haloform reaction", "Bromoform reaction", "Hypohalite oxidation of methyl ketones"]
+kind: "named-reaction"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "Propan-2-one (acetone)"
+  smiles: "CC(C)=O"
+product:
+  name: "Sodium ethanoate (sodium acetate)"
+  smiles: "CC(=O)[O-].[Na+]"
+byproducts: "CHX₃ (CHI₃ iodoform, CHBr₃ bromoform or CHCl₃ chloroform)"
+reagents: "X₂ + NaOH (i.e. sodium hypohalite NaOX); X = Cl, Br or I"
+conditions: "Aqueous base, cold or gently warmed; acidify afterwards to obtain the free acid"
+equation: "CH3COCH3 + 3 I2 + 4 NaOH -> CH3COONa + CHI3 v + 3 NaI + 3 H2O"
+notesPages: [40, 86, 87]
+steps:
+  - title: "Enolate formation (slow)"
+    text: "OH⁻ removes an α-hydrogen from a CH₃ group of acetone, giving the enolate ion. This is the rate-determining step, so the rate does not depend on which halogen (Cl₂, Br₂ or I₂) is used."
+    arrows: "Lone pair of OH⁻ → α-H; the C–H bond pair → C=C, pushing the C=O π pair onto oxygen."
+    species:
+      - smiles: "CC(C)=O"
+        label: "Acetone"
+        highlight: "[CH3]C=O"
+      - smiles: "[OH-]"
+        label: "Hydroxide"
+      - smiles: "C=C(C)[O-]"
+        label: "Enolate ion"
+  - title: "Iodination"
+    text: "The enolate attacks iodine (or hypoiodite), giving iodoacetone and iodide."
+    arrows: "C=C π electrons of the enolate → I of I₂; the I–I bond pair leaves as I⁻ while O⁻ re-forms C=O."
+    species:
+      - smiles: "C=C(C)[O-]"
+        label: "Enolate ion"
+        highlight: "[CH2]=C[O-]"
+      - smiles: "II"
+        label: "Iodine"
+      - smiles: "CC(=O)CI"
+        label: "Iodoacetone"
+  - title: "Repeat twice"
+    text: "Each iodine makes the remaining α-hydrogens more acidic, so the second and third iodinations are faster. The CH₃ group becomes CI₃."
+    arrows: "The same two moves repeat: OH⁻ removes an α-H, then the enolate attacks I₂."
+    species:
+      - smiles: "CC(=O)CI"
+        label: "Iodoacetone"
+        highlight: "[CH2]I"
+      - smiles: "CC(=O)C(I)(I)I"
+        label: "1,1,1-Triiodoacetone"
+        highlight: "C(I)(I)I"
+  - title: "Hydroxide adds to C=O"
+    text: "OH⁻ adds to the carbonyl carbon of CH₃COCI₃, giving a tetrahedral intermediate."
+    arrows: "Lone pair of OH⁻ → carbonyl carbon; the C=O π pair moves onto oxygen."
+    species:
+      - smiles: "CC(=O)C(I)(I)I"
+        label: "CH₃COCI₃"
+        highlight: "[CX3]=O"
+      - smiles: "[OH-]"
+        label: "Hydroxide"
+      - smiles: "CC([O-])(O)C(I)(I)I"
+        label: "Tetrahedral intermediate"
+  - title: "Loss of ⁻CI₃"
+    text: "The tetrahedral intermediate collapses and expels ⁻CI₃, a reasonable leaving group because three electronegative halogens stabilise the negative charge. Acetic acid is left."
+    arrows: "The O⁻ lone pair re-forms C=O; the C–CI₃ bond pair leaves with the CI₃ group."
+    species:
+      - smiles: "CC([O-])(O)C(I)(I)I"
+        label: "Tetrahedral intermediate"
+        highlight: "[O-]CC(I)(I)I"
+      - smiles: "CC(=O)O"
+        label: "Acetic acid"
+      - smiles: "I[C-](I)I"
+        label: "Triiodomethanide"
+  - title: "Proton transfer"
+    text: "⁻CI₃ takes the proton from acetic acid, giving iodoform (yellow precipitate) and the acetate ion, which has one carbon fewer than acetone."
+    arrows: "Lone pair of ⁻CI₃ → acidic O–H proton; the O–H bond pair stays on oxygen as carboxylate."
+    species:
+      - smiles: "I[C-](I)I"
+        label: "⁻CI₃"
+        highlight: "[C-]"
+      - smiles: "CC(=O)[O-].[Na+]"
+        label: "Sodium acetate"
+      - smiles: "IC(I)I"
+        label: "Iodoform"
+memoryTricks: []
+faq:
+  - q: "What is the haloform reaction?"
+    a: "It is the reaction of a methyl ketone (or acetaldehyde) with a halogen and sodium hydroxide. The CH3 group is converted into a haloform, CHX3, and the rest of the molecule becomes the sodium salt of a carboxylic acid with one carbon fewer."
+  - q: "Which compounds give a positive iodoform test?"
+    a: "Compounds containing CH3CO– (methyl ketones and acetaldehyde) and compounds containing CH3CH(OH)– (such as ethanol and propan-2-ol), which the hypoiodite oxidises to CH3CO–. They give a yellow precipitate of CHI3."
+  - q: "Why is ethanol the only primary alcohol that gives the iodoform test?"
+    a: "Ethanol is oxidised to acetaldehyde, the only aldehyde with a CH3CO group. Other primary alcohols give aldehydes RCH2CHO that lack the CH3CO unit."
+  - q: "Why can fluoroform not be made by the haloform reaction?"
+    a: "The reaction needs the hypohalite ion, and hypofluorite is far too unstable to be used. Chlorine, bromine and iodine all work."
+  - q: "What happens when a methyl ketone reacts with NaOH and Br2?"
+    a: "It gives the sodium salt of the carboxylic acid with one carbon fewer and bromoform (CHBr3). For example, acetophenone gives sodium benzoate and CHBr3."
+  - q: "What is the rate-determining step of the haloform reaction?"
+    a: "Formation of the enolate ion by removal of an α-hydrogen by OH⁻. The rate depends on the ketone and hydroxide concentrations but not on the halogen, so Cl₂, Br₂ and I₂ react at the same rate."
+related: ["hofmann-bromamide-degradation", "decarboxylation", "free-radical-halogenation"]
+sources:
+  - title: "Aldehydes, Ketones and Carboxylic Acids (Class XII Chemistry, Unit 8)"
+    url: "https://ncert.nic.in/textbook/pdf/lech203.pdf"
+    publisher: "NCERT"
+  - title: "Haloform reaction"
+    url: "https://en.wikipedia.org/wiki/Haloform_reaction"
+    publisher: "Wikipedia"
+  - title: "The Triiodomethane (Iodoform) Reaction"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Aldehydes_and_Ketones/Reactivity_of_Aldehydes_and_Ketones/The_Triiodomethane_(Iodoform)_Reaction"
+    publisher: "LibreTexts Chemistry"
+  - title: "Haloform Reaction (Organic Chemistry Glossary)"
+    url: "https://chem.libretexts.org/Ancillary_Materials/Reference/Organic_Chemistry_Glossary/Haloform_Reaction"
+    publisher: "LibreTexts Chemistry"
+  - title: "17.3: Halogenation of Aldehydes and Ketones (Roberts and Caserio)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Basic_Principles_of_Organic_Chemistry_(Roberts_and_Caserio)/17:_Carbonyl_Compounds_II-_Enols_and_Enolate_Anions._Unsaturated_and_Polycarbonyl_Compounds/17.03:_Halogenation_of_Aldehydes_and_Ketones"
+    publisher: "LibreTexts Chemistry"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 5
+  note: "Notes give the halogen reactivity as F2 = Cl2 = Br2 = I2; sources show equal rates for Cl2, Br2 and I2 only (enolate formation is rate-determining) and that fluorine cannot be used. Page follows the sources."
+---
+
+## What is the haloform reaction?
+
+The **haloform reaction** is the reaction of a **methyl ketone (R–CO–CH₃) or acetaldehyde with a halogen (Cl₂, Br₂ or I₂) in aqueous NaOH**. All three hydrogens of the CH₃ group are replaced by halogen, and the CX₃ group is then cleaved off by hydroxide. The products are a **haloform, CHX₃**, and the **sodium salt of a carboxylic acid with one carbon atom fewer** than the starting carbonyl compound. With iodine the reaction is the **iodoform test**, which gives a yellow precipitate of CHI₃.
+
+## General reaction
+
+<Eq ce="R-CO-CH3 + 3 X2 + 4 NaOH -> R-COONa + CHX3 + 3 NaX + 3 H2O" />
+
+The halogen and NaOH together form sodium hypohalite, which is the actual reagent:
+
+<Eq ce="X2 + 2 NaOH -> NaOX + NaX + H2O" />
+
+So NCERT describes the reaction as oxidation of methyl ketones by sodium hypohalite. A C=C double bond elsewhere in the molecule is not affected.
+
+## Mechanism
+
+1. **Enolate formation (slow).** OH⁻ removes an α-hydrogen from the CH₃ group to give an enolate ion, R–CO–CH₂⁻ ↔ R–C(O⁻)=CH₂. This is the rate-determining step.
+2. **Halogenation.** The enolate attacks the halogen (or hypohalite), giving R–CO–CH₂X.
+3. **Repeat twice.** Each halogen makes the remaining α-hydrogens more acidic, so the second and third halogenations are faster. The CH₃ group becomes CX₃: R–CO–CX₃.
+4. **Cleavage.** OH⁻ adds to the carbonyl carbon. The tetrahedral intermediate collapses and expels ⁻CX₃, which is a reasonable leaving group because three electronegative halogens stabilise the negative charge.
+5. **Proton transfer.** ⁻CX₃ takes a proton from the carboxylic acid, giving CHX₃ and the carboxylate ion.
+
+<Eq ce="R-CO-CH3 ->[3 X2, OH-] R-CO-CX3 ->[OH-] R-COO- + CHX3" />
+
+<KeyPoint>
+Only the CH₃ attached directly to the carbonyl group is halogenated completely, because only those hydrogens are acidic enough. That CH₃ carbon becomes the carbon of CHX₃, so the product acid always has one carbon fewer than the starting compound.
+</KeyPoint>
+
+## Kinetics: why the halogen does not matter
+
+Kinetic studies on acetone show that, in base, the rate of halogenation is **rate = k[ketone][OH⁻]**. The halogen does not appear in the rate law: the reaction goes at the same rate whether chlorine, bromine or iodine is used, and even at very low halogen concentration. The slow step is therefore **formation of the enolate ion**; once formed, the enolate reacts with the halogen very quickly. Each halogen added makes the remaining α-hydrogens more acidic, so the second and third substitutions are faster still, and base-promoted halogenation of a methyl ketone cannot be stopped at the monohalo stage.
+
+<ExamTip title="Common mistake">
+Writing the reactivity order as F₂ = Cl₂ = Br₂ = I₂. The rate is the same for **Cl₂, Br₂ and I₂** because none of them takes part in the slow step, but fluorine is not used at all: the haloform reaction needs the hypohalite ion, and hypofluorite is too unstable, so fluoroform cannot be made this way.
+</ExamTip>
+
+## Examples
+
+**Acetone with iodine and NaOH** (iodoform test):
+
+<Eq ce="CH3COCH3 + 3 I2 + 4 NaOH -> CH3COONa + CHI3 v + 3 NaI + 3 H2O" />
+
+**Acetophenone with bromine and NaOH** (an example of the general R–CO–CH₃ + NaOH/Br₂ case):
+
+<Eq ce="C6H5COCH3 ->[Br2, NaOH] C6H5COONa + CHBr3" />
+
+**Ethanol** is first oxidised to acetaldehyde by the hypoiodite, which then gives iodoform:
+
+<Eq ce="CH3CH2OH ->[I2, NaOH] CH3CHO ->[I2, NaOH] HCOONa + CHI3 v" />
+
+## Which compounds respond?
+
+- **Positive:** methyl ketones (CH₃CO–R), acetaldehyde (the only aldehyde), ethanol (the only primary alcohol), secondary alcohols of the type CH₃CH(OH)–R such as propan-2-ol and butan-2-ol, and 1,3-diketones such as acetylacetone.
+- **Negative:** methanol, formaldehyde, other aldehydes, ketones without a CH₃CO group (for example pentan-3-one, benzophenone), acetyl chloride and acetamide.
+
+<ExamTip>
+For "distinguish by a chemical test" questions, look for CH₃CO– or CH₃CH(OH)–. If one compound has it and the other does not, the iodoform test (I₂/NaOH, yellow precipitate) is the answer. Example: ethanol (positive) vs methanol (negative); pentan-2-one (positive) vs pentan-3-one (negative).
+</ExamTip>
+
+## Limitations and exceptions
+
+- **Fluoroform cannot be made** this way, because the hypofluorite ion is too unstable.
+- **Primary amides with Br₂/NaOH** do not give a haloform; they undergo the Hofmann bromamide degradation to amines instead. Keep the two reactions separate: R–CO–NH₂ gives R–NH₂, while R–CO–CH₃ gives R–COO⁻ and CHBr₃.
+- β-Keto acids such as acetoacetic acid also give the test on heating, after losing CO₂ to form a methyl ketone.
+
+## Related reactions
+
+- [Hofmann bromamide degradation](/reactions/hofmann-bromamide-degradation/): uses the same Br₂/NaOH reagent, but on amides.
+- [Decarboxylation](/reactions/decarboxylation/): another way to remove one carbon from a carboxylic acid skeleton.
+- [Free-radical halogenation](/reactions/free-radical-halogenation/): halogenation of alkanes, by a completely different (radical) mechanism.

@@ -1,0 +1,49 @@
+{
+ "page": "reactions/balz-schiemann-reaction",
+ "questions": [
+  {
+   "q": "Heating dry benzenediazonium tetrafluoroborate gives fluorobenzene along with:",
+   "options": [
+    "N₂ and HF",
+    "N₂ and BF₃",
+    "NH₃ and BF₃",
+    "N₂O and HBF₄"
+   ],
+   "answer": 1,
+   "explain": "The aryl cation formed on loss of N₂ takes F⁻ from BF₄⁻, leaving BF₃. So the by-products are N₂ and BF₃, and the fluorine in ArF comes from the counter-ion."
+  },
+  {
+   "q": "Which reagent sequence converts benzenediazonium chloride into fluorobenzene?",
+   "options": [
+    "CuF in HF",
+    "Aqueous KF at room temperature",
+    "Cu powder and HF",
+    "HBF₄, then heat the dried precipitate"
+   ],
+   "answer": 3,
+   "explain": "HBF₄ precipitates C₆H₅N₂⁺BF₄⁻, which decomposes on heating to C₆H₅F. Copper fluorides do not give aryl fluorides in a Sandmeyer-type reaction."
+  },
+  {
+   "q": "Why can benzenediazonium tetrafluoroborate be filtered and dried, while benzenediazonium chloride is used only in cold solution?",
+   "options": [
+    "The tetrafluoroborate is insoluble in water and stable at room temperature",
+    "The tetrafluoroborate is a covalent compound with no N₂⁺ group",
+    "BF₄⁻ oxidises any free aniline present",
+    "The chloride is insoluble and precipitates too fast"
+   ],
+   "answer": 0,
+   "explain": "ArN₂⁺BF₄⁻ precipitates from water and is stable at room temperature, so it can be isolated. The chloride decomposes easily and can explode when dry."
+  },
+  {
+   "q": "Which statement about the mechanism of the Balz–Schiemann reaction is correct?",
+   "options": [
+    "It is a copper-catalysed radical reaction, like the Sandmeyer reaction",
+    "Fluoride attacks the ring first and N₂ leaves afterwards in an addition–elimination path",
+    "It is believed to go through an aryl cation formed on loss of N₂, with no copper needed",
+    "BF₃ is the fluorinating agent and BF₄⁻ is a spectator"
+   ],
+   "answer": 2,
+   "explain": "Heat breaks the C–N bond, N₂ leaves, and the aryl cation captures F⁻ from BF₄⁻ (an SN1-like path). The Sandmeyer reaction is the copper-catalysed radical route, and BF₃ is a by-product, not the reagent."
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+---
+title: "E1 Reaction (एकाणुक विलोपन)"
+description: "E1 reaction दो steps वाला unimolecular elimination है: पहले carbocation बनता है, फिर β-H निकलकर alkene बनती है। Mechanism, Saytzeff rule, examples।"
+aliases: ["ई1 अभिक्रिया", "एकाणुक विलोपन", "e1 reaction hindi", "e1 mechanism hindi", "unimolecular elimination hindi", "e1 elimination hindi", "e1 kya hai"]
+reagents: "Weak base या कोई base नहीं (ethanol, पानी, या alcohols के लिए acid)"
+conditions: "Polar protic solvent, गर्म करना"
+byproducts: "HBr (Br⁻ और protonated solvent के रूप में); कुछ SN1 ether या alcohol"
+reactantName: "2-Bromo-2-methylbutane"
+productName: "2-Methylbut-2-ene (Saytzeff product)"
+steps:
+  - title: "Ionisation (slow, rate-determining)"
+    text: "गर्म ethanol में 2-bromo-2-methylbutane का C–Br bond heterolytically टूटता है, जिससे planar tertiary carbocation और Br⁻ बनते हैं। इसमें सिर्फ़ substrate भाग लेता है, इसलिए rate = k[RX]; यह वही पहला step है जो SN1 में होता है।"
+    arrows: "C–Br bond pair bromine पर चला जाता है, जो Br⁻ बनकर निकल जाता है।"
+  - title: "Deprotonation (fast)"
+    text: "एक weak base, यहाँ solvent ethanol, positive centre के बगल वाले carbon से H⁺ हटाता है। Strong base की ज़रूरत नहीं होती और anti-periplanar arrangement भी ज़रूरी नहीं है।"
+    arrows: "Ethanol के O का lone pair → CH₂ पर β-H; C–H bond pair → C–C⁺ bond, जिससे नया π bond बनता है।"
+  - title: "Saytzeff (major) और minor alkenes"
+    text: "CH₂ से H निकलने पर trisubstituted 2-methylbut-2-ene बनती है, जो major (Saytzeff) product है। किसी CH₃ से H निकलने पर minor alkene 2-methylbut-1-ene बनती है; उसी cation से कुछ SN1 ether भी बनता है।"
+    arrows: "वही C–H → C=C arrow अगर CH₃ के hydrogen से बनाया जाए, तो कम substituted alkene मिलती है।"
+faq:
+  - q: "E1 reaction का rate law क्या है?"
+    a: "Rate = k[substrate]। Slow step (ionisation होकर carbocation बनना) में सिर्फ़ substrate भाग लेता है, इसलिए reaction first order है और base का concentration rate को नहीं बदलता।"
+  - q: "कौन-से substrates E1 elimination देते हैं?"
+    a: "Tertiary (और कुछ secondary) alkyl halides और alcohols, जो stable carbocation बना सकें। Primary substrates E1 से react नहीं करते, जब तक cation किसी ज़्यादा stable cation में rearrange न हो सके।"
+  - q: "E1 reaction का major product क्या है?"
+    a: "आमतौर पर ज़्यादा substituted, ज़्यादा stable alkene (Saytzeff या Zaitsev product)। गर्म ethanol में 2-bromo-2-methylbutane के लिए यह 2-methylbut-2-ene है, और 2-methylbut-1-ene minor alkene है।"
+  - q: "E1 और E2 में क्या अंतर है?"
+    a: "E1 दो steps वाला है, इसमें carbocation intermediate बनता है, first-order kinetics है, strong base की ज़रूरत नहीं और anti-periplanar requirement भी नहीं; rearrangements संभव हैं। E2 एक concerted step है, second order है, इसमें strong base और anti-periplanar H व leaving group चाहिए।"
+  - q: "E1 और SN1 reactions साथ-साथ क्यों होते हैं?"
+    a: "दोनों एक ही carbocation से शुरू होते हैं। अगर solvent molecule cation पर attack करे तो SN1 substitution होता है; अगर वह β-hydrogen हटाए तो E1 elimination होता है। ज़्यादा temperature elimination को favour करता है।"
+translated: 2026-11-22
+---
+
+## E1 reaction क्या है?
+
+**E1 reaction** (elimination, unimolecular) दो steps वाला β-elimination है जिसमें पहले leaving group निकलकर एक **carbocation** बनाता है, और फिर एक weak base बगल वाले (β) carbon से proton हटाकर C=C bond बनाता है। यह tertiary या secondary alkyl halides, sulphonates और protonated alcohols को **alkenes** में बदलता है, आमतौर पर polar protic solvent में, गर्म करके और बहुत कम या बिना strong base के।
+
+चूँकि slow step में सिर्फ़ substrate भाग लेता है, rate law **rate = k[RX]** है, इसीलिए इस reaction को unimolecular कहते हैं।
+
+## Mechanism
+
+1. **Ionisation (slow, rate-determining)।** C–X bond heterolytically टूटता है। Halide bonding pair के साथ निकल जाता है और एक planar carbocation बनता है। यह वही पहला step है जो SN1 में होता है।
+2. **Deprotonation (fast)।** एक weak base, अक्सर सिर्फ़ solvent (पानी, ethanol) या counter-anion, positive centre के बगल वाले carbon से H⁺ हटाता है। C–H का electron pair नया π bond बन जाता है।
+
+<Eq ce="(CH3)3C-Br <=>[slow] (CH3)3C+ + Br-" />
+<Eq ce="(CH3)3C+ + C2H5OH -> CH2=C(CH3)2 + C2H5OH2+" />
+
+<KeyPoint>
+C–H bond rate-determining step के बाद ही टूटता है। इसलिए E1 में first-order kinetics होती है, कोई significant primary deuterium isotope effect नहीं होता, और H व leaving group का anti-periplanar होना ज़रूरी नहीं है।
+</KeyPoint>
+
+## Examples
+
+**1. गर्म ethanol में 2-bromo-2-methylbutane।** Tertiary cation, CH₂ से या किसी CH₃ group से proton खो सकता है। CH₂ से proton निकलने पर trisubstituted alkene बनती है, जो major (Saytzeff) product है।
+
+<Eq ce="(CH3)2CBr-CH2CH3 ->[C2H5OH][\Delta] (CH3)2C=CHCH3 (major) + CH2=C(CH3)CH2CH3 (minor)" />
+
+**2. Aqueous ethanol में tert-butyl chloride।** 2-Chloro-2-methylpropane को 80% aqueous ethanol में गुनगुना करने पर 2-methylpropan-2-ol (SN1) और 2-methylpropene (E1) दोनों बनते हैं, जिससे पता चलता है कि दोनों रास्तों का intermediate एक ही है।
+
+**3. Tertiary alcohol का acid-catalysed dehydration।** Protonation से –OH, –OH₂⁺ बन जाता है, पानी निकलकर tertiary cation बनाता है, और H⁺ निकलने पर alkene मिलती है। पूरी detail के लिए [dehydration of alcohols](/hi/reactions/dehydration-of-alcohols/) देखें।
+
+<Eq ce="(CH3)2C(OH)CH2CH3 ->[conc. H2SO4][\Delta] (CH3)2C=CHCH3 + H2O" />
+
+## याद रखने वाले features
+
+- **Substrate:** 3° > 2°; 1° और methyl substrates E1 से react नहीं करते क्योंकि उनके cations बहुत unstable हैं।
+- **Base:** weak base या कोई base नहीं। Base rate law में नहीं है, इसलिए उसकी strength या concentration rate को नहीं बदलती।
+- **Solvent:** ion pair को stabilise करने के लिए polar protic (पानी, alcohols)।
+- **Leaving group:** अच्छे leaving groups (I⁻, Br⁻, TsO⁻, protonated alcohol से H₂O)।
+- **Regiochemistry:** आमतौर पर ज़्यादा substituted alkene हावी रहती है (Saytzeff rule); जहाँ cis/trans isomers संभव हों, वहाँ ज़्यादा stable *trans* alkene favoured होती है।
+- **Rearrangement:** संभव है, क्योंकि free carbocation बनता है। Deprotonation से पहले hydride या alkyl shift से ज़्यादा stable cation बन जाता है।
+
+<ExamTip>
+अगर question में 3° halide या alcohol के साथ weak base, protic solvent और गर्म करना दिया हो, तो E1 सोचें (SN1 के competition के साथ)। अगर alcoholic KOH या NaOEt जैसा strong base दिया हो, तो E2 सोचें। Final alkene चुनने से पहले हमेशा check करें कि carbocation rearrange हो सकता है या नहीं।
+</ExamTip>
+
+## E1 बनाम SN1
+
+जब भी कोई substrate protic solvent में non-basic nucleophile के साथ ionise होता है, E1 और SN1 में competition होता है। Temperature बढ़ाने से elimination favoured होता है, क्योंकि elimination में ज़्यादा molecules बनते हैं और entropy term इसकी मदद करता है। Exam questions में 3° substrate और weak base के साथ "heat" लिखा हो तो आमतौर पर answer alkene होता है।
+
+## Limitations और exceptions
+
+- Mixtures आम हैं: SN1 products, alkene isomers और rearranged alkenes सब बन सकते हैं।
+- Stereospecificity नहीं: planar cation original geometry "भूल" जाता है, इसलिए E2 के विपरीत, E1 किसी दिए गए diastereomer से एक ही alkene stereoisomer नहीं देता।
+- Cyclic systems में anti-periplanar H न होने पर भी E1, Saytzeff alkene दे सकता है; उन्हीं conditions में E2 कोई दूसरी (non-Saytzeff) alkene दे सकता है।
+
+## Related reactions
+
+- [E2 reaction](/hi/reactions/e2-reaction/): एक step वाला, strong-base elimination।
+- [E1cB mechanism](/hi/reactions/e1cb-mechanism/): carbanion version, जिसमें proton पहले निकलता है।
+- [SN1 reaction](/hi/reactions/sn1-reaction/): उसी carbocation के through substitution।
+- [Dehydration of alcohols](/hi/reactions/dehydration-of-alcohols/): exams में सबसे common E1 reaction।
+- [Elimination reactions hub](/hi/mechanisms/elimination-reactions/)।

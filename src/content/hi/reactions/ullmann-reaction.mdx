@@ -1,0 +1,84 @@
+---
+title: "Ullmann Reaction (उलमान अभिक्रिया)"
+description: "Ullmann reaction में दो aryl halides copper powder के साथ गर्म करने पर जुड़कर biaryl बनाते हैं, जैसे iodobenzene से biphenyl। Mechanism, nitro effect और examples।"
+aliases: ["उलमान अभिक्रिया", "उलमान रिएक्शन", "ullmann reaction hindi", "ullmann coupling hindi", "ullman reaction hindi", "biphenyl kaise banta hai"]
+reagents: "Copper powder या copper-bronze (excess में)"
+conditions: "गर्म करें, लगभग 200 °C (473 K)"
+byproducts: "CuI (copper(I) halide)"
+reactantName: "Iodobenzene"
+productName: "Biphenyl"
+faq:
+  - q: "Ullmann reaction का product क्या है?"
+    a: "एक symmetrical biaryl। Iodobenzene को copper powder के साथ गर्म करने पर biphenyl मिलता है, और 2-chloronitrobenzene से 2,2′-dinitrobiphenyl बनता है।"
+  - q: "Chlorobenzene Ullmann reaction क्यों नहीं देता?"
+    a: "Chlorobenzene का C–Cl bond strong होता है और ring electron-poor नहीं होती, इसलिए classical conditions में copper insert नहीं हो पाता। अगर Cl के ortho या para पर electron-withdrawing nitro group हो, तो aryl chloride इतना reactive हो जाता है कि coupling हो सके।"
+  - q: "Ullmann और Fittig reactions में क्या अंतर है?"
+    a: "दोनों aryl halides से biaryls बनाते हैं। Ullmann में copper और heat लगती है, यह aryl iodides या nitro-activated aryl halides के साथ सबसे अच्छा चलता है और practical lab method है; Fittig में dry ether में sodium लगता है और yield कम मिलती है।"
+  - q: "Ullmann reaction में कौन-सा metal इस्तेमाल होता है?"
+    a: "Copper, आमतौर पर बारीक copper powder या copper-bronze alloy के रूप में, excess में। Modern versions में ligands के साथ catalytic copper, या palladium और nickel catalysts भी इस्तेमाल होते हैं।"
+translated: 2026-11-22
+---
+
+## Ullmann reaction क्या है?
+
+**Ullmann reaction** (Ullmann coupling) दो aryl halides की **copper-mediated coupling** है, जिससे एक **symmetrical biaryl** बनता है। किसी aryl iodide को, या electron-withdrawing group वाले aryl halide को, लगभग 200 °C पर excess **copper powder** के साथ गर्म किया जाता है, और दोनों aryl groups एक नए C–C bond से जुड़ जाते हैं: **iodobenzene → biphenyl**। Fritz Ullmann और उनके student Bielecki ने इसे 1901 में report किया था; यह पहला reaction था जिसने दिखाया कि कोई transition metal दो aryl groups को जोड़ सकता है।
+
+## General reaction
+
+<Eq ce="2 Ar-X + 2 Cu ->[\Delta] Ar-Ar + 2 CuX" />
+
+संक्षेप में: iodobenzene →(Cu) Ph–Ph।
+
+## Mechanism
+
+Classical Ullmann reaction free radicals के through **नहीं** होता; electron spin resonance studies radical intermediates को rule out करती हैं। मान्य simplified picture यह है:
+
+1. **Arylcopper(I) species का बनना।** Copper metal aryl halide से react करता है (एक oxidative step) और organocopper compound Ar–Cu के साथ CuX बनता है।
+2. **दूसरे aryl halide से reaction।** Arylcopper, Ar–X के एक और molecule से react करता है (oxidative addition, फिर दोनों aryl groups का reductive elimination), जिससे Ar–Ar bond बनता है और CuX निकलता है।
+
+<Eq ce="Ar-X + 2 Cu -> Ar-Cu + CuX" />
+<Eq ce="Ar-Cu + Ar-X -> Ar-Ar + CuX" />
+
+<KeyPoint>
+Fittig reaction (Na, radical या carbanion pathway) के उलट, Ullmann reaction एक organocopper intermediate के through होने वाली transition-metal (copper) mediated coupling है।
+</KeyPoint>
+
+## Examples
+
+1. **Iodobenzene से biphenyl**:
+
+<Eq ce="2 C6H5I + 2 Cu ->[\Delta] C6H5-C6H5 + 2 CuI" />
+
+2. **2-Chloronitrobenzene से 2,2′-dinitrobiphenyl**, copper-bronze के साथ textbook का classic उदाहरण:
+
+<Eq ce="2 O2N-C6H4-Cl + 2 Cu ->[\Delta] O2N-C6H4-C6H4-NO2 + 2 CuCl" />
+
+3. **4-Chloronitrobenzene से 4,4′-dinitrobiphenyl**:
+
+<Eq ce="2 p-O2NC6H4Cl + 2 Cu ->[\Delta] p-O2NC6H4-C6H4NO2-p + 2 CuCl" />
+
+## Halogen और electron-withdrawing groups का असर
+
+Exam का मुख्य point: **chlorobenzene Ullmann reaction नहीं देता, लेकिन अगर ring पर –NO₂ जैसा electron-withdrawing group हो, तो reaction हो जाता है।** Sources इस बात पर सहमत हैं कि traditional Ullmann reaction **electron-deficient aryl halides** तक सीमित है, इसीलिए standard example 2-chloronitrobenzene है।
+
+- Aryl **iodides** सबसे आसानी से react करते हैं (सबसे weak C–X bond), फिर bromides; सामान्य aryl chlorides fail हो जाते हैं।
+- Halogen के **ortho या para पर nitro group** aryl chloride को activate करता है।
+
+<ExamTip>
+अगर JEE में पूछा जाए कि कौन-सा aryl halide Cu/heat के साथ Ullmann reaction देता है, तो iodobenzene या nitro-substituted chloro/bromobenzene चुनें, सामान्य chlorobenzene नहीं।
+</ExamTip>
+
+## Limitations और exceptions
+
+- **कठोर conditions:** classical reaction में stoichiometric (excess) copper और ऊँचा temperature (लगभग 200 °C) चाहिए, और yield अनिश्चित रहती है।
+- **Symmetrical products:** दो अलग aryl halides की coupling से mixture बनता है। Unsymmetrical biaryls modified routes से बनाए जाते हैं (जैसे कम temperature पर बने arylcopper reagents)।
+- **Modern versions** bidentate ligands के साथ copper, या palladium और nickel catalysts, हल्की conditions में इस्तेमाल करते हैं। असली synthesis में इसकी जगह अक्सर Suzuki reaction जैसी palladium couplings ले लेती हैं।
+- **Ullmann-type reactions** (नाम का एक अलग अर्थ) aryl halides पर phenoxides या amines की copper-catalysed substitutions हैं, जैसे diaryl ethers की Ullmann ether synthesis।
+
+## Related reactions
+
+- [Fittig reaction](/hi/reactions/fittig-reaction/): aryl halides और sodium से biaryls।
+- [Wurtz reaction](/hi/reactions/wurtz-reaction/): alkyl halides की sodium-mediated coupling।
+- [Nucleophilic aromatic substitution](/hi/reactions/nucleophilic-aromatic-substitution/): aryl halides का वही nitro activation।
+- [Sandmeyer reaction](/hi/reactions/sandmeyer-reaction/) और [Gattermann reaction](/hi/reactions/gattermann-reaction/): aromatic compounds की दूसरी copper-mediated reactions।
+- Hub: [Coupling reactions](/hi/mechanisms/coupling-reactions/)

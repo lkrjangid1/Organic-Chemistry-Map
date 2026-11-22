@@ -1,0 +1,124 @@
+---
+title: "Sodium Borohydride (NaBH₄)"
+description: "Sodium borohydride (NaBH₄) is a mild hydride reducing agent that turns aldehydes and ketones into alcohols but leaves esters, acids, amides and C=C untouched."
+aliases: ["SBH", "NaBH4", "Sodium tetrahydridoborate", "Sodium tetrahydroborate"]
+category: "Reducing agents"
+exams: ["jee-main", "jee-advanced", "neet"]
+formula: "NaBH₄"
+molecule:
+  name: "Sodium borohydride, Na⁺[BH₄]⁻"
+  smiles: "[Na+].[BH4-]"
+family: "reduction-reactions"
+notesPages: [65]
+memoryTricks:
+  - text: "NaBH₄; LiAlH₄ की तुलना में weak Reducing agent है। यह Acyl halide, aldehyde, Ketone, alkyl halide को Reduce करता है।"
+    meaning: "NaBH₄ is a weaker reducing agent than LiAlH₄; it reduces acyl halides, aldehydes and ketones (and some alkyl halides)."
+faq:
+  - q: "Does NaBH₄ reduce esters and carboxylic acids?"
+    a: "Carboxylic acids and amides are not reduced at all. Esters react only very slowly, with a large excess of reagent or heating, so for exam purposes NaBH₄ is taken to leave esters unchanged."
+  - q: "Why is NaBH₄ weaker than LiAlH₄?"
+    a: "Boron is more electronegative than aluminium, so the B–H bond is less polar and holds its hydride more tightly than the Al–H bond. NaBH₄ therefore attacks only the more reactive carbonyl groups."
+  - q: "Which solvent is used for NaBH₄ reductions?"
+    a: "Methanol, ethanol or water. NaBH₄ reacts only slowly with these protic solvents, and in strongly basic water it is stable. It decomposes in neutral or acidic water."
+  - q: "What is the product of NaBH₄ with ethyl acetoacetate?"
+    a: "Ethyl 3-hydroxybutanoate. The ketone C=O is reduced to a secondary alcohol, while the ester group is left intact."
+  - q: "What is the Luche reduction?"
+    a: "NaBH₄ with cerium(III) chloride in methanol. It reduces an α,β-unsaturated ketone cleanly at C=O to an allylic alcohol, avoiding the 1,4-reduction that plain NaBH₄ often gives."
+related: ["reagents/lithium-aluminium-hydride", "reagents/dibal-h", "reactions/meerwein-ponndorf-verley-reduction", "reactions/reductive-amination", "reactions/clemmensen-reduction", "mechanisms/reduction-reactions"]
+sources:
+  - title: "Sodium borohydride"
+    url: "https://en.wikipedia.org/wiki/Sodium_borohydride"
+    publisher: "Wikipedia"
+  - title: "19.3: Reductions using NaBH4, LiAlH4"
+    url: "https://chem.libretexts.org/Courses/SUNY_Potsdam/Book:_Organic_Chemistry_II_(Walker)/19:_Oxidation_and_Reduction/19.03:_Reductions_using_NaBH4,_LiAlH4"
+    publisher: "Chemistry LibreTexts"
+  - title: "19.2: Overview of common redox reactions"
+    url: "https://chem.libretexts.org/Courses/SUNY_Potsdam/Book:_Organic_Chemistry_II_(Walker)/19:_Oxidation_and_Reduction/19.02:_Overview_of_common_redox_reactions"
+    publisher: "Chemistry LibreTexts"
+  - title: "18.7: Reduction of Carboxylic Acids and Their Derivatives"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Map:_Organic_Chemistry_(Smith)/18:_Introduction_to_Carbonyl_Chemistry_Organometallic_Reagents_Oxidation_and_Reduction/18.07:_Reduction_of_Carboxylic_Acids_and_Their_Derivatives"
+    publisher: "Chemistry LibreTexts"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 4
+  note: "Alkyl halide reduction by NaBH₄ (SN1 order 3° > 2°, 1° no reaction) is not confirmed by an approved source; primary literature found in search describes SN2-type reduction of 1° and 2° halides in DMSO. Page mentions halides only as a minor, solvent-dependent reaction. Diborane + NaH preparation not confirmed by an approved source; page leads with the Brown–Schlesinger process."
+---
+
+## What is sodium borohydride?
+
+**Sodium borohydride (NaBH₄)** is a white ionic solid, Na⁺[BH₄]⁻, built from a tetrahedral borohydride ion in which each hydrogen has an oxidation number of −1. Like [LiAlH₄](/reagents/lithium-aluminium-hydride/) it donates **hydride (H⁻)**, but it is much **milder and more selective**: it reduces **aldehydes to primary alcohols** and **ketones to secondary alcohols**, and leaves esters, acids, amides, nitriles and C=C bonds alone.
+
+## Preparation and handling
+
+NaBH₄ was discovered by H. I. Schlesinger's group in the 1940s. The industrial **Brown–Schlesinger process** heats sodium hydride with trimethyl borate at about 250–270 °C:
+
+<Eq ce="B(OCH3)3 + 4NaH -> NaBH4 + 3NaOCH3" />
+
+Sodium hydride also combines with diborane to give the same salt (2NaH + B₂H₆ → 2NaBH₄).
+
+Unlike LAH, NaBH₄ can be used in **methanol, ethanol or water**. It reacts with them only slowly (a methanol solution takes over an hour to decompose at room temperature), is stable in strongly alkaline water, and decomposes in acid. The protic solvent also protonates the alkoxide, so no separate work-up step is strictly needed. One mole of NaBH₄ can reduce up to four moles of aldehyde or ketone.
+
+## What NaBH₄ reduces
+
+| Substrate | Product |
+|---|---|
+| Aldehyde, R–CHO | 1° alcohol, R–CH₂OH |
+| Ketone, R–CO–R′ | 2° alcohol, R–CH(OH)–R′ |
+| Acid chloride, R–COCl | 1° alcohol, R–CH₂OH |
+| Acid anhydride, (RCO)₂O | 1° alcohol (plus carboxylate) |
+| Imine or iminium ion, R₂C=NR′ | Amine, R₂CH–NHR′ |
+| α,β-Unsaturated ketone | Mixture of 1,2- and 1,4-reduction products; with CeCl₃ (Luche) the allylic alcohol |
+
+<Eq ce="C6H5COCH3 ->[NaBH4][CH3OH] C6H5CH(OH)CH3" />
+
+<Eq ce="CH3CH2CHO ->[NaBH4][C2H5OH] CH3CH2CH2OH" />
+
+Imine reduction is the basis of [reductive amination](/reactions/reductive-amination/), where milder relatives such as NaBH₃CN are often preferred.
+
+## What NaBH₄ does not reduce
+
+- **Carboxylic acids and amides**: no reaction.
+- **Esters**: only slowly with excess reagent and heat; treated as unreactive in exams.
+- **Isolated C=C bonds** and benzene rings.
+- **Nitriles**, which like the other acid derivatives are left alone under normal conditions.
+
+**Alkyl halides** are not a normal target. In polar aprotic solvents such as DMSO or diglyme some alkyl halides are reduced to alkanes, but the order of reactivity depends on the solvent, so do not rely on NaBH₄ for R–X → R–H in an exam answer; LiAlH₄ is the standard choice.
+
+<KeyPoint>
+**Chemoselectivity is the whole point of NaBH₄.** In a molecule with both a ketone and an ester, NaBH₄ reduces only the ketone:
+
+<Eq ce="CH3COCH2COOC2H5 ->[NaBH4][C2H5OH] CH3CH(OH)CH2COOC2H5" />
+
+LiAlH₄ would reduce both groups, giving butane-1,3-diol.
+</KeyPoint>
+
+## Mechanism (short)
+
+1. **Hydride transfer.** A B–H bond delivers H⁻ to the carbonyl carbon; the C=O π electrons move onto oxygen.
+2. **Alkoxide formation.** The resulting alkoxyborate can transfer its remaining hydrides to further carbonyl molecules.
+3. **Protonation.** The protic solvent (or added water) protonates the alkoxide to the alcohol.
+
+Hydrogen bonding from the alcohol solvent activates the carbonyl; in a strictly aprotic solvent such as diglyme, ketones are not reduced.
+
+## Comparison with LiAlH₄
+
+| Point | NaBH₄ | LiAlH₄ |
+|---|---|---|
+| Reducing power | Mild | Very strong |
+| Reason | B–H less polar | Al–H more polar |
+| Solvent | Water, MeOH, EtOH | Dry ether or THF only |
+| Aldehyde, ketone | Alcohol | Alcohol |
+| Acid chloride | Alcohol | Alcohol |
+| Ester | Very slow or none | 1° alcohol |
+| Carboxylic acid | No reaction | 1° alcohol |
+| Amide, nitrile | No reaction | Amine |
+| Isolated C=C | No reaction | No reaction |
+| Safety | Easy to handle | Violent with water, fire risk |
+
+## Exam tips
+
+- "Selective reduction of the aldehyde or ketone group in presence of an ester, acid, amide, nitrile or isolated C=C" → answer **NaBH₄**.
+- In exam answers, NaBH₄ is taken to reduce cinnamaldehyde to cinnamyl alcohol (C=C kept), while excess LiAlH₄ is taken to give 3-phenylpropan-1-ol; compare the [MPV reduction](/reactions/meerwein-ponndorf-verley-reduction/), which is also C=C-safe.
+- To convert C=O all the way to CH₂, NaBH₄ is useless; use the [Clemmensen](/reactions/clemmensen-reduction/) or [Wolff–Kishner](/reactions/wolff-kishner-reduction/) reduction.
+- For the full set of reducing agents, see the [reduction reactions hub](/mechanisms/reduction-reactions/).

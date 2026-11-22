@@ -1,0 +1,248 @@
+{
+ "exam": "jee-advanced",
+ "year": 2017,
+ "paper": 1,
+ "source": "https://jeeadv.ac.in/past_qps/2017_1.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2017-p1-q24",
+   "number": 24,
+   "type": "multiple",
+   "stem": "The IUPAC name(s) of the following compound is(are)",
+   "figures": [
+    {
+     "smiles": "Cc1ccc(Cl)cc1"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "1-chloro-4-methylbenzene"
+    },
+    {
+     "key": "B",
+     "text": "4-chlorotoluene"
+    },
+    {
+     "key": "C",
+     "text": "4-methylchlorobenzene"
+    },
+    {
+     "key": "D",
+     "text": "1-methyl-4-chlorobenzene"
+    }
+   ],
+   "answer": [
+    "A",
+    "B"
+   ],
+   "solution": "When benzene carries two substituents that are both written as prefixes, the ring is numbered so the prefix that comes first alphabetically gets locant 1. 'Chloro' precedes 'methyl', so the name is 1-chloro-4-methylbenzene, and 1-methyl-4-chlorobenzene breaks the alphabetical rule. IUPAC also keeps toluene as a retained parent name, which gives 4-chlorotoluene. 'Chlorobenzene' is not used as a parent with a methyl prefix, so 4-methylchlorobenzene is not an accepted name.",
+   "topics": [
+    "concepts/iupac-functional-group-priority"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (A, B)"
+   }
+  },
+  {
+   "id": "jee-advanced-2017-p1-q25",
+   "number": 25,
+   "type": "multiple",
+   "stem": "The correct statement(s) for the following addition reactions is(are)\n(i) trans-alkene (i) —Br₂/CHCl₃→ M and N\n(ii) cis-alkene (ii) —Br₂/CHCl₃→ O and P",
+   "figures": [
+    {
+     "smiles": "C/C=C/C",
+     "label": "(i)"
+    },
+    {
+     "smiles": "C/C=C\\C",
+     "label": "(ii)"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "O and P are identical molecules"
+    },
+    {
+     "key": "B",
+     "text": "(M and O) and (N and P) are two pairs of diastereomers"
+    },
+    {
+     "key": "C",
+     "text": "(M and O) and (N and P) are two pairs of enantiomers"
+    },
+    {
+     "key": "D",
+     "text": "Bromination proceeds through trans-addition in both the reactions"
+    }
+   ],
+   "answer": [
+    "B",
+    "D"
+   ],
+   "solution": "Br₂ adds through a cyclic bromonium ion, and bromide opens it from the back face, so the addition is anti (trans) in both reactions. Anti addition to trans-but-2-ene gives meso-2,3-dibromobutane, so M and N are the same meso compound. Anti addition to cis-but-2-ene gives the (2R,3R) and (2S,3S) pair, so O and P are enantiomers, not identical. A meso stereoisomer and a chiral stereoisomer of the same compound are diastereomers, so M/O and N/P are diastereomeric pairs.",
+   "topics": [
+    "mechanisms/electrophilic-addition"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (B, D)"
+   }
+  },
+  {
+   "id": "jee-advanced-2017-p1-q30",
+   "number": 30,
+   "type": "numerical",
+   "stem": "Among the following, the number of aromatic compound(s) is",
+   "figures": [
+    {
+     "smiles": "C1=CC=CC=CC=C1"
+    },
+    {
+     "smiles": "[CH-]1C=C1"
+    },
+    {
+     "smiles": "[CH+]1C=C1"
+    },
+    {
+     "smiles": "C1=CC=CCC1"
+    },
+    {
+     "smiles": "[CH+]1C=CC=CC=C1"
+    },
+    {
+     "smiles": "[CH+]1C=CC=C1"
+    },
+    {
+     "smiles": "[CH-]1C=CC=C1"
+    },
+    {
+     "smiles": "C1Cc2ccccc2C=C1"
+    },
+    {
+     "smiles": "c1ccc2c(c1)ccc1ccccc12"
+    }
+   ],
+   "answer": "5",
+   "solution": "Check each species for a planar, fully conjugated ring with 4n+2 π electrons. Cyclopropenyl cation (2π), tropylium cation (6π) and cyclopentadienyl anion (6π) are aromatic. 1,2-Dihydronaphthalene keeps an intact benzene ring and phenanthrene is a fully benzenoid hydrocarbon, so both count. Cyclooctatetraene is tub-shaped and non-aromatic, cyclopropenyl anion and cyclopentadienyl cation are antiaromatic 4π systems, and cyclohexa-1,3-diene is not cyclically conjugated, giving 5 in total.",
+   "topics": [
+    "concepts/aromaticity"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (5)"
+   }
+  },
+  {
+   "id": "jee-advanced-2017-p1-q34",
+   "number": 34,
+   "type": "matching",
+   "stem": "Columns 1, 2 and 3 contain starting materials, reaction conditions, and type of reactions, respectively.\nColumn 1: (I) Toluene; (II) Acetophenone; (III) Benzaldehyde; (IV) Phenol\nColumn 2: (i) NaOH/Br₂; (ii) Br₂/hν; (iii) (CH₃CO)₂O/CH₃COOK; (iv) NaOH/CO₂\nColumn 3: (P) Condensation; (Q) Carboxylation; (R) Substitution; (S) Haloform\nFor the synthesis of benzoic acid, the only CORRECT combination is",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "(II) (i) (S)"
+    },
+    {
+     "key": "B",
+     "text": "(IV) (ii) (P)"
+    },
+    {
+     "key": "C",
+     "text": "(I) (iv) (Q)"
+    },
+    {
+     "key": "D",
+     "text": "(III) (iv) (R)"
+    }
+   ],
+   "answer": "A",
+   "solution": "Acetophenone is a methyl ketone, so NaOH/Br₂ brominates the methyl group three times. Hydroxide then cleaves the C–CBr₃ bond, giving sodium benzoate and bromoform, which is the haloform reaction. Acidification gives benzoic acid, so the combination is (II)(i)(S). None of the other combinations leads to benzoic acid.",
+   "topics": [
+    "reactions/haloform-reaction"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (A)"
+   }
+  },
+  {
+   "id": "jee-advanced-2017-p1-q35",
+   "number": 35,
+   "type": "matching",
+   "stem": "Columns 1, 2 and 3 contain starting materials, reaction conditions, and type of reactions, respectively.\nColumn 1: (I) Toluene; (II) Acetophenone; (III) Benzaldehyde; (IV) Phenol\nColumn 2: (i) NaOH/Br₂; (ii) Br₂/hν; (iii) (CH₃CO)₂O/CH₃COOK; (iv) NaOH/CO₂\nColumn 3: (P) Condensation; (Q) Carboxylation; (R) Substitution; (S) Haloform\nThe only CORRECT combination that gives two different carboxylic acids is",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "(II) (iv) (R)"
+    },
+    {
+     "key": "B",
+     "text": "(IV) (iii) (Q)"
+    },
+    {
+     "key": "C",
+     "text": "(III) (iii) (P)"
+    },
+    {
+     "key": "D",
+     "text": "(I) (i) (S)"
+    }
+   ],
+   "answer": "C",
+   "solution": "Benzaldehyde heated with acetic anhydride and potassium acetate undergoes the Perkin condensation. The anhydride enolate adds to the aldehyde, and dehydration and hydrolysis give cinnamic acid (PhCH=CHCOOH). Acetic acid forms as the second acid, so this one reaction gives two different carboxylic acids: (III)(iii)(P).",
+   "topics": [
+    "reactions/perkin-reaction"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (C)"
+   }
+  },
+  {
+   "id": "jee-advanced-2017-p1-q36",
+   "number": 36,
+   "type": "matching",
+   "stem": "Columns 1, 2 and 3 contain starting materials, reaction conditions, and type of reactions, respectively.\nColumn 1: (I) Toluene; (II) Acetophenone; (III) Benzaldehyde; (IV) Phenol\nColumn 2: (i) NaOH/Br₂; (ii) Br₂/hν; (iii) (CH₃CO)₂O/CH₃COOK; (iv) NaOH/CO₂\nColumn 3: (P) Condensation; (Q) Carboxylation; (R) Substitution; (S) Haloform\nThe only CORRECT combination in which the reaction proceeds through radical mechanism is",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "(III) (ii) (P)"
+    },
+    {
+     "key": "B",
+     "text": "(IV) (i) (Q)"
+    },
+    {
+     "key": "C",
+     "text": "(II) (iii) (R)"
+    },
+    {
+     "key": "D",
+     "text": "(I) (ii) (R)"
+    }
+   ],
+   "answer": "D",
+   "solution": "Light homolyses Br₂ into bromine atoms. These abstract a benzylic hydrogen from toluene to give a resonance-stabilised benzyl radical, which then takes Br from Br₂ in the chain step. The net result is benzylic substitution (PhCH₂Br) by a free-radical chain, so the answer is (I)(ii)(R).",
+   "topics": [
+    "reactions/free-radical-halogenation",
+    "mechanisms/free-radical-reactions"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (D)"
+   }
+  }
+ ]
+}

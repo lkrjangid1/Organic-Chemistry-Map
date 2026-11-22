@@ -1,0 +1,49 @@
+{
+ "page": "tests/benedict-test",
+ "questions": [
+  {
+   "q": "Which sugar gives a NEGATIVE Benedict's test?",
+   "options": [
+    "Glucose",
+    "Fructose",
+    "Maltose",
+    "Sucrose"
+   ],
+   "answer": 3,
+   "explain": "In sucrose the anomeric carbons of both glucose and fructose are tied up in the glycosidic bond, so neither unit can open to a free carbonyl. Maltose and the two monosaccharides are reducing sugars and give brick-red Cu₂O."
+  },
+  {
+   "q": "Which statement correctly describes Benedict's reagent?",
+   "options": [
+    "A single stable solution of CuSO₄, sodium citrate and Na₂CO₃",
+    "Two solutions, A and B, mixed at the time of the test",
+    "Copper(II) tartrate in concentrated NaOH",
+    "Ammoniacal silver nitrate"
+   ],
+   "answer": 0,
+   "explain": "Benedict's reagent is one deep blue solution; citrate keeps Cu²⁺ dissolved and Na₂CO₃ makes it mildly alkaline. The two-solution tartrate/NaOH reagent is Fehling's, which is the usual trap."
+  },
+  {
+   "q": "Fructose, a ketose, gives a brick-red precipitate with Benedict's solution because:",
+   "options": [
+    "It has a free –CHO group in its ring form",
+    "The alkaline reagent converts it through an enediol into aldoses",
+    "Citrate oxidises the ketone group",
+    "Fructose is hydrolysed to glucose by Na₂CO₃"
+   ],
+   "answer": 1,
+   "explain": "The mild alkali of Benedict's reagent isomerises fructose via an enediol into glucose and mannose, which then reduce Cu²⁺ to Cu₂O. For the same reason Benedict's test cannot tell an aldose from a ketose."
+  },
+  {
+   "q": "Which compound gives a red precipitate when heated with Benedict's solution?",
+   "options": [
+    "Benzaldehyde",
+    "Propanone",
+    "Formic acid",
+    "Sucrose (without hydrolysis)"
+   ],
+   "answer": 2,
+   "explain": "HCOOH is on the same positive list as for Fehling's test, along with aliphatic aldehydes, α-hydroxy ketones and reducing sugars. Aromatic aldehydes and simple ketones stay blue, and sucrose reacts only after acid hydrolysis."
+  }
+ ]
+}

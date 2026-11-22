@@ -1,0 +1,50 @@
+{
+ "page": "reactions/fittig-reaction",
+ "questions": [
+  {
+   "q": "4-Bromotoluene is treated with sodium in dry ether. The main coupling product is:",
+   "smiles": "Cc1ccc(Br)cc1",
+   "options": [
+    "Toluene",
+    "4,4′-Dimethylbiphenyl",
+    "2,2′-Dimethylbiphenyl",
+    "4-Methylbiphenyl"
+   ],
+   "answer": 1,
+   "explain": "In the Fittig reaction two aryl halides join where the halogens were, and ring substituents stay in place, so two para-tolyl groups are linked at C-4."
+  },
+  {
+   "q": "Which combination of reactants, each treated with Na in dry ether, gives toluene?",
+   "options": [
+    "Bromobenzene alone",
+    "Bromomethane alone",
+    "Chlorobenzene and bromobenzene",
+    "Bromobenzene and bromomethane"
+   ],
+   "answer": 3,
+   "explain": "One aryl halide plus one alkyl halide with Na/dry ether is the Wurtz–Fittig reaction, which gives an alkylarene Ar–R. Bromobenzene alone (Fittig) gives biphenyl and bromomethane alone (Wurtz) gives ethane."
+  },
+  {
+   "q": "Alkyl halides couple with sodium more readily than aryl halides (Wurtz faster than Fittig). The main reason is that the aryl C–X bond:",
+   "options": [
+    "is weaker because the aryl carbon is sp³",
+    "is non-polar because the ring withdraws electrons",
+    "has partial double-bond character from resonance and involves an sp² carbon",
+    "cannot form radicals under any conditions"
+   ],
+   "answer": 2,
+   "explain": "Resonance gives the aryl C–X bond partial double-bond character and the carbon is sp², so the bond is stronger and harder to break. Aryl radicals do form, though,, as shown by triphenylene in the product mixture."
+  },
+  {
+   "q": "A mixture of chlorobenzene and 4-chlorotoluene is treated with sodium in dry ether. How many different biaryls can be expected?",
+   "options": [
+    "One",
+    "Two",
+    "Three",
+    "Four"
+   ],
+   "answer": 2,
+   "explain": "Two different aryl groups can couple as Ar–Ar, Ar′–Ar′ and Ar–Ar′, giving three biaryls. This is why the Fittig reaction is used only for symmetrical biaryls."
+  }
+ ]
+}

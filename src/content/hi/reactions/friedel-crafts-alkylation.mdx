@@ -1,0 +1,109 @@
+---
+title: "Friedel–Crafts Alkylation (फ्रिडेल-क्राफ्ट्स ऐल्किलीकरण)"
+description: "Friedel–Crafts alkylation में alkyl halide और anhydrous AlCl₃ से benzene पर alkyl group जुड़ता है, जिससे toluene या cumene जैसे alkylbenzenes बनते हैं।"
+aliases: ["फ्रिडेल क्राफ्ट्स ऐल्किलीकरण", "फ्रिडेल क्राफ्ट अल्काइलेशन", "बेंजीन का ऐल्किलीकरण", "friedel crafts alkylation hindi", "friedel craft alkylation hindi", "alkylation of benzene hindi", "toluene from benzene hindi"]
+reagents: "Anhydrous AlCl₃ (या कोई दूसरा Lewis acid) के साथ alkyl halide (R–X)"
+conditions: "Anhydrous; polyalkylation कम करने के लिए excess arene"
+byproducts: "HCl"
+reactantName: "Benzene"
+productName: "Toluene (methylbenzene)"
+steps:
+  - title: "Electrophile बनना"
+    text: "Anhydrous AlCl₃, chloromethane से chloride ले लेता है, जिससे methyl electrophile और AlCl₄⁻ बनते हैं। इसे R⁺ लिखा जाता है, या एक strongly polarised R–Cl–AlCl₃ complex जो R⁺ की तरह ही काम करता है।"
+    arrows: "CH₃Cl के Cl का lone pair → Al का खाली orbital; C–Cl bond pair chlorine के साथ AlCl₄⁻ बनकर निकल जाता है।"
+  - title: "Ring का attack"
+    text: "Benzene के π electrons electrophile पर attack करते हैं, जिससे resonance-stabilised arenium ion (σ-complex) बनता है। इस step में aromaticity खो जाती है, इसलिए यही slow step है।"
+    arrows: "Benzene का एक π pair → CH₃⁺, जिससे ring पर नया C–C bond बनता है।"
+  - title: "Deprotonation"
+    text: "AlCl₄⁻, sp³ ring carbon से proton हटाता है और aromaticity वापस आ जाती है। Toluene और HCl बनते हैं और AlCl₃ वापस मिल जाता है, इसलिए यह एक सच्चे catalyst की तरह काम करता है।"
+    arrows: "AlCl₄⁻ के Cl का lone pair → ring का C–H; C–H bond pair → ring, जिससे aromatic π system फिर से बनता है।"
+faq:
+  - q: "Benzene की CH₃Cl और anhydrous AlCl₃ से reaction का product क्या है?"
+    a: "Toluene (methylbenzene) और HCl। AlCl₃, CH₃Cl से chloride खींचकर methyl electrophile बनाता है, जो ring के एक hydrogen को substitute कर देता है।"
+  - q: "1-Chloropropane से n-propylbenzene की जगह isopropylbenzene क्यों बनता है?"
+    a: "Primary propyl cation (या उसका AlCl₃ complex) ring पर attack करने से पहले 1,2-hydride shift से ज़्यादा stable secondary isopropyl cation में rearrange हो जाता है, इसलिए isopropylbenzene (cumene) major product है।"
+  - q: "Friedel–Crafts alkylation में anhydrous AlCl₃ क्यों लिया जाता है?"
+    a: "AlCl₃ एक Lewis acid है जो R–X से halide लेकर carbocation electrophile बनाता है। पानी AlCl₃ को hydrolyse कर देगा और catalyst नष्ट हो जाएगा।"
+  - q: "Nitrobenzene और aniline में Friedel–Crafts alkylation क्यों fail होता है?"
+    a: "Nitrobenzene इतना ज़्यादा deactivated है कि weak carbocation electrophile उस पर attack नहीं कर पाता। Aniline में basic NH₂ group AlCl₃ से जुड़ जाता है, जिससे ring के पास positive charge आ जाता है और ring deactivate हो जाती है।"
+  - q: "Friedel–Crafts alkylation और acylation में क्या अंतर है?"
+    a: "Alkylation में alkyl group एक carbocation के through जुड़ता है जो rearrange हो सकता है, और product ज़्यादा reactive होता है, इसलिए polyalkylation होता है। Acylation में acyl group एक resonance-stabilised acylium ion के through जुड़ता है जो rearrange नहीं होता, और ketone product deactivated होता है, इसलिए reaction एक substitution के बाद रुक जाता है।"
+translated: 2026-11-22
+---
+
+## Friedel–Crafts alkylation क्या है?
+
+**Friedel–Crafts alkylation** एक electrophilic aromatic substitution है जिसमें benzene या किसी दूसरे arene के ring hydrogen की जगह **एक alkyl group आ जाता है**। Arene को Lewis acid, आमतौर पर **anhydrous AlCl₃**, की उपस्थिति में **alkyl halide** के साथ treat किया जाता है, और product एक **alkylbenzene** और HX होता है। Benzene और chloromethane से toluene बनता है; benzene और 2-chloropropane से cumene (isopropylbenzene) बनता है। इसकी खोज Charles Friedel और James Crafts ने 1877 में की थी।
+
+## General reaction
+
+<Eq ce="Ar-H + R-X ->[anhyd. AlCl3] Ar-R + HX" />
+
+हर case में electrophile एक **carbocation, R⁺** होता है (या एक strongly polarised R–X–AlCl₃ complex जो उसी की तरह काम करता है)। इसे बनाने के सामान्य तरीके:
+
+| Starting material | Reagent | बनने वाला electrophile |
+|---|---|---|
+| Alkyl halide, R–X | Lewis acid (AlCl₃, FeCl₃) | R⁺ |
+| Alkene | H⁺ | carbocation (Markovnikov) |
+| Alcohol, R–OH | H⁺ | पानी निकलने के बाद R⁺ |
+| Aliphatic amine, R–NH₂ | HNO₂ | N₂ निकलने के बाद R⁺ |
+
+Alkyl-halide और alkene वाले रास्ते textbook वाले हैं। Alcohol और amine वाले रास्ते exam answers में उसी carbocation को बनाने के दूसरे तरीकों के रूप में इस्तेमाल होते हैं।
+
+## Mechanism
+
+1. **Electrophile बनना।** AlCl₃, alkyl halide से chloride ले लेता है, जिससे carbocation और AlCl₄⁻ बनते हैं।
+2. **Ring का attack।** Benzene के π electrons R⁺ पर attack करते हैं, जिससे resonance-stabilised arenium ion (σ-complex) बनता है। इस step में aromaticity खो जाती है, इसलिए यही slow step है।
+3. **Deprotonation।** AlCl₄⁻, sp³ ring carbon से proton हटाता है, aromaticity वापस आती है, HCl निकलता है और AlCl₃ वापस बन जाता है।
+
+<Eq ce="(CH3)2CHCl + AlCl3 -> (CH3)2CH+ + AlCl4-" />
+<Eq ce="C6H6 + (CH3)2CH+ -> C6H5CH(CH3)2 + H+" />
+
+<KeyPoint>
+चूँकि आखिरी step में AlCl₃ वापस बन जाता है, alkylation में यह एक सच्चे catalyst की तरह काम करता है। Acylation में ऐसा नहीं है, वहाँ ketone product AlCl₃ को बाँध लेता है।
+</KeyPoint>
+
+## Examples
+
+**1. Benzene से toluene (NCERT example)।**
+
+<Eq ce="C6H6 + CH3Cl ->[anhyd. AlCl3] C6H5CH3 + HCl" />
+
+**2. Benzene और 2-chloropropane से cumene।**
+
+<Eq ce="C6H6 + CH3CHClCH3 ->[AlCl3] C6H5CH(CH3)2 + HCl" />
+
+**3. Alkylating agent के रूप में alkene।** 2,3-Dimethylbut-2-ene को protonate करने पर tertiary 2,3-dimethylbutan-2-yl cation बनता है, जो फिर benzene को alkylate करता है। Industry में ethylbenzene और cumene, benzene से ethene और propene के साथ solid acid catalysts पर बनाए जाते हैं।
+
+<Eq ce="(CH3)2C=C(CH3)2 ->[H+] (CH3)2C+-CH(CH3)2" />
+
+## Limitations और exceptions
+
+- **Carbocation rearrangement।** Primary alkyl halides hydride या methyl shifts से rearrange होते हैं। 0 °C पर benzene के साथ 1-chlorobutane लगभग 2:1 ratio में sec-butylbenzene और n-butylbenzene देता है, और 1-chloropropane मुख्य रूप से isopropylbenzene देता है।
+- **Polyalkylation।** Alkyl group ring को activate करता है, इसलिए product, benzene से तेज़ react करता है। Mono-alkylated product को favour करने के लिए benzene बहुत excess में लिया जाता है।
+- **Deactivated rings fail होती हैं।** –NO₂, –CN या C=O जैसे strongly electron-withdrawing groups वाली rings react नहीं करतीं, क्योंकि weak carbocation electrophile इतनी electron-poor ring पर attack नहीं कर पाता।
+- **Amino groups reaction रोक देते हैं।** –NH₂, –NHR और –NR₂ groups Lewis bases हैं; ये AlCl₃ से जुड़कर ring को deactivate कर देते हैं। इसलिए aniline Friedel–Crafts reactions नहीं देता।
+
+यही दो कारण R–X/AlCl₃ के साथ, और उसी तरह RCOCl/AlCl₃ के साथ, हर "no reaction" case को समझाते हैं:
+
+| Ring पर group | Example | Friedel–Crafts क्यों fail होता है |
+|---|---|---|
+| –NO₂, –N⁺R₃, –CN, –SO₃H | nitrobenzene | Strongly electron-withdrawing; R⁺ और RCO⁺ weak electrophiles हैं और electron-poor ring पर attack नहीं कर पाते |
+| –CHO, –COR, –COOH, –COOR | acetophenone, benzaldehyde | C=O resonance से electrons खींचता है और ring को deactivate करता है |
+| –NH₂, –NHR, –NR₂ | aniline | N का lone pair AlCl₃ से जुड़ता है; बना हुआ –N⁺ group ring को strongly deactivate करता है |
+
+Nitrobenzene इतना unreactive है कि laboratory में कभी-कभी इसे electrophilic reagents वाले reactions के लिए solvent की तरह इस्तेमाल किया जाता है।
+- **Aryl और vinyl halides इस्तेमाल नहीं किए जा सकते।** इनके cations इतने unstable हैं कि बन ही नहीं पाते, इसलिए chlorobenzene या vinyl chloride, benzene को alkylate नहीं करेंगे।
+- **Reversibility।** Reaction conditions में alkylation उल्टा भी हो सकता है, जिससे transalkylation संभव होता है।
+
+<ExamTip>
+जब question में primary alkyl halide (n-propyl, n-butyl, neopentyl) हो, तो हमेशा पहले 1,2-hydride या 1,2-methyl shift check करें। Benzene पर बिना rearrangement वाली straight chain लगानी हो तो Friedel–Crafts acylation करें और फिर C=O को Clemmensen या Wolff–Kishner reduction से reduce करें।
+</ExamTip>
+
+## Related reactions
+
+- [Friedel–Crafts acylation](/hi/reactions/friedel-crafts-acylation/) बिना rearrangement या polysubstitution के acyl group जोड़ता है।
+- [Wolff–Kishner reduction](/hi/reactions/wolff-kishner-reduction/) acylation product को straight-chain alkylbenzene में बदलता है।
+- [Dehydration of alcohols](/hi/reactions/dehydration-of-alcohols/) और [SN1 reaction](/hi/reactions/sn1-reaction/) में वही carbocation chemistry और वही rearrangements होते हैं।
+- [Markovnikov's rule](/hi/reactions/markovnikov-rule/) तय करता है कि alkene के alkylating agent होने पर कौन-सा carbocation बनेगा।
+- [Electrophilic aromatic substitution](/hi/mechanisms/electrophilic-aromatic-substitution/) में nitration, sulphonation, halogenation और directing effects शामिल हैं।

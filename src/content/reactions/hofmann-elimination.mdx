@@ -1,0 +1,108 @@
+---
+title: "Hofmann Elimination"
+description: "Hofmann elimination converts an amine into the least substituted alkene: exhaustive methylation, Ag₂O, then heating the quaternary ammonium hydroxide (E2)."
+aliases: ["Hoffman elimination", "Hoffmann elimination", "Hofmann degradation", "Hofmann exhaustive methylation", "HEM", "Hofmann rule"]
+kind: "named-reaction"
+family: "elimination-reactions"
+exams: [jee-main, jee-advanced]
+mapEdges: []
+reactant:
+  name: "Butan-2-yltrimethylammonium hydroxide"
+  smiles: "CCC(C)[N+](C)(C)C.[OH-]"
+product:
+  name: "But-1-ene (Hofmann product)"
+  smiles: "C=CCC"
+byproducts: "Trimethylamine, water"
+reagents: "Excess CH₃I, then moist Ag₂O (gives OH⁻)"
+conditions: "Heat (Δ)"
+equation: "CH3CH2CH(CH3)N(CH3)3+ + OH- ->[\\Delta] CH2=CHCH2CH3 + N(CH3)3 + H2O"
+notesPages: [18, 19]
+memoryTricks: []
+faq:
+  - q: "What is the major product of Hofmann elimination?"
+    a: "The least substituted alkene (the Hofmann product). For example, butan-2-yltrimethylammonium hydroxide gives mainly but-1-ene rather than but-2-ene, with trimethylamine as the by-product."
+  - q: "Why does Hofmann elimination give the less substituted alkene?"
+    a: "The –N(CH₃)₃⁺ leaving group is very bulky, so the hydroxide removes the most accessible β-hydrogen, which is on the least substituted carbon. The conformation needed for the Saytzeff alkene is crowded and higher in energy."
+  - q: "What is the role of Ag₂O in Hofmann elimination?"
+    a: "Moist silver oxide exchanges the iodide of the quaternary ammonium iodide for hydroxide (AgI precipitates). The hydroxide is the base that carries out the E2 elimination on heating."
+  - q: "What is Hofmann exhaustive methylation?"
+    a: "Repeated treatment of an amine with excess methyl iodide to make the quaternary ammonium salt, followed by Ag₂O and heat. For a cyclic amine the cycle is repeated until the nitrogen is removed completely as trimethylamine, leaving a diene."
+  - q: "What is the difference between Hofmann elimination and Hofmann bromamide degradation?"
+    a: "Hofmann elimination turns an amine into an alkene through a quaternary ammonium hydroxide. Hofmann bromamide degradation turns an amide into a primary amine with one carbon fewer, using Br₂ and NaOH."
+related: ["cope-elimination", "e2-reaction", "e1cb-mechanism", "hofmann-bromamide-degradation"]
+sources:
+  - title: "Hofmann elimination"
+    url: "https://en.wikipedia.org/wiki/Hofmann_elimination"
+    publisher: "Wikipedia"
+  - title: "Hofmann Elimination"
+    url: "https://www.organic-chemistry.org/namedreactions/hofmann-elimination.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "24.7: Reactions of Amines"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/24:_Amines_and_Heterocycles/24.07:_Reactions_of_Amines"
+    publisher: "LibreTexts (OpenStax Organic Chemistry)"
+  - title: "Zaitsev's rule"
+    url: "https://en.wikipedia.org/wiki/Zaitsev%27s_rule"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 4
+  note: "Notes show the ring-opening of N-methylpyrrolidine to buta-1,3-diene by two Hofmann cycles; the sources describe exhaustive methylation in general but not this specific substrate."
+---
+
+## What is the Hofmann elimination?
+
+The **Hofmann elimination** converts an **amine into an alkene**. The amine is first methylated with excess methyl iodide to a quaternary ammonium iodide, the iodide is exchanged for hydroxide with moist **silver oxide**, and the **quaternary ammonium hydroxide** is then heated. The C–N bond breaks, trimethylamine leaves, and the **least substituted alkene** (the Hofmann product) is formed, the opposite of the usual Saytzeff preference.
+
+It is named after August Wilhelm von Hofmann, who reported it in 1851.
+
+## Mechanism
+
+1. **Exhaustive methylation.** The nitrogen lone pair attacks CH₃–I repeatedly (SN2) until a quaternary ammonium iodide forms: R–NH₂ → R–N⁺(CH₃)₃ I⁻.
+2. **Ion exchange.** Moist Ag₂O (in effect AgOH) precipitates AgI and leaves R–N⁺(CH₃)₃ OH⁻.
+3. **E2 elimination on heating.** Hydroxide removes a β-hydrogen while the neutral amine N(CH₃)₃ leaves and the C=C forms, in one step. The usual geometry is anti, although syn elimination is also seen with these salts.
+
+<Eq ce="R-CH2-CH2-N(CH3)3+ OH- ->[\Delta] R-CH=CH2 + N(CH3)3 + H2O" />
+
+<KeyPoint>
+The –N⁺(CH₃)₃ group is large. To reach the anti-periplanar arrangement needed for the Saytzeff alkene, alkyl groups crowd against it, so the base takes the most exposed hydrogen, usually on a CH₃ group. This is the **Hofmann rule**: the least substituted alkene is the major product.
+</KeyPoint>
+
+## Examples
+
+**1. Butan-2-yltrimethylammonium hydroxide.** β-Hydrogens are available on C-1 (a CH₃) and C-3 (a CH₂). The more accessible C-1 hydrogen is removed, so **but-1-ene** is the main alkene.
+
+<Eq ce="CH3CH2CH(CH3)N(CH3)3+ OH- ->[\Delta] CH2=CHCH2CH3 (major) + N(CH3)3 + H2O" />
+
+**2. 1-Methylbutylamine.** After exhaustive methylation and Ag₂O, heating gives mainly **pent-1-ene** rather than pent-2-ene.
+
+**3. Hofmann exhaustive methylation (HEM) of a cyclic amine.** N-Methylpyrrolidine needs two full cycles:
+
+- CH₃I makes N,N-dimethylpyrrolidinium iodide; OH⁻/Δ opens the ring to give N,N-dimethylbut-3-en-1-amine (CH₂=CH–CH₂–CH₂–N(CH₃)₂).
+- A second CH₃I gives the open-chain quaternary salt; OH⁻/Δ removes the nitrogen as trimethylamine and leaves **buta-1,3-diene**.
+
+<Eq ce="C4H8N-CH3 ->[1) CH3I, 2) Ag2O, \Delta] CH2=CHCH2CH2N(CH3)2 ->[1) CH3I, 2) Ag2O, \Delta] CH2=CH-CH=CH2 + N(CH3)3" />
+
+In exam answers, the number of methylation–elimination cycles needed to remove the nitrogen equals the number of C–N bonds that must be broken: one for an open-chain amine, two for a ring nitrogen such as in pyrrolidine.
+
+<ExamTip>
+To predict the Hofmann product: list every β-carbon that has a hydrogen, then remove H from the least substituted one (CH₃ first, then CH₂). One mole of CH₃I is used per N–H bond plus one more to quaternise; for a ring nitrogen, expect one ring opening per cycle.
+</ExamTip>
+
+## Why onium leaving groups favour the Hofmann alkene
+
+There are three situations in which the Hofmann alkene becomes major in any β-elimination: a leaving group that is poor or positively charged (F, –NR₃⁺, –SR₂⁺), a bulky base such as potassium tert-butoxide, and a crowded substrate near the more substituted β-carbon. The Hofmann elimination combines the first and third: a charged, bulky leaving group on the substrate itself.
+
+## Limitations
+
+- Only amines with a β-hydrogen can eliminate; if there is none, the salt instead loses CH₃ (substitution) on heating.
+- Mixtures can form when two β-carbons are similar.
+- The method is mainly of historical and exam importance today; the milder [Cope elimination](/reactions/cope-elimination/) of amine oxides gives the same Hofmann-type selectivity.
+
+## Related reactions
+
+- [Cope elimination](/reactions/cope-elimination/): amine oxides, syn elimination, also Hofmann selectivity.
+- [E2 reaction](/reactions/e2-reaction/): the mechanism of the elimination step.
+- [E1cB mechanism](/reactions/e1cb-mechanism/): the carbanion end of the elimination spectrum.
+- [Hofmann bromamide degradation](/reactions/hofmann-bromamide-degradation/): a different Hofmann reaction (amide to amine); do not confuse the two.
+- [Elimination reactions hub](/mechanisms/elimination-reactions/).

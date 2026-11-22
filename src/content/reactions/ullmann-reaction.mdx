@@ -1,0 +1,109 @@
+---
+title: "Ullmann Reaction"
+description: "Ullmann reaction couples two aryl halides with copper powder on heating to give a biaryl, e.g. iodobenzene to biphenyl. Mechanism, nitro effect and examples."
+aliases: ["Ullmann coupling", "Ullman reaction", "Ullmann biaryl synthesis", "Ullmann rxn"]
+kind: "named-reaction"
+family: "coupling-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: []
+reactant:
+  name: "Iodobenzene"
+  smiles: "Ic1ccccc1"
+product:
+  name: "Biphenyl"
+  smiles: "c1ccc(cc1)-c1ccccc1"
+byproducts: "CuI (copper(I) halide)"
+reagents: "Copper powder or copper-bronze (excess)"
+conditions: "Heat, about 200 °C (473 K)"
+equation: "2 C6H5I + 2 Cu ->[\\Delta] C6H5-C6H5 + 2 CuI"
+notesPages: [9, 32]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Ullmann reaction?"
+    a: "A symmetrical biaryl. Iodobenzene heated with copper powder gives biphenyl, and 2-chloronitrobenzene gives 2,2′-dinitrobiphenyl."
+  - q: "Why doesn't chlorobenzene give the Ullmann reaction?"
+    a: "The C–Cl bond of chlorobenzene is strong and the ring is not electron-poor, so copper does not insert under classical conditions. With an electron-withdrawing nitro group ortho or para to Cl, the aryl chloride becomes reactive enough to couple."
+  - q: "What is the difference between the Ullmann and Fittig reactions?"
+    a: "Both make biaryls from aryl halides. Ullmann uses copper and heat, works best with aryl iodides or nitro-activated aryl halides and is the practical lab method; Fittig uses sodium in dry ether and gives poor yields."
+  - q: "Which metal is used in the Ullmann reaction?"
+    a: "Copper, usually as finely divided copper powder or a copper-bronze alloy in excess. Modern versions also use catalytic copper with ligands, or palladium and nickel catalysts."
+related: ["fittig-reaction", "wurtz-reaction", "nucleophilic-aromatic-substitution", "sandmeyer-reaction", "gattermann-reaction"]
+sources:
+  - title: "Ullmann reaction"
+    url: "https://en.wikipedia.org/wiki/Ullmann_reaction"
+    publisher: "Wikipedia"
+  - title: "Ullmann Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/ullmann-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "Coupling reaction"
+    url: "https://en.wikipedia.org/wiki/Coupling_reaction"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 3
+---
+
+## What is the Ullmann reaction?
+
+The **Ullmann reaction** (Ullmann coupling) is the **copper-mediated coupling of two aryl halides** to give a **symmetrical biaryl**. An aryl iodide, or an aryl halide carrying an electron-withdrawing group, is heated with an excess of **copper powder** at about 200 °C, and the two aryl groups join through a new C–C bond: **iodobenzene → biphenyl**. Fritz Ullmann and his student Bielecki reported it in 1901; it was the first reaction to show that a transition metal could join two aryl groups.
+
+## General reaction
+
+<Eq ce="2 Ar-X + 2 Cu ->[\Delta] Ar-Ar + 2 CuX" />
+
+In short: iodobenzene →(Cu) Ph–Ph.
+
+## Mechanism
+
+The classical Ullmann reaction does **not** go through free radicals; electron spin resonance studies rule out radical intermediates. The accepted simplified picture is:
+
+1. **Formation of an arylcopper(I) species.** Copper metal reacts with the aryl halide (an oxidative step) to give an organocopper compound, Ar–Cu, plus CuX.
+2. **Reaction with a second aryl halide.** The arylcopper reacts with another molecule of Ar–X (oxidative addition, then reductive elimination of the two aryl groups), forming the Ar–Ar bond and releasing CuX.
+
+<Eq ce="Ar-X + 2 Cu -> Ar-Cu + CuX" />
+<Eq ce="Ar-Cu + Ar-X -> Ar-Ar + CuX" />
+
+<KeyPoint>
+Unlike the Fittig reaction (Na, radical or carbanion pathway), the Ullmann reaction is a transition-metal (copper) mediated coupling through an organocopper intermediate.
+</KeyPoint>
+
+## Examples
+
+1. **Iodobenzene to biphenyl**:
+
+<Eq ce="2 C6H5I + 2 Cu ->[\Delta] C6H5-C6H5 + 2 CuI" />
+
+2. **2-Chloronitrobenzene to 2,2′-dinitrobiphenyl**, the textbook classic with copper-bronze:
+
+<Eq ce="2 O2N-C6H4-Cl + 2 Cu ->[\Delta] O2N-C6H4-C6H4-NO2 + 2 CuCl" />
+
+3. **4-Chloronitrobenzene to 4,4′-dinitrobiphenyl**:
+
+<Eq ce="2 p-O2NC6H4Cl + 2 Cu ->[\Delta] p-O2NC6H4-C6H4NO2-p + 2 CuCl" />
+
+## Effect of the halogen and of electron-withdrawing groups
+
+The key exam point: **chlorobenzene does not give the Ullmann reaction, but if an electron-withdrawing group such as –NO₂ is on the ring, the reaction takes place.** Sources agree that the traditional Ullmann reaction is limited to **electron-deficient aryl halides**, which is why the standard example is 2-chloronitrobenzene.
+
+- Aryl **iodides** react most easily (weakest C–X bond), then bromides; plain aryl chlorides fail.
+- A **nitro group ortho or para** to the halogen activates an aryl chloride.
+
+<ExamTip>
+If a JEE question asks which aryl halide gives the Ullmann reaction with Cu/heat, pick iodobenzene or a nitro-substituted chloro/bromobenzene, not plain chlorobenzene.
+</ExamTip>
+
+## Limitations and exceptions
+
+- **Harsh conditions:** the classical reaction needs stoichiometric (excess) copper and high temperatures (about 200 °C), and yields can be erratic.
+- **Symmetrical products:** coupling two different aryl halides gives mixtures. Unsymmetrical biaryls are made by modified routes (for example arylcopper reagents formed at low temperature).
+- **Modern versions** use copper with bidentate ligands, or palladium and nickel catalysts, under milder conditions. In real synthesis it is often replaced by palladium couplings such as the Suzuki reaction.
+- **Ullmann-type reactions** (a separate meaning of the name) are copper-catalysed substitutions of aryl halides by phenoxides or amines, for example the Ullmann ether synthesis of diaryl ethers.
+
+## Related reactions
+
+- [Fittig reaction](/reactions/fittig-reaction/): biaryls from aryl halides and sodium.
+- [Wurtz reaction](/reactions/wurtz-reaction/): sodium-mediated coupling of alkyl halides.
+- [Nucleophilic aromatic substitution](/reactions/nucleophilic-aromatic-substitution/): the same nitro activation of aryl halides.
+- [Sandmeyer reaction](/reactions/sandmeyer-reaction/) and [Gattermann reaction](/reactions/gattermann-reaction/): other copper-mediated reactions of aromatic compounds.
+- Hub: [Coupling reactions](/mechanisms/coupling-reactions/)

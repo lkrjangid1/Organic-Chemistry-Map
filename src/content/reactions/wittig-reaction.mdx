@@ -1,0 +1,161 @@
+---
+title: "Wittig Reaction"
+description: "The Wittig reaction converts an aldehyde or ketone into an alkene using a phosphorus ylide (Ph₃P=CHR); C=O becomes C=C and Ph₃P=O is the by-product."
+aliases: ["Witting reaction", "Wittig olefination", "Phosphorus ylide reaction", "Wittig reagent reaction"]
+kind: "named-reaction"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["wittig_reaction"]
+reactant:
+  name: "Cyclohexanone"
+  smiles: "O=C1CCCCC1"
+product:
+  name: "Methylenecyclohexane"
+  smiles: "C=C1CCCCC1"
+byproducts: "Triphenylphosphine oxide, Ph₃P=O"
+reagents: "Phosphorus ylide Ph₃P=CHR (from Ph₃P + RCH₂X, then a strong base such as n-BuLi)"
+conditions: "Anhydrous aprotic solvent (THF or ether)"
+equation: "R2C=O + Ph3P=CH2 -> R2C=CH2 + Ph3P=O"
+notesPages: [13, 69]
+steps:
+  - title: "SN2 alkylation of Ph₃P"
+    text: "Triphenylphosphine, a good nucleophile, attacks methyl bromide by SN2 to give methyltriphenylphosphonium bromide."
+    arrows: "Lone pair of P → CH₃ carbon; the C–Br bond pair leaves as Br⁻."
+    species:
+      - smiles: "P(c1ccccc1)(c1ccccc1)c1ccccc1"
+        label: "Triphenylphosphine"
+        highlight: "[PX3]"
+      - smiles: "CBr"
+        label: "Bromomethane"
+        highlight: "[CH3]Br"
+      - smiles: "C[P+](c1ccccc1)(c1ccccc1)c1ccccc1.[Br-]"
+        label: "Phosphonium salt"
+  - title: "Deprotonation to the ylide"
+    text: "The C–H next to the positive phosphorus is weakly acidic, so n-butyllithium removes it to give the neutral ylide, a hybrid of Ph₃P=CH₂ and Ph₃P⁺–CH₂⁻."
+    arrows: "The butyl carbanion takes the H on the carbon next to P⁺; the C–H bond pair stays on that carbon."
+    species:
+      - smiles: "C[P+](c1ccccc1)(c1ccccc1)c1ccccc1"
+        label: "Phosphonium ion"
+        highlight: "[CH3][P+]"
+      - smiles: "[Li]CCCC"
+        label: "n-Butyllithium"
+      - smiles: "[CH2-][P+](c1ccccc1)(c1ccccc1)c1ccccc1"
+        label: "Ylide Ph₃P⁺–CH₂⁻"
+  - title: "Oxaphosphetane formation"
+    text: "The ylide carbon bonds to the carbonyl carbon of cyclohexanone while the carbonyl oxygen bonds to phosphorus, giving a four-membered C–C–P–O ring. Under lithium-free conditions this is one concerted [2+2] step; older textbooks show a zwitterionic betaine that then closes."
+    arrows: "Ylide carbanion lone pair → carbonyl carbon; carbonyl O → P, closing the ring."
+    species:
+      - smiles: "O=C1CCCCC1"
+        label: "Cyclohexanone"
+        highlight: "[CX3]=O"
+      - smiles: "[CH2-][P+](c1ccccc1)(c1ccccc1)c1ccccc1"
+        label: "Ylide"
+        highlight: "[CH2-]"
+      - smiles: "C1CCC2(CC1)CP(c1ccccc1)(c1ccccc1)(c1ccccc1)O2"
+        label: "Oxaphosphetane"
+  - title: "Fragmentation"
+    text: "The oxaphosphetane splits into methylenecyclohexane and triphenylphosphine oxide. The driving force is the very strong P=O bond."
+    arrows: "The ring C–P and C–O bond pairs move to form the new C=C and P=O π bonds."
+    species:
+      - smiles: "C1CCC2(CC1)CP(c1ccccc1)(c1ccccc1)(c1ccccc1)O2"
+        label: "Oxaphosphetane"
+        highlight: "C1CPO1"
+      - smiles: "C=C1CCCCC1"
+        label: "Methylenecyclohexane"
+      - smiles: "O=P(c1ccccc1)(c1ccccc1)c1ccccc1"
+        label: "Ph₃P=O"
+memoryTricks: []
+faq:
+  - q: "What is the product of the Wittig reaction?"
+    a: "An alkene, with the new C=C bond exactly where the C=O was, plus triphenylphosphine oxide. For example, cyclohexanone with Ph₃P=CH₂ gives methylenecyclohexane."
+  - q: "What is a Wittig reagent and how is it made?"
+    a: "It is a phosphorus ylide, Ph₃P=CHR, a neutral species with a carbanion next to a positively charged phosphorus. Triphenylphosphine is alkylated by a primary alkyl halide in an SN2 reaction, and the phosphonium salt is then deprotonated by a strong base such as n-butyllithium."
+  - q: "What is the driving force of the Wittig reaction?"
+    a: "Formation of the very strong P=O bond in triphenylphosphine oxide. The four-membered oxaphosphetane intermediate breaks apart to release it along with the alkene."
+  - q: "Does the Wittig reaction give the E or Z alkene?"
+    a: "Non-stabilised ylides (R = alkyl) give mainly the Z-alkene, while stabilised ylides (R = ester or ketone) give mainly the E-alkene."
+  - q: "Why is the Wittig reaction better than dehydrating an alcohol to make an alkene?"
+    a: "It fixes the position of the double bond. Cyclohexanone gives only methylenecyclohexane by the Wittig route, whereas Grignard addition followed by dehydration gives a mixture of alkene isomers."
+related: ["grignard-reagent", "dehydration-of-alcohols", "wolff-kishner-reduction", "sn2-reaction"]
+sources:
+  - title: "Wittig reaction"
+    url: "https://en.wikipedia.org/wiki/Wittig_reaction"
+    publisher: "Wikipedia"
+  - title: "Wittig Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/wittig-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "19.11: Nucleophilic Addition of Phosphorus Ylides – The Wittig Reaction"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/19:_Aldehydes_and_Ketones-_Nucleophilic_Addition_Reactions/19.11:_Nucleophilic_Addition_of_Phosphorus_Ylides-_The_Wittig_Reaction"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 3
+---
+
+## What is the Wittig reaction?
+
+The **Wittig reaction** converts an **aldehyde or ketone into an alkene** by treating it with a **phosphorus ylide** (a Wittig reagent, Ph₃P=CHR). The carbonyl oxygen is swapped for the ylide carbon, so the new C=C bond forms exactly where the C=O was, and **triphenylphosphine oxide (Ph₃P=O)** is released. It was reported by Georg Wittig and Ulrich Schöllkopf in 1954, and Wittig shared the 1979 Nobel Prize in Chemistry partly for this work.
+
+## General reaction
+
+<Eq ce="R2C=O + Ph3P=CHR' -> R2C=CHR' + Ph3P=O" />
+
+A useful picture: circle the oxygen of C=O and the PPh₃ part of the ylide together. They leave as O=PPh₃, while the carbonyl carbon and the CH₂ of the ylide join to form the C=C bond.
+
+## Preparing the ylide
+
+1. **SN2 alkylation.** Triphenylphosphine, a good nucleophile, attacks a primary alkyl halide to give an alkyltriphenylphosphonium salt.
+2. **Deprotonation.** The C–H next to the positive phosphorus is weakly acidic, so a strong base such as n-butyllithium removes it to give the neutral ylide.
+
+<Eq ce="Ph3P + CH3Br -> Ph3P^+-CH3 Br^- ->[n-BuLi] Ph3P=CH2" />
+
+Any methyl halide works the same way: with CH₃Cl the salt is Ph₃P⁺–CH₃ Cl⁻, and an alkyllithium (R–Li, such as n-BuLi or PhLi) removes the proton. Exam answers often write the base simply as R–Li.
+
+<Eq ce="Ph3P + CH3Cl -> Ph3P^+-CH3 Cl^- ->[R-Li] Ph3P=CH2 + R-H + LiCl" />
+
+The ylide is a resonance hybrid of Ph₃P=CH₂ and Ph₃P⁺–CH₂⁻; the carbanion form explains why its carbon is nucleophilic. Secondary halides alkylate Ph₃P poorly, so most ylides come from primary halides.
+
+## Mechanism
+
+1. **Addition.** The nucleophilic ylide carbon bonds to the carbonyl carbon while the carbonyl oxygen bonds to phosphorus.
+2. **Oxaphosphetane.** This gives a four-membered ring containing C–C–P–O, the **oxaphosphetane**. Under lithium-free conditions it forms in one concerted [2+2] step; older textbooks show a zwitterionic **betaine** that closes to the ring, and lithium salts can make betaine-like intermediates matter.
+3. **Fragmentation.** The oxaphosphetane splits into the alkene and Ph₃P=O.
+
+<KeyPoint>
+The driving force is the formation of the very strong P=O bond in triphenylphosphine oxide.
+</KeyPoint>
+
+## Stereochemistry
+
+- **Non-stabilised ylides** (R = alkyl) react fast and give mainly the **Z-alkene**.
+- **Stabilised ylides** (R = –COOR, –COR) are less reactive and give mainly the **E-alkene**.
+- **Semi-stabilised ylides** (R = aryl) often give E/Z mixtures.
+
+## Examples
+
+**1. Methylenation of cyclohexanone.**
+
+<Eq ce="(CH2)5C=O + Ph3P=CH2 -> (CH2)5C=CH2 + Ph3P=O" />
+
+**2. Benzaldehyde to styrene.**
+
+<Eq ce="C6H5CHO + Ph3P=CH2 -> C6H5CH=CH2 + Ph3P=O" />
+
+**3. Industrial use.** BASF makes vitamin A using a Wittig reaction between a 15-carbon ylide and a 5-carbon aldehyde, and β-carotene is built by a double Wittig reaction of a diylide with two equivalents of an aldehyde. Even a hindered ketone such as camphor can be converted into its methylene derivative with Ph₃P=CH₂.
+
+<ExamTip>
+To find the reactants for a given alkene, cut the C=C bond: one half becomes the C=O compound and the other half becomes the ylide carbon attached to PPh₃. Choose the split where the ylide comes from a primary (or methyl) halide.
+</ExamTip>
+
+## Limitations and exceptions
+
+- **Tetrasubstituted alkenes** cannot be made this way because of steric hindrance; mono-, di- and trisubstituted alkenes are fine.
+- **Hindered ketones** react slowly and give poor yields, especially with stabilised ylides. The Horner–Wadsworth–Emmons reaction, which uses a phosphonate carbanion, is preferred then.
+- **Strong base needed.** Non-stabilised ylides are made with bases such as n-BuLi, so the reaction is run under anhydrous conditions.
+
+## Related reactions
+
+- [Grignard reagent](/reactions/grignard-reagent/) additions also attack the C=O carbon, but give alcohols instead of alkenes.
+- [Dehydration of alcohols](/reactions/dehydration-of-alcohols/) is the older route to alkenes and often gives isomer mixtures.
+- [Wolff–Kishner reduction](/reactions/wolff-kishner-reduction/) is another way to remove the carbonyl oxygen, giving CH₂ instead of C=C.
+- The [SN2 reaction](/reactions/sn2-reaction/) is the first step in making the phosphonium salt.

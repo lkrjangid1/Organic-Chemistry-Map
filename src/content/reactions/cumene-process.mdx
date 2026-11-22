@@ -1,0 +1,178 @@
+---
+title: "Cumene Process (Cumene Hydroperoxide Rearrangement)"
+description: "Cumene process: cumene is air-oxidised to cumene hydroperoxide, which rearranges with dilute acid into phenol and acetone. Mechanism, steps and exam points."
+aliases: ["Cumene hydroperoxide rearrangement", "Hock process", "Hock rearrangement", "Cumene-phenol process", "Phenol from cumene", "Preparation of phenol from cumene"]
+kind: "named-reaction"
+family: "reactions-of-phenols"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["cumene_process"]
+reactant:
+  name: "Cumene (isopropylbenzene)"
+  smiles: "CC(C)c1ccccc1"
+product:
+  name: "Phenol (with acetone as co-product)"
+  smiles: "Oc1ccccc1"
+byproducts: "Acetone (CH₃COCH₃)"
+reagents: "O₂ (air), then dilute acid (H⁺/H₂O)"
+conditions: "Air oxidation (radical chain) to the hydroperoxide; acid-catalysed cleavage of the hydroperoxide"
+equation: "C6H5CH(CH3)2 ->[O2 (air)] C6H5C(CH3)2OOH ->[H3O+] C6H5OH + CH3COCH3"
+notesPages: [100]
+steps:
+  - title: "Cumyl radical"
+    text: "Air oxidation is a radical chain. Oxygen removes the single tertiary benzylic hydrogen of cumene, giving a stabilised cumyl radical."
+    arrows: "Single-electron (fishhook) arrows: the benzylic C–H bond breaks homolytically, one electron going with H to the oxygen radical."
+    species:
+      - smiles: "CC(C)c1ccccc1"
+        label: "Cumene"
+        highlight: "[CH1](C)(C)c"
+      - smiles: "O=O"
+        label: "Oxygen"
+      - smiles: "C[C](C)c1ccccc1"
+        label: "Cumyl radical"
+  - title: "Peroxyl radical and hydroperoxide"
+    text: "The cumyl radical picks up O₂ to form a peroxyl radical, which takes a hydrogen from another cumene molecule. This gives cumene hydroperoxide and a new cumyl radical that continues the chain."
+    arrows: "Fishhook arrows: the radical pairs with one O of O₂; then the O• takes one electron of a benzylic C–H bond together with the H."
+    species:
+      - smiles: "CC(C)(O[O])c1ccccc1"
+        label: "Cumylperoxyl radical"
+        highlight: "O[O]"
+      - smiles: "CC(C)c1ccccc1"
+        label: "Cumene"
+      - smiles: "CC(C)(OO)c1ccccc1"
+        label: "Cumene hydroperoxide"
+  - title: "Protonation"
+    text: "Dilute acid protonates the terminal –OH of the hydroperoxide, so it can leave as water."
+    arrows: "Lone pair of the terminal O → H⁺."
+    species:
+      - smiles: "CC(C)(OO)c1ccccc1"
+        label: "Cumene hydroperoxide"
+        highlight: "O[OH]"
+      - smiles: "[H+]"
+        label: "Proton"
+      - smiles: "CC(C)(O[OH2+])c1ccccc1"
+        label: "Protonated hydroperoxide"
+  - title: "Phenyl shift with loss of water"
+    text: "As water departs, the phenyl group moves from carbon to the oxygen that is losing water. This gives a tertiary carbocation stabilised by the lone pair on the oxygen beside it. In exam answers this migration is treated as the slow (rate-determining) step."
+    arrows: "C–phenyl bond pair → electron-deficient O as the O–OH₂⁺ bond pair leaves with water."
+    species:
+      - smiles: "CC(C)(O[OH2+])c1ccccc1"
+        label: "Protonated hydroperoxide"
+        highlight: "C(O[OH2+])c"
+      - smiles: "C[C+](C)Oc1ccccc1"
+        label: "Oxygen-stabilised carbocation"
+      - smiles: "O"
+        label: "Water"
+  - title: "Attack of water"
+    text: "Water adds to the carbocation, and loss of H⁺ gives a hemiketal, (CH₃)₂C(OH)–O–C₆H₅."
+    arrows: "Lone pair of water O → C⁺; then the O–H bond pair moves onto O as H⁺ is lost."
+    species:
+      - smiles: "C[C+](C)Oc1ccccc1"
+        label: "Oxygen-stabilised carbocation"
+        highlight: "[C+]"
+      - smiles: "O"
+        label: "Water"
+      - smiles: "CC(C)(O)Oc1ccccc1"
+        label: "Hemiketal"
+  - title: "Breakdown to phenol and acetone"
+    text: "A proton moves to the ether oxygen, and the hemiketal falls apart into phenol and acetone. The phenyl group that migrated ends up as phenol; the C(CH₃)₂ carbon becomes the C=O of acetone."
+    arrows: "O–H lone pair forms C=O as the C–O(phenyl) bond pair leaves onto the protonated phenyl oxygen."
+    species:
+      - smiles: "CC(C)(O)Oc1ccccc1"
+        label: "Hemiketal"
+        highlight: "C(O)Oc"
+      - smiles: "Oc1ccccc1"
+        label: "Phenol"
+      - smiles: "CC(C)=O"
+        label: "Acetone"
+memoryTricks: []
+faq:
+  - q: "What are the products of the cumene process?"
+    a: "Phenol and acetone. Cumene (isopropylbenzene) is oxidised by air to cumene hydroperoxide, and dilute acid then splits the hydroperoxide into one molecule of phenol and one of acetone."
+  - q: "Which group migrates in the cumene hydroperoxide rearrangement?"
+    a: "The phenyl group. After the protonated –OOH loses water, the phenyl group moves from carbon to the electron-deficient oxygen, giving a tertiary carbocation that is stabilised by the oxygen next to it."
+  - q: "Why does phenyl migrate and not methyl in the cumene process?"
+    a: "Aryl groups have a much higher migratory aptitude than methyl because the ring can share the positive charge while it moves. So the O–phenyl bond forms and the two methyl groups end up in acetone."
+  - q: "Why is the cumene process important industrially?"
+    a: "It is the main route by which phenol is manufactured worldwide, and it gives acetone as a valuable co-product from cheap starting materials, benzene and propene."
+  - q: "How is cumene made for the cumene process?"
+    a: "By Friedel–Crafts alkylation of benzene with propene over an acid catalyst (phosphoric acid or a Lewis acid). The isopropyl group attaches to the ring to give isopropylbenzene."
+related: ["friedel-crafts-alkylation", "baeyer-villiger-oxidation", "dakin-reaction", "pinacol-pinacolone-rearrangement", "hydroboration-oxidation", "preparation/preparation-of-phenols", "mechanisms/rearrangement-reactions"]
+sources:
+  - title: "Alcohols, Phenols and Ethers (Class 12 Chemistry, Unit 7)"
+    url: "https://ncert.nic.in/textbook/pdf/lech202.pdf"
+    publisher: "NCERT"
+  - title: "Cumene process"
+    url: "https://en.wikipedia.org/wiki/Cumene_process"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 2
+  note: "Notes call the phenyl migration the rate-determining step; the sources describe the migration as concerted with loss of water but do not name an RDS, so it is kept as exam teaching."
+---
+
+## What is the cumene process?
+
+The **cumene process** is the industrial preparation of **phenol** from **cumene (isopropylbenzene)**. Cumene is first oxidised by **air** to **cumene hydroperoxide**, and this hydroperoxide is then treated with **dilute acid**, which rearranges and splits it into **phenol and acetone**. The acid step is called the **cumene hydroperoxide rearrangement** (also the **Hock rearrangement**), because a phenyl group moves from carbon to oxygen. Most of the world's phenol is made this way.
+
+## General reaction
+
+<Eq ce="C6H5CH(CH3)2 ->[O2 (air)] C6H5C(CH3)2-O-O-H ->[H+, H2O] C6H5OH + CH3COCH3" />
+
+The three stages of the full industrial route are:
+
+| Stage | Change | Conditions |
+|---|---|---|
+| 1. Alkylation | Benzene + propene → cumene | Acid catalyst (Friedel–Crafts) |
+| 2. Autoxidation | Cumene + O₂ → cumene hydroperoxide | Air, radical chain at the benzylic C–H |
+| 3. Rearrangement | Hydroperoxide → phenol + acetone | Dilute acid (H₂SO₄ or an acidic clay) |
+
+## Mechanism
+
+**Formation of the hydroperoxide (radical chain).** Oxygen removes the single tertiary benzylic hydrogen of cumene, giving a stabilised cumyl radical. The radical picks up O₂ to form a peroxyl radical, which takes a hydrogen from another cumene molecule. This gives cumene hydroperoxide, C₆H₅C(CH₃)₂–O–O–H, and a new cumyl radical that continues the chain.
+
+**Acid-catalysed rearrangement.**
+
+1. **Protonation.** H⁺ adds to the terminal –OH of the hydroperoxide, so it can leave as water.
+2. **Phenyl shift with loss of water.** As water departs, the phenyl group moves from carbon to the oxygen that is losing water. The product is a tertiary carbocation, (CH₃)₂C⁺–O–C₆H₅, stabilised by the lone pair on the oxygen beside it. In exam answers this migration is treated as the slow (rate-determining) step.
+3. **Attack of water.** Water adds to the carbocation; loss of H⁺ gives a hemiketal, (CH₃)₂C(OH)–O–C₆H₅.
+4. **Breakdown.** A proton moves to the ether oxygen, and the hemiketal falls apart into **phenol** and **acetone**.
+
+<Eq ce="C6H5C(CH3)2-O-OH2+ ->[- H2O][\text{phenyl shift}] (CH3)2C+-O-C6H5 ->[+ H2O][- H+] (CH3)2C(OH)-O-C6H5 -> C6H5OH + (CH3)2CO" />
+
+<KeyPoint>
+The rearrangement happens because the oxygen becomes **electron-deficient** when water leaves. An electron-rich group on the neighbouring carbon moves to that oxygen. The phenyl group, which can best share the positive charge during the shift, migrates in preference to methyl.
+</KeyPoint>
+
+The same carbon-to-oxygen shift drives the [Baeyer–Villiger oxidation](/reactions/baeyer-villiger-oxidation/), the [Dakin reaction](/reactions/dakin-reaction/) and the oxidation step of [hydroboration–oxidation](/reactions/hydroboration-oxidation/).
+
+## Examples
+
+**1. Phenol and acetone from cumene (NCERT):**
+
+<Eq ce="C6H5CH(CH3)2 + O2 -> C6H5C(CH3)2OOH ->[H3O+] C6H5OH + CH3COCH3" />
+
+**2. Hydroquinone from 1,4-diisopropylbenzene:** both isopropyl groups are converted to hydroperoxides, and acid cleavage gives hydroquinone and two molecules of acetone. 1,3-Diisopropylbenzene gives resorcinol in the same way.
+
+<Eq ce="C6H4(CH(CH3)2)2 ->[O2] C6H4(C(CH3)2OOH)2 ->[H3O+] C6H4(OH)2 + 2 CH3COCH3" />
+
+**3. Phenol and cyclohexanone:** cyclohexylbenzene hydroperoxide cleaves in acid to phenol and cyclohexanone instead of acetone.
+
+<ExamTip>
+To predict the products of any "hydroperoxide + acid" question, find the group that migrates to oxygen (aryl first). That group ends up as the phenol or alcohol; the carbon that lost it becomes the C=O of the ketone. For cumene: phenyl → phenol, the C(CH₃)₂ carbon → acetone.
+</ExamTip>
+
+## Advantages and limitations
+
+- Cheap feedstocks (benzene, propene, air) are turned into two useful products.
+- The route is economical only if the acetone co-product can also be sold.
+- Small amounts of acetophenone and α-methylstyrene form as by-products.
+- Organic hydroperoxides are unstable, so the oxidation is run under controlled pressure and temperature.
+
+## Related reactions
+
+- [Friedel–Crafts alkylation](/reactions/friedel-crafts-alkylation/): makes cumene from benzene and propene.
+- [Preparation of phenols](/preparation/preparation-of-phenols/): cumene, chlorobenzene, benzenesulphonic acid and diazonium-salt routes compared.
+- [Baeyer–Villiger oxidation](/reactions/baeyer-villiger-oxidation/) and [Dakin reaction](/reactions/dakin-reaction/): migration of a group from carbon to an electron-deficient oxygen.
+- [Pinacol–pinacolone rearrangement](/reactions/pinacol-pinacolone-rearrangement/): a 1,2-shift to an electron-deficient carbon.
+- [Reactions of phenols](/mechanisms/reactions-of-phenols/) and [Rearrangement reactions](/mechanisms/rearrangement-reactions/).

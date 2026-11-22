@@ -1,0 +1,102 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import Eq from '../Eq.astro';
+import Mol from '../Mol.astro';
+import KeyPoint from '../KeyPoint.astro';
+import Trick from '../Trick.astro';
+import ExamTip from '../ExamTip.astro';
+import ExamTags from '../ExamTags.astro';
+import References from '../References.astro';
+import ReportError from '../ReportError.astro';
+import Byline from '../Byline.astro';
+import LibgenCard from '../LibgenCard.astro';
+import { url, absUrl } from '../../lib/site';
+import { familyMembers, hindiPages, localiseRef } from '../../lib/sections';
+import { t as tr, type Lang } from '../../lib/i18n';
+import type { CollectionEntry } from 'astro:content';
+import { audienceLd, breadcrumbLd, faqLd, orgLd, personLd } from '../../lib/seo';
+
+interface Props {
+  entry: CollectionEntry<'mechanisms'>;
+  lang?: Lang;
+}
+
+const { entry, lang = 'en' } = Astro.props;
+const s = tr(lang);
+const hiEntry = (await hindiPages()).get(`mechanisms/${entry.id}`);
+const hi = lang === 'hi' ? hiEntry : undefined;
+const enPath = `mechanisms/${entry.id}/`;
+const path = lang === 'hi' ? `hi/${enPath}` : enPath;
+const altPath = lang === 'hi' ? enPath : hiEntry ? `hi/${enPath}` : undefined;
+const d = { ...entry.data, ...(hi && { title: hi.data.title, description: hi.data.description, faq: hi.data.faq }) };
+const { Content } = await render(hi ?? entry);
+const members = await Promise.all((await familyMembers(entry.id)).map((m) => localiseRef(m, lang)));
+
+const jsonLd = [
+  {
+    '@type': ['Article', 'LearningResource'],
+    headline: d.title,
+    name: d.title,
+    description: d.description,
+    url: absUrl(path),
+    inLanguage: lang === 'hi' ? 'hi-IN' : 'en-IN',
+    image: absUrl('og-image.png'),
+    author: personLd(),
+    publisher: orgLd(),
+    isAccessibleForFree: true,
+    educationalLevel: 'Class 11–12, competitive entrance exams',
+    audience: audienceLd,
+    hasPart: members.map((m) => ({ '@type': 'LearningResource', name: m.title, url: absUrl(m.path) })),
+    ...(d.verified ? { dateModified: d.verified.checked.toISOString().slice(0, 10) } : {}),
+  },
+  breadcrumbLd([{ name: 'Mechanisms', path: 'mechanisms/' }, { name: d.title, path }]),
+  faqLd(d.faq, path),
+].filter(Boolean) as Record<string, unknown>[];
+---
+<Base title={lang === 'hi' ? [d.title, `${entry.data.title} हिंदी में`, entry.data.title].find((t) => t.length <= 65) ?? entry.data.title : d.title} description={d.description} path={path} altPath={altPath} ogType="article" jsonLd={jsonLd} section="mechanisms">
+  <div class="container page">
+    <Breadcrumbs items={[{ label: 'Mechanisms', href: url('mechanisms/') }, { label: d.title }]} />
+    <header class="page-head">
+      <h1>{d.title}</h1>
+      <div class="meta-row"><ExamTags exams={d.exams} /></div>
+      <p class="summary">{d.description}</p>
+    </header>
+    <div class="layout">
+      <article class="prose">
+        <Content components={{ Eq, Mol, KeyPoint, Trick, ExamTip }} />
+        {members.length > 0 && (
+          <section aria-labelledby="members-h">
+            <h2 id="members-h">{lang === 'hi' ? 'इस family के पेज' : 'Pages in this family'}</h2>
+            <ul class="list-cards">
+              {members.map((m) => (
+                <li><a class="card" href={m.href}><strong>{m.title}</strong><p>{m.description}</p></a></li>
+              ))}
+            </ul>
+          </section>
+        )}
+        {d.faq.length > 0 && (
+          <section id="faq" aria-labelledby="faq-h">
+            <h2 id="faq-h">{s.faq}</h2>
+            <div class="faq">{d.faq.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}</div>
+          </section>
+        )}
+        <References sources={d.sources} checked={d.verified?.checked} status={d.verified?.status} />
+        <Byline notesPages={d.notesPages} updated={d.verified?.checked} />
+        <p><ReportError path={path} title={d.title} /></p>
+        <LibgenCard />
+      </article>
+      <aside class="side">
+        <div class="side-card">
+          <h2>{s.explore}</h2>
+          <ul>
+            <li><a href={url('reactions/')}>{s.reactionsAZ}</a></li>
+            <li><a href={url('mechanisms/')}>All mechanism types</a></li>
+            <li><a href={url('map/')}>{s.interactiveMap}</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</Base>

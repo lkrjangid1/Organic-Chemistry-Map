@@ -1,0 +1,49 @@
+{
+ "page": "concepts/inductive-effect",
+ "questions": [
+  {
+   "q": "Which is the strongest acid?",
+   "options": [
+    "ICH₂COOH",
+    "BrCH₂COOH",
+    "ClCH₂COOH",
+    "FCH₂COOH"
+   ],
+   "answer": 3,
+   "explain": "The more electronegative the halogen, the stronger its −I effect and the better it stabilises the carboxylate, so fluoroacetic acid is the strongest."
+  },
+  {
+   "q": "Which acid has the lowest pKa?",
+   "options": [
+    "2-Chlorobutanoic acid",
+    "3-Chlorobutanoic acid",
+    "4-Chlorobutanoic acid",
+    "Butanoic acid"
+   ],
+   "answer": 0,
+   "explain": "The −I effect of Cl fades quickly with distance: pKa 2.86 (α), 4.05 (β), 4.52 (γ). The chlorine nearest the COOH group raises acidity most."
+  },
+  {
+   "q": "Which group shows the strongest −I effect?",
+   "options": [
+    "–NO₂",
+    "–NH₃⁺",
+    "–CN",
+    "–F"
+   ],
+   "answer": 1,
+   "explain": "Positively charged groups head the −I list: –NH₃⁺ > –NO₂ > –CN > … > –F."
+  },
+  {
+   "q": "Taking only the inductive effect into account, the correct order of stability of carbanions is",
+   "options": [
+    "3° > 2° > 1° > CH₃⁻",
+    "2° > 3° > 1° > CH₃⁻",
+    "CH₃⁻ > 1° > 2° > 3°",
+    "1° > CH₃⁻ > 2° > 3°"
+   ],
+   "answer": 2,
+   "explain": "+I alkyl groups intensify a negative charge, so each extra alkyl group destabilises a carbanion; the order is the reverse of that for carbocations."
+  }
+ ]
+}

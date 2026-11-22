@@ -1,0 +1,110 @@
+---
+title: "Reformatsky Reaction"
+description: "The Reformatsky reaction joins an aldehyde or ketone with an α-halo ester and zinc to give a β-hydroxy ester after acid work-up, via a zinc enolate."
+aliases: ["Reformatskii reaction", "Reformatski reaction", "Reformatsky reagent", "Reformatsky enolate", "Zinc enolate addition"]
+kind: "named-reaction"
+family: "nucleophilic-addition"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["reformatsky_reaction", "r10"]
+reactant:
+  name: "Benzaldehyde (with ethyl bromoacetate)"
+  smiles: "O=Cc1ccccc1"
+product:
+  name: "Ethyl 3-hydroxy-3-phenylpropanoate"
+  smiles: "CCOC(=O)CC(O)c1ccccc1"
+byproducts: "Zinc(II) salts"
+reagents: "α-Halo ester (e.g. BrCH₂COOC₂H₅) + zinc dust, then H₃O⁺"
+conditions: "Dry ether, benzene or THF, warming; acid work-up"
+equation: "C6H5CHO + BrCH2COOC2H5 ->[1. Zn, \\Delta][2. H3O+] C6H5CH(OH)CH2COOC2H5"
+notesPages: [80]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Reformatsky reaction?"
+    a: "A β-hydroxy ester. The carbonyl carbon of the aldehyde or ketone becomes the C–OH carbon, and it is bonded to the α-carbon of the ester, e.g. benzaldehyde with ethyl bromoacetate gives ethyl 3-hydroxy-3-phenylpropanoate."
+  - q: "What is the Reformatsky reagent?"
+    a: "An organozinc compound (a zinc enolate) formed when zinc inserts into the carbon–halogen bond of an α-halo ester, such as BrZnCH₂COOC₂H₅. It is also called a Reformatsky enolate."
+  - q: "Why is zinc used instead of magnesium in the Reformatsky reaction?"
+    a: "The zinc enolate is a weaker, less basic nucleophile than a Grignard reagent, so it does not attack the ester group of another α-halo ester molecule. It adds selectively to the more reactive aldehyde or ketone C=O."
+  - q: "What is the difference between the Reformatsky reaction and the aldol reaction?"
+    a: "Both give β-hydroxy carbonyl compounds. The aldol reaction makes the enolate with a base, while the Reformatsky reaction makes a zinc enolate from an α-halo ester and zinc under neutral conditions, so the ester enolate can be added to a ketone or aldehyde without self-condensation."
+related: ["grignard-reagent", "aldol-condensation", "claisen-condensation", "ester-hydrolysis", "dehydration-of-alcohols"]
+sources:
+  - title: "Reformatsky reaction"
+    url: "https://en.wikipedia.org/wiki/Reformatsky_reaction"
+    publisher: "Wikipedia"
+  - title: "Reformatsky Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/reformatsky-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 2
+---
+
+## What is the Reformatsky reaction?
+
+The **Reformatsky reaction** joins an **aldehyde or ketone** with an **α-halo ester** in the presence of **metallic zinc**. After acid work-up the product is a **β-hydroxy ester**. Zinc first inserts into the C–halogen bond of the ester to form an organozinc enolate (the Reformatsky reagent), which then adds to the carbonyl group like a mild Grignard reagent. The reaction is named after the Russian chemist Sergey Reformatsky.
+
+Essential condition: **aldehyde or ketone + α-halo ester**, with Zn.
+
+## General reaction
+
+<Eq ce="R2C=O + BrCH2COOC2H5 ->[1. Zn][2. H3O+] R2C(OH)CH2COOC2H5" />
+
+## Mechanism
+
+1. **Oxidative addition of zinc.** Zinc metal gives up two electrons and inserts into the C–Br bond of the α-halo ester, forming BrZn–CH₂COOC₂H₅. This organozinc compound exists as a zinc enolate, with zinc bonded to both carbon and oxygen.
+2. **Coordination.** The carbonyl oxygen of the aldehyde or ketone coordinates to zinc, giving a six-membered, chair-like arrangement.
+3. **C–C bond formation.** The nucleophilic α-carbon of the ester attacks the carbonyl carbon. Zinc moves onto the former carbonyl oxygen, giving a zinc alkoxide.
+4. **Acid work-up.** Dilute acid protonates the alkoxide and removes zinc as Zn²⁺ salts, giving the β-hydroxy ester.
+
+<Eq ce="BrCH2COOC2H5 + Zn -> BrZnCH2COOC2H5" />
+<Eq ce="BrZnCH2COOC2H5 + R2C=O -> R2C(OZnBr)CH2COOC2H5 ->[H3O+] R2C(OH)CH2COOC2H5" />
+
+<KeyPoint>
+The zinc enolate is much less basic and less reactive than a lithium enolate or a Grignard reagent. It does not attack the ester group of a second α-halo ester molecule, and proton-transfer side reactions are minimal. That selectivity is the whole point of using zinc.
+</KeyPoint>
+
+## Examples
+
+**Benzaldehyde and ethyl bromoacetate:**
+
+<Eq ce="C6H5CHO + BrCH2COOC2H5 ->[1. Zn][2. H3O+] C6H5CH(OH)CH2COOC2H5" />
+
+Product: ethyl 3-hydroxy-3-phenylpropanoate.
+
+**Acetone and ethyl bromoacetate:**
+
+<Eq ce="CH3COCH3 + BrCH2COOC2H5 ->[1. Zn, benzene][2. H3O+] (CH3)2C(OH)CH2COOC2H5" />
+
+Product: ethyl 3-hydroxy-3-methylbutanoate. A ketone works as well as an aldehyde.
+
+<ExamTip>
+To build the product quickly, join the carbon that carried the halogen to the carbonyl carbon, turn the C=O into C–OH, and keep the ester group unchanged. The OH always ends up on the carbon β to the ester carbonyl.
+</ExamTip>
+
+## Reformatsky vs Grignard
+
+| Feature | Reformatsky (Zn) | Grignard (Mg) |
+|---|---|---|
+| Organometallic | Zinc enolate from α-halo ester | RMgX from alkyl/aryl halide |
+| Reactivity | Mild, selective | Strong nucleophile and base |
+| Tolerates ester group | Yes | No (adds to esters) |
+| Product with R₂C=O | β-Hydroxy ester | Alcohol |
+
+## Scope and variations
+
+- Because zinc enolates are only weakly basic, they hardly ever remove a proton from the carbonyl partner, so even easily enolised aldehydes and ketones can be used.
+- The zinc alkoxide formed after addition is less likely to undergo retro-aldol cleavage than the corresponding lithium or sodium alkoxide, which helps the yield of the β-hydroxy ester.
+- Besides aldehydes and ketones, Reformatsky enolates add to acid chlorides, imines, nitriles (the Blaise reaction) and nitrones.
+- Other metals or metal salts (for example indium, samarium(II) iodide or chromium(II) chloride) can replace zinc.
+- Chiral ligands allow asymmetric versions.
+
+## Related reactions
+
+- [Grignard reagent](/reactions/grignard-reagent/): the magnesium analogue for adding carbon nucleophiles to C=O.
+- [Aldol condensation](/reactions/aldol-condensation/): another route to β-hydroxy carbonyl compounds.
+- [Claisen condensation](/reactions/claisen-condensation/): ester enolate chemistry under basic conditions.
+- [Ester hydrolysis](/reactions/ester-hydrolysis/): converts the β-hydroxy ester into a β-hydroxy acid.
+- [Dehydration of alcohols](/reactions/dehydration-of-alcohols/): the β-OH can be eliminated to give an α,β-unsaturated ester.
+- Hub: [nucleophilic addition](/mechanisms/nucleophilic-addition/).

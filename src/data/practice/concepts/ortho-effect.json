@@ -1,0 +1,49 @@
+{
+ "page": "concepts/ortho-effect",
+ "questions": [
+  {
+   "q": "Which is the strongest acid?",
+   "options": [
+    "Benzoic acid",
+    "p-Toluic acid",
+    "m-Toluic acid",
+    "o-Toluic acid"
+   ],
+   "answer": 3,
+   "explain": "The ortho methyl group twists –COOH out of the ring plane, cutting off the resonance that weakens benzoic acid, so o-toluic acid (pKa 3.9) is stronger than benzoic acid (4.2) despite the +I methyl group."
+  },
+  {
+   "q": "The correct order of basicity is",
+   "options": [
+    "o-Toluidine > aniline > m-toluidine > p-toluidine",
+    "p-Toluidine > m-toluidine > aniline > o-toluidine",
+    "Aniline > o-toluidine > m-toluidine > p-toluidine",
+    "o-Toluidine > p-toluidine > m-toluidine > aniline"
+   ],
+   "answer": 1,
+   "explain": "An ortho group crowds the bulkier –NH₃⁺ formed on protonation (steric inhibition of protonation), so o-toluidine is the weakest base; the para methyl only releases electrons."
+  },
+  {
+   "q": "Which ortho-substituted benzoic acid is a WEAKER acid than benzoic acid?",
+   "options": [
+    "Salicylic acid",
+    "o-Chlorobenzoic acid",
+    "Anthranilic acid (o-aminobenzoic acid)",
+    "o-Toluic acid"
+   ],
+   "answer": 2,
+   "explain": "Anthranilic acid (carboxyl pKa 4.85) is the exception: the strong +R amino group and zwitterion formation outweigh the steric ortho effect."
+  },
+  {
+   "q": "Arrange in decreasing acid strength: o-nitrobenzoic acid (I), o-toluic acid (II), o-chlorobenzoic acid (III), benzoic acid (IV).",
+   "options": [
+    "I > III > II > IV",
+    "III > I > II > IV",
+    "I > II > III > IV",
+    "IV > II > III > I"
+   ],
+   "answer": 0,
+   "explain": "The pKa values are 2.2 (I), 2.9 (III), 3.9 (II) and 4.2 (IV), matching the ortho-group order −M > −I > +I; every ortho group here strengthens the acid relative to benzoic acid."
+  }
+ ]
+}

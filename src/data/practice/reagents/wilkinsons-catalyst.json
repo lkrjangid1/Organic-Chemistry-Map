@@ -1,0 +1,49 @@
+{
+ "page": "reagents/wilkinsons-catalyst",
+ "questions": [
+  {
+   "q": "Which description of Wilkinson's catalyst is correct?",
+   "options": [
+    "[Rh(PPh₃)₃]Cl₃, an ionic Rh(III) complex",
+    "RhCl(PPh₃)₃, a 16-electron, roughly square planar Rh(I) complex",
+    "A solid Rh metal surface poisoned with PPh₃",
+    "RhCl(PPh₃)₃, an 18-electron tetrahedral Rh(III) complex"
+   ],
+   "answer": 1,
+   "explain": "Wilkinson's catalyst is RhCl(PPh₃)₃ with one chloride and rhodium in the +1 (d⁸) state; it is a 16-electron, nearly square planar, homogeneous catalyst. Writing it as [Rh(PPh₃)₃]Cl₃ is the classic trap."
+  },
+  {
+   "q": "CH₂=CH–CH₂–CHO is treated with H₂ in the presence of RhCl(PPh₃)₃ in benzene at 25 °C. The main product is",
+   "options": [
+    "CH₂=CH–CH₂–CH₂OH",
+    "CH₃CH₂CH₂CH₂OH",
+    "CH₃CH₂CH₂CHO",
+    "CH₃CH₂CH₂CH₃"
+   ],
+   "answer": 2,
+   "explain": "Wilkinson's catalyst reduces the unhindered terminal C=C but leaves the C=O group alone, so only the alkene is hydrogenated."
+  },
+  {
+   "q": "Which alkene is hydrogenated most slowly (or not at all) with H₂ / RhCl(PPh₃)₃?",
+   "options": [
+    "But-1-ene",
+    "cis-But-2-ene",
+    "Cyclohexene",
+    "2,3-Dimethylbut-2-ene"
+   ],
+   "answer": 3,
+   "explain": "2,3-Dimethylbut-2-ene is a tetrasubstituted alkene, too crowded to bind the bulky rhodium centre; Wilkinson's catalyst works well only on mono- and disubstituted C=C bonds."
+  },
+  {
+   "q": "In the catalytic cycle of Wilkinson's catalyst, which step changes rhodium from +1 to +3?",
+   "options": [
+    "Oxidative addition of H₂",
+    "Dissociation of one PPh₃ ligand",
+    "Migratory insertion of the alkene into Rh–H",
+    "Reductive elimination of the alkane"
+   ],
+   "answer": 0,
+   "explain": "Oxidative addition of H₂ gives a Rh(III) dihydride; reductive elimination later releases the alkane and regenerates Rh(I). Ligand loss and insertion do not change the oxidation state in this way."
+  }
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "page": "reagents/sodium-borohydride",
+ "questions": [
+  {
+   "q": "Ethyl acetoacetate, CH₃COCH₂COOC₂H₅, is reduced with NaBH₄ in ethanol. The product is:",
+   "smiles": "CC(=O)CC(=O)OCC",
+   "options": [
+    "Butane-1,3-diol",
+    "Ethyl 3-hydroxybutanoate",
+    "3-Oxobutan-1-ol",
+    "Ethyl butanoate"
+   ],
+   "answer": 1,
+   "explain": "NaBH₄ reduces only the ketone to a 2° alcohol and leaves the ester intact. LiAlH₄ would reduce both groups and give butane-1,3-diol."
+  },
+  {
+   "q": "Cinnamaldehyde, C₆H₅CH=CHCHO, is reduced with NaBH₄. In exam answers the product is taken to be:",
+   "options": [
+    "3-Phenylpropan-1-ol",
+    "3-Phenylpropanal",
+    "Cinnamic acid",
+    "Cinnamyl alcohol, C₆H₅CH=CHCH₂OH"
+   ],
+   "answer": 3,
+   "explain": "NaBH₄ reduces the C=O and keeps the C=C. Excess LiAlH₄ is taken to reduce the C=C as well and give 3-phenylpropan-1-ol."
+  },
+  {
+   "q": "Which compound is NOT reduced by NaBH₄ under normal conditions?",
+   "options": [
+    "Ethanamide",
+    "Propanal",
+    "Acetophenone",
+    "Ethanoyl chloride"
+   ],
+   "answer": 0,
+   "explain": "Amides and carboxylic acids do not react with NaBH₄. Aldehydes, ketones and acid chlorides are all reduced to alcohols."
+  },
+  {
+   "q": "Why is NaBH₄ a much weaker reducing agent than LiAlH₄?",
+   "options": [
+    "NaBH₄ has fewer hydrogen atoms per formula unit",
+    "Na⁺ is a stronger Lewis acid than Li⁺",
+    "Boron is more electronegative than aluminium, so the B–H bond is less polar",
+    "NaBH₄ is used in protic solvents, which destroy most of the hydride"
+   ],
+   "answer": 2,
+   "explain": "The less polar B–H bond holds its hydride more tightly, so only reactive carbonyl groups are attacked. Both reagents have four hydrides, and NaBH₄ reacts only slowly with methanol, ethanol or water."
+  }
+ ]
+}

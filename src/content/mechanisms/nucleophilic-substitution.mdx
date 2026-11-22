@@ -1,0 +1,110 @@
+---
+title: "Nucleophilic Substitution Reactions"
+description: "Nucleophilic substitution for JEE and NEET: SN1 vs SN2, SNi, neighbouring group participation, SNAr, benzyne and acyl substitution, with reactivity factors."
+exams: ["jee-main", "jee-advanced", "neet"]
+order: 10
+notesPages: [38, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51]
+faq:
+  - q: "What is the difference between SN1 and SN2 reactions?"
+    a: "SN2 is one step: the nucleophile attacks from the back as the leaving group departs, rate = k[RX][Nu⁻], with inversion. SN1 is two steps through a carbocation, rate = k[RX], giving racemisation and possible rearrangement."
+  - q: "How do you decide whether a reaction follows SN1 or SN2?"
+    a: "Look at the substrate first: methyl and 1° halides go SN2, 3° go SN1, and 2° depend on conditions. A strong anionic nucleophile in a polar aprotic solvent favours SN2; a weak neutral nucleophile in a polar protic solvent favours SN1."
+  - q: "What makes a good leaving group?"
+    a: "A weak base whose anion is stable. Leaving-group ability is roughly inverse to basicity, so I⁻ > Br⁻ > Cl⁻ > F⁻, and N₂ and H₂O (from –N₂⁺ and –OH₂⁺) are excellent leaving groups."
+  - q: "Why are aryl halides poor substrates for nucleophilic substitution?"
+    a: "The C–X bond has partial double-bond character, the ring blocks backside attack and aryl cations are unstable. They react only with electron-withdrawing groups at ortho/para positions (SNAr) or with very strong bases (benzyne)."
+sources:
+  - title: "Haloalkanes and Haloarenes (Class 12 Chemistry Part II, Unit 6)"
+    url: "https://ncert.nic.in/textbook/pdf/lech201.pdf"
+    publisher: "NCERT"
+  - title: "Nucleophilic substitution"
+    url: "https://en.wikipedia.org/wiki/Nucleophilic_substitution"
+    publisher: "Wikipedia"
+  - title: "Nucleophilic acyl substitution"
+    url: "https://en.wikipedia.org/wiki/Nucleophilic_acyl_substitution"
+    publisher: "Wikipedia"
+  - title: "Leaving group"
+    url: "https://en.wikipedia.org/wiki/Leaving_group"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 4
+---
+
+## What is nucleophilic substitution?
+
+In a **nucleophilic substitution**, an electron-rich species (the **nucleophile**, Nu⁻ or Nu:) replaces a **leaving group** (Lg) on an electron-poor carbon. Alkyl halides are the classic substrates: the C–X bond is polarised, so carbon carries δ+ and the halide leaves as X⁻.
+
+<Eq ce="Nu- + R-X -> R-Nu + X-" />
+
+Most exam questions ask one thing: **which mechanism operates**, because that decides the rate law, the stereochemistry and whether the skeleton rearranges.
+
+## SN1 vs SN2
+
+| Feature | [SN2](/reactions/sn2-reaction/) | [SN1](/reactions/sn1-reaction/) |
+|---|---|---|
+| Steps | One, concerted | Two (or more), via carbocation |
+| Rate law | k[RX][Nu⁻] | k[RX] |
+| Substrate order | CH₃ > 1° > 2° > 3° | 3° > 2° > 1° > CH₃ (allyl, benzyl fast) |
+| Nucleophile | Strong, usually anionic | Weak, often neutral (solvent) |
+| Solvent | Polar aprotic (acetone, DMF, DMSO) | Polar protic (water, alcohols, acetic acid) |
+| Stereochemistry | Inversion (Walden) | Racemisation, with some excess inversion |
+| Rearrangement | Never | Possible (hydride or alkyl shift) |
+
+<KeyPoint>
+SN2 reactivity ∝ stability of the transition state ∝ 1/steric hindrance. SN1 reactivity ∝ stability of the carbocation. Both need a good leaving group: leaving-group ability ∝ 1/basicity ∝ stability of the anion.
+</KeyPoint>
+
+## Factors that decide the pathway
+
+- **Substrate.** Steric crowding blocks SN2; carbocation stability drives SN1. Tertiary, aryl, vinyl and bridgehead halides give no SN2.
+- **Nucleophile.** Negative charge and lower electronegativity raise nucleophilicity (OH⁻ is better than H₂O). Bulky bases such as tert-butoxide favour elimination instead.
+- **Solvent.** Protic solvents hydrogen-bond to anions and slow SN2 but stabilise carbocations for SN1.
+- **Leaving group.** The weaker its conjugate base character, the better it leaves: I⁻ > Br⁻ > Cl⁻ > F⁻; tosylate, –N₂⁺ and protonated –OH are excellent.
+
+## Substitution with retention
+
+Two special mechanisms give **retention** instead of inversion:
+
+- [SNi mechanism](/reactions/sni-mechanism/): SOCl₂ converts an alcohol to an alkyl chloride through a chlorosulfite and a tight ion pair; chlorine is delivered from the front. With pyridine the path becomes SN2 (inversion).
+- [Neighbouring group participation](/reactions/neighbouring-group-participation/): a lone pair or π bond inside the molecule displaces the leaving group first, then the external nucleophile opens the bridged ring. Two inversions give retention, and the rate is often much higher.
+
+## Substitution on aromatic rings
+
+- [Nucleophilic aromatic substitution (SNAr / ArSN2)](/reactions/nucleophilic-aromatic-substitution/): addition–elimination through a Meisenheimer carbanion; needs –NO₂ or similar groups at ortho/para positions, or 623 K and 300 atm for chlorobenzene. ArSN1 is the aryl-cation path of diazonium salts.
+- [Benzyne mechanism](/reactions/benzyne-mechanism/): elimination–addition with NaNH₂ in liquid NH₃, giving direct and cine products.
+
+## Substitution at a carbonyl carbon (SN2AE)
+
+Acid derivatives R–CO–G (G = –X, –OCOR, –OR, –NH₂, –OH, but not H or R) react by **addition–elimination**, written SN2AE or SN2th (via a tetrahedral intermediate) in exam answers:
+
+1. Nu⁻ adds to the sp² carbonyl carbon, giving a **tetrahedral sp³ intermediate** R–C(O⁻)(Nu)–G.
+2. The C=O re-forms and G⁻ is expelled, giving R–CO–Nu.
+
+<Eq ce="R-CO-G + Nu- <=> R-C(O^-)(Nu)-G -> R-CO-Nu + G-" />
+
+Both steps are reversible. Reactivity follows the leaving ability of G and the loss of resonance on forming the intermediate: **acid chloride > anhydride > ester > amide**. Aldehydes and ketones do not substitute, because H⁻ and R⁻ are not leaving groups; they stop at addition. In exam answers, SN2th at an acyl carbon is said to be faster than SN2 at an sp³ carbon, because the planar, strongly δ+ carbonyl carbon is open to attack (reactivity ∝ positive charge on the sp² carbon ∝ 1/steric hindrance).
+
+## Common substitution reactions of alkyl halides
+
+| Reagent | Product | Page |
+|---|---|---|
+| NaI in acetone | Alkyl iodide | [Finkelstein reaction](/reactions/finkelstein-reaction/) |
+| AgF, Hg₂F₂, SbF₃ | Alkyl fluoride | [Swarts reaction](/reactions/swarts-reaction/) |
+| NaOR′ | Ether | [Williamson ether synthesis](/reactions/williamson-ether-synthesis/) |
+| KCN / AgCN | Nitrile / isocyanide | [SN2 reaction](/reactions/sn2-reaction/) |
+| KNO₂ / AgNO₂ | Alkyl nitrite / nitroalkane | [SN2 reaction](/reactions/sn2-reaction/) |
+| NH₃ (excess RX) | 1°, 2°, 3° amines, then R₄N⁺X⁻ | this page |
+
+**Ammonolysis.** NH₃ attacks R–X to give a primary amine. The amine is itself a nucleophile, so it reacts with more R–X to give secondary and tertiary amines and finally a **quaternary ammonium salt**. A large excess of NH₃ favours the primary amine; excess alkyl halide drives the reaction to R₄N⁺X⁻.
+
+<Eq ce="RX ->[NH3] RNH2 ->[RX] R2NH ->[RX] R3N ->[RX] R4N+X-" />
+
+**Hydrolysis of gem-dihalides.** Aqueous KOH replaces one halogen of R–CHX₂ by OH; the oxygen lone pair then pushes out the second halide, so the product is the aldehyde R–CHO (a gem-dihalide on an internal carbon gives a ketone).
+
+Reactions of alcohols and ethers that follow the same mechanisms are covered on the [Lucas test](/tests/lucas-test/) (SN1 of 3° alcohols with HCl/ZnCl₂) and [ether cleavage with HX](/reactions/ether-cleavage-with-hx/) pages.
+
+<ExamTip>
+Read the question in this order: substrate (1°/2°/3°, allylic, aryl) → nucleophile strength and bulk → solvent → temperature. Hot conditions and strong bulky bases switch substitution to elimination; see [elimination reactions](/mechanisms/elimination-reactions/).
+</ExamTip>

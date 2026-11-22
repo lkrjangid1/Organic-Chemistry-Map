@@ -1,0 +1,7 @@
+{"page": "reactions/swarts-reaction",
+ "questions": [
+  {"q": "Which reagent, on heating with bromoethane, gives fluoroethane in the Swarts reaction?", "options": ["NaI in acetone", "AgF", "KF in water", "F₂ gas"], "answer": 1, "explain": "The Swarts reaction exchanges Cl or Br for F using a metallic fluoride such as AgF, Hg₂F₂, CoF₂ or SbF₃; NaI/acetone is the Finkelstein reaction and direct fluorination is explosive."},
+  {"q": "The molecular formula of Freon-12 is:", "options": ["CCl₃F", "CHClF₂", "CClF₃", "CCl₂F₂"], "answer": 3, "explain": "Adding 90 gives 102: one C, zero H and two F, with chlorine filling the remaining two valencies."},
+  {"q": "What is the formula of the refrigerant R-22 (HCFC-22)?", "options": ["CHClF₂", "CHF₂Cl₂", "CH₂F₂", "CCl₂F₂"], "answer": 0, "explain": "22 + 90 = 112: one C, one H and two F, and one Cl fills the fourth valency. CHF₂Cl₂ is a trap: it gives carbon five bonds."},
+  {"q": "Why is the halogen exchange R–Br + AgF → R–F + AgBr favourable?", "options": ["Fluoride is a better leaving group than bromide", "AgF is insoluble and drives the reaction backward", "The C–F bond is the strongest carbon–halogen bond and the silver bromide formed is very stable", "Bromine is more electronegative than fluorine"], "answer": 2, "explain": "Forming the strong C–F bond together with a stable heavy-metal bromide makes the exchange favourable."}
+ ]}

@@ -1,0 +1,109 @@
+---
+title: "Wolff–Kishner Reduction (वुल्फ–किश्नर अपचयन)"
+description: "Wolff–Kishner reduction में hydrazine और KOH को ethylene glycol में लगभग 180–200 °C पर गर्म करके aldehyde या ketone के C=O को CH₂ में बदला जाता है, जिससे alkane बनता है।"
+aliases: ["वुल्फ किश्नर अपचयन", "वुल्फ किश्नर रिडक्शन", "wolff kishner reduction hindi", "wolf kishner hindi", "huang minlon reduction hindi", "हुआंग मिनलॉन संशोधन", "carbonyl to alkane hindi"]
+reagents: "Hydrazine (NH₂NH₂), फिर KOH (या NaOH / alkoxide)"
+conditions: "Ethylene glycol या diethylene glycol में लगभग 180–200 °C (453–473 K) पर गर्म करें"
+byproducts: "N₂, H₂O"
+reactantName: "Acetophenone (1-phenylethan-1-one)"
+productName: "Ethylbenzene"
+steps:
+  - title: "Hydrazone बनना"
+    text: "Hydrazine, acetophenone के C=O पर जुड़ता है और पानी निकलता है, जिससे hydrazone बनता है। यह carbonyl group पर ammonia derivative का सामान्य addition–elimination है।"
+    arrows: "Hydrazine का NH₂ lone pair → carbonyl C, C=O π → O; proton transfers के बाद पानी निकलने से C=N बनता है।"
+  - title: "N–H का deprotonation"
+    text: "गर्म ethylene glycol में KOH, terminal NH₂ से एक proton हटाता है; negative charge resonance से nitrogen और carbon के बीच बँट जाता है। Wikipedia इस solvent-assisted deprotonation को rate-determining step बताता है।"
+    arrows: "OH⁻ lone pair → NH₂ पर का H; N–H bond pair nitrogen पर anion के रूप में रह जाता है।"
+  - title: "Carbon पर protonation"
+    text: "अपने carbanion resonance form में anion, solvent से carbon पर एक proton लेता है, जिससे diimide R₂CH–N=N–H बनता है।"
+    arrows: "Carbon lone pair (resonance form) → solvent का H; N=N π bond बना रहता है।"
+  - title: "दूसरा deprotonation और N₂ का निकलना"
+    text: "Base बचे हुए N–H को हटाता है, और N₂ निकल जाती है, जिससे carbanion R₂CH⁻ बचता है (carbocation नहीं)। बहुत stable N₂ के निकलने से यह step irreversible हो जाता है।"
+    arrows: "OH⁻ N–H को हटाता है; N lone pair से N≡N बनता है और C–N bond pair carbon पर C⁻ के रूप में रह जाता है।"
+  - title: "Protonation से alkane"
+    text: "Carbanion solvent (glycol या पानी) से एक proton लेता है, जिससे ethylbenzene बनता है: C=O अब CH₂ बन गया है।"
+    arrows: "Carbanion lone pair → solvent का H।"
+faq:
+  - q: "Wolff–Kishner reduction का product क्या है?"
+    a: "एक alkane: C=O group CH₂ बन जाता है। उदाहरण के लिए acetophenone से ethylbenzene और acetone से propane बनता है, और nitrogen gas निकलती है।"
+  - q: "Wolff–Kishner reduction में ethylene glycol क्यों इस्तेमाल होता है?"
+    a: "Hydrazone के decomposition के लिए लगभग 180–200 °C temperature चाहिए। Ethylene glycol (या diethylene glycol) high-boiling solvent है, जिससे mixture को इतना गर्म किया जा सकता है, और यही आखिरी carbanion को proton भी देता है।"
+  - q: "Clemmensen और Wolff–Kishner reduction में क्या अंतर है?"
+    a: "दोनों C=O को CH₂ में reduce करते हैं। Clemmensen में zinc amalgam और conc. HCl (acidic) इस्तेमाल होता है, इसलिए यह base-sensitive compounds के लिए ठीक है; Wolff–Kishner में hydrazine और KOH (strongly basic) इस्तेमाल होता है, इसलिए यह acid-sensitive compounds के लिए ठीक है।"
+  - q: "Wolff–Kishner reduction की driving force क्या है?"
+    a: "Nitrogen gas का निकलना। बहुत stable N≡N molecule का बनना hydrazone anion के decomposition को आगे धकेलता है और एक carbanion छोड़ता है, जो फिर protonate होता है।"
+  - q: "Huang–Minlon modification क्या है?"
+    a: "Carbonyl compound को hydrazine hydrate और NaOH या KOH के साथ glycol में reflux किया जाता है, फिर पानी और ज़्यादा hydrazine को distil करके निकाल दिया जाता है ताकि temperature लगभग 200 °C तक पहुँच सके। इससे reaction का समय घटता है और yield बढ़ती है।"
+translated: 2026-11-22
+---
+
+## Wolff–Kishner reduction क्या है?
+
+**Wolff–Kishner reduction** में **aldehyde या ketone का carbonyl group, CH₂ group में बदल जाता है**, यानी carbonyl compound एक **alkane** (या alkylbenzene) बन जाता है। पहले carbonyl compound को **hydrazine** के साथ condense करके hydrazone बनाया जाता है, फिर इसे **ethylene glycol** जैसे high-boiling solvent में **KOH** जैसे strong base के साथ गर्म किया जाता है; nitrogen gas निकलती है। इसे Nikolai Kishner ने 1911 में और Ludwig Wolff ने 1912 में report किया था।
+
+## General reaction
+
+संक्षेप में: R–CO–R को N₂H₄ और KOH के साथ ethylene glycol में 180 °C से ऊपर गर्म करने पर R–CH₂–R मिलता है।
+
+<Eq ce="R-CO-R ->[NH2NH2, KOH][ethylene glycol, \Delta] R-CH2-R + N2 + H2O" />
+
+## Mechanism
+
+1. **Hydrazone बनना।** Hydrazine C=O पर जुड़ता है और पानी निकलता है, जिससे hydrazone R₂C=N–NH₂ बनता है। यह carbonyl group पर ammonia derivative का सामान्य addition–elimination है।
+2. **N–H का deprotonation।** Base terminal NH₂ से एक proton हटाता है। Negative charge resonance से nitrogen और carbon के बीच बँट जाता है। Wikipedia इस solvent-assisted deprotonation को rate-determining step बताता है।
+3. **Carbon पर protonation।** Solvent carbon पर एक proton लगाता है, जिससे R₂CH–N=N–H (एक diimide) बनता है।
+4. **N₂ का निकलना।** Nitrogen पर दूसरे deprotonation के बाद N₂ निकल जाती है और carbanion R₂CH⁻ बचता है।
+5. **Protonation।** Carbanion solvent से proton लेकर alkane R₂CH₂ देता है।
+
+<Eq ce="R2C=O + H2N-NH2 -> R2C=N-NH2 + H2O" />
+<Eq ce="R2C=N-NH2 ->[OH-][\Delta] R2CH- + N2 ->[H2O] R2CH2" />
+
+<ExamTip title="Common mistake">
+N₂ के निकलने के बाद carbon के पास वह bonding pair रह जाता है जो वह nitrogen के साथ share कर रहा था, इसलिए intermediate एक **carbanion (R₂CH⁻)** है, carbocation नहीं। फिर solvent (glycol या पानी) इसे protonate करता है। इस step पर carbon पर negative charge बनाएँ।
+</ExamTip>
+
+<KeyPoint>
+Driving force nitrogen gas का निकलना है: बहुत stable N≡N triple bond बनने से hydrazone का decomposition irreversible हो जाता है।
+</KeyPoint>
+
+## Examples
+
+**1. Acetophenone से ethylbenzene।**
+
+<Eq ce="C6H5COCH3 ->[NH2NH2, KOH][ethylene glycol, \Delta] C6H5CH2CH3 + N2 + H2O" />
+
+**2. Propiophenone से propylbenzene।** यह propanoyl chloride के साथ benzene के Friedel–Crafts acylation के बाद का standard दूसरा step है, और इससे straight-chain alkylbenzene मिलता है जो direct alkylation से नहीं मिल सकता।
+
+<Eq ce="C6H5COCH2CH3 ->[NH2NH2, KOH][\Delta] C6H5CH2CH2CH3" />
+
+**3. एक aldehyde।** इन्हीं conditions में cyclopropanecarbaldehyde reduce होकर methylcyclopropane बनता है; CHO group, CH₃ बन जाता है।
+
+## Clemmensen बनाम Wolff–Kishner
+
+| Feature | Clemmensen | Wolff–Kishner |
+|---|---|---|
+| Reagents | Zn-Hg, conc. HCl | NH₂NH₂, KOH, glycol, गर्म करना |
+| Medium | strongly acidic | strongly basic |
+| कब इस्तेमाल करें जब substrate हो | base-sensitive | acid-sensitive |
+| कुल बदलाव | C=O से CH₂ | C=O से CH₂ |
+
+<ExamTip>
+अगर molecule में कोई acid-sensitive group भी है, तो Wolff–Kishner चुनें; अगर उसमें कोई base-sensitive group है (जैसे ester, जिसे गर्म KOH hydrolyse कर देगा), तो Clemmensen चुनें। दोनों में C=O से जुड़ी aromatic ring को कुछ नहीं होता।
+</ExamTip>
+
+## Huang–Minlon modification
+
+1946 में Huang Minlon ने procedure को आसान बनाया: carbonyl compound को 85% hydrazine hydrate और लगभग तीन equivalents NaOH के साथ glycol solvent में reflux किया जाता है, फिर पानी और ज़्यादा hydrazine distil करके निकाल दिए जाते हैं और temperature को लगभग 200 °C तक बढ़ने दिया जाता है। पानी हटाने से reaction तेज़ होता है और yield बढ़ती है; ज़्यादातर textbooks अब यही one-pot version बताती हैं।
+
+## Limitations और exceptions
+
+- **Base-sensitive substrates** (esters, कुछ halides) गर्म, strongly basic conditions में नहीं टिकते।
+- **बहुत hindered ketones** शायद hydrazone ही न बनाएँ।
+- **Azine बनना।** Hydrazone, carbonyl compound के दूसरे molecule से react करके azine दे सकता है; पानी को दूर रखने से यह दब जाता है।
+- **Side reactions।** α-Substituted ketones eliminate होकर alkenes दे सकते हैं, C=O के पास strained rings खुल सकती हैं, और α,β-unsaturated ketones में C=C अपनी जगह बदल सकता है।
+
+## Related reactions
+
+- [Friedel–Crafts acylation](/hi/reactions/friedel-crafts-acylation/) के बाद Wolff–Kishner reduction, बिना rearrangement वाले alkylbenzenes बनाने का standard रास्ता है।
+- [Friedel–Crafts alkylation](/hi/reactions/friedel-crafts-alkylation/) primary halides के साथ rearranged products देता है, इसीलिए acylation–reduction वाला क्रम prefer किया जाता है।
+- [Wittig reaction](/hi/reactions/wittig-reaction/) भी carbonyl oxygen को हटाता है, लेकिन CH₂ की जगह C=C bond बनाता है।

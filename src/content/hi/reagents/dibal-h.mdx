@@ -1,0 +1,85 @@
+---
+title: "Diisobutylaluminium Hydride (DIBAL-H, डाइआइसोब्यूटिलऐलुमिनियम हाइड्राइड)"
+description: "DIBAL-H (diisobutylaluminium hydride) −78 °C पर esters को और hydrolysis के बाद nitriles को aldehydes तक partially reduce करता है, जहाँ LiAlH₄ आगे चला जाता।"
+aliases: ["डिबाल-एच", "डाइआइसोब्यूटिल ऐलुमिनियम हाइड्राइड", "dibal h hindi", "dibal-h reagent hindi", "ester to aldehyde dibal hindi", "nitrile to aldehyde dibal hindi"]
+memoryTricks:
+  - text: "यह ester or nitrile का आंशिक अपचयन करता है।"
+    meaning: "यह esters या nitriles का partial reduction करता है (aldehyde पर रुक जाता है)।"
+faq:
+  - q: "DIBAL-H ester के साथ क्या करता है?"
+    a: "−78 °C पर (आमतौर पर toluene में) एक equivalent के साथ DIBAL-H ester को aldehyde में reduce करता है, और alcohol वाला हिस्सा अलग हो जाता है। उदाहरण के लिए methyl dodecanoate से dodecanal मिलता है। ज़्यादा temperature पर या excess reagent के साथ aldehyde आगे reduce होकर primary alcohol बन जाता है।"
+  - q: "Nitrile और DIBAL-H का product क्या है?"
+    a: "एक aldehyde। DIBAL-H, C≡N पर एक hydride जोड़कर imine–aluminium species बनाता है, और acidic aqueous work-up imine को hydrolyse करके R–CHO देता है। इसके उलट LiAlH₄ दो hydrides जोड़ता है और primary amine देता है।"
+  - q: "DIBAL-H aldehyde पर क्यों रुक जाता है जबकि LiAlH₄ नहीं?"
+    a: "DIBAL-H में हर aluminium पर सिर्फ़ एक hydride होता है और इसे −78 °C पर एक equivalent में इस्तेमाल किया जाता है, जहाँ यह aldehyde पर attack करने लायक reactive नहीं होता। LiAlH₄ में चार reactive hydrides होते हैं और यह intermediate aldehyde को starting ester से भी तेज़ी से reduce कर देता है।"
+  - q: "Reaction −78 °C पर क्यों किया जाता है?"
+    a: "इस dry-ice temperature पर reagent ester को तो reduce करता है लेकिन aldehyde product को आगे reduce नहीं करता। गर्म conditions में over-reduction होकर primary alcohol बन जाता है।"
+translated: 2026-11-22
+---
+
+## DIBAL-H क्या है?
+
+**DIBAL-H (diisobutylaluminium hydride)**, (i-Bu)₂AlH, एक organoaluminium reducing agent है जिसमें aluminium पर **एक Al–H bond** और दो bulky isobutyl groups होते हैं। इसका मुख्य उपयोग **partial reduction** है: यह −78 °C पर **esters को aldehydes** में और aqueous hydrolysis के बाद **nitriles को aldehydes** में बदलता है, यानी उस alcohol या amine से एक step पहले रुक जाता है जो [LiAlH₄](/hi/reagents/lithium-aluminium-hydride/) देता।
+
+Structure: (CH₃)₂CH–CH₂–Al(H)–CH₂–CH(CH₃)₂। Pure state में यह Al–H–Al bridges से जुड़े dimers और trimers के रूप में रहता है।
+
+## बनाना और handling
+
+DIBAL-H, triisobutylaluminium को गर्म करके बनाया जाता है, जो β-hydride elimination से isobutene खोता है:
+
+<Eq ce="(i-Bu)3Al ->[\Delta] (i-Bu)2AlH + CH2=C(CH3)2" />
+
+यह toluene या hexane में solution के रूप में बिकता है (यह THF और ether में भी घुलता है)। दूसरे alkylaluminium compounds की तरह यह **air में आग पकड़ लेता है** और पानी से violently react करता है, इसलिए इसे dry nitrogen या argon के नीचे handle किया जाता है।
+
+## DIBAL-H क्या reduce करता है
+
+| Substrate | Conditions | Product |
+|---|---|---|
+| Ester, R–COOR′ | 1 equiv, −78 °C, toluene; फिर H₃O⁺ | Aldehyde, R–CHO (+ R′OH) |
+| Nitrile, R–C≡N | 1 equiv, कम temperature; फिर H₃O⁺ | Aldehyde, R–CHO |
+| Lactone (cyclic ester) | Controlled मात्रा | Lactol (cyclic hemiacetal) |
+| α,β-Unsaturated ester | पूरा reduction | Allylic alcohol (C=C बना रहता है) |
+| Ester | Excess, ज़्यादा temperature | 1° alcohol, R–CH₂OH |
+| Aldehyde, ketone | कोई भी | Alcohol |
+
+<Eq ce="CH3(CH2)10COOCH3 ->[1. DIBAL-H, toluene, -78 ^\circ C][2. H3O+] CH3(CH2)10CHO + CH3OH" />
+
+<Eq ce="C6H5C#N ->[1. DIBAL-H][2. H3O+] C6H5CHO" />
+
+<KeyPoint>
+एक step में **ester → aldehyde** और **nitrile → aldehyde** के लिए DIBAL-H standard answer है। Temperature control ज़रूरी है: अगर mixture गर्म हो जाए या excess reagent इस्तेमाल हो, तो ester-to-aldehyde reduction में बहुत ज़्यादा alcohol बनने के लिए यह जाना जाता है।
+</KeyPoint>
+
+## यह क्या नहीं करता (सामान्य conditions में)
+
+- −78 °C पर एक equivalent के साथ यह अभी-अभी बने aldehyde को reduce **नहीं** करता।
+- यह isolated C=C bonds को reduce **नहीं** करता; α,β-unsaturated esters अपना C=C बचाए रखते हैं और allylic alcohols बनते हैं।
+- Nitriles आगे amines तक **नहीं** जाते, क्योंकि सिर्फ़ एक hydride पहुँचता है।
+
+## Mechanism (संक्षेप में)
+
+DIBAL-H एक **electrophilic** reducing agent है, LAH के nucleophilic [AlH₄]⁻ की तरह नहीं। (i-Bu)₂AlH में aluminium के पास सिर्फ़ छह valence electrons होते हैं, इसलिए यह Lewis acid है।
+
+1. **Coordination।** Ester का carbonyl oxygen (या nitrile का nitrogen) aluminium को एक lone pair देता है।
+2. **Hydride transfer।** अकेला Al–H hydride carbonyl (या nitrile) carbon पर चला जाता है।
+3. **Ester case।** −78 °C पर reagent इतना reactive नहीं होता कि aldehyde पर attack करे, इसलिए work-up के बाद aldehyde isolate हो जाता है।
+4. **Nitrile case।** एक hydride से aluminium से जुड़ा imine anion बनता है। चूँकि DIBAL-H के पास दूसरा hydride नहीं है, आगे कोई addition नहीं होता, और acidic aqueous work-up imine (R–CH=NH) को hydrolyse करके aldehyde देता है।
+
+<Eq ce="R-C#N ->[(i-Bu)2AlH] R-CH=N-Al(i-Bu)2 ->[H3O+] R-CHO + NH4+" />
+
+## मिलते-जुलते reagents से तुलना
+
+| Reagent | Ester | Nitrile | Acid chloride |
+|---|---|---|---|
+| DIBAL-H (−78 °C) | Aldehyde | Aldehyde | आमतौर पर इसके लिए नहीं चुना जाता |
+| LiAlH₄ | 1° alcohol | 1° amine | 1° alcohol |
+| NaBH₄ | बहुत धीमा या कुछ नहीं | कोई reaction नहीं | 1° alcohol |
+| SnCl₂/HCl, फिर H₂O ([Stephen](/hi/reactions/stephen-reduction/)) | नहीं | Aldehyde | नहीं |
+| H₂, Pd/BaSO₄ ([Rosenmund](/hi/reactions/rosenmund-reduction/)) | नहीं | नहीं | Aldehyde |
+
+## Exam tips
+
+- "एक step में ester से aldehyde" → −78 °C पर DIBAL-H। LiAlH₄ यह नहीं कर सकता; यह हमेशा alcohol देता है।
+- "Nitrile से aldehyde" के दो classic answers हैं: DIBAL-H फिर H₃O⁺, या Stephen reduction। दोनों एक imine से होकर गुज़रते हैं जो hydrolyse होता है।
+- DIBAL-H को [preparation of aldehydes and ketones](/hi/preparation/preparation-of-aldehydes-and-ketones/) में भी एक route माना जाता है।
+- Structure याद रखें: Al पर दो isobutyl groups और **एक** H। "एक H" ही वजह है कि यह partial reducing agent है।

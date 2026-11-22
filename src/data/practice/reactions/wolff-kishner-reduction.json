@@ -1,0 +1,50 @@
+{
+ "page": "reactions/wolff-kishner-reduction",
+ "questions": [
+  {
+   "q": "Acetophenone is heated with hydrazine and KOH in ethylene glycol at about 200 °C. The product is:",
+   "options": [
+    "1-Phenylethanol",
+    "Ethylbenzene",
+    "Styrene",
+    "Benzoic acid"
+   ],
+   "answer": 1,
+   "explain": "The Wolff–Kishner reduction turns C=O into CH₂: C₆H₅COCH₃ becomes C₆H₅CH₂CH₃, with N₂ and H₂O given off. The benzene ring attached to the C=O is not touched.",
+   "smiles": "CC(=O)c1ccccc1"
+  },
+  {
+   "q": "In the Wolff–Kishner mechanism, the species left on carbon immediately after N₂ is lost is a:",
+   "options": [
+    "Carbocation",
+    "Free radical",
+    "Carbene",
+    "Carbanion"
+   ],
+   "answer": 3,
+   "explain": "When N₂ departs, the carbon keeps the bonding pair it shared with nitrogen, so it is a carbanion R₂CH⁻, which the solvent then protonates. Drawing a carbocation here is the common mistake."
+  },
+  {
+   "q": "A ketone also contains an ester group that hot KOH would hydrolyse. To convert its C=O into CH₂ without harming the ester, the better choice is:",
+   "options": [
+    "Clemmensen reduction (Zn-Hg, conc. HCl)",
+    "Wolff–Kishner reduction (NH₂NH₂, KOH, glycol)",
+    "Wittig reaction with Ph₃P=CH₂",
+    "Huang–Minlon modification with NaOH"
+   ],
+   "answer": 0,
+   "explain": "Esters are base-sensitive and do not survive the hot, strongly basic Wolff–Kishner conditions (Huang–Minlon is the same basic method). Clemmensen does the same C=O → CH₂ change in acid, so it suits base-sensitive compounds."
+  },
+  {
+   "q": "Which sequence converts benzene into n-propylbenzene without a rearranged product?",
+   "options": [
+    "CH₃CH₂CH₂Cl/anhydrous AlCl₃",
+    "CH₃CH₂COCl/AlCl₃, then NH₂NH₂, KOH, glycol, heat",
+    "CH₃CH₂COCl/AlCl₃, then NH₂NH₂ at room temperature only",
+    "(CH₃)₂CHCl/AlCl₃, then NH₂NH₂, KOH"
+   ],
+   "answer": 1,
+   "explain": "Friedel–Crafts acylation gives propiophenone with an unrearranged chain, and Wolff–Kishner reduction turns its C=O into CH₂. Direct alkylation with a primary halide gives rearranged products, and hydrazine alone stops at the hydrazone."
+  }
+ ]
+}

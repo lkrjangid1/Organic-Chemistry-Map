@@ -1,0 +1,49 @@
+{
+ "page": "reagents/potassium-dichromate",
+ "questions": [
+  {
+   "q": "Propan-2-ol is warmed with acidified K₂Cr₂O₇. Which colour change is seen, and which species causes the final colour?",
+   "options": [
+    "Orange to yellow; CrO₄²⁻",
+    "Orange to green; Cr³⁺",
+    "Yellow to orange; Cr₂O₇²⁻",
+    "Orange to colourless; Cr²⁺"
+   ],
+   "answer": 1,
+   "explain": "Cr(VI) in dichromate is reduced to green Cr³⁺ as the alcohol is oxidised to propanone. Yellow chromate (still Cr(VI)) appears only when alkali is added to dichromate."
+  },
+  {
+   "q": "Which compound leaves acidified potassium dichromate orange?",
+   "options": [
+    "Ethanol",
+    "Propan-2-ol",
+    "Ethanal",
+    "2-Methylpropan-2-ol"
+   ],
+   "answer": 3,
+   "explain": "A tertiary alcohol has no hydrogen on the carbinol carbon to remove after the chromate ester forms, so it is not oxidised. 1° and 2° alcohols and aldehydes all turn the solution green."
+  },
+  {
+   "q": "How is ethanal obtained, rather than ethanoic acid, when ethanol is oxidised with K₂Cr₂O₇/H₂SO₄?",
+   "options": [
+    "By distilling the ethanal out as soon as it forms",
+    "By heating under reflux with excess dichromate",
+    "By adding NaOH to convert dichromate to chromate",
+    "By using concentrated H₂SO₄ at 443 K"
+   ],
+   "answer": 0,
+   "explain": "Left in the aqueous mixture, ethanal forms a hydrate that is oxidised again to the acid; reflux with excess oxidant gives ethanoic acid. Removing the aldehyde as it forms prevents this."
+  },
+  {
+   "q": "Replacing the hydrogen on the carbinol carbon of an alcohol with deuterium slows its oxidation by chromic acid about sevenfold. What does this show?",
+   "options": [
+    "Chromate ester formation is the rate-determining step",
+    "The O–H bond breaks in the slow step",
+    "Cleavage of the carbinol C–H bond occurs in the rate-determining step",
+    "Cr(III) is formed in the slow step"
+   ],
+   "answer": 2,
+   "explain": "A large kinetic isotope effect means the C–H bond breaks in the slow step: water removes that H from the chromate ester as C=O forms and Cr(VI) goes to Cr(IV). Ester formation is a fast, reversible step."
+  }
+ ]
+}

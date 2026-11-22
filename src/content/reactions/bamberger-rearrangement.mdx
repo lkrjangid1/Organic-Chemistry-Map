@@ -1,0 +1,101 @@
+---
+title: "Bamberger Rearrangement"
+description: "Bamberger rearrangement: N-phenylhydroxylamine in strong aqueous acid (H₂SO₄) rearranges to 4-aminophenol (p-aminophenol). Mechanism, conditions and examples."
+aliases: ["Bamberger reaction", "Bamburger rearrangement", "Phenylhydroxylamine rearrangement", "Phenylhydroxylamine to p-aminophenol", "Nitrobenzene to p-aminophenol"]
+kind: "rearrangement"
+family: "rearrangement-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: []
+reactant:
+  name: "N-Phenylhydroxylamine"
+  smiles: "ONc1ccccc1"
+product:
+  name: "4-Aminophenol (p-aminophenol)"
+  smiles: "Nc1ccc(O)cc1"
+byproducts: "None in the ideal equation (water is consumed and released)"
+reagents: "Strong aqueous acid, typically dilute or moderately concentrated H₂SO₄"
+conditions: "Warm aqueous sulphuric acid; N-phenylhydroxylamine is usually made just before from nitrobenzene by partial reduction"
+equation: "C6H5NHOH ->[H2SO4, H2O] 4-HOC6H4NH2"
+notesPages: [112]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Bamberger rearrangement?"
+    a: "4-Aminophenol (p-aminophenol). N-Phenylhydroxylamine, C₆H₅NHOH, rearranges in strong aqueous acid so that an OH group ends up para to the NH₂ group on the ring."
+  - q: "How is N-phenylhydroxylamine obtained for the Bamberger rearrangement?"
+    a: "By partial reduction of nitrobenzene, for example with zinc dust and aqueous ammonium chloride, or by catalytic transfer hydrogenation. In acid it then rearranges to p-aminophenol, so reducing nitrobenzene in a strongly acidic medium leads to p-aminophenol."
+  - q: "Where does the OH group in p-aminophenol come from in the Bamberger rearrangement?"
+    a: "From water in the medium. After the protonated N–OH group loses water, water attacks the ring carbon para to nitrogen. That is why the reaction in hydrochloric acid gives chloroanilines as well."
+  - q: "What is the industrial use of the Bamberger rearrangement?"
+    a: "It is a route to 4-aminophenol, the starting material for paracetamol and a photographic developer. Nitrobenzene is reduced to phenylhydroxylamine, which rearranges in sulphuric acid."
+related: ["reactions/reduction-of-nitrobenzene", "reactions/benzidine-rearrangement", "reactions/fries-rearrangement", "reactions/beckmann-rearrangement"]
+sources:
+  - title: "Bamberger rearrangement"
+    url: "https://en.wikipedia.org/wiki/Bamberger_rearrangement"
+    publisher: "Wikipedia"
+  - title: "N-Phenylhydroxylamine"
+    url: "https://en.wikipedia.org/wiki/N-Phenylhydroxylamine"
+    publisher: "Wikipedia"
+  - title: "An aniline dication-like transition state in the Bamberger rearrangement (Beilstein J. Org. Chem. 2013, 9, 1073–1082)"
+    url: "https://doi.org/10.3762/bjoc.9.119"
+    publisher: "Beilstein Journal of Organic Chemistry"
+  - title: "4-Aminophenol"
+    url: "https://en.wikipedia.org/wiki/4-Aminophenol"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 4
+  note: "Direct electrolytic reduction of nitrobenzene in strongly acidic medium to p-aminophenol is kept as exam teaching; sources read confirm only reduction of nitrobenzene via phenylhydroxylamine followed by acid rearrangement."
+---
+
+## What is the Bamberger rearrangement?
+
+The **Bamberger rearrangement** is the acid-catalysed conversion of **N-phenylhydroxylamine (C₆H₅NHOH)** into **4-aminophenol (p-aminophenol)** in **strong aqueous acid**, usually sulphuric acid. The –OH group leaves nitrogen as water and a new –OH appears on the ring carbon **para** to the nitrogen. It is named after the German chemist **Eugen Bamberger**, who described it in 1894.
+
+## General reaction
+
+<Eq ce="C6H5NHOH ->[H2SO4, H2O] HO-C6H4-NH2 (para)" />
+
+Phenylhydroxylamine is itself made from **nitrobenzene** by partial (four-electron) reduction, for example with **Zn dust and aqueous NH₄Cl**:
+
+<Eq ce="C6H5NO2 ->[Zn, NH4Cl (aq)] C6H5NHOH ->[H2SO4, H2O] p-HOC6H4NH2" />
+
+In exam answers the two steps are often merged: **electrolytic reduction of nitrobenzene in a strongly acidic medium** is written as giving p-aminophenol, because the phenylhydroxylamine formed at the cathode rearranges at once in the acid.
+
+## Mechanism
+
+1. **Protonation.** The acid can protonate nitrogen or oxygen. N-protonation is favoured but leads nowhere; the productive path starts from **O-protonation**, which turns –OH into a good leaving group (–OH₂⁺).
+2. **Loss of water.** Water leaves, giving an electron-deficient **nitrenium ion**, C₆H₅NH⁺. Its positive charge is delocalised onto the ortho and para ring carbons.
+3. **Attack by water.** A water molecule from the solvent attacks the **para carbon**, where the positive charge is best stabilised.
+4. **Rearomatisation.** Loss of H⁺ from that carbon restores the aromatic ring and gives 4-aminophenol (as its ammonium salt in the acid).
+
+<Eq ce="C6H5NHOH ->[H+] C6H5NH-OH2+ ->[-H2O] C6H5NH+ ->[+H2O, -H+] p-HOC6H4NH2" />
+
+<KeyPoint>
+The new ring –OH comes from the **solvent water**, not from the original N–OH group. Computational work (2013) suggests that a free nitrenium ion may not survive in water and that the step is assisted by a hydrogen-bonded water network, but the overall result is the same: substitution para to nitrogen.
+</KeyPoint>
+
+## Examples
+
+**1. Nitrobenzene to p-aminophenol (two steps).**
+
+<Eq ce="C6H5NO2 ->[Zn/NH4Cl] C6H5NHOH ->[dil. H2SO4][\Delta] p-H2NC6H4OH" />
+
+**2. Changing the acid changes the product.** With hydrochloric acid, chloride competes with water as the nucleophile, so **2- and 4-chloroanilines** form along with aminophenol. Sulphuric acid, whose anion is a poor nucleophile, gives 4-aminophenol cleanly.
+
+<ExamTip title="Common mistake">
+Writing an intramolecular "OH shift" from N to the para carbon. The OH group is lost as water and a new OH arrives from the solvent. If a question uses HCl instead of H₂SO₄, expect chloroanilines too.
+</ExamTip>
+
+## Limitations and exceptions
+
+- **Over-reduction:** phenylhydroxylamine sits between nitrosobenzene and aniline in oxidation level, so if the reduction of nitrobenzene goes too far, **aniline** forms instead and lowers the yield.
+- Phenylhydroxylamine is **unstable on heating**, so it is used soon after it is made.
+- Oxidation instead of rearrangement: dichromate converts phenylhydroxylamine into **nitrosobenzene**.
+
+## Related reactions
+
+- [Reduction of nitrobenzene](/reactions/reduction-of-nitrobenzene/): the medium decides whether aniline, phenylhydroxylamine, azoxy-, azo- or hydrazobenzene forms.
+- [Benzidine rearrangement](/reactions/benzidine-rearrangement/): the acid-catalysed rearrangement of hydrazobenzene, the alkaline reduction product of nitrobenzene.
+- [Fries rearrangement](/reactions/fries-rearrangement/): another rearrangement that puts a group on the ring para (or ortho) to oxygen.
+- Hub: [Rearrangement reactions](/mechanisms/rearrangement-reactions/)

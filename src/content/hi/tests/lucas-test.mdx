@@ -1,0 +1,95 @@
+---
+title: "Lucas Test (लुकास परीक्षण)"
+description: "Lucas test में conc. HCl और anhydrous ZnCl2 से 1°, 2° और 3° alcohols में अंतर करते हैं: tertiary तुरंत turbid, primary room temperature पर नहीं।"
+aliases: ["लुकास परीक्षण", "लुकास टेस्ट", "लुकास अभिकर्मक", "lucas test hindi", "lucas reagent hindi", "lucas test for alcohols hindi", "alcohol aur HX reaction hindi"]
+reagents: "Lucas reagent: concentrated HCl + anhydrous ZnCl₂"
+conditions: "Room temperature; turbidity आने में लगा समय नोट करें"
+byproducts: "H₂O"
+observation: "सफ़ेद turbidity (धुंधलापन) या alkyl chloride की oily layer: 3° में तुरंत, 2° में लगभग 5 मिनट में, 1° में room temperature पर कुछ नहीं"
+distinguishes: "1°, 2° और 3° alcohols में अंतर"
+reactantName: "2-Methylpropan-2-ol (tert-butyl alcohol)"
+productName: "2-Chloro-2-methylpropane (tert-butyl chloride)"
+faq:
+  - q: "Lucas reagent क्या है?"
+    a: "Lucas reagent, concentrated hydrochloric acid में anhydrous zinc chloride का solution है। यह alcohols को alkyl chlorides में बदलता है, और इसकी speed alcohol की class पर निर्भर करती है।"
+  - q: "Lucas test primary, secondary और tertiary alcohols में अंतर कैसे करता है?"
+    a: "Tertiary alcohols तुरंत turbidity देते हैं, secondary alcohols लगभग 5 मिनट में, और primary alcohols room temperature पर कोई turbidity नहीं देते। यह धुंधलापन insoluble alkyl chloride के अलग होने से आता है।"
+  - q: "Lucas test में turbidity क्यों आती है?"
+    a: "कम molecular mass वाले alcohols, Lucas reagent में घुल जाते हैं, लेकिन उनसे बने alkyl chlorides नहीं घुलते। Chloride छोटी-छोटी बूँदों या oily layer के रूप में अलग हो जाता है, जिससे solution धुंधला हो जाता है।"
+  - q: "Lucas reagent में ZnCl2 का क्या role है?"
+    a: "Anhydrous ZnCl2 एक Lewis acid है। यह OH group के oxygen से coordinate होकर उसे कहीं बेहतर leaving group बना देता है, ताकि कमज़ोर nucleophile chloride ion उसे replace कर सके।"
+  - q: "Tertiary alcohols, Lucas reagent से सबसे तेज़ क्यों react करते हैं?"
+    a: "ये SN1 mechanism से react करते हैं, और slow step carbocation का बनना है। Tertiary carbocation सबसे stable होता है, इसलिए वह सबसे तेज़ बनता है।"
+translated: 2026-11-22
+---
+
+## Lucas test क्या है?
+
+**Lucas test** से **primary, secondary और tertiary alcohols** में अंतर किया जाता है, इस आधार पर कि वे **Lucas reagent** (**concentrated HCl में anhydrous ZnCl₂** का solution) के साथ कितनी जल्दी react करते हैं। Alcohol एक alkyl chloride में बदल जाता है, जो reagent में insoluble है और solution को **turbid** (धुंधला) कर देता है। **Tertiary alcohols तुरंत धुंधले हो जाते हैं, secondary alcohols लगभग पाँच मिनट में, और primary alcohols room temperature पर कोई turbidity नहीं देते।** यह test Howard Lucas ने 1930 में बताया था।
+
+## Observations
+
+| Alcohol की class | Example | Room temperature पर Lucas reagent के साथ result |
+|---|---|---|
+| 3° | 2-methylpropan-2-ol | **तुरंत** turbidity |
+| 2° | propan-2-ol, butan-2-ol | **लगभग 5 मिनट** में turbidity |
+| 1° | ethanol, propan-1-ol | **कोई turbidity नहीं** (सिर्फ़ गर्म करने पर react करता है) |
+
+Benzylic और allylic alcohols, tertiary alcohols की तरह behave करते हैं और तुरंत turbidity देते हैं, क्योंकि वे भी stabilised carbocations बनाते हैं।
+
+Exam answers में primary alcohol का result अक्सर "लगभग 30 मिनट बाद ही turbidity, या कोई reaction नहीं" लिखा जाता है। Laboratory descriptions कहती हैं कि primary alcohols room temperature पर ख़ास react नहीं करते और सिर्फ़ गर्म करने पर oily chloride layer देते हैं। दोनों तरह से, फ़ैसला करने वाला observation एक ही है: **room temperature पर पहले कुछ मिनटों में कोई धुंधलापन नहीं** मतलब primary alcohol।
+
+## इसके पीछे का reaction: alcohol + HX
+
+Lucas test, alcohols को alkyl halides में बदलने वाले general reaction का एक ख़ास case है:
+
+<Eq ce="R-OH + HX -> R-X + H2O" />
+
+- **HX की reactivity:** HI > HBr > HCl (HF आमतौर पर react नहीं करता)।
+- **Alcohols की reactivity:** 3° > 2° > 1° > methyl।
+- **सिर्फ़ NaX alcohols से react नहीं करता**, क्योंकि OH को protonate करने के लिए कोई acid नहीं होता। NaBr या NaCl के साथ conc. H₂SO₄ का mixture काम करता है, क्योंकि यह in situ HX बनाता है।
+- **तीनों acids में HCl सबसे कमज़ोर nucleophile है**, इसलिए primary और secondary alcohols से react करने के लिए इसे ZnCl₂ चाहिए। ठीक इसी वजह से Lucas reagent तीनों classes को इतनी साफ़ तरह से अलग करता है।
+
+## Mechanism (2° और 3° alcohols के लिए SN1)
+
+1. **OH का activation।** Oxygen का lone pair HCl से H⁺ लेता है (या ZnCl₂ से जुड़ता है)। –OH बदलकर –OH₂⁺ (या –O(H)–ZnCl₂) बन जाता है, जो एक अच्छा leaving group है।
+2. **Carbocation बनना (slow, rate-determining)।** Leaving group निकल जाता है और carbocation बनता है।
+3. **Chloride द्वारा capture (fast)।** Cl⁻ carbocation पर attack करके alkyl chloride बनाता है, जो oily, धुंधली layer के रूप में अलग हो जाता है।
+
+<Eq ce="(CH3)3C-OH ->[H+] (CH3)3C-OH2+ ->[slow][-H2O] (CH3)3C+ ->[Cl-][fast] (CH3)3C-Cl" />
+
+<KeyPoint>
+Lucas reaction की speed carbocation stability के हिसाब से चलती है: 3° > 2° > 1°। Carbocation बनना rate-determining step है, इसलिए carbocation जितना stable होगा, turbidity उतनी जल्दी आएगी।
+</KeyPoint>
+
+Primary alcohols stable carbocation नहीं बना सकते। जब वे react करते हैं (जैसे गर्म करने पर), तो chloride सीधे activated OH group को एक **SN2** step में displace करता है, जो Cl⁻ के साथ धीमा होता है।
+
+## Anhydrous ZnCl₂ का role
+
+ZnCl₂ एक **Lewis acid** है। यह alcohol के oxygen के lone pair के साथ complex बनाता है और hydroxyl group को आसानी से निकलने लायक बना देता है। इसे anhydrous होना चाहिए ताकि reagent strongly acidic और concentrated बना रहे।
+
+## Examples
+
+<Eq ce="(CH3)3COH + HCl ->[ZnCl2][\text{at once}] (CH3)3CCl + H2O" />
+
+<Eq ce="CH3CH(OH)CH3 + HCl ->[ZnCl2][\text{about 5 min}] CH3CHClCH3 + H2O" />
+
+<Eq ce="CH3CH2CH2OH + HCl ->[ZnCl2][\text{room temp.}] \text{no turbidity}" />
+
+<ExamTip>
+Answer का pattern: "तुरंत turbidity: 3°; 5 मिनट में turbidity: 2°; room temperature पर कोई turbidity नहीं: 1°।" साथ में कारण लिखें: speed carbocation stability (SN1) पर निर्भर करती है। 1° alcohol के लिए लिखें कि यह सिर्फ़ गर्म करने पर react करता है।
+</ExamTip>
+
+## Limitations और exceptions
+
+- Test सिर्फ़ उन alcohols के लिए काम करता है जो reagent में घुलते हैं, यानी लगभग पाँच या छह carbons तक। बड़े alcohols react करें या न करें, अलग layer बना लेते हैं।
+- Carbocations rearrange हो सकते हैं, इसलिए कुछ secondary alcohols से बने chloride का carbon skeleton rearranged हो सकता है।
+- Allylic और benzylic primary alcohols तुरंत positive result देते हैं, इसलिए जल्दी result का मतलब हमेशा tertiary alcohol नहीं होता।
+
+## Related reactions
+
+- [SN1 reaction](/hi/reactions/sn1-reaction/): 2° और 3° alcohols का रास्ता।
+- [SN2 reaction](/hi/reactions/sn2-reaction/): methanol और 1° alcohols का रास्ता।
+- [Dehydration of alcohols](/hi/reactions/dehydration-of-alcohols/): इसके साथ competition करने वाला acid-catalysed elimination।
+- [Ether cleavage with HX](/hi/reactions/ether-cleavage-with-hx/): वही "पहले protonate, फिर substitute" वाला logic, ethers पर।
+- [Nucleophilic substitution](/hi/mechanisms/nucleophilic-substitution/): substitution reactions का hub page।

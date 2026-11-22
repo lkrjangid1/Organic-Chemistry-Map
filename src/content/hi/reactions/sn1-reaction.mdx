@@ -1,0 +1,98 @@
+---
+title: "SN1 Reaction (एकाणुक नाभिकस्नेही प्रतिस्थापन)"
+description: "SN1 reaction दो steps वाला nucleophilic substitution है: alkyl halide ionise होकर carbocation बनाता है, फिर nucleophile जुड़ता है और racemisation होता है।"
+aliases: ["एसएन1 अभिक्रिया", "एकाणुक नाभिकस्नेही प्रतिस्थापन", "sn1 reaction hindi", "sn1 mechanism hindi", "unimolecular nucleophilic substitution hindi", "solvolysis hindi", "sn1 kya hai"]
+reagents: "Weak या neutral nucleophile (H₂O, ROH, CH₃COOH), आमतौर पर solvent ही"
+conditions: "Polar protic solvent (पानी, alcohol, aqueous acetone); tertiary, allylic या benzylic substrate"
+byproducts: "HBr (H₃O⁺ और Br⁻ के रूप में)"
+reactantName: "tert-Butyl bromide (2-bromo-2-methylpropane)"
+productName: "tert-Butyl alcohol (2-methylpropan-2-ol)"
+steps:
+  - title: "Ionisation (slow)"
+    text: "Polarised C–Br bond heterolytically टूटता है, जिससे planar sp² tert-butyl cation और Br⁻ बनते हैं। NCERT इस step को सबसे slow और reversible बताता है, इसलिए rate सिर्फ़ [tert-butyl bromide] पर निर्भर करता है।"
+    arrows: "C–Br bond pair पूरा का पूरा bromine के साथ Br⁻ बनकर निकल जाता है।"
+  - title: "Nucleophilic attack (fast)"
+    text: "पानी खाली p orbital के किसी भी lobe पर, ऊपर या नीचे वाले face से, attack करता है और oxonium ion बनता है। Stereocentre पर इससे दोनों enantiomers बनते हैं (आमतौर पर अधूरा racemisation), और carbocation बनने के कारण rearrangement संभव है।"
+    arrows: "पानी के oxygen का एक lone pair → C⁺ का खाली p orbital।"
+  - title: "Deprotonation"
+    text: "Solvent का एक water molecule oxonium ion से H⁺ हटाता है, जिससे tert-butyl alcohol (2-methylpropan-2-ol) बनता है। कुल by-product HBr है।"
+    arrows: "Solvent water का lone pair → O–H proton; O–H bond pair oxygen पर ही रहता है।"
+faq:
+  - q: "SN1 reaction का rate law क्या है?"
+    a: "Rate = k[R–X]। इसमें सिर्फ़ substrate आता है क्योंकि slow step C–X bond का ionisation होकर carbocation बनना है; nucleophile बाद में fast step में जुड़ता है।"
+  - q: "Tertiary alkyl halides SN1 mechanism को prefer क्यों करते हैं?"
+    a: "Tertiary carbocation तीन alkyl groups से (inductive effect और hyperconjugation के कारण) stabilise होता है, इसलिए यह सबसे तेज़ी से बनता है। Reactivity order 3° > 2° > 1° है, और allylic व benzylic halides भी तेज़ी से react करते हैं क्योंकि इनके cations resonance से stabilise होते हैं।"
+  - q: "SN1 reaction में racemisation होता है या inversion?"
+    a: "Planar carbocation पर दोनों faces से attack हो सकता है, इसलिए chiral substrate से दोनों enantiomers का mixture मिलता है। असल में racemisation पूरा नहीं होता: जाता हुआ halide ion एक face को कुछ हद तक ढक लेता है, इसलिए inverted product थोड़ा ज़्यादा बनता है।"
+  - q: "SN1 के लिए polar protic solvent क्यों लिया जाता है?"
+    a: "पानी, alcohols और acetic acid carbocation को stabilise करते हैं और hydrogen bonding से leaving anion को solvate करते हैं, जिससे ionisation step की energy कम हो जाती है।"
+  - q: "क्या SN1 reaction में carbocation rearrange हो सकता है?"
+    a: "हाँ। Nucleophile के attack से पहले 1,2-hydride या 1,2-methyl shift कम stable cation को ज़्यादा stable cation में बदल सकता है, इसलिए product का skeleton अलग हो सकता है, जैसे methanol में neopentyl bromide से 2-methoxy-2-methylbutane बनता है।"
+translated: 2026-11-22
+---
+
+## SN1 reaction क्या है?
+
+**SN1 reaction** (substitution, nucleophilic, unimolecular) एक nucleophilic substitution है जो दो steps में होता है। पहले alkyl halide का C–X bond अपने आप टूटकर एक **planar carbocation** और halide ion देता है; फिर एक nucleophile, आमतौर पर solvent, carbocation से bond बनाता है। यह **tertiary, allylic और benzylic halides** में पानी, alcohols या aqueous acetone जैसे **polar protic solvents** में typical है। चूँकि slow step में सिर्फ़ substrate भाग लेता है, इसलिए rate law **rate = k[R–X]** (first order) है।
+
+## General reaction
+
+<Eq ce="R3C-X ->[\text{slow}] R3C+ + X- ->[Nu-][\text{fast}] R3C-Nu" />
+
+## Mechanism
+
+1. **Ionisation (slow, rate-determining)।** Polarised C–X bond heterolytically टूटता है। Carbon sp² hybridised और trigonal planar हो जाता है, और plane के ऊपर-नीचे एक खाली p orbital होता है। NCERT इस step को सबसे slow और reversible बताता है।
+2. **Nucleophilic attack (fast)।** Nucleophile खाली p orbital के किसी भी lobe तक पहुँच सकता है, इसलिए यह ऊपर वाले face या नीचे वाले face से जुड़ता है।
+3. **Deprotonation (जब nucleophile neutral हो)।** अगर पानी या alcohol attack करे, तो पहले oxonium ion बनता है जो solvent molecule को H⁺ दे देता है।
+
+<Eq ce="(CH3)3C-Br <=>[\text{slow}] (CH3)3C+ + Br- ; (CH3)3C+ + H2O -> (CH3)3C-OH2+ ->[-H+] (CH3)3C-OH" />
+
+<KeyPoint>
+SN1 **carbocation** के through होता है, इसलिए **rearrangement संभव है**; यह दो (या ज़्यादा) steps वाला reaction है; इसमें **weak, neutral nucleophile**, **अच्छा leaving group** और **polar protic solvent** चाहिए। Reactivity carbocation की stability के अनुपात में होती है: 3° > 2° > 1° > CH₃।
+</KeyPoint>
+
+## Stereochemistry
+
+जब halogen वाला carbon stereocentre हो, तो planar cation के दोनों faces पर attack से **दोनों enantiomers** बनते हैं। NCERT का example optically active 2-bromobutane है, जो (±)-butan-2-ol देता है। असली reactions में racemisation आमतौर पर अधूरा रहता है: जाता हुआ halide कुछ पल के लिए ion pair के रूप में cation के पास रहता है और front face को block करता है, इसलिए inverted product थोड़ा favoured होता है।
+
+## Leaving group ability
+
+संक्षेप में: leaving-group ability ∝ 1/basicity ∝ anion की stability। Weak bases आसानी से निकलते हैं, इसलिए I⁻ > Br⁻ > Cl⁻ > F⁻। –N₂⁺ (N₂ बनकर निकलता है) और –OH₂⁺ (H₂O बनकर निकलता है) जैसे groups excellent leaving groups हैं, इसीलिए alcohols protonation के बाद ही SN1 से react करते हैं।
+
+## Examples
+
+**1. tert-Butyl bromide का hydrolysis (NCERT)।** पानी nucleophile का काम करता है; rate सिर्फ़ [tert-butyl bromide] पर निर्भर करता है।
+
+<Eq ce="(CH3)3C-Br + H2O -> (CH3)3C-OH + HBr" />
+
+**2. Ethanol में solvolysis।** गर्म ethanol में 2-bromo-2-methylbutane से 2-ethoxy-2-methylbutane बनता है, और competing E1 रास्ते से कुछ alkene भी।
+
+<Eq ce="CH3CH2C(CH3)2Br + C2H5OH -> CH3CH2C(CH3)2OC2H5 + HBr" />
+
+**3. Rearrangement: methanol में neopentyl bromide।** Neopentyl carbon के पड़ोसी carbon पर कोई hydrogen नहीं है, इसलिए **1,2-methyl shift** primary cation को tertiary cation में बदल देता है। Product 2-methoxy-2-methylbutane है, neopentyl methyl ether नहीं।
+
+<Eq ce="(CH3)3C-CH2Br ->[CH3OH][\Delta] (CH3)2C(OCH3)-CH2CH3 + HBr" />
+
+<ExamTip>
+जब भी किसी SN1 या E1 question में branched carbon के बगल में 1° या 2° carbon दिया हो, product लिखने से पहले hydride या methyl shift check करें। Neopentyl systems में हमेशा methyl shift होता है।
+</ExamTip>
+
+## Allylic rearrangement: SN1′ और SN2′
+
+Allylic halides एक **resonance-stabilised allyl cation** बनाते हैं जिसमें positive charge दो carbons पर बँटा होता है, इसलिए nucleophile किसी भी सिरे पर bond बना सकता है। Double bond के दूर वाले सिरे पर substitution, जिसमें π bond खिसक जाता है, **allylic shift** कहलाता है: cation के through हो तो SN1′, और जब nucleophile एक ही concerted step में alkene carbon पर attack करे तो SN2′।
+
+एक classic question: 3-chloro-3-methylcyclohexene पानी के साथ दो alcohols देता है। Tertiary सिरे पर attack से **1-methylcyclohex-2-en-1-ol** बनता है; दूसरे सिरे पर attack से **3-methylcyclohex-2-en-1-ol** बनता है, जिसमें ज़्यादा substituted और ज़्यादा stable C=C है। Exam answers में पहले को kinetically controlled product और दूसरे को thermodynamically controlled product कहा जाता है। OH⁻ के साथ exam answers में SN2′ रास्ता दिखाया जाता है जो सीधे 3-methylcyclohex-2-en-1-ol देता है।
+
+## Limitations और exceptions
+
+- **E1 compete करता है**, ख़ासकर गर्म करने पर या basic nucleophiles के साथ; tertiary substrates आसानी से alkenes देते हैं।
+- **Methyl और primary halides** ionise नहीं होते (इनके cations बहुत unstable हैं); ये SN2 से react करते हैं।
+- **Aryl और vinyl halides** SN1 नहीं देते, क्योंकि aryl और vinyl cations बहुत unstable होते हैं।
+
+## Related reactions
+
+- [SN2 reaction](/hi/reactions/sn2-reaction/): one-step, inversion वाला रास्ता जिसे 1° substrates favour करते हैं।
+- [E1 reaction](/hi/reactions/e1-reaction/): इसमें भी यही carbocation step होता है।
+- [Lucas test](/hi/tests/lucas-test/): turbidity आने की speed 3°, 2° और 1° alcohols की SN1 reactivity दिखाती है।
+- [SNi mechanism](/hi/reactions/sni-mechanism/) और [neighbouring group participation](/hi/reactions/neighbouring-group-participation/): ऐसे substitutions जो retention देते हैं।
+- [Nucleophilic substitution overview](/hi/mechanisms/nucleophilic-substitution/)

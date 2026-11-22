@@ -1,0 +1,49 @@
+{
+ "page": "tests/ferric-chloride-test",
+ "questions": [
+  {
+   "q": "Which compound gives a violet colour with neutral FeCl₃ solution?",
+   "options": [
+    "Benzyl alcohol",
+    "Cyclohexanol",
+    "Phenol",
+    "Propanone"
+   ],
+   "answer": 2,
+   "explain": "Phenol forms the coloured complex [Fe(OC₆H₅)₆]³⁻. Benzyl alcohol is the trap: its –OH is on an sp³ carbon, so it behaves as an alcohol and the yellow colour of FeCl₃ remains."
+  },
+  {
+   "q": "Which compound also gives a coloured complex with FeCl₃, and so can be mistaken for a phenol?",
+   "options": [
+    "Ethanol",
+    "Ethyl acetoacetate",
+    "Propanone",
+    "Diethyl ether"
+   ],
+   "answer": 1,
+   "explain": "The test really detects an –OH on an sp² carbon of a C=C (an enol unit). Ethyl acetoacetate, a β-keto ester, has a high enol content and gives a colour, while propanone exists almost entirely in the keto form and does not respond."
+  },
+  {
+   "q": "Neutral ferric chloride for this test is prepared by:",
+   "options": [
+    "Adding dilute NaOH dropwise to FeCl₃ solution until a slight permanent brown precipitate forms, then filtering",
+    "Boiling FeCl₃ solution with concentrated HCl",
+    "Dissolving iron filings in nitric acid",
+    "Adding excess ammonia to FeCl₃ solution and using the precipitate"
+   ],
+   "answer": 0,
+   "explain": "Ordinary FeCl₃ solution is acidic because Fe³⁺ hydrolyses; neutralising it with a little NaOH and using the clear filtrate gives sharper colours. Adding acid or using the Fe(OH)₃ precipitate itself would spoil the test."
+  },
+  {
+   "q": "Which phenolic compound does NOT give a characteristic colour with FeCl₃?",
+   "options": [
+    "Phenol",
+    "m-Cresol",
+    "Catechol",
+    "2-Naphthol"
+   ],
+   "answer": 3,
+   "explain": "Naphthols do not give characteristic colours, so a negative FeCl₃ result does not rule out a phenol. Phenol gives violet, cresols violet or blue, and catechol a green colour that soon darkens."
+  }
+ ]
+}

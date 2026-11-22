@@ -1,0 +1,105 @@
+---
+title: "Wurtz Reaction (वुर्ट्ज़ अभिक्रिया)"
+description: "Wurtz reaction में dry ether में sodium से दो alkyl halides जुड़कर higher alkane (R–R) बनाते हैं। Mechanism, examples, limitations और intramolecular version।"
+aliases: ["वुर्ट्ज़ अभिक्रिया", "वुर्ट्ज अभिक्रिया", "वुर्टज़ रिएक्शन", "wurtz reaction hindi", "wurtz coupling hindi", "wurtz synthesis hindi", "alkane preparation wurtz hindi"]
+reagents: "Sodium metal (Na)"
+conditions: "Dry (anhydrous) ether; THF या dioxane भी इस्तेमाल होते हैं"
+byproducts: "NaX (यहाँ NaBr)"
+reactantName: "Bromoethane (ethyl bromide)"
+productName: "Butane (n-butane)"
+faq:
+  - q: "Wurtz reaction का product क्या है?"
+    a: "एक symmetrical alkane R–R, जिसमें alkyl halide से दोगुने carbon atoms होते हैं। Dry ether में sodium के साथ bromoethane से n-butane बनता है, और bromomethane से ethane।"
+  - q: "Wurtz reaction में dry ether क्यों लिया जाता है?"
+    a: "Sodium पानी से बहुत तेज़ी से react करता है, और कोई भी नमी organosodium intermediate को protonate करके R–R की जगह alkane RH बना देगी। इसलिए dry ether, THF या dioxane जैसा anhydrous, unreactive aprotic solvent ज़रूरी है।"
+  - q: "Wurtz reaction से odd संख्या वाले carbon atoms के alkanes क्यों नहीं बनाए जा सकते?"
+    a: "Odd-carbon alkane के लिए दो अलग alkyl halides चाहिए। इनका mixture तीन coupled products (R–R, R–R′ और R′–R′) देता है जिनके boiling points पास-पास होते हैं, इसलिए चाहिए वाला alkane अलग करना मुश्किल होता है।"
+  - q: "क्या Wurtz reaction से methane बनाया जा सकता है?"
+    a: "नहीं। Wurtz reaction हमेशा दो alkyl groups को जोड़ता है, इसलिए इससे बनने वाला सबसे छोटा alkane, methyl halide से ethane है।"
+  - q: "Intramolecular Wurtz reaction क्या है?"
+    a: "जब दोनों halogens एक ही molecule में हों, तो sodium दोनों carbons को जोड़कर ring बंद कर देता है। Refluxing dioxane में sodium के साथ 1-bromo-3-chlorocyclobutane से bicyclo[1.1.0]butane बनता है।"
+translated: 2026-11-22
+---
+
+## Wurtz reaction क्या है?
+
+**Wurtz reaction** में **alkyl halide** के दो molecules **dry ether में sodium metal** के साथ जुड़कर एक **higher alkane** बनाते हैं, जिसमें carbon atoms दोगुने होते हैं। दोनों alkyl groups एक नए C–C bond से जुड़ते हैं और halogen, sodium halide बनकर निकल जाता है: 2R–X + 2Na → R–R + 2NaX। Even संख्या वाले carbon atoms के **symmetrical alkanes** बनाने का यह standard NCERT तरीका है, और इसका नाम Charles Adolphe Wurtz (1855) पर है।
+
+## General reaction
+
+<Eq ce="2 R-X + 2 Na ->[dry ether] R-R + 2 NaX" />
+
+Ether पूरी तरह नमी-रहित होना चाहिए: sodium पानी से बहुत तेज़ी से react करता है, और पानी reactive intermediate को नष्ट कर देगा। Unreactive **polar aprotic solvents** (dry ether, THF, dioxane) इस्तेमाल किए जाते हैं।
+
+## Mechanism
+
+असली mechanism पर अभी भी बहस है, और exam answers में दोनों versions माने जाते हैं।
+
+**1. Free radical mechanism**
+
+1. Sodium एक electron देता है: Na → Na⁺ + e⁻।
+2. यह electron C–X bond तोड़ता है, जिससे एक alkyl radical और halide ion बनते हैं: R–X + e⁻ → R• + X⁻।
+3. दो alkyl radicals मिलकर R–R बनाते हैं; Na⁺ और X⁻ मिलकर NaX बनाते हैं।
+
+<Eq ce="R-X + Na -> R^. + NaX" />
+<Eq ce="R^. + R^. -> R-R" />
+
+**2. Ionic (organosodium) mechanism**
+
+1. दो sodium atoms एक R–X को दो electrons देते हैं, जिससे carbanion बनता है: R–X + 2e⁻ → R⁻ + X⁻ (यानी एक organosodium compound R⁻Na⁺)।
+2. Carbanion nucleophile की तरह R–X के दूसरे molecule पर attack करता है और SN2 जैसे step में X⁻ को हटाकर R–R बनाता है।
+
+<Eq ce="R-X + 2 Na -> R^-Na+ + NaX" />
+<Eq ce="R^-Na+ + R-X -> R-R + NaX" />
+
+<KeyPoint>
+Sources पहले step को metal–halogen exchange (Grignard reagent बनने जैसा) बताते हैं, जो radicals से होकर गुज़र सकता है। इसके बाद organosodium intermediate SN2-type substitution में nucleophile की तरह काम करता है।
+</KeyPoint>
+
+## Examples
+
+1. **Bromomethane से ethane** (NCERT):
+
+<Eq ce="2 CH3Br + 2 Na ->[dry ether] CH3-CH3 + 2 NaBr" />
+
+2. **Bromoethane से n-butane** (NCERT):
+
+<Eq ce="2 C2H5Br + 2 Na ->[dry ether] CH3CH2CH2CH3 + 2 NaBr" />
+
+3. **2-Chloropropane से 2,3-dimethylbutane**, जहाँ secondary halide एक branched symmetrical alkane देता है:
+
+<Eq ce="2 (CH3)2CHCl + 2 Na ->[dry ether] (CH3)2CH-CH(CH3)2 + 2 NaCl" />
+
+## Intramolecular Wurtz reaction (dihalides)
+
+जब दोनों halogens एक ही molecule में हों, तो sodium ring बंद कर सकता है। Classic example **1-bromo-3-chlorocyclobutane** है, जो लगभग 95% yield में बहुत ज़्यादा strained **bicyclo[1.1.0]butane** देता है। Published procedure में reaction refluxing dioxane में किया जाता है, जहाँ sodium पिघली हुई अवस्था में होता है।
+
+<Eq ce="C4H6BrCl + 2 Na ->[dioxane][reflux] C4H6 + NaBr + NaCl" />
+
+Exam answers में दोनों outcomes की तुलना की जाती है: कम temperature पर Na/ether दो molecules को जोड़ता है (C–Br carbon पर intermolecular coupling, जिससे दोनों Cl atoms वाला bicyclobutyl बनता है)। ज़्यादा temperature पर Na/ether, Na के 2 equivalents, या dioxane में Na, ring closure होकर bicyclobutane बनने को favour करते हैं। Wurtz conditions में vicinal dihalides से alkenes और geminal dihalides से alkynes बनते हैं।
+
+<KeyPoint>
+याद रखें: "मुक्त मूलक की अभिक्रियाशीलता का क्रम: 1° &gt; 2° &gt; 3°" (free-radical reactivity का, यानी coupling का order: 1° &gt; 2° &gt; 3°)। Exam answers में primary halides सबसे अच्छी Wurtz yield देते हैं; tertiary halides coupling की जगह ज़्यादातर disproportionation या elimination से alkenes और alkanes देते हैं।
+</KeyPoint>
+
+## Limitations और exceptions
+
+- **Odd-carbon alkanes:** दो अलग halides (जैसे CH₃Br + C₂H₅Br) लेने पर ethane, propane और butane का mixture बनता है। NCERT पूछता है कि odd-carbon alkanes के लिए यह तरीका क्यों preferred नहीं है।
+- **Methane नहीं:** कम से कम दो carbon atoms जुड़ते हैं, इसलिए सबसे छोटा product ethane है।
+- **Tertiary halides** coupling नहीं, ज़्यादातर elimination products देते हैं।
+- गर्म sodium से react करने वाले **functional groups** (OH, C=O, NO₂) मौजूद नहीं हो सकते।
+- असली lab practice में yields कम होती हैं, इसलिए छोटी rings को छोड़कर यह reaction मुख्य रूप से पढ़ाने के काम का है। इसे बेहतर बनाने के लिए दूसरी metals (Zn, Ag, activated Cu, In) भी आज़माई गई हैं।
+
+<ExamTip>
+Unsymmetrical alkane R–R′ साफ़ तरीके से बनाना हो तो answer **Corey–House synthesis** है, Wurtz नहीं। अगर question में aryl halide और alkyl halide के साथ sodium दिया हो, तो यह **Wurtz–Fittig reaction** है।
+</ExamTip>
+
+## Related reactions
+
+- [Wurtz–Fittig reaction](/hi/reactions/wurtz-fittig-reaction/): aryl halide + alkyl halide + Na से alkylbenzene बनता है।
+- [Fittig reaction](/hi/reactions/fittig-reaction/): दो aryl halides + Na से biaryl बनता है।
+- [Corey–House synthesis](/hi/reactions/corey-house-synthesis/): unsymmetrical alkanes का साफ़ रास्ता।
+- [Kolbe electrolysis](/hi/reactions/kolbe-electrolysis/): एक और radical coupling जो even-carbon alkanes देता है।
+- [Ullmann reaction](/hi/reactions/ullmann-reaction/): aryl halides का copper-mediated coupling।
+- [Grignard reagent](/hi/reactions/grignard-reagent/): dry ether में R–X के साथ Mg, इससे मिलता-जुलता metal–halogen exchange।
+- Hub: [Coupling reactions](/hi/mechanisms/coupling-reactions/)

@@ -1,0 +1,14 @@
+---
+import { url } from '../lib/site';
+import { langOf, t as tr, fmtDate } from '../lib/i18n';
+interface Props { notesPages?: number[]; updated?: Date }
+const { notesPages = [], updated } = Astro.props;
+const lang = langOf(Astro.url);
+const s = tr(lang);
+const date = fmtDate(updated, lang);
+---
+<p class="byline">
+  <a href={url('about/')}>{s.byline}</a>
+  {notesPages.length > 0 && <> ({s.notebookPage} {notesPages.join(', ')})</>}
+  · {s.credit}{date && <> · {s.updated} {date}</>}
+</p>

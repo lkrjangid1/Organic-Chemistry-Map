@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { SITE } from '../lib/site';
+const updated = '21 November 2026';
+---
+<Base title="Privacy Policy" description="Privacy policy for Organic Chemistry Map: what data the site collects (very little), cookie-free analytics, and how optional Google sign-in data is handled." path="privacy/">
+  <div class="container narrow page">
+    <Breadcrumbs items={[{ label: 'Privacy' }]} />
+    <article class="prose">
+      <h1>Privacy policy</h1>
+      <p>Last updated: {updated}</p>
+      <h2>What we collect today</h2>
+      <ul>
+        <li><strong>No tracking cookies, sign-in optional.</strong> You can use every page, tool and the map without signing in.</li>
+        <li><strong>Cookie-free analytics.</strong> We use Cloudflare Web Analytics to count page views. It does not use cookies or fingerprinting and does not identify you.</li>
+        <li><strong>Data stored on your device.</strong> The map saves your theme, map position and install-prompt choice in your browser's local storage. The study tools save flashcard progress, your best quiz score and your saved pages there too. Unless you sign in, none of it leaves your device, and clearing site data removes it.</li>
+        <li><strong>Error reports.</strong> If you send an error report, we receive what you type in the form and the page address.</li>
+      </ul>
+      <h2>Optional Google sign-in</h2>
+      <p>You can sign in with Google to sync your study progress across devices. Sign-in uses Google Firebase Authentication; the sign-in code is loaded only when you click "Sign in" or have signed in before.</p>
+      <ul>
+        <li><strong>What we store:</strong> your Google account ID, name and email address (held by Firebase Authentication), and one progress record (flashcard levels, best quiz score and saved pages) in Google Cloud Firestore.</li>
+        <li><strong>What we use it for:</strong> only to sync that progress between your devices. We do not use it for advertising, analytics or profiling, and we do not share it.</li>
+        <li><strong>Your choices:</strong> sign out at any time from the account menu. To delete your account data, email us and we will erase it, as provided by India's Digital Personal Data Protection Act, 2023.</li>
+      </ul>
+      <h2>Links to other sites</h2>
+      <p>Pages link to references, Google Play and GitHub. Those sites have their own privacy policies.</p>
+      <h2>Contact</h2>
+      <p>Questions or deletion requests: open an issue on <a href={SITE.repo} rel="noopener">GitHub</a> or use the error report link on any page.</p>
+    </article>
+  </div>
+</Base>

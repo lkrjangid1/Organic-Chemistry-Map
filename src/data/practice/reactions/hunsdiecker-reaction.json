@@ -1,0 +1,50 @@
+{
+ "page": "reactions/hunsdiecker-reaction",
+ "questions": [
+  {
+   "q": "Dry silver propanoate is refluxed with Br₂ in CCl₄. The organic product is:",
+   "smiles": "CCC(=O)[O-].[Ag+]",
+   "options": [
+    "1-Bromopropane",
+    "2-Bromopropanoic acid",
+    "Bromoethane",
+    "Butane"
+   ],
+   "answer": 2,
+   "explain": "The –COOAg group is replaced by Br and the carboxyl carbon leaves as CO₂, so the alkyl bromide has one carbon fewer. 2-Bromopropanoic acid would be the HVZ product, and butane the Kolbe-type dimer."
+  },
+  {
+   "q": "The silver salt of an optically active acid whose stereocentre is the α-carbon undergoes the Hunsdiecker reaction. The alkyl bromide formed is:",
+   "options": [
+    "Optically active with retention of configuration",
+    "Optically active with inversion of configuration",
+    "A meso compound",
+    "Racemic, because the reaction passes through a planar alkyl radical"
+   ],
+   "answer": 3,
+   "explain": "After loss of CO₂ the alkyl radical is planar, so bromine bonds to either face equally. This loss of optical activity is classic evidence for the radical mechanism."
+  },
+  {
+   "q": "Arrange the following by yield of alkyl bromide in the Hunsdiecker reaction of their silver salts: (I) CH₃CH₂CH₂COOAg, (II) (CH₃)₂CHCOOAg, (III) (CH₃)₃CCOOAg.",
+   "options": [
+    "I > II > III",
+    "III > II > I",
+    "II > I > III",
+    "I = II = III"
+   ],
+   "answer": 0,
+   "explain": "Yields fall in the order primary > secondary > tertiary for the alkyl group formed, so the straight-chain acid gives the best yield and the tertiary one the poorest. The trap is using carbocation stability (3° > 2° > 1°)."
+  },
+  {
+   "q": "The silver salt of a carboxylic acid RCOOAg is treated with iodine in a 2 : 1 molar ratio (salt : I₂). The main product is:",
+   "options": [
+    "The alkyl iodide R–I",
+    "The ester RCOOR",
+    "The alkane R–R",
+    "The acyl iodide RCOI"
+   ],
+   "answer": 1,
+   "explain": "This is the Simonini reaction: a 1 : 1 ratio gives the alkyl iodide, but a 2 : 1 ratio gives mainly the ester RCOOR. That is why the Hunsdiecker method is used for chlorine and bromine."
+  }
+ ]
+}

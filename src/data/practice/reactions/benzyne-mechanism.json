@@ -1,0 +1,50 @@
+{
+ "page": "reactions/benzyne-mechanism",
+ "questions": [
+  {
+   "q": "Which reagent converts unactivated chlorobenzene into aniline by the elimination–addition (benzyne) route?",
+   "options": [
+    "Aqueous NaOH at room temperature",
+    "Ethanolic NH₃ in a sealed tube at 373 K",
+    "NaNH₂ in liquid NH₃",
+    "Sn and HCl"
+   ],
+   "answer": 2,
+   "explain": "Only a very strong base such as NH₂⁻ can remove the ortho H and eliminate HCl to give benzyne. Ordinary ammonia does not substitute an unactivated aryl halide."
+  },
+  {
+   "q": "Chlorobenzene labelled with ¹⁴C at C-1 is treated with KNH₂ in liquid NH₃. In the aniline formed, the label is found:",
+   "options": [
+    "At C-1 and C-2 in equal amounts",
+    "Only at C-1, the carbon bearing NH₂",
+    "Only at C-4",
+    "Spread equally over all six ring carbons"
+   ],
+   "answer": 0,
+   "explain": "Roberts' 1953 result: NH₂⁻ adds to either end of a symmetrical benzyne, so half the aniline has NH₂ on the labelled carbon and half on its neighbour (cine substitution). Direct addition–elimination would keep the label only at C-1."
+  },
+  {
+   "q": "Which aryl halide does NOT react with NaNH₂ in liquid NH₃ by the benzyne mechanism?",
+   "options": [
+    "Chlorobenzene",
+    "Bromobenzene",
+    "4-Chlorotoluene",
+    "2-Bromo-1,3-dimethylbenzene"
+   ],
+   "answer": 3,
+   "explain": "The first step needs a hydrogen ortho to the halogen. In 2-bromo-1,3-dimethylbenzene both ortho positions carry CH₃, so benzyne cannot form."
+  },
+  {
+   "q": "2-Chloroanisole is treated with NaNH₂ in liquid NH₃. The product is:",
+   "smiles": "COc1ccccc1Cl",
+   "options": [
+    "2-Methoxyaniline only",
+    "3-Methoxyaniline only",
+    "An equimolar mixture of 2- and 3-methoxyaniline",
+    "4-Methoxyaniline only"
+   ],
+   "answer": 1,
+   "explain": "The benzyne has its triple bond next to –OCH₃, and NH₂⁻ adds to the farther carbon so that the aryl anion sits next to the –I oxygen. The NH₂ therefore ends up meta to OCH₃, not where the chlorine was."
+  }
+ ]
+}

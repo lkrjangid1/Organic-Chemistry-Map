@@ -1,0 +1,167 @@
+---
+title: "Dehydration of Alcohols"
+description: "Dehydration of alcohols turns an alcohol into an alkene by losing water, using conc. H₂SO₄ or H₃PO₄ and heat (ethanol to ethene at 443 K). Mechanism, rules."
+aliases: ["Acid-catalysed dehydration of alcohols", "Alcohol to alkene", "Dehydration of ethanol", "Ethanol to ethene", "Beta elimination of alcohols"]
+kind: "general-reaction"
+family: "elimination-reactions"
+exams: [jee-main, jee-advanced, neet]
+mapEdges: ["e1_dehydration_major", "e1_dehydration_minor", "r4_e2_elimination_major", "r5_e2_elimination_minor"]
+reactant:
+  name: "Ethanol"
+  smiles: "CCO"
+product:
+  name: "Ethene"
+  smiles: "C=C"
+byproducts: "H₂O"
+reagents: "Conc. H₂SO₄ or 85% H₃PO₄ (also Al₂O₃ or anhydrous ZnCl₂)"
+conditions: "Heat: 443 K for ethanol; milder for 2° and 3° alcohols"
+equation: "CH3CH2OH ->[conc. H2SO4][443 K] CH2=CH2 + H2O"
+notesPages: [8, 17, 19, 26, 27, 30, 73]
+steps:
+  - title: "Protonation of the alcohol"
+    text: "An oxygen lone pair of ethanol takes H⁺ from concentrated H₂SO₄, giving CH₃CH₂–OH₂⁺. Water is now a good leaving group."
+    arrows: "Lone pair of the –OH oxygen → H⁺ of the acid."
+    species:
+      - smiles: "CCO"
+        label: "Ethanol"
+        highlight: "[OH]"
+      - smiles: "[H+]"
+        label: "Proton"
+      - smiles: "CC[OH2+]"
+        label: "Protonated ethanol"
+  - title: "Formation of the carbocation"
+    text: "Water leaves, giving the ethyl carbocation. NCERT treats this as the slowest, rate-determining step; university texts note that primary alcohols really react by E2, but exam answers use this NCERT path."
+    arrows: "C–O bond pair → oxygen as water departs."
+    species:
+      - smiles: "CC[OH2+]"
+        label: "Protonated ethanol"
+        highlight: "C[OH2+]"
+      - smiles: "C[CH2+]"
+        label: "Ethyl carbocation"
+      - smiles: "O"
+        label: "Water"
+  - title: "Loss of a β-proton"
+    text: "A base (HSO₄⁻ or water) removes H⁺ from the adjacent carbon to give the C=C bond of ethene, regenerating the acid. Ethene is removed as it forms at 443 K, pulling the equilibrium forward."
+    arrows: "Base lone pair → β-H; the C–H bond pair → C=C."
+    species:
+      - smiles: "C[CH2+]"
+        label: "Ethyl carbocation"
+        highlight: "[CH3][CH2+]"
+      - smiles: "OS(=O)(=O)[O-]"
+        label: "Hydrogen sulphate"
+      - smiles: "C=C"
+        label: "Ethene"
+memoryTricks: []
+faq:
+  - q: "What is the product of dehydration of ethanol with conc. H₂SO₄?"
+    a: "Ethene at 443 K (170 °C). At the lower temperature of 413 K (140 °C) with excess ethanol the main product is diethyl ether (ethoxyethane) instead."
+  - q: "Which alcohol dehydrates most easily?"
+    a: "Tertiary greater than secondary greater than primary. The order follows the stability of the carbocation formed, so tertiary alcohols dehydrate under the mildest conditions."
+  - q: "What is the rate-determining step in acid-catalysed dehydration of alcohols?"
+    a: "Formation of the carbocation from the protonated alcohol (loss of water). NCERT gives this as the slowest step for ethanol."
+  - q: "What is the major product of dehydration of butan-2-ol?"
+    a: "But-2-ene, mainly the trans (E) isomer, by Saytzeff's rule; but-1-ene is the minor product."
+  - q: "Why is POCl₃ in pyridine used instead of acid for some dehydrations?"
+    a: "It dehydrates 2° and 3° alcohols by an E2 path under mild, basic conditions, so no carbocation forms and no rearrangement occurs. Strong acid would give a carbocation that can rearrange."
+related: ["e1-reaction", "e2-reaction", "e1cb-mechanism", "pinacol-pinacolone-rearrangement", "williamson-ether-synthesis", "lucas-test"]
+sources:
+  - title: "Alcohols, Phenols and Ethers (Class XII Chemistry, Unit 7)"
+    url: "https://ncert.nic.in/textbook/pdf/lech202.pdf"
+    publisher: "NCERT"
+  - title: "14.4: Dehydration Reactions of Alcohols"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Map:_Organic_Chemistry_(Wade)_Complete_and_Semesters_I_and_II/Map:_Organic_Chemistry_(Wade)/14:_Reactions_of_Alcohols/14.04:_Dehydration_Reactions_of_Alcohols"
+    publisher: "LibreTexts (Wade, Organic Chemistry)"
+  - title: "Ethyl sulfate"
+    url: "https://en.wikipedia.org/wiki/Ethyl_sulfate"
+    publisher: "Wikipedia"
+  - title: "9.9: Carbocation Rearrangements"
+    url: "https://chem.libretexts.org/Courses/University_of_Illinois_Springfield/CHE_267:_Organic_Chemistry_I_(Morsch)/Chapters/Chapter_09:_Alcohols_Ethers_and_Epoxides/9.09:_Carbocation_Rearrangements"
+    publisher: "LibreTexts"
+  - title: "17.6: Reactions of Alcohols"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/17:_Alcohols_and_Phenols/17.06:_Reactions_of_Alcohols"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 5
+  note: "Notes give 160 °C for ethanol to ethene; NCERT gives 443 K (170 °C). Notes' 0 °C diethyl sulphate step and ThO₂/WO₂ (E1cB) route are not confirmed by the sources and are reduced or omitted."
+---
+
+## What is the dehydration of alcohols?
+
+**Dehydration of alcohols** is a β-elimination in which an alcohol loses a molecule of **water** (–OH from one carbon and H from the neighbouring carbon) to form an **alkene**. It is carried out by heating the alcohol with a protic acid such as **concentrated H₂SO₄ or H₃PO₄**, or over catalysts such as alumina or anhydrous ZnCl₂. Ethanol gives ethene when heated with concentrated sulphuric acid at **443 K**.
+
+## Mechanism (NCERT, for ethanol)
+
+1. **Protonation of the alcohol.** The oxygen lone pair takes H⁺ from the acid, giving CH₃CH₂–OH₂⁺. Water is now a good leaving group.
+2. **Formation of the carbocation.** Water leaves. NCERT treats this as the **slowest, rate-determining step**.
+3. **Loss of a β-proton.** A base (HSO₄⁻ or water) removes H⁺ from the adjacent carbon to give the C=C bond, and the acid is regenerated. Ethene is removed as it forms, pulling the equilibrium forward.
+
+<Eq ce="CH3CH2OH + H+ <=> CH3CH2OH2+ <=>[slow] CH3CH2+ + H2O" />
+<Eq ce="CH3CH2+ -> CH2=CH2 + H+" />
+
+<KeyPoint>
+Rate of dehydration depends on carbocation stability: **3° greater than 2° greater than 1°**. In textbooks, 1° alcohols need about 170–180 °C, 2° about 100–140 °C, and 3° only about 25–80 °C.
+</KeyPoint>
+
+**Exam convention versus lab detail.** NCERT writes the carbocation (E1) mechanism even for ethanol. University texts point out that a primary carbocation is too unstable, so **primary alcohols react by an E2 path** (loss of water and the β-H together), while **secondary and tertiary alcohols react by E1**. For JEE/NEET answers, write the NCERT three-step mechanism unless the question asks about E1/E2 specifically.
+
+## Effect of temperature: alkene or ether?
+
+With ethanol and concentrated H₂SO₄, temperature decides the product:
+
+| Conditions | Main product |
+|---|---|
+| Below about 140 °C (acid added slowly, cooled) | Ethyl hydrogen sulphate, CH₃CH₂OSO₃H |
+| 413 K (140 °C), excess ethanol | Diethyl ether (SN2 on the protonated alcohol) |
+| 443 K (170 °C), excess acid | Ethene (elimination) |
+
+At lower temperature a nucleophile (another alcohol molecule) captures the intermediate and substitution wins; at higher temperature elimination wins. Remember that concentrated H₂SO₄ plays three roles: acid, dehydrating agent and oxidising agent (sulphur +6 is reduced to SO₂, +4), so some oxidation side products can form. Dilute H₂SO₄ acts only as an acid.
+
+## Dehydration with POCl₃ in pyridine (E2)
+
+Acid is not the only way to remove water. **Phosphorus oxychloride (POCl₃) in pyridine** dehydrates 2° and 3° alcohols under mild, basic conditions (often at 0 °C):
+
+1. **Activation.** The alcohol oxygen attacks phosphorus and a chloride leaves, converting –OH (a poor leaving group) into a **dichlorophosphate, –OPOCl₂**, a good leaving group.
+2. **E2 elimination.** Pyridine, which is both solvent and base, removes a β-hydrogen while –OPOCl₂ departs in the same step, forming the C=C bond.
+
+<Eq ce="C6H11OH ->[POCl3][pyridine] C6H10" />
+
+Cyclohexanol gives cyclohexene this way. Because no carbocation forms, there are **no hydride or alkyl shifts**, which makes POCl₃/pyridine the reagent of choice when acid would cause rearrangement.
+
+## Examples
+
+**1. Butan-2-ol (Saytzeff rule).** Loss of H from C-3 gives but-2-ene (mostly *trans*), the major product; loss from C-1 gives but-1-ene (minor).
+
+<Eq ce="CH3CH(OH)CH2CH3 ->[conc. H2SO4][\Delta] CH3CH=CHCH3 (major) + CH2=CHCH2CH3 (minor)" />
+
+**2. 2-Methylbutan-2-ol (tertiary, E1).** The tertiary cation loses H from the CH₂ to give 2-methylbut-2-ene (major), with 2-methylbut-1-ene as the minor alkene.
+
+<Eq ce="(CH3)2C(OH)CH2CH3 ->[H3PO4][\Delta] (CH3)2C=CHCH3 + H2O" />
+
+**3. One alcohol, three products.** 1-Cyclopentylethanol gives a different alkene depending on the reagent:
+
+- **H⁺/Δ (conc. H₂SO₄ or H₃PO₄):** E1. The secondary cation next to the ring undergoes a ring-expanding alkyl shift (five-membered to six-membered ring), then a hydride shift gives the tertiary 1-methylcyclohexyl cation; loss of H⁺ gives **1-methylcyclohexene**.
+- **POCl₃/pyridine (E2, no carbocation):** no rearrangement; the more substituted alkene, **ethylidenecyclopentane**, forms.
+- **ThO₂/Δ:** thoria is reported to dehydrate 2-alkanols selectively to terminal alkenes, so this route gives **vinylcyclopentane** (Hofmann alkene).
+
+<Eq ce="CH3CH(OH)C5H9 ->[H+][\Delta] 1-methylcyclohexene + H2O" />
+
+<ExamTip>
+Acid plus heat means carbocation: always check for a hydride, alkyl or ring-expansion shift before choosing the alkene. POCl₃/pyridine means E2 and no rearrangement. The same acid conditions also isomerise a less substituted alkene into a more substituted one: methylenecyclohexane with H⁺/Δ gives 1-methylcyclohexene through the same tertiary cation.
+</ExamTip>
+
+## Limitations and exceptions
+
+- **Rearrangements** are common for 2° alcohols whose cation can shift to a more stable one.
+- **Ether formation** competes for 1° alcohols at lower temperatures; acid dehydration is not a good way to make ethers from 2° or 3° alcohols, since they give alkenes.
+- **Vicinal diols** do not simply lose water to an alkene; they undergo the [pinacol–pinacolone rearrangement](/reactions/pinacol-pinacolone-rearrangement/) to a ketone.
+- Unhindered 1° alcohols with POCl₃ partly give alkyl chlorides by SN2 instead of the alkene.
+
+## Related reactions
+
+- [E1 reaction](/reactions/e1-reaction/) and [E2 reaction](/reactions/e2-reaction/): the two mechanisms behind acid dehydration.
+- [E1cB mechanism](/reactions/e1cb-mechanism/): dehydration of β-hydroxy carbonyl compounds in base.
+- [Williamson ether synthesis](/reactions/williamson-ether-synthesis/): the better route to unsymmetrical ethers.
+- [Lucas test](/tests/lucas-test/): another reaction whose rate follows 3° greater than 2° greater than 1° carbocation stability.
+- [Elimination reactions hub](/mechanisms/elimination-reactions/).

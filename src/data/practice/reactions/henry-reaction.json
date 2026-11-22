@@ -1,0 +1,51 @@
+{
+ "page": "reactions/henry-reaction",
+ "questions": [
+  {
+   "q": "Acetaldehyde reacts with nitromethane in the presence of a catalytic amount of OH⁻ at room temperature. The product is:",
+   "smiles": "CC=O",
+   "options": [
+    "2-Nitropropan-1-ol",
+    "Nitroethene",
+    "1-Nitropropan-2-ol",
+    "3-Hydroxybutanal"
+   ],
+   "answer": 2,
+   "explain": "The nitronate carbon bonds to the carbonyl carbon and C=O becomes C–OH, giving CH₃CH(OH)CH₂NO₂, a β-nitro alcohol. 3-Hydroxybutanal would be the ordinary aldol product of acetaldehyde with itself."
+  },
+  {
+   "q": "Only a catalytic amount of a weak base is needed to deprotonate nitromethane in the Henry reaction because:",
+   "options": [
+    "the C–H next to –NO₂ has a pKa of about 9, as the nitronate charge is delocalised onto both nitro oxygens",
+    "nitromethane is a stronger acid than HCl",
+    "the nitro nitrogen carries a lone pair that takes up the proton",
+    "the base is regenerated only after dehydration"
+   ],
+   "answer": 0,
+   "explain": "A C–H next to a nitro group (pKa about 9) is far more acidic than an aldehyde α-H (about 17) or ketone α-H (about 20), because the nitronate ion is resonance-stabilised. OH⁻ is regenerated when the alkoxide is protonated."
+  },
+  {
+   "q": "Benzaldehyde and nitromethane are heated with excess base. The final product is:",
+   "smiles": "O=Cc1ccccc1",
+   "options": [
+    "C₆H₅CH(OH)CH₂NO₂",
+    "C₆H₅CH=CHNO₂",
+    "C₆H₅CH₂OH + HCOO⁻",
+    "C₆H₅COCH₂NO₂"
+   ],
+   "answer": 1,
+   "explain": "The β-nitro alcohol still has hydrogens on the nitro-bearing carbon, so heating or excess base removes water to give the conjugated nitroalkene, β-nitrostyrene."
+  },
+  {
+   "q": "The Henry product of acetaldehyde and nitromethane is reduced with H₂ over a catalyst. The product is:",
+   "options": [
+    "Propan-2-ol",
+    "Propan-1-amine",
+    "1-Nitropropan-2-one",
+    "1-Aminopropan-2-ol"
+   ],
+   "answer": 3,
+   "explain": "Reducing the –NO₂ group of a β-nitro alcohol gives a β-amino alcohol, here CH₃CH(OH)CH₂NH₂. Oxidising the OH instead would give the α-nitro ketone."
+  }
+ ]
+}

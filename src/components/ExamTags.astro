@@ -1,0 +1,6 @@
+---
+import { EXAMS, type ExamKey } from '../lib/site';
+interface Props { exams: ExamKey[] }
+const { exams } = Astro.props;
+---
+{exams.map((e) => <span class="tag">{EXAMS[e]}</span>)}

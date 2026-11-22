@@ -1,0 +1,110 @@
+---
+title: "Fittig Reaction"
+description: "Fittig reaction joins two aryl halides with sodium in dry ether to form a biaryl, e.g. chlorobenzene to biphenyl. Mechanism, examples and comparison with Wurtz."
+aliases: ["Fittig coupling", "Fitting reaction", "Fittig rxn", "Fittig synthesis of biphenyl"]
+kind: "named-reaction"
+family: "coupling-reactions"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "Chlorobenzene"
+  smiles: "Clc1ccccc1"
+product:
+  name: "Biphenyl"
+  smiles: "c1ccc(cc1)-c1ccccc1"
+byproducts: "NaX (here NaCl)"
+reagents: "Sodium metal (Na)"
+conditions: "Dry ether"
+equation: "2 C6H5Cl + 2 Na ->[dry ether] C6H5-C6H5 + 2 NaCl"
+notesPages: [9, 31]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Fittig reaction?"
+    a: "A biaryl, in which two aryl groups are joined directly. Chlorobenzene (or bromobenzene) with sodium in dry ether gives biphenyl, C6H5–C6H5."
+  - q: "What is the difference between the Wurtz and Fittig reactions?"
+    a: "Both use sodium in dry ether. Wurtz joins two alkyl halides to give an alkane, while Fittig joins two aryl halides to give a biaryl such as biphenyl."
+  - q: "What is the difference between the Fittig and Wurtz–Fittig reactions?"
+    a: "Fittig uses only aryl halides and gives Ar–Ar. Wurtz–Fittig uses a mixture of an aryl halide and an alkyl halide and gives an alkylbenzene Ar–R, such as toluene."
+  - q: "Which is more reactive, Wurtz or Fittig?"
+    a: "Alkyl halides react with sodium more readily than aryl halides, so the Wurtz reaction is faster. The aryl C–X bond has partial double bond character and is harder to break."
+related: ["wurtz-reaction", "wurtz-fittig-reaction", "ullmann-reaction", "nucleophilic-aromatic-substitution"]
+sources:
+  - title: "Chemistry Part II, Class XII, Unit 6: Haloalkanes and Haloarenes (reaction with metals)"
+    url: "https://ncert.nic.in/textbook/pdf/lech201.pdf"
+    publisher: "NCERT"
+  - title: "Wurtz–Fittig reaction"
+    url: "https://en.wikipedia.org/wiki/Wurtz%E2%80%93Fittig_reaction"
+    publisher: "Wikipedia"
+  - title: "Coupling reaction"
+    url: "https://en.wikipedia.org/wiki/Coupling_reaction"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 3
+---
+
+## What is the Fittig reaction?
+
+The **Fittig reaction** is the coupling of two molecules of an **aryl halide** with **sodium metal in dry ether**, giving a **biaryl** in which the two aryl groups are bonded directly. The standard example is **chlorobenzene → biphenyl**. NCERT describes it as the aryl analogue of the Wurtz reaction: aryl halides treated with sodium in dry ether give compounds in which two aryl groups are joined together. It is named after Wilhelm Rudolph Fittig.
+
+## General reaction
+
+<Eq ce="2 Ar-X + 2 Na ->[dry ether] Ar-Ar + 2 NaX" />
+
+Here Ar is an aryl group (phenyl in most exam questions) and X is Cl, Br or I.
+
+## Mechanism
+
+The Fittig reaction is explained in the same way as the Wurtz reaction. Modern studies have not settled the mechanism, so two pictures are taught.
+
+1. **Radical pathway.** Sodium transfers an electron to the aryl halide. The C–X bond breaks, giving an aryl radical (C₆H₅•) and X⁻. Two aryl radicals combine to give biphenyl. The formation of triphenylene when sodium reacts with chlorobenzene is evidence that radicals are involved.
+2. **Organosodium pathway.** Sodium converts one aryl halide into phenylsodium, C₆H₅⁻Na⁺. This carbanion-like species attacks a second aryl halide, displacing X⁻ and forming the Ar–Ar bond.
+
+<Eq ce="C6H5Cl + 2 Na -> C6H5^-Na+ + NaCl" />
+<Eq ce="C6H5^-Na+ + C6H5Cl -> C6H5-C6H5 + NaCl" />
+
+<KeyPoint>
+The aryl C–X bond is stronger than an alkyl C–X bond because of resonance (partial double bond character) and sp² carbon. That is why the order of reactivity is **Wurtz &gt; Fittig**.
+</KeyPoint>
+
+## Examples
+
+1. **Chlorobenzene to biphenyl:**
+
+<Eq ce="2 C6H5Cl + 2 Na ->[dry ether] C6H5-C6H5 + 2 NaCl" />
+
+2. **Bromobenzene to biphenyl**, the same coupling with a better leaving group:
+
+<Eq ce="2 C6H5Br + 2 Na ->[dry ether] C6H5-C6H5 + 2 NaBr" />
+
+3. **4-Bromotoluene to 4,4′-dimethylbiphenyl**, showing that substituents on the ring stay in place and the new bond forms where the halogen was:
+
+<Eq ce="2 CH3C6H4Br + 2 Na ->[dry ether] CH3C6H4-C6H4CH3 + 2 NaBr" />
+
+## Fittig vs Wurtz vs Wurtz–Fittig
+
+| Reaction | Halides used | Metal / solvent | Product |
+|---|---|---|---|
+| Wurtz | 2 R–X (alkyl) | Na / dry ether | R–R (alkane) |
+| Fittig | 2 Ar–X (aryl) | Na / dry ether | Ar–Ar (biaryl) |
+| Wurtz–Fittig | Ar–X + R–X | Na / dry ether | Ar–R (alkylarene) |
+
+<ExamTip>
+Read the starting materials first: only aryl halides means Fittig, only alkyl halides means Wurtz, one of each means Wurtz–Fittig. All three use the same reagent, Na in dry ether, so the reagent alone does not tell you the name.
+</ExamTip>
+
+## Limitations and exceptions
+
+- **For JEE/NEET**, the Fittig reaction is written simply as chlorobenzene + Na/dry ether → biphenyl.
+- **In practice**, yields are poor and side products form (for example triphenylene from chlorobenzene). Coupling of aryl halides with sodium works better under ultrasound, and real biaryl syntheses use copper (Ullmann) or palladium catalysts instead.
+- Groups that react with sodium (OH, NO₂, C=O) cannot be present on the ring.
+- Two different aryl halides would give a mixture of three biaryls, so the method is used for symmetrical biaryls only.
+
+## Related reactions
+
+- [Wurtz reaction](/reactions/wurtz-reaction/): the alkyl version, R–X + Na → R–R.
+- [Wurtz–Fittig reaction](/reactions/wurtz-fittig-reaction/): mixed aryl and alkyl halides give alkylbenzenes.
+- [Ullmann reaction](/reactions/ullmann-reaction/): biphenyl from iodobenzene and copper, the better lab route to biaryls.
+- [Nucleophilic aromatic substitution](/reactions/nucleophilic-aromatic-substitution/): why aryl halides are unreactive towards ordinary substitution.
+- Hub: [Coupling reactions](/mechanisms/coupling-reactions/)

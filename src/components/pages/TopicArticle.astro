@@ -1,0 +1,179 @@
+---
+/** Page template for concepts, comparisons, preparation methods and reagents. */
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import Eq from '../Eq.astro';
+import Mol from '../Mol.astro';
+import KeyPoint from '../KeyPoint.astro';
+import Trick from '../Trick.astro';
+import ExamTip from '../ExamTip.astro';
+import ExamTags from '../ExamTags.astro';
+import References from '../References.astro';
+import ReportError from '../ReportError.astro';
+import Byline from '../Byline.astro';
+import LibgenCard from '../LibgenCard.astro';
+import SaveButton from '../SaveButton.astro';
+import Practice from '../Practice.astro';
+import { practiceFor } from '../../lib/practice';
+import { url, absUrl, EXAMS } from '../../lib/site';
+import { SECTIONS, resolveRelated, hindiPages, localiseRef, type TopicKey } from '../../lib/sections';
+import { t as tr, type Lang } from '../../lib/i18n';
+import { questionsFor, paperTitle, questionHref } from '../../lib/pyq';
+import { audienceLd, breadcrumbLd, faqLd, orgLd, personLd } from '../../lib/seo';
+
+interface Props {
+  entry: CollectionEntry<TopicKey>;
+  section: TopicKey;
+  /** Render the Hindi version of the page. */
+  lang?: Lang;
+}
+
+const { entry, section, lang = 'en' } = Astro.props;
+const s = tr(lang);
+const info = SECTIONS[section];
+const hiEntry = (await hindiPages()).get(`${section}/${entry.id}`);
+const hi = lang === 'hi' ? hiEntry : undefined;
+const enPath = `${info.path}${entry.id}/`;
+const path = lang === 'hi' ? `hi/${enPath}` : enPath;
+const altPath = lang === 'hi' ? enPath : hiEntry ? `hi/${enPath}` : undefined;
+const d = {
+  ...entry.data,
+  ...(hi && {
+    title: hi.data.title,
+    description: hi.data.description,
+    aliases: hi.data.aliases.length ? hi.data.aliases : entry.data.aliases,
+    memoryTricks: hi.data.memoryTricks ?? entry.data.memoryTricks,
+    faq: hi.data.faq,
+  }),
+};
+const { Content } = await render(hi ?? entry);
+const family = d.family ? (await getCollection('mechanisms')).find((m) => m.id === d.family) : undefined;
+
+// Related: explicit list, then other pages of the same category in this section.
+const related = await resolveRelated(d.related, section);
+if (related.length < 6) {
+  const same = (await getCollection(section)).filter((e) => e.id !== entry.id && e.data.category === d.category).map((e) => `${section}/${e.id}`);
+  for (const r of await resolveRelated(same)) {
+    if (related.length >= 8) break;
+    if (!related.some((x) => x.section === r.section && x.id === r.id)) related.push(r);
+  }
+}
+
+const titleOptions: Record<TopicKey, string[]> = {
+  concepts: [`${d.title}: Explanation, Examples & Exam Tips`, `${d.title}: Explanation & Examples`, `${d.title} Explained`, d.title],
+  comparisons: [`${d.title}: Order, Reasons & Examples`, `${d.title}: Order & Reasons`, d.title],
+  preparation: [`${d.title}: Methods, Reagents & Examples`, `${d.title}: Methods & Reagents`, d.title],
+  reagents: [`${d.title}: Uses, Reactions & Mechanism`, `${d.title}: Uses & Reactions`, `${d.title} Reagent`, d.title],
+};
+const pageTitle = lang === 'hi' ? [d.title, `${entry.data.title} हिंदी में`, entry.data.title].find((t) => t.length <= 65) ?? entry.data.title : titleOptions[section].find((t) => t.length <= 65) ?? d.title;
+const relatedLocal = await Promise.all(related.map((r) => localiseRef(r, lang)));
+
+const crumbs = [{ label: info.label, href: url(info.path) }, { label: d.title }];
+const jsonLd = [
+  {
+    '@type': ['Article', 'LearningResource'],
+    '@id': absUrl(`${path}#article`),
+    headline: d.title,
+    name: d.title,
+    alternateName: d.aliases,
+    description: d.description,
+    url: absUrl(path),
+    inLanguage: lang === 'hi' ? 'hi-IN' : 'en-IN',
+    ...(lang === 'hi' && { translationOfWork: { '@id': absUrl(`${enPath}#article`) } }),
+    image: absUrl('og-image.png'),
+    author: personLd(),
+    publisher: orgLd(),
+    dateModified: d.verified.checked.toISOString().slice(0, 10),
+    isAccessibleForFree: true,
+    learningResourceType: section === 'comparisons' ? 'Comparison' : section === 'reagents' ? 'Reference' : 'Concept explanation',
+    educationalLevel: 'Class 11–12, competitive entrance exams',
+    audience: audienceLd,
+    teaches: d.title,
+    about: [{ '@type': 'Thing', name: d.title }, ...d.exams.map((e) => ({ '@type': 'Thing', name: EXAMS[e] }))],
+    citation: d.sources.map((s) => ({ '@type': 'CreativeWork', name: s.title, url: s.url })),
+  },
+  breadcrumbLd([{ name: info.label, path: info.path }, { name: d.title, path }]),
+  faqLd(d.faq, path),
+].filter(Boolean) as Record<string, unknown>[];
+const pyqs = questionsFor(`${section}/${entry.id}`);
+const practice = lang === 'hi' ? [] : practiceFor(`${section}/${entry.id}`);
+---
+<Base title={pageTitle} description={d.description} path={path} altPath={altPath} ogType="article" jsonLd={jsonLd} section={section}>
+  <div class="container page">
+    <Breadcrumbs items={crumbs} />
+    <header class="page-head">
+      <h1>{d.title}{d.formula && d.formula !== d.title && <span class="formula"> ({d.formula})</span>}</h1>
+      {d.aliases.length > 0 && <p class="aka">{s.alsoCalled}: {d.aliases.join(', ')}</p>}
+      <div class="meta-row">
+        <ExamTags exams={d.exams} />
+        {d.verified.status === 'verified' && <span class="tag tag-ok">✓ {s.verifiedAgainst(d.sources.length)}</span>}
+        {d.verified.status === 'conflict' && <span class="tag tag-warn">{s.underReview}</span>}
+        <SaveButton path={path} title={d.title} />
+      </div>
+      <p class="summary">{d.description}</p>
+    </header>
+
+    <div class="layout">
+      <article class="prose">
+        {d.molecule?.smiles && <div class="scheme"><Mol smiles={d.molecule.smiles} name={d.molecule.name} /></div>}
+        <Content components={{ Eq, Mol, KeyPoint, Trick, ExamTip }} />
+
+        {d.memoryTricks.length > 0 && (
+          <Trick>
+            <ul>
+              {d.memoryTricks.map((t) => <li><strong>{t.text}</strong>{t.meaning && <> ({t.meaning})</>}</li>)}
+            </ul>
+          </Trick>
+        )}
+
+        <Practice questions={practice} id="practice" />
+
+        {d.faq.length > 0 && (
+          <section id="faq" aria-labelledby="faq-h">
+            <h2 id="faq-h">{s.faq}</h2>
+            <div class="faq">
+              {d.faq.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}
+            </div>
+          </section>
+        )}
+
+        <References sources={d.sources} checked={d.verified.checked} status={d.verified.status} />
+        <Byline notesPages={d.notesPages} updated={d.verified.checked} />
+        <p><ReportError path={path} title={d.title} /></p>
+        <LibgenCard />
+      </article>
+
+      <aside class="side">
+        {pyqs.length > 0 && (
+          <div class="side-card">
+            <h2>{s.pyqTitle}</h2>
+            <ul>
+              {pyqs.slice(0, 8).map(({ paper, q }) => <li><a href={questionHref(paper, q)}>{paperTitle(paper)}, Q.{q.number}</a></li>)}
+            </ul>
+          </div>
+        )}
+        {family && (
+          <div class="side-card">
+            <h2>{s.partOf}</h2>
+            <ul><li><a href={url(`mechanisms/${family.id}/`)}>{family.data.title}</a></li></ul>
+          </div>
+        )}
+        {relatedLocal.length > 0 && (
+          <div class="side-card">
+            <h2>{s.relatedPages}</h2>
+            <ul>{relatedLocal.map((r) => <li><a href={r.href}>{r.title}</a></li>)}</ul>
+          </div>
+        )}
+        <div class="side-card">
+          <h2>{s.explore}</h2>
+          <ul>
+            <li><a href={url(info.path)}>{s.allOf(info.label)}</a></li>
+            <li><a href={url('reactions/')}>{s.reactionsAZ}</a></li>
+            <li><a href={url('map/')}>{s.interactiveMap}</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</Base>

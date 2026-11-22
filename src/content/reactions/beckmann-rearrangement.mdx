@@ -1,0 +1,145 @@
+---
+title: "Beckmann Rearrangement"
+description: "Beckmann rearrangement: acid (H₂SO₄ or PCl₅) turns a ketoxime into an N-substituted amide; the group anti to OH migrates. Cyclohexanone oxime gives caprolactam."
+aliases: ["Backmann rearrangement", "Beckman rearrangement", "Oxime to amide rearrangement", "Beckmann reaction"]
+kind: "rearrangement"
+family: "rearrangement-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["beckmann_rearrangement"]
+reactant:
+  name: "Cyclohexanone oxime"
+  smiles: "ON=C1CCCCC1"
+product:
+  name: "ε-Caprolactam (azepan-2-one)"
+  smiles: "O=C1CCCCCN1"
+reagents: "H⁺ (conc. H₂SO₄, polyphosphoric acid) or PCl₅, SOCl₂, TsCl"
+conditions: "Heat (Δ)"
+equation: "R1R2C=N-OH ->[H+ \\text{or Lewis acid}][\\Delta] R1-CO-NH-R2"
+notesPages: [14]
+steps:
+  - title: "Activation of the oxime OH"
+    text: "Acid protonates the OH of cyclohexanone oxime (or PCl₅/TsCl converts it into a better leaving group), so it can leave as water."
+    arrows: "A lone pair on the oxime oxygen → H⁺."
+    species:
+      - smiles: "ON=C1CCCCC1"
+        label: "Cyclohexanone oxime"
+        highlight: "[OH]N"
+      - smiles: "[H+]"
+        label: "H⁺ (conc. H₂SO₄)"
+      - smiles: "[OH2+]N=C1CCCCC1"
+        label: "Protonated oxime"
+  - title: "Concerted anti migration"
+    text: "The ring carbon anti-periplanar to the leaving group moves from carbon to nitrogen at the same moment as the N–O bond breaks. No free nitrene forms; the product is a ring-expanded nitrilium ion."
+    arrows: "The C–C bond pair anti to N–O shifts to N as the N–O bond pair leaves with H₂O."
+    species:
+      - smiles: "[OH2+]N=C1CCCCC1"
+        label: "Protonated oxime"
+        highlight: "[CH2]C=N[OH2+]"
+      - smiles: "[N+]1#CCCCCC1"
+        label: "Cyclic nitrilium ion"
+        highlight: "[N+]#C"
+      - smiles: "O"
+        label: "Water"
+  - title: "Attack of water"
+    text: "Water adds to the nitrilium carbon and loss of H⁺ gives the imidic acid (iminol), with the OH on carbon and C=N in the seven-membered ring."
+    arrows: "Water O lone pair → nitrilium carbon; one C≡N π pair → nitrogen; then O–H pair → O as H⁺ is lost."
+    species:
+      - smiles: "[N+]1#CCCCCC1"
+        label: "Nitrilium ion"
+        highlight: "[N+]#C"
+      - smiles: "O"
+        label: "Water"
+      - smiles: "OC1=NCCCCC1"
+        label: "Imidic acid (iminol)"
+  - title: "Tautomerisation to the lactam"
+    text: "The iminol tautomerises to the stable amide. For cyclohexanone oxime the product is ε-caprolactam, the monomer of nylon-6."
+    arrows: "Net proton shift from O to N: the O–H pair forms C=O and the C=N π pair picks up H on nitrogen."
+    species:
+      - smiles: "OC1=NCCCCC1"
+        label: "Iminol"
+        highlight: "[OH]C=N"
+      - smiles: "O=C1CCCCCN1"
+        label: "ε-Caprolactam"
+        highlight: "O=CN"
+memoryTricks: []
+faq:
+  - q: "Which group migrates in the Beckmann rearrangement?"
+    a: "The group anti (trans) to the OH on nitrogen. It moves to nitrogen as water leaves, so the product amide has that group on nitrogen and the other group on the carbonyl carbon."
+  - q: "What is the product of the Beckmann rearrangement of cyclohexanone oxime?"
+    a: "ε-Caprolactam, a seven-membered cyclic amide. It is polymerised to nylon-6, which is the main industrial use of the reaction."
+  - q: "What does acetophenone oxime give in the Beckmann rearrangement?"
+    a: "The usual (E) oxime has phenyl anti to OH, so phenyl migrates and the product is acetanilide, CH₃CONHC₆H₅."
+  - q: "Is a nitrene formed in the Beckmann rearrangement?"
+    a: "No. The N–O bond breaks at the same time as the anti group migrates, giving a nitrilium ion directly; a free nitrene is not involved."
+  - q: "What is the difference between Beckmann and Hofmann rearrangement?"
+    a: "Beckmann converts an oxime into an amide with the same number of carbons. Hofmann converts a primary amide into a primary amine with one carbon fewer."
+related: ["hofmann-bromamide-degradation", "schmidt-reaction", "baeyer-villiger-oxidation", "pinacol-pinacolone-rearrangement"]
+sources:
+  - title: "Beckmann rearrangement"
+    url: "https://en.wikipedia.org/wiki/Beckmann_rearrangement"
+    publisher: "Wikipedia"
+  - title: "Beckmann Rearrangement"
+    url: "https://www.organic-chemistry.org/namedreactions/beckmann-rearrangement.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "30.8: Rearrangements of Cationic or Electron Deficient Nitrogen (Virtual Textbook of Organic Chemistry, Reusch)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Book:_Virtual_Textbook_of_OChem_(Reusch)_UNDER_CONSTRUCTION/30:_Cationic_Rearrangements/30.8:_Rearrangements_of_Cationic_or_Electron_Deficient_Nitrogen"
+    publisher: "LibreTexts"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 3
+---
+
+## What is the Beckmann rearrangement?
+
+The **Beckmann rearrangement** is the acid-promoted conversion of a **ketoxime (R₁R₂C=N–OH) into an N-substituted amide (R₁–CO–NH–R₂)**. It is carried out with a protic acid such as concentrated H₂SO₄ or polyphosphoric acid, or with reagents such as PCl₅, SOCl₂ or TsCl, usually on heating. The group **anti to the OH** moves from carbon to nitrogen. Cyclic ketoximes give **lactams**; cyclohexanone oxime gives ε-caprolactam, the monomer of nylon-6. The reaction is named after Ernst Otto Beckmann (1886).
+
+## Mechanism
+
+1. **Activation of OH.** The acid protonates the oxime OH (or PCl₅/TsCl converts it into a better leaving group), so it can leave as water.
+2. **Concerted anti migration.** The group anti-periplanar to the leaving group moves from carbon to nitrogen **at the same moment** as the N–O bond breaks. No free nitrene forms. The product is a **nitrilium ion**, R₁–C≡N⁺–R₂.
+3. **Attack of water.** Water adds to the nitrilium carbon; loss of H⁺ gives an imidic acid (iminol), R₁–C(OH)=N–R₂.
+4. **Tautomerisation.** The iminol tautomerises to the stable amide R₁–CO–NH–R₂.
+
+<Eq ce="R1R2C=N-OH ->[H+] R1R2C=N-OH2+ ->[-H2O][\text{anti }R2\text{ shift}] R1-C#N+-R2 ->[H2O][-H+] R1-C(OH)=N-R2 -> R1-CO-NH-R2" />
+
+<KeyPoint>
+The rearrangement is **stereospecific**: the group anti to the leaving OH always migrates, and it keeps its own configuration. Because the shift happens as the N–O bond breaks, oxime geometry (E or Z), not migratory aptitude, decides the product.
+</KeyPoint>
+
+## Why the anti group migrates
+
+Oximes do not easily flip between their E and Z forms because the C=N bond has a high barrier to inversion. The migrating bond must line up behind the departing N–O bond (anti-periplanar), just as in a backside attack, so only the group trans to OH is in the right position. This is why an unsymmetrical ketone can give two different amides, one from each oxime isomer.
+
+## Examples
+
+1. **Cyclohexanone oxime → ε-caprolactam (nylon-6 monomer):** a ring carbon migrates, so the ring grows from six to seven atoms with N inside it. Industrially, conc. H₂SO₄ (oleum) is used and the acid is later neutralised with ammonia, giving ammonium sulphate as a by-product.
+
+<Eq ce="\text{cyclohexanone oxime} ->[conc. H2SO4][\Delta] \text{ε-caprolactam}" />
+
+2. **Acetophenone oxime → acetanilide:** in the usual (E) oxime the phenyl group is anti to OH, so phenyl moves to nitrogen.
+
+<Eq ce="C6H5C(CH3)=N-OH ->[H+][\Delta] CH3-CO-NH-C6H5" />
+
+3. **Benzophenone oxime → benzanilide:**
+
+<Eq ce="(C6H5)2C=N-OH ->[PCl5] C6H5-CO-NH-C6H5" />
+
+<ExamTip>
+Draw the oxime with its geometry, find the group trans to OH, and put that group on nitrogen. The other group stays on the carbonyl carbon. For a cyclic ketoxime, insert NH into the ring next to C=O to get the lactam.
+</ExamTip>
+
+## Limitations and exceptions
+
+- **Oxime isomerisation:** some acidic conditions interconvert the E and Z oximes, so both possible amides form.
+- **Aldoximes** (RCH=NOH) seldom give clean primary amides; fragmentation to the nitrile commonly competes.
+- **Beckmann fragmentation:** if the group α to the oxime carbon can stabilise a carbocation (for example a quaternary carbon or a carbon next to O or N), the molecule splits into a nitrile and a carbocation instead of rearranging.
+- The nitrilium ion can be trapped by nucleophiles other than water.
+
+## Related reactions
+
+- [Hofmann bromamide degradation](/reactions/hofmann-bromamide-degradation/): also a carbon-to-nitrogen shift onto electron-poor nitrogen, but it ends in an amine with one carbon fewer.
+- [Schmidt reaction](/reactions/schmidt-reaction/): ketones with HN₃ and acid give the same amides by a Beckmann-like shift.
+- [Baeyer–Villiger oxidation](/reactions/baeyer-villiger-oxidation/): the oxygen analogue, inserting O instead of NH next to the carbonyl.
+- [Pinacol–pinacolone rearrangement](/reactions/pinacol-pinacolone-rearrangement/)
+- [Rearrangement reactions hub](/mechanisms/rearrangement-reactions/)

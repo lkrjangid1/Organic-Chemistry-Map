@@ -1,0 +1,87 @@
+---
+title: "Oppenauer Oxidation (ओपेनाउअर ऑक्सीकरण)"
+description: "Oppenauer oxidation में aluminium tert-butoxide या isopropoxide और excess acetone से secondary alcohol, ketone बनता है। Mechanism, examples और MPV से संबंध।"
+aliases: ["ओपेनाउअर ऑक्सीकरण", "ओपेनाउअर ऑक्सीडेशन", "oppenauer oxidation hindi", "oppenauer reaction hindi", "aluminium tert-butoxide oxidation hindi", "reverse mpv reduction hindi", "secondary alcohol se ketone"]
+reagents: "Aluminium tert-butoxide, Al(OC(CH₃)₃)₃, या aluminium isopropoxide, hydride acceptor के रूप में excess acetone के साथ"
+conditions: "Acetone या acetone–benzene में गर्म करना; anhydrous"
+byproducts: "Propan-2-ol (hydride acceptor acetone से)"
+reactantName: "Cyclohexanol"
+productName: "Cyclohexanone"
+faq:
+  - q: "Oppenauer oxidation में कौन-सा reagent इस्तेमाल होता है?"
+    a: "एक aluminium alkoxide, classically aluminium tert-butoxide (Oppenauer का original reagent) या aluminium isopropoxide, साथ में बहुत ज़्यादा excess acetone, जो hydride लेकर propan-2-ol में reduce हो जाता है।"
+  - q: "Oppenauer oxidation में excess acetone क्यों लिया जाता है?"
+    a: "यह reaction alcohol और acetone के बीच एक reversible hydride transfer है। Acetone की बड़ी excess equilibrium को ketone product की ओर धकेलती है।"
+  - q: "Oppenauer oxidation और MPV reduction में क्या संबंध है?"
+    a: "ये एक ही aluminium-catalysed equilibrium हैं जो उल्टी दिशाओं में चलाए जाते हैं। Excess acetone alcohol को ketone की ओर ले जाता है (Oppenauer); excess propan-2-ol ketone को alcohol की ओर ले जाता है (Meerwein–Ponndorf–Verley reduction)।"
+  - q: "क्या Oppenauer oxidation C=C double bonds पर असर डालता है?"
+    a: "नहीं। सिर्फ़ alcohol group oxidise होता है; double bonds, amines और sulfides पर attack नहीं होता, इसीलिए यह तरीका cholesterol और pregnenolone जैसे steroids पर इस्तेमाल होता है।"
+  - q: "Primary alcohols को Oppenauer method से कम ही oxidise क्यों किया जाता है?"
+    a: "बने हुए aldehydes aluminium alkoxide के साथ base-catalysed aldol condensation (या Tishchenko reaction) कर लेते हैं, इसलिए यह तरीका मुख्य रूप से secondary alcohols के लिए इस्तेमाल होता है।"
+translated: 2026-11-22
+---
+
+## Oppenauer oxidation क्या है?
+
+**Oppenauer oxidation** **secondary alcohol को ketone** में oxidise करने का एक gentle तरीका है, जिसमें **aluminium alkoxide**, classically **aluminium tert-butoxide**, Al(OC(CH₃)₃)₃, या **aluminium isopropoxide**, **acetone की बड़ी excess** की उपस्थिति में इस्तेमाल होता है। Acetone hydride acceptor का काम करता है और propan-2-ol में reduce हो जाता है। यह reaction **Meerwein–Ponndorf–Verley (MPV) reduction** का उल्टा है और इसे R. V. Oppenauer ने 1937 में steroid ketones के लिए introduce किया था।
+
+## General reaction
+
+<Eq ce="R2CH-OH + (CH3)2C=O <=>[Al(OCMe3)3] R2C=O + (CH3)2CH-OH" />
+
+Alcohol oxidise होता है और acetone reduce होता है; aluminium दोनों के बीच hydride को पहुँचाता है। सभी steps reversible हैं, इसलिए equilibrium को दाईं ओर ले जाने के लिए excess acetone लिया जाता है।
+
+<KeyPoint>
+Oppenauer oxidation सिर्फ़ alcohol group पर काम करता है (केवल alcohol को ऑक्सीकृत करता है)। C=C bonds, amines और sulfides बचे रहते हैं, और carboxylic acids तक over-oxidation नहीं होता।
+</KeyPoint>
+
+## Mechanism
+
+1. **Alkoxide exchange।** Substrate alcohol aluminium से जुड़कर अपना proton खोता है, जिससे substrate का aluminium alkoxide, R₂CH–O–Al, बनता है और tert-butanol निकलता है।
+2. **Acetone का coordination।** Acetone अपने carbonyl oxygen से उसी aluminium पर coordinate होता है, जिससे उसका carbonyl carbon ज़्यादा electrophilic हो जाता है।
+3. **Hydride shift।** Carbinol carbon का hydrogen hydride के रूप में acetone के carbonyl carbon पर एक **six-membered cyclic transition state** (Al, दो O, दो C और H) से shift होता है।
+4. **Release।** नया ketone, R₂C=O, निकल जाता है; acetone अब aluminium पर isopropoxide बन चुका है, जो और substrate alcohol से exchange होकर cycle जारी रखता है।
+
+<Eq ce="R2CH-O-Al + (CH3)2C=O -> R2C=O + (CH3)2CH-O-Al" />
+
+## Examples
+
+**1. Cyclohexanol से cyclohexanone।**
+
+<Eq ce="C6H11OH + (CH3)2CO ->[Al(OCMe3)3][\Delta] C6H10O + (CH3)2CHOH" />
+
+**2. Butan-2-ol से butan-2-one।** कोई भी simple secondary alcohol इसी तरह व्यवहार करता है (propan-2-ol से बस acetone बनेगा, जो acceptor वाला ही compound है):
+
+<Eq ce="CH3CH(OH)CH2CH3 ->[Al(OCMe3)3, acetone] CH3COCH2CH3" />
+
+**3. Steroids।** Pregnenolone oxidise होकर **progesterone** बनता है: 3-OH ketone बन जाता है और बगल वाला C=C खिसककर उससे conjugation में आ जाता है, जिससे α,β-unsaturated ketone मिलता है। इसी तरह codeine, codeinone में बदलता है।
+
+<ExamTip>
+अगर exam question में secondary alcohol के साथ "Al(O-t-Bu)₃, acetone" (या "Al(OiPr)₃, acetone") दिखे, तो ketone लिखें और हर C=C को वैसा ही रहने दें। अगर reagent ketone के साथ "Al(OiPr)₃, propan-2-ol" है, तो यह उल्टी reaction, MPV reduction, है।
+</ExamTip>
+
+## Oppenauer oxidation vs MPV reduction
+
+| Feature | Oppenauer oxidation | MPV reduction |
+|---|---|---|
+| Substrate | 2° alcohol | aldehyde या ketone |
+| Product | ketone | alcohol |
+| Excess reagent | acetone (hydride acceptor) | propan-2-ol (hydride donor) |
+| Catalyst | Al(OtBu)₃ या Al(OiPr)₃ | Al(OiPr)₃ |
+| Key step | six-membered transition state से hydride transfer | वही |
+
+## Limitations और exceptions
+
+- **Primary alcohols** react करते हैं, लेकिन बने हुए aldehydes basic alkoxide conditions में **aldol condensation** कर लेते हैं, इसलिए यह तरीका मुख्य रूप से secondary alcohols के लिए है। α-H रहित aldehydes इसकी जगह Tishchenko reaction से esters दे सकते हैं।
+- **Allylic alcohols** में double bond खिसककर नए ketone से conjugation में आ सकता है।
+- **Tertiary alcohols** के carbinol carbon पर कोई hydrogen नहीं होता, इसलिए वे oxidise नहीं होते।
+- Lewis-basic nitrogen वाले substrates aluminium को बाँध सकते हैं; Woodward modification में इसकी जगह potassium tert-butoxide और benzophenone इस्तेमाल होते हैं।
+- Secondary alcohols, primary alcohols से तेज़ react करते हैं, इसलिए कुछ chemoselectivity संभव है।
+
+## Related reactions
+
+- [Meerwein–Ponndorf–Verley reduction](/hi/reactions/meerwein-ponndorf-verley-reduction/): उल्टी, aluminium-catalysed ketone reduction।
+- [Tishchenko reaction](/hi/reactions/tishchenko-reaction/): aluminium alkoxide से aldehyde का ester में बदलना।
+- [Aldol condensation](/hi/reactions/aldol-condensation/): primary alcohols के साथ main side reaction।
+- [Pyridinium chlorochromate (PCC)](/hi/reagents/pyridinium-chlorochromate/) और [Jones reagent](/hi/reagents/jones-reagent/): chromium(VI) वाले विकल्प।
+- Overview: [Oxidation reactions](/hi/mechanisms/oxidation-reactions/)।

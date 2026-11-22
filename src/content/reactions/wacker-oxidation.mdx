@@ -1,0 +1,115 @@
+---
+title: "Wacker Oxidation"
+description: "Wacker oxidation converts an alkene into a carbonyl compound with PdCl₂, CuCl₂, H₂O and O₂: ethene gives acetaldehyde and propene gives acetone (Markovnikov)."
+aliases: ["Wacker process", "Hoechst–Wacker process", "Wacker–Tsuji oxidation", "Tsuji–Wacker oxidation", "PdCl2 CuCl2 oxidation of alkenes"]
+kind: "named-reaction"
+family: "oxidation-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["wacker_oxidation"]
+reactant:
+  name: "Propene"
+  smiles: "CC=C"
+product:
+  name: "Acetone (propanone)"
+  smiles: "CC(C)=O"
+byproducts: "None net (HCl and CuCl are recycled); Pd(0) if Cu(II) is absent"
+reagents: "PdCl₂ (catalytic), CuCl₂ (co-catalyst), H₂O, O₂ or air"
+conditions: "Aqueous acidic chloride solution (or aqueous DMF in the lab), about 100–130 °C industrially, room temperature to 50 °C in the lab"
+equation: "CH3-CH=CH2 + 1/2O2 ->[PdCl2, CuCl2][H2O] CH3-CO-CH3"
+notesPages: [76]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Wacker oxidation of ethene?"
+    a: "Acetaldehyde (ethanal). Ethene, oxygen and water react over aqueous PdCl₂ and CuCl₂; this is the industrial Wacker (Hoechst–Wacker) process."
+  - q: "What is the product of the Wacker oxidation of propene?"
+    a: "Acetone. Terminal alkenes give methyl ketones because the oxygen goes to the more substituted carbon (Markovnikov orientation), so propene gives propanone, not propanal."
+  - q: "What is the role of CuCl₂ in the Wacker process?"
+    a: "PdCl₂ is reduced to Pd metal when it oxidises the alkene. CuCl₂ re-oxidises Pd(0) back to Pd(II) and is itself reduced to CuCl, which oxygen then converts back to CuCl₂. So only the alkene and O₂ are consumed."
+  - q: "Does the Wacker oxidation involve a carbocation rearrangement?"
+    a: "No. The oxygen is delivered to a palladium-bound alkene, not to a free carbocation, so no hydride or alkyl shifts take place and the carbon skeleton is unchanged."
+  - q: "Is there an enol intermediate in the Wacker oxidation?"
+    a: "No free enol is formed. Labelling experiments show that ethene in D₂O gives ordinary CH₃CHO with no deuterium, which rules out keto–enol tautomerisation as a step."
+related: ["ozonolysis", "kucherov-reaction", "oxymercuration-demercuration", "hydroboration-oxidation", "markovnikov-rule"]
+sources:
+  - title: "Wacker process"
+    url: "https://en.wikipedia.org/wiki/Wacker_process"
+    publisher: "Wikipedia"
+  - title: "Wacker-Tsuji Oxidation"
+    url: "https://www.organic-chemistry.org/namedreactions/wacker-tsuji-oxidation.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 2
+  note: "Notes draw the enol CH₂=C(OH)CH₃ as an intermediate before acetone; Wikipedia cites labelling evidence that keto–enol tautomerisation is not a step. Page follows the sources."
+---
+
+## What is the Wacker oxidation?
+
+The **Wacker oxidation** converts an **alkene into an aldehyde or ketone** using **palladium(II) chloride** as catalyst, **copper(II) chloride** as co-catalyst, **water** as the source of the oxygen atom and **O₂ (air)** as the final oxidant. Ethene gives **acetaldehyde** (the industrial **Wacker** or Hoechst–Wacker process), and terminal alkenes such as propene give **methyl ketones** (the laboratory **Wacker–Tsuji oxidation**). The carbon skeleton does not rearrange.
+
+## General reaction
+
+<Eq ce="CH2=CH2 + 1/2O2 ->[PdCl2, CuCl2][H2O] CH3CHO" />
+
+<Eq ce="R-CH=CH2 + 1/2O2 ->[PdCl2, CuCl2][H2O] R-CO-CH3" />
+
+## Mechanism and the role of copper
+
+The reaction is best understood as three linked redox steps.
+
+1. **Alkene oxidation by Pd(II).** The alkene binds to palladium as a π-complex. Water attacks the coordinated alkene (**hydroxypalladation**), placing OH on one carbon and Pd on the other. For a terminal alkene, the OH goes to the **more substituted carbon**.
+2. **β-Hydride elimination.** A hydrogen moves from carbon to palladium and a palladium-bound C=O is formed; release of the carbonyl compound and HCl leaves **Pd(0)**.
+
+<Eq ce="[PdCl4]^2- + C2H4 + H2O -> CH3CHO + Pd + 2HCl + 2Cl-" />
+
+3. **Re-oxidation of palladium by copper(II).** Without this step, Pd metal would precipitate after one turnover.
+
+<Eq ce="Pd + 2CuCl2 + 2Cl- -> [PdCl4]^2- + 2CuCl" />
+
+4. **Re-oxidation of copper by oxygen.**
+
+<Eq ce="2CuCl + 1/2O2 + 2HCl -> 2CuCl2 + H2O" />
+
+Adding the steps, only the alkene and oxygen are consumed: Pd and Cu are both catalytic.
+
+<KeyPoint>
+The oxygen of the carbonyl comes from water; O₂ only regenerates the catalysts. Because the alkene is attacked while bound to palladium, there is no free carbocation and no rearrangement.
+</KeyPoint>
+
+<ExamTip title="Common mistake">
+Drawing the enol CH₂=C(OH)CH₃ as an intermediate that tautomerises to acetone. Deuterium-labelling experiments rule this out: ethene in D₂O gives CH₃CHO with no deuterium, so the carbonyl is formed on palladium by hydride shifts, not through a free enol. The final product, acetone from propene, is the same.
+</ExamTip>
+
+## Examples
+
+**1. Ethene to acetaldehyde (industrial).** Ethene and oxygen pass through aqueous PdCl₂/CuCl₂ at about 130 °C (one-stage process); the yield of acetaldehyde is about 95 %.
+
+<Eq ce="CH2=CH2 ->[PdCl2, CuCl2, H2O][O2] CH3CHO" />
+
+**2. Propene to acetone.** The oxygen goes to C-2, so the product is the ketone, not propanal:
+
+<Eq ce="CH3CH=CH2 ->[PdCl2, CuCl2, H2O][O2] CH3COCH3" />
+
+**3. Oct-1-ene to octan-2-one (Wacker–Tsuji).** In aqueous DMF under 1 atm O₂, long-chain terminal alkenes give methyl ketones:
+
+<Eq ce="CH3(CH2)5CH=CH2 ->[PdCl2, CuCl2, O2][DMF/H2O] CH3(CH2)5COCH3" />
+
+## Regioselectivity
+
+Terminal alkenes normally give the **Markovnikov product**, the methyl ketone. Only ethene can give an aldehyde in the simple process, because both its carbons are the same. Special ligands or directing groups can push some substrates towards the aldehyde, but that is beyond JEE level.
+
+## Limitations and exceptions
+
+- **High chloride and CuCl₂ concentrations** divert ethene to **ethylene chlorohydrin** (2-chloroethanol).
+- Industrial by-products include chlorinated aldehydes, acetic acid and a little CO₂.
+- Higher alkenes are insoluble in water, so lab versions use mixed solvents such as aqueous DMF.
+- The catalyst solution is very corrosive; plants use titanium and ceramic-lined equipment.
+
+## Related reactions
+
+- [Kucherov reaction](/reactions/kucherov-reaction/): Hg²⁺-catalysed hydration of alkynes; propyne also gives acetone (Markovnikov).
+- [Oxymercuration–demercuration](/reactions/oxymercuration-demercuration/): Markovnikov alcohol from an alkene without rearrangement.
+- [Hydroboration–oxidation](/reactions/hydroboration-oxidation/): the anti-Markovnikov alcohol.
+- [Ozonolysis](/reactions/ozonolysis/): cleaves the C=C instead of keeping all carbons.
+- [Markovnikov rule](/reactions/markovnikov-rule/) and the overview hub [Oxidation reactions](/mechanisms/oxidation-reactions/).

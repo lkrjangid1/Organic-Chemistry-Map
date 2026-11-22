@@ -1,0 +1,51 @@
+{
+ "page": "reactions/cope-elimination",
+ "questions": [
+  {
+   "q": "N,N-Dimethylethylamine N-oxide is heated. The products are:",
+   "smiles": "CC[N+](C)(C)[O-]",
+   "options": [
+    "Ethene, dimethylamine and water",
+    "Ethene and N,N-dimethylhydroxylamine",
+    "Ethanol and N,N-dimethylamine",
+    "N,N-Dimethylethylamine and oxygen"
+   ],
+   "answer": 1,
+   "explain": "The N-oxide oxygen removes a β-H as the C–N bond breaks, giving the alkene and (CH₃)₂N–OH. No external base is needed."
+  },
+  {
+   "q": "The Cope elimination proceeds by:",
+   "options": [
+    "A syn (Ei) elimination through a five-membered cyclic transition state",
+    "An anti E2 elimination with an external base",
+    "A syn elimination through a six-membered cyclic transition state",
+    "An E1 path through a carbocation"
+   ],
+   "answer": 0,
+   "explain": "The five atoms O, N, Cα, Cβ and H form the cyclic transition state, so H and the N-oxide group leave from the same face. The six-membered transition state belongs to ester and xanthate pyrolysis."
+  },
+  {
+   "q": "The N-oxide of N,N-dimethylbutan-2-amine is heated. The major alkene is:",
+   "smiles": "CCC(C)[N+](C)(C)[O-]",
+   "options": [
+    "trans-But-2-ene",
+    "cis-But-2-ene",
+    "2-Methylpropene",
+    "But-1-ene"
+   ],
+   "answer": 3,
+   "explain": "With β-hydrogens on both a CH₃ and a CH₂, the bulky N-oxide removes the more accessible CH₃ hydrogen, giving the less substituted (Hofmann) alkene."
+  },
+  {
+   "q": "An ethyl ester R–C(=O*)–O–CH₂CH₃, with its carbonyl oxygen labelled (O*), is pyrolysed to RCOOH and ethene. Where is the label found?",
+   "options": [
+    "In the ethene",
+    "In water released during the reaction",
+    "In the –OH group of RCOOH",
+    "It is lost as CO₂"
+   ],
+   "answer": 2,
+   "explain": "In this Ei syn elimination the carbonyl oxygen abstracts the β-hydrogen through a six-membered cyclic transition state, so O* becomes the –OH of the acid."
+  }
+ ]
+}

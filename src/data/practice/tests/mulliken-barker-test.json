@@ -1,0 +1,49 @@
+{
+ "page": "tests/mulliken-barker-test",
+ "questions": [
+  {
+   "q": "In the Mulliken–Barker test, what does nitrobenzene give when warmed with zinc dust and aqueous NH₄Cl?",
+   "options": [
+    "Aniline",
+    "N-Phenylhydroxylamine",
+    "Nitrosobenzene",
+    "4-Aminophenol"
+   ],
+   "answer": 1,
+   "explain": "The almost neutral Zn/NH₄Cl mixture stops the four-electron reduction at C₆H₅NHOH. Aniline would need an acidic reducing medium such as Sn/HCl."
+  },
+  {
+   "q": "Why is Sn/HCl not used in place of Zn/NH₄Cl for the reduction step of the Mulliken–Barker test?",
+   "options": [
+    "Sn/HCl reduces the nitro group all the way to the amine, and amines do not reduce Tollens' reagent",
+    "Sn/HCl does not reduce aromatic nitro compounds",
+    "Sn/HCl precipitates silver chloride with Tollens' reagent, giving a false positive",
+    "Sn/HCl gives a hydroxylamine that is too stable to be oxidised"
+   ],
+   "answer": 0,
+   "explain": "The test works only because the neutral medium halts reduction at R–NHOH, a reducing agent. In acid the product is R–NH₂, which leaves Tollens' reagent unchanged."
+  },
+  {
+   "q": "A compound gives no silver with Tollens' reagent, but gives a grey-black silver precipitate after being boiled with Zn dust/NH₄Cl and filtered. The compound could be:",
+   "options": [
+    "Aniline",
+    "Benzaldehyde",
+    "Nitroethane",
+    "4-Nitrobenzoic acid"
+   ],
+   "answer": 2,
+   "explain": "Aliphatic nitro compounds are also reduced to R–NHOH, which reduces Tollens' reagent. Benzaldehyde gives silver even before reduction, aniline never does, and nitrobenzoic acids often give a false negative."
+  },
+  {
+   "q": "In the second step of the Mulliken–Barker test, N-phenylhydroxylamine reduces Tollens' reagent. Into what is it converted?",
+   "options": [
+    "Aniline",
+    "4-Aminophenol",
+    "Nitrobenzene",
+    "Nitrosobenzene"
+   ],
+   "answer": 3,
+   "explain": "The hydroxylamine is oxidised to the nitroso compound C₆H₅NO while Ag⁺ is reduced to silver. 4-Aminophenol is the Bamberger product formed if the hydroxylamine stands in acid, which is why the filtrate is tested promptly."
+  }
+ ]
+}

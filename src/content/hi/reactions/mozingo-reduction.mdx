@@ -1,0 +1,82 @@
+---
+title: "Mozingo Reduction (मोज़िंगो अपचयन)"
+description: "Mozingo reduction में ethane-1,2-dithiol से cyclic thioacetal बनाकर और फिर Raney nickel से desulfurise करके aldehyde या ketone को alkane में बदला जाता है।"
+aliases: ["मोज़िंगो अपचयन", "मोजिंगो रिडक्शन", "मोज़िंगो अभिक्रिया", "mozingo reduction hindi", "mozingo reaction hindi", "thioacetal reduction hindi", "raney nickel desulfurisation hindi"]
+reagents: "1. HS-CH₂CH₂-SH (ethane-1,2-dithiol), acid catalyst (H⁺ या कोई Lewis acid); 2. Raney nickel (H₂-saturated)"
+conditions: "Step 1: acid catalysis; step 2: excess Raney Ni के साथ गर्म करें; strong acid या base की ज़रूरत नहीं"
+byproducts: "H₂O (step 1); nickel sulfide और dithiol वाले हिस्से से एक hydrocarbon (step 2)"
+reactantName: "Cyclohexanone"
+productName: "Cyclohexane"
+faq:
+  - q: "Mozingo reduction क्या है?"
+    a: "दो steps वाला एक तरीका जो aldehyde या ketone के C=O को CH₂ में बदलता है। पहले carbonyl compound को ethane-1,2-dithiol से cyclic thioacetal में बदला जाता है, और फिर thioacetal को hydrogen-saturated Raney nickel से desulfurise करके alkane बनाया जाता है।"
+  - q: "Clemmensen या Wolff–Kishner की जगह Mozingo reduction क्यों इस्तेमाल किया जाता है?"
+    a: "इसमें न गर्म concentrated HCl (Clemmensen) लगता है और न गर्म KOH (Wolff–Kishner), इसलिए जब compound में acid और base दोनों से sensitive groups हों, तो यही तरीका चुना जाता है।"
+  - q: "क्या Mozingo reduction के अंत में dithiol वापस मिल जाता है?"
+    a: "नहीं। Raney nickel वाले step में हर C–S bond टूट जाता है और sulfur को nickel ले लेता है, जो irreversibly nickel sulfide में बदल जाता है। Dithiol खर्च हो जाता है, वापस नहीं बनता।"
+  - q: "Mozingo reduction में Raney nickel का क्या role है?"
+    a: "Raney nickel एक porous nickel catalyst है जिस पर hydrogen adsorbed होता है। यह carbon–sulfur bonds को तोड़ता है (hydrogenolysis) और हर C–S bond की जगह C–H bond लगा देता है, जिससे thioacetal carbon, CH₂ बन जाता है।"
+translated: 2026-11-22
+---
+
+## Mozingo reduction क्या है?
+
+**Mozingo reduction** दो steps में **aldehyde या ketone के C=O group को CH₂ में** बदलकर alkane देता है। पहले carbonyl compound acid catalysis में **ethane-1,2-dithiol** से react करके एक **cyclic thioacetal** (1,3-dithiolane) बनाता है। फिर thioacetal को **hydrogen-saturated Raney nickel** के साथ गर्म किया जाता है, जो दोनों sulfur atoms हटाकर एक CH₂ group छोड़ देता है। इसका नाम Ralph Mozingo पर है, जिन्होंने 1942 में Raney nickel से C–S bond cleavage report किया था।
+
+## General reaction
+
+<Eq ce="R-CO-R' + HSCH2CH2SH ->[H+] R-C(SCH2CH2S)-R' + H2O" />
+<Eq ce="R-C(SCH2CH2S)-R' ->[Raney Ni (H2)] R-CH2-R'" />
+
+## Mechanism
+
+1. **Thioacetal बनना।** Acid (Brønsted acid या Lewis acid) C=O को activate करता है। एक SH group carbonyl carbon पर जुड़ता है, पानी निकलता है, और दूसरा SH group पाँच सदस्यों वाली ring बंद कर देता है। सामान्य ketals के विपरीत thioketals acid catalysis में आसानी से बनते हैं, और ethane-1,2-dithiol इसलिए चुना जाता है क्योंकि यह high yield देता है।
+2. **Desulfurisation (hydrogenolysis)।** Raney nickel की surface पर हर C–S bond टूटता है और porous catalyst में adsorbed hydrogen की मदद से उसकी जगह C–H bond बन जाता है। पहले वाला carbonyl carbon अंत में CH₂ बन जाता है।
+3. **Sulfur का क्या होता है।** Sulfur को nickel पकड़ लेता है, जो irreversibly **nickel sulfide** में बदल जाता है। इसीलिए Raney nickel बहुत excess में चाहिए।
+
+<ExamTip title="Common mistake">
+Raney nickel step के बाद dithiol HS–CH₂CH₂–SH को वापस बनता हुआ न दिखाएँ। हर sulfur के दोनों C–S bonds टूट जाते हैं, sulfur nickel पर nickel sulfide के रूप में रह जाता है, और dithiol खर्च हो जाता है।
+</ExamTip>
+
+<KeyPoint>
+Exams में step 2 को अक्सर बस "H₂/Ni" या "Raney Ni" लिखा जाता है। Raney nickel में activation के समय से ही adsorbed hydrogen होता है, इसलिए अलग से H₂ gas हमेशा नहीं डाली जाती।
+</KeyPoint>
+
+## Examples
+
+**1. Cyclohexanone से cyclohexane।**
+
+<Eq ce="C6H10O ->[1. HSCH2CH2SH, H+][2. Raney Ni] C6H12" />
+
+**2. Acetophenone से ethylbenzene।** Clemmensen या Wolff–Kishner जैसा ही कुल बदलाव, लेकिन लगभग neutral conditions में।
+
+<Eq ce="C6H5COCH3 ->[1. HSCH2CH2SH, H+][2. Raney Ni, H2] C6H5CH2CH3" />
+
+**3. एक aldehyde।** Benzaldehyde से toluene बनता है: CHO group, CH₃ बन जाता है।
+
+<Eq ce="C6H5CHO ->[1. HSCH2CH2SH, H+][2. Raney Ni] C6H5CH3" />
+
+## C=O से CH₂ के तीन तरीकों में से चुनना
+
+| Method | Reagents | Medium | कब इस्तेमाल करें, जब substrate |
+|---|---|---|---|
+| Clemmensen | Zn-Hg, conc. HCl | strongly acidic | acid में stable हो |
+| Wolff–Kishner | NH₂NH₂, KOH, glycol, गर्म करना | strongly basic | base में stable हो |
+| Mozingo | dithiol, H⁺; फिर Raney Ni | लगभग neutral | दोनों से sensitive हो, या दोनों में कम yield दे |
+
+<ExamTip>
+अगर question में ketone को पहले "HS–CH₂CH₂–SH / H⁺" और फिर "Raney Ni" से treat किया गया हो, तो answer वह alkane है जिसमें C=O की जगह CH₂ है। Raney nickel step के बिना thioacetal बस एक protected carbonyl group है।
+</ExamTip>
+
+## Limitations
+
+- अच्छी yield के लिए **Raney nickel बहुत excess में** चाहिए, और product को catalyst से अलग करना झंझट भरा हो सकता है।
+- Hydrogen वाला nickel **दूसरे reducible groups** को भी hydrogenate कर सकता है, इसलिए step 2 में C=C bonds भी reduce हो सकते हैं।
+- **Thiols बदबूदार और toxic** होते हैं, जिससे बड़े scale पर इसका इस्तेमाल सीमित है।
+
+## Related reactions
+
+- [Clemmensen reduction](/hi/reactions/clemmensen-reduction/): acidic तरीका।
+- [Wolff–Kishner reduction](/hi/reactions/wolff-kishner-reduction/): basic तरीका।
+- [Catalytic hydrogenation](/hi/reactions/catalytic-hydrogenation/): Raney nickel एक common hydrogenation catalyst भी है।
+- सभी तरीकों का overview: [Reduction reactions](/hi/mechanisms/reduction-reactions/)।

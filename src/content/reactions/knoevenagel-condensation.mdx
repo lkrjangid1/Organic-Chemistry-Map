@@ -1,0 +1,124 @@
+---
+title: "Knoevenagel Condensation"
+description: "The Knoevenagel condensation links an aldehyde or ketone to an active methylene compound such as diethyl malonate with a weak amine base to give a C=C product."
+aliases: ["Knoevenagel reaction", "Knoevenegal reaction", "Knoevenagel–Doebner condensation", "Doebner modification"]
+kind: "named-reaction"
+family: "carbonyl-condensation-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: []
+reactant:
+  name: "Benzaldehyde"
+  smiles: "O=Cc1ccccc1"
+product:
+  name: "Diethyl benzylidenemalonate"
+  smiles: "CCOC(=O)C(=Cc1ccccc1)C(=O)OCC"
+byproducts: "H₂O"
+reagents: "Active methylene compound Z–CH₂–Z′ (diethyl malonate, malonic acid, ethyl acetoacetate, ethyl cyanoacetate) with a weakly basic amine such as piperidine or pyridine"
+conditions: "Mild base, often warm; Doebner modification: malonic acid in refluxing pyridine (decarboxylation)"
+equation: "C6H5CHO + CH2(COOC2H5)2 ->[piperidine] C6H5CH=C(COOC2H5)2 + H2O"
+notesPages: [74]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Knoevenagel condensation?"
+    a: "An alkene in which the carbonyl carbon is now doubly bonded to the active methylene carbon, with water lost. Benzaldehyde and diethyl malonate give diethyl benzylidenemalonate, C₆H₅CH=C(COOEt)₂."
+  - q: "Why is a weak base used in the Knoevenagel condensation?"
+    a: "The CH₂ of an active methylene compound is flanked by two electron-withdrawing groups and is acidic enough (pKa about 9–13) for an amine such as piperidine. A strong base would also deprotonate the aldehyde or ketone and cause its self-condensation."
+  - q: "What is the Doebner modification?"
+    a: "When malonic acid is used in pyridine, the condensation is followed by loss of CO₂. Benzaldehyde then gives cinnamic acid, C₆H₅CH=CHCOOH, and crotonaldehyde gives sorbic acid."
+  - q: "What is an active methylene compound?"
+    a: "A compound with a CH₂ group between two electron-withdrawing groups, Z–CH₂–Z′, such as diethyl malonate, ethyl acetoacetate, malononitrile or ethyl cyanoacetate. The two groups share the negative charge of the carbanion, making the hydrogens acidic."
+  - q: "How is Knoevenagel different from aldol condensation?"
+    a: "It is a modified aldol condensation. The nucleophile is an active methylene compound rather than a simple aldehyde or ketone, a weak amine base is enough, and the dehydrated C=C product is normally the one isolated."
+related: ["aldol-condensation", "cross-aldol-condensation", "perkin-reaction", "michael-addition", "henry-reaction", "decarboxylation", "mechanisms/carbonyl-condensation-reactions"]
+sources:
+  - title: "Knoevenagel condensation"
+    url: "https://en.wikipedia.org/wiki/Knoevenagel_condensation"
+    publisher: "Wikipedia"
+  - title: "Knoevenagel Condensation, Doebner Modification"
+    url: "https://www.organic-chemistry.org/namedreactions/knoevenagel-condensation.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "22.5: Acidity of Alpha Hydrogen Atoms – Enolate Ion Formation"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/22:_Carbonyl_Alpha-Substitution_Reactions/22.05:_Acidity_of_Alpha_Hydrogen_Atoms-_Enolate_Ion_Formation"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 3
+  note: "A common classroom version uses NaOEt as the base and stops at the β-hydroxy adduct CH₃CH(OH)CH(COOEt)₂. Sources agree the catalyst is usually a weak amine and that dehydration to the C=C product is part of the reaction; the page follows the sources."
+---
+
+## What is the Knoevenagel condensation?
+
+The **Knoevenagel condensation** is the reaction of an **aldehyde or ketone** with an **active methylene compound** (Z–CH₂–Z′, where Z and Z′ are electron-withdrawing groups) in the presence of a **weakly basic amine** such as piperidine or pyridine. The carbanion adds to the C=O group and the adduct then **loses water**, giving an α,β-unsaturated product with a new C=C bond. It is a modification of the aldol condensation, named after the German chemist Emil Knoevenagel.
+
+## General reaction
+
+<Eq ce="R2C=O + CH2ZZ' ->[amine base] R2C=CZZ' + H2O" />
+
+Common active methylene partners:
+
+| Compound | Z, Z′ | Approx. pKa of CH₂ |
+|---|---|---|
+| Acetylacetone (pentane-2,4-dione) | COCH₃, COCH₃ | 9 |
+| Ethyl acetoacetate | COCH₃, COOEt | 11 |
+| Diethyl malonate | COOEt, COOEt | 13 |
+| Malonic acid, cyanoacetic acid, malononitrile | COOH / CN | acidic CH₂ |
+| Nitromethane (one strong group) | NO₂ | about 9 |
+
+Compare these with a simple ketone (pKa about 19) or ester (about 25): an amine base can remove a proton from the active methylene compound but barely touches the carbonyl partner.
+
+<KeyPoint>
+Why a **weak** base: Z must be strong enough to allow deprotonation by a mild amine. A strong base would also form the enolate of the aldehyde or ketone and trigger its self-condensation.
+</KeyPoint>
+
+## Mechanism
+
+1. **Carbanion (enol) formation.** Piperidine removes a proton from the CH₂ of diethyl malonate, giving a stabilised carbanion; the charge is shared by both ester carbonyls.
+2. **Addition.** The carbanion attacks the aldehyde C=O, giving an alkoxide that is protonated to the aldol-type adduct R–CH(OH)–CH(COOEt)₂.
+3. **Elimination.** The remaining CH between the two esters is very acidic, so base removes it and OH⁻ is expelled (an E1cB-type step). The C=C formed is conjugated with both ester groups.
+
+<Eq ce="CH2(COOEt)2 + B <=> ^-CH(COOEt)2 + BH+" />
+<Eq ce="RCHO + ^-CH(COOEt)2 -> RCH(OH)CH(COOEt)2 ->[-H2O] RCH=C(COOEt)2" />
+
+An alternative picture, with piperidine acting as an organocatalyst, has the amine first convert the aldehyde into an **iminium ion**, which is a better electrophile than the aldehyde itself.
+
+<ExamTip title="Common mistake">
+Do not stop at the β-hydroxy adduct. The Knoevenagel condensation is defined by the dehydration step, so the expected answer is the C=C product, for example CH₃CH=C(COOEt)₂ from acetaldehyde and diethyl malonate. Also note that the textbook base is a weak amine (piperidine or pyridine), not sodium ethoxide.
+</ExamTip>
+
+## Doebner modification
+
+When one of the activating groups is a **carboxylic acid**, as in **malonic acid**, and the reaction is run in **pyridine**, the condensation is accompanied by **decarboxylation**. The product keeps only one COOH group.
+
+<Eq ce="C6H5CHO + CH2(COOH)2 ->[pyridine][\Delta] C6H5CH=CHCOOH + CO2 + H2O" />
+
+Acrolein with malonic acid in pyridine gives *trans*-penta-2,4-dienoic acid, and crotonaldehyde gives **sorbic acid** (hexa-2,4-dienoic acid), a food preservative.
+
+## Examples
+
+**1. Benzaldehyde and diethyl malonate.**
+
+<Eq ce="C6H5CHO + CH2(COOEt)2 ->[piperidine] C6H5CH=C(COOEt)2 + H2O" />
+
+**2. Acetaldehyde and diethyl malonate.**
+
+<Eq ce="CH3CHO + CH2(COOEt)2 ->[piperidine] CH3CH=C(COOEt)2 + H2O" />
+
+The intermediate CH₃CH(OH)CH(COOEt)₂ is the aldol-type adduct; under Knoevenagel conditions it dehydrates to diethyl ethylidenemalonate.
+
+**3. Cinnamic acid (Doebner).** Benzaldehyde with malonic acid in pyridine, as shown above. This is an alternative to the [Perkin reaction](/reactions/perkin-reaction/) for making cinnamic acids.
+
+## Applications
+
+- The Hantzsch pyridine synthesis and several heterocycle syntheses contain a Knoevenagel step.
+- A Knoevenagel condensation is a key step in the industrial synthesis of the antimalarial drug lumefantrine.
+- The products, with C=C conjugated to two electron-withdrawing groups, are excellent [Michael acceptors](/reactions/michael-addition/).
+
+## Related reactions
+
+- [Aldol condensation](/reactions/aldol-condensation/) and [cross aldol condensation](/reactions/cross-aldol-condensation/): the parent reactions.
+- [Perkin reaction](/reactions/perkin-reaction/): another route to cinnamic acids.
+- [Henry reaction](/reactions/henry-reaction/): nitroalkanes as the active hydrogen partner.
+- [Michael addition](/reactions/michael-addition/): the same malonate carbanion adding 1,4 to an α,β-unsaturated carbonyl.
+- [Decarboxylation](/reactions/decarboxylation/): the extra step in the Doebner modification.
+- Hub: [Carbonyl condensation reactions](/mechanisms/carbonyl-condensation-reactions/)

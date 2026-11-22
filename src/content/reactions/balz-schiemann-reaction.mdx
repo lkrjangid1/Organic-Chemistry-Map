@@ -1,0 +1,114 @@
+---
+title: "Balz–Schiemann Reaction"
+description: "Balz–Schiemann reaction makes aryl fluorides: a diazonium salt is precipitated with HBF₄ as ArN₂⁺BF₄⁻, then heated to give ArF, N₂ and BF₃. Mechanism, examples."
+aliases: ["Schiemann reaction", "Balz Schiemann reaction", "Balz-Schiemann", "Preparation of fluorobenzene", "Diazonium fluoroborate decomposition"]
+kind: "named-reaction"
+family: "diazonium-salt-reactions"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["balz_schiemann_reaction"]
+reactant:
+  name: "Benzenediazonium tetrafluoroborate"
+  smiles: "F[B-](F)(F)F.N#[N+]c1ccccc1"
+product:
+  name: "Fluorobenzene"
+  smiles: "Fc1ccccc1"
+byproducts: "N₂, BF₃"
+reagents: "HBF₄ (fluoroboric acid), then heat"
+conditions: "Diazonium fluoroborate precipitated, dried, then heated (Δ)"
+equation: "C6H5N2^+ Cl^- ->[HBF4] C6H5N2^+ BF4^- ->[\\Delta] C6H5F + N2 ^ + BF3"
+notesPages: [47]
+memoryTricks: []
+faq:
+  - q: "What is the Balz–Schiemann reaction?"
+    a: "It is the preparation of an aryl fluoride from an arenediazonium salt. Treating the diazonium chloride with fluoroboric acid precipitates the diazonium tetrafluoroborate, which decomposes on heating to ArF, nitrogen and boron trifluoride."
+  - q: "Why is fluorobenzene not prepared by direct fluorination or by the Sandmeyer reaction?"
+    a: "Direct fluorination of benzene is too violent to control, and copper fluorides do not give aryl fluorides in a Sandmeyer-type reaction. The Balz–Schiemann route is the classic laboratory method."
+  - q: "What are the by-products of the Balz–Schiemann reaction?"
+    a: "Nitrogen gas and boron trifluoride (BF₃). The fluorine in the product comes from the BF₄⁻ counter-ion."
+  - q: "Why is the diazonium tetrafluoroborate isolated but the diazonium chloride is not?"
+    a: "Benzenediazonium tetrafluoroborate is insoluble in water and stable at room temperature, so it can be filtered and dried. Benzenediazonium chloride decomposes easily and can explode when dry, so it is used only in cold solution."
+related: ["diazotization-reaction", "sandmeyer-reaction", "gattermann-reaction", "swarts-reaction", "sn1-reaction"]
+sources:
+  - title: "Amines (Class 12 Chemistry, Unit 9)"
+    url: "https://ncert.nic.in/textbook/pdf/lech204.pdf"
+    publisher: "NCERT"
+  - title: "Balz–Schiemann reaction"
+    url: "https://en.wikipedia.org/wiki/Balz%E2%80%93Schiemann_reaction"
+    publisher: "Wikipedia"
+  - title: "Balz-Schiemann Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/balz-schiemann-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 3
+---
+
+## What is the Balz–Schiemann reaction?
+
+The **Balz–Schiemann reaction** (also called the Schiemann reaction) converts an **arenediazonium salt into an aryl fluoride**. The diazonium chloride is treated with **fluoroboric acid (HBF₄)**, which precipitates the **arenediazonium tetrafluoroborate**, ArN₂⁺BF₄⁻. This dry salt is then **heated**, and it decomposes to the **aryl fluoride, nitrogen and boron trifluoride**. Benzenediazonium chloride gives **fluorobenzene**.
+
+It is named after the German chemists Günther Balz and Günther Schiemann, and it remains the traditional route to fluoroarenes.
+
+## General reaction
+
+<Eq ce="ArN2^+ Cl^- + HBF4 -> ArN2^+ BF4^- v + HCl" />
+
+<Eq ce="ArN2^+ BF4^- ->[\Delta] Ar-F + N2 ^ + BF3" />
+
+In short, the route has two steps: HBF₄ gives C₆H₅N₂⁺BF₄⁻, and heat gives C₆H₅F + N₂ + BF₃.
+
+## Mechanism
+
+1. **Salt exchange.** BF₄⁻ replaces Cl⁻. Because ArN₂⁺BF₄⁻ is insoluble in water, it precipitates and can be filtered and dried.
+2. **Loss of nitrogen.** On heating, the C–N bond breaks and N₂ leaves, generating a highly unstable **aryl cation**, Ar⁺. No copper or other promoter is needed.
+3. **Fluoride capture.** The aryl cation pulls F⁻ from the neighbouring BF₄⁻, giving Ar–F and leaving BF₃.
+
+<Eq ce="ArN2^+ ->[\Delta] Ar^+ + N2" />
+
+<Eq ce="Ar^+ + BF4^- -> ArF + BF3" />
+
+<KeyPoint>
+The Balz–Schiemann reaction is believed to go through an aryl cation (an SN1-like path), which is different from the copper-catalysed radical mechanism of the Sandmeyer reaction. The Organic Chemistry Portal points out that the exact mechanism is still not fully settled.
+</KeyPoint>
+
+## Examples
+
+**1. Fluorobenzene from aniline (three steps):**
+
+<Eq ce="C6H5NH2 ->[NaNO2, HCl][273-278 K] C6H5N2^+ Cl^- ->[HBF4] C6H5N2^+ BF4^- ->[\Delta] C6H5F" />
+
+**2. 4-Fluorotoluene from p-toluidine** (a high-yield literature example, about 89%):
+
+<Eq ce="CH3C6H4NH2 ->[1. NaNO2, HBF4][2. \Delta] CH3C6H4F + N2 + BF3" />
+
+**3. Nitrobenzene from the same fluoroborate (NCERT):** heating ArN₂⁺BF₄⁻ with aqueous sodium nitrite in the presence of copper replaces the diazonium group by –NO₂.
+
+<Eq ce="C6H5N2^+ BF4^- ->[NaNO2, Cu][\Delta] C6H5NO2 + N2" />
+
+<ExamTip>
+If a scheme shows "HBF₄, then Δ" on a diazonium salt, the product is the aryl fluoride and the reaction is Balz–Schiemann. Remember the by-products N₂ and BF₃; both appear in assertion–reason and match-the-column questions.
+</ExamTip>
+
+## Comparison with other halogenations of diazonium salts
+
+| Halogen | Reagent | Reaction name |
+|---|---|---|
+| F | HBF₄, then heat | Balz–Schiemann |
+| Cl, Br | CuX/HX | Sandmeyer |
+| Cl, Br | Cu powder/HX | Gattermann |
+| I | KI | (no special name) |
+
+## Limitations and exceptions
+
+- The dry diazonium salt releases a lot of heat and gas when it decomposes; in practice it is mixed with sand or slurried in a high-boiling paraffin and heated (up to about 200 °C) to control the decomposition.
+- HBF₄ is a costly fluoride source. Modern variants use PF₆⁻ or SbF₆⁻ salts, or carry out diazotization in liquid HF, sometimes without isolating the diazonium salt.
+- For alkyl fluorides, the usual exam method is halogen exchange (the [Swarts reaction](/reactions/swarts-reaction/)), not Balz–Schiemann.
+
+## Related reactions
+
+- [Diazotization reaction](/reactions/diazotization-reaction/): the first step from the aromatic amine.
+- [Sandmeyer reaction](/reactions/sandmeyer-reaction/) and [Gattermann reaction](/reactions/gattermann-reaction/): the copper-based routes to ArCl and ArBr.
+- [Swarts reaction](/reactions/swarts-reaction/): fluorination of alkyl halides.
+- [SN1 reaction](/reactions/sn1-reaction/): the cation-type pathway the mechanism resembles.
+- [Reactions of diazonium salts](/mechanisms/diazonium-salt-reactions/): family overview.

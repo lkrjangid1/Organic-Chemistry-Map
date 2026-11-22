@@ -1,0 +1,92 @@
+---
+title: "Coupling Reactions in Organic Chemistry (युग्मन अभिक्रियाएँ)"
+description: "JEE और NEET के लिए coupling reactions: Wurtz, Fittig, Wurtz–Fittig, Ullmann, Corey–House और Kolbe electrolysis की तुलना, metals, mechanisms और products के साथ।"
+faq:
+  - q: "Organic chemistry में coupling reaction क्या है?"
+    a: "Coupling reaction दो organic टुकड़ों को एक नए carbon–carbon bond से जोड़ता है, आमतौर पर किसी metal की मदद से। दो एक जैसे groups (R–R) को जोड़ना homocoupling है; दो अलग groups (R–R′) को जोड़ना cross-coupling है।"
+  - q: "कौन-सा coupling reaction unsymmetrical alkane साफ़-साफ़ देता है?"
+    a: "Corey–House synthesis। Lithium dialkylcuprate R2CuLi, alkyl halide R′X के साथ react करके सिर्फ़ R–R′ देता है, जबकि दो अलग halides का Wurtz coupling तीन alkanes का mixture देता है।"
+  - q: "Wurtz, Fittig और Wurtz–Fittig reactions में क्या अंतर है?"
+    a: "तीनों में dry ether में sodium इस्तेमाल होता है। Wurtz दो alkyl halides को जोड़कर alkane देता है, Fittig दो aryl halides को जोड़कर biaryl देता है, और Wurtz–Fittig एक aryl halide को alkyl halide से जोड़कर alkylbenzene देता है।"
+  - q: "Iodoform को silver powder के साथ गर्म करने पर क्या होता है?"
+    a: "Iodoform reduce होता है और दो CHI3 units जुड़कर ethyne (acetylene) देती हैं, साथ में silver iodide बनता है: 2CHI3 + 6Ag → HC≡CH + 6AgI।"
+  - q: "कौन-से coupling reactions free radicals के through चलते हैं?"
+    a: "Kolbe electrolysis और pinacol coupling free radical couplings हैं, और Wurtz व Fittig reactions को भी अक्सर radicals से समझाया जाता है। Classical Ullmann reaction organocopper intermediates के through चलता है, radicals के through नहीं।"
+translated: 2026-11-22
+---
+
+## Coupling reaction क्या है?
+
+**Coupling reaction** दो organic टुकड़ों को एक **नए carbon–carbon bond** से जोड़ता है, आमतौर पर किसी metal की मदद से। Exam वाले classic reactions में एक reactive metal (Na, Li, Mg, Zn, Cu, Ag) organic halide से halogen खींच लेता है, और पीछे बचा carbon (radical, carbanion जैसे organometallic या organocopper species के रूप में) दूसरे carbon से bond बनाता है। Carboxylate ions के लिए यही काम electrolysis कर सकता है (Kolbe), और ketones के लिए C=O groups पर electron transfer (pinacol coupling)।
+
+Coupling reactions दो groups में बँटते हैं:
+
+- **Homocoupling:** दो एक जैसे partners symmetrical product, R–R या Ar–Ar, देते हैं (Wurtz, Fittig, Ullmann, Kolbe)।
+- **Cross-coupling (heterocoupling):** दो अलग partners R–R′ देते हैं (Wurtz–Fittig, Corey–House)। Suzuki और Heck जैसे modern palladium couplings, जिन्हें 2010 का Nobel Prize मिला, इसी group में आते हैं।
+
+## General pattern
+
+<Eq ce="2 R-X + 2 M -> R-R + 2 MX" />
+
+Metal दो में से किसी एक तरीके से काम करता है:
+
+1. **Radical route:** M, R–X को एक electron देता है, जिससे R• और X⁻ बनते हैं; दो radicals जुड़ जाते हैं।
+2. **Organometallic (ionic) route:** R–X + 2M से R⁻M⁺ (organometallic carbanion) बनता है, जो SN2 जैसे step में दूसरे R–X पर attack करता है।
+
+## Coupling reactions की तुलना
+
+| Reaction | Substrate(s) | Reagent / conditions | Product | मुख्य बात |
+|---|---|---|---|---|
+| [Wurtz](/hi/reactions/wurtz-reaction/) | 2 R–X | Na, dry ether | R–R | even-carbon symmetrical alkanes |
+| [Fittig](/hi/reactions/fittig-reaction/) | 2 Ar–X | Na, dry ether | Ar–Ar | biaryls; Wurtz से कम reactive |
+| [Wurtz–Fittig](/hi/reactions/wurtz-fittig-reaction/) | Ar–X + R–X | Na, dry ether | Ar–R | alkylbenzenes; R–R और Ar–Ar side products |
+| [Ullmann](/hi/reactions/ullmann-reaction/) | 2 Ar–X (ArI या nitro-ArCl) | Cu powder, लगभग 200 °C | Ar–Ar | organocopper, radical नहीं |
+| [Corey–House](/hi/reactions/corey-house-synthesis/) | R₂CuLi + R′–X | Li, फिर CuI, फिर R′X | R–R′ | साफ़ unsymmetrical alkanes; SN2 जैसा |
+| [Kolbe electrolysis](/hi/reactions/kolbe-electrolysis/) | 2 RCOO⁻Na⁺ (aq) | electrolysis | R–R + 2CO₂ | anode पर radicals; cathode पर H₂ |
+
+इससे जुड़ा [pinacol coupling](/hi/reactions/pinacol-coupling/) Mg/Hg और फिर पानी से दो ketones को जोड़कर 1,2-diol देता है, और इसे [free radical reactions](/hi/mechanisms/free-radical-reactions/) के साथ रखा जाता है।
+
+<KeyPoint>
+Reactivity order: **Wurtz &gt; Fittig**। Alkyl C–X bonds, aryl C–X bonds से ज़्यादा आसानी से टूटते हैं, क्योंकि aryl C–X में partial double bond character होता है। इसीलिए Wurtz–Fittig में alkyl halide पहले react करता है।
+</KeyPoint>
+
+## Alkyl halides के साथ दूसरे metals
+
+कई और metals भी R–X के साथ react करते हैं और Wurtz family के साथ पढ़े जाते हैं।
+
+**Magnesium (Grignard reagent)।** Dry ether में magnesium C–X bond में घुसकर RMgX देता है। NCERT ज़ोर देता है कि नमी के छोटे-से अंश से भी बचना चाहिए, क्योंकि यह reagent किसी भी proton source से react करके alkane दे देता है। देखें [Grignard reagent](/hi/reactions/grignard-reagent/)।
+
+<Eq ce="R-X + Mg ->[dry ether] RMgX" />
+
+आपको R–X →(Mg, ether) R–R भी लिखा दिख सकता है। Exam answers में यह **Wurtz-type coupling** है, जो Grignard reagents बनाते समय side reaction के रूप में होता है, जब RMgX बिना react हुए R–X से मिलता है। यह एक अनचाहा product है, बनाने का तरीका नहीं; सामान्य Grignard reagents बिना catalyst के alkyl halides से आमतौर पर couple नहीं करते।
+
+**Zinc (Frankland)।** Edward Frankland ने 1848 में ethyl iodide को zinc के साथ गर्म करके पहला organozinc compound बनाया था। Organozinc R⁻–Zn–X carbanion source की तरह काम करता है जो दूसरे R–X पर attack करके R–R देता है। Wurtz-type coupling में sodium की जगह इस्तेमाल हुए metals में zinc भी एक है।
+
+<Eq ce="R-X + Zn -> R-Zn-X" />
+<Eq ce="R-Zn-X + R-X -> R-R + ZnX2" />
+
+**Iodoform के साथ silver।** Iodoform को powdered silver के साथ गर्म करने पर सारा iodine हट जाता है और दो CH units triple bond से जुड़कर **ethyne** (acetylene) बनाती हैं।
+
+<Eq ce="2 CHI3 + 6 Ag ->[\Delta] HC#CH + 6 AgI" />
+
+<ExamTip>
+Metal को reaction से match करें: Na → Wurtz family; Cu → Ullmann (और Corey–House में Gilman reagents); Li + CuI → Corey–House; Mg → Grignard (C–C coupling सिर्फ़ side reaction के रूप में); Ag + CHI₃ → ethyne; RCOONa का electrolysis → Kolbe।
+</ExamTip>
+
+## Result तय करने वाले factors
+
+- **Halide का प्रकार:** alkyl halides, aryl halides से ज़्यादा आसानी से couple होते हैं। Alkyl halides में primary सबसे अच्छी yield देते हैं; tertiary halides ज़्यादातर eliminate होते हैं। Aryl halides को copper (Ullmann) या activating nitro group चाहिए।
+- **Halogen:** reactivity में I &gt; Br &gt; Cl; aryl chlorides सबसे कठिन हैं।
+- **Solvent:** Na, Li और Mg के लिए dry, aprotic solvents (ether, THF, dioxane) ज़रूरी हैं, क्योंकि पानी organometallic intermediates को नष्ट कर देता है।
+- **Symmetrical vs unsymmetrical products:** homocoupling methods (Wurtz, Fittig, Kolbe) दो अलग partners के साथ mixtures देते हैं, इसलिए odd-carbon या mixed products Corey–House से सबसे अच्छे बनते हैं।
+- **Temperature और dilution:** dihalides में conditions तय करती हैं कि intermolecular coupling होगा या ring closure (जैसे intramolecular Wurtz reaction में 1-bromo-3-chlorocyclobutane से bicyclobutane)।
+
+## Member pages
+
+- [Wurtz reaction](/hi/reactions/wurtz-reaction/)
+- [Fittig reaction](/hi/reactions/fittig-reaction/)
+- [Wurtz–Fittig reaction](/hi/reactions/wurtz-fittig-reaction/)
+- [Ullmann reaction](/hi/reactions/ullmann-reaction/)
+- [Corey–House synthesis](/hi/reactions/corey-house-synthesis/)
+- [Kolbe electrolysis](/hi/reactions/kolbe-electrolysis/)
+- Related: [Pinacol coupling](/hi/reactions/pinacol-coupling/), [Grignard reagent](/hi/reactions/grignard-reagent/), [Haloform reaction](/hi/reactions/haloform-reaction/)

@@ -1,0 +1,50 @@
+{
+ "page": "reagents/selenium-dioxide",
+ "questions": [
+  {
+   "q": "Cyclohexanone is heated with SeO₂. The organic product is:",
+   "smiles": "O=C1CCCCC1",
+   "options": [
+    "Cyclohex-2-en-1-one",
+    "Cyclohexane-1,2-dione",
+    "Cyclohexane-1,3-dione",
+    "Hexanedioic acid"
+   ],
+   "answer": 1,
+   "explain": "In the Riley oxidation SeO₂ converts the α-CH₂ next to C=O into a second C=O, giving a 1,2-dicarbonyl compound; red selenium separates out."
+  },
+  {
+   "q": "Cyclohexene is oxidised with SeO₂. The product is:",
+   "options": [
+    "Cyclohexane-1,2-diol",
+    "Cyclohexanone",
+    "Hexanedioic acid",
+    "Cyclohex-2-en-1-ol"
+   ],
+   "answer": 3,
+   "explain": "SeO₂ puts an OH on the allylic carbon and leaves the C=C in the ring. Diols and cleavage products come from KMnO₄, which attacks the double bond itself."
+  },
+  {
+   "q": "Acetaldehyde (as paraldehyde) is oxidised with SeO₂. What are the products?",
+   "options": [
+    "Glyoxal (OHC–CHO), Se and H₂O",
+    "Ethanoic acid and SeO₃",
+    "Methanal and CO₂",
+    "Ethane-1,2-diol and Se"
+   ],
+   "answer": 0,
+   "explain": "The α-CH₃ next to the C=O is converted into a second C=O, giving the 1,2-dicarbonyl OHC–CHO, while Se(IV) is reduced to red elemental selenium. No carbon is added or removed."
+  },
+  {
+   "q": "The allylic oxidation of an alkene by SeO₂ is explained by which sequence of steps?",
+   "options": [
+    "Radical abstraction of the allylic H, then capture by Br",
+    "Syn addition across C=C to form a cyclic ester, then hydrolysis to a diol",
+    "Ene reaction, then a [2,3]-sigmatropic rearrangement, then hydrolysis",
+    "Protonation of the alkene, carbocation formation, then attack by water"
+   ],
+   "answer": 2,
+   "explain": "The ene step shifts the double bond and gives an allylseleninic acid; the [2,3]-sigmatropic shift moves the C=C back and puts O on the allylic carbon; hydrolysis releases the allylic alcohol. The radical route describes NBS bromination and the cyclic-ester route describes cold KMnO₄."
+  }
+ ]
+}

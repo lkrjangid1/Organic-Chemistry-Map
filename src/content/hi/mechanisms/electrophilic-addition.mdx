@@ -1,0 +1,132 @@
+---
+title: "Electrophilic Addition Reactions of Alkenes and Alkynes (इलेक्ट्रॉनस्नेही योगात्मक अभिक्रियाएँ)"
+description: "JEE और NEET के लिए electrophilic addition: alkenes पर HX, H₂O, X₂, HOX और दूसरे E–Nu reagents कैसे जुड़ते हैं, Markovnikov orientation, rearrangements, syn vs anti।"
+faq:
+  - q: "Electrophilic addition reaction क्या है?"
+    a: "यह C=C या C≡C bond पर होने वाला addition है जो π electrons पर electrophile (E⁺) के attack से शुरू होता है। एक positively charged intermediate बनता है, और फिर nucleophile (Nu⁻) उससे bond बनाता है, इसलिए E और Nu पास-पास के carbons पर पहुँचते हैं।"
+  - q: "Alkene पर HX के addition में rate-determining step कौन-सा है?"
+    a: "Exam answers में पहला step, यानी H⁺ जुड़कर carbocation बनना, slow, rate-determining step माना जाता है। Carbocation पर X⁻ का attack fast होता है।"
+  - q: "Buta-1,3-diene पर HBr के addition में kinetic और thermodynamic product में क्या अंतर है?"
+    a: "कम temperature पर 1,2-adduct (3-bromobut-1-ene) main product होता है क्योंकि यह तेज़ी से बनता है (kinetic control)। ज़्यादा temperature पर ज़्यादा stable 1,4-adduct (1-bromobut-2-ene) हावी रहता है (thermodynamic control)।"
+  - q: "Alkene से syn और anti diols कैसे मिलते हैं?"
+    a: "Syn diols ठंडे, dilute alkaline KMnO₄ (Baeyer's reagent) या OsO₄ से मिलते हैं। Anti diols peroxy acid से epoxidation और फिर पानी से acid-catalysed ring opening से मिलते हैं।"
+translated: 2026-11-22
+---
+
+## Electrophilic addition क्या है?
+
+**Electrophilic addition** में alkene या alkyne का π bond टूटता है और दो नए σ bonds बनते हैं। Electron-rich π bond किसी **electrophile (E⁺)** पर attack करता है, जिससे एक positively charged intermediate (carbocation या bridged ion) बनता है; फिर एक **nucleophile (Nu⁻)** उस intermediate से bond बनाता है। कुल नतीजा: E और Nu पास-पास के carbons पर:
+
+<Eq ce="R2C=CR2 + E-Nu -> R2C(E)-C(Nu)R2" />
+
+## General mechanism (HX को model मानकर)
+
+1. **Protonation।** H⁺ alkene के एक carbon पर जुड़ता है और दूसरे carbon पर carbocation छोड़ देता है। Exam answers में यही **rate-determining step** है।
+2. **Nucleophile attack।** X⁻ तेज़ी से carbocation से bond बनाता है।
+
+<Eq ce="CH2=CH2 + HX -> CH3-CH2+ + X- -> CH3-CH2X" />
+
+**Markovnikov orientation।** Unsymmetrical alkene में H⁺ इस तरह जुड़ता है कि **ज़्यादा stable (ज़्यादा substituted) carbocation** बने, और nucleophile ज़्यादा substituted carbon पर पहुँचता है। यही [Markovnikov's rule](/hi/reactions/markovnikov-rule/) है। Peroxide के साथ HBr radical chain से इसे उलट देता है: देखें [peroxide effect](/hi/reactions/peroxide-effect/)।
+
+## Propene के साथ E–Nu reagents
+
+नीचे दिया हर reagent एक electrophilic हिस्से और एक nucleophilic हिस्से में बँटता है। Electrophilic हिस्सा CH₂ सिरे पर जाता है, nucleophilic हिस्सा C-2 पर।
+
+| Reagent | E⁺ / Nu⁻ | CH₃–CH=CH₂ से product |
+|---|---|---|
+| HCl | H⁺ / Cl⁻ | 2-Chloropropane |
+| H₂O, H⁺ | H⁺ / OH | Propan-2-ol |
+| CH₃OH, H⁺ | H⁺ / OCH₃ | 2-Methoxypropane |
+| CH₃COOH, H⁺ | H⁺ / OCOCH₃ | Isopropyl acetate |
+| Cl₂ / CCl₄ | Cl⁺ / Cl⁻ | 1,2-Dichloropropane |
+| X₂ / H₂O (HOX) | X⁺ / OH⁻ | 1-Halopropan-2-ol (halohydrin) |
+| ICl | I⁺ / Cl⁻ | 2-Chloro-1-iodopropane |
+| IN₃ | I⁺ / N₃⁻ | 2-Azido-1-iodopropane |
+| NOCl | NO⁺ / Cl⁻ | 2-Chloro-1-nitrosopropane |
+
+<KeyPoint>
+Halogens और HOX एक bridged **halonium ion** के through जुड़ते हैं, इसलिए addition **anti** (trans) होता है। Halohydrin में OH ज़्यादा substituted carbon पर और X कम substituted carbon पर जाता है।
+</KeyPoint>
+
+## Carbocation rearrangements
+
+चूँकि एक free carbocation बनता है, nucleophile के पहुँचने से पहले वह ज़्यादा stable carbocation में rearrange हो सकता है। एक classic example है isopropenylcyclobutane + HBr: protonation से चार सदस्यों वाली ring के बगल में 3° cation बनता है; एक ring bond migrate करता है, जिससे ring फैलकर cyclopentyl cation बन जाती है (ring strain कम होता है); फिर methyl shift से 3° cation बनता है, और Br⁻ के attack से **1-bromo-1,2-dimethylcyclopentane** मिलता है। Energy diagram में हर step के लिए एक peak (TS₁ से TS₄) और हर cation के लिए एक valley होती है।
+
+जिन तरीकों में free carbocation नहीं बनता, उनमें rearrangement नहीं होता: [oxymercuration–demercuration](/hi/reactions/oxymercuration-demercuration/) (Markovnikov) और [hydroboration–oxidation](/hi/reactions/hydroboration-oxidation/) (anti-Markovnikov, syn)।
+
+## Kinetic vs thermodynamic control: HBr + buta-1,3-diene
+
+C-1 पर protonation से एक allylic cation बनता है जिसका positive charge C-2 और C-4 पर बँटा होता है।
+
+- **1,2-addition → 3-bromobut-1-ene**: **kinetically controlled product (KCP)**। यह पहले बनता है, इसकी activation energy कम है, यह कम stable है, और **कम temperature** पर हावी रहता है।
+- **1,4-addition → 1-bromobut-2-ene**: **thermodynamically controlled product (TCP)**। यह ज़्यादा stable है (ज़्यादा substituted C=C), इसकी activation energy ज़्यादा है, यह ज़्यादा exothermic है, और **ज़्यादा temperature** पर हावी रहता है।
+
+<Trick>
+KCP: "Rxn में सबसे पहले बनने वाला", "Low temp per banta h"। TCP: "ज्यादा स्थिर", "High temp per banta h"।
+</Trick>
+
+## Syn और anti dihydroxylation
+
+| Product | Reagents | Stereochemistry |
+|---|---|---|
+| Syn diol | Baeyer's reagent (ठंडा, dilute, alkaline KMnO₄, 1–2%) या OsO₄ फिर NaHSO₃ | दोनों OH एक ही face पर |
+| Anti diol | Peroxy acid (जैसे mCPBA) से epoxide, फिर H₃O⁺ | OH groups उल्टे faces पर |
+
+<ExamTip title="Common mistake">
+Anti-hydroxylation के लिए H₂O₂/NaOH लिखना। Anti route है **peroxy acid से epoxidation और फिर acid-catalysed hydrolysis**: पानी epoxide को oxygen की उल्टी side से खोलता है। Answers में यही sequence लिखें। देखें [Prilezhaev epoxidation](/hi/reactions/prilezhaev-epoxidation/)।
+</ExamTip>
+
+## C=C पर दूसरे additions: एक quick map
+
+कई आम alkene reactions साधारण E⁺/Nu⁻ additions नहीं हैं, लेकिन इन्हें साथ में ही पढ़ा जाता है। Exam answers में orientation और stereochemistry मायने रखती है:
+
+| Reagent | Product | Orientation / stereochemistry |
+|---|---|---|
+| Ni, Pt या Pd के साथ H₂ | Alkane | Metal surface पर syn addition ([catalytic hydrogenation](/hi/reactions/catalytic-hydrogenation/)) |
+| HN=NH (diimide, N₂H₄ + H₂O₂ से) | Alkane | दोनों H एक ही face से syn delivery ([diimide reduction](/hi/reactions/diimide-reduction/)) |
+| Hg(OAc)₂, H₂O; फिर NaBH₄ | Alcohol | Markovnikov; anti oxymercuration; carbocation नहीं, इसलिए rearrangement नहीं |
+| BH₃·THF (B₂H₆); फिर H₂O₂/NaOH | Alcohol | Anti-Markovnikov; H और OH का syn addition |
+| Peroxy acid (mCPBA, MMPP) | Epoxide | Syn, stereospecific (cis alkene से cis epoxide) |
+| Silver catalyst पर O₂ | Ethylene oxide | Industrial route, ethene के लिए |
+| Singlet :CH₂ (जैसे CH₂N₂ + light से) | Cyclopropane | Concerted, stereospecific: cis-but-2-ene से cis-1,2-dimethylcyclopropane |
+| Triplet :CH₂ | Cyclopropane | Stepwise diradical addition; stereochemistry गड़बड़ (scrambled) हो जाती है |
+| O₃; फिर Zn/H₂O या (CH₃)₂S | Aldehydes और/या ketones | C=C टूटता है ([ozonolysis](/hi/reactions/ozonolysis/), reductive work-up) |
+| O₃; फिर H₂O₂ | Carboxylic acids (और ketones) | Oxidative work-up |
+
+Carbene chemistry को गहराई से पढ़ने के लिए [carbenes hub](/hi/mechanisms/carbenes/) और [Simmons–Smith reaction](/hi/reactions/simmons-smith-reaction/) देखें।
+
+## Worked example: cyclohexene
+
+Road-map questions में cyclohexene standard ring alkene है, क्योंकि ring की वजह से anti और syn addition आसानी से दिखता है।
+
+- **HBr** से bromocyclohexane मिलता है (दोनों carbons equivalent हैं, इसलिए orientation का सवाल नहीं उठता)।
+- **CCl₄ में Br₂** से **trans-1,2-dibromocyclohexane** मिलता है। Bromonium ion पर पीछे के face से Br⁻ का attack addition को anti बनाता है; product enantiomers के racemic pair के रूप में बनता है।
+- **पानी में Br₂** से **trans-2-bromocyclohexan-1-ol** (एक bromohydrin) मिलता है, यह भी anti addition से।
+- **Bromohydrin पर base (NaOH या KOH)** एक internal SN2 reaction से ring बंद करता है: alkoxide पीछे की side से bromide को हटाता है, और **cyclohexene oxide** (7-oxabicyclo[4.1.0]heptane) बनता है।
+- **ठंडा, dilute alkaline KMnO₄ या OsO₄** cis-cyclohexane-1,2-diol देता है; **peroxy acid फिर H₃O⁺** trans-diol देता है।
+
+<Eq ce="C6H10 ->[Br2, H2O] C6H10(OH)Br ->[NaOH] C6H10O + NaBr + H2O" />
+
+## Alkynes पर additions
+
+Alkynes भी यही reagents जोड़ते हैं, आमतौर पर दो stages में। पानी के लिए Hg²⁺ catalysis चाहिए और enol के through ketone मिलता है: [Kucherov reaction](/hi/reactions/kucherov-reaction/)। Hydrogenation को [Lindlar catalyst](/hi/reagents/lindlar-catalyst/) (CaCO₃ पर palladium, lead salts या quinoline से poisoned) से alkene stage पर रोका जा सकता है, जो H₂ को syn जोड़ता है और **cis-alkene** देता है।
+
+<ExamTip title="Common mistake">
+Lindlar catalyst के लिए nickel लिखना। Lindlar's catalyst poisoned **palladium** है; sulphur compounds से poisoned BaSO₄ पर Pd, Rosenmund catalyst है जो acid chlorides के लिए इस्तेमाल होता है।
+</ExamTip>
+
+**Positional isomerisation (अक्सर E2 के साथ पढ़ा जाता है)।** गर्म करने पर NaNH₂ internal triple bond को chain के सिरे पर ले आता है (but-2-yne → but-1-yne), क्योंकि terminal alkyne अपने sodium salt के रूप में फँस जाता है। गर्म करने पर alcoholic KOH उल्टा करता है, क्योंकि terminal alkyne salt रुकता नहीं और allene के रास्ते ज़्यादा stable internal alkyne बन जाता है।
+
+## काम के points
+
+- **gem-Diols, gem-amino alcohols और gem-halohydrins** आमतौर पर टूटकर C=O group बना देते हैं (H₂O, NH₃ या HX खोकर)। इसीलिए enols और hydrates सिर्फ़ intermediates के रूप में आते हैं।
+- **vic-Diiodides** आसानी से I₂ खोकर वापस alkene बना देते हैं, इसीलिए iodine alkenes पर ठीक से नहीं जुड़ता।
+
+## Member reactions
+
+- [Markovnikov's rule](/hi/reactions/markovnikov-rule/)
+- [Peroxide effect (anti-Markovnikov HBr addition)](/hi/reactions/peroxide-effect/)
+- [Oxymercuration–demercuration](/hi/reactions/oxymercuration-demercuration/)
+- [Hydroboration–oxidation](/hi/reactions/hydroboration-oxidation/)
+- [Prilezhaev epoxidation](/hi/reactions/prilezhaev-epoxidation/)
+- [Kucherov reaction](/hi/reactions/kucherov-reaction/)

@@ -1,0 +1,50 @@
+{
+ "page": "reagents/lindlar-catalyst",
+ "questions": [
+  {
+   "q": "But-2-yne is treated with one mole of H₂ over Lindlar catalyst. The product is:",
+   "options": [
+    "trans-But-2-ene",
+    "Butane",
+    "cis-But-2-ene",
+    "But-1-ene"
+   ],
+   "answer": 2,
+   "explain": "Both hydrogens are delivered from the palladium surface to the same face of the triple bond (syn addition), giving the cis alkene; the poisoned catalyst cannot reduce it further to butane."
+  },
+  {
+   "q": "Which reagent converts dec-5-yne into trans-dec-5-ene?",
+   "options": [
+    "Na in liquid NH₃",
+    "H₂ with Lindlar catalyst",
+    "H₂ with P-2 nickel boride",
+    "H₂ with Pd/C"
+   ],
+   "answer": 0,
+   "explain": "Sodium in liquid ammonia adds electrons and protons one at a time and gives the trans alkene. Lindlar and P-2 both give the cis alkene, and unpoisoned Pd/C goes all the way to the alkane."
+  },
+  {
+   "q": "Which statement about Lindlar catalyst is INCORRECT?",
+   "options": [
+    "It is palladium on CaCO₃ (or BaSO₄) poisoned with lead acetate and quinoline",
+    "Its active metal is nickel, deposited on barium sulphate",
+    "It adds hydrogen to an alkyne by syn addition",
+    "It does not reduce the alkene that forms"
+   ],
+   "answer": 1,
+   "explain": "The metal in Lindlar catalyst is palladium. Nickel appears only in the separate P-2 catalyst (nickel boride), a common mix-up."
+  },
+  {
+   "q": "Hept-1-en-6-yne takes up exactly one mole of H₂ over Lindlar catalyst. The product is:",
+   "smiles": "C=CCCCC#C",
+   "options": [
+    "Heptane",
+    "Hept-1-yne",
+    "Hept-1-ene",
+    "Hepta-1,6-diene"
+   ],
+   "answer": 3,
+   "explain": "Lindlar catalyst reduces only the C≡C of an enyne and leaves the isolated C=C untouched, so the terminal alkyne becomes a second terminal alkene."
+  }
+ ]
+}

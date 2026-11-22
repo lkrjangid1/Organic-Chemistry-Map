@@ -1,0 +1,83 @@
+---
+title: "SNi Mechanism (आंतरिक नाभिकस्नेही प्रतिस्थापन)"
+description: "SNi (internal nucleophilic substitution) में SOCl₂ alcohol को configuration की retention के साथ alkyl chloride में बदलता है; pyridine डालने पर inversion मिलता है।"
+aliases: ["आंतरिक नाभिकस्नेही प्रतिस्थापन", "एसएनआई मैकेनिज़्म", "SNi mechanism hindi", "SNi reaction hindi", "internal nucleophilic substitution hindi", "SOCl2 retention hindi", "darzens process hindi"]
+reagents: "SOCl₂ (thionyl chloride), बिना base के"
+conditions: "Neat या ether/dioxane में, बिना pyridine के; pyridine के साथ रास्ता SN2 बन जाता है"
+byproducts: "SO₂ और HCl (दोनों gases)"
+reactantName: "(R)-Butan-2-ol"
+productName: "(R)-2-Chlorobutane (retention)"
+faq:
+  - q: "SNi mechanism क्या है?"
+    a: "SNi का मतलब है substitution, nucleophilic, internal। Alcohol पहले alkyl chlorosulfite बनता है; फिर यह SO₂ खोता है और chlorine एक tight ion pair के through carbon पर उसी side से पहुँचता है जहाँ से oxygen गया था, इसलिए configuration retain रहता है।"
+  - q: "Pyridine के साथ SOCl₂ inversion क्यों देता है?"
+    a: "Pyridine HCl को पकड़ लेता है, chlorosulfite के साथ pyridinium intermediate बनाता है और free Cl⁻ छोड़ता है। यह chloride एक सामान्य SN2 step में carbon पर पीछे से attack करता है, इसलिए product का configuration inverted होता है।"
+  - q: "Alkyl chlorides बनाने के लिए thionyl chloride को क्यों prefer किया जाता है?"
+    a: "By-products SO₂ और HCl gases हैं और निकल जाते हैं, इसलिए alkyl chloride लगभग शुद्ध बचता है (NCERT)।"
+  - q: "Darzens process क्या है?"
+    a: "थोड़ी मात्रा में pyridine या किसी दूसरे tertiary amine की उपस्थिति में thionyl chloride द्वारा alcohol को alkyl chloride में बदलना। यह SN2 रास्ते से चलता है।"
+translated: 2026-11-22
+---
+
+## SNi mechanism क्या है?
+
+**SNi mechanism** (substitution, nucleophilic, internal) एक nucleophilic substitution है जिसमें nucleophile **उसी molecule के अंदर** से आता है और carbon पर **उसी side** से attack करता है जिधर से leaving group निकलता है। Classic case है **बिना base के thionyl chloride (SOCl₂)** के साथ alcohol की reaction: alcohol **configuration की retention** के साथ alkyl chloride बनता है, और SO₂ और HCl gases के रूप में निकल जाते हैं। अगर **pyridine** डाला जाए, तो reaction SN2 में बदल जाती है और **inversion** देती है।
+
+## General reaction
+
+<Eq ce="R-OH + SOCl2 -> R-O-SO-Cl + HCl ; R-O-SO-Cl -> R-Cl + SO2" />
+
+## Mechanism (SOCl₂, बिना base)
+
+1. **Chlorosulfite बनना।** Alcohol का oxygen sulphur पर attack करके Cl⁻ को हटाता है; H⁺ (HCl के रूप में) निकलने से **alkyl chlorosulfite**, R–O–S(=O)–Cl बनता है।
+2. **Tight ion pair।** C–O bond कमज़ोर होता है और chlorosulfite टूटने लगता है। Carbocation जैसा carbon और निकलता हुआ –OSOCl group एक **intimate ion pair** के रूप में साथ रहते हैं; कोई free carbocation नहीं बनता।
+3. **Internal delivery।** SO₂ निकल जाता है और जो chlorine sulphur पर था, वह carbon से सामने की face से, यानी उसी side से जहाँ oxygen था, bond बनाता है। Configuration **retain** रहता है।
+
+<KeyPoint>
+SN1 vs SNi: SN1 में ion pair अलग हो जाता है और planar cation पर दोनों faces से attack होता है (racemisation)। SNi में ion pair कभी अलग नहीं होता, इसलिए chlorine सिर्फ़ सामने की face तक पहुँच सकता है, जिससे retention मिलता है।
+</KeyPoint>
+
+## Pyridine के साथ: SN2 और inversion
+
+Pyridine chlorosulfite के साथ react करके pyridinium salt बनाता है और chloride ion देता है। फिर free Cl⁻ एक साफ़ **SN2** step में carbon के पीछे से attack करता है, इसलिए alkyl chloride **inverted** होता है। यह SOCl₂/pyridine method **Darzens process** (Darzens halogenation) है। याद रखने का नियम: **बिना pyridine → SNi; pyridine के साथ → SN2**।
+
+<Eq ce="(R)-CH3CH(OH)C2H5 ->[SOCl2] (R)-CH3CH(Cl)C2H5 ; (R)-CH3CH(OH)C2H5 ->[SOCl2, pyridine] (S)-CH3CH(Cl)C2H5" />
+
+## Phosphorus halides के साथ alcohols
+
+आम chlorinating reagents की तुलना:
+
+| Reagent | By-products | Exam label |
+|---|---|---|
+| SOCl₂ | SO₂↑ + HCl↑ | SNi (retention) |
+| SOCl₂ + pyridine | SO₂ + HCl (pyridinium salt के रूप में) | SN2 (inversion), Darzens process |
+| PCl₃ (या P₄ + Cl₂) | H₃PO₃ | SN2 (inversion) |
+| ether में PCl₅ | POCl₃ + HCl | SNi |
+| PCl₅ + pyridine | POCl₃ + HCl | SN2 |
+
+LibreTexts पुष्टि करता है कि PBr₃ और PCl₃ एक O–P intermediate के through react करते हैं जिसे chloride या bromide backside attack से हटाता है, जिससे inversion मिलता है। Exam answers में PCl₅ का mechanism SOCl₂ की तरह ही draw किया जाता है: R–O–PCl₄ बनता है, फिर phosphorus पर लगा एक chlorine P=O बनने के साथ internally deliver होता है। Exam answers में बिना base के PCl₅ को SNi माना जाता है; standard references इस बात को पक्का तय नहीं करते।
+
+<ExamTip>
+NCERT पूछता है कि SOCl₂ को क्यों prefer किया जाता है: दोनों by-products gases हैं, इसलिए alkyl halide शुद्ध मिलता है। JEE Advanced stereochemistry पूछता है: अकेला SOCl₂ → retention (SNi); SOCl₂/pyridine या PCl₃/PBr₃ → inversion (SN2)।
+</ExamTip>
+
+## Ethers के साथ PCl₅ की reaction
+
+Ethers भी PCl₅ से दो alkyl chlorides और POCl₃ में टूट जाते हैं:
+
+<Eq ce="R1-O-R2 + PCl5 -> R1-Cl + R2-Cl + POCl3" />
+
+आम exam mechanism में ether का oxygen phosphorus पर attack करता है; फिर chloride SN2 से एक alkyl group हटाता है, और बचा हुआ R–O–PCl₄ internal (SNi-type) delivery से दूसरा alkyl chloride देता है। यह sequence exam teaching है, sourced mechanism नहीं।
+
+## Limitations
+
+- SOCl₂ के साथ असली stereochemical नतीजे solvent पर बहुत निर्भर करते हैं। Ether या dioxane में retention हावी रहता है; दूसरे solvents में retention और inversion के mixtures मिलते हैं।
+- Dioxane जैसे nucleophilic solvent में retention असली SNi की जगह दो लगातार SN2 steps (double inversion) से भी आ सकता है।
+- Ion-pair वाला carbon SN1 की तरह rearrange भी हो सकता है।
+
+## Related reactions
+
+- [SN1 reaction](/hi/reactions/sn1-reaction/) और [SN2 reaction](/hi/reactions/sn2-reaction/): दो limiting pathways जिनके बीच SNi आता है।
+- [Neighbouring group participation](/hi/reactions/neighbouring-group-participation/): retention का एक और रास्ता, double inversion से।
+- [Ether cleavage with HX](/hi/reactions/ether-cleavage-with-hx/): ethers PCl₅ के साथ-साथ HI या HBr से भी टूटते हैं।
+- [Nucleophilic substitution overview](/hi/mechanisms/nucleophilic-substitution/)

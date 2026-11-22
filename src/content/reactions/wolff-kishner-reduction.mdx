@@ -1,0 +1,178 @@
+---
+title: "Wolff–Kishner Reduction"
+description: "Wolff–Kishner reduction turns the C=O of an aldehyde or ketone into CH₂, giving an alkane, using hydrazine and KOH heated in ethylene glycol at about 180–200 °C"
+aliases: ["Wolf Kishner reduction", "Wolff Kishner reduction", "Huang Minlon reduction", "Huang–Minlon modification"]
+kind: "named-reaction"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["wolff_kishner_reduction"]
+reactant:
+  name: "Acetophenone (1-phenylethan-1-one)"
+  smiles: "CC(=O)c1ccccc1"
+product:
+  name: "Ethylbenzene"
+  smiles: "CCc1ccccc1"
+byproducts: "N₂, H₂O"
+reagents: "Hydrazine (NH₂NH₂), then KOH (or NaOH / alkoxide)"
+conditions: "Heat in ethylene glycol or diethylene glycol, about 180–200 °C (453–473 K)"
+equation: "R2C=O ->[NH2NH2] R2C=NNH2 ->[KOH, ethylene glycol][\\Delta] R2CH2 + N2"
+notesPages: [13, 62, 63]
+steps:
+  - title: "Hydrazone formation"
+    text: "Hydrazine adds to the C=O of acetophenone and water is lost, giving the hydrazone. This is the usual addition–elimination of an ammonia derivative to a carbonyl group."
+    arrows: "NH₂ lone pair of hydrazine → carbonyl C, C=O π → O; after proton transfers, loss of water forms C=N."
+    species:
+      - smiles: "CC(=O)c1ccccc1"
+        label: "Acetophenone"
+        highlight: "C=O"
+      - smiles: "NN"
+        label: "Hydrazine"
+      - smiles: "CC(=NN)c1ccccc1"
+        label: "Hydrazone"
+        highlight: "C=NN"
+  - title: "Deprotonation of N–H"
+    text: "KOH in hot ethylene glycol removes a proton from the terminal NH₂; the negative charge is shared between nitrogen and carbon by resonance. Wikipedia describes this solvent-assisted deprotonation as the rate-determining step."
+    arrows: "OH⁻ lone pair → H on NH₂; the N–H bond pair stays on nitrogen as an anion."
+    species:
+      - smiles: "CC(=NN)c1ccccc1"
+        label: "Hydrazone"
+        highlight: "[NH2]"
+      - smiles: "[OH-]"
+        label: "Hydroxide"
+      - smiles: "CC(=N[NH-])c1ccccc1"
+        label: "Hydrazone anion"
+        highlight: "[NH-]"
+  - title: "Protonation on carbon"
+    text: "In its carbanion resonance form the anion takes a proton from the solvent on carbon, giving the diimide R₂CH–N=N–H."
+    arrows: "Carbon lone pair (resonance form) → H of the solvent; the N=N π bond is kept."
+    species:
+      - smiles: "C[C-](N=N)c1ccccc1"
+        label: "Anion (carbanion form)"
+        highlight: "[C-]"
+      - smiles: "O"
+        label: "Solvent (H–OR)"
+      - smiles: "CC(N=N)c1ccccc1"
+        label: "Diimide"
+        highlight: "N=[NH]"
+  - title: "Second deprotonation and loss of N₂"
+    text: "Base removes the remaining N–H, and N₂ is lost, leaving a carbanion R₂CH⁻ (not a carbocation). Release of very stable N₂ makes this irreversible."
+    arrows: "OH⁻ removes the N–H; the N lone pair forms N≡N and the C–N bond pair stays on carbon as C⁻."
+    species:
+      - smiles: "CC(N=N)c1ccccc1"
+        label: "Diimide"
+        highlight: "N=[NH]"
+      - smiles: "N#N"
+        label: "Nitrogen gas"
+      - smiles: "C[CH-]c1ccccc1"
+        label: "Carbanion"
+        highlight: "[CH-]"
+  - title: "Protonation to the alkane"
+    text: "The carbanion takes a proton from the solvent (glycol or water), giving ethylbenzene: the C=O has become CH₂."
+    arrows: "Carbanion lone pair → H of the solvent."
+    species:
+      - smiles: "C[CH-]c1ccccc1"
+        label: "Carbanion"
+        highlight: "[CH-]"
+      - smiles: "O"
+        label: "Water / glycol"
+      - smiles: "CCc1ccccc1"
+        label: "Ethylbenzene"
+        highlight: "[CH2]c"
+memoryTricks: []
+faq:
+  - q: "What is the product of the Wolff–Kishner reduction?"
+    a: "An alkane: the C=O group becomes CH₂. For example, acetophenone gives ethylbenzene and acetone gives propane, with nitrogen gas released."
+  - q: "Why is ethylene glycol used in the Wolff–Kishner reduction?"
+    a: "The decomposition of the hydrazone needs temperatures of roughly 180–200 °C. Ethylene glycol (or diethylene glycol) is a high-boiling solvent that allows the mixture to be heated that far, and it also supplies the proton for the final carbanion."
+  - q: "What is the difference between Clemmensen and Wolff–Kishner reduction?"
+    a: "Both reduce C=O to CH₂. Clemmensen uses zinc amalgam and conc. HCl (acidic), so it suits base-sensitive compounds; Wolff–Kishner uses hydrazine and KOH (strongly basic), so it suits acid-sensitive compounds."
+  - q: "What is the driving force of the Wolff–Kishner reduction?"
+    a: "The loss of nitrogen gas. Forming the very stable N≡N molecule pushes the decomposition of the hydrazone anion forward and leaves a carbanion that is then protonated."
+  - q: "What is the Huang–Minlon modification?"
+    a: "The carbonyl compound is refluxed with hydrazine hydrate and NaOH or KOH in a glycol, then water and excess hydrazine are distilled off so the temperature can rise to about 200 °C. This shortens the reaction time and improves the yield."
+related: ["friedel-crafts-acylation", "wittig-reaction", "friedel-crafts-alkylation", "grignard-reagent"]
+sources:
+  - title: "Wolff–Kishner reduction"
+    url: "https://en.wikipedia.org/wiki/Wolff%E2%80%93Kishner_reduction"
+    publisher: "Wikipedia"
+  - title: "19.9: Nucleophilic Addition of Hydrazine – The Wolff–Kishner Reaction"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/19:_Aldehydes_and_Ketones-_Nucleophilic_Addition_Reactions/19.09:_Nucleophilic_Addition_of_Hydrazine_-_The_Wolff-Kishner_Reaction"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "Wolff-Kishner Reduction"
+    url: "https://www.organic-chemistry.org/namedreactions/wolff-kishner-reduction.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 3
+---
+
+## What is the Wolff–Kishner reduction?
+
+The **Wolff–Kishner reduction** converts the **carbonyl group of an aldehyde or ketone into a CH₂ group**, so the carbonyl compound becomes an **alkane** (or alkylbenzene). The carbonyl compound is first condensed with **hydrazine** to a hydrazone, which is then heated with a strong base such as **KOH** in a high-boiling solvent like **ethylene glycol**; nitrogen gas is given off. It was reported by Nikolai Kishner in 1911 and Ludwig Wolff in 1912.
+
+## General reaction
+
+In short: R–CO–R treated with N₂H₄ and KOH, heated above 180 °C with ethylene glycol, giving R–CH₂–R.
+
+<Eq ce="R-CO-R ->[NH2NH2, KOH][ethylene glycol, \Delta] R-CH2-R + N2 + H2O" />
+
+## Mechanism
+
+1. **Hydrazone formation.** Hydrazine adds to the C=O and water is lost, giving the hydrazone R₂C=N–NH₂. This is the usual addition–elimination of an ammonia derivative to a carbonyl group.
+2. **Deprotonation of N–H.** The base removes a proton from the terminal NH₂. The negative charge is shared between nitrogen and carbon by resonance. Wikipedia describes this solvent-assisted deprotonation as the rate-determining step.
+3. **Protonation on carbon.** The solvent puts a proton on carbon, giving R₂CH–N=N–H (a diimide).
+4. **Loss of N₂.** A second deprotonation on nitrogen is followed by loss of N₂, leaving a carbanion R₂CH⁻.
+5. **Protonation.** The carbanion takes a proton from the solvent to give the alkane R₂CH₂.
+
+<Eq ce="R2C=O + H2N-NH2 -> R2C=N-NH2 + H2O" />
+<Eq ce="R2C=N-NH2 ->[OH-][\Delta] R2CH- + N2 ->[H2O] R2CH2" />
+
+<ExamTip title="Common mistake">
+After N₂ leaves, the carbon is left with the bonding pair it shared with nitrogen, so the intermediate is a **carbanion (R₂CH⁻)**, not a carbocation. The solvent (glycol or water) then protonates it. Draw a negative charge on carbon at this step.
+</ExamTip>
+
+<KeyPoint>
+The driving force is the release of nitrogen gas: forming the very stable N≡N triple bond makes the decomposition of the hydrazone irreversible.
+</KeyPoint>
+
+## Examples
+
+**1. Acetophenone to ethylbenzene.**
+
+<Eq ce="C6H5COCH3 ->[NH2NH2, KOH][ethylene glycol, \Delta] C6H5CH2CH3 + N2 + H2O" />
+
+**2. Propiophenone to propylbenzene.** This is the standard second step after Friedel–Crafts acylation of benzene with propanoyl chloride, and it gives a straight-chain alkylbenzene that direct alkylation cannot.
+
+<Eq ce="C6H5COCH2CH3 ->[NH2NH2, KOH][\Delta] C6H5CH2CH2CH3" />
+
+**3. An aldehyde.** Cyclopropanecarbaldehyde is reduced to methylcyclopropane under the same conditions; the CHO group becomes CH₃.
+
+## Clemmensen versus Wolff–Kishner
+
+| Feature | Clemmensen | Wolff–Kishner |
+|---|---|---|
+| Reagents | Zn-Hg, conc. HCl | NH₂NH₂, KOH, glycol, heat |
+| Medium | strongly acidic | strongly basic |
+| Use when the substrate is | base-sensitive | acid-sensitive |
+| Overall change | C=O to CH₂ | C=O to CH₂ |
+
+<ExamTip>
+If the molecule also contains an acid-sensitive group, choose Wolff–Kishner; if it contains a base-sensitive group (for example an ester that hot KOH would hydrolyse), choose Clemmensen. In both, an aromatic ring attached to the C=O is left untouched.
+</ExamTip>
+
+## Huang–Minlon modification
+
+In 1946 Huang Minlon simplified the procedure: the carbonyl compound is refluxed in 85% hydrazine hydrate with about three equivalents of NaOH in a glycol solvent, then water and excess hydrazine are distilled off and the temperature is allowed to rise to about 200 °C. Removing the water speeds up the reaction and raises the yield; this one-pot version is what most textbooks now describe.
+
+## Limitations and exceptions
+
+- **Base-sensitive substrates** (esters, some halides) do not survive the hot, strongly basic conditions.
+- **Highly hindered ketones** may not form the hydrazone at all.
+- **Azine formation.** The hydrazone can react with a second molecule of the carbonyl compound to give an azine; excluding water suppresses this.
+- **Side reactions.** α-Substituted ketones can eliminate to alkenes, strained rings next to the C=O may open, and in α,β-unsaturated ketones the C=C can migrate.
+
+## Related reactions
+
+- [Friedel–Crafts acylation](/reactions/friedel-crafts-acylation/) followed by Wolff–Kishner reduction is the standard route to unrearranged alkylbenzenes.
+- [Friedel–Crafts alkylation](/reactions/friedel-crafts-alkylation/) gives rearranged products with primary halides, which is why the acylation–reduction sequence is preferred.
+- [Wittig reaction](/reactions/wittig-reaction/) also removes the carbonyl oxygen but forms a C=C bond instead of CH₂.

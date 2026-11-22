@@ -1,0 +1,52 @@
+{
+ "page": "reactions/baeyer-villiger-oxidation",
+ "questions": [
+  {
+   "q": "Acetophenone, C₆H₅COCH₃, is treated with mCPBA in CH₂Cl₂. The product is:",
+   "smiles": "CC(=O)c1ccccc1",
+   "options": [
+    "Methyl benzoate",
+    "Benzoic acid",
+    "Phenyl acetate",
+    "2-Phenyloxirane"
+   ],
+   "answer": 2,
+   "explain": "Phenyl has a higher migratory aptitude than methyl, so oxygen is inserted between the carbonyl carbon and the ring, giving CH₃COOC₆H₅. Methyl benzoate would need methyl to migrate."
+  },
+  {
+   "q": "The correct order of migratory aptitude in the Baeyer–Villiger oxidation is:",
+   "options": [
+    "Methyl > primary alkyl > phenyl > cyclohexyl > tertiary alkyl",
+    "Tertiary alkyl > cyclohexyl > phenyl > primary alkyl > methyl",
+    "Phenyl > tertiary alkyl > cyclohexyl > methyl > primary alkyl",
+    "Tertiary alkyl > phenyl > primary alkyl > cyclohexyl > methyl"
+   ],
+   "answer": 1,
+   "explain": "The group that better stabilises positive charge during the concerted shift to oxygen migrates: tertiary > cyclohexyl (secondary) > phenyl > primary > methyl."
+  },
+  {
+   "q": "3-Methylbutan-2-one is oxidised with a peroxyacid. The ester formed is:",
+   "smiles": "CC(C)C(C)=O",
+   "options": [
+    "Methyl 2-methylpropanoate",
+    "Ethyl propanoate",
+    "Propyl acetate",
+    "Isopropyl acetate"
+   ],
+   "answer": 3,
+   "explain": "Isopropyl (secondary) outranks methyl, so it moves to oxygen and becomes the alkoxy part: CH₃COOCH(CH₃)₂. Methyl 2-methylpropanoate is what methyl migration would give."
+  },
+  {
+   "q": "2-Methylcyclohexanone is treated with mCPBA. The major product is:",
+   "smiles": "CC1CCCCC1=O",
+   "options": [
+    "7-Methyloxepan-2-one (methyl on the carbon bonded to the ring oxygen)",
+    "3-Methyloxepan-2-one (methyl on the carbon next to C=O)",
+    "6-Methyltetrahydropyran-2-one",
+    "2-Methylcyclohexane-1,1-diol"
+   ],
+   "answer": 0,
+   "explain": "The ring CH(CH₃) carbon (secondary) outranks the ring CH₂ carbon (primary), so oxygen is inserted on the substituted side and the ring grows from six to seven atoms. The six-membered lactone would need a ring contraction, which does not happen."
+  }
+ ]
+}

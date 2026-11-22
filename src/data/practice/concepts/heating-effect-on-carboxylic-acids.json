@@ -1,0 +1,49 @@
+{
+ "page": "concepts/heating-effect-on-carboxylic-acids",
+ "questions": [
+  {
+   "q": "Adipic acid, HOOC–(CH₂)₄–COOH, on heating gives",
+   "options": [
+    "Adipic anhydride (7-membered ring)",
+    "Cyclohexanone",
+    "Cyclopentanone",
+    "Pentanoic acid"
+   ],
+   "answer": 2,
+   "explain": "1,6-Dicarboxylic acids lose both CO₂ and H₂O and close a five-membered carbocyclic ring, giving cyclopentanone, which has one carbon fewer than the acid. Cyclohexanone comes from pimelic acid."
+  },
+  {
+   "q": "Which dicarboxylic acid forms a cyclic anhydride when heated?",
+   "options": [
+    "Malonic acid",
+    "Glutaric acid",
+    "Pimelic acid",
+    "Oxalic acid"
+   ],
+   "answer": 1,
+   "explain": "Glutaric acid (1,5-) loses water to give a six-membered cyclic anhydride. Malonic and oxalic acids are too short and lose CO₂; pimelic acid gives cyclohexanone."
+  },
+  {
+   "q": "The products of simply heating oxalic acid (without any dehydrating agent) are",
+   "options": [
+    "HCOOH + CO₂",
+    "CO + CO₂ + H₂O",
+    "CH₃COOH + CO₂",
+    "CO + H₂O"
+   ],
+   "answer": 0,
+   "explain": "Heat alone gives formic acid and carbon dioxide. CO + CO₂ + H₂O is the trap: that result needs concentrated H₂SO₄ to remove water."
+  },
+  {
+   "q": "3-Hydroxybutanoic acid, 4-hydroxybutanoic acid and lactic acid are heated separately. The products are, respectively,",
+   "options": [
+    "γ-Butyrolactone, but-2-enoic acid, lactide",
+    "Lactide, γ-butyrolactone, but-2-enoic acid",
+    "But-2-enoic acid, lactide, γ-butyrolactone",
+    "But-2-enoic acid, γ-butyrolactone, lactide"
+   ],
+   "answer": 3,
+   "explain": "A β-hydroxy acid dehydrates to the α,β-unsaturated acid, a γ-hydroxy acid closes a five-membered lactone, and an α-hydroxy acid (lactic acid) condenses in pairs to the cyclic diester lactide."
+  }
+ ]
+}

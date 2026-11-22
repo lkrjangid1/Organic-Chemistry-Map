@@ -1,0 +1,170 @@
+---
+title: "Markovnikov's Rule"
+description: "Markovnikov's rule: when HX adds to an unsymmetrical alkene, H goes to the carbon with more H atoms and X to the other, via the more stable carbocation."
+aliases: ["Markovnikov rule", "Markownikoff's rule", "Markonikov rule", "Anti-Markovnikov rule", "Addition of HX to alkenes", "Hydrohalogenation of alkenes"]
+kind: "general-reaction"
+family: "electrophilic-addition"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "Propene"
+  smiles: "CC=C"
+product:
+  name: "2-Bromopropane"
+  smiles: "CC(C)Br"
+reagents: "HX (HCl, HBr, HI); also H₂O with acid for hydration"
+conditions: "No peroxide; usually room temperature"
+equation: "CH3-CH=CH2 + HBr -> CH3-CHBr-CH3"
+notesPages: [8, 28, 29]
+steps:
+  - title: "Protonation (slow)"
+    text: "The π electrons of propene attack the H of H–Br. H adds to the CH₂ end (C-1), so the positive charge sits on C-2. In exam answers this is the slow, rate-determining step."
+    arrows: "C=C π electrons → H of H–Br; the H–Br bond pair leaves as Br⁻."
+    species:
+      - smiles: "CC=C"
+        label: "Propene"
+        highlight: "C=[CH2]"
+      - smiles: "Br"
+        label: "Hydrogen bromide"
+      - smiles: "C[CH+]C"
+        label: "2° carbocation"
+  - title: "Why the 2° cation wins"
+    text: "Adding H⁺ to C-2 instead would give a 1° cation. The 2° cation is more stable (more hyperconjugation and +I effect), so it forms faster and leads to the major product."
+    arrows: "No new arrows: this comparison decides which carbon receives H⁺."
+    species:
+      - smiles: "C[CH+]C"
+        label: "2° (isopropyl) cation, favoured"
+        highlight: "[CH+]"
+      - smiles: "CC[CH2+]"
+        label: "1° (propyl) cation, not formed"
+        highlight: "[CH2+]"
+  - title: "Capture by Br⁻"
+    text: "The bromide ion attacks the carbocation, giving 2-bromopropane: the negative part of HX ends up on the more substituted carbon."
+    arrows: "Lone pair of Br⁻ → empty p orbital of the carbocation."
+    species:
+      - smiles: "C[CH+]C"
+        label: "2° carbocation"
+        highlight: "[CH+]"
+      - smiles: "[Br-]"
+        label: "Bromide"
+      - smiles: "CC(C)Br"
+        label: "2-Bromopropane"
+memoryTricks:
+  - text: "इसके अनुसार -ve charge वाला element वहाँ पर attack करता है जहाँ पर +ve charge More Stable होता है।"
+    meaning: "Markovnikov: the negatively charged part attacks where the positive charge is more stable."
+  - text: "इसके अनुसार -ve charge वाला element वहाँ पर attack करता है जहाँ पर +ve charge less stable होता है।"
+    meaning: "Anti-Markovnikov: the negatively charged part ends up where a positive charge would be less stable."
+  - text: "Low temp per banta h"
+    meaning: "The kinetically controlled product is formed at low temperature."
+  - text: "High temp per banta h"
+    meaning: "The thermodynamically controlled product is formed at high temperature."
+faq:
+  - q: "What is Markovnikov's rule?"
+    a: "When a polar reagent HX adds to an unsymmetrical alkene, the hydrogen attaches to the double-bond carbon that already has more hydrogens, and X attaches to the carbon with more alkyl groups. Propene with HBr therefore gives 2-bromopropane."
+  - q: "Why does Markovnikov's rule work?"
+    a: "The first step is addition of H⁺ to form a carbocation. The more substituted carbocation is more stable (hyperconjugation and inductive effect), forms faster, and is then captured by X⁻."
+  - q: "What is the difference between Markovnikov and anti-Markovnikov addition?"
+    a: "In Markovnikov addition X goes to the more substituted carbon via a carbocation. In anti-Markovnikov addition, such as HBr with peroxide, X goes to the less substituted carbon because the reaction runs through a radical, not a carbocation."
+  - q: "What are the kinetic and thermodynamic products of HBr with 1,3-butadiene?"
+    a: "At low temperature the 1,2-adduct, 3-bromobut-1-ene, forms fastest (kinetic product). At higher temperature the more stable 1,4-adduct, 1-bromobut-2-ene, dominates (thermodynamic product)."
+related: ["peroxide-effect", "hydroboration-oxidation", "oxymercuration-demercuration", "pinacol-pinacolone-rearrangement", "free-radical-halogenation"]
+sources:
+  - title: "Markovnikov's rule"
+    url: "https://en.wikipedia.org/wiki/Markovnikov%27s_rule"
+    publisher: "Wikipedia"
+  - title: "7.8: Orientation of Electrophilic Additions – Markovnikov's Rule"
+    url: "https://chem.libretexts.org/Courses/Athabasca_University/Chemistry_350:_Organic_Chemistry_I/07:_Alkenes-_Structure_and_Reactivity/7.08:_Orientation_of_Electrophilic_Additions-_Markovnikov's_Rule"
+    publisher: "Chemistry LibreTexts"
+  - title: "Thermodynamic and kinetic reaction control"
+    url: "https://en.wikipedia.org/wiki/Thermodynamic_and_kinetic_reaction_control"
+    publisher: "Wikipedia"
+  - title: "14.6: Electrophilic Attack on Conjugated Dienes: Kinetic and Thermodynamic Control"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Map%3A_Organic_Chemistry_(Vollhardt_and_Schore)/14%3A_Delocalized_Pi_Systems%3A_Investigation_by_Ultraviolet_and_Visible_Spectroscopy/14.06%3A_Electrophilic_Attack__on_Conjugated_Dienes%3A_Kinetic__and_Thermodynamic_Control"
+    publisher: "Chemistry LibreTexts"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 4
+  note: "Notes call H⁺ addition the rate-determining step; sources tie the rate to carbocation stability but do not name the RDS, so it is kept as exam convention. The ring-expansion example (page 29) is standard carbocation chemistry not covered by the sources checked."
+---
+
+## What is Markovnikov's rule?
+
+**Markovnikov's rule** predicts the major product when a polar reagent **H–X** (HCl, HBr, HI, or H₂O with acid) adds to an **unsymmetrical alkene**: the **hydrogen** goes to the double-bond carbon that already carries **more hydrogens**, and **X** goes to the carbon carrying **more alkyl groups**. Propene and HBr therefore give **2-bromopropane** as the major product. Vladimir Markovnikov proposed the rule in 1870; the modern reason is that the reaction goes through the **more stable carbocation**.
+
+<Trick>
+इसके अनुसार -ve charge वाला element वहाँ पर attack करता है जहाँ पर +ve charge More Stable होता है। (The negatively charged part attacks where the positive charge is more stable.)
+</Trick>
+
+## Mechanism
+
+Addition of HX to an alkene is an **electrophilic addition** in two steps.
+
+1. **Protonation.** The π electrons of C=C attack H⁺ of H–X. A new C–H bond forms and the other carbon becomes a **carbocation**; X⁻ is released. In exam answers this step is the slow, rate-determining step, and its rate depends on how stable the carbocation is.
+2. **Capture by X⁻.** The halide ion attacks the carbocation, giving the alkyl halide.
+
+<Eq ce="CH2=CH2 + H-X -> CH3-CH2+ + X- -> CH3-CH2-X" />
+
+For propene, H⁺ can add to C1 (giving a **2°** cation) or to C2 (giving a **1°** cation). The 2° cation is more stable because of more hyperconjugation and +I effect of the alkyl groups, so it forms faster and leads to the major product.
+
+<Eq ce="CH3-CH=CH2 ->[H+] CH3-CH+-CH3 ->[Br-] CH3-CHBr-CH3" />
+
+<KeyPoint>
+Rate of HX addition: HI greater than HBr greater than HCl, much greater than HF (the H–X bond gets weaker down the group). More alkyl groups on the C=C also speed up the reaction, because they stabilise the carbocation.
+</KeyPoint>
+
+## Examples
+
+**1. 2-Methylpropene with HBr**
+
+<Eq ce="(CH3)2C=CH2 + HBr -> (CH3)3C-Br" />
+
+Only 2-bromo-2-methylpropane forms; the other orientation would need a primary carbocation.
+
+**2. Acid-catalysed hydration**
+
+<Eq ce="CH3-CH=CH2 + H2O ->[H+] CH3-CH(OH)-CH3" />
+
+OH goes to the more substituted carbon, giving propan-2-ol.
+
+**3. Carbocation rearrangement**
+
+If the first carbocation can become more stable by a 1,2-shift, it rearranges before X⁻ attacks. For example, isopropenylcyclobutane and HBr first give a tertiary cation next to the four-membered ring; a ring bond migrates (ring expansion to a less strained five-membered ring), a methyl group then shifts to make a tertiary cation, and Br⁻ finally gives **1-bromo-1,2-dimethylcyclopentane**. Each step appears as a separate hump on the energy diagram.
+
+## Kinetic vs thermodynamic control: HBr with 1,3-butadiene
+
+Protonation of buta-1,3-diene at C1 gives a resonance-stabilised **allylic cation**, with positive charge shared by C2 and C4. Br⁻ can attack either site.
+
+<Eq ce="CH2=CH-CH=CH2 + HBr -> CH3-CHBr-CH=CH2 + CH3-CH=CH-CH2Br" />
+
+| Feature | KCP: 1,2-adduct (3-bromobut-1-ene) | TCP: 1,4-adduct (1-bromobut-2-ene) |
+|---|---|---|
+| Favoured at | low temperature | higher temperature |
+| Forms | faster (formed first) | slower |
+| Activation energy | lower | higher |
+| Stability | less stable (terminal C=C) | more stable (internal, disubstituted C=C) |
+| Energy released | less exothermic | more exothermic |
+
+At low temperature the products cannot revert to the allylic cation, so the faster-forming 1,2-product dominates. At higher temperature the steps become reversible, equilibrium is reached and the more stable 1,4-product wins.
+
+<ExamTip>
+"Low temp per banta h" (KCP) and "High temp per banta h" (TCP). In any KCP/TCP question, KCP = lower Ea = formed faster; TCP = more stable = more negative ΔH.
+</ExamTip>
+
+## Anti-Markovnikov addition
+
+When **HBr** adds in the presence of a **peroxide**, the product is reversed: propene gives 1-bromopropane. This is the **peroxide (Kharasch) effect**, which runs through a free radical instead of a carbocation. A handy way to phrase it: the negative part ends up where a positive charge would be **less** stable. HCl and HI do not show this effect.
+
+## Limitations and exceptions
+
+- The rule applies to **unsymmetrical** alkenes; symmetrical alkenes give one product either way.
+- Carbocation **rearrangements** (hydride, methyl or ring shifts) can give products that the simple rule does not predict.
+- Radical additions (HBr/peroxide) and hydroboration–oxidation give anti-Markovnikov products.
+- The less stable carbocation still forms to a small extent, so the other regioisomer appears as a minor product.
+
+## Related reactions
+
+- [Peroxide effect](/reactions/peroxide-effect/): anti-Markovnikov addition of HBr.
+- [Hydroboration–oxidation](/reactions/hydroboration-oxidation/) and [oxymercuration–demercuration](/reactions/oxymercuration-demercuration/): anti-Markovnikov and Markovnikov hydration without rearrangement.
+- [Pinacol–pinacolone rearrangement](/reactions/pinacol-pinacolone-rearrangement/): another reaction driven by carbocation 1,2-shifts.
+- [Electrophilic addition reactions](/mechanisms/electrophilic-addition/) hub.

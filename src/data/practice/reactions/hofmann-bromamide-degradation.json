@@ -1,0 +1,50 @@
+{
+ "page": "reactions/hofmann-bromamide-degradation",
+ "questions": [
+  {
+   "q": "Butanamide is warmed with Br₂ and aqueous NaOH. The organic product is:",
+   "smiles": "CCCC(N)=O",
+   "options": [
+    "Butan-1-amine",
+    "Propanamide",
+    "Butanoic acid",
+    "Propan-1-amine"
+   ],
+   "answer": 3,
+   "explain": "Hofmann bromamide degradation is a step-down reaction: the C=O carbon leaves as CO₂ (trapped as Na₂CO₃), so the amine has one carbon fewer than the amide."
+  },
+  {
+   "q": "Which intermediate is formed when the alkyl group migrates from carbon to nitrogen in the Hofmann bromamide degradation?",
+   "options": [
+    "A free acyl nitrene, R–CO–N:",
+    "An isocyanate, R–N=C=O",
+    "A nitrile, R–C≡N",
+    "A diazonium ion, R–N₂⁺"
+   ],
+   "answer": 1,
+   "explain": "R shifts to nitrogen as Br⁻ leaves the N-bromoamide anion, in one step, giving the isocyanate; this is then hydrolysed to a carbamic acid that loses CO₂. No free nitrene forms in the accepted mechanism."
+  },
+  {
+   "q": "Which amide does NOT give an amine with Br₂/NaOH?",
+   "options": [
+    "N-Methylacetamide",
+    "Benzamide",
+    "Acetamide",
+    "Butanamide"
+   ],
+   "answer": 0,
+   "explain": "Only primary amides (–CONH₂) react, because the nitrogen must lose two hydrogens during N-bromination and deprotonation. N-Methylacetamide has only one N–H. Benzamide works and gives aniline."
+  },
+  {
+   "q": "Acetamide is treated with Br₂ and a base in methanol as the solvent, instead of water. The main product is:",
+   "options": [
+    "Methanamine",
+    "Methyl acetate",
+    "Methyl carbamate CH₃–NH–COOCH₃",
+    "N-Methylacetamide"
+   ],
+   "answer": 2,
+   "explain": "Methanol is a nucleophilic solvent and traps the methyl isocyanate as a carbamate before it can be hydrolysed and decarboxylated to the amine."
+  }
+ ]
+}

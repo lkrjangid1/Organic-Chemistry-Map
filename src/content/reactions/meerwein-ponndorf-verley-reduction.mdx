@@ -1,0 +1,122 @@
+---
+title: "Meerwein–Ponndorf–Verley Reduction"
+description: "Meerwein–Ponndorf–Verley (MPV) reduction converts aldehydes and ketones into alcohols using aluminium isopropoxide in isopropanol, leaving C=C bonds untouched."
+aliases: ["MPV reduction", "Meerwein Ponndorf Verley reduction", "Meerwein-Pondorf-Verley reduction", "Aluminium isopropoxide reduction"]
+kind: "named-reaction"
+family: "reduction-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: []
+reactant:
+  name: "Cyclohexanone"
+  smiles: "O=C1CCCCC1"
+product:
+  name: "Cyclohexanol"
+  smiles: "OC1CCCCC1"
+byproducts: "Acetone (propan-2-one)"
+reagents: "Aluminium isopropoxide, Al[OCH(CH₃)₂]₃, with propan-2-ol (isopropanol) as hydride donor and solvent"
+conditions: "Heat; acetone is distilled off to drive the equilibrium"
+equation: "R2C=O + (CH3)2CHOH ->[Al(OCH(CH3)2)3] R2CHOH + (CH3)2C=O"
+notesPages: [66]
+memoryTricks:
+  - text: "केवल aldehyde or Ketone का अपचयन करता है।"
+    meaning: "MPV reduces only aldehydes or ketones."
+faq:
+  - q: "What is the reagent in the MPV reduction?"
+    a: "Aluminium isopropoxide, Al[OCH(CH₃)₂]₃, in propan-2-ol. The isopropoxide group supplies the hydride and is itself oxidised to acetone."
+  - q: "What is the difference between MPV reduction and Oppenauer oxidation?"
+    a: "They are the same aluminium-catalysed hydride transfer run in opposite directions. MPV uses excess isopropanol and removes acetone to make the alcohol; Oppenauer oxidation uses excess acetone to turn a secondary alcohol into a ketone."
+  - q: "Does the MPV reduction reduce a C=C double bond?"
+    a: "No. Alkenes and alkynes do not react, so an unsaturated aldehyde or ketone gives an unsaturated alcohol. This chemoselectivity is the main reason the reaction is asked in exams."
+  - q: "Why is acetone distilled off in the MPV reduction?"
+    a: "Every step is reversible. Acetone has the lowest boiling point in the mixture, so removing it by distillation shifts the equilibrium towards the reduced alcohol."
+  - q: "What is the mechanism of the MPV reduction?"
+    a: "The carbonyl oxygen coordinates to aluminium, and a hydride moves from the α-carbon of an isopropoxide ligand to the carbonyl carbon through a six-membered cyclic transition state. Exchange with isopropanol then releases the product alcohol."
+related: ["oppenauer-oxidation", "cannizzaro-reaction", "tishchenko-reaction", "reagents/sodium-borohydride", "reagents/lithium-aluminium-hydride"]
+sources:
+  - title: "Meerwein–Ponndorf–Verley reduction"
+    url: "https://en.wikipedia.org/wiki/Meerwein%E2%80%93Ponndorf%E2%80%93Verley_reduction"
+    publisher: "Wikipedia"
+  - title: "Meerwein-Ponndorf-Verley Reduction"
+    url: "https://www.organic-chemistry.org/namedreactions/meerwein-ponndorf-verley-reduction.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "Oppenauer oxidation"
+    url: "https://en.wikipedia.org/wiki/Oppenauer_oxidation"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 3
+---
+
+## What is the Meerwein–Ponndorf–Verley reduction?
+
+The **Meerwein–Ponndorf–Verley (MPV) reduction** converts an **aldehyde into a primary alcohol** or a **ketone into a secondary alcohol** using **aluminium isopropoxide** in **isopropanol (propan-2-ol)**. A hydride is transferred from the isopropoxide group to the carbonyl carbon, and the isopropanol is oxidised to acetone. Only the C=O group is reduced: **C=C and C≡C bonds survive**.
+
+The reaction was found independently by Albert Verley and by Hans Meerwein with Rudolf Schmidt in 1925; Wolfgang Ponndorf introduced aluminium isopropoxide in isopropanol as the reagent system in 1926.
+
+## General reaction
+
+<Eq ce="R-CO-R' + (CH3)2CHOH <=>[Al(O-iPr)3] R-CH(OH)-R' + CH3COCH3" />
+
+Here Al(O-iPr)₃ stands for Al[OCH(CH₃)₂]₃. The reaction is an equilibrium; acetone (b.p. 56 °C) is distilled out of the flask as it forms, which pulls the reaction towards the alcohol.
+
+## Mechanism
+
+1. **Coordination.** The carbonyl oxygen of the substrate binds to the Lewis-acidic aluminium of Al(O-iPr)₃.
+2. **Hydride transfer through a six-membered ring.** Aluminium, the isopropoxide oxygen, its α-carbon and hydrogen, and the substrate's C=O form a cyclic six-membered transition state. The hydride moves from the isopropoxide α-carbon to the carbonyl carbon in one concerted step.
+3. **Release of acetone.** The isopropoxide ligand, having lost its hydride, leaves as acetone; the substrate is now an aluminium alkoxide.
+4. **Alkoxide exchange.** Isopropanol swaps with the new alkoxide on aluminium, freeing the product alcohol and regenerating aluminium isopropoxide.
+
+<KeyPoint>
+No free hydride ion and no metal hydride are involved: the hydride comes from the **C–H of isopropanol**. That is why the reaction is so selective for C=O.
+</KeyPoint>
+
+## Examples
+
+1. **Ketone to secondary alcohol.**
+<Eq ce="C6H10O ->[Al(O-iPr)3][(CH3)2CHOH] C6H11OH" />
+Cyclohexanone gives cyclohexanol.
+
+2. **Unsaturated aldehyde: C=C is kept.**
+<Eq ce="CH3CH=CHCHO ->[Al(O-iPr)3][(CH3)2CHOH] CH3CH=CHCH2OH" />
+But-2-enal gives but-2-en-1-ol; the double bond is not touched.
+
+3. **Aldehyde in the presence of a ketone.** Aldehydes are reduced faster than ketones, so careful control can reduce the aldehyde group first.
+
+## Chemoselectivity: what MPV does and does not reduce
+
+| Group | MPV result |
+|---|---|
+| Aldehyde | 1° alcohol |
+| Ketone | 2° alcohol |
+| C=C, C≡C | No reaction |
+| Other groups (esters, nitro, halides) | Not reduced under these mild conditions |
+
+<ExamTip>
+If a question asks for "reduction of only the carbonyl group of an unsaturated aldehyde or ketone", MPV (Al(O-iPr)₃ / isopropanol) and [NaBH₄](/reagents/sodium-borohydride/) are the safe answers. [LiAlH₄](/reagents/lithium-aluminium-hydride/) in excess may also attack a C=C conjugated with C=O.
+</ExamTip>
+
+## Relation to the Oppenauer oxidation
+
+The [Oppenauer oxidation](/reactions/oppenauer-oxidation/) is the **reverse** of the MPV reduction. With aluminium isopropoxide and a large excess of **acetone**, a secondary alcohol gives up its hydride to acetone and becomes a ketone. Which product forms depends only on which side of the equilibrium is pushed:
+
+| | MPV reduction | Oppenauer oxidation |
+|---|---|---|
+| Substrate | Aldehyde or ketone | Secondary alcohol |
+| Hydride donor | Isopropanol | Substrate alcohol |
+| Hydride acceptor | Substrate C=O | Acetone (excess) |
+| Driving the equilibrium | Distil off acetone | Excess acetone |
+| Product | Alcohol | Ketone |
+
+## Limitations and side reactions
+
+- **Aldol condensation** can compete for aldehydes or ketones with α-hydrogens, because aluminium alkoxides are basic (see [aldol condensation](/reactions/aldol-condensation/)).
+- **Aldehydes with no α-hydrogen** can undergo the [Tishchenko reaction](/reactions/tishchenko-reaction/), giving an ester instead of the alcohol.
+- Being an equilibrium, the reaction needs acetone removal or a large excess of isopropanol for good yields.
+
+## Related reactions
+
+- [Oppenauer oxidation](/reactions/oppenauer-oxidation/): the reverse process.
+- [Cannizzaro reaction](/reactions/cannizzaro-reaction/): another hydride transfer between carbonyl carbons, but base-induced.
+- [Sodium borohydride](/reagents/sodium-borohydride/) and [lithium aluminium hydride](/reagents/lithium-aluminium-hydride/): metal-hydride alternatives.
+- [Reduction reactions hub](/mechanisms/reduction-reactions/).

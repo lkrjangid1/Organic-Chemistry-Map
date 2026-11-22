@@ -1,0 +1,50 @@
+{
+ "page": "reactions/ullmann-reaction",
+ "questions": [
+  {
+   "q": "Iodobenzene is heated at about 200 °C with an excess of copper powder. The organic product is:",
+   "options": [
+    "Benzene",
+    "Biphenyl",
+    "Diphenyl ether",
+    "Phenol"
+   ],
+   "answer": 1,
+   "explain": "The Ullmann reaction joins two aryl groups through a new C–C bond: 2 C₆H₅I + 2 Cu → C₆H₅–C₆H₅ + 2 CuI. Diaryl ethers come from the separate Ullmann-type reaction of aryl halides with phenoxides."
+  },
+  {
+   "q": "Which aryl halide does NOT undergo the classical Ullmann reaction with Cu on heating?",
+   "options": [
+    "Iodobenzene",
+    "2-Chloronitrobenzene",
+    "Chlorobenzene",
+    "4-Chloronitrobenzene"
+   ],
+   "answer": 2,
+   "explain": "Plain chlorobenzene has a strong C–Cl bond and an electron-rich ring, so copper does not react with it. A nitro group ortho or para to Cl makes the aryl chloride electron-poor enough to couple, and iodides react most easily."
+  },
+  {
+   "q": "According to the accepted mechanism, the classical Ullmann reaction proceeds through:",
+   "options": [
+    "Free aryl radicals",
+    "An aryl carbocation",
+    "A benzyne intermediate",
+    "An arylcopper (Ar–Cu) intermediate"
+   ],
+   "answer": 3,
+   "explain": "Copper first gives an arylcopper species, Ar–Cu, which reacts with a second Ar–X to form Ar–Ar and CuX. Electron spin resonance studies rule out free radicals, which is the trap if you mix it up with the Fittig reaction."
+  },
+  {
+   "q": "The compound shown is heated with copper-bronze. The product is:",
+   "options": [
+    "2,2′-Dinitrobiphenyl",
+    "4,4′-Dinitrobiphenyl",
+    "2-Nitrobiphenyl",
+    "Nitrobenzene"
+   ],
+   "answer": 0,
+   "explain": "The ortho nitro group activates the C–Cl bond, and the two aryl groups join where the chlorine atoms were, so each NO₂ stays ortho to the new biaryl bond. 4,4′-Dinitrobiphenyl would come from 4-chloronitrobenzene.",
+   "smiles": "O=[N+]([O-])c1ccccc1Cl"
+  }
+ ]
+}

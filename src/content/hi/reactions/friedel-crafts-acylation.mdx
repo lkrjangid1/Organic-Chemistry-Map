@@ -1,0 +1,112 @@
+---
+title: "Friedel–Crafts Acylation (फ्रीडल-क्राफ्ट्स ऐसिलीकरण)"
+description: "Friedel–Crafts acylation में acyl chloride या anhydride और anhydrous AlCl₃ से benzene, acylium ion के through acetophenone जैसा aryl ketone बनाता है।"
+aliases: ["फ्रीडल क्राफ्ट्स ऐसिलीकरण", "फ्रीडल क्राफ्ट एसिलेशन", "बेंजीन का ऐसिलीकरण", "friedel crafts acylation hindi", "friedel craft acylation hindi", "acylation of benzene hindi", "acylium ion hindi"]
+reagents: "Acyl chloride (RCOCl) या acid anhydride, anhydrous AlCl₃ के साथ (कम से कम एक equivalent)"
+conditions: "Anhydrous; गुनगुना (benzene + CH₃COCl लगभग 80 °C); aqueous work-up से ketone AlCl₃ से अलग होता है"
+byproducts: "HCl (acetic anhydride के साथ CH₃COOH)"
+reactantName: "Benzene"
+productName: "Acetophenone (1-phenylethan-1-one)"
+steps:
+  - title: "Acylium ion बनना"
+    text: "AlCl₃ ethanoyl chloride से chloride ले लेता है, जिससे acylium ion और AlCl₄⁻ बनते हैं। Charge oxygen के साथ बँटा होता है (CH₃–C≡O⁺ ↔ CH₃–C⁺=O), इसलिए acylium ion rearrange नहीं होता।"
+    arrows: "Cl का lone pair → Al का खाली orbital; C–Cl bond pair AlCl₄⁻ के रूप में निकलता है और O का lone pair C≡O⁺ बनाता है।"
+  - title: "Ring का attack"
+    text: "Benzene के π electrons acylium ion के carbon पर attack करते हैं, जिससे resonance-stabilised arenium ion (σ-complex) बनता है। इस step में aromaticity टूटती है और यही slow step है।"
+    arrows: "Benzene का एक π pair → acylium carbon; C≡O⁺ का π pair → oxygen।"
+  - title: "Deprotonation"
+    text: "AlCl₄⁻ ring का proton हटाता है, aromaticity वापस आती है और HCl निकलता है, जिससे acetophenone मिलता है।"
+    arrows: "AlCl₄⁻ के Cl का lone pair → ring का C–H; C–H bond pair → ring, aromatic π system फिर से बनता है।"
+  - title: "Complex बनना और work-up"
+    text: "Ketone का oxygen AlCl₃ से जुड़ जाता है, इसलिए कम से कम एक equivalent AlCl₃ चाहिए। आखिर में पानी डालने से यह complex टूटता है और free acetophenone मिलता है।"
+    arrows: "Carbonyl O का lone pair → Al; work-up में पानी O–Al bond तोड़ता है।"
+faq:
+  - q: "Benzene को acetyl chloride और anhydrous AlCl₃ के साथ react कराने पर क्या product मिलता है?"
+    a: "Acetophenone (C₆H₅COCH₃) और HCl। Acetyl chloride और AlCl₃ से बना acylium ion CH₃CO⁺ ring के एक hydrogen को replace करता है।"
+  - q: "Friedel–Crafts acylation में electrophile क्या है?"
+    a: "Acylium ion, R–C≡O⁺, जो R–C⁺=O और R–C≡O⁺ का resonance hybrid है। यह तब बनता है जब AlCl₃ acyl chloride से chloride हटाता है।"
+  - q: "Friedel–Crafts acylation में rearrangement या polysubstitution क्यों नहीं होता?"
+    a: "Acylium ion resonance-stabilised है, इसलिए यह carbocation की तरह rearrange नहीं होता। Ketone product का C=O group electrons खींचकर ring को deactivate कर देता है, इसलिए दूसरा acylation नहीं होता।"
+  - q: "Acylation में catalytic amount से ज़्यादा AlCl₃ क्यों चाहिए?"
+    a: "Ketone product एक Lewis base है और AlCl₃ के साथ stable complex बनाता है, इसलिए आखिर में AlCl₃ free नहीं होता। कम से कम एक equivalent लिया जाता है, और aqueous work-up में complex तोड़ा जाता है।"
+  - q: "Benzene से n-propylbenzene कैसे बनाएँ?"
+    a: "Benzene को propanoyl chloride और AlCl₃ से acylate करके propiophenone बनाएँ, फिर Clemmensen या Wolff–Kishner reduction से C=O को CH₂ में reduce करें। 1-Chloropropane से सीधा alkylation rearranged isopropylbenzene देगा।"
+  - q: "Benzene को pivaloyl chloride और AlCl₃ के साथ react कराने पर क्या product मिलता है?"
+    a: "tert-Butylbenzene। Pivaloyl acylium ion carbon monoxide खोकर stable tert-butyl cation देता है, जो ring को acylate करने की जगह alkylate करता है।"
+translated: 2026-11-22
+---
+
+## Friedel–Crafts acylation क्या है?
+
+**Friedel–Crafts acylation** एक electrophilic aromatic substitution है जिसमें **acyl group (R–CO–) ring के एक hydrogen की जगह लेता है**। Arene को **anhydrous AlCl₃** की उपस्थिति में **acyl chloride** या **acid anhydride** के साथ react कराया जाता है, और product एक **aryl ketone** होता है। सबसे classic example है benzene और acetyl chloride से **acetophenone** बनना। Electrophile resonance-stabilised **acylium ion** है।
+
+## General reaction
+
+<Eq ce="Ar-H + R-CO-Cl ->[anhyd. AlCl3] Ar-CO-R + HCl" />
+<Eq ce="Ar-H + (RCO)2O ->[anhyd. AlCl3] Ar-CO-R + RCOOH" />
+
+## Mechanism
+
+1. **Acylium ion बनना।** AlCl₃ acyl chloride से chloride ले लेता है। बना हुआ cation oxygen के lone pair से stabilise होता है, इसलिए इसे resonance hybrid की तरह लिखना सबसे सही है।
+
+<Eq ce="CH3-CO-Cl + AlCl3 -> CH3-C#O+ + AlCl4-" />
+
+2. **Ring का attack।** Benzene के π electrons acylium ion के carbon पर attack करते हैं, जिससे resonance-stabilised arenium ion (σ-complex) बनता है। इस step में aromaticity टूटती है और यही slow step है।
+3. **Deprotonation।** AlCl₄⁻ ring का proton हटाता है, aromaticity वापस आती है और HCl निकलता है।
+4. **Complex बनना और work-up।** Ketone का oxygen AlCl₃ से जुड़ जाता है। आखिर में पानी डालने से यह complex टूटता है और free ketone मिलता है।
+
+<KeyPoint>
+Acylium ion को R–C≡O⁺ ↔ R–C⁺=O लिखा जाता है। चूँकि positive charge oxygen के साथ बँटा होता है, acylium ion एक सामान्य primary carbocation से कहीं ज़्यादा stable है और **rearrange नहीं होता** (नीचे दिया pivaloyl वाला case, जिसमें CO निकलता है, याद रखने लायक exception है)।
+</KeyPoint>
+
+## Examples
+
+**1. Benzene से acetophenone (NCERT example)।**
+
+<Eq ce="C6H6 + CH3COCl ->[anhyd. AlCl3] C6H5COCH3 + HCl" />
+
+**2. Activated ring का acylation।** Anisole का –OCH₃ group ortho/para director है, और bulky acyl group मुख्य रूप से para पर जाता है, जिससे 4-methoxyacetophenone मिलता है।
+
+<Eq ce="C6H5OCH3 + CH3COCl ->[AlCl3] p-CH3OC6H4COCH3 + HCl" />
+
+**3. Heterocycles और ring closure।** Thiophene, acetyl chloride के साथ हल्के SnCl₄ catalyst में react करके 2-acetylthiophene देता है; furan, acetic anhydride से acylate होकर 2-acetylfuran देता है। Intramolecular version में 4-phenylbutanoic acid, polyphosphoric acid या methanesulfonic acid के साथ cyclise होकर α-tetralone (3,4-dihydronaphthalen-1(2H)-one) देता है।
+
+<Eq ce="C6H5(CH2)3COOH ->[PPA][\Delta] C10H10O + H2O" />
+
+## Exception: pivaloyl chloride से alkylation होता है
+
+एक मशहूर case जिसमें "acylation" से alkylbenzene मिलता है, **pivaloyl chloride**, (CH₃)₃C–COCl (2,2-dimethylpropanoyl chloride), वाला है। इसका acylium ion, (CH₃)₃C–C≡O⁺, **tert-butyl cation और carbon monoxide** के साथ equilibrium में होता है, क्योंकि tertiary carbocation असामान्य रूप से stable है। फिर tert-butyl cation ring को alkylate करता है, इसलिए exam answers में benzene, pivaloyl chloride और AlCl₃ का product **tert-butylbenzene** है, ketone नहीं।
+
+<Eq ce="(CH3)3C-C#O+ <=> (CH3)3C+ + CO" />
+<Eq ce="C6H6 + (CH3)3C-COCl ->[AlCl3] C6H5-C(CH3)3 + CO + HCl" />
+
+<ExamTip>
+Friedel–Crafts acylation का product ketone लिखने से पहले C=O के बगल वाले carbon को देखें। अगर यह tertiary है (जैसे pivaloyl chloride में), तो CO निकलने से stable tertiary carbocation बनता है, और answer alkylation product है।
+</ExamTip>
+
+## Acylation बनाम alkylation
+
+| Feature | Alkylation | Acylation |
+|---|---|---|
+| Electrophile | carbocation R⁺ | acylium ion RCO⁺ |
+| Rearrangement | primary halides के साथ आम | नहीं होता |
+| आगे substitution | polyalkylation (product activated) | एक पर रुक जाता है (product deactivated) |
+| AlCl₃ की ज़रूरत | catalytic | कम से कम एक equivalent |
+
+<ExamTip>
+Straight-chain alkylbenzene के लिए standard दो step वाला answer है: Friedel–Crafts acylation, फिर C=O का CH₂ में reduction (Clemmensen: Zn-Hg/HCl, या Wolff–Kishner: NH₂NH₂/KOH)। इससे rearrangement और polysubstitution दोनों से बचा जाता है।
+</ExamTip>
+
+## Limitations और exceptions
+
+- **Deactivated rings पर reaction नहीं होता।** Nitrobenzene और strong meta-directing deactivators वाली दूसरी rings का acylation नहीं होता।
+- **Amino groups reaction रोक देते हैं।** Aniline और दूसरे basic amines nitrogen के lone pair से AlCl₃ से जुड़ जाते हैं, जिससे ring deactivate हो जाती है।
+- **Stoichiometric Lewis acid।** Acyl chloride और ketone product दोनों AlCl₃ से complex बनाते हैं, इसलिए यह खर्च हो जाता है। Electron-rich rings के साथ zinc(II) salts जैसे mild catalysts कम मात्रा में इस्तेमाल हो सकते हैं।
+- **Formyl group।** Benzene पर –CHO group लगाने के लिए ordinary acyl chloride नहीं, बल्कि इससे जुड़ा Gattermann–Koch reaction (anhydrous AlCl₃ के साथ CO और HCl) इस्तेमाल होता है।
+
+## Related reactions
+
+- [Friedel–Crafts alkylation](/hi/reactions/friedel-crafts-alkylation/) में carbocation electrophile होता है, और इसमें rearrangement और polyalkylation की समस्या होती है।
+- [Wolff–Kishner reduction](/hi/reactions/wolff-kishner-reduction/) aryl ketone को alkylbenzene में बदलता है।
+- [Haloform reaction](/hi/reactions/haloform-reaction/) methyl ketone acetophenone को benzoic acid में बदलता है।
+- [Electrophilic aromatic substitution](/hi/mechanisms/electrophilic-aromatic-substitution/) में common mechanism और directing effects दिए हैं।

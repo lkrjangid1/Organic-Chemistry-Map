@@ -1,0 +1,7 @@
+{"page": "reactions/kolbe-electrolysis",
+ "questions": [
+  {"q": "Which alkane can NOT be prepared by Kolbe electrolysis of an aqueous carboxylate salt?", "options": ["Ethane", "Butane", "Methane", "Hexane"], "answer": 2, "explain": "Two alkyl radicals always couple, so the product has at least two carbons; even sodium acetate gives ethane. Methane can never be made this way."},
+  {"q": "An aqueous solution of sodium butanoate is electrolysed. The hydrocarbon formed at the anode is:", "options": ["Propane", "Hexane", "Octane", "Butane"], "answer": 1, "explain": "The alkane has 2 × (carbons in the acid − 1) carbons: butanoate loses CO₂ to give a propyl radical, and two propyl radicals give hexane (C₆)."},
+  {"q": "During Kolbe electrolysis of aqueous sodium propanoate, which product is formed at the cathode?", "options": ["Butane", "Carbon dioxide", "Ethene", "Hydrogen gas"], "answer": 3, "explain": "Water is reduced at the cathode to H₂ and OH⁻, leaving NaOH in solution. Butane and CO₂ are both anode products, formed from oxidation of the carboxylate."},
+  {"q": "A mixture of sodium acetate and sodium propanoate is electrolysed. The alkanes obtained are:", "options": ["Ethane, propane and butane", "Propane only", "Ethane and butane only", "Methane, ethane and propane"], "answer": 0, "explain": "Methyl and ethyl radicals form at the anode, and all three combinations occur (CH₃–CH₃, CH₃–C₂H₅, C₂H₅–C₂H₅). That is why odd-carbon alkanes from this method come as mixtures."}
+ ]}

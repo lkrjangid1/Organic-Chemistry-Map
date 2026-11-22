@@ -1,0 +1,50 @@
+{
+ "page": "reactions/fritsch-buttenberg-wiechell-rearrangement",
+ "questions": [
+  {
+   "q": "2-Bromo-1,1-diphenylethene is heated with sodium alkoxide. The organic product is:",
+   "smiles": "BrC=C(c1ccccc1)c1ccccc1",
+   "options": [
+    "1,1-Diphenylethene",
+    "Diphenylacetylene",
+    "2-Alkoxy-1,1-diphenylethene",
+    "Benzophenone"
+   ],
+   "answer": 1,
+   "explain": "The base removes the vinylic H and bromide leaves from the same carbon; a phenyl group then shifts across to give the C≡C, so the two phenyls end up on different carbons of the alkyne."
+  },
+  {
+   "q": "Which description best fits the key elimination step of the Fritsch–Buttenberg–Wiechell rearrangement?",
+   "options": [
+    "β-Elimination of H and X from adjacent carbons (E2)",
+    "Syn elimination through a cyclic transition state",
+    "E1 elimination through a vinyl cation",
+    "α-Elimination of H and X from the same carbon, giving a vinylidene carbene or carbenoid"
+   ],
+   "answer": 3,
+   "explain": "The carbon bearing X carries the only H and the other alkene carbon has no H, so β-elimination is impossible. H and X leave from the same carbon and the electron-deficient centre is repaired by a 1,2-shift."
+  },
+  {
+   "q": "In the FBW rearrangement of a 1,1-diaryl-2-bromoethene, which aryl group migrates?",
+   "options": [
+    "The aryl group cis to the bromine",
+    "Always the more electron-rich aryl group",
+    "The aryl group trans to the bromine",
+    "Both migrate equally, regardless of geometry"
+   ],
+   "answer": 2,
+   "explain": "The group trans to the leaving halogen is the one that migrates; the cis group does not migrate well. Geometry, not electronics, is the deciding factor here."
+  },
+  {
+   "q": "A substrate (Ar)(Ar′)C=CHBr, with two different aryl groups, is treated with n-BuLi at low temperature. The alkyne obtained is:",
+   "options": [
+    "Ar–C≡C–Ar′, whichever aryl group migrates",
+    "Ar–C≡C–Ar if Ar′ is trans to Br",
+    "A 1 : 1 mixture of Ar–C≡C–Ar and Ar′–C≡C–Ar′",
+    "Ar–C≡C–H, with loss of Ar′"
+   ],
+   "answer": 0,
+   "explain": "Whichever aryl shifts, both aryl groups end up on the triple bond, so the product is the same unsymmetrical alkyne Ar–C≡C–Ar′. No aryl group is lost and no symmetrical alkyne can form from a single molecule."
+  }
+ ]
+}

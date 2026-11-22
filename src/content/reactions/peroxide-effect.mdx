@@ -1,0 +1,188 @@
+---
+title: "Peroxide Effect (Kharasch Effect)"
+description: "Peroxide (Kharasch) effect: HBr adds to an unsymmetrical alkene against Markovnikov's rule when a peroxide is present, so propene gives 1-bromopropane."
+aliases: ["Kharasch effect", "Kharash effect", "Anti-Markovnikov addition of HBr", "HBr peroxide addition", "Free radical addition of HBr"]
+kind: "named-reaction"
+family: "electrophilic-addition"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "Propene"
+  smiles: "CC=C"
+product:
+  name: "1-Bromopropane"
+  smiles: "CCCBr"
+reagents: "HBr with an organic peroxide such as benzoyl peroxide, (C₆H₅CO)₂O₂"
+conditions: "Light or gentle heat to split the O–O bond; non-polar solvent"
+equation: "CH3-CH=CH2 + HBr ->[(C6H5CO)2O2] CH3-CH2-CH2Br"
+notesPages: [9, 32, 33]
+steps:
+  - title: "Peroxide homolysis"
+    text: "On warming or under light, the weak O–O bond of benzoyl peroxide breaks homolytically, giving two radicals (initiation)."
+    arrows: "Fish-hook arrows: the O–O bond pair splits, one electron going to each oxygen."
+    species:
+      - smiles: "O=C(OOC(=O)c1ccccc1)c1ccccc1"
+        label: "Benzoyl peroxide"
+        highlight: "OO"
+      - smiles: "[O]C(=O)c1ccccc1"
+        label: "Benzoyloxy radical"
+  - title: "Bromine atom formation"
+    text: "The oxygen radical removes the hydrogen atom from HBr, producing a bromine atom, Br•."
+    arrows: "One H–Br electron pairs with the O• electron to form O–H; the other stays on Br."
+    species:
+      - smiles: "[O]C(=O)c1ccccc1"
+        label: "Benzoyloxy radical"
+        highlight: "[OX1]"
+      - smiles: "Br"
+        label: "Hydrogen bromide"
+      - smiles: "[Br]"
+        label: "Bromine atom"
+  - title: "Br• adds to the CH₂ end"
+    text: "Br• adds to the terminal CH₂ of propene, leaving the unpaired electron on the secondary carbon, the more stable radical. This step decides the regiochemistry and is often marked as the slow step in exam answers."
+    arrows: "One π electron pairs with Br• to form C–Br at C-1; the other π electron stays on C-2."
+    species:
+      - smiles: "CC=C"
+        label: "Propene"
+        highlight: "C=[CH2]"
+      - smiles: "[Br]"
+        label: "Bromine atom"
+      - smiles: "C[CH]CBr"
+        label: "2° carbon radical"
+  - title: "H abstraction from HBr"
+    text: "The carbon radical takes a hydrogen atom from another HBr, giving 1-bromopropane and a fresh Br• that carries the chain on. No carbocation forms, so no rearrangement occurs."
+    arrows: "The radical electron pairs with one H–Br electron to form C–H; the other electron stays on Br as Br•."
+    species:
+      - smiles: "C[CH]CBr"
+        label: "2° carbon radical"
+        highlight: "[CH1;X3]"
+      - smiles: "Br"
+        label: "Hydrogen bromide"
+      - smiles: "CCCBr"
+        label: "1-Bromopropane"
+  - title: "Termination"
+    text: "The chain stops when two radicals meet and pair up, for example Br• + Br• → Br₂, or a carbon radical with Br•."
+    arrows: "Each radical gives one electron to form the new bond."
+    species:
+      - smiles: "[Br]"
+        label: "Bromine atom"
+      - smiles: "[Br]"
+        label: "Bromine atom"
+      - smiles: "BrBr"
+        label: "Bromine"
+memoryTricks:
+  - text: "HBr मे ही केवल peroxide effect लागू होता है"
+    meaning: "The peroxide effect applies only to HBr."
+faq:
+  - q: "What is the product when propene reacts with HBr in the presence of peroxide?"
+    a: "1-Bromopropane (n-propyl bromide). Without peroxide the same reaction gives 2-bromopropane, the Markovnikov product."
+  - q: "Why is the peroxide effect shown only by HBr and not by HCl or HI?"
+    a: "For a radical chain to run, both propagation steps must be energetically downhill. With HCl the H-abstraction step is uphill because the H–Cl bond is strong, and with HI the addition of an iodine atom to the alkene is uphill, so only HBr works."
+  - q: "Is the peroxide effect an electrophilic addition?"
+    a: "No. In the presence of peroxide HBr adds by a free-radical chain mechanism through a carbon radical, not a carbocation. The ordinary, peroxide-free addition of HBr is electrophilic."
+  - q: "Why is the addition anti-Markovnikov?"
+    a: "The bromine atom adds first, to the terminal CH₂ carbon, because that leaves the unpaired electron on the more substituted, more stable secondary carbon. Hydrogen is added last, so Br ends up on the carbon with more hydrogens."
+related: ["markovnikov-rule", "free-radical-halogenation", "nbs-allylic-bromination", "hydroboration-oxidation"]
+sources:
+  - title: "Free-radical addition"
+    url: "https://en.wikipedia.org/wiki/Free-radical_addition"
+    publisher: "Wikipedia"
+  - title: "Markovnikov's rule (Anti-Markovnikov reactions)"
+    url: "https://en.wikipedia.org/wiki/Markovnikov%27s_rule"
+    publisher: "Wikipedia"
+  - title: "13.13: Radical Addition Reactions to Double Bonds"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Map%3A_Organic_Chemistry_(Smith)/13%3A_Radical_Reactions/13.13%3A_Radical_Addition_Reactions_to_Double_Bonds"
+    publisher: "Chemistry LibreTexts"
+verified:
+  status: "conflict"
+  checked: 2026-11-21
+  sourceCount: 3
+  note: "Notes show the carbon radical taking H from R–OH; sources say it abstracts H from another HBr, which regenerates Br• and keeps the chain going. Page follows the sources. Notes mark Br• addition as the RDS; sources do not state an RDS."
+---
+
+## What is the peroxide effect?
+
+The **peroxide effect**, also called the **Kharasch effect**, is the **anti-Markovnikov addition of HBr** to an unsymmetrical alkene when an organic peroxide is present. Bromine ends up on the carbon that carries **more hydrogens**, so propene gives **1-bromopropane** instead of 2-bromopropane. The peroxide changes the mechanism from an ionic (carbocation) pathway to a **free-radical chain** pathway. Morris Kharasch, who explained it in the 1930s, gave it the name "peroxide effect".
+
+<Eq ce="CH3-CH=CH2 + HBr ->[(C6H5CO)2O2] CH3-CH2-CH2Br" />
+
+## Mechanism
+
+The reaction is a radical chain with initiation, propagation and termination steps.
+
+**I. Initiation**
+
+1. The weak O–O bond of the peroxide breaks **homolytically** on warming or under light, giving two alkoxy radicals.
+2. An alkoxy radical removes the hydrogen atom from HBr, producing a **bromine atom** (Br•).
+
+<Eq ce="R-O-O-R ->[light or heat] 2 R-O^{.}" />
+<Eq ce="R-O^{.} + H-Br -> R-OH + Br^{.}" />
+
+**II. Propagation**
+
+3. Br• adds to the **terminal CH₂** of propene. Two radicals are possible; the one with the unpaired electron on the **secondary carbon** is more stable (more hyperconjugation), so it is the one formed.
+4. This carbon radical removes a hydrogen atom from **another molecule of HBr**, giving 1-bromopropane and a fresh Br•, which carries the chain forward.
+
+<Eq ce="CH3-CH=CH2 + Br^{.} -> CH3-\dot{C}H-CH2Br" />
+<Eq ce="CH3-\dot{C}H-CH2Br + HBr -> CH3-CH2-CH2Br + Br^{.}" />
+
+**III. Termination**
+
+5. The chain stops when any two radicals meet and pair up, for example Br• + Br• → Br₂, or a carbon radical with Br•.
+
+<KeyPoint>
+The regiochemistry is decided in step 3. Br• adds where it leaves the **more stable radical** (2° rather than 1°). Because Br adds first and H adds last, the final product has Br on the less substituted carbon. In exam answers this addition of Br• is often marked as the slow step.
+</KeyPoint>
+
+## Why only HBr shows the peroxide effect
+
+A radical chain only runs well if **both** propagation steps release energy.
+
+- **HBr:** both steps are exothermic, so the chain is fast and beats the slower ionic addition, especially in non-polar solvents.
+- **HCl:** the H–Cl bond is strong, so the carbon radical cannot easily take H from HCl (step 4 is endothermic).
+- **HI:** the iodine atom is too weak an attacker, so adding I• to the C=C (step 3) is endothermic.
+- **HF:** radical formation is extremely unfavourable.
+
+<Trick>
+HBr मे ही केवल peroxide effect लागू होता है: the peroxide effect applies only to HBr.
+</Trick>
+
+## Examples
+
+**1. Propene, with and without peroxide**
+
+<Eq ce="CH3-CH=CH2 + HBr -> CH3-CHBr-CH3" />
+<Eq ce="CH3-CH=CH2 + HBr ->[H2O2 or (C6H5CO)2O2] CH3-CH2-CH2Br" />
+<Eq ce="CH3-CH=CH2 + HCl ->[peroxide] CH3-CHCl-CH3" />
+
+With HCl the product is 2-chloropropane whether or not peroxide is present.
+
+**2. 2-Methylpropene (isobutylene)**
+
+<Eq ce="(CH3)2C=CH2 + HBr ->[peroxide] (CH3)2CH-CH2Br" />
+
+Without peroxide, the product is 2-bromo-2-methylpropane; with peroxide it is 1-bromo-2-methylpropane.
+
+**3. But-1-ene**
+
+<Eq ce="CH3CH2CH=CH2 + HBr ->[peroxide] CH3CH2CH2CH2Br" />
+
+Historically, early chemists got 1-bromobutane only when their samples were contaminated with peroxides, which is how the effect was discovered.
+
+<ExamTip>
+Check three things in any HX + alkene question: (i) is the reagent HBr, (ii) is a peroxide (R₂O₂, H₂O₂, benzoyl peroxide) mentioned, and (iii) is the alkene unsymmetrical? Only when all three are true is the product anti-Markovnikov. For a symmetrical alkene such as but-2-ene, both pathways give the same product.
+</ExamTip>
+
+## Limitations and exceptions
+
+- Only **HBr** gives anti-Markovnikov addition by this route; HCl, HI and HF follow Markovnikov's rule even with peroxide.
+- Because the intermediate is a radical, not a carbocation, **no carbocation rearrangements** (hydride or methyl shifts) occur.
+- Radical traps such as oxygen slow the chain, and concentrated alkenes can also undergo radical polymerisation.
+- For water, the anti-Markovnikov alcohol is made by hydroboration–oxidation, not by a peroxide.
+
+## Related reactions
+
+- [Markovnikov's rule](/reactions/markovnikov-rule/): the normal, ionic addition of HX.
+- [Free radical halogenation](/reactions/free-radical-halogenation/): the same initiation–propagation–termination pattern.
+- [NBS allylic bromination](/reactions/nbs-allylic-bromination/): another bromine-radical reaction of propene, but a substitution.
+- [Hydroboration–oxidation](/reactions/hydroboration-oxidation/): anti-Markovnikov addition of water.
+- [Electrophilic addition reactions](/mechanisms/electrophilic-addition/) and [free radical reactions](/mechanisms/free-radical-reactions/) hubs.

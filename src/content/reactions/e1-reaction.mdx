@@ -1,0 +1,138 @@
+---
+title: "E1 Reaction"
+description: "E1 reaction: a two-step unimolecular elimination in which a carbocation forms first and then loses a β-H to give an alkene. Mechanism, Saytzeff rule, examples."
+aliases: ["E1 mechanism", "Unimolecular elimination", "E1 elimination", "First-order elimination"]
+kind: "mechanism-type"
+family: "elimination-reactions"
+exams: [jee-main, jee-advanced, neet]
+mapEdges: ["E1_2-bromo-2-methylbutane_to_2-methyl-2-butene"]
+reactant:
+  name: "2-Bromo-2-methylbutane"
+  smiles: "CC(C)(Br)CC"
+product:
+  name: "2-Methylbut-2-ene (Saytzeff product)"
+  smiles: "CC(C)=CC"
+byproducts: "HBr (as Br⁻ and protonated solvent); some SN1 ether or alcohol"
+reagents: "Weak base or none (ethanol, water, or acid for alcohols)"
+conditions: "Polar protic solvent, heat"
+equation: "(CH3)2CBr-CH2CH3 ->[C2H5OH][\\Delta] (CH3)2C=CH-CH3 + HBr"
+notesPages: [19]
+steps:
+  - title: "Ionisation (slow, rate-determining)"
+    text: "The C–Br bond of 2-bromo-2-methylbutane breaks heterolytically in hot ethanol, giving a planar tertiary carbocation and Br⁻. Only the substrate is involved, so rate = k[RX]; this is the same first step as in SN1."
+    arrows: "The C–Br bond pair moves onto bromine, which leaves as Br⁻."
+    species:
+      - smiles: "CC(C)(Br)CC"
+        label: "2-Bromo-2-methylbutane"
+        highlight: "CBr"
+      - smiles: "C[C+](C)CC"
+        label: "Tertiary carbocation"
+      - smiles: "[Br-]"
+        label: "Bromide"
+  - title: "Deprotonation (fast)"
+    text: "A weak base, here the solvent ethanol, removes an H⁺ from a carbon next to the positive centre. No strong base is needed and no anti-periplanar arrangement is required."
+    arrows: "Lone pair of the ethanol O → β-H on the CH₂; the C–H bond pair → the C–C⁺ bond, forming the new π bond."
+    species:
+      - smiles: "C[C+](C)CC"
+        label: "Tertiary carbocation"
+        highlight: "[C+][CH2]"
+      - smiles: "CCO"
+        label: "Ethanol (weak base)"
+        highlight: "[OX2H]"
+  - title: "Saytzeff (major) and minor alkenes"
+    text: "Loss of H from the CH₂ gives the trisubstituted 2-methylbut-2-ene, the major (Saytzeff) product. Loss of H from a CH₃ gives 2-methylbut-1-ene as the minor alkene; some SN1 ether also forms from the same cation."
+    arrows: "The same C–H → C=C arrow drawn from a CH₃ hydrogen instead gives the less substituted alkene."
+    species:
+      - smiles: "CC(C)=CC"
+        label: "2-Methylbut-2-ene (major)"
+        highlight: "C=C"
+      - smiles: "C=C(C)CC"
+        label: "2-Methylbut-1-ene (minor)"
+      - smiles: "CC[OH2+]"
+        label: "Protonated ethanol"
+memoryTricks: []
+faq:
+  - q: "What is the rate law of an E1 reaction?"
+    a: "Rate = k[substrate]. Only the substrate takes part in the slow step (ionisation to the carbocation), so the reaction is first order and the concentration of base does not change the rate."
+  - q: "Which substrates undergo E1 elimination?"
+    a: "Tertiary (and some secondary) alkyl halides and alcohols that can form a stable carbocation. Primary substrates do not go by E1 unless the cation can rearrange to a more stable one."
+  - q: "What is the major product of an E1 reaction?"
+    a: "Usually the more substituted, more stable alkene (the Saytzeff or Zaitsev product). For 2-bromo-2-methylbutane in hot ethanol this is 2-methylbut-2-ene, with 2-methylbut-1-ene as the minor alkene."
+  - q: "What is the difference between E1 and E2?"
+    a: "E1 is two-step with a carbocation intermediate, first-order kinetics, no need for a strong base and no anti-periplanar requirement; rearrangements are possible. E2 is one concerted step, second order, needs a strong base and an anti-periplanar H and leaving group."
+  - q: "Why do E1 and SN1 reactions occur together?"
+    a: "Both start with the same carbocation. If a solvent molecule attacks the cation, SN1 substitution results; if it removes a β-hydrogen, E1 elimination results. Higher temperature favours elimination."
+related: ["e2-reaction", "e1cb-mechanism", "sn1-reaction", "dehydration-of-alcohols"]
+sources:
+  - title: "Elimination reaction"
+    url: "https://en.wikipedia.org/wiki/Elimination_reaction"
+    publisher: "Wikipedia"
+  - title: "11.10: The E1 and E1cB Reactions"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/11:_Reactions_of_Alkyl_Halides-_Nucleophilic_Substitutions_and_Eliminations/11.10:_The_E1_and_E1cB_Reactions"
+    publisher: "LibreTexts (OpenStax Organic Chemistry)"
+verified:
+  status: "verified"
+  checked: 2026-11-21
+  sourceCount: 2
+---
+
+## What is the E1 reaction?
+
+The **E1 reaction** (elimination, unimolecular) is a two-step β-elimination in which the leaving group departs first to give a **carbocation**, and a weak base then removes a proton from the neighbouring (β) carbon to form a C=C bond. It converts tertiary or secondary alkyl halides, sulphonates and protonated alcohols into **alkenes**, usually in a polar protic solvent with heat and with little or no strong base.
+
+Because the slow step involves only the substrate, the rate law is **rate = k[RX]**, which is why the reaction is called unimolecular.
+
+## Mechanism
+
+1. **Ionisation (slow, rate-determining).** The C–X bond breaks heterolytically. The halide leaves with the bonding pair and a planar carbocation forms. This is the same first step as in SN1.
+2. **Deprotonation (fast).** A weak base, often just the solvent (water, ethanol) or the counter-anion, removes an H⁺ from a carbon next to the positive centre. The C–H electron pair becomes the new π bond.
+
+<Eq ce="(CH3)3C-Br <=>[slow] (CH3)3C+ + Br-" />
+<Eq ce="(CH3)3C+ + C2H5OH -> CH2=C(CH3)2 + C2H5OH2+" />
+
+<KeyPoint>
+The C–H bond breaks only after the rate-determining step. So E1 shows first-order kinetics and no significant primary deuterium isotope effect, and the H and leaving group do not need to be anti-periplanar.
+</KeyPoint>
+
+## Examples
+
+**1. 2-Bromo-2-methylbutane in hot ethanol.** The tertiary cation can lose a proton from the CH₂ or from a CH₃ group. Loss from CH₂ gives the trisubstituted alkene, which is the major (Saytzeff) product.
+
+<Eq ce="(CH3)2CBr-CH2CH3 ->[C2H5OH][\Delta] (CH3)2C=CHCH3 (major) + CH2=C(CH3)CH2CH3 (minor)" />
+
+**2. tert-Butyl chloride in aqueous ethanol.** Warming 2-chloro-2-methylpropane in 80% aqueous ethanol gives both 2-methylpropan-2-ol (SN1) and 2-methylpropene (E1), showing that the two pathways share one intermediate.
+
+**3. Acid-catalysed dehydration of a tertiary alcohol.** Protonation turns –OH into –OH₂⁺, water leaves to form a tertiary cation, and loss of H⁺ gives the alkene. See [dehydration of alcohols](/reactions/dehydration-of-alcohols/) for the full treatment.
+
+<Eq ce="(CH3)2C(OH)CH2CH3 ->[conc. H2SO4][\Delta] (CH3)2C=CHCH3 + H2O" />
+
+## Features to remember
+
+- **Substrate:** 3° greater than 2°; 1° and methyl substrates do not react by E1 because their cations are too unstable.
+- **Base:** weak base or none. The base is not in the rate law, so its strength or concentration does not change the rate.
+- **Solvent:** polar protic (water, alcohols) to stabilise the ion pair.
+- **Leaving group:** good leaving groups (I⁻, Br⁻, TsO⁻, H₂O from a protonated alcohol).
+- **Regiochemistry:** the more substituted alkene usually dominates (Saytzeff rule); the more stable *trans* alkene is favoured where cis/trans isomers are possible.
+- **Rearrangement:** possible, because a free carbocation is formed. A hydride or alkyl shift to a more stable cation happens before deprotonation.
+
+<ExamTip>
+If a question gives a 3° halide or alcohol with a weak base, a protic solvent and heat, think E1 (with SN1 competing). If it gives a strong base such as alcoholic KOH or NaOEt, think E2. Always check whether the carbocation can rearrange before choosing the final alkene.
+</ExamTip>
+
+## E1 versus SN1
+
+E1 and SN1 compete whenever a substrate ionises in a protic solvent with a non-basic nucleophile. Raising the temperature favours elimination, because elimination produces more molecules and is helped by the entropy term. In exam questions, "heat" with a 3° substrate and weak base usually points to the alkene.
+
+## Limitations and exceptions
+
+- Mixtures are common: SN1 products, alkene isomers and rearranged alkenes may all form.
+- No stereospecificity: since the planar cation forgets the original geometry, E1 does not give a single alkene stereoisomer from a given diastereomer, unlike E2.
+- In cyclic systems E1 can give the Saytzeff alkene even when no anti-periplanar H is available; E2 under the same conditions may give a different (non-Saytzeff) alkene.
+
+## Related reactions
+
+- [E2 reaction](/reactions/e2-reaction/): one-step, strong-base elimination.
+- [E1cB mechanism](/reactions/e1cb-mechanism/): the carbanion version, where the proton leaves first.
+- [SN1 reaction](/reactions/sn1-reaction/): substitution through the same carbocation.
+- [Dehydration of alcohols](/reactions/dehydration-of-alcohols/): the most common E1 reaction in exams.
+- [Elimination reactions hub](/mechanisms/elimination-reactions/).

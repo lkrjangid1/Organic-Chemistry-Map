@@ -1,0 +1,148 @@
+---
+title: "Preparation of Aldehydes and Ketones"
+description: "Preparation of aldehydes and ketones: oxidation of alcohols, ozonolysis, alkyne hydration, Rosenmund, Stephen, DIBAL-H, Étard, Gattermann–Koch and more."
+aliases: ["Methods of preparation of aldehydes and ketones", "How to prepare aldehydes", "How to prepare ketones", "Synthesis of carbonyl compounds", "Preparation of carbonyl compounds"]
+category: "Aldehydes and ketones"
+exams: ["jee-main", "jee-advanced", "neet"]
+notesPages: [67, 68, 69, 94]
+memoryTricks: []
+faq:
+  - q: "How are aldehydes prepared from acid chlorides?"
+    a: "By Rosenmund reduction: the acid chloride is hydrogenated over palladium on barium sulphate (partly poisoned), which stops the reduction at the aldehyde stage."
+  - q: "Which reagent converts a nitrile into an aldehyde?"
+    a: "Either SnCl₂/HCl followed by hydrolysis (Stephen reaction) or DIBAL-H followed by hydrolysis. Both go through an imine that is hydrolysed to the aldehyde. DIBAL-H also reduces esters to aldehydes."
+  - q: "How is a ketone prepared from an acid chloride?"
+    a: "By treating the acid chloride with a dialkylcadmium, R₂Cd, made from CdCl₂ and a Grignard reagent. The organocadmium is a weak nucleophile, so it stops at the ketone instead of going on to a tertiary alcohol."
+  - q: "What is the product of dry distillation of calcium acetate?"
+    a: "Acetone (propanone) and calcium carbonate. Two acetate units combine and lose CO₂ as CaCO₃."
+  - q: "Which alkyne gives an aldehyde on hydration?"
+    a: "Only ethyne (acetylene). With dilute H₂SO₄ and HgSO₄ it gives acetaldehyde; every other alkyne gives a ketone."
+related: ["reactions/rosenmund-reduction", "reactions/stephen-reduction", "reagents/dibal-h", "reactions/etard-reaction", "reactions/gattermann-koch-reaction", "reactions/kucherov-reaction", "reactions/ozonolysis", "reactions/wacker-oxidation"]
+sources:
+  - title: "Aldehydes, Ketones and Carboxylic Acids (Class 12 Chemistry, Unit 8)"
+    url: "https://ncert.nic.in/textbook/pdf/lech203.pdf"
+    publisher: "NCERT"
+  - title: "Ketonic decarboxylation"
+    url: "https://en.wikipedia.org/wiki/Ketonic_decarboxylation"
+    publisher: "Wikipedia"
+  - title: "Organocadmium chemistry"
+    url: "https://en.wikipedia.org/wiki/Organocadmium_chemistry"
+    publisher: "Wikipedia"
+  - title: "Organolithium reagent (addition to carboxylic acids)"
+    url: "https://en.wikipedia.org/wiki/Organolithium_reagent"
+    publisher: "Wikipedia"
+  - title: "Wacker process"
+    url: "https://en.wikipedia.org/wiki/Wacker_process"
+    publisher: "Wikipedia"
+  - title: "20.7: Chemistry of Nitriles"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/20:_Carboxylic_Acids_and_Nitriles/20.07:_Chemistry_of_Nitriles"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 6
+  note: "Organometallic reactivity order R-Na > RMgX > R2CuLi > R2Cd is exam teaching; sources confirm only that cuprates and organocadmiums are much less reactive than Grignard/organolithium reagents. Calcium formate route to aldehydes not covered by the sources read."
+---
+
+## What is the preparation of aldehydes and ketones?
+
+Aldehydes and ketones are made either by **oxidising** a lower oxidation level (alcohols, alkenes, alkynes, methylarenes), by **partially reducing** a higher one (acid chlorides, esters, nitriles) and stopping at the carbonyl stage, or by **building a C–C bond** next to a carbonyl carbon (Friedel–Crafts, organometallic reagents, decarboxylative coupling). The trick in every aldehyde synthesis is stopping before the aldehyde is oxidised to an acid or reduced to an alcohol.
+
+## Quick summary table
+
+| Starting material | Reagent | Product | Method |
+|---|---|---|---|
+| 1° alcohol | PCC, CH₂Cl₂ | aldehyde | oxidation |
+| 2° alcohol | K₂Cr₂O₇/H⁺, PCC, Oppenauer | ketone | oxidation |
+| 1°/2° alcohol vapour | Cu or Ag, heat | aldehyde/ketone | dehydrogenation |
+| alkene | O₃, then Zn/H₂O | aldehydes/ketones | ozonolysis |
+| alkene (terminal) | PdCl₂, CuCl₂, O₂, H₂O | ethanal / methyl ketone | Wacker |
+| alkyne | dil. H₂SO₄, HgSO₄ | ethanal (from ethyne) or ketone | Kucherov |
+| acid chloride | H₂, Pd/BaSO₄ | aldehyde | Rosenmund |
+| nitrile | SnCl₂/HCl, then H₃O⁺ | aldehyde | Stephen |
+| nitrile or ester | DIBAL-H, then H₂O | aldehyde | DIBAL-H |
+| toluene | CrO₂Cl₂/CS₂, then H₃O⁺ | benzaldehyde | Étard |
+| benzene | CO + HCl, AlCl₃/CuCl | benzaldehyde | Gattermann–Koch |
+| benzene / phenol | HCN + HCl, AlCl₃, then H₂O | aryl aldehyde | Gattermann |
+| acid chloride | R'₂Cd | ketone | dialkylcadmium |
+| nitrile | RMgX, then H₃O⁺ | ketone | Grignard |
+| carboxylic acid | 2 RLi, then H₃O⁺ | ketone | organolithium |
+| benzene | RCOCl, anhyd. AlCl₃ | aryl ketone | Friedel–Crafts acylation |
+| calcium carboxylate | dry distillation | ketone + CaCO₃ | ketonic decarboxylation |
+| carboxylic acid vapour | MnO, heat | symmetrical ketone | ketonisation |
+
+## 1. From alcohols
+
+**Oxidation.** Primary alcohols give aldehydes and secondary alcohols give ketones. To stop a primary alcohol at the aldehyde, a mild anhydrous oxidant such as [pyridinium chlorochromate](/reagents/pyridinium-chlorochromate/) is used; [acidified dichromate](/reagents/potassium-dichromate/) or the [Oppenauer oxidation](/reactions/oppenauer-oxidation/) suit secondary alcohols.
+
+<Eq ce="RCH2OH ->[PCC][CH2Cl2] RCHO" />
+
+**Dehydrogenation.** Vapours of volatile alcohols passed over heated copper or silver lose H₂. This is an industrial method.
+
+<Eq ce="CH3CH2OH ->[Cu][\Delta] CH3CHO + H2" />
+
+## 2. From alkenes and alkynes
+
+- [Ozonolysis](/reactions/ozonolysis/) followed by Zn dust and water cleaves C=C into two carbonyl compounds.
+- The [Wacker oxidation](/reactions/wacker-oxidation/) converts ethene into ethanal with catalytic PdCl₂ and CuCl₂ under O₂; terminal alkenes give methyl ketones.
+- [Hydration of alkynes (Kucherov reaction)](/reactions/kucherov-reaction/) with dilute H₂SO₄ and HgSO₄ gives ethanal from ethyne and ketones from all other alkynes, through the enol.
+
+<Eq ce="HC#CH + H2O ->[HgSO4, dil. H2SO4] CH3CHO" />
+
+## 3. By partial reduction of acid derivatives and nitriles
+
+- [Rosenmund reduction](/reactions/rosenmund-reduction/): acid chloride + H₂ over Pd on BaSO₄.
+- [Stephen reduction](/reactions/stephen-reduction/): nitrile + SnCl₂/HCl gives an imine salt, hydrolysed to the aldehyde.
+- [DIBAL-H](/reagents/dibal-h/) reduces nitriles to imines (then hydrolysed) and esters directly to aldehydes.
+
+<Eq ce="RCOCl + H2 ->[Pd/BaSO4] RCHO + HCl" />
+<Eq ce="RC#N ->[1) SnCl2, HCl][2) H3O+] RCHO" />
+
+## 4. Aromatic aldehydes and ketones
+
+- [Étard reaction](/reactions/etard-reaction/): toluene + CrO₂Cl₂ forms a chromium complex that is hydrolysed to benzaldehyde.
+- CrO₃ in acetic anhydride converts toluene to benzylidene diacetate, hydrolysed to benzaldehyde.
+- Side-chain chlorination of toluene to benzal chloride, then hydrolysis, is the commercial route.
+- [Gattermann–Koch reaction](/reactions/gattermann-koch-reaction/): benzene + CO + HCl with AlCl₃/CuCl.
+- [Gattermann aldehyde synthesis](/reactions/gattermann-aldehyde-synthesis/): HCN + HCl with AlCl₃, then hydrolysis of the aldimine.
+- [Friedel–Crafts acylation](/reactions/friedel-crafts-acylation/): acid chloride + anhydrous AlCl₃ gives aryl ketones.
+
+<Eq ce="C6H6 + CO + HCl ->[anhyd. AlCl3/CuCl] C6H5CHO" />
+
+## 5. Ketones from organometallic reagents
+
+**Dialkylcadmium and acid chlorides.** R'₂Cd, made from CdCl₂ and a Grignard reagent, converts acid chlorides into ketones. It is a weak nucleophile, so it does not attack the ketone formed; a Grignard reagent would add again and give a 3° alcohol.
+
+<Eq ce="2 RCOCl + R'2Cd -> 2 RCOR' + CdCl2" />
+
+<KeyPoint>
+Exam teaching ranks organometallic reactivity roughly as **R–Na > R–MgX > R₂CuLi > R₂Cd**, rising with the ionic character of the C–metal bond. The useful part is that cuprates and organocadmiums are far milder than Grignard or organolithium reagents, which is why they stop at the ketone.
+</KeyPoint>
+
+**Nitriles and Grignard reagents.** The Grignard reagent adds once to C≡N to give an imine salt; acid work-up hydrolyses it to a ketone. See [Grignard reagent](/reactions/grignard-reagent/).
+
+<Eq ce="C6H5CN + CH3MgBr -> C6H5C(=NMgBr)CH3 ->[H3O+] C6H5COCH3" />
+
+**Carboxylic acids and organolithiums.** The first RLi removes the acidic O–H to give RCOO⁻Li⁺. A second RLi, more reactive than a Grignard reagent, adds to the carboxylate to give a dianion R₂C(O⁻)₂. Acid work-up gives the gem-diol, which loses water to form the ketone.
+
+<Eq ce="RCOOH ->[2 R'Li][then H3O+] RCOR'" />
+
+## 6. From carboxylic acids and their salts (ketonic decarboxylation)
+
+**Dry distillation of calcium salts.** Heating a calcium carboxylate joins two acyl units and removes CO₂ as CaCO₃. Calcium acetate gives acetone; this was the main commercial route to acetone until the First World War. In exam answers, heating a mixture with calcium formate is used to obtain an aldehyde.
+
+<Eq ce="(CH3COO)2Ca ->[\Delta] CH3COCH3 + CaCO3" />
+
+**Over MnO.** Carboxylic acid vapour passed over hot manganese(II) oxide gives a symmetrical ketone, CO₂ and water; propanoic acid gives pentan-3-one. Two different acids give poor selectivity. See also [Heating effect on carboxylic acids](/concepts/heating-effect-on-carboxylic-acids/).
+
+<Eq ce="2 CH3CH2COOH ->[MnO][\Delta] CH3CH2COCH2CH3 + CO2 + H2O" />
+
+<ExamTip>
+For "aldehyde, not acid" choose PCC, Rosenmund, Stephen, DIBAL-H or Étard. For "ketone, not 3° alcohol" from an acid chloride choose R₂Cd (or R₂CuLi), never RMgX.
+</ExamTip>
+
+## Related pages
+
+- [Reactivity of aldehydes and ketones](/comparisons/reactivity-of-carbonyl-compounds/)
+- [Nucleophilic addition to aldehydes and ketones](/mechanisms/nucleophilic-addition/)
+- [Oxidation reactions](/mechanisms/oxidation-reactions/) and [Reduction reactions](/mechanisms/reduction-reactions/)

@@ -1,0 +1,316 @@
+{
+ "exam": "jee-advanced",
+ "year": 2017,
+ "paper": 2,
+ "source": "https://jeeadv.ac.in/past_qps/2017_2.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2017-p2-q24",
+   "number": 24,
+   "type": "single",
+   "stem": "The major product of the following reaction is\nStarting compound —(i) NaNO₂, HCl, 0°C (ii) aq. NaOH→ ?",
+   "figures": [
+    {
+     "smiles": "Nc1ccccc1-c1cccc(O)c1"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "Oc1cccc(c1)-c1ccccc1Cl"
+    },
+    {
+     "key": "B",
+     "smiles": "[Na+].[O-]c1cccc(c1)-c1ccccc1[N+]#N.[Cl-]"
+    },
+    {
+     "key": "C",
+     "smiles": "Oc1ccc2nnc3ccccc3c2c1"
+    },
+    {
+     "key": "D",
+     "smiles": "Oc1cccc2c1nnc1ccccc12"
+    }
+   ],
+   "answer": "C",
+   "solution": "NaNO₂/HCl at 0°C turns the aryl amine into a diazonium salt. Adding NaOH converts the phenol into phenoxide, which strongly activates its ring. The diazonium group then couples intramolecularly with the other ring at the carbon that is ortho to the biaryl bond and para to O⁻, closing a six-membered N=N ring. The product is the benzo[c]cinnoline with OH para to the new C–N bond. Coupling ortho to O⁻ (option D) is less favoured.",
+   "topics": [
+    "reactions/diazotization-reaction",
+    "reactions/diazo-coupling-reaction"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (C)"
+   }
+  },
+  {
+   "id": "jee-advanced-2017-p2-q25",
+   "number": 25,
+   "type": "single",
+   "stem": "The order of basicity among the following compounds is",
+   "figures": [
+    {
+     "smiles": "CC(=N)N",
+     "label": "I"
+    },
+    {
+     "smiles": "C1CN=CN1",
+     "label": "II"
+    },
+    {
+     "smiles": "c1c[nH]cn1",
+     "label": "III"
+    },
+    {
+     "smiles": "NC(=N)N",
+     "label": "IV"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "II > I > IV > III"
+    },
+    {
+     "key": "B",
+     "text": "IV > II > III > I"
+    },
+    {
+     "key": "C",
+     "text": "IV > I > II > III"
+    },
+    {
+     "key": "D",
+     "text": "I > IV > III > II"
+    }
+   ],
+   "answer": "C",
+   "solution": "Protonating the imino nitrogen of an amidine or guanidine gives a cation whose charge is shared by resonance over the nitrogens. Guanidine (IV) spreads the charge over three nitrogens, so it is the strongest base. Acetamidine (I) is next, helped by the electron-donating methyl. The cyclic amidine 2-imidazoline (II) shares the charge over two nitrogens but has no methyl donor on C-2, so it is a little weaker. Imidazole (III) is far weaker because its nitrogens are sp² ring atoms of an aromatic system (conjugate acid pKa ≈ 7), which gives IV > I > II > III.",
+   "topics": [
+    "comparisons/basic-strength-of-amines"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (C)"
+   }
+  },
+  {
+   "id": "jee-advanced-2017-p2-q29",
+   "number": 29,
+   "type": "multiple",
+   "stem": "For the following compounds, the correct statement(s) with respect to nucleophilic substitution reactions is(are)",
+   "figures": [
+    {
+     "smiles": "BrCc1ccccc1",
+     "label": "I"
+    },
+    {
+     "smiles": "BrCC1CCCCC1",
+     "label": "II"
+    },
+    {
+     "smiles": "CC(C)(C)Br",
+     "label": "III"
+    },
+    {
+     "smiles": "CC(Br)c1ccccc1",
+     "label": "IV"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "I and III follow Sɴ1 mechanism"
+    },
+    {
+     "key": "B",
+     "text": "I and II follow Sɴ2 mechanism"
+    },
+    {
+     "key": "C",
+     "text": "Compound IV undergoes inversion of configuration"
+    },
+    {
+     "key": "D",
+     "text": "The order of reactivity for I, III and IV is: IV > I > III"
+    }
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "solution": "Benzyl bromide (I) is primary, so it reacts by Sɴ2, but it also ionises to a resonance-stabilised benzyl cation, so it can follow Sɴ1 too. tert-Butyl bromide (III) reacts only by Sɴ1, so A is correct. The unhindered primary bromide II reacts by Sɴ2, as does I, so B is correct. The chiral secondary benzylic bromide IV gives inversion of configuration when it reacts by the Sɴ2 path, which is the intended reading of C. Statement D has no fixed answer because the order changes with the mechanism and conditions, and the official key accepts both ABC and ABCD.",
+   "topics": [
+    "comparisons/sn1-vs-sn2",
+    "reactions/sn1-reaction",
+    "reactions/sn2-reaction"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper ({A,B,C} or {A,B,C,D})"
+   }
+  },
+  {
+   "id": "jee-advanced-2017-p2-q32",
+   "number": 32,
+   "type": "multiple",
+   "stem": "Compounds P and R upon ozonolysis produce Q and S, respectively. The molecular formula of Q and S is C₈H₈O. Q undergoes Cannizzaro reaction but not haloform reaction, whereas S undergoes haloform reaction but not Cannizzaro reaction.\n(i) P —i) O₃/CH₂Cl₂ ii) Zn/H₂O→ Q (C₈H₈O)\n(ii) R —i) O₃/CH₂Cl₂ ii) Zn/H₂O→ S (C₈H₈O)\nThe option(s) with suitable combination of P and R, respectively, is(are)",
+   "figures": [
+    {
+     "smiles": "Cc1ccc(C=C)cc1",
+     "label": "A: P"
+    },
+    {
+     "smiles": "C=C(C)c1ccccc1",
+     "label": "A: R"
+    },
+    {
+     "smiles": "C/C=C/c1cccc(C)c1",
+     "label": "B: P"
+    },
+    {
+     "smiles": "CC(C)=C(C)c1ccccc1",
+     "label": "B: R"
+    },
+    {
+     "smiles": "CC(C)=Cc1ccccc1C",
+     "label": "C: P"
+    },
+    {
+     "smiles": "CC=C(C)c1ccccc1C",
+     "label": "C: R"
+    },
+    {
+     "smiles": "Cc1ccc(C=C)cc1",
+     "label": "D: P"
+    },
+    {
+     "smiles": "C=C(C)c1ccc(C)cc1",
+     "label": "D: R"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "P = 4-methylstyrene (CH₃C₆H₄CH=CH₂, para); R = α-methylstyrene (C₆H₅C(CH₃)=CH₂)"
+    },
+    {
+     "key": "B",
+     "text": "P = 1-(3-methylphenyl)prop-1-ene (m-CH₃C₆H₄CH=CHCH₃); R = 2-methyl-3-phenylbut-2-ene (C₆H₅C(CH₃)=C(CH₃)₂)"
+    },
+    {
+     "key": "C",
+     "text": "P = 2-methyl-1-(2-methylphenyl)prop-1-ene (o-CH₃C₆H₄CH=C(CH₃)₂); R = 2-(2-methylphenyl)but-2-ene (o-CH₃C₆H₄C(CH₃)=CHCH₃)"
+    },
+    {
+     "key": "D",
+     "text": "P = 4-methylstyrene (p-CH₃C₆H₄CH=CH₂); R = 4-methyl-α-methylstyrene (p-CH₃C₆H₄C(CH₃)=CH₂)"
+    }
+   ],
+   "answer": [
+    "A",
+    "B"
+   ],
+   "solution": "Q has formula C₈H₈O, undergoes Cannizzaro and no haloform reaction, so it is a methylbenzaldehyde with no α-hydrogen. S is also C₈H₈O and gives haloform but no Cannizzaro, so it is acetophenone. In A, 4-methylstyrene gives 4-methylbenzaldehyde and α-methylstyrene gives acetophenone (plus HCHO). In B, the m-methyl propenylbenzene gives 3-methylbenzaldehyde and the tetrasubstituted alkene gives acetophenone and acetone, so B also works. In C and D the R alkene carries a tolyl group, so ozonolysis gives a methylacetophenone (C₉H₁₀O), which has the wrong formula.",
+   "topics": [
+    "reactions/ozonolysis",
+    "reactions/cannizzaro-reaction",
+    "reactions/haloform-reaction"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (A, B)"
+   }
+  },
+  {
+   "id": "jee-advanced-2017-p2-q35",
+   "number": 35,
+   "type": "paragraph",
+   "passage": "The reaction of compound P with CH₃MgBr (excess) in (C₂H₅)₂O followed by addition of H₂O gives Q. The compound Q on treatment with H₂SO₄ at 0°C gives R. The reaction of R with CH₃COCl in the presence of anhydrous AlCl₃ in CH₂Cl₂ followed by treatment with H₂O produces compound S. [Et in compound P is ethyl group]\nP → Q → R → S",
+   "stem": "The product S is",
+   "figures": [
+    {
+     "smiles": "CCOC(=O)CCc1ccc(cc1)C(C)(C)C",
+     "label": "P"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "CC(=O)c1cc(cc2c1CCC2(C)C)C(C)(C)C"
+    },
+    {
+     "key": "B",
+     "smiles": "CC1=CCc2ccc(C(C)(C)C)c(C(C)=O)c21"
+    },
+    {
+     "key": "C",
+     "smiles": "CC(=O)c1cc(CC=C(C)C)ccc1C(C)(C)C"
+    },
+    {
+     "key": "D",
+     "smiles": "CC(=O)CCc1cc(S(=O)(=O)O)c(C(C)(C)C)cc1C(C)=O"
+    }
+   ],
+   "answer": "A",
+   "solution": "Excess CH₃MgBr adds twice to the ester, giving the tertiary alcohol ArCH₂CH₂C(CH₃)₂OH (Q). Cold H₂SO₄ ionises it to a tertiary carbocation, which attacks the ring ortho to the side chain (intramolecular Friedel–Crafts alkylation) and closes a five-membered ring, giving 6-tert-butyl-1,1-dimethylindane (R). Friedel–Crafts acetylation then goes to C-4, which is ortho to the CH₂ end of the fused ring and meta to the bulky tert-butyl group. The positions next to t-Bu or the gem-dimethyl group are too hindered, which gives option A.",
+   "topics": [
+    "reactions/grignard-reagent",
+    "reactions/friedel-crafts-alkylation",
+    "reactions/friedel-crafts-acylation"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (A)"
+   }
+  },
+  {
+   "id": "jee-advanced-2017-p2-q36",
+   "number": 36,
+   "type": "paragraph",
+   "passage": "The reaction of compound P with CH₃MgBr (excess) in (C₂H₅)₂O followed by addition of H₂O gives Q. The compound Q on treatment with H₂SO₄ at 0°C gives R. The reaction of R with CH₃COCl in the presence of anhydrous AlCl₃ in CH₂Cl₂ followed by treatment with H₂O produces compound S. [Et in compound P is ethyl group]\nP → Q → R → S",
+   "stem": "The reactions, Q to R and R to S, are",
+   "figures": [
+    {
+     "smiles": "CCOC(=O)CCc1ccc(cc1)C(C)(C)C",
+     "label": "P"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "Dehydration and Friedel-Crafts acylation"
+    },
+    {
+     "key": "B",
+     "text": "Aromatic sulfonation and Friedel-Crafts acylation"
+    },
+    {
+     "key": "C",
+     "text": "Friedel-Crafts alkylation, dehydration and Friedel-Crafts acylation"
+    },
+    {
+     "key": "D",
+     "text": "Friedel-Crafts alkylation and Friedel-Crafts acylation"
+    }
+   ],
+   "answer": "D",
+   "solution": "In Q → R, H₂SO₄ protonates the tertiary alcohol and water leaves to give a carbocation. The aromatic ring traps this cation intramolecularly, which is a Friedel–Crafts alkylation forming the indane ring; no alkene is isolated and no SO₃H group is added. In R → S, CH₃COCl/AlCl₃ installs an acetyl group on the ring, which is Friedel–Crafts acylation.",
+   "topics": [
+    "reactions/friedel-crafts-alkylation",
+    "reactions/friedel-crafts-acylation"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (D)"
+   }
+  }
+ ]
+}

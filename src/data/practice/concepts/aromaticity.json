@@ -1,0 +1,50 @@
+{
+ "page": "concepts/aromaticity",
+ "questions": [
+  {
+   "q": "Which species is aromatic?",
+   "options": [
+    "Cyclopentadienyl cation",
+    "Cyclopropenyl anion",
+    "Tropylium cation",
+    "Cyclooctatetraene"
+   ],
+   "answer": 2,
+   "explain": "The tropylium cation C₇H₇⁺ is planar, fully conjugated and has 6 π electrons (4n + 2). The two other ions have 4 π electrons (antiaromatic), and COT is tub-shaped (non-aromatic).",
+   "smiles": "[CH+]1C=CC=CC=C1"
+  },
+  {
+   "q": "Which statement about cyclooctatetraene (COT) is correct?",
+   "options": [
+    "It is planar and antiaromatic with 8 π electrons",
+    "It is tub-shaped and non-aromatic; with potassium it gives a planar, aromatic C₈H₈²⁻",
+    "It is aromatic because it is a cyclic polyene",
+    "Its dianion has 10 π electrons and is antiaromatic"
+   ],
+   "answer": 1,
+   "explain": "COT avoids antiaromaticity by adopting a tub shape, so it is non-aromatic; adding two electrons gives the planar 10π dianion, which obeys Hückel's rule."
+  },
+  {
+   "q": "Which order of stability is generally correct?",
+   "options": [
+    "Aromatic > antiaromatic > non-aromatic",
+    "Non-aromatic > aromatic > antiaromatic",
+    "Antiaromatic > non-aromatic > aromatic",
+    "Aromatic > non-aromatic > antiaromatic"
+   ],
+   "answer": 3,
+   "explain": "Aromatic rings gain extra stability, antiaromatic ones (planar, 4n π) are destabilised, and non-aromatic compounds sit in between."
+  },
+  {
+   "q": "Which annulene is aromatic?",
+   "options": [
+    "[18]Annulene",
+    "[10]Annulene",
+    "[8]Annulene",
+    "[4]Annulene"
+   ],
+   "answer": 0,
+   "explain": "[18]Annulene is large enough to hold its inner H atoms while staying flat and has 18 π electrons. [10]annulene also has a Hückel count but cannot be planar, so it is non-aromatic: the trap is to count electrons without checking planarity."
+  }
+ ]
+}

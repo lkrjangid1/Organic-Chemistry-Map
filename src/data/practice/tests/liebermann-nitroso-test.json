@@ -1,0 +1,49 @@
+{
+ "page": "tests/liebermann-nitroso-test",
+ "questions": [
+  {
+   "q": "Phenol is warmed with NaNO₂ and concentrated H₂SO₄, the mixture is poured into water, and then NaOH is added. The sequence of colours is:",
+   "options": [
+    "Green or blue → red → blue",
+    "Red → green → colourless",
+    "Violet → yellow → red",
+    "Blue → colourless → green"
+   ],
+   "answer": 0,
+   "explain": "Remember 'GRB': deep green to blue in concentrated acid, red on dilution with water, and blue again in alkali. All three colours come from one dye, phenolindophenol, in different protonation states."
+  },
+  {
+   "q": "Which phenol normally gives a NEGATIVE Liebermann nitroso test?",
+   "options": [
+    "Phenol",
+    "Hydroquinone",
+    "p-Cresol",
+    "4-Iodophenol"
+   ],
+   "answer": 2,
+   "explain": "Nitrosation occurs at the para position, so a para-substituted phenol such as p-cresol usually gives no colour. Hydroquinone and 4-iodophenol are the stated exceptions that still react."
+  },
+  {
+   "q": "The coloured compound formed in the Liebermann nitroso test is:",
+   "options": [
+    "p-Nitrosophenol",
+    "p-Benzoquinone",
+    "p-Hydroxyazobenzene",
+    "Phenolindophenol"
+   ],
+   "answer": 3,
+   "explain": "p-Nitrosophenol (as benzoquinone monoxime) is only the intermediate; it condenses with a second phenol molecule in concentrated acid to give the indophenol dye O=C₆H₄=N–C₆H₄–OH."
+  },
+  {
+   "q": "An aliphatic amine gives a yellow oily liquid with NaNO₂ and dilute HCl in the cold, and this oil gives a positive Liebermann test with phenol and concentrated H₂SO₄. The amine is:",
+   "options": [
+    "Ethylamine",
+    "Diethylamine",
+    "Triethylamine",
+    "Methylamine"
+   ],
+   "answer": 1,
+   "explain": "A secondary amine forms an N-nitrosamine (the yellow oil), which hands its nitroso group to phenol in hot acid. Primary aliphatic amines give N₂ gas instead, and tertiary aliphatic amines give no nitroso compound."
+  }
+ ]
+}

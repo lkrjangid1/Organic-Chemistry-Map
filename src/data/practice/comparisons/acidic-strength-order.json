@@ -1,0 +1,49 @@
+{
+ "page": "comparisons/acidic-strength-order",
+ "questions": [
+  {
+   "q": "Which is the correct increasing order of acidic strength?",
+   "options": [
+    "Ethyne < ethanol < phenol < acetic acid < benzenesulphonic acid",
+    "Ethanol < ethyne < phenol < acetic acid < benzenesulphonic acid",
+    "Ethyne < phenol < ethanol < benzenesulphonic acid < acetic acid",
+    "Ethanol < phenol < ethyne < acetic acid < benzenesulphonic acid"
+   ],
+   "answer": 0,
+   "explain": "pKa values run ethyne (25) > ethanol (16) > phenol (10) > acetic acid (4.76) > sulphonic acid (about −2), so acidity increases in that order."
+  },
+  {
+   "q": "For the equilibrium NaF + HCN ⇌ NaCN + HF, which statement is correct?",
+   "options": [
+    "It lies to the right because CN⁻ is a weaker base than F⁻",
+    "It lies to the right with Keq about 10⁶",
+    "It lies to the left with Keq about 10⁻⁶, because HF is a much stronger acid than HCN",
+    "Keq is close to 1 because both are weak acids"
+   ],
+   "answer": 2,
+   "explain": "HF (pKa 3.2) is about 10⁶ times stronger than HCN (pKa 9.2), so the proton stays with the weaker acid HCN and the equilibrium favours the left side."
+  },
+  {
+   "q": "Which compound will NOT liberate CO₂ from aqueous NaHCO₃?",
+   "options": [
+    "Benzenesulphonic acid",
+    "Picric acid",
+    "Acetic acid",
+    "Phenol"
+   ],
+   "answer": 3,
+   "explain": "NaHCO₃ reacts only with acids stronger than carbonic acid (pKa 6.4). Phenol (pKa 10) is weaker, whereas picric acid (pKa 0.38) is strong enough to react."
+  },
+  {
+   "q": "5-Sulphosalicylic acid contains –SO₃H, –COOH and a phenolic –OH. After adding exactly 2 equivalents of NaOH, which groups are present in deprotonated form?",
+   "options": [
+    "–SO₃H and phenolic –OH",
+    "–COOH and phenolic –OH",
+    "–SO₃H and –COOH",
+    "Only –SO₃H"
+   ],
+   "answer": 2,
+   "explain": "Each equivalent of base removes the most acidic remaining proton: first –SO₃H (pKa about −2), then –COOH (4–5); the phenolic OH (about 10) needs a third equivalent."
+  }
+ ]
+}

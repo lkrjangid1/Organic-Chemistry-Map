@@ -1,0 +1,134 @@
+---
+title: "Malaprade Oxidation"
+description: "Malaprade oxidation cleaves the C–C bond of a vicinal diol with periodic acid (HIO₄) to give two carbonyl compounds; glucose gives 5 HCOOH + HCHO. Mechanism."
+aliases: ["Malaprade reaction", "Periodic acid oxidation", "Periodate cleavage", "HIO4 oxidation", "Glycol cleavage", "Malaparede oxidation"]
+kind: "named-reaction"
+family: "oxidation-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: []
+reactant:
+  name: "Butane-2,3-diol"
+  smiles: "CC(O)C(C)O"
+product:
+  name: "Acetaldehyde (ethanal), 2 equivalents"
+  smiles: "CC=O"
+byproducts: "HIO₃ (iodic acid), H₂O"
+reagents: "Periodic acid, HIO₄ (H₅IO₆) or NaIO₄"
+conditions: "Aqueous or aqueous-alcoholic solution, room temperature"
+equation: "CH3-CH(OH)-CH(OH)-CH3 + HIO4 -> 2CH3-CHO + HIO3 + H2O"
+notesPages: [55, 56]
+memoryTricks: []
+faq:
+  - q: "What is the Malaprade reaction?"
+    a: "It is the cleavage of a vicinal (1,2-) diol by periodic acid or a periodate salt. The C–C bond between the two OH-bearing carbons breaks and each carbon becomes a C=O group, so two aldehydes or ketones are formed."
+  - q: "What are the products of oxidation of glucose with periodic acid?"
+    a: "Open-chain glucose consumes 5 HIO₄ and gives 5 molecules of formic acid (HCOOH) and 1 molecule of formaldehyde (HCHO). C-1 to C-5 become HCOOH and the terminal CH₂OH (C-6) becomes HCHO."
+  - q: "What are the products of oxidation of fructose with periodic acid?"
+    a: "Open-chain fructose also consumes 5 HIO₄ and gives 3 HCOOH, 2 HCHO and 1 CO₂. The two terminal CH₂OH groups give formaldehyde, the three CHOH carbons give formic acid, and the ketone carbon ends up as CO₂."
+  - q: "Which compounds are cleaved by HIO₄?"
+    a: "Compounds with two adjacent oxygen- or nitrogen-bearing carbons: 1,2-diols, α-hydroxy aldehydes and ketones, 1,2-dicarbonyl compounds, and 1,2-amino alcohols. A diol whose OH groups are not on neighbouring carbons is not cleaved."
+  - q: "What is the difference between Malaprade and Criegee oxidation?"
+    a: "Both cleave vicinal diols. Malaprade oxidation uses periodic acid or periodate, usually in water; Criegee oxidation uses lead tetraacetate, Pb(OAc)₄, usually in an organic solvent."
+related: ["ozonolysis", "pinacol-pinacolone-rearrangement", "reagents/potassium-permanganate", "concepts/aldoses-and-epimers"]
+sources:
+  - title: "Malaprade reaction"
+    url: "https://en.wikipedia.org/wiki/Malaprade_reaction"
+    publisher: "Wikipedia"
+  - title: "Periodate (cleavage reactions)"
+    url: "https://en.wikipedia.org/wiki/Periodate"
+    publisher: "Wikipedia"
+  - title: "14.9: Cleavage of Diols (Map: Organic Chemistry, Wade)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Map%3A_Organic_Chemistry_(Wade)_Complete_and_Semesters_I_and_II/Map%3A_Organic_Chemistry_(Wade)/14%3A_Reactions_of_Alcohols/14.09%3A_Cleavage_of_Diols"
+    publisher: "LibreTexts"
+  - title: "Criegee oxidation"
+    url: "https://en.wikipedia.org/wiki/Criegee_oxidation"
+    publisher: "Wikipedia"
+  - title: "Periodic acid"
+    url: "https://en.wikipedia.org/wiki/Periodic_acid"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 5
+  note: "Glucose and fructose product counts are derived from the general cleavage rules; the sources state the rules and the use in sugar structure work but not the counts. Notes list lead tetraacetate as a Malaprade reagent; page names it the Criegee variant."
+---
+
+## What is the Malaprade oxidation?
+
+The **Malaprade oxidation** (Malaprade reaction) is the cleavage of a **vicinal diol**, –CH(OH)–CH(OH)–, by **periodic acid (HIO₄)** or a periodate salt such as NaIO₄. The C–C bond joining the two OH-bearing carbons breaks, and each of those carbons becomes a **C=O group**, so one diol gives **two aldehydes or ketones**. Iodine(VII) is reduced to iodic acid, HIO₃. Léon Malaprade reported the reaction in 1928.
+
+## Which compounds are cleaved
+
+The essential condition (आवश्यक शर्त) is two **neighbouring carbons that each carry O or N**:
+
+| Group in the molecule | Cleaved by HIO₄? | Fragments formed |
+|---|---|---|
+| –CH(OH)–CH(OH)– (1,2-diol) | yes | two aldehydes / ketones |
+| –CO–CH(OH)– (α-hydroxy carbonyl) | yes | acid + aldehyde / ketone |
+| –CO–CO– (1,2-dicarbonyl) | yes | two carboxylic acids |
+| –CH(OH)–CH(NH₂)– (1,2-amino alcohol) | yes | two carbonyl compounds + NH₃ |
+| –CH(OH)–CH₂–CH(OH)– (1,3-diol) | no | no reaction |
+
+In exam lists the α-amino carbonyl group, –CO–CH(NH₂)–, is added to this table on the same reasoning.
+
+## Mechanism
+
+1. **Cyclic periodate ester.** The two OH groups of the diol condense with HIO₄ to form a five-membered cyclic iodine(VII) diester. This is why the OH groups must be on adjacent carbons, and why **cis-diols react faster than trans-diols** in rings.
+2. **Fragmentation.** The ring breaks: the C–C bond cleaves and two C=O bonds form, while iodine is reduced from +7 to +5 (HIO₃).
+
+<Eq ce="R2C(OH)-C(OH)R2 + HIO4 -> 2R2C=O + HIO3 + H2O" />
+
+## How to count the products
+
+Cut every C–C bond that joins two O-bearing carbons, then add OH to each cut end:
+
+- a **terminal CH₂OH** carbon becomes **HCHO**;
+- an **inner CHOH** (cut on both sides) becomes **HCOOH**;
+- a **CHO** carbon cut on one side becomes **HCOOH**;
+- an **inner C=O** (ketone carbon cut on both sides) becomes **CO₂**.
+
+One HIO₄ is used for each C–C bond broken.
+
+<KeyPoint>
+Periodic acid counts the adjacent OH groups for you: moles of HIO₄ used = number of C–C bonds cleaved. This is how it was used historically to work out the structures and ring sizes of sugars.
+</KeyPoint>
+
+## Examples
+
+**1. Butane-2,3-diol** gives two acetaldehyde:
+
+<Eq ce="CH3CH(OH)CH(OH)CH3 + HIO4 -> 2CH3CHO + HIO3 + H2O" />
+
+**2. Pinacol** gives two acetone:
+
+<Eq ce="(CH3)2C(OH)C(OH)(CH3)2 + HIO4 -> 2(CH3)2C=O + HIO3 + H2O" />
+
+**3. Glucose (open chain, an aldohexose).** Five C–C bonds are cut. C-1 (CHO) and C-2 to C-5 (CHOH) each become formic acid; C-6 (CH₂OH) becomes formaldehyde.
+
+<Eq ce="OHC-(CHOH)4-CH2OH + 5HIO4 -> 5HCOOH + HCHO + 5HIO3" />
+
+**4. Fructose (open chain, a ketohexose).** Again five bonds break. C-1 and C-6 (CH₂OH) become formaldehyde, C-3, C-4 and C-5 become formic acid, and the ketone carbon C-2 is cut on both sides and leaves as CO₂.
+
+<Eq ce="HOCH2-CO-(CHOH)3-CH2OH + 5HIO4 -> 3HCOOH + 2HCHO + CO2 + H2O + 5HIO3" />
+
+<ExamTip>
+Glucose: 5 HCOOH + 1 HCHO. Fructose: 3 HCOOH + 2 HCHO + 1 CO₂. Both use 5 HIO₄. The extra HCHO and the CO₂ from fructose come from its two terminal CH₂OH groups and its central ketone carbon.
+</ExamTip>
+
+## Lead tetraacetate: the Criegee variant
+
+**Lead tetraacetate, Pb(OAc)₄**, cleaves vicinal diols in the same way and gives the same carbonyl fragments. Strictly, this is called the **Criegee oxidation**. It is milder and is usually run in dry organic solvents (it is hydrolysed by water), whereas periodate is used in water. Both pass through a cyclic ester with the two OH groups.
+
+## Limitations and exceptions
+
+- Only **1,2-relationships** count; 1,3- and 1,4-diols survive.
+- A rigid **trans-diol** that cannot form the five-membered cyclic ester reacts very slowly or not at all.
+- Diols on simple alkyl chains are usually prepared first by dihydroxylation of an alkene (cold dilute KMnO₄ or OsO₄); the two-step sequence then mimics [ozonolysis](/reactions/ozonolysis/).
+
+## Related reactions
+
+- [Ozonolysis](/reactions/ozonolysis/): cleaves a C=C bond directly to the same kind of carbonyl fragments.
+- [Pinacol–pinacolone rearrangement](/reactions/pinacol-pinacolone-rearrangement/): the acid-catalysed fate of a vicinal diol, a rearrangement instead of a cleavage.
+- [Potassium permanganate](/reagents/potassium-permanganate/): converts alkenes into the diols that HIO₄ then cleaves.
+- [Aldoses and epimers](/concepts/aldoses-and-epimers/): sugar structures used in periodate questions.
+- Overview: [Oxidation reactions](/mechanisms/oxidation-reactions/).

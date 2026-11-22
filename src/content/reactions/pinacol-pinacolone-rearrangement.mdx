@@ -1,0 +1,147 @@
+---
+title: "Pinacol–Pinacolone Rearrangement"
+description: "Pinacol–pinacolone rearrangement turns a 1,2-diol into a ketone with acid and heat via a carbocation and 1,2-shift. Mechanism, migratory aptitude, examples."
+aliases: [Pinacol rearrangement, Pinacol–pinacolone reaction]
+kind: rearrangement
+family: rearrangement-reactions
+exams: [jee-main, jee-advanced, neet]
+mapEdges: [r7]
+reactant:
+  name: Pinacol (2,3-dimethylbutane-2,3-diol)
+  smiles: CC(C)(O)C(C)(C)O
+product:
+  name: Pinacolone (3,3-dimethylbutan-2-one)
+  smiles: CC(=O)C(C)(C)C
+byproducts: H₂O
+reagents: H⁺ (conc. H₂SO₄) or a Lewis acid
+conditions: Heat (Δ)
+equation: "(CH3)2C(OH)-C(OH)(CH3)2 ->[H+][\\Delta] (CH3)3C-CO-CH3 + H2O"
+notesPages: [8, 25, 73]
+steps:
+  - title: "Protonation of one OH"
+    text: "The acid protonates one OH group of pinacol, turning it into –OH₂⁺, a good leaving group."
+    arrows: "A lone pair on one OH oxygen → H⁺."
+    species:
+      - smiles: "CC(C)(O)C(C)(C)O"
+        label: "Pinacol"
+        highlight: "[OH]"
+      - smiles: "[H+]"
+        label: "H⁺ (conc. H₂SO₄)"
+      - smiles: "CC(C)(O)C(C)(C)[OH2+]"
+        label: "Protonated diol"
+  - title: "Loss of water: carbocation"
+    text: "Water leaves, giving a tertiary carbocation next to the carbon that still carries an OH. In exam answers this is treated as the slow, rate-determining step."
+    arrows: "The C–O bond pair moves onto oxygen and H₂O departs."
+    species:
+      - smiles: "CC(C)(O)C(C)(C)[OH2+]"
+        label: "Protonated diol"
+        highlight: "C[OH2+]"
+      - smiles: "CC(C)(O)[C+](C)C"
+        label: "Tertiary carbocation"
+      - smiles: "O"
+        label: "Water"
+  - title: "1,2-Methyl shift"
+    text: "A methyl group moves with its bonding pair from the carbinol carbon to the cationic carbon. The positive charge now sits on the carbon bearing the OH, where it is stabilised as an oxonium ion."
+    arrows: "The C–CH₃ bond pair carries the methyl to C⁺; an O lone pair then → C⁺, giving C=OH⁺."
+    species:
+      - smiles: "CC(C)(O)[C+](C)C"
+        label: "Tertiary carbocation"
+        highlight: "[CH3]C(O)[C+]"
+      - smiles: "CC(C)(C)[C+](C)O"
+        label: "Shifted cation"
+      - smiles: "CC(C)(C)C(C)=[OH+]"
+        label: "Oxonium ion"
+        highlight: "C=[OH+]"
+  - title: "Deprotonation to pinacolone"
+    text: "Loss of H⁺ from the oxonium oxygen gives the strong C=O of pinacolone (3,3-dimethylbutan-2-one). Forming this C=O is the driving force."
+    arrows: "The O–H bond pair → oxygen, releasing H⁺ and leaving C=O."
+    species:
+      - smiles: "CC(C)(C)C(C)=[OH+]"
+        label: "Oxonium ion"
+        highlight: "[OH+]"
+      - smiles: "CC(=O)C(C)(C)C"
+        label: "Pinacolone"
+        highlight: "C=O"
+      - smiles: "[H+]"
+        label: "H⁺ (regenerated)"
+memoryTricks: []
+faq:
+  - q: What is the product of the pinacol–pinacolone rearrangement?
+    a: A ketone (or aldehyde). Pinacol, 2,3-dimethylbutane-2,3-diol, gives pinacolone, 3,3-dimethylbutan-2-one (tert-butyl methyl ketone).
+  - q: Which OH group leaves in an unsymmetrical diol?
+    a: The OH whose loss gives the more stable carbocation, for example the one on a carbon carrying phenyl groups, because the cation is stabilised by resonance.
+  - q: What is the migratory aptitude in the pinacol rearrangement?
+    a: Aryl (phenyl) migrates most readily, then hydride, then alkyl groups, with methyl among the poorest. The group that best stabilises the positive charge during the shift migrates.
+  - q: Why does the reaction form a ketone instead of an alkene?
+    a: After the 1,2-shift the positive charge sits on the carbon bearing the remaining OH, where it is stabilised as an oxonium ion. Losing H⁺ from that oxygen gives a stable C=O bond, which is the driving force of the reaction.
+related: []
+sources:
+  - title: Pinacol rearrangement
+    url: https://en.wikipedia.org/wiki/Pinacol_rearrangement
+    publisher: Wikipedia
+  - title: Pinacol Rearrangement
+    url: https://www.organic-chemistry.org/namedreactions/pinacol-rearrangement.shtm
+    publisher: Organic Chemistry Portal
+  - title: Spiro compound (spiro ketone from a symmetrical diol by pinacol rearrangement)
+    url: https://en.wikipedia.org/wiki/Spiro_compound
+    publisher: Wikipedia
+  - title: "8.7: Oxidation of Alkenes - Epoxidation and Hydroxylation"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/08:_Alkenes-_Reactions_and_Synthesis/8.07:_Oxidation_of_Alkenes_-_Epoxidation_and_Hydroxylation"
+    publisher: Chemistry LibreTexts (OpenStax)
+verified:
+  status: verified
+  checked: 2026-11-22
+  sourceCount: 4
+  note: Notes say carbocation formation is the rate-determining step; neither source states the RDS.
+---
+
+## What is the pinacol–pinacolone rearrangement?
+
+The **pinacol–pinacolone rearrangement** is the acid-catalysed conversion of a **vicinal (1,2-) diol** into a **ketone**. Water is lost, and a group on the neighbouring carbon moves across in a **1,2-shift**. It is named after the classic example: **pinacol** (2,3-dimethylbutane-2,3-diol) rearranges to **pinacolone** (3,3-dimethylbutan-2-one). The reaction was first described by Wilhelm Rudolph Fittig in 1860.
+
+The only structural requirement is two OH groups on adjacent carbons: –C(OH)–C(OH)–.
+
+## Mechanism
+
+1. **Protonation.** The acid protonates one OH group, turning it into a good leaving group (–OH₂⁺).
+2. **Carbocation formation.** Water leaves, giving a carbocation next to the carbon that still carries an OH. In exam answers this step is treated as the slow, rate-determining step.
+3. **1,2-shift.** A methyl group (with its bonding pair) moves from the carbinol carbon to the positively charged carbon.
+4. **Deprotonation.** The positive charge now sits on the carbon bearing the OH, stabilised as an oxonium ion. Loss of H⁺ from oxygen gives the C=O of pinacolone.
+
+<Eq ce="(CH3)2C(OH)-C(OH)(CH3)2 ->[H+] (CH3)2C(OH)-C+(CH3)2 ->[\text{1,2-CH3 shift}] (CH3)3C-C+(OH)CH3 ->[-H+] (CH3)3C-CO-CH3" />
+
+<KeyPoint>
+The driving force is the conversion of a carbocation into a resonance-stabilised oxonium ion, which then becomes a strong C=O bond.
+</KeyPoint>
+
+## Which OH leaves, and which group moves?
+
+For unsymmetrical diols, two choices decide the product:
+
+- **Which OH leaves:** the one that gives the **more stable carbocation**. A carbon carrying phenyl groups loses its OH first, because the cation is stabilised by resonance.
+- **Which group migrates (migratory aptitude):** roughly **aryl > H > alkyl**, with methyl among the poorest migrators. The group that can best share the positive charge during the shift moves.
+
+<ExamTip>
+First pick the more stable carbocation, then move the group with the highest migratory aptitude from the neighbouring carbon. The carbon that kept its OH becomes the C=O carbon.
+</ExamTip>
+
+## Ring expansion and ring contraction
+
+When the diol is part of a ring, or attached to one, the migrating bond can be a ring bond. The ring then **expands** (for example, a cyclobutyl group next to the cation becomes a cyclopentanone) or **contracts**. In rigid cyclic diols, a group that is *trans* to the leaving water migrates much faster than a *cis* group.
+
+**Worked example: a spiro ketone.** A favourite multi-step question builds the diol first and then rearranges it:
+
+1. Cyclohexylidenecyclohexane (two rings joined by a C=C) is treated with **OsO₄, then aqueous work-up**, which adds two OH groups *syn* across the C=C, giving 1,1′-bi(cyclohexyl)-1,1′-diol.
+2. With **H⁺ and heat**, one OH leaves to give a tertiary carbocation on one ring.
+3. A **ring C–C bond** of the other ring (not a methyl group) migrates to the cation. That ring grows from six to seven atoms, and its carbinol carbon becomes the C=O.
+4. The product is **spiro[5.6]dodecan-7-one**: a cycloheptanone and a cyclohexane sharing one spiro carbon.
+
+<Eq ce="(CH2)5C=C(CH2)5 ->[OsO4][H3O+] (CH2)5C(OH)-C(OH)(CH2)5 ->[H+][\Delta] spiro ketone + H2O" />
+
+The same rearrangement of 1,1′-bi(cyclopentyl)-1,1′-diol gives spiro[4.5]decan-6-one. Whenever both carbinol carbons sit in rings, expect a **ring-expanded spiro ketone**.
+
+## Related reactions
+
+- **Pinacol coupling** (Mg/Hg, then H₂O) is how pinacols are made from ketones, so the two reactions are often asked together as a sequence: acetone → pinacol → pinacolone.
+- The **semipinacol rearrangement** is the same 1,2-shift starting from substrates where only one carbon carries an OH.
+- The **dienone–phenol rearrangement** is another acid-catalysed 1,2-shift driven by forming a more stable product.

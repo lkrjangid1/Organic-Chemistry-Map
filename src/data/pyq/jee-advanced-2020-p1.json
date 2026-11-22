@@ -1,0 +1,273 @@
+{
+ "exam": "jee-advanced",
+ "year": 2020,
+ "paper": 1,
+ "source": "https://jeeadv.ac.in/past_qps/2020_1_English.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2020-p1-q4",
+   "number": 4,
+   "type": "single",
+   "stem": "Newman projections P, Q, R and S are shown below (For each projection, one carbon carries the groups at top, lower-left and lower-right; the other carbon carries the groups at upper-left, upper-right and bottom.):\nP — top: CH₃; upper-right: CH₃; lower-right: C₂H₅; bottom: CH₃; lower-left: H₃C; upper-left: HO\nQ — top: C(CH₃)₂OH (drawn as H₃C–C(OH)–CH₃); upper-right: H; lower-right: C₂H₅; bottom: CH₃; lower-left: H; upper-left: H\nR — top: CH₃; upper-right: H; lower-right: CH₃; bottom: C₂H₅; lower-left: HO; upper-left: C₂H₅\nS — top: CH₃; upper-right: CH(CH₃)₂; lower-right: H; bottom: OH; lower-left: H; upper-left: C₂H₅\nWhich one of the following options represents identical molecules?",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "P and Q"
+    },
+    {
+     "key": "B",
+     "text": "Q and S"
+    },
+    {
+     "key": "C",
+     "text": "Q and R"
+    },
+    {
+     "key": "D",
+     "text": "R and S"
+    }
+   ],
+   "answer": "C",
+   "solution": "Read the three groups on each carbon and join the two carbons. P is (CH₃)₂C(OH)–C(CH₃)₂C₂H₅, i.e. 2,3,3-trimethylpentan-2-ol. Q is (CH₃)₂C(OH)–CH(C₂H₅)–CH₂CH₃ and R is (CH₃)₂C(OH)–CH(C₂H₅)₂. These are the same compound, 3-ethyl-2-methylpentan-2-ol. S is CH₃CH₂–C(OH)(C₂H₅)CH(CH₃)₂, i.e. 3-ethyl-2-methylpentan-3-ol. None of them has a stereocentre, so Q and R are identical.",
+   "topics": [
+    "concepts/iupac-functional-group-priority"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2020-p1-q5",
+   "number": 5,
+   "type": "single",
+   "stem": "Which one of the following structures has the IUPAC name 3-ethynyl-2-hydroxy-4-methylhex-3-en-5-ynoic acid?",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "OC(=O)C(O)C(CC)=C(C#C)C#C"
+    },
+    {
+     "key": "B",
+     "smiles": "OC(=O)C(O)C(C#C)=C(C#C)CC"
+    },
+    {
+     "key": "C",
+     "smiles": "OC(=O)C(O)C(C)=C(C#C)C#C"
+    },
+    {
+     "key": "D",
+     "smiles": "OC(=O)C(O)C(C#C)=C(C)C#C"
+    }
+   ],
+   "answer": "D",
+   "solution": "Build the name: C1 is COOH and C2 carries OH. C3=C4 is the double bond, with an ethynyl on C3 and a methyl on C4. C5≡C6 is the terminal triple bond in the main chain. So the compound is HOOC–CH(OH)–C(C≡CH)=C(CH₃)–C≡CH, which is D. A and C have both ethynyls on C4, and B has an ethyl in place of the methyl.",
+   "topics": [
+    "concepts/iupac-functional-group-priority"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2020-p1-q6",
+   "number": 6,
+   "type": "matching",
+   "stem": "The Fischer projection of D-erythrose is shown below.\nD-Erythrose and its isomers are listed as P, Q, R, and S in Column-I. Choose the correct relationship of P, Q, R, and S with D-erythrose from Column II.\nColumn-I: P, Q, R, S (structures shown)\nColumn-II: 1. Diastereomer; 2. Identical; 3. Enantiomer",
+   "figures": [
+    {
+     "smiles": "O=C[C@H](O)[C@H](O)CO",
+     "label": "D-Erythrose"
+    },
+    {
+     "smiles": "O=C[C@H](O)[C@H](O)CO",
+     "label": "P"
+    },
+    {
+     "smiles": "O=C[C@@H](O)[C@H](O)CO",
+     "label": "Q"
+    },
+    {
+     "smiles": "O=C[C@H](O)[C@@H](O)CO",
+     "label": "R"
+    },
+    {
+     "smiles": "O=C[C@@H](O)[C@@H](O)CO",
+     "label": "S"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "P→2, Q→3, R→2, S→2"
+    },
+    {
+     "key": "B",
+     "text": "P→3, Q→1, R→1, S→2"
+    },
+    {
+     "key": "C",
+     "text": "P→2, Q→1, R→1, S→3"
+    },
+    {
+     "key": "D",
+     "text": "P→2, Q→3, R→3, S→1"
+    }
+   ],
+   "answer": "C",
+   "solution": "D-Erythrose is (2R,3R). Assign CIP descriptors to each wedge–dash drawing: P is (2R,3R), Q is (2S,3R), R is (2R,3S) and S is (2S,3S). Matching both centres means identical (P). Inverting both means the enantiomer (S, L-erythrose). Inverting only one means a diastereomer (Q and R, the threoses). So P→2, Q→1, R→1, S→3.",
+   "topics": [
+    "concepts/aldoses-and-epimers"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2020-p1-q8",
+   "number": 8,
+   "type": "multiple",
+   "stem": "With respect to the compounds I-V, choose the correct statement(s).",
+   "figures": [
+    {
+     "smiles": "C(c1ccccc1)(c1ccccc1)c1ccccc1",
+     "label": "I"
+    },
+    {
+     "smiles": "c1ccccc1",
+     "label": "II"
+    },
+    {
+     "smiles": "C",
+     "label": "III"
+    },
+    {
+     "smiles": "C1C=CC=C1",
+     "label": "IV"
+    },
+    {
+     "smiles": "C#C",
+     "label": "V"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "The acidity of compound I is due to delocalization in the conjugate base."
+    },
+    {
+     "key": "B",
+     "text": "The conjugate base of compound IV is aromatic."
+    },
+    {
+     "key": "C",
+     "text": "Compound II becomes more acidic, when it has a -NO₂ substituent."
+    },
+    {
+     "key": "D",
+     "text": "The acidity of compounds follows the order I > IV > V > II > III."
+    }
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "solution": "Losing H⁺ from Ph₃CH gives a trityl anion whose charge spreads over three rings (A true). The cyclopentadienyl anion has 6π electrons in a planar ring, so it is aromatic (B true). An NO₂ group pulls electron density away and stabilises the aryl anion, so nitrobenzene's ring C–H is more acidic than benzene's (C true). The approximate pKa values are cyclopentadiene ≈ 16, ethyne ≈ 25, Ph₃CH ≈ 31, benzene ≈ 43 and methane ≈ 50. The order is therefore IV > V > I > II > III, so D is false.",
+   "topics": [
+    "comparisons/acidic-strength-order",
+    "concepts/aromaticity",
+    "concepts/resonance-effect"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2020-p1-q9",
+   "number": 9,
+   "type": "multiple",
+   "stem": "In the reaction scheme shown below, Q, R, and S are the major products.\nP —succinic anhydride, AlCl₃→ Q —(i) Zn-Hg/HCl (ii) H₃PO₄→ R —(i) CH₃MgBr (ii) H₃O⁺ (iii) H₂SO₄/Δ→ S\nThe correct structure of",
+   "figures": [
+    {
+     "smiles": "CC(C)(C)c1ccc2CCC(C)(C)c2c1",
+     "label": "P"
+    },
+    {
+     "smiles": "O=C1CCC(=O)O1",
+     "label": "succinic anhydride"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "S is",
+     "smiles": "CC(C)(C)c1c2CCC=C(C)c2c2CCC(C)(C)c2c1"
+    },
+    {
+     "key": "B",
+     "text": "Q is",
+     "smiles": "CC(C)(C)c1cc(C(=O)CCC(=O)O)c2CCC(C)(C)c2c1"
+    },
+    {
+     "key": "C",
+     "text": "R is",
+     "smiles": "CC(C)(C)c1c2CCCC(=O)c2c2CCC(C)(C)c2c1"
+    },
+    {
+     "key": "D",
+     "text": "S is",
+     "smiles": "CC(C)(C)c1c2C(C)=CCCc2c2CCC(C)(C)c2c1"
+    }
+   ],
+   "answer": [
+    "B",
+    "D"
+   ],
+   "solution": "P has three free ring positions. The one between the t-Bu and the gem-dimethyl carbon is blocked, and the one next to t-Bu is crowded. Friedel–Crafts acylation with succinic anhydride therefore goes to the ring CH next to the ring CH₂, giving the keto acid Q (B). Clemmensen reduction turns the C=O into CH₂. H₃PO₄ then closes a six-membered ring by intramolecular acylation at the only free ortho position, next to the t-Bu carbon. So R's ketone sits beside the t-Bu-bearing carbon, not where C draws it. CH₃MgBr gives a tertiary alcohol, and acid dehydration gives the methyl-substituted alkene conjugated with the ring. That is S as drawn in D; A puts the methyl on the wrong carbon.",
+   "topics": [
+    "reactions/friedel-crafts-acylation",
+    "reactions/clemmensen-reduction",
+    "reactions/grignard-reagent"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2020-p1-q18",
+   "number": 18,
+   "type": "numerical",
+   "stem": "In the following reaction, compound Q is obtained from compound P via an ionic intermediate.\nP —conc. H₂SO₄→ Q (A colored compound)\nWhat is the degree of unsaturation of Q?",
+   "figures": [
+    {
+     "smiles": "COC(=O)c1c(-c2ccccc2)cc(-c2ccccc2)cc1-c1ccccc1",
+     "label": "P"
+    }
+   ],
+   "options": [],
+   "answer": "18",
+   "solution": "In conc. H₂SO₄ the crowded ester loses methanol and forms an acylium ion, ArC≡O⁺. This ion attacks an ortho phenyl ring (intramolecular Friedel–Crafts acylation). The product Q is 1,3-diphenylfluoren-9-one, which is yellow. Q is C₂₅H₁₆O: DoU = (2×25 + 2 − 16)/2 = 18. Check: four benzene rings (16) + the five-membered ring (1) + C=O (1) = 18.",
+   "topics": [
+    "reactions/friedel-crafts-acylation",
+    "concepts/degree-of-unsaturation"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  }
+ ]
+}

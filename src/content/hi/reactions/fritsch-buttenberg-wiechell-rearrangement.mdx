@@ -1,0 +1,69 @@
+---
+title: "Fritsch–Buttenberg–Wiechell Rearrangement (FBW पुनर्विन्यास)"
+description: "Fritsch–Buttenberg–Wiechell rearrangement: strong base 1,1-diaryl-2-haloalkene को 1,2-shift से 1,2-diarylalkyne में बदलता है। Mechanism, bases और examples।"
+aliases: ["फ्रिच पुनर्विन्यास", "FBW पुनर्विन्यास", "fritsch rearrangement hindi", "fbw rearrangement hindi", "fritsch buttenberg wiechell hindi", "vinylidene carbene hindi", "alkyne synthesis rearrangement hindi"]
+reagents: "Strong base: alkoxide (R–O⁻Na⁺), organolithium (n-BuLi)"
+conditions: "Alkoxide के लिए गर्म (Δ); organolithium के लिए कम temperature"
+byproducts: "HBr (base के साथ इसके salt के रूप में)"
+reactantName: "2-Bromo-1,1-diphenylethene"
+productName: "Diphenylacetylene (1,2-diphenylethyne)"
+faq:
+  - q: "Fritsch–Buttenberg–Wiechell rearrangement का product क्या है?"
+    a: "एक alkyne। 2-bromo-1,1-diphenylethene जैसा 1,1-diaryl-2-bromoalkene, diphenylacetylene जैसा 1,2-diarylalkyne देता है।"
+  - q: "Fritsch–Buttenberg–Wiechell rearrangement में कौन-सा base इस्तेमाल होता है?"
+    a: "एक strong base। Classic reaction में गर्म करके alkoxide इस्तेमाल होता है; modern versions में n-butyllithium जैसे organolithium reagents इस्तेमाल होते हैं।"
+  - q: "Fritsch–Buttenberg–Wiechell rearrangement में कौन-सा group migrate करता है?"
+    a: "पड़ोसी carbon पर लगा group, आमतौर पर aryl group, उस carbon पर shift होता है जिस पर halogen था। निकलने वाले halogen के trans वाला group ही migrate करता है।"
+  - q: "Fritsch–Buttenberg–Wiechell rearrangement में कौन-सा intermediate शामिल है?"
+    a: "Vinylic H हटने से vinyl carbanion बनता है (जब metal Li या Mg हो तो carbenoid)। Halide के निकलने (alpha-elimination) से vinylidene carbene या carbenoid बनता है, और 1,2-shift इसे alkyne में बदल देता है।"
+translated: 2026-11-22
+---
+
+## Fritsch–Buttenberg–Wiechell rearrangement क्या है?
+
+**Fritsch–Buttenberg–Wiechell (FBW) rearrangement** एक **1,1-disubstituted 2-haloalkene (R₁R₂C=CH–X) को disubstituted alkyne (R₁–C≡C–R₂) में** बदल देता है, जब इसे **strong base** के साथ treat किया जाए। Classic version में एक **1,1-diaryl-2-bromoalkene** को alkoxide के साथ गर्म किया जाता है और **1,2-diarylalkyne** मिलता है; एक aryl group 1,2-shift में double bond के पार चला जाता है। इसे Paul Fritsch, Wilhelm Buttenberg और Heinrich Wiechell ने 1894 में report किया था।
+
+## Mechanism
+
+1. **Vinylic H का हटना।** Strong base उस carbon का H खींच लेता है जिस पर halogen है, जिससे **vinyl carbanion** बनता है (Li या Mg के साथ यह metal carbenoid होता है)।
+2. **α-Elimination।** Halide उसी carbon से निकल जाता है। इससे एक electron-deficient vinylidene carbon (vinylidene carbene या carbenoid, R₁R₂C=C:) बचता है।
+3. **1,2-Shift।** पड़ोसी carbon पर लगा एक group (R₁, आमतौर पर aryl) electron-deficient carbon पर migrate करता है, और C=C, C≡C बन जाता है। **निकलने वाले halogen के trans** वाला group ही migrate करता है, और carbenoids में shift halide के निकलने के साथ ही होता है।
+
+<Eq ce="R1R2C=CH-Br ->[\text{base}][-H+] R1R2C=C^{-}-Br ->[-Br-] R1R2C=C: ->[\text{1,2-shift of }R1] R1-C#C-R2" />
+
+<KeyPoint>
+FBW rearrangement एक **α-elimination** (H और X एक ही carbon से निकलते हैं) के बाद 1,2-shift है, सामान्य β-elimination नहीं। इसीलिए एक substituent alkyne के दूसरे carbon पर पहुँच जाता है।
+</KeyPoint>
+
+## सामान्य dehydrohalogenation से यह कैसे अलग है
+
+Alkyne बनाने वाले सामान्य elimination में H और X **पास-पास के** carbons से निकलते हैं और कोई group नहीं हिलता। FBW rearrangement में X वाले carbon पर ही अकेला H होता है, और alkene के दूसरे carbon पर दो substituents होते हैं और कोई H नहीं। इसलिए सामान्य β-elimination संभव नहीं है, तो molecule **एक ही** carbon से H और X खोता है और एक group shift करके electron-deficient centre को ठीक करता है। Product में पहचान का निशान यह है कि जो दो groups शुरू में एक carbon पर थे, वे triple bond के अलग-अलग carbons पर पहुँच जाते हैं।
+
+## Examples
+
+1. **2-Bromo-1,1-diphenylethene → diphenylacetylene** (classic case):
+
+<Eq ce="(C6H5)2C=CHBr ->[\text{RO-Na+}][\Delta] C6H5-C#C-C6H5 + HBr" />
+
+2. **Mixed aryl substrates:** (Ar)(Ar')C=CHBr के लिए product unsymmetrical alkyne Ar–C≡C–Ar' होता है, चाहे कोई भी aryl migrate करे, क्योंकि दोनों triple bond पर ही पहुँचते हैं।
+
+3. **Modern alkyne और polyyne synthesis:** aldehydes या ketones से बने 1,1-dibromoalkenes (Corey–Fuchs type) को कम temperature पर n-butyllithium के साथ treat किया जाता है। Li–Br exchange से बना lithium carbenoid rearrange होता है, और जब alkynyl group migrate करता है तो conjugated di- और triynes बनते हैं। यह reaction सिर्फ़ aryl groups ही नहीं, alkyl groups के साथ भी काम करती है।
+
+<ExamTip>
+Pattern पहचानें: एक vinyl halide जिसके halogen वाले carbon पर H हो और दूसरे carbon पर दो groups, साथ में strong base। एक ही carbon से H और X हटाएँ, एक group को पार ले जाएँ, और alkyne R₁–C≡C–R₂ लिखें।
+</ExamTip>
+
+## Limitations और exceptions
+
+- Halogen वाले carbon पर H होना चाहिए (या halogen–metal exchange से उसे metal carbenoid में बदला जाए)।
+- Geometry मायने रखती है: निकलने वाले halogen के trans वाला group अच्छी तरह migrate करता है; cis group नहीं।
+- Free vinylidene carbenes हमेशा शामिल नहीं होते: magnesium carbenoids के साथ दोनों geometric isomers अलग-अलग react करते हैं, जिससे पता चलता है कि shift खुद carbenoid से होता है।
+- Exam questions में कभी-कभी NaNH₂ को भी base के रूप में दिखाया जाता है; literature की classic conditions गर्म करके alkoxide या organolithium हैं।
+
+## Related reactions
+
+- [E2 reaction](/hi/reactions/e2-reaction/): vinyl halide का सामान्य β-elimination, जिसमें β-H चाहिए और बिना किसी shift के alkyne मिलता है।
+- [Benzyne mechanism](/hi/reactions/benzyne-mechanism/): strong base से होने वाला एक और elimination जो triple bond बनाता है।
+- [Kucherov reaction](/hi/reactions/kucherov-reaction/): alkyne product का hydration।
+- [Dienone–phenol rearrangement](/hi/reactions/dienone-phenol-rearrangement/)
+- [Rearrangement reactions hub](/hi/mechanisms/rearrangement-reactions/)

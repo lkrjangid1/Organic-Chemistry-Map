@@ -1,0 +1,91 @@
+---
+/**
+ * Step-by-step mechanism. Without JavaScript every step is listed; with it,
+ * the list becomes a stepper (one step at a time, previous/next, arrow keys).
+ */
+import { moleculeSvg } from '../lib/structure';
+import { langOf, t as tr } from '../lib/i18n';
+
+interface Species { smiles: string; label?: string; highlight?: string }
+interface Step { title: string; text: string; species: Species[]; arrows?: string }
+interface Props { steps: Step[] }
+
+const { steps } = Astro.props;
+const s = tr(langOf(Astro.url));
+const drawn = await Promise.all(
+  steps.map(async (st) => ({
+    ...st,
+    svgs: await Promise.all(st.species.map(async (sp) => ({ ...sp, svg: await moleculeSvg(sp.smiles, { width: 200, height: 150, highlight: sp.highlight }) }))),
+  })),
+);
+---
+{steps.length > 0 && (
+  <section class="msteps" aria-labelledby="steps-h" data-steps>
+    <div class="msteps-head">
+      <h2 id="steps-h">{s.stepByStep}</h2>
+      <button type="button" class="btn-link msteps-toggle" data-label-all={s.showAll} data-label-one={s.oneAtATime} hidden>{s.showAll}</button>
+    </div>
+    <ol class="msteps-list">
+      {drawn.map((st, i) => (
+        <li class="mstep" data-step={i}>
+          <h3><span class="mstep-no">{s.step} {i + 1}</span> {st.title}</h3>
+          {st.svgs.length > 0 && (
+            <div class="step-species">
+              {st.svgs.map((sp, j) => (
+                <>
+                  {j > 0 && <span class="step-plus" aria-hidden="true">+</span>}
+                  <figure class="mol">
+                    {sp.svg ? <Fragment set:html={sp.svg.replace("role='img'", `role='img' aria-label='${(sp.label ?? 'structure').replace(/'/g, '')}'`)} /> : <div class="mol-text">{sp.label ?? sp.smiles}</div>}
+                    {sp.label && <figcaption>{sp.label}</figcaption>}
+                  </figure>
+                </>
+              ))}
+            </div>
+          )}
+          {st.arrows && <p class="step-arrows"><strong>{s.electronFlow}:</strong> {st.arrows}</p>}
+          <p>{st.text}</p>
+        </li>
+      ))}
+    </ol>
+    <div class="msteps-nav" hidden>
+      <button type="button" class="btn btn-ghost btn-sm" data-prev>← {s.prev}</button>
+      <span class="msteps-dots" aria-hidden="true">{drawn.map((_, i) => <button type="button" data-go={i} tabindex="-1" />)}</span>
+      <button type="button" class="btn btn-primary btn-sm" data-next>{s.next} →</button>
+    </div>
+  </section>
+)}
+
+<script>
+  for (const root of document.querySelectorAll<HTMLElement>('[data-steps]')) {
+    const items = [...root.querySelectorAll<HTMLElement>('.mstep')];
+    const nav = root.querySelector<HTMLElement>('.msteps-nav')!;
+    const toggle = root.querySelector<HTMLButtonElement>('.msteps-toggle')!;
+    const dots = [...root.querySelectorAll<HTMLButtonElement>('[data-go]')];
+    const prev = root.querySelector<HTMLButtonElement>('[data-prev]')!;
+    const next = root.querySelector<HTMLButtonElement>('[data-next]')!;
+    if (items.length < 2) continue;
+    let i = 0;
+    let all = false;
+    const show = () => {
+      items.forEach((el, k) => (el.hidden = !all && k !== i));
+      dots.forEach((d, k) => d.classList.toggle('on', k === i));
+      prev.disabled = i === 0;
+      next.disabled = i === items.length - 1;
+      nav.hidden = all;
+      toggle.textContent = all ? toggle.dataset.labelOne! : toggle.dataset.labelAll!;
+    };
+    prev.addEventListener('click', () => { i = Math.max(0, i - 1); show(); });
+    next.addEventListener('click', () => { i = Math.min(items.length - 1, i + 1); show(); });
+    dots.forEach((d, k) => d.addEventListener('click', () => { i = k; show(); }));
+    toggle.addEventListener('click', () => { all = !all; show(); });
+    root.addEventListener('keydown', (e) => {
+      if (all) return;
+      if (e.key === 'ArrowRight') { i = Math.min(items.length - 1, i + 1); show(); }
+      if (e.key === 'ArrowLeft') { i = Math.max(0, i - 1); show(); }
+    });
+    root.tabIndex = -1;
+    toggle.hidden = false;
+    root.classList.add('msteps-js');
+    show();
+  }
+</script>

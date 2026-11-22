@@ -1,0 +1,83 @@
+---
+title: "Gabriel Phthalimide Synthesis (गेब्रियल थैलिमाइड संश्लेषण)"
+description: "Gabriel phthalimide synthesis alkyl halides से pure primary amines बनाता है: potassium phthalimide का SN2 से N-alkylation, फिर hydrolysis। Mechanism और सीमाएँ।"
+aliases: ["गेब्रियल थैलिमाइड संश्लेषण", "गेब्रियल संश्लेषण", "गेब्रियल थैलेमाइड", "gabriel phthalimide synthesis hindi", "gabriel synthesis hindi", "potassium phthalimide hindi", "primary amine preparation hindi"]
+reagents: "1) Ethanolic KOH; 2) R–X (1° alkyl halide); 3) aqueous NaOH/KOH (या N₂H₄)"
+conditions: "R–X के साथ गर्म करें, फिर alkaline hydrolysis"
+byproducts: "Phthalate salt (hydrazine के साथ phthalhydrazide)"
+reactantName: "Phthalimide (isoindoline-1,3-dione)"
+productName: "Ethanamine (bromoethane से)"
+faq:
+  - q: "Gabriel phthalimide synthesis से कौन-सी amines बनाई जा सकती हैं?"
+    a: "सिर्फ़ primary aliphatic (और benzylic) amines, R–NH₂। Secondary और tertiary amines नहीं बनतीं, क्योंकि N-alkylphthalimide में कोई N–H नहीं बचता और यह दोबारा alkylate नहीं हो सकता।"
+  - q: "Gabriel phthalimide synthesis से aniline क्यों नहीं बनाई जा सकती?"
+    a: "Aryl halides, phthalimide anion के साथ nucleophilic substitution नहीं करते। Aryl halide के C–X bond में resonance से partial double-bond character होता है और ring backside attack को रोक देती है, इसलिए SN2 step fail हो जाता है।"
+  - q: "Phthalimide का N–H acidic क्यों होता है?"
+    a: "Nitrogen दो C=O groups के बीच होता है, इसलिए H⁺ निकलने के बाद बचा negative charge दोनों oxygens पर delocalise हो जाता है। इसीलिए ethanolic KOH phthalimide को आसानी से potassium phthalimide में बदल देता है।"
+  - q: "क्या Gabriel synthesis से tert-butylamine बनाई जा सकती है?"
+    a: "नहीं। Key step carbon पर SN2 है, और (CH₃)₃C–Br जैसे tertiary halides SN2 नहीं कर सकते; basic phthalimide anion के साथ वे इसकी जगह eliminate हो जाते हैं। Secondary halides भी आमतौर पर ठीक से react नहीं करते।"
+  - q: "Gabriel synthesis का Ing–Manske modification क्या है?"
+    a: "N-alkylphthalimide को alkali या acid की जगह hydrazine से तोड़ा जाता है। Amine free हो जाती है और phthalhydrazide precipitate हो जाता है, जिससे कड़ी hydrolysis conditions से बचा जाता है।"
+translated: 2026-11-22
+---
+
+## Gabriel phthalimide synthesis क्या है?
+
+**Gabriel phthalimide synthesis** एक **primary alkyl halide को primary amine में** बदलता है, और इसमें secondary या tertiary amines की मिलावट नहीं होती। पहले **phthalimide** को ethanolic KOH से **potassium phthalimide** में बदला जाता है; imide anion **SN2** reaction में R–X से halide को displace करता है, और बने हुए **N-alkylphthalimide** को फिर aqueous alkali से hydrolyse (या hydrazine से cleave) करके **R–NH₂** निकाला जाता है। इसका नाम Siegmund Gabriel (1887) के नाम पर है।
+
+Phthalimide anion, NH₂⁻ के एक protected, "एक बार इस्तेमाल" वाले version की तरह काम करता है: एक alkyl group लगते ही इसमें कोई N–H नहीं बचता और यह दोबारा alkylate नहीं हो सकता।
+
+## Mechanism
+
+1. **Deprotonation।** Phthalimide का N–H acidic है क्योंकि anion दोनों तरफ़ के C=O groups से stabilise होता है। Ethanolic KOH proton हटाता है और potassium phthalimide बनता है।
+
+<Eq ce="C6H4(CO)2NH + KOH -> C6H4(CO)2N^-K+ + H2O" />
+
+2. **N-Alkylation (SN2)।** Nitrogen anion alkyl halide के carbon पर पीछे से attack करता है और halide निकल जाता है, जिससे N-alkylphthalimide बनता है। इसके लिए unhindered (primary, benzylic या allylic) carbon चाहिए।
+
+<Eq ce="C6H4(CO)2N^-K+ + R-X ->[\Delta] C6H4(CO)2N-R + KX" />
+
+3. **Amine का निकलना।** Aqueous NaOH या KOH के साथ गर्म करने पर दोनों C=O groups पर attack होता है (nucleophilic acyl substitution), और दोनों C–N bonds टूट जाते हैं। Primary amine free हो जाती है और phthalic acid वाला हिस्सा उसके salt के रूप में बचता है।
+
+<Eq ce="C6H4(CO)2N-R + 2NaOH ->[\Delta] R-NH2 + C6H4(COONa)2" />
+
+<KeyPoint>
+सिर्फ़ primary amines बनती हैं। N-alkylphthalimide में कोई N–H नहीं होता, इसलिए over-alkylation नहीं होता, जो [ammonolysis of alkyl halides](/hi/reactions/ammonolysis-of-alkyl-halides/) की मुख्य समस्या है।
+</KeyPoint>
+
+## Amine को free करने के तरीके
+
+| Cleavage step | Reagent | By-product | Comment |
+|---|---|---|---|
+| Alkaline hydrolysis (NCERT) | aqueous NaOH या KOH, गर्म | disodium/dipotassium phthalate | board और NEET papers में पूछा जाने वाला version |
+| Acid hydrolysis | aqueous acid, गर्म | phthalic acid | amine अपने ammonium salt के रूप में निकलती है; अक्सर कम yield |
+| Ing–Manske procedure | hydrazine (N₂H₄), ethanol | phthalhydrazide (precipitate होता है) | mild; lab में आम |
+
+## Examples
+
+**Bromoethane से ethanamine**
+
+<Eq ce="C6H4(CO)2N^-K+ ->[CH3CH2Br][\Delta] C6H4(CO)2N-CH2CH3 ->[NaOH(aq)] CH3CH2NH2" />
+
+**Benzyl chloride से benzylamine।** Benzylic halides SN2 से अच्छी तरह react करते हैं, इसलिए C₆H₅CH₂Cl से C₆H₅CH₂NH₂ मिलता है।
+
+<Eq ce="C6H4(CO)2N^-K+ ->[C6H5CH2Cl] C6H4(CO)2N-CH2C6H5 ->[N2H4] C6H5CH2NH2" />
+
+## Limitations और exceptions
+
+- **Aromatic amines (aniline) नहीं बनाई जा सकतीं।** Aryl halides, phthalimide anion के साथ nucleophilic substitution नहीं करते: ring के साथ resonance से C–X bond में partial double-bond character होता है, और backside attack नामुमकिन है। Aniline इसकी जगह nitrobenzene को reduce करके बनाई जाती है।
+- **(CH₃)₃C–NH₂ जैसी tert-alkyl primary amines नहीं बनाई जा सकतीं**, क्योंकि tertiary halides SN2 नहीं करते। Secondary halides भी, जब तक ख़ास reactive न हों, ठीक से react नहीं करते।
+- **Secondary और tertiary amines कभी product नहीं होतीं।** Gabriel synthesis सिर्फ़ 1° amines का method है।
+- Hydrolysis step के लिए काफ़ी कड़ी heating चाहिए; इसीलिए practice में अक्सर hydrazine work-up को prefer किया जाता है।
+
+<ExamTip>
+अगर question में alkyl halide से "2° और 3° amines से मुक्त" primary amine माँगी जाए, तो answer Gabriel synthesis है। अगर target aniline या tert-alkyl amine है, तो Gabriel गलत choice है।
+</ExamTip>
+
+## Related reactions
+
+- [Ammonolysis of alkyl halides](/hi/reactions/ammonolysis-of-alkyl-halides/): वही R–X starting point, लेकिन amines का mixture देता है।
+- [Hofmann bromamide degradation](/hi/reactions/hofmann-bromamide-degradation/): pure 1° amines का एक और रास्ता, amides से, एक carbon कम के साथ।
+- [SN2 reaction](/hi/reactions/sn2-reaction/): alkylation step का mechanism।
+- [Preparation of amines](/hi/preparation/preparation-of-amines/): सभी methods की तुलना।
+- [Hinsberg test](/hi/tests/hinsberg-test/) और [carbylamine reaction](/hi/reactions/carbylamine-reaction/): primary amine confirm करने वाले tests।
