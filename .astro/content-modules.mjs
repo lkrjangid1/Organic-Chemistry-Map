@@ -42,7 +42,6 @@ export default new Map([
 ["src/content/reactions/hydroboration-oxidation.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Freactions%2Fhydroboration-oxidation.mdx&astroContentModuleFlag=true")],
 ["src/content/reactions/kolbe-electrolysis.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Freactions%2Fkolbe-electrolysis.mdx&astroContentModuleFlag=true")],
 ["src/content/reactions/kucherov-reaction.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Freactions%2Fkucherov-reaction.mdx&astroContentModuleFlag=true")],
-["src/content/reactions/lucas-test.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Freactions%2Flucas-test.mdx&astroContentModuleFlag=true")],
 ["src/content/reactions/markovnikov-rule.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Freactions%2Fmarkovnikov-rule.mdx&astroContentModuleFlag=true")],
 ["src/content/reactions/nbs-allylic-bromination.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Freactions%2Fnbs-allylic-bromination.mdx&astroContentModuleFlag=true")],
 ["src/content/reactions/neighbouring-group-participation.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Freactions%2Fneighbouring-group-participation.mdx&astroContentModuleFlag=true")],
@@ -66,5 +65,6 @@ export default new Map([
 ["src/content/reactions/wittig-reaction.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Freactions%2Fwittig-reaction.mdx&astroContentModuleFlag=true")],
 ["src/content/reactions/wolff-kishner-reduction.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Freactions%2Fwolff-kishner-reduction.mdx&astroContentModuleFlag=true")],
 ["src/content/reactions/wurtz-fittig-reaction.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Freactions%2Fwurtz-fittig-reaction.mdx&astroContentModuleFlag=true")],
-["src/content/reactions/wurtz-reaction.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Freactions%2Fwurtz-reaction.mdx&astroContentModuleFlag=true")]]);
+["src/content/reactions/wurtz-reaction.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Freactions%2Fwurtz-reaction.mdx&astroContentModuleFlag=true")],
+["src/content/tests/lucas-test.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Ftests%2Flucas-test.mdx&astroContentModuleFlag=true")]]);
 		

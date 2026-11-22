@@ -23,7 +23,7 @@ const jsonLd = [
     mainEntity: {
       '@type': 'ItemList',
       numberOfItems: withPages.length,
-      itemListElement: withPages.map((r, i) => ({ '@type': 'ListItem', position: i + 1, url: absUrl(`reactions/${r.slug}/`), name: r.title })),
+      itemListElement: withPages.map((r, i) => ({ '@type': 'ListItem', position: i + 1, url: absUrl(r.path), name: r.title })),
     },
   },
   breadcrumbLd([{ name: 'Reactions', path }]),
@@ -63,7 +63,7 @@ const jsonLd = [
             <div class="rxn-grid">
               {group.map((item) => (
                 <article class="rxn" data-search={item.search}>
-                  <h3>{item.slug ? <a href={url(`reactions/${item.slug}/`)}>{item.title}</a> : item.title}</h3>
+                  <h3>{item.slug ? <a href={url(item.path)}>{item.title}</a> : item.title}</h3>
                   {item.description && <p class="rxn-reagents">{item.description}</p>}
                   {item.conversions.length > 0 && (
                     <ul>

@@ -16,15 +16,20 @@ import { compile } from '@mdx-js/mdx';
 import initRDKitModule from '@rdkit/rdkit';
 
 const root = new URL('..', import.meta.url).pathname;
-const dirs = { reactions: join(root, 'src/content/reactions'), mechanisms: join(root, 'src/content/mechanisms') };
+const SECTIONS = ['reactions', 'tests', 'mechanisms', 'concepts', 'comparisons', 'preparation', 'reagents'];
+const REACTION_LIKE = new Set(['reactions', 'tests']);
+const dirs = Object.fromEntries(SECTIONS.map((s) => [s, join(root, 'src/content', s)]));
 const graph = JSON.parse(readFileSync(join(root, 'src/app/data/jee_organic.json'), 'utf8'));
 const edgeIds = new Set(graph.edges.map((e) => e.id));
 const list = (d) => (existsSync(d) ? readdirSync(d).filter((f) => f.endsWith('.mdx')) : []);
-const reactionSlugs = new Set(list(dirs.reactions).map((f) => basename(f, '.mdx')));
-const mechanismSlugs = new Set(list(dirs.mechanisms).map((f) => basename(f, '.mdx')));
+const slugs = Object.fromEntries(SECTIONS.map((s) => [s, new Set(list(dirs[s]).map((f) => basename(f, '.mdx')))]));
+const mechanismSlugs = slugs.mechanisms;
 // Pages planned in this batch may be linked before they exist.
 const plannedPath = process.env.PLANNED_SLUGS;
 const planned = plannedPath && existsSync(plannedPath) ? new Set(JSON.parse(readFileSync(plannedPath, 'utf8'))) : new Set();
+const exists = (section, slug) => slugs[section]?.has(slug) || planned.has(`${section}/${slug}`);
+/** related: "section/slug" or a bare slug (reaction or test). */
+const relatedOk = (r) => (r.includes('/') ? exists(...r.split('/')) : exists('reactions', r) || exists('tests', r));
 
 const COMPONENTS = new Set(['Eq', 'Mol', 'KeyPoint', 'Trick', 'ExamTip']);
 const EXAMS = new Set(['jee-main', 'jee-advanced', 'neet']);
@@ -34,7 +39,7 @@ const BANNED = /(byjus|vedantu|toppr|unacademy|physicswallah|pw\.live|allen\.|aa
 const rdkit = await initRDKitModule();
 const files = process.argv.slice(2).length
   ? process.argv.slice(2)
-  : [...list(dirs.reactions).map((f) => join(dirs.reactions, f)), ...list(dirs.mechanisms).map((f) => join(dirs.mechanisms, f))];
+  : SECTIONS.flatMap((s) => list(dirs[s]).map((f) => join(dirs[s], f)));
 
 let failed = 0;
 for (const file of files) {
@@ -54,7 +59,9 @@ for (const file of files) {
     errors.push(`YAML: ${e.message.split('\n')[0]}`);
   }
   const body = m[2];
-  const isReaction = file.includes('/reactions/');
+  const section = SECTIONS.find((s) => file.includes(`/content/${s}/`)) ?? 'reactions';
+  const isReaction = REACTION_LIKE.has(section);
+  const isTopic = !isReaction && section !== 'mechanisms';
   if (fm) {
     if (!fm.title) errors.push('title missing');
     if (!fm.description) errors.push('description missing');
@@ -62,7 +69,21 @@ for (const file of files) {
     else if (fm.description.length < 110) warn.push(`description only ${fm.description.length} chars (aim 130-160)`);
     if (!Array.isArray(fm.exams) || !fm.exams.length || fm.exams.some((e) => !EXAMS.has(e))) errors.push('exams must be a non-empty subset of jee-main, jee-advanced, neet');
     const sources = fm.sources ?? [];
-    if (isReaction && sources.length < 2) errors.push('need >= 2 sources');
+    if ((isReaction || isTopic) && sources.length < 2) errors.push('need >= 2 sources');
+    if (isTopic) {
+      if (!fm.category) errors.push('category missing');
+      if (!fm.verified?.status || !fm.verified?.checked) errors.push('verified.status and verified.checked required');
+      if (fm.verified && fm.verified.sourceCount !== sources.length) warn.push('verified.sourceCount != number of sources');
+      if (fm.family && !exists('mechanisms', fm.family)) errors.push(`unknown family: ${fm.family}`);
+      for (const r of fm.related ?? []) if (!r.includes('/') || !relatedOk(r)) errors.push(`related must be an existing "section/slug": ${r}`);
+      const smi = fm.molecule?.smiles;
+      if (smi) {
+        const mol = rdkit.get_mol(smi);
+        if (!mol || !mol.is_valid()) errors.push(`molecule.smiles invalid: ${smi}`);
+        mol?.delete();
+      }
+      if ((fm.faq ?? []).length < 3) warn.push('fewer than 3 FAQ items');
+    }
     for (const s of sources) {
       if (!s.title || !s.url) errors.push('source needs title and url');
       else if (BANNED.test(s.url)) errors.push(`banned source domain: ${s.url}`);
@@ -73,8 +94,8 @@ for (const file of files) {
       if (!fm.verified?.status || !fm.verified?.checked) errors.push('verified.status and verified.checked required');
       if (fm.verified && fm.verified.sourceCount !== sources.length) warn.push('verified.sourceCount != number of sources');
       for (const id of fm.mapEdges ?? []) if (!edgeIds.has(id)) errors.push(`unknown map edge id: ${id}`);
-      if (fm.family && !mechanismSlugs.has(fm.family) && !planned.has(`mechanisms/${fm.family}`)) errors.push(`unknown family: ${fm.family}`);
-      for (const r of fm.related ?? []) if (!reactionSlugs.has(r) && !planned.has(`reactions/${r}`)) errors.push(`unknown related slug: ${r}`);
+      if (fm.family && !exists('mechanisms', fm.family)) errors.push(`unknown family: ${fm.family}`);
+      for (const r of fm.related ?? []) if (!relatedOk(r)) errors.push(`unknown related page: ${r}`);
       for (const key of ['reactant', 'product']) {
         const smi = fm[key]?.smiles;
         if (smi) {
@@ -90,13 +111,14 @@ for (const file of files) {
   // <Eq ce="..."/> in body
   for (const em of body.matchAll(/<Eq\s+ce=(["'])([\s\S]*?)\1/g)) checkCe(em[2].replace(/\\\\/g, '\\'), 'body <Eq>', errors);
   for (const tag of body.matchAll(/<([A-Z][A-Za-z]*)/g)) if (!COMPONENTS.has(tag[1])) errors.push(`unknown component <${tag[1]}>`);
-  for (const link of body.matchAll(/\]\(\/(reactions|mechanisms)\/([a-z0-9-]+)\/?\)/g)) {
-    const ok = link[1] === 'reactions' ? reactionSlugs.has(link[2]) : mechanismSlugs.has(link[2]);
-    if (!ok && !planned.has(`${link[1]}/${link[2]}`)) errors.push(`link to unknown page /${link[1]}/${link[2]}/`);
+  for (const link of body.matchAll(/\]\(\/([a-z]+)\/([a-z0-9-]+)\/?(#[a-z0-9-]*)?\)/g)) {
+    if (link[1] === 'compounds' || link[1] === 'map') continue;
+    if (!SECTIONS.includes(link[1])) errors.push(`link to unknown section /${link[1]}/`);
+    else if (!exists(link[1], link[2])) errors.push(`link to unknown page /${link[1]}/${link[2]}/`);
   }
   if (/^#\s/m.test(body)) errors.push('do not use a level-1 heading (# ...) in the body; the page title is the H1');
   const words = body.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
-  if (isReaction && words < 350) warn.push(`body only ${words} words (aim 500-900)`);
+  if ((isReaction || isTopic) && words < 350) warn.push(`body only ${words} words (aim 500-900)`);
   try {
     await compile(body);
   } catch (e) {

@@ -213,10 +213,65 @@ p {
   color: var(--text);
 }
 
-@media (min-width: 760px) {
+@media (min-width: 1060px) {
   .nav-links {
     display: flex;
   }
+}
+
+/* Compact menu: all sections on small screens, the extra sections on wide screens. */
+.nav-menu {
+  position: relative;
+}
+
+.nav-menu summary {
+  list-style: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 0.95rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.nav-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-menu[open] summary {
+  color: var(--text);
+}
+
+.nav-menu ul {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.4rem);
+  z-index: 20;
+  min-width: 12rem;
+  margin: 0;
+  padding: 0.4rem;
+  list-style: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.nav-menu li a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-menu li a:hover {
+  background: var(--accent-soft);
+}
+
+.formula {
+  font-weight: 500;
+  color: var(--muted);
 }
 
 /* Buttons */

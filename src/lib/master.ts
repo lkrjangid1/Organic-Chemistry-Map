@@ -8,13 +8,15 @@ import { edges, edgesById, compoundName, type GraphEdge } from './graph';
 export interface MasterItem {
   title: string;
   slug?: string;
+  /** Site-relative page path, e.g. "reactions/aldol-condensation/". */
+  path?: string;
   description?: string;
   conversions: { edge: GraphEdge; label: string }[];
   search: string;
 }
 
 export async function getMasterList(): Promise<MasterItem[]> {
-  const pages = await getCollection('reactions');
+  const pages = [...(await getCollection('reactions')), ...(await getCollection('tests'))];
   const covered = new Set(pages.flatMap((p) => p.data.mapEdges));
   const items: MasterItem[] = pages.map((p) => {
     const conv = p.data.mapEdges
@@ -24,6 +26,7 @@ export async function getMasterList(): Promise<MasterItem[]> {
     return {
       title: p.data.title,
       slug: p.id,
+      path: `${p.collection}/${p.id}/`,
       description: p.data.description,
       conversions: conv,
       search: [p.data.title, ...p.data.aliases, p.data.reagents, ...conv.map((c) => c.label)].join(' ').toLowerCase(),

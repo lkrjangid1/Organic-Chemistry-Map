@@ -135,11 +135,38 @@ declare module 'astro:content' {
 		: any;
 
 	type DataEntryMap = {
-		"mechanisms": Record<string, {
+		"comparisons": Record<string, {
+  id: string;
+  body?: string;
+  collection: "comparisons";
+  data: InferEntrySchema<"comparisons">;
+  rendered?: RenderedContent;
+  filePath?: string;
+  digest?: string | number;
+}>;
+"concepts": Record<string, {
+  id: string;
+  body?: string;
+  collection: "concepts";
+  data: InferEntrySchema<"concepts">;
+  rendered?: RenderedContent;
+  filePath?: string;
+  digest?: string | number;
+}>;
+"mechanisms": Record<string, {
   id: string;
   body?: string;
   collection: "mechanisms";
   data: InferEntrySchema<"mechanisms">;
+  rendered?: RenderedContent;
+  filePath?: string;
+  digest?: string | number;
+}>;
+"preparation": Record<string, {
+  id: string;
+  body?: string;
+  collection: "preparation";
+  data: InferEntrySchema<"preparation">;
   rendered?: RenderedContent;
   filePath?: string;
   digest?: string | number;
@@ -149,6 +176,24 @@ declare module 'astro:content' {
   body?: string;
   collection: "reactions";
   data: InferEntrySchema<"reactions">;
+  rendered?: RenderedContent;
+  filePath?: string;
+  digest?: string | number;
+}>;
+"reagents": Record<string, {
+  id: string;
+  body?: string;
+  collection: "reagents";
+  data: InferEntrySchema<"reagents">;
+  rendered?: RenderedContent;
+  filePath?: string;
+  digest?: string | number;
+}>;
+"tests": Record<string, {
+  id: string;
+  body?: string;
+  collection: "tests";
+  data: InferEntrySchema<"tests">;
   rendered?: RenderedContent;
   filePath?: string;
   digest?: string | number;

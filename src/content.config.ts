@@ -22,40 +22,87 @@ const trick = z.object({
   meaning: z.string().optional(),
 });
 
-/** One page per reaction (named reaction, rearrangement, test, general reaction). */
+const verified = z.object({
+  status: z.enum(['verified', 'conflict', 'pending']),
+  checked: z.coerce.date(),
+  sourceCount: z.number().int().min(0),
+  note: z.string().optional(),
+});
+
+/** Shared shape of reaction and test pages. */
+const reactionSchema = z.object({
+  title: z.string(),
+  /** <= 160 chars, answer-first; used as meta description. */
+  description: z.string().max(170),
+  aliases: z.array(z.string()).default([]),
+  kind: z.enum(['named-reaction', 'rearrangement', 'general-reaction', 'test', 'mechanism-type']),
+  /** Slug of a mechanisms/ hub page. */
+  family: z.string().optional(),
+  exams: z.array(exam).min(1),
+  /** Edge ids in src/app/data/jee_organic.json shown on the map. */
+  mapEdges: z.array(z.string()).default([]),
+  reactant: molecule.optional(),
+  product: molecule.optional(),
+  byproducts: z.string().optional(),
+  reagents: z.string(),
+  conditions: z.string().optional(),
+  /** mhchem expression without \ce{}, e.g. "2 C6H5CHO ->[conc. NaOH] C6H5CH2OH + C6H5COONa" */
+  equation: z.string().optional(),
+  /** Tests only: what a positive result looks like. */
+  observation: z.string().optional(),
+  /** Tests only: what the test tells apart, e.g. "1°, 2° and 3° alcohols". */
+  distinguishes: z.string().optional(),
+  notesPages: z.array(z.number()).default([]),
+  memoryTricks: z.array(trick).default([]),
+  faq: z.array(faq).default([]),
+  /** Bare slugs of reaction pages, or "collection/slug" paths to other pages. */
+  related: z.array(z.string()).default([]),
+  sources: z.array(source).min(2),
+  verified,
+});
+
+/** One page per reaction (named reaction, rearrangement, general reaction). */
 const reactions = defineCollection({
   loader: glob({ pattern: '**/*.mdx', base: './src/content/reactions' }),
-  schema: z.object({
-    title: z.string(),
-    /** <= 160 chars, answer-first; used as meta description. */
-    description: z.string().max(170),
-    aliases: z.array(z.string()).default([]),
-    kind: z.enum(['named-reaction', 'rearrangement', 'general-reaction', 'test', 'mechanism-type']),
-    /** Slug of a mechanisms/ hub page. */
-    family: z.string().optional(),
-    exams: z.array(exam).min(1),
-    /** Edge ids in src/app/data/jee_organic.json shown on the map. */
-    mapEdges: z.array(z.string()).default([]),
-    reactant: molecule.optional(),
-    product: molecule.optional(),
-    byproducts: z.string().optional(),
-    reagents: z.string(),
-    conditions: z.string().optional(),
-    /** mhchem expression without \ce{}, e.g. "2 C6H5CHO ->[conc. NaOH] C6H5CH2OH + C6H5COONa" */
-    equation: z.string().optional(),
-    notesPages: z.array(z.number()).default([]),
-    memoryTricks: z.array(trick).default([]),
-    faq: z.array(faq).default([]),
-    related: z.array(z.string()).default([]),
-    sources: z.array(source).min(2),
-    verified: z.object({
-      status: z.enum(['verified', 'conflict', 'pending']),
-      checked: z.coerce.date(),
-      sourceCount: z.number().int().min(0),
-      note: z.string().optional(),
-    }),
-  }),
+  schema: reactionSchema,
 });
+
+/** One page per laboratory test (Tollens, Fehling, Lucas, Hinsberg...). */
+const tests = defineCollection({
+  loader: glob({ pattern: '**/*.mdx', base: './src/content/tests' }),
+  schema: reactionSchema,
+});
+
+/** Shared shape of concept, comparison, preparation and reagent pages. */
+const topicSchema = z.object({
+  title: z.string(),
+  description: z.string().max(170),
+  aliases: z.array(z.string()).default([]),
+  /** Grouping on the index page, e.g. "General organic chemistry". */
+  category: z.string(),
+  exams: z.array(exam).min(1),
+  /** Reagents: formula shown in the header, e.g. "LiAlH₄". */
+  formula: z.string().optional(),
+  /** Optional structure drawn at the top of the page. */
+  molecule: molecule.optional(),
+  /** Slug of a mechanisms/ hub page. */
+  family: z.string().optional(),
+  notesPages: z.array(z.number()).default([]),
+  memoryTricks: z.array(trick).default([]),
+  faq: z.array(faq).default([]),
+  /** "collection/slug" paths, e.g. "reactions/rosenmund-reduction". */
+  related: z.array(z.string()).default([]),
+  sources: z.array(source).min(2),
+  verified,
+});
+
+const topic = (dir: string) =>
+  defineCollection({ loader: glob({ pattern: '**/*.mdx', base: `./src/content/${dir}` }), schema: topicSchema });
+
+const concepts = topic('concepts');
+const comparisons = topic('comparisons');
+const preparation = topic('preparation');
+const reagents = topic('reagents');
 
 /** Hub pages that group reaction families (e.g. nucleophilic substitution). */
 const mechanisms = defineCollection({
@@ -78,4 +125,4 @@ const mechanisms = defineCollection({
   }),
 });
 
-export const collections = { reactions, mechanisms };
+export const collections = { reactions, tests, mechanisms, concepts, comparisons, preparation, reagents };

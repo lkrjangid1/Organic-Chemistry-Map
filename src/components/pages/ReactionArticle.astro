@@ -1,0 +1,191 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ReactionScheme from '../../components/ReactionScheme.astro';
+import Eq from '../../components/Eq.astro';
+import Mol from '../../components/Mol.astro';
+import KeyPoint from '../../components/KeyPoint.astro';
+import Trick from '../../components/Trick.astro';
+import ExamTip from '../../components/ExamTip.astro';
+import ExamTags from '../../components/ExamTags.astro';
+import References from '../../components/References.astro';
+import ReportError from '../../components/ReportError.astro';
+import Byline from '../../components/Byline.astro';
+import LibgenCard from '../../components/LibgenCard.astro';
+import { url, absUrl, EXAMS } from '../../lib/site';
+import { edgesById, compoundName, compoundSlug, hasCompoundPage } from '../../lib/graph';
+import { audienceLd, breadcrumbLd, faqLd, orgLd, personLd } from '../../lib/seo';
+
+import { getCollection as getAll, type CollectionEntry } from 'astro:content';
+import { SECTIONS, resolveRelated, type ReactionKey } from '../../lib/sections';
+
+interface Props {
+  entry: CollectionEntry<'reactions'> | CollectionEntry<'tests'>;
+  section: ReactionKey;
+}
+
+const { entry, section } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+const path = `${SECTIONS[section].path}${entry.id}/`;
+const sectionInfo = SECTIONS[section];
+
+const mechanisms = await getCollection('mechanisms');
+const family = d.family ? mechanisms.find((m) => m.id === d.family) : undefined;
+
+const all = [...(await getAll('reactions')), ...(await getAll('tests'))];
+const mapEdges = d.mapEdges.map((id) => edgesById.get(id)).filter((e) => e !== undefined);
+const compoundIds = [...new Set(mapEdges.flatMap((e) => [e.source, e.target]))];
+
+// Related: explicit list, then same family, then reactions sharing a compound.
+const explicit = await resolveRelated(d.related, section);
+const seen = new Set<string>([`${section}/${entry.id}`, ...explicit.map((r) => `${r.section}/${r.id}`)]);
+const extra: string[] = [];
+const keyOf = (r: (typeof all)[number]) => `${r.collection}/${r.id}`;
+for (const r of all) {
+  if (explicit.length + extra.length >= 8) break;
+  if (!seen.has(keyOf(r)) && d.family && r.data.family === d.family) { extra.push(keyOf(r)); seen.add(keyOf(r)); }
+}
+for (const r of all) {
+  if (explicit.length + extra.length >= 8) break;
+  if (seen.has(keyOf(r))) continue;
+  const ids = r.data.mapEdges.map((id) => edgesById.get(id)).filter((e) => e !== undefined).flatMap((e) => [e.source, e.target]);
+  if (ids.some((id) => compoundIds.includes(id))) { extra.push(keyOf(r)); seen.add(keyOf(r)); }
+}
+const related = [...explicit, ...(await resolveRelated(extra))];
+
+const crumbs = [
+  { label: sectionInfo.label, href: url(sectionInfo.path) },
+  ...(family ? [{ label: family.data.title, href: url(`mechanisms/${family.id}/`) }] : []),
+  { label: d.title },
+];
+
+const jsonLd = [
+  {
+    '@type': ['Article', 'LearningResource'],
+    '@id': absUrl(`${path}#article`),
+    headline: d.title,
+    name: d.title,
+    alternateName: d.aliases,
+    description: d.description,
+    url: absUrl(path),
+    inLanguage: 'en-IN',
+    image: absUrl('og-image.png'),
+    author: personLd(),
+    publisher: orgLd(),
+    dateModified: d.verified.checked.toISOString().slice(0, 10),
+    isAccessibleForFree: true,
+    learningResourceType: section === 'tests' ? 'Laboratory test' : 'Concept explanation',
+    educationalLevel: 'Class 11–12, competitive entrance exams',
+    audience: audienceLd,
+    teaches: d.title,
+    about: [{ '@type': 'Thing', name: d.title }, ...d.exams.map((e) => ({ '@type': 'Thing', name: EXAMS[e] }))],
+    citation: d.sources.map((s) => ({ '@type': 'CreativeWork', name: s.title, url: s.url })),
+  },
+  breadcrumbLd([
+    { name: sectionInfo.label, path: sectionInfo.path },
+    ...(family ? [{ name: family.data.title, path: `mechanisms/${family.id}/` }] : []),
+    { name: d.title, path },
+  ]),
+  faqLd(d.faq, path),
+].filter(Boolean) as Record<string, unknown>[];
+
+const components = { Eq, Mol, KeyPoint, Trick, ExamTip };
+// Longest SEO title that fits ~65 chars.
+const titleOptions = section === 'tests'
+  ? [`${d.title}: Reagent, Procedure & Observations`, `${d.title}: Reagent & Observations`, `${d.title}: Procedure & Result`, d.title]
+  : [`${d.title}: Mechanism, Reagents & Examples`, `${d.title}: Mechanism & Examples`, `${d.title} Mechanism`, d.title];
+const pageTitle = titleOptions.find((t) => t.length <= 65) ?? d.title;
+---
+<Base title={pageTitle} description={d.description} path={path} ogType="article" jsonLd={jsonLd} section={section}>
+  <div class="container page">
+    <Breadcrumbs items={crumbs} />
+    <header class="page-head">
+      <h1>{d.title}</h1>
+      {d.aliases.length > 0 && <p class="aka">Also called: {d.aliases.join(', ')}</p>}
+      <div class="meta-row">
+        <ExamTags exams={d.exams} />
+        {d.verified.status === 'verified' && <span class="tag tag-ok">✓ Verified against {d.sources.length} sources</span>}
+        {d.verified.status === 'conflict' && <span class="tag tag-warn">Under review</span>}
+      </div>
+      <p class="summary">{d.description}</p>
+    </header>
+
+    <div class="layout">
+      <article class="prose">
+        <ReactionScheme reactant={d.reactant} product={d.product} reagents={d.reagents} conditions={d.conditions} />
+
+        <section class="glance" aria-label="At a glance">
+          <dl>
+            <dt>{section === 'tests' ? 'Reagent' : 'Reagents'}</dt><dd>{d.reagents}</dd>
+            {d.observation && <><dt>Positive result</dt><dd>{d.observation}</dd></>}
+            {d.distinguishes && <><dt>Distinguishes</dt><dd>{d.distinguishes}</dd></>}
+            {d.conditions && <><dt>Conditions</dt><dd>{d.conditions}</dd></>}
+            {d.reactant && <><dt>Substrate</dt><dd>{d.reactant.name}</dd></>}
+            {d.product && <><dt>Product</dt><dd>{d.product.name}</dd></>}
+            {d.byproducts && <><dt>By-products</dt><dd>{d.byproducts}</dd></>}
+            {family && <><dt>Type</dt><dd><a href={url(`mechanisms/${family.id}/`)}>{family.data.title}</a></dd></>}
+          </dl>
+        </section>
+
+        {d.equation && <Eq ce={d.equation} />}
+
+        <Content components={components} />
+
+        {d.memoryTricks.length > 0 && (
+          <Trick>
+            <ul>
+              {d.memoryTricks.map((t) => <li><strong>{t.text}</strong>{t.meaning && <> ({t.meaning})</>}</li>)}
+            </ul>
+          </Trick>
+        )}
+
+        {d.faq.length > 0 && (
+          <section id="faq" aria-labelledby="faq-h">
+            <h2 id="faq-h">Frequently asked questions</h2>
+            <div class="faq">
+              {d.faq.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}
+            </div>
+          </section>
+        )}
+
+        <References sources={d.sources} checked={d.verified.checked} status={d.verified.status} />
+        <Byline notesPages={d.notesPages} updated={d.verified.checked} />
+        <p><ReportError path={path} title={d.title} /></p>
+        <LibgenCard />
+      </article>
+
+      <aside class="side">
+        {mapEdges.length > 0 && (
+          <div class="side-card">
+            <h2>See it on the map</h2>
+            <ul>
+              {mapEdges.map((e) => (
+                <li><a href={url(`map/?reaction=${encodeURIComponent(e.id)}`)}>{compoundName(e.source)} → {compoundName(e.target)}</a></li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {compoundIds.some((id) => hasCompoundPage.has(id)) && (
+          <div class="side-card">
+            <h2>Compounds</h2>
+            <ul>
+              {compoundIds.filter((id) => hasCompoundPage.has(id)).map((id) => (
+                <li><a href={url(`compounds/${compoundSlug(id)}/`)}>{compoundName(id)}</a></li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {related.length > 0 && (
+          <div class="side-card">
+            <h2>Related pages</h2>
+            <ul>
+              {related.map((r) => <li><a href={r.href}>{r.title}</a></li>)}
+            </ul>
+          </div>
+        )}
+      </aside>
+    </div>
+  </div>
+</Base>

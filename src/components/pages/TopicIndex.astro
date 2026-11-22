@@ -1,0 +1,97 @@
+---
+/** Index page for a topic section (concepts, comparisons, preparation, reagents) and tests. */
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import { url, absUrl } from '../../lib/site';
+import { SECTIONS } from '../../lib/sections';
+import { breadcrumbLd } from '../../lib/seo';
+
+interface Props {
+  section: 'concepts' | 'comparisons' | 'preparation' | 'reagents' | 'tests';
+}
+
+const { section } = Astro.props;
+const info = SECTIONS[section];
+const COPY = {
+  concepts: {
+    title: 'Organic Chemistry Concepts for JEE & NEET',
+    h1: 'Organic chemistry concepts',
+    description: 'Organic chemistry theory for JEE Main, JEE Advanced and NEET: inductive effect, resonance, hyperconjugation, aromaticity, biomolecules, polymers and purification.',
+    intro: 'The theory behind the reactions: electronic effects, intermediates, biomolecules, polymers and laboratory methods, each explained with exam examples.',
+  },
+  comparisons: {
+    title: 'Organic Chemistry Order Comparisons (Acidity, Basicity)',
+    h1: 'Organic chemistry comparisons',
+    description: 'Order comparisons for JEE and NEET: acidic and basic strength, carbocation and radical stability, boiling points, dipole moments and reactivity, with reasons.',
+    intro: 'Arrange-in-order questions explained: each page gives the order, the reason behind every step and the common exceptions.',
+  },
+  preparation: {
+    title: 'Methods of Preparation in Organic Chemistry (JEE & NEET)',
+    h1: 'Methods of preparation',
+    description: 'Methods of preparation of aldehydes, ketones, amines, phenols and carboxylic acids for JEE Main, JEE Advanced and NEET, with reagents and linked reactions.',
+    intro: 'Every way to make each functional group, collected on one page per class of compound, with links to the full reaction pages.',
+  },
+  reagents: {
+    title: 'Organic Chemistry Reagents List for JEE & NEET',
+    h1: 'Organic reagents',
+    description: 'Organic chemistry reagents for JEE and NEET: LiAlH₄, NaBH₄, PCC, KMnO₄, DIBAL-H, Lindlar catalyst and more, with what each one reacts with and gives.',
+    intro: 'What each reagent does, what it leaves untouched, and the reactions where it appears. Use these pages to answer "which reagent?" questions quickly.',
+  },
+  tests: {
+    title: 'Tests for Functional Groups in Organic Chemistry',
+    h1: 'Tests for functional groups',
+    description: 'Laboratory tests for organic functional groups for JEE and NEET: Tollens, Fehling, Lucas, Hinsberg, iodoform, 2,4-DNP and more, with reagents and results.',
+    intro: 'How to tell compounds apart in the lab and in exam questions: the reagent, what a positive result looks like, and which compounds give it.',
+  },
+}[section];
+
+type Item = { id: string; title: string; description: string; group: string; href: string };
+let items: Item[];
+if (section === 'tests') {
+  const tests = (await getCollection('tests')).map((e) => ({ id: e.id, title: e.data.title, description: e.data.description, group: 'Laboratory tests', href: url(`tests/${e.id}/`) }));
+  const testReactions = (await getCollection('reactions'))
+    .filter((e) => e.data.kind === 'test')
+    .map((e) => ({ id: e.id, title: e.data.title, description: e.data.description, group: 'Reactions used as tests', href: url(`reactions/${e.id}/`) }));
+  items = [...tests, ...testReactions];
+} else {
+  items = (await getCollection(section)).map((e) => ({ id: e.id, title: e.data.title, description: e.data.description, group: e.data.category, href: url(`${info.path}${e.id}/`) }));
+}
+items.sort((a, b) => a.title.localeCompare(b.title));
+const groups = new Map<string, Item[]>();
+for (const item of items) groups.set(item.group, [...(groups.get(item.group) ?? []), item]);
+const path = info.path;
+const jsonLd = [
+  {
+    '@type': 'CollectionPage',
+    name: COPY.h1,
+    url: absUrl(path),
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: items.length,
+      itemListElement: items.map((m, i) => ({ '@type': 'ListItem', position: i + 1, url: new URL(m.href, absUrl()).href, name: m.title })),
+    },
+  },
+  breadcrumbLd([{ name: info.label, path }]),
+];
+---
+<Base title={COPY.title} description={COPY.description} path={path} jsonLd={jsonLd} section={section}>
+  <div class="container page">
+    <Breadcrumbs items={[{ label: info.label }]} />
+    <header class="page-head">
+      <h1>{COPY.h1}</h1>
+      <p class="summary">{COPY.intro}</p>
+    </header>
+    {items.length === 0 && <p class="empty">Pages in this section are being written.</p>}
+    {[...groups.entries()].map(([group, list]) => (
+      <section aria-label={group}>
+        {groups.size > 1 && <h2>{group}</h2>}
+        <ul class="list-cards">
+          {list.map((m) => (
+            <li><a class="card" href={m.href}><strong>{m.title}</strong><p>{m.description}</p></a></li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</Base>

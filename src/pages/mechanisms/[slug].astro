@@ -13,6 +13,7 @@ import ReportError from '../../components/ReportError.astro';
 import Byline from '../../components/Byline.astro';
 import LibgenCard from '../../components/LibgenCard.astro';
 import { url, absUrl } from '../../lib/site';
+import { familyMembers } from '../../lib/sections';
 import { audienceLd, breadcrumbLd, faqLd, orgLd, personLd } from '../../lib/seo';
 
 export async function getStaticPaths() {
@@ -24,9 +25,7 @@ const { entry } = Astro.props;
 const d = entry.data;
 const { Content } = await render(entry);
 const path = `mechanisms/${entry.id}/`;
-const members = (await getCollection('reactions'))
-  .filter((r) => r.data.family === entry.id)
-  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+const members = await familyMembers(entry.id);
 
 const jsonLd = [
   {
@@ -42,7 +41,7 @@ const jsonLd = [
     isAccessibleForFree: true,
     educationalLevel: 'Class 11–12, competitive entrance exams',
     audience: audienceLd,
-    hasPart: members.map((m) => ({ '@type': 'LearningResource', name: m.data.title, url: absUrl(`reactions/${m.id}/`) })),
+    hasPart: members.map((m) => ({ '@type': 'LearningResource', name: m.title, url: absUrl(m.path) })),
     ...(d.verified ? { dateModified: d.verified.checked.toISOString().slice(0, 10) } : {}),
   },
   breadcrumbLd([{ name: 'Mechanisms', path: 'mechanisms/' }, { name: d.title, path }]),
@@ -62,10 +61,10 @@ const jsonLd = [
         <Content components={{ Eq, Mol, KeyPoint, Trick, ExamTip }} />
         {members.length > 0 && (
           <section aria-labelledby="members-h">
-            <h2 id="members-h">Reactions in this family</h2>
+            <h2 id="members-h">Pages in this family</h2>
             <ul class="list-cards">
               {members.map((m) => (
-                <li><a class="card" href={url(`reactions/${m.id}/`)}><strong>{m.data.title}</strong><p>{m.data.description}</p></a></li>
+                <li><a class="card" href={m.href}><strong>{m.title}</strong><p>{m.description}</p></a></li>
               ))}
             </ul>
           </section>

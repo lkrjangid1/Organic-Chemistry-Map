@@ -4,10 +4,12 @@ import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { url, absUrl } from '../../lib/site';
 import { breadcrumbLd } from '../../lib/seo';
+import { familyMembers } from '../../lib/sections';
 
 const items = (await getCollection('mechanisms')).sort((a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title));
-const reactions = await getCollection('reactions');
-const count = (id: string) => reactions.filter((r) => r.data.family === id).length;
+const counts = new Map<string, number>();
+for (const m of items) counts.set(m.id, (await familyMembers(m.id)).length);
+const count = (id: string) => counts.get(id) ?? 0;
 const path = 'mechanisms/';
 const jsonLd = [
   {
@@ -31,7 +33,7 @@ const jsonLd = [
     </header>
     <ul class="list-cards">
       {items.map((m) => (
-        <li><a class="card" href={url(`mechanisms/${m.id}/`)}><strong>{m.data.title}</strong><p>{m.data.description}</p>{count(m.id) > 0 && <p>{count(m.id)} reactions</p>}</a></li>
+        <li><a class="card" href={url(`mechanisms/${m.id}/`)}><strong>{m.data.title}</strong><p>{m.data.description}</p>{count(m.id) > 0 && <p>{count(m.id)} pages</p>}</a></li>
       ))}
     </ul>
   </div>

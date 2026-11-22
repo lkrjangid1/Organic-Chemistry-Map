@@ -12,7 +12,7 @@ interface Props {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   noindex?: boolean;
   /** Top nav section to highlight. */
-  section?: 'reactions' | 'mechanisms' | 'compounds' | 'map' | 'notes' | 'about';
+  section?: 'reactions' | 'tests' | 'mechanisms' | 'concepts' | 'comparisons' | 'preparation' | 'reagents' | 'compounds' | 'map' | 'notes' | 'about';
 }
 
 const {
@@ -38,8 +38,15 @@ const ld = jsonLd
 const nav = [
   { key: 'reactions', href: url('reactions/'), label: 'Reactions' },
   { key: 'mechanisms', href: url('mechanisms/'), label: 'Mechanisms' },
-  { key: 'compounds', href: url('compounds/'), label: 'Compounds' },
+  { key: 'concepts', href: url('concepts/'), label: 'Concepts' },
+  { key: 'reagents', href: url('reagents/'), label: 'Reagents' },
+  { key: 'tests', href: url('tests/'), label: 'Tests' },
   { key: 'notes', href: url('notes/'), label: 'Notes' },
+];
+const more = [
+  { key: 'comparisons', href: url('comparisons/'), label: 'Comparisons' },
+  { key: 'preparation', href: url('preparation/'), label: 'Preparation' },
+  { key: 'compounds', href: url('compounds/'), label: 'Compounds' },
 ];
 ---
 
@@ -94,6 +101,12 @@ const nav = [
               </li>
             ))}
           </ul>
+          <details class="nav-menu">
+            <summary>Menu</summary>
+            <ul>
+              {[...nav, ...more].map((item) => <li><a href={item.href} aria-current={section === item.key ? 'page' : undefined}>{item.label}</a></li>)}
+            </ul>
+          </details>
           <a class="btn btn-primary btn-sm" href={url('map/')}>Open map</a>
         </nav>
       </div>
@@ -115,6 +128,11 @@ const nav = [
         <ul class="footer-links">
           <li><a href={url('reactions/')}>Reactions</a></li>
           <li><a href={url('mechanisms/')}>Mechanisms</a></li>
+          <li><a href={url('concepts/')}>Concepts</a></li>
+          <li><a href={url('comparisons/')}>Comparisons</a></li>
+          <li><a href={url('reagents/')}>Reagents</a></li>
+          <li><a href={url('tests/')}>Tests</a></li>
+          <li><a href={url('preparation/')}>Preparation</a></li>
           <li><a href={url('compounds/')}>Compounds</a></li>
           <li><a href={url('notes/')}>Handwritten notes</a></li>
           <li><a href={url('map/')}>Interactive map</a></li>
