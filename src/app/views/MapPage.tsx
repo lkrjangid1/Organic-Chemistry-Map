@@ -23,7 +23,8 @@ import {
 } from '../data/OrganicDataContext';
 import CustomEdge, { type CustomEdgeData, type ReactionInfo } from '../components/CustomEdge';
 import { useTheme } from '../theme';
-import InfoPanel, { type SelectedInfo } from '../components/InfoPanel';
+import InfoPanel, { type PageLinkItem, type SelectedInfo } from '../components/InfoPanel';
+import { usePageLinks } from '../data/PageLinks';
 import { useMapStore } from '../store/useMapStore';
 import {
   buildOrganicDatasetSnapshot,
@@ -138,6 +139,7 @@ const MapPage = () => {
   const reactFlowInstance = useMapStore((state) => state.reactFlowInstance);
   const focusElement = useMapStore((state) => state.focusElement);
   const deepLinkHandled = useRef(false);
+  const pageLinks = usePageLinks();
 
   // Deep links from the home page: ?reaction=<edgeId> or ?compound=<nodeId>
   useEffect(() => {
@@ -191,9 +193,29 @@ const MapPage = () => {
     };
   }, [setReactFlowInstance]);
 
+  // Links from the selected compound or reaction to its pages on the site.
+  const pageLinksFor = useCallback(
+    (edgeIds: string[], nodeIds: string[]): PageLinkItem[] => {
+      const out: PageLinkItem[] = [];
+      const add = (item: PageLinkItem) => {
+        if (!out.some((o) => o.href === item.href)) out.push(item);
+      };
+      for (const id of edgeIds) for (const p of pageLinks.edges[id] ?? []) add({ label: p.t, href: p.h, kind: 'reaction' });
+      for (const id of nodeIds) {
+        const c = pageLinks.compounds[id];
+        if (c) add({ label: c.t, href: c.h, kind: 'compound' });
+      }
+      return out;
+    },
+    [pageLinks],
+  );
+
   const selectedInfo: SelectedInfo | null = useMemo(() => {
     if (selectedNode?.data) {
-      return { type: 'node', payload: selectedNode.data };
+      const connected = getConnectedEdges(selectedNode.id).map((e) => e.id);
+      const compound = pageLinksFor([], [selectedNode.id]);
+      const reactions = pageLinksFor(connected, []).slice(0, 8);
+      return { type: 'node', payload: selectedNode.data, pages: [...compound, ...reactions] };
     }
 
     if (selectedEdge) {
@@ -206,11 +228,12 @@ const MapPage = () => {
         equation: selectedEdge.data?.reactionInfo?.equation,
       };
 
-      return { type: 'edge', payload: { label, reactionInfo } };
+      const pages = pageLinksFor([selectedEdge.id], [selectedEdge.source, selectedEdge.target]);
+      return { type: 'edge', payload: { label, reactionInfo }, pages };
     }
 
     return null;
-  }, [selectedEdge, selectedNode]);
+  }, [selectedEdge, selectedNode, getConnectedEdges, pageLinksFor]);
 
   // Transform JSON data to React Flow format
   const { nodes: initialNodes, edges: initialEdges } = useMemo<{

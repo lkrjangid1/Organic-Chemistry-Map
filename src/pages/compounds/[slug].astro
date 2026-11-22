@@ -1,5 +1,4 @@
 ---
-import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Mol from '../../components/Mol.astro';
@@ -8,6 +7,7 @@ import Byline from '../../components/Byline.astro';
 import LibgenCard from '../../components/LibgenCard.astro';
 import { url, absUrl } from '../../lib/site';
 import { breadcrumbLd, orgLd } from '../../lib/seo';
+import { edgePages } from '../../lib/maplinks';
 import { pageCompounds, compoundSlug, edgesFrom, edgesTo, compoundName, hasCompoundPage, titleCase, type GraphEdge, type GraphNode } from '../../lib/graph';
 
 export function getStaticPaths() {
@@ -16,9 +16,7 @@ export function getStaticPaths() {
 
 const { node } = Astro.props as { node: GraphNode };
 const path = `compounds/${compoundSlug(node.id)}/`;
-const pages = await getCollection('reactions');
-const pageForEdge = new Map<string, { id: string; title: string }>();
-for (const p of pages) for (const e of p.data.mapEdges) pageForEdge.set(e, { id: p.id, title: p.data.title });
+const pageForEdge = await edgePages();
 
 const made = edgesTo(node.id);
 const uses = edgesFrom(node.id);
@@ -49,7 +47,9 @@ const jsonLd = [
   breadcrumbLd([{ name: 'Compounds', path: 'compounds/' }, { name, path }]),
 ];
 
-const Row = (e: GraphEdge, other: string) => ({ e, other, page: pageForEdge.get(e.id) });
+const Row = (e: GraphEdge, other: string) => ({ e, other, page: pageForEdge.get(e.id)?.[0] });
+// Every reaction or test page that makes or uses this compound, once each.
+const compoundPages = [...new Map([...made, ...uses].flatMap((e) => pageForEdge.get(e.id) ?? []).map((p) => [p.h, p])).values()];
 const madeRows = made.map((e) => Row(e, e.source));
 const useRows = uses.map((e) => Row(e, e.target));
 ---
@@ -83,7 +83,7 @@ const useRows = uses.map((e) => Row(e, e.target));
                 {madeRows.map(({ e, other, page }) => (
                   <tr>
                     <td>{hasCompoundPage.has(other) ? <a href={url(`compounds/${compoundSlug(other)}/`)}>{compoundName(other)}</a> : compoundName(other)}</td>
-                    <td>{page ? <a href={url(`reactions/${page.id}/`)}>{e.label}</a> : <a href={url(`map/?reaction=${encodeURIComponent(e.id)}`)}>{e.label}</a>}</td>
+                    <td>{page ? <a href={page.h}>{e.label}</a> : <a href={url(`map/?reaction=${encodeURIComponent(e.id)}`)}>{e.label}</a>}</td>
                     <td>{[e.reactionInfo?.reagents, e.reactionInfo?.conditions].filter(Boolean).join('; ')}</td>
                   </tr>
                 ))}
@@ -100,7 +100,7 @@ const useRows = uses.map((e) => Row(e, e.target));
               <tbody>
                 {useRows.map(({ e, other, page }) => (
                   <tr>
-                    <td>{page ? <a href={url(`reactions/${page.id}/`)}>{e.label}</a> : <a href={url(`map/?reaction=${encodeURIComponent(e.id)}`)}>{e.label}</a>}</td>
+                    <td>{page ? <a href={page.h}>{e.label}</a> : <a href={url(`map/?reaction=${encodeURIComponent(e.id)}`)}>{e.label}</a>}</td>
                     <td>{hasCompoundPage.has(other) ? <a href={url(`compounds/${compoundSlug(other)}/`)}>{compoundName(other)}</a> : compoundName(other)}</td>
                     <td>{[e.reactionInfo?.reagents, e.reactionInfo?.conditions].filter(Boolean).join('; ')}</td>
                   </tr>
@@ -114,6 +114,12 @@ const useRows = uses.map((e) => Row(e, e.target));
         <LibgenCard />
       </article>
       <aside class="side">
+        {compoundPages.length > 0 && (
+          <div class="side-card">
+            <h2>Pages about {name}</h2>
+            <ul>{compoundPages.map((p) => <li><a href={p.h}>{p.t}</a></li>)}</ul>
+          </div>
+        )}
         <div class="side-card">
           <h2>On the map</h2>
           <p>See every arrow in and out of {name}.</p>

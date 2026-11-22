@@ -102,6 +102,13 @@
         "type": "string"
       }
     },
+    "mapEdges": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "sources": {
       "minItems": 2,
       "type": "array",

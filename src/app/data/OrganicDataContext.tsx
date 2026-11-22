@@ -59,8 +59,8 @@ export interface OrganicDataContextValue {
   source: OrganicDataSource;
 }
 
-export const ORGANIC_DATA_URL =
-  'https://raw.githubusercontent.com/lkrjangid1/Organic-Chemistry-Map/main/src/data/jee_organic.json';
+/** Served by src/pages/data/jee_organic.json.ts from src/app/data/jee_organic.json. */
+export const ORGANIC_DATA_URL = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/data/jee_organic.json`;
 
 const OrganicDataContext = createContext<OrganicDataContextValue | undefined>(undefined);
 

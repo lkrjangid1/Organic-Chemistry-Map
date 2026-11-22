@@ -4,14 +4,17 @@ import './index.css';
 import { ThemeProvider } from './theme';
 import { PWAInstallProvider } from './pwa/PWAInstallProvider';
 import './pwa/registerServiceWorker';
+import { PageLinksProvider, type MapLinks } from './data/PageLinks';
 
-/** Interactive map, mounted client-only on /map/ by Astro. */
-export default function MapApp() {
+/** Interactive map, mounted client-only on /map/ by Astro. `links` points map items at their pages. */
+export default function MapApp({ links }: { links?: MapLinks }) {
   return (
     <StrictMode>
       <ThemeProvider>
         <PWAInstallProvider>
-          <App />
+          <PageLinksProvider links={links}>
+            <App />
+          </PageLinksProvider>
         </PWAInstallProvider>
       </ThemeProvider>
     </StrictMode>

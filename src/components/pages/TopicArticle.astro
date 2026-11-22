@@ -15,6 +15,8 @@ import Byline from '../Byline.astro';
 import LibgenCard from '../LibgenCard.astro';
 import SaveButton from '../SaveButton.astro';
 import Practice from '../Practice.astro';
+import MapConversions from '../MapConversions.astro';
+import { conversionsFor } from '../../lib/maplinks';
 import { practiceFor } from '../../lib/practice';
 import { url, absUrl, EXAMS } from '../../lib/site';
 import { SECTIONS, resolveRelated, hindiPages, localiseRef, type TopicKey } from '../../lib/sections';
@@ -68,6 +70,8 @@ const titleOptions: Record<TopicKey, string[]> = {
 };
 const pageTitle = lang === 'hi' ? [d.title, `${entry.data.title} हिंदी में`, entry.data.title].find((t) => t.length <= 65) ?? entry.data.title : titleOptions[section].find((t) => t.length <= 65) ?? d.title;
 const relatedLocal = await Promise.all(related.map((r) => localiseRef(r, lang)));
+// This page's own map arrows first, then those of related reaction pages.
+const onMap = await conversionsFor([{ section, id: entry.id }, ...related], 8);
 
 const crumbs = [{ label: info.label, href: url(info.path) }, { label: d.title }];
 const jsonLd = [
@@ -159,6 +163,7 @@ const practice = lang === 'hi' ? [] : practiceFor(`${section}/${entry.id}`);
             <ul><li><a href={url(`mechanisms/${family.id}/`)}>{family.data.title}</a></li></ul>
           </div>
         )}
+        <MapConversions edges={onMap} title={s.seeOnMap} />
         {relatedLocal.length > 0 && (
           <div class="side-card">
             <h2>{s.relatedPages}</h2>

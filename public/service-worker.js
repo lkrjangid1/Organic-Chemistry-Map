@@ -1,4 +1,4 @@
-const CACHE_NAME = 'organic-chem-map-cache-v4';
+const CACHE_NAME = 'organic-chem-map-cache-v5';
 const CORE_ASSETS = [
   './',
   './map/',
@@ -59,6 +59,22 @@ self.addEventListener('fetch', (event) => {
             .match(request, { ignoreSearch: true })
             .then((cached) => cached || caches.match('./map/')),
         ),
+    );
+    return;
+  }
+
+  // Data files: network first so map data updates show up, cache as offline fallback.
+  if (requestUrl.pathname.endsWith('.json')) {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          if (response && response.ok) {
+            const responseClone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(request, responseClone));
+          }
+          return response;
+        })
+        .catch(() => caches.match(request)),
     );
     return;
   }

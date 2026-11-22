@@ -1,0 +1,21 @@
+---
+/** Side card: map conversions for a page, each opening the map focused on that arrow. */
+import { url } from '../lib/site';
+import { compoundName, type GraphEdge } from '../lib/graph';
+
+interface Props {
+  edges: GraphEdge[];
+  title: string;
+}
+const { edges, title } = Astro.props;
+---
+{edges.length > 0 && (
+  <div class="side-card">
+    <h2>{title}</h2>
+    <ul>
+      {edges.map((e) => (
+        <li><a href={url(`map/?reaction=${encodeURIComponent(e.id)}`)}>{compoundName(e.source)} → {compoundName(e.target)}</a></li>
+      ))}
+    </ul>
+  </div>
+)}

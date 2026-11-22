@@ -105,6 +105,8 @@ const topicSchema = z.object({
   faq: z.array(faq).default([]),
   /** "collection/slug" paths, e.g. "reactions/rosenmund-reduction". */
   related: z.array(z.string()).default([]),
+  /** Map edge ids this page explains; linked both ways with the interactive map. */
+  mapEdges: z.array(z.string()).default([]),
   sources: z.array(source).min(2),
   verified,
 });

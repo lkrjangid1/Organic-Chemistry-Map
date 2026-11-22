@@ -1,6 +1,8 @@
 ---
 import MapApp from '../../app/MapApp';
 import { SITE, absUrl, url } from '../../lib/site';
+import { mapLinks } from '../../lib/maplinks';
+const links = await mapLinks();
 const canonical = absUrl('map/');
 const title = 'Interactive Organic Chemistry Reaction Map | JEE & NEET';
 const description = 'Explore organic chemistry reactions on an interactive, zoomable map. Search compounds, follow conversions and see reagents, conditions and mechanisms.';
@@ -26,7 +28,7 @@ const description = 'Explore organic chemistry reactions on an interactive, zoom
     <meta name="theme-color" content={SITE.themeColor} />
   </head>
   <body>
-    <div id="root"><MapApp client:only="react" /></div>
+    <div id="root"><MapApp client:only="react" links={links} /></div>
     <noscript>
       The interactive map needs JavaScript. Browse every reaction on the
       <a href={url('reactions/')}>reaction index</a>.
