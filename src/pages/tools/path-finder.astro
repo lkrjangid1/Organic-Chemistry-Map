@@ -1,0 +1,153 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { url, absUrl } from '../../lib/site';
+import { breadcrumbLd } from '../../lib/seo';
+import { pathFinderData } from '../../lib/tools';
+
+const data = await pathFinderData();
+const path = 'tools/path-finder/';
+const title = 'Organic Conversion Path Finder (Road Map Solver)';
+const description = 'Find every route between two functional groups or compounds: alcohol to amine, benzene to phenol and more, with reagents at each step. Free tool for JEE and NEET.';
+const jsonLd = [
+  { '@type': 'WebApplication', name: title, url: absUrl(path), description, applicationCategory: 'EducationalApplication', operatingSystem: 'Any (web browser)', isAccessibleForFree: true, offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' }, inLanguage: 'en-IN' },
+  breadcrumbLd([{ name: 'Tools', path: 'tools/' }, { name: 'Path finder', path }]),
+];
+---
+<Base title={title} description={description} path={path} jsonLd={jsonLd} section="tools">
+  <div class="container page tool">
+    <Breadcrumbs items={[{ label: 'Tools', href: url('tools/') }, { label: 'Path finder' }]} />
+    <header class="page-head">
+      <h1>Conversion path finder</h1>
+      <p class="summary">Pick a starting point and a target. The tool lists the shortest routes, with the reagent for every step and a link to the page that explains it.</p>
+    </header>
+
+    <form class="tool-panel" id="pf-form">
+      <fieldset class="seg" aria-label="Search over">
+        <label><input type="radio" name="mode" value="groups" checked /> Functional groups</label>
+        <label><input type="radio" name="mode" value="compounds" /> Compounds on the map</label>
+      </fieldset>
+      <div class="pf-row">
+        <label>From<input id="pf-from" list="pf-list" autocomplete="off" placeholder="e.g. Primary alcohol" required /></label>
+        <button type="button" class="btn btn-ghost btn-sm" id="pf-swap" aria-label="Swap start and target">⇄</button>
+        <label>To<input id="pf-to" list="pf-list" autocomplete="off" placeholder="e.g. Primary amine" required /></label>
+        <button class="btn btn-primary" type="submit">Find routes</button>
+      </div>
+      <datalist id="pf-list"></datalist>
+      <p class="tool-hint" id="pf-examples">Try: <button type="button" data-ex="Primary alcohol|Primary amine">alcohol → amine</button> <button type="button" data-ex="Benzene|Phenol">benzene → phenol</button> <button type="button" data-ex="Alkene|Carboxylic acid">alkene → acid</button> <button type="button" data-ex="Nitrobenzene|Haloarene">nitrobenzene → haloarene</button></p>
+    </form>
+
+    <div id="pf-out" aria-live="polite"></div>
+
+    <section class="prose tool-about">
+      <h2>How it works</h2>
+      <p>In <strong>functional group</strong> mode the tool searches a graph of {data.groupSteps.length} conversions between {data.groups.length} groups. Every step comes from a verified page on this site, so the reagents match what NCERT and JEE expect. In <strong>compound</strong> mode it searches the {data.compoundSteps.length} reactions drawn on the <a href={url('map/')}>interactive map</a>.</p>
+      <p>Routes are listed shortest first, up to two steps longer than the shortest. Each step names the reaction and links to its page, so you can check conditions and exceptions before writing an answer.</p>
+    </section>
+  </div>
+  <script type="application/json" id="pf-data" set:html={JSON.stringify(data).replace(/</g, '\\u003c')} />
+</Base>
+
+<script>
+  type S = { f: string; t: string; r: string; c: string; n: string; h: string; note: string };
+  type D = { groups: { id: string; name: string; formula: string }[]; groupSteps: S[]; compounds: { id: string; name: string }[]; compoundSteps: S[] };
+  const data: D = JSON.parse(document.getElementById('pf-data')!.textContent!);
+  const form = document.getElementById('pf-form') as HTMLFormElement;
+  const fromIn = document.getElementById('pf-from') as HTMLInputElement;
+  const toIn = document.getElementById('pf-to') as HTMLInputElement;
+  const list = document.getElementById('pf-list')!;
+  const out = document.getElementById('pf-out')!;
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+
+  let mode: 'groups' | 'compounds' = 'groups';
+  const nodesFor = () => (mode === 'groups' ? data.groups.map((g) => ({ id: g.id, name: g.name, extra: g.formula })) : data.compounds.map((c) => ({ id: c.id, name: c.name, extra: '' })));
+  const stepsFor = () => (mode === 'groups' ? data.groupSteps : data.compoundSteps);
+
+  function fillList() {
+    list.innerHTML = nodesFor().map((n) => `<option value="${esc(n.name)}">${esc(n.extra)}</option>`).join('');
+  }
+  const find = (name: string) => {
+    const q = name.trim().toLowerCase();
+    return nodesFor().find((n) => n.name.toLowerCase() === q) ?? nodesFor().find((n) => n.name.toLowerCase().startsWith(q) && q.length > 2);
+  };
+
+  function routes(from: string, to: string) {
+    const steps = stepsFor();
+    const pairs = new Map<string, S[]>();
+    const adj = new Map<string, Set<string>>();
+    const radj = new Map<string, Set<string>>();
+    for (const s of steps) {
+      if (s.f === s.t) continue;
+      const k = `${s.f}>${s.t}`;
+      pairs.set(k, [...(pairs.get(k) ?? []), s]);
+      (adj.get(s.f) ?? adj.set(s.f, new Set()).get(s.f)!).add(s.t);
+      (radj.get(s.t) ?? radj.set(s.t, new Set()).get(s.t)!).add(s.f);
+    }
+    // Distance to target, for pruning.
+    const dist = new Map<string, number>([[to, 0]]);
+    const queue = [to];
+    while (queue.length) {
+      const n = queue.shift()!;
+      for (const p of radj.get(n) ?? []) if (!dist.has(p)) { dist.set(p, dist.get(n)! + 1); queue.push(p); }
+    }
+    if (!dist.has(from)) return { best: -1, paths: [] as string[][], pairs };
+    const best = dist.get(from)!;
+    const limit = best + 2;
+    const paths: string[][] = [];
+    const walk = (node: string, trail: string[]) => {
+      if (paths.length >= 40) return;
+      if (node === to) { paths.push(trail); return; }
+      for (const nx of adj.get(node) ?? []) {
+        if (trail.includes(nx) || !dist.has(nx)) continue;
+        if (trail.length + dist.get(nx)! > limit) continue;
+        walk(nx, [...trail, nx]);
+      }
+    };
+    walk(from, [from]);
+    paths.sort((a, b) => a.length - b.length);
+    return { best, paths: paths.slice(0, 8), pairs };
+  }
+
+  function render(fromName: string, toName: string) {
+    const a = find(fromName);
+    const b = find(toName);
+    if (!a || !b) { out.innerHTML = `<p class="empty">Pick both ends from the suggestions list.</p>`; return; }
+    if (a.id === b.id) { out.innerHTML = `<p class="empty">Start and target are the same.</p>`; return; }
+    const name = new Map(nodesFor().map((n) => [n.id, n.name]));
+    const { best, paths, pairs } = routes(a.id, b.id);
+    if (best < 0) {
+      out.innerHTML = `<p class="empty">No route found from ${esc(a.name)} to ${esc(b.name)}${mode === 'compounds' ? '. The map links only some compounds; try functional group mode.' : '.'}</p>`;
+      return;
+    }
+    const html = paths.map((p, i) => {
+      const items = p.slice(1).map((node, j) => {
+        const opts = pairs.get(`${p[j]}>${node}`)!;
+        const main = opts[0];
+        const others = opts.slice(1, 4).map((o) => `<a href="${o.h}">${esc(o.r)}</a>`).join(' · ');
+        return `<li><div class="pf-step"><span class="pf-node">${esc(name.get(p[j])!)}</span><span class="pf-arrow"><a href="${main.h}">${esc(main.r)}</a>${main.c ? `<small>${esc(main.c)}</small>` : ''}<small class="pf-name">${esc(main.n)}${main.note ? `: ${esc(main.note)}` : ''}</small>${others ? `<small>or: ${others}</small>` : ''}</span><span class="pf-node">${esc(name.get(node)!)}</span></div></li>`;
+      }).join('');
+      return `<section class="pf-route"><h2>Route ${i + 1} <span class="tag">${p.length - 1} step${p.length > 2 ? 's' : ''}</span></h2><ol>${items}</ol></section>`;
+    }).join('');
+    out.innerHTML = html;
+    history.replaceState(null, '', `?mode=${mode}&from=${encodeURIComponent(a.name)}&to=${encodeURIComponent(b.name)}`);
+  }
+
+  form.addEventListener('change', (e) => {
+    const t = e.target as HTMLInputElement;
+    if (t.name === 'mode') { mode = t.value as typeof mode; fromIn.value = ''; toIn.value = ''; out.innerHTML = ''; fillList(); }
+  });
+  form.addEventListener('submit', (e) => { e.preventDefault(); render(fromIn.value, toIn.value); });
+  document.getElementById('pf-swap')!.addEventListener('click', () => { [fromIn.value, toIn.value] = [toIn.value, fromIn.value]; });
+  document.getElementById('pf-examples')!.addEventListener('click', (e) => {
+    const ex = (e.target as HTMLElement).dataset.ex;
+    if (!ex) return;
+    if (mode !== 'groups') (form.querySelector('input[value=groups]') as HTMLInputElement).click();
+    [fromIn.value, toIn.value] = ex.split('|');
+    render(fromIn.value, toIn.value);
+  });
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('mode') === 'compounds') { mode = 'compounds'; (form.querySelector('input[value=compounds]') as HTMLInputElement).checked = true; }
+  fillList();
+  if (params.get('from') && params.get('to')) { fromIn.value = params.get('from')!; toIn.value = params.get('to')!; render(fromIn.value, toIn.value); }
+</script>

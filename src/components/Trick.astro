@@ -1,5 +1,8 @@
 ---
+import { langOf, t as tr } from '../lib/i18n';
 interface Props { title?: string }
-const { title = 'Memory trick' } = Astro.props;
+const s = tr(langOf(Astro.url));
+const raw = Astro.props.title;
+const title = !raw ? s.memoryTrick : raw === 'Common mistake' ? s.commonMistake : raw;
 ---
 <aside class="callout callout-trick"><span class="callout-title">🧠 {title}</span><slot /></aside>

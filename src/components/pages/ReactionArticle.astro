@@ -18,24 +18,53 @@ import { edgesById, compoundName, compoundSlug, hasCompoundPage } from '../../li
 import { audienceLd, breadcrumbLd, faqLd, orgLd, personLd } from '../../lib/seo';
 
 import { getCollection as getAll, type CollectionEntry } from 'astro:content';
-import { SECTIONS, resolveRelated, type ReactionKey } from '../../lib/sections';
+import { SECTIONS, resolveRelated, hindiPages, localiseRef, type ReactionKey } from '../../lib/sections';
+import { t as tr, type Lang } from '../../lib/i18n';
 
 interface Props {
   entry: CollectionEntry<'reactions'> | CollectionEntry<'tests'>;
   section: ReactionKey;
+  /** Render the Hindi version of the page. */
+  lang?: Lang;
 }
 
-const { entry, section } = Astro.props;
-const d = entry.data;
-const { Content } = await render(entry);
-const path = `${SECTIONS[section].path}${entry.id}/`;
+const { entry, section, lang = 'en' } = Astro.props;
+const s = tr(lang);
+const hiEntry = (await hindiPages()).get(`${section}/${entry.id}`);
+const hi = lang === 'hi' ? hiEntry : undefined;
+const enPath = `${SECTIONS[section].path}${entry.id}/`;
+const path = lang === 'hi' ? `hi/${enPath}` : enPath;
+const altPath = lang === 'hi' ? enPath : hiEntry ? `hi/${enPath}` : undefined;
+// Text fields: the Hindi translation overrides the English page.
+const d = {
+  ...entry.data,
+  ...(hi && {
+    title: hi.data.title,
+    description: hi.data.description,
+    aliases: hi.data.aliases.length ? hi.data.aliases : entry.data.aliases,
+    reagents: hi.data.reagents ?? entry.data.reagents,
+    conditions: hi.data.conditions ?? entry.data.conditions,
+    byproducts: hi.data.byproducts ?? entry.data.byproducts,
+    observation: hi.data.observation ?? entry.data.observation,
+    distinguishes: hi.data.distinguishes ?? entry.data.distinguishes,
+    memoryTricks: hi.data.memoryTricks ?? entry.data.memoryTricks,
+    faq: hi.data.faq,
+    reactant: entry.data.reactant && { ...entry.data.reactant, name: hi.data.reactantName ?? entry.data.reactant.name },
+    product: entry.data.product && { ...entry.data.product, name: hi.data.productName ?? entry.data.product.name },
+  }),
+};
+const { Content } = await render(hi ?? entry);
 const sectionInfo = SECTIONS[section];
 
 const mechanisms = await getCollection('mechanisms');
 const family = d.family ? mechanisms.find((m) => m.id === d.family) : undefined;
 
 const all = [...(await getAll('reactions')), ...(await getAll('tests'))];
-const mapEdges = d.mapEdges.map((id) => edgesById.get(id)).filter((e) => e !== undefined);
+// One link per conversion: the map data has a few duplicate edges.
+const mapEdges = d.mapEdges
+  .map((id) => edgesById.get(id))
+  .filter((e) => e !== undefined)
+  .filter((e, i, arr) => arr.findIndex((o) => o.source === e.source && o.target === e.target) === i);
 const compoundIds = [...new Set(mapEdges.flatMap((e) => [e.source, e.target]))];
 
 // Related: explicit list, then same family, then reactions sharing a compound.
@@ -53,7 +82,7 @@ for (const r of all) {
   const ids = r.data.mapEdges.map((id) => edgesById.get(id)).filter((e) => e !== undefined).flatMap((e) => [e.source, e.target]);
   if (ids.some((id) => compoundIds.includes(id))) { extra.push(keyOf(r)); seen.add(keyOf(r)); }
 }
-const related = [...explicit, ...(await resolveRelated(extra))];
+const related = await Promise.all([...explicit, ...(await resolveRelated(extra))].map((r) => localiseRef(r, lang)));
 
 const crumbs = [
   { label: sectionInfo.label, href: url(sectionInfo.path) },
@@ -70,7 +99,8 @@ const jsonLd = [
     alternateName: d.aliases,
     description: d.description,
     url: absUrl(path),
-    inLanguage: 'en-IN',
+    inLanguage: lang === 'hi' ? 'hi-IN' : 'en-IN',
+    ...(lang === 'hi' && { translationOfWork: { '@id': absUrl(`${enPath}#article`) } }),
     image: absUrl('og-image.png'),
     author: personLd(),
     publisher: orgLd(),
@@ -96,18 +126,19 @@ const components = { Eq, Mol, KeyPoint, Trick, ExamTip };
 const titleOptions = section === 'tests'
   ? [`${d.title}: Reagent, Procedure & Observations`, `${d.title}: Reagent & Observations`, `${d.title}: Procedure & Result`, d.title]
   : [`${d.title}: Mechanism, Reagents & Examples`, `${d.title}: Mechanism & Examples`, `${d.title} Mechanism`, d.title];
-const pageTitle = titleOptions.find((t) => t.length <= 65) ?? d.title;
+const hiTitle = section === 'tests' ? `${d.title}: Reagent, Procedure और Observations` : `${d.title}: Mechanism, Reagents और Examples`;
+const pageTitle = lang === 'hi' ? (hiTitle.length <= 65 ? hiTitle : d.title) : titleOptions.find((t) => t.length <= 65) ?? d.title;
 ---
-<Base title={pageTitle} description={d.description} path={path} ogType="article" jsonLd={jsonLd} section={section}>
+<Base title={pageTitle} description={d.description} path={path} altPath={altPath} ogType="article" jsonLd={jsonLd} section={section}>
   <div class="container page">
     <Breadcrumbs items={crumbs} />
     <header class="page-head">
       <h1>{d.title}</h1>
-      {d.aliases.length > 0 && <p class="aka">Also called: {d.aliases.join(', ')}</p>}
+      {d.aliases.length > 0 && <p class="aka">{s.alsoCalled}: {d.aliases.join(', ')}</p>}
       <div class="meta-row">
         <ExamTags exams={d.exams} />
-        {d.verified.status === 'verified' && <span class="tag tag-ok">✓ Verified against {d.sources.length} sources</span>}
-        {d.verified.status === 'conflict' && <span class="tag tag-warn">Under review</span>}
+        {d.verified.status === 'verified' && <span class="tag tag-ok">✓ {s.verifiedAgainst(d.sources.length)}</span>}
+        {d.verified.status === 'conflict' && <span class="tag tag-warn">{s.underReview}</span>}
       </div>
       <p class="summary">{d.description}</p>
     </header>
@@ -118,14 +149,14 @@ const pageTitle = titleOptions.find((t) => t.length <= 65) ?? d.title;
 
         <section class="glance" aria-label="At a glance">
           <dl>
-            <dt>{section === 'tests' ? 'Reagent' : 'Reagents'}</dt><dd>{d.reagents}</dd>
-            {d.observation && <><dt>Positive result</dt><dd>{d.observation}</dd></>}
-            {d.distinguishes && <><dt>Distinguishes</dt><dd>{d.distinguishes}</dd></>}
-            {d.conditions && <><dt>Conditions</dt><dd>{d.conditions}</dd></>}
-            {d.reactant && <><dt>Substrate</dt><dd>{d.reactant.name}</dd></>}
-            {d.product && <><dt>Product</dt><dd>{d.product.name}</dd></>}
-            {d.byproducts && <><dt>By-products</dt><dd>{d.byproducts}</dd></>}
-            {family && <><dt>Type</dt><dd><a href={url(`mechanisms/${family.id}/`)}>{family.data.title}</a></dd></>}
+            <dt>{section === 'tests' ? s.reagent : s.reagents}</dt><dd>{d.reagents}</dd>
+            {d.observation && <><dt>{s.positiveResult}</dt><dd>{d.observation}</dd></>}
+            {d.distinguishes && <><dt>{s.distinguishes}</dt><dd>{d.distinguishes}</dd></>}
+            {d.conditions && <><dt>{s.conditions}</dt><dd>{d.conditions}</dd></>}
+            {d.reactant && <><dt>{s.substrate}</dt><dd>{d.reactant.name}</dd></>}
+            {d.product && <><dt>{s.product}</dt><dd>{d.product.name}</dd></>}
+            {d.byproducts && <><dt>{s.byproducts}</dt><dd>{d.byproducts}</dd></>}
+            {family && <><dt>{s.type}</dt><dd><a href={url(`mechanisms/${family.id}/`)}>{family.data.title}</a></dd></>}
           </dl>
         </section>
 
@@ -143,7 +174,7 @@ const pageTitle = titleOptions.find((t) => t.length <= 65) ?? d.title;
 
         {d.faq.length > 0 && (
           <section id="faq" aria-labelledby="faq-h">
-            <h2 id="faq-h">Frequently asked questions</h2>
+            <h2 id="faq-h">{s.faq}</h2>
             <div class="faq">
               {d.faq.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}
             </div>
@@ -159,7 +190,7 @@ const pageTitle = titleOptions.find((t) => t.length <= 65) ?? d.title;
       <aside class="side">
         {mapEdges.length > 0 && (
           <div class="side-card">
-            <h2>See it on the map</h2>
+            <h2>{s.seeOnMap}</h2>
             <ul>
               {mapEdges.map((e) => (
                 <li><a href={url(`map/?reaction=${encodeURIComponent(e.id)}`)}>{compoundName(e.source)} → {compoundName(e.target)}</a></li>
@@ -169,7 +200,7 @@ const pageTitle = titleOptions.find((t) => t.length <= 65) ?? d.title;
         )}
         {compoundIds.some((id) => hasCompoundPage.has(id)) && (
           <div class="side-card">
-            <h2>Compounds</h2>
+            <h2>{s.compounds}</h2>
             <ul>
               {compoundIds.filter((id) => hasCompoundPage.has(id)).map((id) => (
                 <li><a href={url(`compounds/${compoundSlug(id)}/`)}>{compoundName(id)}</a></li>
@@ -179,7 +210,7 @@ const pageTitle = titleOptions.find((t) => t.length <= 65) ?? d.title;
         )}
         {related.length > 0 && (
           <div class="side-card">
-            <h2>Related pages</h2>
+            <h2>{s.relatedPages}</h2>
             <ul>
               {related.map((r) => <li><a href={r.href}>{r.title}</a></li>)}
             </ul>

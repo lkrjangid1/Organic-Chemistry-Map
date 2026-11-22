@@ -1,5 +1,6 @@
 ---
 import { SITE, absUrl } from '../lib/site';
+import { langOf, t as tr } from '../lib/i18n';
 interface Props { path: string; title: string }
 const { path, title } = Astro.props;
 const page = absUrl(path);
@@ -15,4 +16,4 @@ if (SITE.reportForm) {
   href = u.href;
 }
 ---
-<a href={href} rel="noopener nofollow" target="_blank">Report an error on this page</a>
+<a href={href} rel="noopener nofollow" target="_blank">{tr(langOf(Astro.url)).reportError}</a>

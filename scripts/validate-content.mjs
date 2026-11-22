@@ -23,6 +23,8 @@ const graph = JSON.parse(readFileSync(join(root, 'src/app/data/jee_organic.json'
 const edgeIds = new Set(graph.edges.map((e) => e.id));
 const list = (d) => (existsSync(d) ? readdirSync(d).filter((f) => f.endsWith('.mdx')) : []);
 const slugs = Object.fromEntries(SECTIONS.map((s) => [s, new Set(list(dirs[s]).map((f) => basename(f, '.mdx')))]));
+const hiDirs = Object.fromEntries(SECTIONS.map((s) => [s, join(root, 'src/content/hi', s)]));
+const hiSlugs = Object.fromEntries(SECTIONS.map((s) => [s, new Set(list(hiDirs[s]).map((f) => basename(f, '.mdx')))]));
 const mechanismSlugs = slugs.mechanisms;
 // Pages planned in this batch may be linked before they exist.
 const plannedPath = process.env.PLANNED_SLUGS;
@@ -39,7 +41,7 @@ const BANNED = /(byjus|vedantu|toppr|unacademy|physicswallah|pw\.live|allen\.|aa
 const rdkit = await initRDKitModule();
 const files = process.argv.slice(2).length
   ? process.argv.slice(2)
-  : SECTIONS.flatMap((s) => list(dirs[s]).map((f) => join(dirs[s], f)));
+  : SECTIONS.flatMap((s) => [...list(dirs[s]).map((f) => join(dirs[s], f)), ...list(hiDirs[s]).map((f) => join(hiDirs[s], f))]);
 
 let failed = 0;
 for (const file of files) {
@@ -59,15 +61,22 @@ for (const file of files) {
     errors.push(`YAML: ${e.message.split('\n')[0]}`);
   }
   const body = m[2];
-  const section = SECTIONS.find((s) => file.includes(`/content/${s}/`)) ?? 'reactions';
-  const isReaction = REACTION_LIKE.has(section);
-  const isTopic = !isReaction && section !== 'mechanisms';
+  const isHindi = file.includes('/content/hi/');
+  const section = SECTIONS.find((s) => file.includes(`/content/${s}/`) || file.includes(`/content/hi/${s}/`)) ?? 'reactions';
+  const isReaction = !isHindi && REACTION_LIKE.has(section);
+  const isTopic = !isHindi && !isReaction && section !== 'mechanisms';
   if (fm) {
     if (!fm.title) errors.push('title missing');
+    if (isHindi) {
+      if (!slugs[section].has(basename(file, '.mdx'))) errors.push(`no English page ${section}/${basename(file, '.mdx')} for this translation`);
+      if (!fm.translated) errors.push('translated date missing');
+      if ((fm.faq ?? []).length < 3) warn.push('fewer than 3 FAQ items');
+      if (!/[\u0900-\u097F]/.test(m[2])) errors.push('body has no Devanagari text');
+    }
     if (!fm.description) errors.push('description missing');
-    else if (fm.description.length > 160) errors.push(`description ${fm.description.length} chars (max 160)`);
+    else if (fm.description.length > (isHindi ? 200 : 160)) errors.push(`description ${fm.description.length} chars (max 160)`);
     else if (fm.description.length < 110) warn.push(`description only ${fm.description.length} chars (aim 130-160)`);
-    if (!Array.isArray(fm.exams) || !fm.exams.length || fm.exams.some((e) => !EXAMS.has(e))) errors.push('exams must be a non-empty subset of jee-main, jee-advanced, neet');
+    if (!isHindi && (!Array.isArray(fm.exams) || !fm.exams.length || fm.exams.some((e) => !EXAMS.has(e)))) errors.push('exams must be a non-empty subset of jee-main, jee-advanced, neet');
     const sources = fm.sources ?? [];
     if ((isReaction || isTopic) && sources.length < 2) errors.push('need >= 2 sources');
     if (isTopic) {
@@ -111,8 +120,11 @@ for (const file of files) {
   // <Eq ce="..."/> in body
   for (const em of body.matchAll(/<Eq\s+ce=(["'])([\s\S]*?)\1/g)) checkCe(em[2].replace(/\\\\/g, '\\'), 'body <Eq>', errors);
   for (const tag of body.matchAll(/<([A-Z][A-Za-z]*)/g)) if (!COMPONENTS.has(tag[1])) errors.push(`unknown component <${tag[1]}>`);
+  for (const link of body.matchAll(/\]\(\/hi\/([a-z]+)\/([a-z0-9-]+)\/?(#[a-z0-9-]*)?\)/g)) {
+    if (!hiSlugs[link[1]]?.has(link[2]) && !planned.has(`hi/${link[1]}/${link[2]}`)) errors.push(`link to missing Hindi page /hi/${link[1]}/${link[2]}/`);
+  }
   for (const link of body.matchAll(/\]\(\/([a-z]+)\/([a-z0-9-]+)\/?(#[a-z0-9-]*)?\)/g)) {
-    if (link[1] === 'compounds' || link[1] === 'map') continue;
+    if (link[1] === 'compounds' || link[1] === 'map' || link[1] === 'hi') continue;
     if (!SECTIONS.includes(link[1])) errors.push(`link to unknown section /${link[1]}/`);
     else if (!exists(link[1], link[2])) errors.push(`link to unknown page /${link[1]}/${link[2]}/`);
   }

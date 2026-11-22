@@ -14,19 +14,36 @@ import ReportError from '../ReportError.astro';
 import Byline from '../Byline.astro';
 import LibgenCard from '../LibgenCard.astro';
 import { url, absUrl, EXAMS } from '../../lib/site';
-import { SECTIONS, resolveRelated, type TopicKey } from '../../lib/sections';
+import { SECTIONS, resolveRelated, hindiPages, localiseRef, type TopicKey } from '../../lib/sections';
+import { t as tr, type Lang } from '../../lib/i18n';
 import { audienceLd, breadcrumbLd, faqLd, orgLd, personLd } from '../../lib/seo';
 
 interface Props {
   entry: CollectionEntry<TopicKey>;
   section: TopicKey;
+  /** Render the Hindi version of the page. */
+  lang?: Lang;
 }
 
-const { entry, section } = Astro.props;
-const d = entry.data;
-const { Content } = await render(entry);
+const { entry, section, lang = 'en' } = Astro.props;
+const s = tr(lang);
 const info = SECTIONS[section];
-const path = `${info.path}${entry.id}/`;
+const hiEntry = (await hindiPages()).get(`${section}/${entry.id}`);
+const hi = lang === 'hi' ? hiEntry : undefined;
+const enPath = `${info.path}${entry.id}/`;
+const path = lang === 'hi' ? `hi/${enPath}` : enPath;
+const altPath = lang === 'hi' ? enPath : hiEntry ? `hi/${enPath}` : undefined;
+const d = {
+  ...entry.data,
+  ...(hi && {
+    title: hi.data.title,
+    description: hi.data.description,
+    aliases: hi.data.aliases.length ? hi.data.aliases : entry.data.aliases,
+    memoryTricks: hi.data.memoryTricks ?? entry.data.memoryTricks,
+    faq: hi.data.faq,
+  }),
+};
+const { Content } = await render(hi ?? entry);
 const family = d.family ? (await getCollection('mechanisms')).find((m) => m.id === d.family) : undefined;
 
 // Related: explicit list, then other pages of the same category in this section.
@@ -45,7 +62,8 @@ const titleOptions: Record<TopicKey, string[]> = {
   preparation: [`${d.title}: Methods, Reagents & Examples`, `${d.title}: Methods & Reagents`, d.title],
   reagents: [`${d.title}: Uses, Reactions & Mechanism`, `${d.title}: Uses & Reactions`, `${d.title} Reagent`, d.title],
 };
-const pageTitle = titleOptions[section].find((t) => t.length <= 65) ?? d.title;
+const pageTitle = lang === 'hi' ? d.title : titleOptions[section].find((t) => t.length <= 65) ?? d.title;
+const relatedLocal = await Promise.all(related.map((r) => localiseRef(r, lang)));
 
 const crumbs = [{ label: info.label, href: url(info.path) }, { label: d.title }];
 const jsonLd = [
@@ -57,7 +75,8 @@ const jsonLd = [
     alternateName: d.aliases,
     description: d.description,
     url: absUrl(path),
-    inLanguage: 'en-IN',
+    inLanguage: lang === 'hi' ? 'hi-IN' : 'en-IN',
+    ...(lang === 'hi' && { translationOfWork: { '@id': absUrl(`${enPath}#article`) } }),
     image: absUrl('og-image.png'),
     author: personLd(),
     publisher: orgLd(),
@@ -74,16 +93,16 @@ const jsonLd = [
   faqLd(d.faq, path),
 ].filter(Boolean) as Record<string, unknown>[];
 ---
-<Base title={pageTitle} description={d.description} path={path} ogType="article" jsonLd={jsonLd} section={section}>
+<Base title={pageTitle} description={d.description} path={path} altPath={altPath} ogType="article" jsonLd={jsonLd} section={section}>
   <div class="container page">
     <Breadcrumbs items={crumbs} />
     <header class="page-head">
       <h1>{d.title}{d.formula && d.formula !== d.title && <span class="formula"> ({d.formula})</span>}</h1>
-      {d.aliases.length > 0 && <p class="aka">Also called: {d.aliases.join(', ')}</p>}
+      {d.aliases.length > 0 && <p class="aka">{s.alsoCalled}: {d.aliases.join(', ')}</p>}
       <div class="meta-row">
         <ExamTags exams={d.exams} />
-        {d.verified.status === 'verified' && <span class="tag tag-ok">✓ Verified against {d.sources.length} sources</span>}
-        {d.verified.status === 'conflict' && <span class="tag tag-warn">Under review</span>}
+        {d.verified.status === 'verified' && <span class="tag tag-ok">✓ {s.verifiedAgainst(d.sources.length)}</span>}
+        {d.verified.status === 'conflict' && <span class="tag tag-warn">{s.underReview}</span>}
       </div>
       <p class="summary">{d.description}</p>
     </header>
@@ -103,7 +122,7 @@ const jsonLd = [
 
         {d.faq.length > 0 && (
           <section id="faq" aria-labelledby="faq-h">
-            <h2 id="faq-h">Frequently asked questions</h2>
+            <h2 id="faq-h">{s.faq}</h2>
             <div class="faq">
               {d.faq.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}
             </div>
@@ -119,22 +138,22 @@ const jsonLd = [
       <aside class="side">
         {family && (
           <div class="side-card">
-            <h2>Part of</h2>
+            <h2>{s.partOf}</h2>
             <ul><li><a href={url(`mechanisms/${family.id}/`)}>{family.data.title}</a></li></ul>
           </div>
         )}
-        {related.length > 0 && (
+        {relatedLocal.length > 0 && (
           <div class="side-card">
-            <h2>Related pages</h2>
-            <ul>{related.map((r) => <li><a href={r.href}>{r.title}</a></li>)}</ul>
+            <h2>{s.relatedPages}</h2>
+            <ul>{relatedLocal.map((r) => <li><a href={r.href}>{r.title}</a></li>)}</ul>
           </div>
         )}
         <div class="side-card">
-          <h2>Explore</h2>
+          <h2>{s.explore}</h2>
           <ul>
-            <li><a href={url(info.path)}>All {info.label.toLowerCase()}</a></li>
-            <li><a href={url('reactions/')}>Reactions A–Z</a></li>
-            <li><a href={url('map/')}>Interactive reaction map</a></li>
+            <li><a href={url(info.path)}>{s.allOf(info.label)}</a></li>
+            <li><a href={url('reactions/')}>{s.reactionsAZ}</a></li>
+            <li><a href={url('map/')}>{s.interactiveMap}</a></li>
           </ul>
         </div>
       </aside>

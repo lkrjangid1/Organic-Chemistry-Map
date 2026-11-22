@@ -1,6 +1,7 @@
 ---
 import '../styles/site.css';
 import { SITE, absUrl, url } from '../lib/site';
+import { langOf, t as tr, HTML_LANG, OG_LOCALE } from '../lib/i18n';
 
 interface Props {
   title: string;
@@ -12,7 +13,9 @@ interface Props {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   noindex?: boolean;
   /** Top nav section to highlight. */
-  section?: 'reactions' | 'tests' | 'mechanisms' | 'concepts' | 'comparisons' | 'preparation' | 'reagents' | 'compounds' | 'map' | 'notes' | 'about';
+  /** Site-relative path of the same page in the other language, when it exists. */
+  altPath?: string;
+  section?: 'tools' | 'reactions' | 'tests' | 'mechanisms' | 'concepts' | 'comparisons' | 'preparation' | 'reagents' | 'compounds' | 'map' | 'notes' | 'about';
 }
 
 const {
@@ -23,8 +26,13 @@ const {
   ogType = 'website',
   jsonLd,
   noindex = false,
+  altPath,
   section,
 } = Astro.props;
+const lang = langOf(Astro.url);
+const s = tr(lang);
+const enPath = lang === 'en' ? path : altPath;
+const hiPath = lang === 'hi' ? path : altPath;
 
 const canonical = absUrl(path);
 const image = absUrl(ogImage);
@@ -44,6 +52,7 @@ const nav = [
   { key: 'notes', href: url('notes/'), label: 'Notes' },
 ];
 const more = [
+  { key: 'tools', href: url('tools/'), label: s.tools },
   { key: 'comparisons', href: url('comparisons/'), label: 'Comparisons' },
   { key: 'preparation', href: url('preparation/'), label: 'Preparation' },
   { key: 'compounds', href: url('compounds/'), label: 'Compounds' },
@@ -51,7 +60,7 @@ const more = [
 ---
 
 <!doctype html>
-<html lang={SITE.lang}>
+<html lang={HTML_LANG[lang]}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -59,13 +68,15 @@ const more = [
     <meta name="description" content={description} />
     <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'} />
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="en-IN" href={canonical} />
-    <link rel="alternate" hreflang="x-default" href={canonical} />
+    {enPath !== undefined && <link rel="alternate" hreflang="en-IN" href={absUrl(enPath)} />}
+    {hiPath !== undefined && <link rel="alternate" hreflang="hi-IN" href={absUrl(hiPath)} />}
+    {enPath !== undefined && <link rel="alternate" hreflang="x-default" href={absUrl(enPath)} />}
     <link rel="sitemap" href={url('sitemap-index.xml')} />
 
     <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content={SITE.name} />
-    <meta property="og:locale" content={SITE.locale} />
+    <meta property="og:locale" content={OG_LOCALE[lang]} />
+    {altPath !== undefined && <meta property="og:locale:alternate" content={OG_LOCALE[lang === 'en' ? 'hi' : 'en']} />}
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
@@ -86,10 +97,10 @@ const more = [
     <slot name="head" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">{s.skip}</a>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href={url()}>
+        <a class="brand" href={url(lang === 'hi' ? 'hi/' : '')}>
           <img src={url('icons/ogm_logo.png')} alt="" width="36" height="36" />
           <span>{SITE.name}</span>
         </a>
@@ -102,17 +113,22 @@ const more = [
             ))}
           </ul>
           <details class="nav-menu">
-            <summary>Menu</summary>
+            <summary>{s.menu}</summary>
             <ul>
               {[...nav, ...more].map((item) => <li><a href={item.href} aria-current={section === item.key ? 'page' : undefined}>{item.label}</a></li>)}
             </ul>
           </details>
-          <a class="btn btn-primary btn-sm" href={url('map/')}>Open map</a>
+          <a class="btn btn-primary btn-sm" href={url('map/')}>{s.openMap}</a>
         </nav>
       </div>
     </header>
 
     <main id="main">
+      {altPath !== undefined && (
+        <div class="container lang-switch">
+          <a href={url(altPath)} hreflang={HTML_LANG[lang === 'en' ? 'hi' : 'en']} lang={HTML_LANG[lang === 'en' ? 'hi' : 'en']}>{s.otherLang}</a>
+        </div>
+      )}
       <slot />
     </main>
 
@@ -120,9 +136,9 @@ const more = [
       <div class="container footer-inner">
         <div>
           <p><strong>{SITE.name}</strong>: free organic chemistry notes and an interactive reaction map for JEE Main, JEE Advanced and NEET.</p>
-          <p>{SITE.author.byline} · {SITE.publisher.credit}</p>
+          <p>{s.byline} · {s.credit}</p>
           <p>
-            Try <a href={SITE.libgen.url} rel="noopener">{SITE.libgen.name}</a>, a {SITE.libgen.line.toLowerCase()}.
+            Try <a href={SITE.libgen.url} rel="noopener">{SITE.libgen.name}</a>: {SITE.libgen.line}.
           </p>
         </div>
         <ul class="footer-links">
@@ -136,6 +152,8 @@ const more = [
           <li><a href={url('compounds/')}>Compounds</a></li>
           <li><a href={url('notes/')}>Handwritten notes</a></li>
           <li><a href={url('map/')}>Interactive map</a></li>
+          <li><a href={url('tools/')}>Study tools</a></li>
+          <li><a href={url('hi/')}>हिंदी</a></li>
           <li><a href={url('about/')}>About</a></li>
           <li><a href={url('privacy/')}>Privacy</a></li>
           <li><a href={SITE.repo} rel="noopener">GitHub</a></li>

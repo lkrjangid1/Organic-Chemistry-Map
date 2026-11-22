@@ -1,0 +1,31 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { url, absUrl } from '../../lib/site';
+import { breadcrumbLd } from '../../lib/seo';
+
+const TOOLS = [
+  { href: 'tools/path-finder/', title: 'Conversion path finder', text: 'Shortest routes between any two functional groups or map compounds, with the reagent for every step.' },
+  { href: 'tools/reagent-finder/', title: 'Reagent finder', text: 'Type LiAlH₄, PCC or NaNO₂/HCl and see every reaction that uses it.' },
+  { href: 'tools/quiz/', title: 'Predict the product', text: 'Ten-question rounds with structures and reagents, instant feedback and links to each reaction.' },
+  { href: 'tools/flashcards/', title: 'Flashcards', text: 'Named reactions, reagents, tests and concepts with spaced repetition saved in your browser.' },
+  { href: 'map/', title: 'Interactive reaction map', text: 'Every compound and reaction on one zoomable canvas.' },
+];
+const path = 'tools/';
+const jsonLd = [
+  { '@type': 'CollectionPage', name: 'Organic chemistry study tools', url: absUrl(path), mainEntity: { '@type': 'ItemList', itemListElement: TOOLS.map((t, i) => ({ '@type': 'ListItem', position: i + 1, url: absUrl(t.href), name: t.title })) } },
+  breadcrumbLd([{ name: 'Tools', path }]),
+];
+---
+<Base title="Free Organic Chemistry Study Tools for JEE & NEET" description="Free organic chemistry tools for JEE and NEET: conversion path finder, reagent finder, predict-the-product quiz and flashcards, built on verified reaction pages." path={path} jsonLd={jsonLd} section="tools">
+  <div class="container page">
+    <Breadcrumbs items={[{ label: 'Tools' }]} />
+    <header class="page-head">
+      <h1>Study tools</h1>
+      <p class="summary">Practise and look things up quickly. Every tool draws on the same verified pages as the rest of the site.</p>
+    </header>
+    <ul class="list-cards">
+      {TOOLS.map((t) => <li><a class="card" href={url(t.href)}><strong>{t.title}</strong><p>{t.text}</p></a></li>)}
+    </ul>
+  </div>
+</Base>

@@ -153,6 +153,15 @@ declare module 'astro:content' {
   filePath?: string;
   digest?: string | number;
 }>;
+"hindi": Record<string, {
+  id: string;
+  body?: string;
+  collection: "hindi";
+  data: InferEntrySchema<"hindi">;
+  rendered?: RenderedContent;
+  filePath?: string;
+  digest?: string | number;
+}>;
 "mechanisms": Record<string, {
   id: string;
   body?: string;

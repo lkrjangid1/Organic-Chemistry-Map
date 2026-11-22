@@ -1,0 +1,2469 @@
+{
+  "groups": [
+    {
+      "id": "alkane",
+      "name": "Alkane",
+      "formula": "R–H",
+      "page": "mechanisms/free-radical-reactions"
+    },
+    {
+      "id": "alkene",
+      "name": "Alkene",
+      "formula": "R₂C=CR₂",
+      "page": "mechanisms/electrophilic-addition"
+    },
+    {
+      "id": "alkyne",
+      "name": "Alkyne",
+      "formula": "R–C≡C–R′",
+      "page": "mechanisms/electrophilic-addition"
+    },
+    {
+      "id": "alkyl-halide",
+      "name": "Alkyl halide",
+      "formula": "R–X",
+      "page": "mechanisms/nucleophilic-substitution"
+    },
+    {
+      "id": "gem-dihalide",
+      "name": "gem-Dihalide",
+      "formula": "R–CHX₂ / R₂CX₂"
+    },
+    {
+      "id": "vic-dihalide",
+      "name": "vic-Dihalide",
+      "formula": "R–CHX–CHX–R"
+    },
+    {
+      "id": "alcohol-1",
+      "name": "Primary alcohol",
+      "formula": "R–CH₂OH",
+      "page": "mechanisms/oxidation-reactions"
+    },
+    {
+      "id": "alcohol-2",
+      "name": "Secondary alcohol",
+      "formula": "R₂CH–OH",
+      "page": "mechanisms/oxidation-reactions"
+    },
+    {
+      "id": "alcohol-3",
+      "name": "Tertiary alcohol",
+      "formula": "R₃C–OH",
+      "page": "mechanisms/oxidation-reactions"
+    },
+    {
+      "id": "diol",
+      "name": "vic-Diol",
+      "formula": "R₂C(OH)–C(OH)R₂",
+      "page": "reactions/malaprade-oxidation"
+    },
+    {
+      "id": "ether",
+      "name": "Ether",
+      "formula": "R–O–R′",
+      "page": "reactions/williamson-ether-synthesis"
+    },
+    {
+      "id": "epoxide",
+      "name": "Epoxide",
+      "formula": "R₂C(O)CR₂ (three-membered ring)",
+      "page": "reactions/prilezhaev-epoxidation"
+    },
+    {
+      "id": "aldehyde",
+      "name": "Aldehyde",
+      "formula": "R–CHO",
+      "page": "preparation/preparation-of-aldehydes-and-ketones"
+    },
+    {
+      "id": "ketone",
+      "name": "Ketone",
+      "formula": "R–CO–R′",
+      "page": "preparation/preparation-of-aldehydes-and-ketones"
+    },
+    {
+      "id": "oxime",
+      "name": "Oxime",
+      "formula": "R₂C=N–OH",
+      "page": "reactions/beckmann-rearrangement"
+    },
+    {
+      "id": "carboxylic-acid",
+      "name": "Carboxylic acid",
+      "formula": "R–COOH",
+      "page": "mechanisms/reactions-of-carboxylic-acids"
+    },
+    {
+      "id": "acid-chloride",
+      "name": "Acid chloride",
+      "formula": "R–COCl",
+      "page": "mechanisms/reactions-of-carboxylic-acids"
+    },
+    {
+      "id": "acid-anhydride",
+      "name": "Acid anhydride",
+      "formula": "(RCO)₂O",
+      "page": "mechanisms/reactions-of-carboxylic-acids"
+    },
+    {
+      "id": "ester",
+      "name": "Ester",
+      "formula": "R–COO–R′",
+      "page": "reactions/ester-hydrolysis"
+    },
+    {
+      "id": "beta-keto-ester",
+      "name": "β-Keto ester",
+      "formula": "R–CO–CH₂–COOR′",
+      "page": "reactions/claisen-condensation"
+    },
+    {
+      "id": "amide",
+      "name": "Amide",
+      "formula": "R–CONH₂",
+      "page": "mechanisms/reactions-of-carboxylic-acids"
+    },
+    {
+      "id": "nitrile",
+      "name": "Nitrile",
+      "formula": "R–C≡N",
+      "page": "mechanisms/reactions-of-amines"
+    },
+    {
+      "id": "isocyanide",
+      "name": "Isocyanide",
+      "formula": "R–N≡C",
+      "page": "mechanisms/reactions-of-amines"
+    },
+    {
+      "id": "amine-1",
+      "name": "Primary amine",
+      "formula": "R–NH₂",
+      "page": "preparation/preparation-of-amines"
+    },
+    {
+      "id": "amine-2",
+      "name": "Secondary amine",
+      "formula": "R₂NH",
+      "page": "preparation/preparation-of-amines"
+    },
+    {
+      "id": "amine-3",
+      "name": "Tertiary amine",
+      "formula": "R₃N",
+      "page": "preparation/preparation-of-amines"
+    },
+    {
+      "id": "nitroalkane",
+      "name": "Nitroalkane",
+      "formula": "R–NO₂",
+      "page": "mechanisms/reactions-of-amines"
+    },
+    {
+      "id": "grignard-reagent",
+      "name": "Grignard reagent",
+      "formula": "R–MgX",
+      "page": "reactions/grignard-reagent"
+    },
+    {
+      "id": "alpha-halo-acid",
+      "name": "α-Halo acid",
+      "formula": "R–CHX–COOH",
+      "page": "reactions/hell-volhard-zelinsky-reaction"
+    },
+    {
+      "id": "amino-acid",
+      "name": "α-Amino acid",
+      "formula": "R–CH(NH₂)–COOH",
+      "page": "concepts/amino-acids"
+    },
+    {
+      "id": "beta-hydroxy-carbonyl",
+      "name": "β-Hydroxy carbonyl",
+      "formula": "R–CH(OH)–CH₂–CO–R′",
+      "page": "reactions/aldol-condensation"
+    },
+    {
+      "id": "alpha-beta-unsaturated-carbonyl",
+      "name": "α,β-Unsaturated carbonyl",
+      "formula": "R–CH=CH–CO–R′",
+      "page": "mechanisms/carbonyl-condensation-reactions"
+    },
+    {
+      "id": "benzene",
+      "name": "Benzene",
+      "formula": "C₆H₆",
+      "page": "mechanisms/electrophilic-aromatic-substitution"
+    },
+    {
+      "id": "alkylbenzene",
+      "name": "Alkylbenzene",
+      "formula": "C₆H₅–R",
+      "page": "reactions/friedel-crafts-alkylation"
+    },
+    {
+      "id": "haloarene",
+      "name": "Haloarene",
+      "formula": "C₆H₅–X",
+      "page": "reactions/nucleophilic-aromatic-substitution"
+    },
+    {
+      "id": "phenol",
+      "name": "Phenol",
+      "formula": "C₆H₅OH",
+      "page": "mechanisms/reactions-of-phenols"
+    },
+    {
+      "id": "nitrobenzene",
+      "name": "Nitrobenzene",
+      "formula": "C₆H₅NO₂",
+      "page": "reactions/reduction-of-nitrobenzene"
+    },
+    {
+      "id": "aniline",
+      "name": "Aniline",
+      "formula": "C₆H₅NH₂",
+      "page": "preparation/preparation-of-amines"
+    },
+    {
+      "id": "diazonium-salt",
+      "name": "Benzenediazonium salt",
+      "formula": "C₆H₅N₂⁺Cl⁻",
+      "page": "mechanisms/diazonium-salt-reactions"
+    },
+    {
+      "id": "benzoic-acid",
+      "name": "Benzoic acid",
+      "formula": "C₆H₅COOH"
+    },
+    {
+      "id": "benzaldehyde",
+      "name": "Benzaldehyde",
+      "formula": "C₆H₅CHO"
+    },
+    {
+      "id": "salicylaldehyde",
+      "name": "Salicylaldehyde",
+      "formula": "2-HOC₆H₄CHO",
+      "page": "reactions/reimer-tiemann-reaction"
+    },
+    {
+      "id": "salicylic-acid",
+      "name": "Salicylic acid",
+      "formula": "2-HOC₆H₄COOH",
+      "page": "reactions/kolbe-schmitt-reaction"
+    },
+    {
+      "id": "phenyl-ester",
+      "name": "Phenyl ester",
+      "formula": "C₆H₅–O–CO–R",
+      "page": "reactions/fries-rearrangement"
+    },
+    {
+      "id": "azo-dye",
+      "name": "Azo compound (azo dye)",
+      "formula": "Ar–N=N–Ar′",
+      "page": "reactions/diazo-coupling-reaction"
+    }
+  ],
+  "steps": [
+    {
+      "from": "alkane",
+      "to": "alkyl-halide",
+      "reagents": "Cl₂ or Br₂",
+      "conditions": "UV light (hν) or heat",
+      "name": "Free radical halogenation",
+      "page": "reactions/free-radical-halogenation",
+      "note": "mixture of isomers; Br₂ is far more selective"
+    },
+    {
+      "from": "alkane",
+      "to": "nitroalkane",
+      "reagents": "conc. HNO₃",
+      "conditions": "vapour phase, about 350–450 °C",
+      "name": "Vapour-phase nitration",
+      "page": "mechanisms/free-radical-reactions",
+      "note": "mixture, including smaller nitroalkanes"
+    },
+    {
+      "from": "alkane",
+      "to": "benzene",
+      "reagents": "Oxides of V, Mo or Cr on Al₂O₃",
+      "conditions": "773 K, 10–20 atm",
+      "name": "Aromatisation (reforming)",
+      "page": "mechanisms/free-radical-reactions",
+      "note": "n-alkanes with six or more C; n-hexane gives benzene"
+    },
+    {
+      "from": "alkane",
+      "to": "alcohol-3",
+      "reagents": "KMnO₄",
+      "name": "Oxidation of a tertiary C–H",
+      "page": "reagents/potassium-permanganate",
+      "note": "(CH₃)₃CH gives (CH₃)₃COH"
+    },
+    {
+      "from": "alkene",
+      "to": "alkane",
+      "reagents": "H₂, Ni, Pd or Pt",
+      "conditions": "room temperature (Pd, Pt); heat and pressure (Ni)",
+      "name": "Catalytic hydrogenation",
+      "page": "reactions/catalytic-hydrogenation",
+      "note": "syn addition"
+    },
+    {
+      "from": "alkene",
+      "to": "alkyl-halide",
+      "reagents": "HX (HCl, HBr, HI)",
+      "conditions": "no peroxide",
+      "name": "Markovnikov addition of HX",
+      "page": "reactions/markovnikov-rule",
+      "note": "X goes to the more substituted carbon"
+    },
+    {
+      "from": "alkene",
+      "to": "alkyl-halide",
+      "reagents": "HBr, benzoyl peroxide",
+      "conditions": "light or gentle heat",
+      "name": "Peroxide effect (Kharasch)",
+      "page": "reactions/peroxide-effect",
+      "note": "anti-Markovnikov; works only with HBr"
+    },
+    {
+      "from": "alkene",
+      "to": "alkyl-halide",
+      "reagents": "NBS, hν or peroxide",
+      "conditions": "reflux in CCl₄",
+      "name": "NBS allylic bromination (Wohl–Ziegler)",
+      "page": "reactions/nbs-allylic-bromination",
+      "note": "allylic bromide; C=C kept"
+    },
+    {
+      "from": "alkene",
+      "to": "vic-dihalide",
+      "reagents": "Br₂ (or Cl₂) in CCl₄",
+      "conditions": "room temperature, dark",
+      "name": "Halogen addition",
+      "page": "mechanisms/electrophilic-addition",
+      "note": "anti addition via a halonium ion"
+    },
+    {
+      "from": "alkene",
+      "to": "alcohol-2",
+      "reagents": "H₂O, H⁺",
+      "name": "Acid-catalysed hydration",
+      "page": "reactions/markovnikov-rule",
+      "note": "Markovnikov; propene gives propan-2-ol"
+    },
+    {
+      "from": "alkene",
+      "to": "alcohol-2",
+      "reagents": "(i) Hg(OAc)₂, H₂O/THF; (ii) NaBH₄, OH⁻",
+      "conditions": "room temperature",
+      "name": "Oxymercuration–demercuration",
+      "page": "reactions/oxymercuration-demercuration",
+      "note": "Markovnikov, no rearrangement"
+    },
+    {
+      "from": "alkene",
+      "to": "alcohol-1",
+      "reagents": "(i) B₂H₆ or BH₃·THF; (ii) H₂O₂, NaOH",
+      "name": "Hydroboration–oxidation",
+      "page": "reactions/hydroboration-oxidation",
+      "note": "anti-Markovnikov; terminal alkene gives 1° alcohol"
+    },
+    {
+      "from": "alkene",
+      "to": "diol",
+      "reagents": "Cold, dilute, alkaline KMnO₄ (Baeyer's reagent) or OsO₄",
+      "name": "Syn dihydroxylation",
+      "page": "mechanisms/electrophilic-addition",
+      "note": "syn diol"
+    },
+    {
+      "from": "alkene",
+      "to": "diol",
+      "reagents": "Peroxy acid (mCPBA), then H₃O⁺",
+      "name": "Epoxidation, then hydrolysis",
+      "page": "reactions/prilezhaev-epoxidation",
+      "note": "anti (trans) diol"
+    },
+    {
+      "from": "alkene",
+      "to": "epoxide",
+      "reagents": "Peroxy acid RCO₃H (mCPBA, MMPP)",
+      "conditions": "CH₂Cl₂, about −10 to 60 °C",
+      "name": "Prilezhaev epoxidation",
+      "page": "reactions/prilezhaev-epoxidation",
+      "note": "syn, stereospecific"
+    },
+    {
+      "from": "alkene",
+      "to": "aldehyde",
+      "reagents": "(i) O₃; (ii) Zn/H₂O",
+      "conditions": "about −78 °C, then work-up",
+      "name": "Ozonolysis (reductive work-up)",
+      "page": "reactions/ozonolysis",
+      "note": "each =CHR end gives R–CHO"
+    },
+    {
+      "from": "alkene",
+      "to": "ketone",
+      "reagents": "(i) O₃; (ii) Zn/H₂O",
+      "conditions": "about −78 °C, then work-up",
+      "name": "Ozonolysis (reductive work-up)",
+      "page": "reactions/ozonolysis",
+      "note": "each =CR₂ end gives R₂C=O"
+    },
+    {
+      "from": "alkene",
+      "to": "carboxylic-acid",
+      "reagents": "(i) O₃; (ii) H₂O₂",
+      "name": "Ozonolysis (oxidative work-up)",
+      "page": "reactions/ozonolysis",
+      "note": "each =CHR end gives R–COOH"
+    },
+    {
+      "from": "alkene",
+      "to": "carboxylic-acid",
+      "reagents": "KMnO₄",
+      "conditions": "hot, acidic",
+      "name": "Oxidative cleavage",
+      "page": "reagents/potassium-permanganate",
+      "note": "C=C cleaved; terminal =CH₂ lost as CO₂"
+    },
+    {
+      "from": "alkene",
+      "to": "ketone",
+      "reagents": "PdCl₂, CuCl₂, H₂O, O₂",
+      "name": "Wacker oxidation",
+      "page": "reactions/wacker-oxidation",
+      "note": "terminal alkene gives a methyl ketone"
+    },
+    {
+      "from": "alkene",
+      "to": "aldehyde",
+      "reagents": "PdCl₂, CuCl₂, H₂O, O₂",
+      "name": "Wacker oxidation",
+      "page": "reactions/wacker-oxidation",
+      "note": "only ethene gives an aldehyde (ethanal)"
+    },
+    {
+      "from": "alkene",
+      "to": "ether",
+      "reagents": "CH₃OH, H⁺",
+      "name": "Acid-catalysed addition of an alcohol",
+      "page": "mechanisms/electrophilic-addition",
+      "note": "Markovnikov; propene gives 2-methoxypropane"
+    },
+    {
+      "from": "alkyne",
+      "to": "alkene",
+      "reagents": "H₂, Lindlar catalyst (Pd/CaCO₃, Pb(OAc)₂, quinoline)",
+      "name": "Lindlar reduction",
+      "page": "reagents/lindlar-catalyst",
+      "note": "gives the cis-alkene"
+    },
+    {
+      "from": "alkyne",
+      "to": "alkene",
+      "reagents": "Na or Li, liq. NH₃",
+      "conditions": "about −33 °C",
+      "name": "Dissolving-metal reduction",
+      "page": "reactions/birch-reduction",
+      "note": "gives the trans-alkene"
+    },
+    {
+      "from": "alkyne",
+      "to": "alkane",
+      "reagents": "H₂, Pd/C, Pt or Ni",
+      "name": "Catalytic hydrogenation",
+      "page": "reactions/catalytic-hydrogenation",
+      "note": "goes all the way to the alkane"
+    },
+    {
+      "from": "alkyne",
+      "to": "ketone",
+      "reagents": "H₂O, HgSO₄, dil. H₂SO₄",
+      "conditions": "warm",
+      "name": "Kucherov reaction",
+      "page": "reactions/kucherov-reaction",
+      "note": "Markovnikov; terminal alkyne gives a methyl ketone"
+    },
+    {
+      "from": "alkyne",
+      "to": "aldehyde",
+      "reagents": "H₂O, HgSO₄, dil. H₂SO₄",
+      "conditions": "warm",
+      "name": "Kucherov reaction",
+      "page": "reactions/kucherov-reaction",
+      "note": "only ethyne gives an aldehyde (ethanal)"
+    },
+    {
+      "from": "alkyne",
+      "to": "aldehyde",
+      "reagents": "Bulky borane, then H₂O₂/OH⁻",
+      "name": "Hydroboration–oxidation of an alkyne",
+      "page": "reactions/kucherov-reaction",
+      "note": "terminal alkyne; anti-Markovnikov"
+    },
+    {
+      "from": "alkyne",
+      "to": "carboxylic-acid",
+      "reagents": "(i) O₃; (ii) H₂O",
+      "name": "Ozonolysis of an alkyne",
+      "page": "reactions/ozonolysis",
+      "note": "gives two carboxylic acids"
+    },
+    {
+      "from": "alkyl-halide",
+      "to": "alcohol-1",
+      "reagents": "aq. KOH",
+      "name": "Hydrolysis (substitution)",
+      "page": "reactions/e2-reaction",
+      "note": "aqueous KOH substitutes; alcoholic KOH eliminates"
+    },
+    {
+      "from": "alkyl-halide",
+      "to": "alcohol-3",
+      "reagents": "H₂O",
+      "conditions": "polar protic solvent",
+      "name": "SN1 hydrolysis",
+      "page": "reactions/sn1-reaction",
+      "note": "3° halide gives 3° alcohol"
+    },
+    {
+      "from": "alkyl-halide",
+      "to": "alkene",
+      "reagents": "alc. KOH (or NaOEt/EtOH)",
+      "conditions": "heat",
+      "name": "Dehydrohalogenation (E2)",
+      "page": "reactions/e2-reaction",
+      "note": "Saytzeff (more substituted) alkene major"
+    },
+    {
+      "from": "alkyl-halide",
+      "to": "alkane",
+      "reagents": "Na",
+      "conditions": "dry ether",
+      "name": "Wurtz reaction",
+      "page": "reactions/wurtz-reaction",
+      "note": "R–R; best for symmetrical alkanes"
+    },
+    {
+      "from": "alkyl-halide",
+      "to": "alkane",
+      "reagents": "1. Li; 2. CuI; 3. R′–X",
+      "conditions": "dry ether",
+      "name": "Corey–House synthesis",
+      "page": "reactions/corey-house-synthesis",
+      "note": "clean unsymmetrical R–R′"
+    },
+    {
+      "from": "alkyl-halide",
+      "to": "alkane",
+      "reagents": "LiAlH₄",
+      "conditions": "dry ether",
+      "name": "Hydride reduction",
+      "page": "reagents/lithium-aluminium-hydride",
+      "note": "R–I faster than R–Br, faster than R–Cl"
+    },
+    {
+      "from": "alkyl-halide",
+      "to": "ether",
+      "reagents": "R′O⁻Na⁺",
+      "conditions": "warm, polar solvent",
+      "name": "Williamson ether synthesis",
+      "page": "reactions/williamson-ether-synthesis",
+      "note": "methyl or 1° halide; 3° halide gives alkene"
+    },
+    {
+      "from": "alkyl-halide",
+      "to": "nitrile",
+      "reagents": "KCN or NaCN",
+      "name": "Substitution by cyanide (SN2)",
+      "page": "reactions/sn2-reaction",
+      "note": "1 C added"
+    },
+    {
+      "from": "alkyl-halide",
+      "to": "isocyanide",
+      "reagents": "AgCN",
+      "name": "Substitution by AgCN",
+      "page": "reactions/sn2-reaction",
+      "note": "attack through N"
+    },
+    {
+      "from": "alkyl-halide",
+      "to": "nitroalkane",
+      "reagents": "AgNO₂",
+      "name": "Substitution by AgNO₂",
+      "page": "reactions/sn2-reaction",
+      "note": "KNO₂ gives the alkyl nitrite instead"
+    },
+    {
+      "from": "alkyl-halide",
+      "to": "amine-1",
+      "reagents": "Ethanolic NH₃ (large excess), then NaOH",
+      "conditions": "sealed tube, about 373 K",
+      "name": "Ammonolysis of alkyl halides",
+      "page": "reactions/ammonolysis-of-alkyl-halides",
+      "note": "mixture; excess NH₃ favours the 1° amine"
+    },
+    {
+      "from": "alkyl-halide",
+      "to": "amine-1",
+      "reagents": "1. Potassium phthalimide; 2. aq. NaOH (or N₂H₄)",
+      "conditions": "heat",
+      "name": "Gabriel phthalimide synthesis",
+      "page": "reactions/gabriel-phthalimide-synthesis",
+      "note": "pure 1° amine; 1° halides only"
+    },
+    {
+      "from": "alkyl-halide",
+      "to": "grignard-reagent",
+      "reagents": "Mg",
+      "conditions": "dry ether",
+      "name": "Grignard reagent formation",
+      "page": "reactions/grignard-reagent",
+      "note": "strictly anhydrous"
+    },
+    {
+      "from": "gem-dihalide",
+      "to": "aldehyde",
+      "reagents": "aq. KOH",
+      "name": "Hydrolysis of a gem-dihalide",
+      "page": "mechanisms/nucleophilic-substitution",
+      "note": "terminal R–CHX₂"
+    },
+    {
+      "from": "gem-dihalide",
+      "to": "ketone",
+      "reagents": "aq. KOH",
+      "name": "Hydrolysis of a gem-dihalide",
+      "page": "mechanisms/nucleophilic-substitution",
+      "note": "halogens on an internal carbon"
+    },
+    {
+      "from": "gem-dihalide",
+      "to": "alkyne",
+      "reagents": "Na",
+      "conditions": "Wurtz conditions (dry ether)",
+      "name": "Dehalogenation (Wurtz-type)",
+      "page": "reactions/wurtz-reaction"
+    },
+    {
+      "from": "gem-dihalide",
+      "to": "benzaldehyde",
+      "reagents": "H₂O (hydrolysis)",
+      "name": "Hydrolysis of benzal chloride",
+      "page": "preparation/preparation-of-aldehydes-and-ketones",
+      "note": "commercial route from toluene"
+    },
+    {
+      "from": "vic-dihalide",
+      "to": "alkene",
+      "reagents": "Zn dust (or NaI in acetone)",
+      "conditions": "heat",
+      "name": "Dehalogenation",
+      "page": "mechanisms/elimination-reactions",
+      "note": "2,3-dibromobutane gives but-2-ene"
+    },
+    {
+      "from": "alcohol-1",
+      "to": "aldehyde",
+      "reagents": "PCC, CH₂Cl₂",
+      "conditions": "room temperature",
+      "name": "PCC oxidation",
+      "page": "reagents/pyridinium-chlorochromate",
+      "note": "stops at the aldehyde"
+    },
+    {
+      "from": "alcohol-1",
+      "to": "aldehyde",
+      "reagents": "K₂Cr₂O₇/H₂SO₄",
+      "conditions": "distil the aldehyde out as it forms",
+      "name": "Dichromate oxidation",
+      "page": "reagents/potassium-dichromate",
+      "note": "excess oxidant and reflux give the acid"
+    },
+    {
+      "from": "alcohol-1",
+      "to": "aldehyde",
+      "reagents": "Cu",
+      "conditions": "573 K (alcohol vapour)",
+      "name": "Dehydrogenation over copper",
+      "page": "mechanisms/oxidation-reactions",
+      "note": "H₂ lost"
+    },
+    {
+      "from": "alcohol-1",
+      "to": "carboxylic-acid",
+      "reagents": "Jones reagent (CrO₃, H₂SO₄, acetone)",
+      "name": "Jones oxidation",
+      "page": "reagents/jones-reagent"
+    },
+    {
+      "from": "alcohol-1",
+      "to": "carboxylic-acid",
+      "reagents": "K₂Cr₂O₇/H₂SO₄ (excess)",
+      "conditions": "reflux",
+      "name": "Dichromate oxidation",
+      "page": "reagents/potassium-dichromate",
+      "note": "orange to green"
+    },
+    {
+      "from": "alcohol-1",
+      "to": "alkene",
+      "reagents": "conc. H₂SO₄",
+      "conditions": "443 K",
+      "name": "Dehydration of alcohols",
+      "page": "reactions/dehydration-of-alcohols",
+      "note": "ethanol gives ethene"
+    },
+    {
+      "from": "alcohol-1",
+      "to": "ether",
+      "reagents": "conc. H₂SO₄ (excess alcohol)",
+      "conditions": "413 K",
+      "name": "Intermolecular dehydration",
+      "page": "reactions/dehydration-of-alcohols",
+      "note": "symmetrical ether; at 443 K the alkene forms"
+    },
+    {
+      "from": "alcohol-1",
+      "to": "ether",
+      "reagents": "Na (or NaH), then R′–X",
+      "name": "Williamson ether synthesis",
+      "page": "reactions/williamson-ether-synthesis",
+      "note": "via the alkoxide RO⁻Na⁺"
+    },
+    {
+      "from": "alcohol-1",
+      "to": "alkyl-halide",
+      "reagents": "SOCl₂",
+      "name": "Reaction with thionyl chloride",
+      "page": "reactions/sni-mechanism",
+      "note": "SO₂ and HCl escape as gases"
+    },
+    {
+      "from": "alcohol-1",
+      "to": "alkyl-halide",
+      "reagents": "HI (or red P + I₂)",
+      "name": "Conversion to an alkyl iodide",
+      "page": "reagents/hi-and-red-phosphorus",
+      "note": "prolonged heating goes on to R–H"
+    },
+    {
+      "from": "alcohol-1",
+      "to": "amine-1",
+      "reagents": "NH₃, Al₂O₃",
+      "conditions": "heat",
+      "name": "Ammonolysis of alcohols",
+      "page": "reactions/ammonolysis-of-alkyl-halides",
+      "note": "mixture of 1°, 2° and 3° amines"
+    },
+    {
+      "from": "alcohol-1",
+      "to": "alpha-beta-unsaturated-carbonyl",
+      "reagents": "MnO₂",
+      "conditions": "neutral suspension",
+      "name": "MnO₂ oxidation (allylic alcohol)",
+      "page": "reagents/manganese-dioxide",
+      "note": "allylic 1° alcohol gives the enal; C=C kept"
+    },
+    {
+      "from": "alcohol-1",
+      "to": "benzaldehyde",
+      "reagents": "MnO₂",
+      "conditions": "neutral suspension",
+      "name": "MnO₂ oxidation (benzylic alcohol)",
+      "page": "reagents/manganese-dioxide",
+      "note": "benzyl alcohol"
+    },
+    {
+      "from": "alcohol-1",
+      "to": "benzaldehyde",
+      "reagents": "PCC, CH₂Cl₂",
+      "conditions": "room temperature",
+      "name": "PCC oxidation",
+      "page": "reagents/pyridinium-chlorochromate",
+      "note": "benzyl alcohol"
+    },
+    {
+      "from": "alcohol-2",
+      "to": "ketone",
+      "reagents": "PCC, CH₂Cl₂",
+      "conditions": "room temperature",
+      "name": "PCC oxidation",
+      "page": "reagents/pyridinium-chlorochromate"
+    },
+    {
+      "from": "alcohol-2",
+      "to": "ketone",
+      "reagents": "K₂Cr₂O₇/H₂SO₄",
+      "name": "Dichromate oxidation",
+      "page": "reagents/potassium-dichromate",
+      "note": "orange to green"
+    },
+    {
+      "from": "alcohol-2",
+      "to": "ketone",
+      "reagents": "Al(OCMe₃)₃, excess acetone",
+      "conditions": "heat",
+      "name": "Oppenauer oxidation",
+      "page": "reactions/oppenauer-oxidation",
+      "note": "reverse of the MPV reduction"
+    },
+    {
+      "from": "alcohol-2",
+      "to": "ketone",
+      "reagents": "Cu",
+      "conditions": "573 K (alcohol vapour)",
+      "name": "Dehydrogenation over copper",
+      "page": "mechanisms/oxidation-reactions",
+      "note": "H₂ lost"
+    },
+    {
+      "from": "alcohol-2",
+      "to": "alkene",
+      "reagents": "conc. H₂SO₄ or 85% H₃PO₄",
+      "conditions": "heat",
+      "name": "Dehydration of alcohols",
+      "page": "reactions/dehydration-of-alcohols",
+      "note": "Saytzeff alkene major"
+    },
+    {
+      "from": "alcohol-2",
+      "to": "alkyl-halide",
+      "reagents": "SOCl₂ (no base)",
+      "name": "SNi mechanism",
+      "page": "reactions/sni-mechanism",
+      "note": "retention; with pyridine, inversion"
+    },
+    {
+      "from": "alcohol-2",
+      "to": "alkyl-halide",
+      "reagents": "conc. HCl, anhydrous ZnCl₂ (Lucas reagent)",
+      "conditions": "room temperature",
+      "name": "Lucas reaction",
+      "page": "tests/lucas-test",
+      "note": "turbidity in about 5 minutes"
+    },
+    {
+      "from": "alcohol-2",
+      "to": "alpha-beta-unsaturated-carbonyl",
+      "reagents": "MnO₂",
+      "conditions": "neutral suspension",
+      "name": "MnO₂ oxidation (allylic alcohol)",
+      "page": "reagents/manganese-dioxide",
+      "note": "allylic 2° alcohol gives the enone"
+    },
+    {
+      "from": "alcohol-3",
+      "to": "alkyl-halide",
+      "reagents": "conc. HCl, anhydrous ZnCl₂ (Lucas reagent)",
+      "conditions": "room temperature",
+      "name": "Lucas reaction (SN1)",
+      "page": "tests/lucas-test",
+      "note": "turbidity at once"
+    },
+    {
+      "from": "alcohol-3",
+      "to": "alkene",
+      "reagents": "H₃PO₄ or conc. H₂SO₄",
+      "conditions": "milder heating than for 1° alcohols",
+      "name": "Dehydration of alcohols",
+      "page": "reactions/dehydration-of-alcohols",
+      "note": "Saytzeff alkene major"
+    },
+    {
+      "from": "alcohol-3",
+      "to": "alkene",
+      "reagents": "Cu",
+      "conditions": "573 K (alcohol vapour)",
+      "name": "Dehydration over copper",
+      "page": "mechanisms/oxidation-reactions",
+      "note": "3° alcohols lose H₂O, not H₂"
+    },
+    {
+      "from": "diol",
+      "to": "aldehyde",
+      "reagents": "HIO₄ (or NaIO₄)",
+      "conditions": "aqueous, room temperature",
+      "name": "Malaprade oxidation",
+      "page": "reactions/malaprade-oxidation",
+      "note": "C–C bond between the two OH groups is cut"
+    },
+    {
+      "from": "diol",
+      "to": "ketone",
+      "reagents": "HIO₄ (or NaIO₄)",
+      "conditions": "aqueous, room temperature",
+      "name": "Malaprade oxidation",
+      "page": "reactions/malaprade-oxidation",
+      "note": "each R₂C(OH) end gives a ketone"
+    },
+    {
+      "from": "diol",
+      "to": "ketone",
+      "reagents": "H⁺ (conc. H₂SO₄)",
+      "conditions": "heat",
+      "name": "Pinacol–pinacolone rearrangement",
+      "page": "reactions/pinacol-pinacolone-rearrangement",
+      "note": "1,2-alkyl shift; pinacol gives pinacolone"
+    },
+    {
+      "from": "epoxide",
+      "to": "diol",
+      "reagents": "H₃O⁺",
+      "name": "Acid-catalysed ring opening",
+      "page": "reactions/prilezhaev-epoxidation",
+      "note": "anti (trans) diol"
+    },
+    {
+      "from": "ether",
+      "to": "alkyl-halide",
+      "reagents": "conc. HI or HBr (excess)",
+      "conditions": "heat",
+      "name": "Ether cleavage with HX",
+      "page": "reactions/ether-cleavage-with-hx",
+      "note": "excess HX gives two alkyl halides"
+    },
+    {
+      "from": "ether",
+      "to": "alcohol-1",
+      "reagents": "HI (one equivalent)",
+      "conditions": "heat",
+      "name": "Ether cleavage with HX",
+      "page": "reactions/ether-cleavage-with-hx",
+      "note": "CH₃OC₂H₅ gives CH₃I + C₂H₅OH"
+    },
+    {
+      "from": "ether",
+      "to": "phenol",
+      "reagents": "conc. HI",
+      "conditions": "heat",
+      "name": "Ether cleavage (aryl alkyl ether)",
+      "page": "reactions/ether-cleavage-with-hx",
+      "note": "anisole gives phenol + CH₃I"
+    },
+    {
+      "from": "ether",
+      "to": "phenol",
+      "reagents": "None (heat only)",
+      "conditions": "above 100 °C",
+      "name": "Claisen rearrangement",
+      "page": "reactions/claisen-rearrangement",
+      "note": "allyl phenyl ether gives o-allylphenol"
+    },
+    {
+      "from": "aldehyde",
+      "to": "alcohol-1",
+      "reagents": "NaBH₄",
+      "conditions": "CH₃OH or C₂H₅OH",
+      "name": "Borohydride reduction",
+      "page": "reagents/sodium-borohydride"
+    },
+    {
+      "from": "aldehyde",
+      "to": "alcohol-1",
+      "reagents": "1. LiAlH₄, dry ether; 2. H₃O⁺",
+      "name": "LiAlH₄ reduction",
+      "page": "reagents/lithium-aluminium-hydride"
+    },
+    {
+      "from": "aldehyde",
+      "to": "alcohol-1",
+      "reagents": "Al(O-iPr)₃, propan-2-ol",
+      "conditions": "heat; acetone distilled off",
+      "name": "Meerwein–Ponndorf–Verley reduction",
+      "page": "reactions/meerwein-ponndorf-verley-reduction",
+      "note": "C=C left untouched"
+    },
+    {
+      "from": "aldehyde",
+      "to": "alcohol-1",
+      "reagents": "conc. NaOH or KOH",
+      "conditions": "warm",
+      "name": "Cannizzaro reaction",
+      "page": "reactions/cannizzaro-reaction",
+      "note": "no α-H needed; half gives the alcohol"
+    },
+    {
+      "from": "aldehyde",
+      "to": "alcohol-2",
+      "reagents": "1. RMgX; 2. H₃O⁺",
+      "conditions": "dry ether",
+      "name": "Grignard addition",
+      "page": "reactions/grignard-reagent",
+      "note": "any aldehyde except HCHO"
+    },
+    {
+      "from": "aldehyde",
+      "to": "carboxylic-acid",
+      "reagents": "conc. NaOH or KOH",
+      "conditions": "warm",
+      "name": "Cannizzaro reaction",
+      "page": "reactions/cannizzaro-reaction",
+      "note": "no α-H; half gives the carboxylate salt"
+    },
+    {
+      "from": "aldehyde",
+      "to": "carboxylic-acid",
+      "reagents": "K₂Cr₂O₇/H₂SO₄",
+      "name": "Dichromate oxidation",
+      "page": "reagents/potassium-dichromate",
+      "note": "ketones are not oxidised"
+    },
+    {
+      "from": "aldehyde",
+      "to": "carboxylic-acid",
+      "reagents": "Tollens' reagent, [Ag(NH₃)₂]⁺OH⁻",
+      "conditions": "warm",
+      "name": "Tollens' test (silver mirror)",
+      "page": "tests/tollens-test",
+      "note": "gives the carboxylate and Ag"
+    },
+    {
+      "from": "aldehyde",
+      "to": "carboxylic-acid",
+      "reagents": "Fehling's solution",
+      "conditions": "boiling water bath",
+      "name": "Fehling's test",
+      "page": "tests/fehling-test",
+      "note": "gives the carboxylate and red Cu₂O"
+    },
+    {
+      "from": "aldehyde",
+      "to": "alkane",
+      "reagents": "Zn-Hg, conc. HCl",
+      "conditions": "reflux",
+      "name": "Clemmensen reduction",
+      "page": "reactions/clemmensen-reduction",
+      "note": "acid-stable substrates"
+    },
+    {
+      "from": "aldehyde",
+      "to": "alkane",
+      "reagents": "NH₂NH₂, KOH, ethylene glycol",
+      "conditions": "about 200 °C",
+      "name": "Wolff–Kishner reduction",
+      "page": "mechanisms/reduction-reactions",
+      "note": "base-stable substrates"
+    },
+    {
+      "from": "aldehyde",
+      "to": "beta-hydroxy-carbonyl",
+      "reagents": "dil. NaOH",
+      "conditions": "cold",
+      "name": "Aldol addition",
+      "page": "reactions/aldol-condensation",
+      "note": "needs an α-H"
+    },
+    {
+      "from": "aldehyde",
+      "to": "beta-hydroxy-carbonyl",
+      "reagents": "BrCH₂COOC₂H₅, Zn; then H₃O⁺",
+      "conditions": "dry ether, benzene or THF",
+      "name": "Reformatsky reaction",
+      "page": "reactions/reformatsky-reaction",
+      "note": "gives a β-hydroxy ester"
+    },
+    {
+      "from": "aldehyde",
+      "to": "alpha-beta-unsaturated-carbonyl",
+      "reagents": "dil. NaOH",
+      "conditions": "warm (Δ)",
+      "name": "Aldol condensation",
+      "page": "reactions/aldol-condensation",
+      "note": "aldol, then loss of H₂O"
+    },
+    {
+      "from": "aldehyde",
+      "to": "alpha-beta-unsaturated-carbonyl",
+      "reagents": "CH₂(COOC₂H₅)₂, piperidine",
+      "conditions": "mild base, warm",
+      "name": "Knoevenagel condensation",
+      "page": "reactions/knoevenagel-condensation",
+      "note": "gives RCH=C(COOEt)₂"
+    },
+    {
+      "from": "aldehyde",
+      "to": "ester",
+      "reagents": "Al(OC₂H₅)₃ (catalytic)",
+      "conditions": "anhydrous",
+      "name": "Tishchenko reaction",
+      "page": "reactions/tishchenko-reaction",
+      "note": "2 RCHO give RCOOCH₂R"
+    },
+    {
+      "from": "aldehyde",
+      "to": "amine-1",
+      "reagents": "NH₃, H₂/Ni",
+      "name": "Reductive amination",
+      "page": "reactions/reductive-amination",
+      "note": "via the imine"
+    },
+    {
+      "from": "aldehyde",
+      "to": "alkene",
+      "reagents": "Ph₃P=CHR′ (phosphorus ylide)",
+      "conditions": "THF or ether",
+      "name": "Wittig reaction",
+      "page": "reactions/wittig-reaction",
+      "note": "C=O replaced by C=C"
+    },
+    {
+      "from": "aldehyde",
+      "to": "oxime",
+      "reagents": "NH₂OH",
+      "conditions": "weakly acidic, about pH 4–5",
+      "name": "Oxime formation",
+      "page": "mechanisms/nucleophilic-addition",
+      "note": "addition–elimination"
+    },
+    {
+      "from": "aldehyde",
+      "to": "gem-dihalide",
+      "reagents": "PCl₅",
+      "name": "Reaction with PCl₅",
+      "page": "mechanisms/reactions-of-carboxylic-acids",
+      "note": "C=O becomes CCl₂"
+    },
+    {
+      "from": "ketone",
+      "to": "alcohol-2",
+      "reagents": "NaBH₄",
+      "conditions": "CH₃OH or C₂H₅OH",
+      "name": "Borohydride reduction",
+      "page": "reagents/sodium-borohydride"
+    },
+    {
+      "from": "ketone",
+      "to": "alcohol-2",
+      "reagents": "1. LiAlH₄, dry ether; 2. H₃O⁺",
+      "name": "LiAlH₄ reduction",
+      "page": "reagents/lithium-aluminium-hydride"
+    },
+    {
+      "from": "ketone",
+      "to": "alcohol-2",
+      "reagents": "Al(O-iPr)₃, propan-2-ol",
+      "conditions": "heat; acetone distilled off",
+      "name": "Meerwein–Ponndorf–Verley reduction",
+      "page": "reactions/meerwein-ponndorf-verley-reduction",
+      "note": "C=C left untouched"
+    },
+    {
+      "from": "ketone",
+      "to": "alcohol-3",
+      "reagents": "1. RMgX; 2. H₃O⁺",
+      "conditions": "dry ether",
+      "name": "Grignard addition",
+      "page": "reactions/grignard-reagent"
+    },
+    {
+      "from": "ketone",
+      "to": "alkane",
+      "reagents": "Zn-Hg, conc. HCl",
+      "conditions": "reflux",
+      "name": "Clemmensen reduction",
+      "page": "reactions/clemmensen-reduction",
+      "note": "acid-stable substrates"
+    },
+    {
+      "from": "ketone",
+      "to": "alkane",
+      "reagents": "NH₂NH₂, then KOH, ethylene glycol",
+      "conditions": "about 453–473 K",
+      "name": "Wolff–Kishner reduction",
+      "page": "reactions/wolff-kishner-reduction",
+      "note": "base-stable substrates"
+    },
+    {
+      "from": "ketone",
+      "to": "alkane",
+      "reagents": "1. HSCH₂CH₂SH, H⁺; 2. Raney Ni",
+      "name": "Mozingo reduction",
+      "page": "reactions/mozingo-reduction",
+      "note": "nearly neutral conditions"
+    },
+    {
+      "from": "ketone",
+      "to": "alkylbenzene",
+      "reagents": "Zn-Hg, conc. HCl",
+      "conditions": "reflux",
+      "name": "Clemmensen reduction",
+      "page": "reactions/clemmensen-reduction",
+      "note": "aryl ketone; acetophenone gives ethylbenzene"
+    },
+    {
+      "from": "ketone",
+      "to": "ester",
+      "reagents": "Peroxy acid (mCPBA)",
+      "conditions": "CH₂Cl₂, room temperature",
+      "name": "Baeyer–Villiger oxidation",
+      "page": "reactions/baeyer-villiger-oxidation",
+      "note": "O inserted next to C=O; cyclic ketones give lactones"
+    },
+    {
+      "from": "ketone",
+      "to": "carboxylic-acid",
+      "reagents": "X₂ + NaOH (NaOX), then acidify",
+      "conditions": "cold or gently warmed",
+      "name": "Haloform reaction",
+      "page": "reactions/haloform-reaction",
+      "note": "methyl ketones only; 1 C lost as CHX₃"
+    },
+    {
+      "from": "ketone",
+      "to": "diol",
+      "reagents": "1. Mg/Hg; 2. H₂O",
+      "name": "Pinacol coupling",
+      "page": "reactions/pinacol-coupling",
+      "note": "two ketones joined"
+    },
+    {
+      "from": "ketone",
+      "to": "beta-hydroxy-carbonyl",
+      "reagents": "Ba(OH)₂",
+      "name": "Aldol addition",
+      "page": "reactions/aldol-condensation",
+      "note": "acetone gives diacetone alcohol"
+    },
+    {
+      "from": "ketone",
+      "to": "alpha-beta-unsaturated-carbonyl",
+      "reagents": "Ba(OH)₂, then Δ (−H₂O)",
+      "name": "Aldol condensation",
+      "page": "reactions/aldol-condensation",
+      "note": "acetone gives mesityl oxide"
+    },
+    {
+      "from": "ketone",
+      "to": "alpha-beta-unsaturated-carbonyl",
+      "reagents": "ArCHO, dil. NaOH",
+      "conditions": "room temperature, then warm",
+      "name": "Cross aldol (Claisen–Schmidt) condensation",
+      "page": "reactions/cross-aldol-condensation",
+      "note": "acetophenone + benzaldehyde gives chalcone"
+    },
+    {
+      "from": "ketone",
+      "to": "amine-1",
+      "reagents": "NH₃, H₂/Ni",
+      "name": "Reductive amination",
+      "page": "reactions/reductive-amination",
+      "note": "via the imine"
+    },
+    {
+      "from": "ketone",
+      "to": "amine-2",
+      "reagents": "R′NH₂, NaBH₃CN",
+      "conditions": "pH about 6–7",
+      "name": "Reductive amination",
+      "page": "reactions/reductive-amination",
+      "note": "1° amine gives a 2° amine"
+    },
+    {
+      "from": "ketone",
+      "to": "alkene",
+      "reagents": "Ph₃P=CHR′ (phosphorus ylide)",
+      "conditions": "THF or ether",
+      "name": "Wittig reaction",
+      "page": "reactions/wittig-reaction",
+      "note": "C=O replaced by C=C"
+    },
+    {
+      "from": "ketone",
+      "to": "oxime",
+      "reagents": "NH₂OH",
+      "conditions": "weakly acidic, about pH 4–5",
+      "name": "Oxime formation",
+      "page": "mechanisms/nucleophilic-addition",
+      "note": "addition–elimination"
+    },
+    {
+      "from": "ketone",
+      "to": "amide",
+      "reagents": "HN₃, H₂SO₄",
+      "name": "Schmidt reaction (ketone)",
+      "page": "reactions/schmidt-reaction",
+      "note": "benzophenone gives benzanilide"
+    },
+    {
+      "from": "ketone",
+      "to": "epoxide",
+      "reagents": "CH₂=S(CH₃)₂ (sulphur ylide)",
+      "name": "Corey–Chaykovsky reaction",
+      "page": "mechanisms/carbenes"
+    },
+    {
+      "from": "ketone",
+      "to": "gem-dihalide",
+      "reagents": "PCl₅",
+      "name": "Reaction with PCl₅",
+      "page": "mechanisms/reactions-of-carboxylic-acids",
+      "note": "C=O becomes CCl₂"
+    },
+    {
+      "from": "oxime",
+      "to": "amine-1",
+      "reagents": "Na/C₂H₅OH, H₂/Ni or LiAlH₄",
+      "name": "Reduction of oximes",
+      "page": "reactions/reductive-amination"
+    },
+    {
+      "from": "oxime",
+      "to": "amide",
+      "reagents": "H⁺ (conc. H₂SO₄) or PCl₅",
+      "conditions": "heat",
+      "name": "Beckmann rearrangement",
+      "page": "reactions/beckmann-rearrangement",
+      "note": "group anti to the OH migrates"
+    },
+    {
+      "from": "carboxylic-acid",
+      "to": "acid-chloride",
+      "reagents": "PCl₅, PCl₃ or SOCl₂",
+      "name": "Acid chloride formation",
+      "page": "mechanisms/reactions-of-carboxylic-acids"
+    },
+    {
+      "from": "carboxylic-acid",
+      "to": "acid-anhydride",
+      "reagents": "P₂O₅ (or heat with mineral acid)",
+      "name": "Dehydration to the anhydride",
+      "page": "mechanisms/reactions-of-carboxylic-acids",
+      "note": "two molecules of acid"
+    },
+    {
+      "from": "carboxylic-acid",
+      "to": "ester",
+      "reagents": "R′OH, conc. H₂SO₄",
+      "name": "Esterification",
+      "page": "mechanisms/reactions-of-carboxylic-acids"
+    },
+    {
+      "from": "carboxylic-acid",
+      "to": "amide",
+      "reagents": "NH₃, then strong heat",
+      "name": "Amide formation",
+      "page": "mechanisms/reactions-of-carboxylic-acids"
+    },
+    {
+      "from": "carboxylic-acid",
+      "to": "alcohol-1",
+      "reagents": "LiAlH₄ or B₂H₆",
+      "name": "Reduction",
+      "page": "mechanisms/reactions-of-carboxylic-acids",
+      "note": "NaBH₄ does not reduce acids"
+    },
+    {
+      "from": "carboxylic-acid",
+      "to": "alkane",
+      "reagents": "NaOH, then soda lime (NaOH + CaO)",
+      "conditions": "strong heating",
+      "name": "Decarboxylation",
+      "page": "reactions/decarboxylation",
+      "note": "1 C lost"
+    },
+    {
+      "from": "carboxylic-acid",
+      "to": "alkane",
+      "reagents": "Electrolysis of the aqueous Na or K salt",
+      "name": "Kolbe electrolysis",
+      "page": "reactions/kolbe-electrolysis",
+      "note": "R–R; the alkyl group is doubled"
+    },
+    {
+      "from": "carboxylic-acid",
+      "to": "alpha-halo-acid",
+      "reagents": "X₂, red P; then H₂O",
+      "conditions": "warm",
+      "name": "Hell–Volhard–Zelinsky reaction",
+      "page": "reactions/hell-volhard-zelinsky-reaction",
+      "note": "needs an α-H"
+    },
+    {
+      "from": "carboxylic-acid",
+      "to": "alkyl-halide",
+      "reagents": "Silver salt, then Br₂ in CCl₄",
+      "conditions": "reflux",
+      "name": "Hunsdiecker reaction",
+      "page": "reactions/hunsdiecker-reaction",
+      "note": "1 C lost"
+    },
+    {
+      "from": "carboxylic-acid",
+      "to": "amine-1",
+      "reagents": "HN₃, conc. H₂SO₄",
+      "conditions": "warm",
+      "name": "Schmidt reaction",
+      "page": "reactions/schmidt-reaction",
+      "note": "1 C lost"
+    },
+    {
+      "from": "carboxylic-acid",
+      "to": "ketone",
+      "reagents": "2 R′Li, then H₃O⁺",
+      "name": "Organolithium addition",
+      "page": "preparation/preparation-of-aldehydes-and-ketones",
+      "note": "via the gem-diol"
+    },
+    {
+      "from": "carboxylic-acid",
+      "to": "ketone",
+      "reagents": "Calcium salt, dry distillation",
+      "conditions": "heat",
+      "name": "Dry distillation of calcium salts",
+      "page": "preparation/preparation-of-aldehydes-and-ketones",
+      "note": "symmetrical ketone + CaCO₃"
+    },
+    {
+      "from": "carboxylic-acid",
+      "to": "aldehyde",
+      "reagents": "Calcium salt with calcium formate, dry distillation",
+      "conditions": "heat",
+      "name": "Dry distillation with calcium formate",
+      "page": "preparation/preparation-of-aldehydes-and-ketones",
+      "note": "exam-answer method"
+    },
+    {
+      "from": "acid-chloride",
+      "to": "aldehyde",
+      "reagents": "H₂, Pd/BaSO₄ (Rosenmund catalyst)",
+      "conditions": "anhydrous solvent",
+      "name": "Rosenmund reduction",
+      "page": "reactions/rosenmund-reduction",
+      "note": "poisoned catalyst stops at the aldehyde"
+    },
+    {
+      "from": "acid-chloride",
+      "to": "benzaldehyde",
+      "reagents": "H₂, Pd/BaSO₄ (Rosenmund catalyst)",
+      "conditions": "anhydrous solvent",
+      "name": "Rosenmund reduction",
+      "page": "reactions/rosenmund-reduction",
+      "note": "benzoyl chloride"
+    },
+    {
+      "from": "acid-chloride",
+      "to": "ketone",
+      "reagents": "R′₂Cd (or R′₂CuLi)",
+      "name": "Dialkylcadmium reaction",
+      "page": "preparation/preparation-of-aldehydes-and-ketones",
+      "note": "stops at the ketone; RMgX would give a 3° alcohol"
+    },
+    {
+      "from": "acid-chloride",
+      "to": "ketone",
+      "reagents": "C₆H₆, anhyd. AlCl₃",
+      "conditions": "anhydrous, warm",
+      "name": "Friedel–Crafts acylation",
+      "page": "reactions/friedel-crafts-acylation",
+      "note": "gives an aryl ketone"
+    },
+    {
+      "from": "acid-chloride",
+      "to": "alcohol-1",
+      "reagents": "LiAlH₄",
+      "conditions": "dry ether",
+      "name": "LiAlH₄ reduction",
+      "page": "reagents/lithium-aluminium-hydride",
+      "note": "the aldehyde formed first is reduced again"
+    },
+    {
+      "from": "acid-chloride",
+      "to": "amide",
+      "reagents": "Amine (R′NH₂), aq. NaOH or pyridine",
+      "conditions": "room temperature",
+      "name": "Schotten–Baumann reaction",
+      "page": "reactions/schotten-baumann-reaction",
+      "note": "base removes the HCl"
+    },
+    {
+      "from": "acid-chloride",
+      "to": "ester",
+      "reagents": "Alcohol (R′OH), aq. NaOH",
+      "conditions": "room temperature",
+      "name": "Schotten–Baumann reaction",
+      "page": "reactions/schotten-baumann-reaction"
+    },
+    {
+      "from": "acid-chloride",
+      "to": "phenyl-ester",
+      "reagents": "Phenol, aq. NaOH",
+      "conditions": "room temperature",
+      "name": "Schotten–Baumann reaction",
+      "page": "reactions/schotten-baumann-reaction",
+      "note": "benzoyl chloride gives phenyl benzoate"
+    },
+    {
+      "from": "acid-chloride",
+      "to": "carboxylic-acid",
+      "reagents": "H₂O",
+      "name": "Hydrolysis",
+      "page": "reactions/rosenmund-reduction",
+      "note": "why acyl chloride reactions are kept dry"
+    },
+    {
+      "from": "acid-chloride",
+      "to": "amine-1",
+      "reagents": "1. NaN₃; 2. heat; 3. H₂O",
+      "conditions": "inert solvent",
+      "name": "Curtius rearrangement",
+      "page": "reactions/curtius-rearrangement",
+      "note": "1 C lost, via the isocyanate"
+    },
+    {
+      "from": "acid-chloride",
+      "to": "carboxylic-acid",
+      "reagents": "1. CH₂N₂ (excess); 2. Ag₂O, H₂O, heat or light",
+      "conditions": "dry ether",
+      "name": "Arndt–Eistert synthesis",
+      "page": "reactions/arndt-eistert-synthesis",
+      "note": "1 C added (R–COCl gives R–CH₂–COOH)"
+    },
+    {
+      "from": "acid-anhydride",
+      "to": "alcohol-1",
+      "reagents": "LiAlH₄",
+      "conditions": "dry ether",
+      "name": "LiAlH₄ reduction",
+      "page": "reagents/lithium-aluminium-hydride",
+      "note": "gives 2 R–CH₂OH"
+    },
+    {
+      "from": "acid-anhydride",
+      "to": "amide",
+      "reagents": "Amine (R′NH₂), pyridine",
+      "name": "Acetylation of amines",
+      "page": "reactions/schotten-baumann-reaction",
+      "note": "(CH₃CO)₂O introduces CH₃CO–"
+    },
+    {
+      "from": "acid-anhydride",
+      "to": "phenyl-ester",
+      "reagents": "Phenol (acid or base catalyst)",
+      "name": "Esterification of phenol",
+      "page": "mechanisms/reactions-of-phenols"
+    },
+    {
+      "from": "ester",
+      "to": "carboxylic-acid",
+      "reagents": "Dilute acid (H₃O⁺), excess water",
+      "conditions": "reflux",
+      "name": "Acid hydrolysis",
+      "page": "reactions/ester-hydrolysis",
+      "note": "reversible"
+    },
+    {
+      "from": "ester",
+      "to": "carboxylic-acid",
+      "reagents": "NaOH or KOH (one equivalent)",
+      "conditions": "reflux",
+      "name": "Saponification",
+      "page": "reactions/ester-hydrolysis",
+      "note": "gives the carboxylate; goes to completion"
+    },
+    {
+      "from": "ester",
+      "to": "alcohol-1",
+      "reagents": "1. LiAlH₄, ether; 2. H₃O⁺",
+      "name": "LiAlH₄ reduction",
+      "page": "reagents/lithium-aluminium-hydride",
+      "note": "also releases R′OH"
+    },
+    {
+      "from": "ester",
+      "to": "alcohol-1",
+      "reagents": "Na, absolute C₂H₅OH",
+      "conditions": "strictly anhydrous",
+      "name": "Bouveault–Blanc reduction",
+      "page": "reactions/bouveault-blanc-reduction",
+      "note": "also releases R′OH"
+    },
+    {
+      "from": "ester",
+      "to": "aldehyde",
+      "reagents": "1. DIBAL-H (1 equiv.), toluene; 2. H₃O⁺",
+      "conditions": "−78 °C",
+      "name": "DIBAL-H reduction",
+      "page": "reagents/dibal-h",
+      "note": "stops at the aldehyde"
+    },
+    {
+      "from": "ester",
+      "to": "amide",
+      "reagents": "Amine (R′NH₂)",
+      "name": "Aminolysis of an ester",
+      "page": "reactions/schotten-baumann-reaction",
+      "note": "slower than with acid chlorides"
+    },
+    {
+      "from": "ester",
+      "to": "beta-keto-ester",
+      "reagents": "1. C₂H₅ONa; 2. H₃O⁺",
+      "conditions": "one full equivalent of base",
+      "name": "Claisen condensation",
+      "page": "reactions/claisen-condensation",
+      "note": "needs two α-H; diesters cyclise (Dieckmann)"
+    },
+    {
+      "from": "beta-keto-ester",
+      "to": "ketone",
+      "reagents": "H₃O⁺, then heat",
+      "name": "Hydrolysis and decarboxylation",
+      "page": "reactions/claisen-condensation",
+      "note": "CO₂ lost from the β-keto acid"
+    },
+    {
+      "from": "amide",
+      "to": "amine-1",
+      "reagents": "Br₂, NaOH",
+      "conditions": "warm",
+      "name": "Hofmann bromamide degradation",
+      "page": "reactions/hofmann-bromamide-degradation",
+      "note": "1 C lost"
+    },
+    {
+      "from": "amide",
+      "to": "amine-1",
+      "reagents": "1. LiAlH₄; 2. H₂O",
+      "conditions": "dry ether",
+      "name": "Reduction of amides",
+      "page": "reagents/lithium-aluminium-hydride",
+      "note": "C=O becomes CH₂; same C count"
+    },
+    {
+      "from": "amide",
+      "to": "amine-2",
+      "reagents": "1. LiAlH₄; 2. H₂O",
+      "conditions": "dry ether",
+      "name": "Reduction of N-substituted amides",
+      "page": "preparation/preparation-of-amines",
+      "note": "N-substituted amide"
+    },
+    {
+      "from": "amide",
+      "to": "aniline",
+      "reagents": "Br₂, NaOH",
+      "conditions": "warm",
+      "name": "Hofmann bromamide degradation",
+      "page": "reactions/hofmann-bromamide-degradation",
+      "note": "benzamide gives aniline"
+    },
+    {
+      "from": "amide",
+      "to": "aniline",
+      "reagents": "H₃O⁺",
+      "name": "Hydrolysis of acetanilide",
+      "page": "mechanisms/reactions-of-amines",
+      "note": "removes the protecting acetyl group"
+    },
+    {
+      "from": "nitrile",
+      "to": "amine-1",
+      "reagents": "1. LiAlH₄, ether; 2. H₂O",
+      "name": "LiAlH₄ reduction",
+      "page": "reagents/lithium-aluminium-hydride",
+      "note": "R–CN gives R–CH₂NH₂"
+    },
+    {
+      "from": "nitrile",
+      "to": "amine-1",
+      "reagents": "H₂, Ni (or Pd)",
+      "name": "Catalytic hydrogenation",
+      "page": "reactions/catalytic-hydrogenation"
+    },
+    {
+      "from": "nitrile",
+      "to": "amine-1",
+      "reagents": "Na, C₂H₅OH",
+      "name": "Mendius reduction",
+      "page": "reactions/mendius-reduction"
+    },
+    {
+      "from": "nitrile",
+      "to": "aldehyde",
+      "reagents": "1. SnCl₂, HCl; 2. H₃O⁺",
+      "name": "Stephen reduction",
+      "page": "reactions/stephen-reduction",
+      "note": "via the imine salt"
+    },
+    {
+      "from": "nitrile",
+      "to": "aldehyde",
+      "reagents": "1. DIBAL-H; 2. H₃O⁺",
+      "conditions": "low temperature",
+      "name": "DIBAL-H reduction",
+      "page": "reagents/dibal-h"
+    },
+    {
+      "from": "nitrile",
+      "to": "benzaldehyde",
+      "reagents": "1. SnCl₂, HCl; 2. H₃O⁺",
+      "name": "Stephen reduction",
+      "page": "reactions/stephen-reduction",
+      "note": "benzonitrile"
+    },
+    {
+      "from": "nitrile",
+      "to": "ketone",
+      "reagents": "1. RMgX; 2. H₃O⁺",
+      "conditions": "dry ether",
+      "name": "Grignard addition to a nitrile",
+      "page": "reactions/grignard-reagent",
+      "note": "via the imine salt"
+    },
+    {
+      "from": "nitrile",
+      "to": "amide",
+      "reagents": "H₂O (partial hydrolysis)",
+      "name": "Partial hydrolysis",
+      "page": "mechanisms/nucleophilic-addition"
+    },
+    {
+      "from": "nitrile",
+      "to": "carboxylic-acid",
+      "reagents": "H₂O, H⁺ (H₃O⁺)",
+      "name": "Hydrolysis",
+      "page": "mechanisms/nucleophilic-addition",
+      "note": "via the amide; NH₃ released"
+    },
+    {
+      "from": "isocyanide",
+      "to": "amine-1",
+      "reagents": "Dilute aqueous acid (H₃O⁺)",
+      "name": "Acid hydrolysis",
+      "page": "mechanisms/nucleophilic-addition",
+      "note": "carbon lost as HCOOH; stable to base"
+    },
+    {
+      "from": "isocyanide",
+      "to": "amine-2",
+      "reagents": "LiAlH₄",
+      "conditions": "dry ether",
+      "name": "LiAlH₄ reduction",
+      "page": "reagents/lithium-aluminium-hydride",
+      "note": "gives R–NH–CH₃"
+    },
+    {
+      "from": "isocyanide",
+      "to": "nitrile",
+      "reagents": "Heat",
+      "name": "Isomerisation",
+      "page": "mechanisms/reactions-of-amines",
+      "note": "rearranges to the more stable nitrile"
+    },
+    {
+      "from": "nitroalkane",
+      "to": "amine-1",
+      "reagents": "H₂ with Ni, Pd or Pt; or Sn/HCl, Fe/HCl",
+      "name": "Reduction of nitro compounds",
+      "page": "preparation/preparation-of-amines"
+    },
+    {
+      "from": "nitroalkane",
+      "to": "amine-1",
+      "reagents": "LiAlH₄",
+      "conditions": "dry ether",
+      "name": "LiAlH₄ reduction",
+      "page": "reagents/lithium-aluminium-hydride",
+      "note": "nitroarenes give azo compounds instead"
+    },
+    {
+      "from": "amine-1",
+      "to": "alcohol-1",
+      "reagents": "NaNO₂ + HCl (HNO₂)",
+      "conditions": "273–278 K",
+      "name": "Reaction with nitrous acid",
+      "page": "tests/nitrous-acid-test-for-amines",
+      "note": "aliphatic 1° amines; N₂ evolved"
+    },
+    {
+      "from": "amine-1",
+      "to": "amine-2",
+      "reagents": "R–X",
+      "name": "Alkylation of amines",
+      "page": "reactions/ammonolysis-of-alkyl-halides",
+      "note": "goes on to 3° amine and quaternary salt"
+    },
+    {
+      "from": "amine-1",
+      "to": "amide",
+      "reagents": "R′COCl or (R′CO)₂O, pyridine (or aq. NaOH)",
+      "name": "Acylation (Schotten–Baumann)",
+      "page": "reactions/schotten-baumann-reaction",
+      "note": "N-substituted amide"
+    },
+    {
+      "from": "amine-1",
+      "to": "isocyanide",
+      "reagents": "CHCl₃, alc. KOH",
+      "conditions": "heat",
+      "name": "Carbylamine reaction",
+      "page": "reactions/carbylamine-reaction",
+      "note": "foul smell; test for 1° amines"
+    },
+    {
+      "from": "amine-1",
+      "to": "alkene",
+      "reagents": "Excess CH₃I, then moist Ag₂O",
+      "conditions": "heat",
+      "name": "Hofmann elimination",
+      "page": "reactions/hofmann-elimination",
+      "note": "least substituted (Hofmann) alkene"
+    },
+    {
+      "from": "amine-2",
+      "to": "amine-3",
+      "reagents": "R–X",
+      "name": "Alkylation of amines",
+      "page": "reactions/ammonolysis-of-alkyl-halides",
+      "note": "goes on to the quaternary salt"
+    },
+    {
+      "from": "amine-2",
+      "to": "amide",
+      "reagents": "RCOCl, pyridine",
+      "name": "Acylation (Schotten–Baumann)",
+      "page": "mechanisms/reactions-of-amines",
+      "note": "N,N-disubstituted amide"
+    },
+    {
+      "from": "amine-3",
+      "to": "alkene",
+      "reagents": "H₂O₂ or mCPBA (N-oxide), then heat",
+      "conditions": "no external base",
+      "name": "Cope elimination",
+      "page": "reactions/cope-elimination",
+      "note": "syn elimination; Hofmann alkene"
+    },
+    {
+      "from": "amine-3",
+      "to": "alkene",
+      "reagents": "CH₃I, then moist Ag₂O",
+      "conditions": "heat",
+      "name": "Hofmann elimination",
+      "page": "reactions/hofmann-elimination",
+      "note": "via the quaternary ammonium hydroxide"
+    },
+    {
+      "from": "aniline",
+      "to": "diazonium-salt",
+      "reagents": "NaNO₂ + HCl",
+      "conditions": "273–278 K (0–5 °C)",
+      "name": "Diazotization",
+      "page": "reactions/diazotization-reaction",
+      "note": "use the cold solution at once"
+    },
+    {
+      "from": "aniline",
+      "to": "isocyanide",
+      "reagents": "CHCl₃, alc. KOH",
+      "conditions": "heat",
+      "name": "Carbylamine reaction",
+      "page": "reactions/carbylamine-reaction",
+      "note": "gives phenyl isocyanide"
+    },
+    {
+      "from": "aniline",
+      "to": "amide",
+      "reagents": "(CH₃CO)₂O",
+      "name": "Acetylation",
+      "page": "mechanisms/reactions-of-amines",
+      "note": "gives acetanilide; protects –NH₂"
+    },
+    {
+      "from": "aniline",
+      "to": "amide",
+      "reagents": "C₆H₅COCl, aq. NaOH",
+      "conditions": "room temperature",
+      "name": "Benzoylation (Schotten–Baumann)",
+      "page": "reactions/schotten-baumann-reaction",
+      "note": "gives benzanilide"
+    },
+    {
+      "from": "aniline",
+      "to": "nitrobenzene",
+      "reagents": "Peroxy acid (CF₃CO₃H) or neutral KMnO₄",
+      "name": "Oxidation of aniline",
+      "page": "mechanisms/reactions-of-amines"
+    },
+    {
+      "from": "aniline",
+      "to": "azo-dye",
+      "reagents": "Alkaline KMnO₄",
+      "name": "Oxidation of aniline",
+      "page": "mechanisms/reactions-of-amines",
+      "note": "gives azobenzene"
+    },
+    {
+      "from": "nitrobenzene",
+      "to": "aniline",
+      "reagents": "Sn/HCl or Fe/HCl, then NaOH",
+      "conditions": "warm",
+      "name": "Reduction in acid",
+      "page": "reactions/reduction-of-nitrobenzene",
+      "note": "NaOH frees the amine from its salt"
+    },
+    {
+      "from": "nitrobenzene",
+      "to": "aniline",
+      "reagents": "H₂ with Ni, Pd or Pt",
+      "name": "Catalytic hydrogenation",
+      "page": "preparation/preparation-of-amines"
+    },
+    {
+      "from": "nitrobenzene",
+      "to": "aniline",
+      "reagents": "Na₂S/NaSH or (NH₄)₂S",
+      "conditions": "aqueous or aqueous-alcoholic",
+      "name": "Zinin reduction",
+      "page": "reactions/zinin-reduction",
+      "note": "reduces only one NO₂ of a dinitroarene"
+    },
+    {
+      "from": "nitrobenzene",
+      "to": "azo-dye",
+      "reagents": "LiAlH₄",
+      "name": "LiAlH₄ reduction",
+      "page": "reactions/reduction-of-nitrobenzene",
+      "note": "gives azobenzene, not aniline"
+    },
+    {
+      "from": "benzene",
+      "to": "nitrobenzene",
+      "reagents": "conc. HNO₃ + conc. H₂SO₄",
+      "name": "Nitration",
+      "page": "mechanisms/electrophilic-aromatic-substitution",
+      "note": "NO₂⁺ electrophile"
+    },
+    {
+      "from": "benzene",
+      "to": "haloarene",
+      "reagents": "X₂ with FeX₃ or AlCl₃",
+      "name": "Halogenation",
+      "page": "mechanisms/electrophilic-aromatic-substitution",
+      "note": "Cl or Br"
+    },
+    {
+      "from": "benzene",
+      "to": "alkylbenzene",
+      "reagents": "R–X, anhyd. AlCl₃",
+      "conditions": "anhydrous; excess benzene",
+      "name": "Friedel–Crafts alkylation",
+      "page": "reactions/friedel-crafts-alkylation",
+      "note": "carbocation may rearrange; polyalkylation"
+    },
+    {
+      "from": "benzene",
+      "to": "alkylbenzene",
+      "reagents": "Alkene, H⁺",
+      "name": "Friedel–Crafts alkylation with an alkene",
+      "page": "reactions/friedel-crafts-alkylation",
+      "note": "propene gives cumene"
+    },
+    {
+      "from": "benzene",
+      "to": "ketone",
+      "reagents": "RCOCl (or (RCO)₂O), anhyd. AlCl₃",
+      "conditions": "anhydrous; aqueous work-up",
+      "name": "Friedel–Crafts acylation",
+      "page": "reactions/friedel-crafts-acylation",
+      "note": "aryl ketone; stops at one substitution"
+    },
+    {
+      "from": "benzene",
+      "to": "benzaldehyde",
+      "reagents": "CO + HCl, anhyd. AlCl₃/CuCl",
+      "conditions": "anhydrous; CO under pressure",
+      "name": "Gattermann–Koch reaction",
+      "page": "reactions/gattermann-koch-reaction"
+    },
+    {
+      "from": "benzene",
+      "to": "benzaldehyde",
+      "reagents": "1. HCN + HCl, AlCl₃; 2. H₃O⁺",
+      "conditions": "anhydrous first step",
+      "name": "Gattermann aldehyde synthesis",
+      "page": "reactions/gattermann-aldehyde-synthesis"
+    },
+    {
+      "from": "benzene",
+      "to": "phenol",
+      "reagents": "Oleum; then fused NaOH; then H⁺",
+      "name": "Sulphonation, then alkali fusion",
+      "page": "preparation/preparation-of-phenols",
+      "note": "via benzenesulphonic acid"
+    },
+    {
+      "from": "benzene",
+      "to": "alkane",
+      "reagents": "H₂, Ni",
+      "conditions": "high pressure and temperature",
+      "name": "Catalytic hydrogenation",
+      "page": "reactions/catalytic-hydrogenation",
+      "note": "gives cyclohexane"
+    },
+    {
+      "from": "benzene",
+      "to": "alkene",
+      "reagents": "Na, liq. NH₃, C₂H₅OH",
+      "conditions": "about −33 °C",
+      "name": "Birch reduction",
+      "page": "reactions/birch-reduction",
+      "note": "gives cyclohexa-1,4-diene"
+    },
+    {
+      "from": "alkylbenzene",
+      "to": "benzoic-acid",
+      "reagents": "KMnO₄",
+      "conditions": "hot, acidic or alkaline",
+      "name": "Side-chain oxidation",
+      "page": "reagents/potassium-permanganate",
+      "note": "any chain with a benzylic H"
+    },
+    {
+      "from": "alkylbenzene",
+      "to": "benzaldehyde",
+      "reagents": "1. CrO₂Cl₂, CS₂; 2. H₃O⁺",
+      "name": "Étard reaction",
+      "page": "reactions/etard-reaction",
+      "note": "methylarene; stops at the aldehyde"
+    },
+    {
+      "from": "alkylbenzene",
+      "to": "phenol",
+      "reagents": "O₂ (air), then dilute acid",
+      "name": "Cumene process",
+      "page": "reactions/cumene-process",
+      "note": "cumene; acetone is the co-product"
+    },
+    {
+      "from": "alkylbenzene",
+      "to": "gem-dihalide",
+      "reagents": "Cl₂ (side-chain chlorination)",
+      "name": "Side-chain chlorination",
+      "page": "preparation/preparation-of-aldehydes-and-ketones",
+      "note": "toluene gives benzal chloride"
+    },
+    {
+      "from": "haloarene",
+      "to": "phenol",
+      "reagents": "NaOH, then H⁺",
+      "conditions": "623 K, 320 atm",
+      "name": "Dow process",
+      "page": "preparation/preparation-of-phenols",
+      "note": "aq. NaOH at room temperature does not work"
+    },
+    {
+      "from": "haloarene",
+      "to": "aniline",
+      "reagents": "NaNH₂, liq. NH₃",
+      "conditions": "about 240 K",
+      "name": "Benzyne mechanism",
+      "page": "reactions/benzyne-mechanism",
+      "note": "needs an ortho H"
+    },
+    {
+      "from": "haloarene",
+      "to": "alkylbenzene",
+      "reagents": "R–X, Na",
+      "conditions": "dry ether",
+      "name": "Wurtz–Fittig reaction",
+      "page": "reactions/wurtz-fittig-reaction",
+      "note": "R–R and Ar–Ar side products"
+    },
+    {
+      "from": "haloarene",
+      "to": "grignard-reagent",
+      "reagents": "Mg",
+      "conditions": "dry ether",
+      "name": "Grignard reagent formation",
+      "page": "reactions/grignard-reagent",
+      "note": "C₆H₅Br gives C₆H₅MgBr"
+    },
+    {
+      "from": "phenol",
+      "to": "benzene",
+      "reagents": "Zn dust",
+      "conditions": "heat",
+      "name": "Reduction with zinc dust",
+      "page": "mechanisms/reactions-of-phenols"
+    },
+    {
+      "from": "phenol",
+      "to": "ether",
+      "reagents": "NaOH, then R–X",
+      "name": "Williamson ether synthesis",
+      "page": "reactions/williamson-ether-synthesis",
+      "note": "phenoxide must supply the oxygen"
+    },
+    {
+      "from": "phenol",
+      "to": "phenyl-ester",
+      "reagents": "RCOCl or (RCO)₂O",
+      "conditions": "base or acid",
+      "name": "Esterification of phenol",
+      "page": "mechanisms/reactions-of-phenols"
+    },
+    {
+      "from": "phenol",
+      "to": "salicylic-acid",
+      "reagents": "NaOH; CO₂; then H⁺",
+      "conditions": "about 125 °C, 100 atm",
+      "name": "Kolbe–Schmitt reaction",
+      "page": "reactions/kolbe-schmitt-reaction",
+      "note": "mainly ortho"
+    },
+    {
+      "from": "phenol",
+      "to": "salicylic-acid",
+      "reagents": "CCl₄, aq. NaOH; then H⁺",
+      "name": "Reimer–Tiemann reaction (CCl₄)",
+      "page": "reactions/reimer-tiemann-reaction"
+    },
+    {
+      "from": "phenol",
+      "to": "salicylaldehyde",
+      "reagents": "CHCl₃, aq. NaOH; then H⁺",
+      "conditions": "warm",
+      "name": "Reimer–Tiemann reaction",
+      "page": "reactions/reimer-tiemann-reaction",
+      "note": "dichlorocarbene attacks ortho"
+    },
+    {
+      "from": "phenol",
+      "to": "alcohol-2",
+      "reagents": "H₂, Ni",
+      "conditions": "heat",
+      "name": "Catalytic hydrogenation",
+      "page": "mechanisms/reactions-of-phenols",
+      "note": "gives cyclohexanol"
+    },
+    {
+      "from": "diazonium-salt",
+      "to": "phenol",
+      "reagents": "Warm H₂O",
+      "conditions": "about 283 K",
+      "name": "Hydrolysis",
+      "page": "mechanisms/diazonium-salt-reactions"
+    },
+    {
+      "from": "diazonium-salt",
+      "to": "haloarene",
+      "reagents": "CuCl/HCl or CuBr/HBr",
+      "conditions": "gentle warming",
+      "name": "Sandmeyer reaction",
+      "page": "reactions/sandmeyer-reaction",
+      "note": "Cl or Br"
+    },
+    {
+      "from": "diazonium-salt",
+      "to": "haloarene",
+      "reagents": "Cu powder + HCl or HBr",
+      "conditions": "warm",
+      "name": "Gattermann reaction",
+      "page": "reactions/gattermann-reaction",
+      "note": "Cl or Br"
+    },
+    {
+      "from": "diazonium-salt",
+      "to": "haloarene",
+      "reagents": "KI",
+      "name": "Iodination",
+      "page": "mechanisms/diazonium-salt-reactions",
+      "note": "iodoarene; no copper needed"
+    },
+    {
+      "from": "diazonium-salt",
+      "to": "haloarene",
+      "reagents": "HBF₄, then heat",
+      "name": "Balz–Schiemann reaction",
+      "page": "reactions/balz-schiemann-reaction",
+      "note": "fluoroarene"
+    },
+    {
+      "from": "diazonium-salt",
+      "to": "nitrile",
+      "reagents": "CuCN/KCN",
+      "conditions": "gentle warming",
+      "name": "Sandmeyer reaction (cyanation)",
+      "page": "reactions/sandmeyer-reaction",
+      "note": "gives benzonitrile"
+    },
+    {
+      "from": "diazonium-salt",
+      "to": "benzene",
+      "reagents": "H₃PO₂ (or C₂H₅OH)",
+      "name": "Deamination (reduction)",
+      "page": "mechanisms/diazonium-salt-reactions",
+      "note": "N lost as N₂"
+    },
+    {
+      "from": "diazonium-salt",
+      "to": "azo-dye",
+      "reagents": "Phenol, aq. NaOH",
+      "conditions": "273–278 K",
+      "name": "Diazo coupling",
+      "page": "reactions/diazo-coupling-reaction",
+      "note": "p-hydroxyazobenzene (orange)"
+    },
+    {
+      "from": "diazonium-salt",
+      "to": "azo-dye",
+      "reagents": "Aniline, mildly acidic",
+      "conditions": "about 273 K",
+      "name": "Diazo coupling",
+      "page": "reactions/diazo-coupling-reaction",
+      "note": "p-aminoazobenzene"
+    },
+    {
+      "from": "diazonium-salt",
+      "to": "nitrobenzene",
+      "reagents": "HBF₄; then NaNO₂, Cu",
+      "conditions": "heat",
+      "name": "Nitro replacement",
+      "page": "mechanisms/diazonium-salt-reactions",
+      "note": "via the fluoroborate salt"
+    },
+    {
+      "from": "grignard-reagent",
+      "to": "alkane",
+      "reagents": "H₂O (or any acidic H–A)",
+      "name": "Protonolysis",
+      "page": "reactions/grignard-reagent",
+      "note": "why the reagent must be kept dry"
+    },
+    {
+      "from": "grignard-reagent",
+      "to": "alcohol-1",
+      "reagents": "1. HCHO; 2. H₃O⁺",
+      "conditions": "dry ether",
+      "name": "Grignard addition",
+      "page": "reactions/grignard-reagent",
+      "note": "1 C added"
+    },
+    {
+      "from": "grignard-reagent",
+      "to": "alcohol-2",
+      "reagents": "1. R′CHO; 2. H₃O⁺",
+      "conditions": "dry ether",
+      "name": "Grignard addition",
+      "page": "reactions/grignard-reagent"
+    },
+    {
+      "from": "grignard-reagent",
+      "to": "alcohol-3",
+      "reagents": "1. R′₂C=O; 2. H₃O⁺",
+      "conditions": "dry ether",
+      "name": "Grignard addition",
+      "page": "reactions/grignard-reagent"
+    },
+    {
+      "from": "grignard-reagent",
+      "to": "carboxylic-acid",
+      "reagents": "1. CO₂ (dry ice); 2. H₃O⁺",
+      "name": "Carbonation",
+      "page": "reactions/grignard-reagent",
+      "note": "1 C added"
+    },
+    {
+      "from": "grignard-reagent",
+      "to": "ketone",
+      "reagents": "1. R′C≡N; 2. H₃O⁺",
+      "conditions": "dry ether",
+      "name": "Grignard addition to a nitrile",
+      "page": "reactions/grignard-reagent",
+      "note": "via the imine salt"
+    },
+    {
+      "from": "grignard-reagent",
+      "to": "benzoic-acid",
+      "reagents": "1. CO₂; 2. H₃O⁺",
+      "name": "Carbonation",
+      "page": "reactions/grignard-reagent",
+      "note": "from C₆H₅MgBr"
+    },
+    {
+      "from": "alpha-halo-acid",
+      "to": "amino-acid",
+      "reagents": "Excess NH₃",
+      "name": "Ammonolysis",
+      "page": "reactions/hell-volhard-zelinsky-reaction",
+      "note": "BrCH₂COOH gives glycine"
+    },
+    {
+      "from": "beta-hydroxy-carbonyl",
+      "to": "alpha-beta-unsaturated-carbonyl",
+      "reagents": "OH⁻, heat",
+      "name": "Dehydration (E1cB)",
+      "page": "reactions/e1cb-mechanism",
+      "note": "aldol gives the enal or enone"
+    },
+    {
+      "from": "beta-hydroxy-carbonyl",
+      "to": "alpha-beta-unsaturated-carbonyl",
+      "reagents": "Heat",
+      "name": "Dehydration of a β-hydroxy acid",
+      "page": "concepts/heating-effect-on-carboxylic-acids",
+      "note": "β-hydroxy acid gives the α,β-unsaturated acid"
+    },
+    {
+      "from": "alpha-beta-unsaturated-carbonyl",
+      "to": "ketone",
+      "reagents": "CH₂(COOC₂H₅)₂ (or a β-keto ester), C₂H₅ONa",
+      "conditions": "ethanol; acid work-up",
+      "name": "Michael addition",
+      "page": "reactions/michael-addition",
+      "note": "1,4-addition gives a 1,5-dicarbonyl"
+    },
+    {
+      "from": "alpha-beta-unsaturated-carbonyl",
+      "to": "ketone",
+      "reagents": "1. CH₃MgBr, CuBr; 2. H₃O⁺",
+      "name": "Conjugate (1,4) Grignard addition",
+      "page": "reactions/grignard-reagent",
+      "note": "saturated ketone"
+    },
+    {
+      "from": "alpha-beta-unsaturated-carbonyl",
+      "to": "alcohol-3",
+      "reagents": "1. RMgX; 2. H₃O⁺",
+      "conditions": "no copper",
+      "name": "1,2-Grignard addition",
+      "page": "reactions/grignard-reagent",
+      "note": "enone gives a 3° allylic alcohol"
+    },
+    {
+      "from": "alpha-beta-unsaturated-carbonyl",
+      "to": "alcohol-1",
+      "reagents": "Al(O-iPr)₃, propan-2-ol",
+      "conditions": "heat",
+      "name": "Meerwein–Ponndorf–Verley reduction",
+      "page": "reactions/meerwein-ponndorf-verley-reduction",
+      "note": "enal gives the allylic alcohol; C=C kept"
+    },
+    {
+      "from": "benzaldehyde",
+      "to": "alcohol-1",
+      "reagents": "conc. NaOH or KOH",
+      "name": "Cannizzaro reaction",
+      "page": "reactions/cannizzaro-reaction",
+      "note": "gives benzyl alcohol + benzoate"
+    },
+    {
+      "from": "benzaldehyde",
+      "to": "benzoic-acid",
+      "reagents": "conc. NaOH or KOH",
+      "name": "Cannizzaro reaction",
+      "page": "reactions/cannizzaro-reaction",
+      "note": "as the benzoate salt"
+    },
+    {
+      "from": "benzaldehyde",
+      "to": "alpha-beta-unsaturated-carbonyl",
+      "reagents": "(CH₃CO)₂O, CH₃COONa; then H₃O⁺",
+      "conditions": "heat",
+      "name": "Perkin reaction",
+      "page": "reactions/perkin-reaction",
+      "note": "gives cinnamic acid"
+    },
+    {
+      "from": "benzaldehyde",
+      "to": "alpha-beta-unsaturated-carbonyl",
+      "reagents": "CH₃CHO or CH₃COC₆H₅, dil. NaOH",
+      "name": "Cross aldol (Claisen–Schmidt) condensation",
+      "page": "reactions/cross-aldol-condensation",
+      "note": "cinnamaldehyde or chalcone"
+    },
+    {
+      "from": "benzaldehyde",
+      "to": "alpha-beta-unsaturated-carbonyl",
+      "reagents": "CH₂(COOH)₂, pyridine",
+      "conditions": "reflux",
+      "name": "Knoevenagel (Doebner) condensation",
+      "page": "reactions/knoevenagel-condensation",
+      "note": "cinnamic acid; CO₂ lost"
+    },
+    {
+      "from": "benzaldehyde",
+      "to": "alkene",
+      "reagents": "Ph₃P=CH₂",
+      "conditions": "THF or ether",
+      "name": "Wittig reaction",
+      "page": "reactions/wittig-reaction",
+      "note": "gives styrene"
+    },
+    {
+      "from": "benzaldehyde",
+      "to": "alkylbenzene",
+      "reagents": "1. HSCH₂CH₂SH, H⁺; 2. Raney Ni",
+      "name": "Mozingo reduction",
+      "page": "reactions/mozingo-reduction",
+      "note": "gives toluene"
+    },
+    {
+      "from": "benzoic-acid",
+      "to": "benzene",
+      "reagents": "NaOH, then soda lime (NaOH + CaO)",
+      "conditions": "strong heating",
+      "name": "Decarboxylation",
+      "page": "reactions/decarboxylation"
+    },
+    {
+      "from": "benzoic-acid",
+      "to": "aniline",
+      "reagents": "HN₃, H₂SO₄",
+      "conditions": "warm",
+      "name": "Schmidt reaction",
+      "page": "reactions/schmidt-reaction",
+      "note": "1 C lost"
+    },
+    {
+      "from": "benzoic-acid",
+      "to": "phenol",
+      "reagents": "Air, Cu catalyst (molten sodium benzoate)",
+      "name": "Dow oxidation of benzoate",
+      "page": "preparation/preparation-of-phenols"
+    },
+    {
+      "from": "salicylaldehyde",
+      "to": "phenol",
+      "reagents": "H₂O₂, NaOH",
+      "conditions": "aqueous alkaline",
+      "name": "Dakin reaction",
+      "page": "reactions/dakin-reaction",
+      "note": "gives catechol"
+    },
+    {
+      "from": "salicylic-acid",
+      "to": "phenyl-ester",
+      "reagents": "(CH₃CO)₂O, H⁺",
+      "name": "Acetylation",
+      "page": "reactions/kolbe-schmitt-reaction",
+      "note": "gives aspirin"
+    },
+    {
+      "from": "salicylic-acid",
+      "to": "phenol",
+      "reagents": "Heat",
+      "name": "Decarboxylation",
+      "page": "preparation/preparation-of-phenols"
+    },
+    {
+      "from": "phenyl-ester",
+      "to": "ketone",
+      "reagents": "1. Anhydrous AlCl₃; 2. H₃O⁺",
+      "conditions": "low T favours para, high T ortho",
+      "name": "Fries rearrangement",
+      "page": "reactions/fries-rearrangement",
+      "note": "gives o- and p-hydroxyaryl ketones"
+    }
+  ]
+}

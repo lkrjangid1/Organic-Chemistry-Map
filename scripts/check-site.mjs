@@ -57,7 +57,8 @@ for (const file of html) {
     try { JSON.parse(m[1]); } catch (e) { err(rel, `invalid JSON-LD: ${e.message}`); }
   }
   for (const m of s.matchAll(/<img\b[^>]*>/g)) if (!/\balt=/.test(m[0])) err(rel, `img without alt: ${m[0].slice(0, 80)}`);
-  for (const m of s.matchAll(/<a\b[^>]*\bhref="([^"]+)"/g)) {
+  const markup = s.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, '');
+  for (const m of markup.matchAll(/<a\b[^>]*\bhref="([^"]+)"/g)) {
     const href = m[1];
     if (/^(https?:|mailto:|#)/.test(href)) continue;
     if (!resolves(href)) err(rel, `broken internal link: ${href}`);

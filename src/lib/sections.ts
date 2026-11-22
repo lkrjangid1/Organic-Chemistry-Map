@@ -68,3 +68,18 @@ export async function familyMembers(hub: string): Promise<PageRef[]> {
   }
   return out.sort((a, b) => a.title.localeCompare(b.title));
 }
+
+let hindiCache: Map<string, CollectionEntry<'hindi'>> | undefined;
+
+/** Hindi translations keyed by "section/slug". */
+export async function hindiPages(): Promise<Map<string, CollectionEntry<'hindi'>>> {
+  if (!hindiCache) hindiCache = new Map((await getCollection('hindi')).map((e) => [e.id, e]));
+  return hindiCache;
+}
+
+/** Points a page reference at its Hindi version when one exists. */
+export async function localiseRef(ref: PageRef, lang: 'en' | 'hi'): Promise<PageRef> {
+  if (lang === 'en') return ref;
+  const hi = (await hindiPages()).get(`${ref.section}/${ref.id}`);
+  return hi ? { ...ref, title: hi.data.title, description: hi.data.description, path: `hi/${ref.path}`, href: url(`hi/${ref.path}`) } : ref;
+}

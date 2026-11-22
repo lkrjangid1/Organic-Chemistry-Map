@@ -44,7 +44,8 @@ export async function moleculeSvg(
       .replace(/<\?xml[^>]*\?>\s*/, '')
       .replace(/<!-- END OF HEADER -->/, '')
       .replace(/<rect[^>]*style='opacity:1\.0;fill:#FFFFFF[^>]*><\/rect>/, '')
-      .replace(/width='\d+px' height='\d+px'/, `viewBox='0 0 ${width} ${height}' width='${width}' height='${height}' role='img'`);
+      .replace(/width='\d+px' height='\d+px'/, `width='${width}' height='${height}' role='img'`);
+    if (!/viewBox=/.test(svg)) svg = svg.replace('<svg', `<svg viewBox='0 0 ${width} ${height}'`);
     cache.set(key, svg);
     return svg;
   } finally {

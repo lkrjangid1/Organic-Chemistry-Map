@@ -125,4 +125,31 @@ const mechanisms = defineCollection({
   }),
 });
 
-export const collections = { reactions, tests, mechanisms, concepts, comparisons, preparation, reagents };
+/**
+ * Hindi translations (Devanagari, English technical terms). File path mirrors the
+ * English page: src/content/hi/reactions/aldol-condensation.mdx translates
+ * reactions/aldol-condensation. Structured data (structures, sources, map links)
+ * comes from the English page; these fields override its text.
+ */
+const hindi = defineCollection({
+  loader: glob({ pattern: '**/*.mdx', base: './src/content/hi' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string().max(200),
+    aliases: z.array(z.string()).default([]),
+    reagents: z.string().optional(),
+    conditions: z.string().optional(),
+    byproducts: z.string().optional(),
+    observation: z.string().optional(),
+    distinguishes: z.string().optional(),
+    reactantName: z.string().optional(),
+    productName: z.string().optional(),
+    memoryTricks: z.array(trick).optional(),
+    faq: z.array(faq).default([]),
+    /** Date the translation was last brought in line with the English page. */
+    translated: z.coerce.date(),
+  }),
+});
+
+export const collections = {
+  hindi, reactions, tests, mechanisms, concepts, comparisons, preparation, reagents };

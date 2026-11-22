@@ -1,8 +1,10 @@
 ---
 import { url } from '../lib/site';
+import { langOf, t as tr } from '../lib/i18n';
 interface Props { items: { label: string; href?: string }[] }
 const { items } = Astro.props;
-const all = [{ label: 'Home', href: url() }, ...items];
+const lang = langOf(Astro.url);
+const all = [{ label: tr(lang).home, href: url(lang === 'hi' ? 'hi/' : '') }, ...items];
 ---
 <nav class="crumbs" aria-label="Breadcrumb">
   <ol>
