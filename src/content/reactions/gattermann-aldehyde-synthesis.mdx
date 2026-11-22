@@ -1,0 +1,113 @@
+---
+title: "Gattermann Aldehyde Synthesis"
+description: "Gattermann aldehyde synthesis formylates benzene or phenols with HCN and HCl over AlCl₃; the aldimine formed is hydrolysed to an aromatic aldehyde and NH₃."
+aliases: ["Gattermann formylation", "Gattermann synthesis", "Gattermann reaction with HCN", "Gattermann salicylaldehyde synthesis", "Gatterman aldehyde synthesis"]
+kind: "named-reaction"
+family: "electrophilic-aromatic-substitution"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: []
+reactant:
+  name: "Benzene"
+  smiles: "c1ccccc1"
+product:
+  name: "Benzaldehyde"
+  smiles: "O=Cc1ccccc1"
+byproducts: "NH₃ (as NH₄Cl in the acidic mixture)"
+reagents: "HCN + HCl with a Lewis acid (anhydrous AlCl₃ or ZnCl₂); Zn(CN)₂ + HCl can replace HCN; then H₃O⁺"
+conditions: "Anhydrous for the first step (dry ether or similar), then aqueous acid hydrolysis"
+equation: "C6H6 ->[1) HCN, HCl, AlCl3][2) H3O+] C6H5CHO + NH4+"
+notesPages: [68]
+memoryTricks: []
+faq:
+  - q: "What is the Gattermann aldehyde synthesis?"
+    a: "It is the formylation of an aromatic ring with hydrogen cyanide and hydrogen chloride in the presence of a Lewis acid such as AlCl₃. An aldimine is formed first and its hydrolysis gives the aromatic aldehyde, for example benzaldehyde from benzene."
+  - q: "What is the intermediate in the Gattermann aldehyde synthesis?"
+    a: "An aldimine, Ar–CH=NH, which is present as its hydrochloride salt. Warming with water or dilute acid hydrolyses the C=N bond to C=O and releases ammonia as NH₄⁺."
+  - q: "What is the difference between Gattermann and Gattermann–Koch reactions?"
+    a: "The Gattermann aldehyde synthesis uses HCN + HCl and works even on phenols and phenol ethers. The Gattermann–Koch reaction uses CO + HCl with AlCl₃/CuCl and does not work on phenols or phenol ethers."
+  - q: "Why is zinc cyanide used instead of HCN?"
+    a: "Zn(CN)₂ is a solid, so it is safer to handle than gaseous HCN. With HCl it generates HCN in the flask and also forms ZnCl₂, which acts as the Lewis acid catalyst."
+related: ["gattermann-koch-reaction", "gattermann-reaction", "friedel-crafts-acylation", "reimer-tiemann-reaction", "stephen-reduction", "preparation/preparation-of-aldehydes-and-ketones"]
+sources:
+  - title: "Gattermann reaction"
+    url: "https://en.wikipedia.org/wiki/Gattermann_reaction"
+    publisher: "Wikipedia"
+  - title: "Formylation (formylation agents: cyanides in the Gattermann reaction)"
+    url: "https://en.wikipedia.org/wiki/Formylation"
+    publisher: "Wikipedia"
+  - title: "Hoesch reaction (imine intermediate; HCN variant is the Gattermann reaction)"
+    url: "https://en.wikipedia.org/wiki/Hoesch_reaction"
+    publisher: "Wikipedia"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 3
+  note: "Original material gives HCN + HCl without a Lewis acid; sources require AlCl3/ZnCl2 (or Zn(CN)2 + HCl). Electrophile HC+=NH is the standard exam picture; sources only describe it by analogy with the Hoesch reaction (R-C+=NH Cl-)."
+---
+
+## What is the Gattermann aldehyde synthesis?
+
+The **Gattermann aldehyde synthesis** (Gattermann formylation) introduces a **–CHO group into an aromatic ring** using **hydrogen cyanide and hydrogen chloride** with a **Lewis acid catalyst such as anhydrous AlCl₃**. The first product is an **aldimine** (Ar–CH=NH, as its hydrochloride), which is **hydrolysed by water or dilute acid** to the aldehyde and ammonia. Benzene gives **benzaldehyde**. It is an electrophilic aromatic substitution, named after the German chemist Ludwig Gattermann, and is similar in spirit to Friedel–Crafts acylation.
+
+## General reaction
+
+<Eq ce="Ar-H + HCN + HCl ->[AlCl3] Ar-CH=NH2+ Cl- ->[H2O] Ar-CHO + NH4Cl" />
+
+## Mechanism
+
+1. **Making the electrophile.** HCl protonates the nitrogen of HCN, and the Lewis acid assists. In exam answers the electrophile is written as the iminium-type cation **H–C⁺=NH** (from H–C≡N⁺–H).
+
+<Eq ce="H-C#N + HCl -> H-C#N+-H Cl- <-> H-C+=NH" />
+
+2. **Attack by the ring.** Benzene's π electrons attack the electrophilic carbon. The arenium ion formed loses H⁺, and aromaticity returns.
+3. **Aldimine formation.** The product of substitution is the aldimine C₆H₅–CH=NH, held as its hydrochloride salt C₆H₅CH=NH₂⁺Cl⁻ in the acidic mixture.
+4. **Hydrolysis.** On adding water (H₃O⁺), water attacks the C=N carbon, nitrogen is protonated and leaves as ammonia, and the C=O bond forms. This is the same hydrolysis that converts any imine back to its carbonyl compound.
+
+<Eq ce="C6H5CH=NH + H2O ->[H3O+] C6H5CHO + NH3" />
+
+<KeyPoint>
+The Gattermann synthesis is the hydrogen cyanide version of the **Houben–Hoesch reaction**. Hoesch uses a nitrile R–C≡N and gives an aryl **ketone**; Gattermann uses H–C≡N and gives an aryl **aldehyde**. In both, an imine is formed first and hydrolysed during work-up.
+</KeyPoint>
+
+## Examples
+
+**1. Benzaldehyde from benzene.**
+
+<Eq ce="C6H6 ->[1) HCN, HCl, AlCl3][2) H3O+] C6H5CHO" />
+
+**2. Zinc cyanide modification.** HCN is a very toxic gas, so the reaction is often run with solid Zn(CN)₂ and HCl. These react in the flask to give HCN and ZnCl₂, and the ZnCl₂ serves as the Lewis acid. Mesitylene (1,3,5-trimethylbenzene) is formylated this way to mesitaldehyde (2,4,6-trimethylbenzaldehyde).
+
+<Eq ce="C6H3(CH3)3 ->[1) Zn(CN)2, HCl][2) H2O] (CH3)3C6H2CHO" />
+
+**3. Phenols and phenol ethers.** Electron-rich rings such as phenols and their ethers respond well, which is why the reaction is also called the Gattermann *salicylaldehyde* (hydroxy aldehyde) synthesis. This is the main practical advantage over the Gattermann–Koch method.
+
+## Three "Gattermann" reactions compared
+
+| Name | Substrate | Reagents | Product |
+|---|---|---|---|
+| Gattermann aldehyde synthesis | arene, phenol, phenol ether | HCN + HCl, AlCl₃; then H₂O | Ar–CHO |
+| Gattermann–Koch reaction | benzene, alkylbenzene | CO + HCl, AlCl₃/CuCl | Ar–CHO |
+| Gattermann reaction | arenediazonium salt | Cu powder + HCl or HBr | Ar–Cl or Ar–Br |
+
+<ExamTip>
+If the question shows **HCN/HCl** on the arrow and asks for the product, answer an aldehyde (via the aldimine, then hydrolysis). If it shows **Cu/HCl on a diazonium salt**, answer an aryl chloride. Only the formylation reactions are electrophilic aromatic substitutions.
+</ExamTip>
+
+<ExamTip title="Common mistake">
+The by-product of the hydrolysis step is ammonia, but in the acidic mixture it is present as the ammonium ion (NH₄⁺/NH₄Cl), not as free NH₃ gas. Also, a Lewis acid catalyst is needed for benzene itself; HCN and HCl alone do not formylate benzene.
+</ExamTip>
+
+## Limitations and exceptions
+
+- **HCN is extremely toxic**; the Zn(CN)₂ method (or other cyanide sources) is preferred in practice.
+- **Deactivated rings** (nitrobenzene, benzonitrile) do not react, as in other Friedel–Crafts-type substitutions.
+- **Anhydrous first step.** Water must be kept out until the aldimine salt has formed; it is added only for the hydrolysis.
+
+## Related reactions
+
+- [Gattermann–Koch reaction](/reactions/gattermann-koch-reaction/) formylates benzene with CO + HCl instead of HCN.
+- [Gattermann reaction](/reactions/gattermann-reaction/) of diazonium salts gives aryl halides.
+- [Friedel–Crafts acylation](/reactions/friedel-crafts-acylation/) uses an acylium ion and gives ketones.
+- [Reimer–Tiemann reaction](/reactions/reimer-tiemann-reaction/) is another way to formylate phenol.
+- [Stephen reduction](/reactions/stephen-reduction/) also reaches an aldehyde through an imine salt that is hydrolysed.
+- See [Electrophilic aromatic substitution](/mechanisms/electrophilic-aromatic-substitution/) for the common mechanism.

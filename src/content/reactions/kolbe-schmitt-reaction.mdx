@@ -1,0 +1,118 @@
+---
+title: "Kolbe–Schmitt Reaction (Kolbe's Reaction)"
+description: "Kolbe's reaction: sodium phenoxide heated with CO₂ under pressure, then acidified, gives salicylic acid (ortho-hydroxybenzoic acid). Mechanism and KOH variant."
+aliases: ["Kolbe's reaction", "Kolbe reaction", "Kolbe Schmitt reaction", "Kolbe Smith reaction", "Kolbe process", "Phenol to salicylic acid", "Carboxylation of phenol"]
+kind: "named-reaction"
+family: "reactions-of-phenols"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["kolbe_schmitt"]
+reactant:
+  name: "Phenol (as sodium phenoxide)"
+  smiles: "Oc1ccccc1"
+product:
+  name: "Salicylic acid (2-hydroxybenzoic acid)"
+  smiles: "OC(=O)c1ccccc1O"
+byproducts: "Na₂SO₄ or NaCl from the acidification step"
+reagents: "NaOH (to make sodium phenoxide), CO₂, then dilute acid (H₂SO₄ or HCl)"
+conditions: "Solid sodium phenoxide heated with CO₂ at about 125 °C and about 100 atm, then acidified"
+equation: "C6H5ONa + CO2 ->[125 °C][100 atm] 2-HOC6H4COONa ->[H3O+] 2-HOC6H4COOH"
+notesPages: [102]
+memoryTricks: []
+faq:
+  - q: "What is the product of Kolbe's reaction?"
+    a: "Salicylic acid (ortho-hydroxybenzoic acid). Sodium phenoxide is heated with carbon dioxide under pressure to give sodium salicylate, which gives salicylic acid on acidification."
+  - q: "Why is phenoxide used instead of phenol in Kolbe's reaction?"
+    a: "Carbon dioxide is a weak electrophile. The phenoxide ion is much more electron-rich than phenol, so it is reactive enough to attack CO₂ in an electrophilic substitution on the ring."
+  - q: "What happens if potassium phenoxide is used in the Kolbe–Schmitt reaction?"
+    a: "More of the para isomer, 4-hydroxybenzoic acid, forms. Potassium phenoxide is the commercial starting material for 4-hydroxybenzoic acid, while sodium phenoxide gives mainly salicylic acid."
+  - q: "What is the difference between Kolbe's reaction and Kolbe electrolysis?"
+    a: "Kolbe's reaction carboxylates phenoxide with CO₂ to give salicylic acid. Kolbe electrolysis is the electrolysis of a sodium or potassium carboxylate solution, which decarboxylates and couples the alkyl groups to give an alkane."
+  - q: "What is salicylic acid from Kolbe's reaction used for?"
+    a: "It is the starting material for aspirin. Acetylation of salicylic acid with acetic anhydride gives acetylsalicylic acid (aspirin)."
+related: ["reimer-tiemann-reaction", "kolbe-electrolysis", "elbs-persulphate-oxidation", "fries-rearrangement", "decarboxylation", "mechanisms/reactions-of-phenols", "mechanisms/electrophilic-aromatic-substitution"]
+sources:
+  - title: "Alcohols, Phenols and Ethers (Class 12 Chemistry, Unit 7)"
+    url: "https://ncert.nic.in/textbook/pdf/lech202.pdf"
+    publisher: "NCERT"
+  - title: "Kolbe–Schmitt reaction"
+    url: "https://en.wikipedia.org/wiki/Kolbe%E2%80%93Schmitt_reaction"
+    publisher: "Wikipedia"
+  - title: "Kolbe-Schmitt Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/kolbe-schmitt-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "4-Hydroxybenzoic acid (chemical production)"
+    url: "https://en.wikipedia.org/wiki/4-Hydroxybenzoic_acid"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 4
+  note: "Notes write the KOH reagent as 'KOH + COOH'; resolved as KOH + CO₂. Notes say para is major with KOH; sources confirm potassium phenoxide gives 4-hydroxybenzoic acid industrially but describe a mixture, so the page says para is favoured."
+---
+
+## What is the Kolbe–Schmitt reaction?
+
+The **Kolbe–Schmitt reaction**, called **Kolbe's reaction** in NCERT, is the **carboxylation of phenol**. Phenol is first converted to **sodium phenoxide** with NaOH. The phenoxide is then heated with **carbon dioxide under pressure** (about 125 °C and 100 atm), and the product is acidified. A **–COOH group enters ortho to the OH**, giving **salicylic acid (2-hydroxybenzoic acid)**, the starting material for aspirin. It is named after Hermann Kolbe (1860) and Rudolf Schmitt (1885).
+
+## General reaction
+
+<Eq ce="C6H5OH ->[NaOH] C6H5O^-Na+ ->[CO2][125 °C, 100 atm] 2-HOC6H4COO^-Na+ ->[H+] 2-HOC6H4COOH" />
+
+Industrially, sodium phenoxide is heated with CO₂ at about **100 atm and 115–125 °C**, and the sodium salicylate is acidified with sulphuric acid. For exam answers the essential points are: phenoxide (not phenol), CO₂, heat and pressure, then acid.
+
+## Mechanism
+
+1. **Phenoxide formation.** NaOH removes the phenolic proton. The negative charge on oxygen is delocalised into the ring, so the **ortho and para carbons become strongly nucleophilic**.
+2. **Attack on CO₂.** CO₂ is a weak electrophile. The electron-rich ring carbon (mainly **ortho**) attacks the carbon of CO₂, giving a cyclohexadienone intermediate carrying a –COO⁻ group.
+3. **Rearomatisation.** A proton shift (tautomerisation) from the ring carbon to oxygen restores the aromatic ring, giving **sodium salicylate**.
+4. **Acidification.** Dilute acid protonates the carboxylate, giving **salicylic acid**.
+
+<Eq ce="C6H5O- + CO2 -> \text{dienone intermediate} ->[\text{tautomerisation}] 2-HOC6H4COO-" />
+
+<KeyPoint>
+The reaction works only on the **phenoxide ion**, not on phenol itself. NCERT stresses that phenoxide is far more reactive than phenol towards electrophilic substitution, which is why even a weak electrophile like CO₂ can react.
+</KeyPoint>
+
+## Sodium vs potassium phenoxide
+
+| Base used | Phenoxide | Main product |
+|---|---|---|
+| NaOH | Sodium phenoxide | **Salicylic acid** (ortho), the NCERT product |
+| KOH | Potassium phenoxide | Both isomers; **4-hydroxybenzoic acid** (para) favoured, used industrially for the para acid |
+| Na or K phenoxide in DMSO | Dissolved phenoxide, about 100 °C | Mainly para (up to about 97 : 3) |
+
+<ExamTip>
+For NCERT/NEET questions, "phenol + NaOH, then CO₂, then H⁺" always gives **salicylic acid**. For JEE, remember the twist: the potassium salt pushes the carboxyl group to the **para** position, giving p-hydroxybenzoic acid.
+</ExamTip>
+
+## Examples
+
+**1. Phenol → salicylic acid (NCERT):**
+
+<Eq ce="C6H5OH ->[1. NaOH][2. CO2, \Delta, pressure] 2-HOC6H4COONa ->[H3O+] 2-HOC6H4COOH" />
+
+**2. Potassium phenoxide → 4-hydroxybenzoic acid:**
+
+<Eq ce="C6H5OK + CO2 ->[\Delta, pressure] 4-HOC6H4COOK ->[H3O+] 4-HOC6H4COOH" />
+
+**3. Salicylic acid → aspirin (follow-up step):**
+
+<Eq ce="2-HOC6H4COOH + (CH3CO)2O ->[H+] 2-CH3COOC6H4COOH + CH3COOH" />
+
+**4. 2-Naphthol → 3-hydroxy-2-naphthoic acid:** the same carboxylation is used industrially on naphthols; here the position of the new –COOH depends on temperature.
+
+## Limitations
+
+- The classical process is a solid–gas reaction of the phenoxide salt with CO₂; solvent versions (DMSO, DMF) run at lower temperature but favour the para acid.
+- High pressure and heat are needed because CO₂ is a weak electrophile.
+- Strongly electron-withdrawing groups on the ring reduce the nucleophilicity of the phenoxide.
+- The ortho/para ratio depends on the metal ion, temperature and solvent.
+
+## Related reactions
+
+- [Reimer–Tiemann reaction](/reactions/reimer-tiemann-reaction/): phenoxide + :CCl₂ puts –CHO ortho; with CCl₄ it also gives salicylic acid.
+- [Kolbe electrolysis](/reactions/kolbe-electrolysis/): same chemist, different reaction (electrolysis of carboxylates to alkanes).
+- [Elbs persulphate oxidation](/reactions/elbs-persulphate-oxidation/): phenoxide attacks persulphate to put an OH para.
+- [Fries rearrangement](/reactions/fries-rearrangement/): another way to place a carbonyl group ortho or para to a phenolic OH.
+- [Decarboxylation](/reactions/decarboxylation/): the reverse direction, loss of CO₂ from carboxylic acids.
+- [Reactions of phenols](/mechanisms/reactions-of-phenols/) and [Electrophilic aromatic substitution](/mechanisms/electrophilic-aromatic-substitution/).

@@ -1,0 +1,117 @@
+---
+title: "Lindlar Catalyst"
+description: "Lindlar catalyst (Pd on CaCO₃ poisoned with lead acetate and quinoline) reduces alkynes to cis-alkenes with H₂ by syn addition and stops at the alkene."
+aliases: ["Lindlar's catalyst", "Lindlar reduction", "Pd/CaCO3 quinoline", "Pd-BaSO4 quinoline", "Poisoned palladium catalyst"]
+category: "Catalysts and hydroborating agents"
+exams: ["jee-main", "jee-advanced", "neet"]
+formula: "Pd/CaCO₃, Pb(OAc)₂, quinoline"
+molecule:
+  name: "Quinoline (the catalyst poison)"
+  smiles: "c1ccc2ncccc2c1"
+family: "reduction-reactions"
+notesPages: [60]
+memoryTricks: []
+faq:
+  - q: "What is Lindlar catalyst made of?"
+    a: "Palladium (about 5%) deposited on calcium carbonate or barium sulphate and deactivated (poisoned) with lead acetate and quinoline. The poison makes the palladium too weak to reduce alkenes."
+  - q: "What is the product of an alkyne with H₂ and Lindlar catalyst?"
+    a: "A cis (Z) alkene. Both hydrogens add to the same face of the triple bond, so but-2-yne gives cis-but-2-ene and 5-decyne gives cis-5-decene."
+  - q: "Why does Lindlar catalyst not reduce alkenes?"
+    a: "The lead and quinoline block the most active palladium sites. The remaining activity is enough for the more reactive alkyne but not for the alkene, so the reaction stops after one mole of H₂."
+  - q: "What is the difference between Lindlar reduction and Na/liquid NH₃ reduction?"
+    a: "Lindlar reduction is a syn addition on a metal surface and gives the cis-alkene. Sodium or lithium in liquid ammonia adds electrons and protons one at a time and gives the trans-alkene."
+  - q: "What is P-2 catalyst?"
+    a: "P-2 nickel is a nickel boride catalyst made by reducing nickel acetate with sodium borohydride in ethanol. Like Lindlar catalyst it reduces alkynes only to alkenes, giving cis-alkenes, especially when ethylenediamine is added."
+related: ["reactions/catalytic-hydrogenation", "reactions/birch-reduction", "reagents/wilkinsons-catalyst", "reactions/diimide-reduction", "reactions/rosenmund-reduction"]
+sources:
+  - title: "Lindlar catalyst"
+    url: "https://en.wikipedia.org/wiki/Lindlar_catalyst"
+    publisher: "Wikipedia"
+  - title: "9.5: Reduction of Alkynes (OpenStax)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/09:_Alkynes_-_An_Introduction_to_Organic_Synthesis/9.05:_Reduction_of_Alkynes"
+    publisher: "Chemistry LibreTexts"
+  - title: "19.4: Reduction of alkenes and alkynes"
+    url: "https://chem.libretexts.org/Courses/SUNY_Potsdam/Book:_Organic_Chemistry_II_(Walker)/19:_Oxidation_and_Reduction/19.04:_Reduction_of_alkenes_and_alkynes"
+    publisher: "Chemistry LibreTexts"
+  - title: "Nickel boride catalyst"
+    url: "https://en.wikipedia.org/wiki/Nickel_boride_catalyst"
+    publisher: "Wikipedia"
+  - title: "Hydrogenation"
+    url: "https://en.wikipedia.org/wiki/Hydrogenation"
+    publisher: "Wikipedia"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 5
+  note: "Notes write the Lindlar metal as Ni; all sources give palladium. Ni appears only in the separate P-2 (nickel boride) catalyst. cis-Selectivity of P-2 is from the title of Brown and Ahuja, J. Chem. Soc. Chem. Commun. 1973, 553 (page blocked); Nickel boride Wikipedia confirms only partial alkyne-to-alkene reduction."
+---
+
+## What is Lindlar catalyst?
+
+**Lindlar catalyst** is a **poisoned palladium catalyst**: palladium deposited on **calcium carbonate** (or barium sulphate) and deactivated with **lead acetate** and **quinoline**. With H₂ it reduces an **alkyne to a cis-alkene** and stops there, because the weakened catalyst cannot reduce the alkene that forms. The addition is **syn**. It was introduced by Herbert Lindlar in 1952.
+
+<Eq ce="R-C#C-R' + H2 ->[Pd/CaCO3, Pb(OAc)2, quinoline] cis-RCH=CHR'" />
+
+## Composition
+
+| Component | Role |
+|---|---|
+| Palladium (about 5% by weight) | Active hydrogenation metal |
+| CaCO₃ (or BaCO₃, BaSO₄) | Solid support with low surface activity |
+| Lead acetate or lead oxide | First poison; deactivates the most active Pd sites |
+| Quinoline (or another amine) | Second poison; improves selectivity so no alkane forms |
+
+The catalyst is made by reducing palladium chloride in a slurry of the carbonate and then adding lead acetate. The common Indian textbook variant, **Pd/BaSO₄ with quinoline**, behaves the same way for alkynes; the same poisoned system on BaSO₄ is also used in the [Rosenmund reduction](/reactions/rosenmund-reduction/).
+
+## What it reduces
+
+| Substrate | Product |
+|---|---|
+| Internal alkyne, R–C≡C–R′ | cis (Z) alkene |
+| But-2-yne | cis-But-2-ene |
+| 5-Decyne | cis-5-Decene |
+| Phenylacetylene, C₆H₅C≡CH | Styrene, C₆H₅CH=CH₂ |
+| Enyne (C=C and C≡C in one molecule) | Only the C≡C is reduced |
+
+<Eq ce="CH3-C#C-CH3 + H2 ->[Lindlar] cis-CH3CH=CHCH3" />
+
+## What it does not touch
+
+- **Alkenes**: an isolated C=C, or the C=C formed from the alkyne, is not hydrogenated. This is the whole point of the poison.
+- **C=O and other polar groups**: not reduced under these mild conditions.
+- **Benzene rings**: untouched.
+
+<KeyPoint>
+Lindlar catalyst works **only on alkynes**. It gives a **cis-alkene** by **syn addition**, and it cannot reduce an alkene.
+</KeyPoint>
+
+## Mechanism (short)
+
+The alkyne and H₂ are both adsorbed on the palladium surface, exactly as in ordinary [catalytic hydrogenation](/reactions/catalytic-hydrogenation/). Two surface hydrogens are delivered to the same face of the triple bond, which gives the cis geometry. The lead and quinoline leave just enough activity for the more reactive triple bond, so the alkene that forms is released without taking up a second H₂.
+
+## P-2 catalyst (nickel boride)
+
+**P-2 nickel** is a nickel boride catalyst made in situ by reducing nickel(II) acetate with **sodium borohydride in ethanol**. It is very sensitive to steric hindrance and is used for **partial reduction of alkynes to alkenes**; with added ethylenediamine it gives very pure **cis-alkenes**. In exam questions "Lindlar or P-2 catalyst" means the same result: alkyne to cis-alkene.
+
+<ExamTip title="Common mistake">
+The metal in Lindlar catalyst is **palladium**, not nickel. Nickel appears only in the separate P-2 catalyst (Ni₂B). Also remember that ordinary Pd/C, Pt or Ni without a poison takes an alkyne all the way to the alkane.
+</ExamTip>
+
+## Comparison with similar reagents
+
+| Reagent | Alkyne gives | Mechanism | Stereochemistry |
+|---|---|---|---|
+| H₂, Pd/C or Pt or Ni | Alkane | Surface addition | Not relevant |
+| H₂, Lindlar catalyst | Alkene | Surface syn addition | cis (Z) |
+| H₂, P-2 nickel boride | Alkene | Surface syn addition | cis (Z) |
+| Na or Li in liquid NH₃ | Alkene | Electron transfer, then protonation | trans (E) |
+| Diimide, HN=NH | Mostly alkane (hard to stop) | Concerted syn transfer | cis if stopped |
+
+The Na/liquid NH₃ route is described on the [Birch reduction](/reactions/birch-reduction/) page. The two methods are complementary: choose Lindlar for cis and sodium in ammonia for trans.
+
+## Exam tips
+
+- "Alkyne → cis-alkene" = H₂/Lindlar (or P-2). "Alkyne → trans-alkene" = Na/liq. NH₃.
+- A terminal alkyne with Lindlar gives the terminal alkene (no cis/trans isomerism).
+- If one mole of H₂ is taken up by an enyne over Lindlar catalyst, only the triple bond has reacted.
+- For other reducing reagents, see the [reduction reactions hub](/mechanisms/reduction-reactions/).

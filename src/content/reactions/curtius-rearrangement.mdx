@@ -1,0 +1,115 @@
+---
+title: "Curtius Rearrangement"
+description: "Curtius rearrangement: heating an acyl azide (from RCOCl and NaN₃) gives an isocyanate R–N=C=O, which water turns into a primary amine with one carbon fewer."
+aliases: ["Curtius reaction", "Curtius degradation", "Curtis rearrangement", "Acyl azide rearrangement"]
+kind: "rearrangement"
+family: "rearrangement-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["curtius_rearrangement"]
+reactant:
+  name: "Acetyl chloride (ethanoyl chloride)"
+  smiles: "CC(=O)Cl"
+product:
+  name: "Methanamine (via methyl isocyanate)"
+  smiles: "CN"
+byproducts: "N₂ (rearrangement step), CO₂ (hydrolysis step), NaCl"
+reagents: "NaN₃ (sodium azide) on an acyl chloride; then H₂O (amine), R′OH (carbamate) or R′NH₂ (urea)"
+conditions: "Gentle heating of the acyl azide in an inert solvent; hydrolysis of the isocyanate with water or dilute acid"
+equation: "CH3COCl + NaN3 -> CH3CON3 + NaCl; CH3CON3 ->[\\Delta] CH3N=C=O + N2; CH3NCO + H2O -> CH3NH2 + CO2"
+notesPages: [95, 96, 116]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Curtius rearrangement?"
+    a: "Heating an acyl azide, R–CO–N₃, gives an isocyanate, R–N=C=O, and nitrogen gas. Hydrolysis of the isocyanate then gives a primary amine, R–NH₂, with one carbon fewer than the acid, plus CO₂."
+  - q: "Is the Curtius rearrangement intramolecular, and is configuration retained?"
+    a: "Yes to both. The R group moves from carbon to the neighbouring nitrogen within the same molecule, and a chiral R group migrates with full retention of configuration."
+  - q: "What is the difference between the Curtius, Hofmann and Schmidt reactions?"
+    a: "All three give an isocyanate and then an amine with one carbon fewer. Curtius starts from an acyl azide (RCOCl + NaN₃, heat), Hofmann from an amide (Br₂ + NaOH), and Schmidt from a carboxylic acid with HN₃ and conc. H₂SO₄."
+  - q: "Can the isocyanate be isolated in the Curtius rearrangement?"
+    a: "Yes. Because the reaction can be run without water, the isocyanate R–N=C=O can be isolated, or trapped with an alcohol to give a carbamate or with an amine to give a substituted urea."
+  - q: "Why does R migrate to nitrogen?"
+    a: "As N₂ leaves, the nitrogen attached to the carbonyl becomes electron-deficient (nitrene-like). The neighbouring R group shifts to it with its bonding pair, in the same step in the thermal reaction."
+related: ["hofmann-bromamide-degradation", "schmidt-reaction", "lossen-rearrangement", "beckmann-rearrangement", "arndt-eistert-synthesis", "mechanisms/reactions-of-carboxylic-acids"]
+sources:
+  - title: "Curtius rearrangement"
+    url: "https://en.wikipedia.org/wiki/Curtius_rearrangement"
+    publisher: "Wikipedia"
+  - title: "Curtius Rearrangement"
+    url: "https://www.organic-chemistry.org/namedreactions/curtius-rearrangement.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "Lossen rearrangement"
+    url: "https://en.wikipedia.org/wiki/Lossen_rearrangement"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 3
+  note: "Calling the migration step rate-determining is kept as exam phrasing; sources describe the thermal reaction as one concerted step. Reagent written NaN₂ was read as NaN₃ (sodium azide)."
+---
+
+## What is the Curtius rearrangement?
+
+The **Curtius rearrangement** is the **thermal decomposition of an acyl azide, R–CO–N₃, into an isocyanate, R–N=C=O, with loss of nitrogen gas**. The acyl azide is usually made from an **acid chloride and sodium azide**. Hydrolysis of the isocyanate gives a **primary amine with one carbon fewer** than the starting acid, so like the Hofmann reaction it is a **step-down** route from acids to amines. Theodor Curtius described it in 1885.
+
+<Eq ce="R-COCl + NaN3 -> R-CO-N3 + NaCl" />
+<Eq ce="R-CO-N3 ->[\Delta] R-N=C=O + N2 ^" />
+<Eq ce="R-N=C=O + H2O -> R-NH2 + CO2" />
+
+## Mechanism
+
+1. **Azide ion.** Sodium azide supplies N₃⁻, drawn as ⁻N=N⁺=N⁻ in resonance with N²⁻–N⁺≡N.
+2. **Acyl azide.** The terminal nitrogen of azide attacks the acyl carbon of R–COCl; Cl⁻ leaves (nucleophilic acyl substitution), giving R–CO–N⁻–N⁺≡N.
+3. **Rearrangement.** On warming, N₂ leaves and R shifts from the carbonyl carbon to the adjacent nitrogen **at the same time**, giving the isocyanate R–N=C=O. In exam answers this loss of N₂ with migration is the slow, rate-determining step.
+4. **Hydrolysis.** Water adds to the C=N of the isocyanate to give a **carbamic acid**, R–NH–COOH.
+5. **Decarboxylation.** Carbamic acids are unstable and lose CO₂, giving R–NH₂.
+
+<Eq ce="R-N=C=O + H2O -> R-NH-COOH -> R-NH2 + CO2" />
+
+Older textbooks show an **acyl nitrene** (R–CO–N:) formed first and then rearranging. Modern evidence (no nitrene by-products, calculations) shows the thermal reaction is **concerted**; free nitrenes appear only in the photochemical version, where they give side products.
+
+<KeyPoint>
+Key facts: (1) **step-down** reaction (amine has one carbon fewer than the acid); (2) **intramolecular** 1,2-shift with **retention of configuration**; (3) the **isocyanate is the intermediate** and can be isolated; (4) the shift happens because nitrogen becomes **electron-deficient** as N₂ leaves; (5) electron-rich groups migrate best, roughly 3° &gt; 2° ≈ aryl &gt; 1°.
+</KeyPoint>
+
+## Examples
+
+**1. Acetyl chloride to methylamine**
+
+<Eq ce="CH3COCl ->[NaN3][\Delta] CH3-N=C=O ->[H2O] CH3NH2 + CO2" />
+
+**2. Benzoyl chloride to aniline**
+
+<Eq ce="C6H5COCl ->[NaN3] C6H5CON3 ->[\Delta] C6H5N=C=O ->[H2O] C6H5NH2 + CO2" />
+
+**3. Trapping the isocyanate**
+
+<Eq ce="R-N=C=O + C2H5OH -> R-NH-COOC2H5" />
+<Eq ce="R-N=C=O + R'NH2 -> R-NH-CO-NH-R'" />
+
+An alcohol gives a **carbamate (urethane)** and an amine gives a **substituted urea**.
+
+## Curtius vs Hofmann vs Schmidt
+
+| Reaction | Starting material | Reagents | Common intermediate |
+|---|---|---|---|
+| Curtius | Acyl azide (from RCOCl) | NaN₃, then heat; H₂O | R–N=C=O |
+| [Hofmann bromamide](/reactions/hofmann-bromamide-degradation/) | Primary amide RCONH₂ | Br₂ + NaOH (aq.) | R–N=C=O |
+| [Schmidt](/reactions/schmidt-reaction/) | Carboxylic acid RCOOH | HN₃, conc. H₂SO₄ | R–N=C=O |
+| [Lossen](/reactions/lossen-rearrangement/) | Acyl hydroxamate | base | R–N=C=O |
+
+<ExamTip>
+If a question gives RCOCl + NaN₃ and heat, write the isocyanate first, then the amine on hydrolysis. Count carbons: the carbonyl carbon leaves as CO₂, so CH₃COCl gives CH₃NH₂, not CH₃CH₂NH₂.
+</ExamTip>
+
+## Variations and limitations
+
+- The acyl azide can also be made from an **acyl hydrazide and nitrous acid**, or directly from the acid with **diphenylphosphoryl azide (DPPA)**.
+- Brønsted or Lewis acids (e.g. BF₃) lower the decomposition temperature by about 100 °C.
+- Acyl azides are **potentially explosive** and must be heated carefully.
+
+## Related reactions
+
+- [Hofmann bromamide degradation](/reactions/hofmann-bromamide-degradation/), [Schmidt reaction](/reactions/schmidt-reaction/) and [Lossen rearrangement](/reactions/lossen-rearrangement/): the same isocyanate route to amines.
+- [Beckmann rearrangement](/reactions/beckmann-rearrangement/): migration to electron-deficient nitrogen in oximes.
+- [Arndt–Eistert synthesis](/reactions/arndt-eistert-synthesis/): a related loss of N₂ with a 1,2-shift, but to carbon.
+- [Rearrangement reactions](/mechanisms/rearrangement-reactions/) and [reactions of carboxylic acids](/mechanisms/reactions-of-carboxylic-acids/) hubs.

@@ -1,0 +1,114 @@
+---
+title: "Aldol vs Cannizzaro Reaction"
+description: "Aldol vs Cannizzaro: carbonyls with α-H give aldol in dilute base; aldehydes without α-H disproportionate in conc. base. Rule, table, isobutyraldehyde case."
+aliases: ["Difference between aldol and Cannizzaro reaction", "Aldol or Cannizzaro", "Isobutyraldehyde aldol or Cannizzaro"]
+category: "Aldehydes and ketones"
+exams: ["jee-main", "jee-advanced", "neet"]
+molecule:
+  name: "2-Methylpropanal (isobutyraldehyde)"
+  smiles: "CC(C)C=O"
+family: "carbonyl-condensation-reactions"
+notesPages: [70, 75, 76]
+memoryTricks: []
+faq:
+  - q: "What is the main difference between the aldol and Cannizzaro reactions?"
+    a: "The aldol reaction needs an α-hydrogen and dilute base, and it forms a new C–C bond through an enolate. The Cannizzaro reaction is shown by aldehydes without α-hydrogen in concentrated base. It is a redox disproportionation by hydride transfer that gives an alcohol and a carboxylate salt."
+  - q: "Does isobutyraldehyde give aldol or Cannizzaro reaction?"
+    a: "Both. 2-Methylpropanal has one α-H, so dilute base gives the aldol addition product 3-hydroxy-2,2,4-trimethylpentanal. Its aldol equilibrium is unfavourable, and in concentrated alkali it undergoes the Cannizzaro reaction to 2-methylpropan-1-ol and sodium 2-methylpropanoate."
+  - q: "Do ketones undergo the Cannizzaro reaction?"
+    a: "For exam purposes, no. The Cannizzaro reaction needs the aldehyde C–H to be transferred as a hydride. Ketones with α-H give aldol condensation instead, for example acetone gives diacetone alcohol and then mesityl oxide."
+  - q: "What happens when benzaldehyde and formaldehyde are heated with concentrated NaOH?"
+    a: "A crossed Cannizzaro reaction. Formaldehyde is oxidised to sodium formate and benzaldehyde is reduced to benzyl alcohol, so most of the valuable aldehyde ends up as the alcohol."
+related: ["reactions/aldol-condensation", "reactions/cannizzaro-reaction", "reactions/cross-aldol-condensation", "reactions/tishchenko-reaction", "comparisons/reactivity-of-carbonyl-compounds"]
+sources:
+  - title: "Cannizzaro reaction"
+    url: "https://en.wikipedia.org/wiki/Cannizzaro_reaction"
+    publisher: "Wikipedia"
+  - title: "Cannizzaro Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/cannizzaro-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "Aldol condensation"
+    url: "https://en.wikipedia.org/wiki/Aldol_condensation"
+    publisher: "Wikipedia"
+  - title: "23.1: Carbonyl Condensations - The Aldol Reaction"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/23%3A_Carbonyl_Condensation_Reactions/23.01%3A_Carbonyl_Condensations_-_The_Aldol_Reaction"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "Isobutyraldehyde"
+    url: "https://en.wikipedia.org/wiki/Isobutyraldehyde"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 5
+  note: "Exam conventions kept but not confirmed by sources: hydride transfer as the rate-determining step of Cannizzaro; 'only base, no strength given' for isobutyraldehyde taken as Cannizzaro."
+---
+
+## What is the difference between aldol and Cannizzaro reactions?
+
+Both reactions start with an aldehyde (or ketone) and a base, but they follow different paths. The **aldol reaction** needs an **α-hydrogen**: dilute base turns the carbonyl compound into an enolate, which adds to a second molecule to form a new C–C bond. The **Cannizzaro reaction** is shown by aldehydes with **no α-hydrogen** in **concentrated** base: one molecule is oxidised to a carboxylate and another is reduced to an alcohol by **hydride transfer**.
+
+<KeyPoint>
+Decision rule: **α-H present + dilute base → aldol.** **No α-H (aldehyde) + concentrated base → Cannizzaro.** Ketones give aldol, not Cannizzaro. An aldehyde with only **one** α-H, such as (CH₃)₂CHCHO, can do either: dilute base gives the aldol and concentrated base gives Cannizzaro.
+</KeyPoint>
+
+## Side-by-side comparison
+
+| Feature | Aldol reaction | Cannizzaro reaction |
+|---|---|---|
+| Substrate | Aldehydes and ketones with at least one α-H | Aldehydes with no α-H (HCHO, C₆H₅CHO, (CH₃)₃CCHO, furfural) |
+| Base | Dilute NaOH, Na₂CO₃, Ba(OH)₂ (catalytic) | Concentrated NaOH or KOH (for example 50%) |
+| First step | OH⁻ removes an α-H to give an enolate | OH⁻ adds to the C=O to give a tetrahedral anion |
+| Key event | Enolate attacks a second C=O (C–C bond forms) | Hydride (H⁻) moves to a second aldehyde |
+| Reaction type | Nucleophilic addition, then (on heating) E1cB dehydration | Redox disproportionation |
+| Product | β-Hydroxy carbonyl compound, then α,β-unsaturated carbonyl compound | Primary alcohol + carboxylate salt (1 : 1) |
+| Example | 2 CH₃CHO → CH₃CH(OH)CH₂CHO → CH₃CH=CHCHO | 2 HCHO → CH₃OH + HCOONa |
+| Kinetics | Depends on substrate and conditions | Third order: rate = k[RCHO]²[OH⁻]; fourth order at very high [OH⁻] |
+| Crossed version | Claisen–Schmidt (ArCHO + enolisable carbonyl) | Crossed Cannizzaro (HCHO is oxidised, the other aldehyde reduced) |
+
+## The Cannizzaro mechanism in brief
+
+1. OH⁻ attacks the carbonyl carbon of one aldehyde, giving RCH(OH)O⁻.
+2. This anion re-forms C=O and pushes its C–H out as a **hydride** onto the carbonyl carbon of a second aldehyde. In exam answers this hydride transfer is taken as the rate-determining step.
+3. Proton exchange gives RCOO⁻ and RCH₂OH.
+
+The molecule attacked by OH⁻ is oxidised; the molecule that receives H⁻ is reduced. In very concentrated base the anion loses a second proton to form a dianion, RCHO₂²⁻, which transfers hydride faster. That is why the rate becomes second order in OH⁻. When the reaction is run in D₂O, the alcohol formed has **no deuterium on carbon**, which shows that the hydrogen moves directly from one aldehyde to the other and not from the solvent.
+
+<Eq ce="2 HCHO + NaOH -> CH3OH + HCOONa" />
+
+## The isobutyraldehyde case
+
+2-Methylpropanal, (CH₃)₂CH–CHO, has just **one** α-H, so it sits on the boundary.
+
+- **Dilute base → aldol addition.** The enolate adds to a second molecule to give 3-hydroxy-2,2,4-trimethylpentanal. The new α-carbon is quaternary (no H left), so the aldol **cannot dehydrate** to an enone.
+
+<Eq ce="2 (CH3)2CHCHO ->[dil. NaOH] (CH3)2CHCH(OH)C(CH3)2CHO" />
+
+- **Concentrated base → Cannizzaro.** For R₂CH–CHO aldehydes the aldol equilibrium lies towards the starting aldehyde, so in strong alkali the competing Cannizzaro pathway takes over:
+
+<Eq ce="2 (CH3)2CHCHO ->[conc. NaOH] (CH3)2CHCH2OH + (CH3)2CHCOONa" />
+
+<ExamTip>
+If a question on isobutyraldehyde says only "base" without saying dilute or concentrated, exam answer keys usually expect the **Cannizzaro** products. If it says "dil. NaOH", write the aldol addition product.
+</ExamTip>
+
+## Solved examples
+
+**1. Which reaction does each compound show with NaOH: HCHO, CH₃CHO, C₆H₅CHO, CH₃COCH₃, (CH₃)₃CCHO?**
+HCHO, C₆H₅CHO and (CH₃)₃CCHO have no α-H, so they give Cannizzaro (in conc. NaOH). CH₃CHO and CH₃COCH₃ have α-H, so they give aldol (in dil. NaOH). Acetone gives diacetone alcohol and then mesityl oxide.
+
+**2. Benzaldehyde + acetaldehyde with dilute NaOH.**
+Only acetaldehyde can form an enolate, and benzaldehyde is the better acceptor. This is a Claisen–Schmidt (cross aldol) reaction that gives cinnamaldehyde, C₆H₅CH=CHCHO. In concentrated alkali, the benzaldehyde could instead undergo Cannizzaro.
+
+**3. Benzaldehyde + formaldehyde with concentrated NaOH.**
+Neither has α-H, so a crossed Cannizzaro reaction occurs. HCHO is the more reactive aldehyde and is attacked by OH⁻, so it becomes HCOONa, while C₆H₅CHO is reduced to C₆H₅CH₂OH.
+
+**4. Acetaldehyde + excess formaldehyde in base (both reactions in one pot).**
+Three crossed aldol steps replace all three α-H of CH₃CHO with CH₂OH groups, giving (HOCH₂)₃C–CHO. This aldehyde now has no α-H, so a crossed Cannizzaro with one more HCHO reduces it to **pentaerythritol**, C(CH₂OH)₄, plus formate.
+
+## Related reactions
+
+- [Aldol condensation](/reactions/aldol-condensation/) and [cross aldol / Claisen–Schmidt](/reactions/cross-aldol-condensation/)
+- [Cannizzaro reaction](/reactions/cannizzaro-reaction/)
+- [Tishchenko reaction](/reactions/tishchenko-reaction/): with an alkoxide base the same hydride transfer gives an ester instead
+- [Reactivity of carbonyl compounds](/comparisons/reactivity-of-carbonyl-compounds/)
+- Hub: [Carbonyl condensation reactions](/mechanisms/carbonyl-condensation-reactions/)

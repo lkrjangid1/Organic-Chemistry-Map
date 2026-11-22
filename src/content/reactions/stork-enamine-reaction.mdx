@@ -1,0 +1,116 @@
+---
+title: "Stork Enamine Reaction"
+description: "The Stork enamine reaction turns a ketone into an enamine with a secondary amine, adds it to a Michael acceptor or alkyl halide, then hydrolyses it to a ketone."
+aliases: ["Stork enamine synthesis", "Stork enamine alkylation", "Stork reaction", "Stark enamine reaction", "Enamine formation", "Stork acylation"]
+kind: "named-reaction"
+family: "carbonyl-condensation-reactions"
+exams: ["jee-advanced"]
+mapEdges: []
+reactant:
+  name: "Cyclohexanone"
+  smiles: "O=C1CCCCC1"
+product:
+  name: "2-(3-Oxobutyl)cyclohexan-1-one (a 1,5-diketone)"
+  smiles: "CC(=O)CCC1CCCCC1=O"
+byproducts: "H₂O (enamine formation); the secondary amine is released on hydrolysis"
+reagents: "Secondary amine (pyrrolidine, piperidine or morpholine); then an electrophile (α,β-unsaturated carbonyl, reactive alkyl halide or acyl chloride); then H₃O⁺"
+conditions: "Enamine step with removal of water (acid catalyst when needed); hydrolysis with dilute aqueous acid"
+equation: "C6H10O + CH2=CHCOCH3 ->[1. pyrrolidine, -H2O][2. H3O+] C10H16O2"
+notesPages: [69]
+memoryTricks: []
+faq:
+  - q: "What is the Stork enamine reaction?"
+    a: "It is a three-step way to add a group to the α-carbon of a ketone: form an enamine with a secondary amine, let the enamine react with an electrophile such as an α,β-unsaturated ketone, then hydrolyse the iminium product with dilute acid to get the substituted ketone back."
+  - q: "Why is a secondary amine used to make an enamine?"
+    a: "A secondary amine R₂NH has only one N–H. After it adds to the C=O and water is lost, nitrogen has no H left to give an imine, so a proton is lost from the α-carbon instead and a C=C–N enamine forms. Primary amines give imines."
+  - q: "What is the product when acetone reacts with a secondary amine?"
+    a: "The enamine CH₃–C(NR₂)=CH₂ (with water lost), formed through the carbinolamine (CH₃)₂C(OH)–NR₂."
+  - q: "Why use an enamine instead of an enolate?"
+    a: "An enamine is neutral, easy to prepare and handle, and gives clean mono-alkylation of a simple ketone. Enolates of simple monoketones are charged, need strong bases and often give poor Michael additions or multiple alkylation."
+  - q: "What does the Stork reaction give with an acyl chloride?"
+    a: "Acylation at the α-carbon. After hydrolysis the product is a 1,3-diketone; this variant is called Stork acylation."
+related: ["michael-addition", "robinson-annulation", "aldol-condensation", "reductive-amination", "mechanisms/carbonyl-condensation-reactions"]
+sources:
+  - title: "Stork enamine alkylation"
+    url: "https://en.wikipedia.org/wiki/Stork_enamine_alkylation"
+    publisher: "Wikipedia"
+  - title: "23.11: Carbonyl Condensations with Enamines – The Stork Enamine Reaction"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/23:_Carbonyl_Condensation_Reactions/23.11:_Carbonyl_Condensations_with_Enamines_-_The_Stork_Enamine_Reaction"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "Enamine"
+    url: "https://en.wikipedia.org/wiki/Enamine"
+    publisher: "Wikipedia"
+  - title: "19.8: Nucleophilic Addition of Amines – Imine and Enamine Formation"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/19:_Aldehydes_and_Ketones-_Nucleophilic_Addition_Reactions/19.08:_Nucleophilic_Addition_of_Amines_-_Imine_and_Enamine_Formation"
+    publisher: "Chemistry LibreTexts"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 4
+---
+
+## What is the Stork enamine reaction?
+
+The **Stork enamine reaction** is a three-step method for putting a new group on the **α-carbon of a ketone (or aldehyde)**. The ketone is first converted into an **enamine** with a **secondary amine** such as pyrrolidine. The enamine's nucleophilic α-carbon then reacts with an electrophile, most reliably a **Michael acceptor**, giving an iminium ion, and **dilute aqueous acid** hydrolyses this back to a ketone. It is named after Gilbert Stork of Columbia University.
+
+## Step 1: enamine formation
+
+A secondary amine adds to the carbonyl group, and the carbinolamine formed then loses water. Because nitrogen has no hydrogen left, the proton is removed from the **α-carbon**, giving a C=C bonded to nitrogen.
+
+<Eq ce="(CH3)2C=O + HNR2 <=> (CH3)2C(OH)-NR2 ->[-H2O] CH3-C(NR2)=CH2" />
+
+1. **Addition.** The nitrogen lone pair attacks the C=O carbon; proton transfer gives the **carbinolamine** (CH₃)₂C(OH)–NR₂.
+2. **Loss of water.** The OH (after protonation) leaves, giving an iminium ion (CH₃)₂C=N⁺R₂.
+3. **Loss of an α-H.** A base (another amine molecule) removes a proton from a CH₃ group, giving the enamine CH₃–C(NR₂)=CH₂.
+
+Acid catalysis is used when the amine is not very basic; with strongly basic amines such as pyrrolidine it is often not needed. Removing the water (for example with a drying agent) pushes the equilibrium toward the enamine.
+
+<KeyPoint>
+Primary amines (RNH₂) give **imines** (C=N–R); secondary amines (R₂NH) give **enamines** (C=C–NR₂). Tertiary amines have no N–H and do not condense with C=O at all.
+</KeyPoint>
+
+## Why enamines are nucleophilic at carbon
+
+The nitrogen lone pair overlaps with the C=C π bond, so electron density moves onto the α-carbon:
+
+<Eq ce="R2N-C=CH2 <-> R2N^+=C-CH2^-" />
+
+Enamines therefore behave like neutral enolates. They are easier to make and handle than enolate ions, and an enamine from a simple monoketone works well as a Michael donor, whereas only β-dicarbonyl enolates give good Michael reactions.
+
+## Steps 2 and 3: reaction with an electrophile, then hydrolysis
+
+**Michael addition (most reliable).** Cyclohexanone and pyrrolidine give the enamine; it adds to but-3-en-2-one (methyl vinyl ketone) at the β-carbon; hydrolysis gives a **1,5-diketone**.
+
+<Eq ce="\text{cyclohexanone enamine} + CH2=CHCOCH3 -> \text{iminium adduct} ->[H3O+] \text{2-(3-oxobutyl)cyclohexanone}" />
+
+**Alkylation.** Reactive halides, such as benzylic, allylic and α-halo carbonyl halides, alkylate the enamine carbon; hydrolysis gives the 2-alkylated ketone.
+
+<Eq ce="R2N-CH=CHR' + R''X -> [R2N^+=CH-CHR'R'']X^- ->[H2O] R'R''CH-CHO + R2NH" />
+
+**Acylation.** Acyl chlorides react at carbon, and hydrolysis gives a **1,3-diketone** (Stork acylation).
+
+<ExamTip>
+For the product, ignore the amine: it goes in and comes out. The net change is that the electrophile is attached to the **α-carbon** of the original ketone. With an α,β-unsaturated carbonyl acceptor, the answer is always a 1,5-dicarbonyl compound.
+</ExamTip>
+
+## Examples
+
+**1. Enamine from acetone.** Acetone with a secondary amine gives CH₃–C(NR₂)=CH₂ (2-dialkylaminopropene).
+
+**2. Cyclopentanone enamine with ethyl propenoate.** After hydrolysis the product is ethyl 3-(2-oxocyclopentyl)propanoate.
+
+**3. Cyclohexanone enamine with methyl vinyl ketone.** Gives 2-(3-oxobutyl)cyclohexanone, the same 1,5-diketone that a base-catalysed Robinson annulation passes through.
+
+## Limitations
+
+- Enamines are also nucleophilic at **nitrogen**. Simple primary alkyl halides such as CH₃I often attack N first, so they give only low to moderate yields of the C-alkylated product.
+- The method works best with **Michael acceptors** and very reactive halides.
+- Water must be removed during enamine formation; the enamine is hydrolysed easily by aqueous acid.
+
+## Related reactions
+
+- [Michael addition](/reactions/michael-addition/): the enolate version of the key step.
+- [Robinson annulation](/reactions/robinson-annulation/): Michael addition followed by intramolecular aldol; enamines can serve as the donor.
+- [Aldol condensation](/reactions/aldol-condensation/): enolate chemistry of the same α-carbon.
+- [Reductive amination](/reactions/reductive-amination/): another reaction that starts with amine addition to C=O.
+- Hub: [Carbonyl condensation reactions](/mechanisms/carbonyl-condensation-reactions/)

@@ -1,0 +1,109 @@
+---
+title: "Gabriel Phthalimide Synthesis"
+description: "Gabriel phthalimide synthesis makes pure primary amines from alkyl halides: potassium phthalimide is N-alkylated by SN2, then hydrolysed. Mechanism, limits."
+aliases: ["Gabriel synthesis", "Gabriel phthalimide reaction", "Gabriel amine synthesis", "Gabrial phthalimide synthesis", "Potassium phthalimide reaction"]
+kind: "named-reaction"
+family: "reactions-of-amines"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["gabriel_synthesis_step1", "gabriel_synthesis_step2", "gabriel_synthesis_step3", "gabriel_synthesis_step2_3"]
+reactant:
+  name: "Phthalimide (isoindoline-1,3-dione)"
+  smiles: "O=C1NC(=O)c2ccccc12"
+product:
+  name: "Ethanamine (from bromoethane)"
+  smiles: "CCN"
+byproducts: "Phthalate salt (or phthalhydrazide with hydrazine)"
+reagents: "1) Ethanolic KOH; 2) R–X (1° alkyl halide); 3) aqueous NaOH/KOH (or N₂H₄)"
+conditions: "Heat with R–X, then alkaline hydrolysis"
+equation: "C6H4(CO)2NH ->[KOH (alc.)] C6H4(CO)2N^-K+ ->[R-X][\\Delta] C6H4(CO)2N-R ->[NaOH(aq)][\\Delta] R-NH2 + C6H4(COONa)2"
+notesPages: [104]
+memoryTricks: []
+faq:
+  - q: "Which amines can be prepared by Gabriel phthalimide synthesis?"
+    a: "Only primary aliphatic (and benzylic) amines, R–NH₂. Secondary and tertiary amines are not formed because the N-alkylphthalimide has no N–H left and cannot be alkylated again."
+  - q: "Why can aniline not be prepared by Gabriel phthalimide synthesis?"
+    a: "Aryl halides do not undergo nucleophilic substitution with the phthalimide anion. The C–X bond of an aryl halide has partial double-bond character from resonance and the ring blocks backside attack, so the SN2 step fails."
+  - q: "Why is the N–H of phthalimide acidic?"
+    a: "The nitrogen sits between two C=O groups, so the negative charge left after losing H⁺ is delocalised onto both oxygens. That is why ethanolic KOH converts phthalimide to potassium phthalimide easily."
+  - q: "Can tert-butylamine be made by Gabriel synthesis?"
+    a: "No. The key step is SN2 at carbon, and tertiary halides such as (CH₃)₃C–Br cannot undergo SN2; with the basic phthalimide anion they eliminate instead. Even secondary halides generally react poorly."
+  - q: "What is the Ing–Manske modification of Gabriel synthesis?"
+    a: "The N-alkylphthalimide is cleaved with hydrazine instead of alkali or acid. The amine is released and phthalhydrazide precipitates, which avoids the harsh hydrolysis conditions."
+related: ["ammonolysis-of-alkyl-halides", "hofmann-bromamide-degradation", "sn2-reaction", "preparation/preparation-of-amines", "tests/hinsberg-test", "carbylamine-reaction"]
+sources:
+  - title: "Amines (Class 12 Chemistry, Unit 9), section 9.4 Preparation of Amines"
+    url: "https://ncert.nic.in/textbook/pdf/lech204.pdf"
+    publisher: "NCERT"
+  - title: "Gabriel synthesis"
+    url: "https://en.wikipedia.org/wiki/Gabriel_synthesis"
+    publisher: "Wikipedia"
+  - title: "Gabriel Synthesis"
+    url: "https://www.organic-chemistry.org/namedreactions/gabriel-synthesis.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 3
+  note: "Partial double-bond character of the aryl C–X bond as the reason aniline cannot be made is standard exam teaching; NCERT states only that aryl halides do not undergo nucleophilic substitution with the phthalimide anion."
+---
+
+## What is the Gabriel phthalimide synthesis?
+
+The **Gabriel phthalimide synthesis** converts a **primary alkyl halide into a primary amine** without contamination by secondary or tertiary amines. **Phthalimide** is first turned into **potassium phthalimide** with ethanolic KOH; the imide anion displaces halide from R–X in an **SN2** reaction, and the resulting **N-alkylphthalimide** is then hydrolysed with aqueous alkali (or cleaved with hydrazine) to release **R–NH₂**. It is named after Siegmund Gabriel (1887).
+
+The phthalimide anion works as a protected, "one-use" version of NH₂⁻: once it carries one alkyl group, it has no N–H left and cannot be alkylated again.
+
+## Mechanism
+
+1. **Deprotonation.** The N–H of phthalimide is acidic because the anion is stabilised by both flanking C=O groups. Ethanolic KOH removes the proton, giving potassium phthalimide.
+
+<Eq ce="C6H4(CO)2NH + KOH -> C6H4(CO)2N^-K+ + H2O" />
+
+2. **N-Alkylation (SN2).** The nitrogen anion attacks the carbon of the alkyl halide from the back side and halide leaves, giving the N-alkylphthalimide. This needs an unhindered (primary, benzylic or allylic) carbon.
+
+<Eq ce="C6H4(CO)2N^-K+ + R-X ->[\Delta] C6H4(CO)2N-R + KX" />
+
+3. **Release of the amine.** Heating with aqueous NaOH or KOH attacks both C=O groups (nucleophilic acyl substitution), breaking the two C–N bonds. The primary amine is set free and the phthalic acid part is left as its salt.
+
+<Eq ce="C6H4(CO)2N-R + 2NaOH ->[\Delta] R-NH2 + C6H4(COONa)2" />
+
+<KeyPoint>
+Only primary amines are formed. The N-alkylphthalimide has no N–H, so there is no over-alkylation, which is the main problem with [ammonolysis of alkyl halides](/reactions/ammonolysis-of-alkyl-halides/).
+</KeyPoint>
+
+## Ways to free the amine
+
+| Cleavage step | Reagent | By-product | Comment |
+|---|---|---|---|
+| Alkaline hydrolysis (NCERT) | aqueous NaOH or KOH, heat | disodium/dipotassium phthalate | the version asked in board and NEET papers |
+| Acid hydrolysis | aqueous acid, heat | phthalic acid | amine comes out as its ammonium salt; often low yields |
+| Ing–Manske procedure | hydrazine (N₂H₄), ethanol | phthalhydrazide (precipitates) | milder; common in the lab |
+
+## Examples
+
+**Ethanamine from bromoethane**
+
+<Eq ce="C6H4(CO)2N^-K+ ->[CH3CH2Br][\Delta] C6H4(CO)2N-CH2CH3 ->[NaOH(aq)] CH3CH2NH2" />
+
+**Benzylamine from benzyl chloride.** Benzylic halides react well by SN2, so C₆H₅CH₂Cl gives C₆H₅CH₂NH₂.
+
+<Eq ce="C6H4(CO)2N^-K+ ->[C6H5CH2Cl] C6H4(CO)2N-CH2C6H5 ->[N2H4] C6H5CH2NH2" />
+
+## Limitations and exceptions
+
+- **Aromatic amines (aniline) cannot be made.** Aryl halides do not undergo nucleophilic substitution with the phthalimide anion: the C–X bond has partial double-bond character from resonance with the ring, and backside attack is impossible. Aniline is made by reducing nitrobenzene instead.
+- **tert-Alkyl primary amines such as (CH₃)₃C–NH₂ cannot be made**, because tertiary halides do not undergo SN2. Secondary halides also react poorly unless especially reactive.
+- **Secondary and tertiary amines are never products.** Gabriel synthesis is a method for 1° amines only.
+- The hydrolysis step needs fairly harsh heating; this is why the hydrazine work-up is often preferred in practice.
+
+<ExamTip>
+If a question asks for a primary amine "free from 2° and 3° amines" starting from an alkyl halide, the answer is Gabriel synthesis. If the target is aniline, or a tert-alkyl amine, Gabriel is the wrong choice.
+</ExamTip>
+
+## Related reactions
+
+- [Ammonolysis of alkyl halides](/reactions/ammonolysis-of-alkyl-halides/): the same R–X starting point but gives a mixture of amines.
+- [Hofmann bromamide degradation](/reactions/hofmann-bromamide-degradation/): another route to pure 1° amines, from amides, with one carbon fewer.
+- [SN2 reaction](/reactions/sn2-reaction/): the mechanism of the alkylation step.
+- [Preparation of amines](/preparation/preparation-of-amines/): all methods compared.
+- [Hinsberg test](/tests/hinsberg-test/) and [carbylamine reaction](/reactions/carbylamine-reaction/): tests that confirm a primary amine.

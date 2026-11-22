@@ -1,0 +1,121 @@
+---
+title: "Benzilic Acid Rearrangement"
+description: "Benzilic acid rearrangement converts a 1,2-diketone such as benzil into an α-hydroxy acid (benzilic acid) with hydroxide, then acid, by a 1,2-aryl shift."
+aliases: ["Benzil–benzilic acid rearrangement", "Benzil benzilic acid rearrangement", "B² rearrangement", "Benzilic ester rearrangement", "Benzillic acid rearrangement"]
+kind: "rearrangement"
+family: "rearrangement-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: []
+reactant:
+  name: "Benzil (1,2-diphenylethane-1,2-dione)"
+  smiles: "O=C(c1ccccc1)C(=O)c1ccccc1"
+product:
+  name: "Benzilic acid (2-hydroxy-2,2-diphenylacetic acid)"
+  smiles: "OC(=O)C(O)(c1ccccc1)c1ccccc1"
+byproducts: "None"
+reagents: "Concentrated KOH or NaOH, then H₃O⁺"
+conditions: "Heat in aqueous or alcoholic base; acidify to isolate the acid"
+equation: "C6H5COCOC6H5 ->[1. KOH][2. H3O+] (C6H5)2C(OH)COOH"
+notesPages: [79]
+memoryTricks:
+  - text: "ब्रह्मास्त्र"
+    meaning: "'Brahmastra' (ultimate weapon): shortcut — Step I, swap a phenyl across the two C=O carbons; Step II, write Ph₂C(OH)–COOH."
+faq:
+  - q: "What is the product of the benzilic acid rearrangement?"
+    a: "An α-hydroxy carboxylic acid. Benzil, C₆H₅COCOC₆H₅, gives benzilic acid, (C₆H₅)₂C(OH)COOH, after treatment with hydroxide and then acid."
+  - q: "What is the essential condition for the benzilic acid rearrangement?"
+    a: "The substrate must be a 1,2-dicarbonyl compound (–CO–CO–). It works best when the carbonyls have no neighbouring enolisable hydrogens, because otherwise aldol reactions compete."
+  - q: "Which step is rate-determining in the benzilic acid rearrangement?"
+    a: "The 1,2-migration of the aryl group from the alkoxide carbon to the neighbouring carbonyl carbon. Hydroxide addition before it is a fast equilibrium, and the rate is first order in diketone and first order in base."
+  - q: "What happens to a cyclic 1,2-diketone in the benzilic acid rearrangement?"
+    a: "The ring contracts by one carbon. Phenanthrene-9,10-quinone, for example, gives 9-hydroxyfluorene-9-carboxylic acid."
+  - q: "How is the benzilic acid rearrangement related to the Cannizzaro reaction?"
+    a: "Both start with hydroxide adding to a carbonyl and the alkoxide pushing a group to the neighbouring carbonyl carbon. When the migrating group is hydride, as in α-keto aldehydes, the reaction is an intramolecular Cannizzaro reaction."
+related: ["benzoin-condensation", "cannizzaro-reaction", "pinacol-pinacolone-rearrangement", "favorskii-rearrangement", "reagents/selenium-dioxide"]
+sources:
+  - title: "Benzilic acid rearrangement"
+    url: "https://en.wikipedia.org/wiki/Benzilic_acid_rearrangement"
+    publisher: "Wikipedia"
+  - title: "3.3: Rearrangements (Organic Synthesis, Shea)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Synthesis_(Shea)/03:_Neighboring_Group_Participation_Rearrangements_and_Fragmentations/3.03:_Rearrangements"
+    publisher: "Chemistry LibreTexts"
+  - title: "Benzilic Acid Rearrangement (Organic Chemistry Glossary)"
+    url: "https://chem.libretexts.org/Bookshelves/Ancillary_Materials/Reference/Organic_Chemistry_Glossary/Benzilic_Acid_Rearrangement"
+    publisher: "Chemistry LibreTexts"
+  - title: "Cannizzaro Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/cannizzaro-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 4
+---
+
+## What is the benzilic acid rearrangement?
+
+The **benzilic acid rearrangement** is the base-promoted conversion of a **1,2-diketone into an α-hydroxy carboxylic acid**. Hydroxide adds to one carbonyl, and a group on that carbon (usually an aryl group) **migrates to the neighbouring carbonyl carbon**. Acidification then gives the free acid. The name comes from the classic example: **benzil** with KOH gives **benzilic acid**, (C₆H₅)₂C(OH)COOH. Liebig carried it out in 1838, which makes it the first rearrangement reaction ever reported.
+
+Essential condition: a **–CO–CO–** unit (1,2-dicarbonyl). Reagent: **concentrated base**, then acid.
+
+## Mechanism
+
+1. **Hydroxide addition.** OH⁻ attacks one carbonyl carbon of benzil, giving a tetrahedral alkoxide, C₆H₅CO–C(O⁻)(OH)C₆H₅. This step is a fast, reversible equilibrium.
+2. **1,2-Aryl shift.** The alkoxide re-forms a C=O bond and, at the same time, the phenyl group on that carbon moves with its bonding pair to the adjacent carbonyl carbon. That carbonyl oxygen becomes an alkoxide. This migration is the **rate-determining step**.
+3. **Proton transfer.** The intermediate (C₆H₅)₂C(O⁻)–COOH contains a carboxylic acid and a much more basic alkoxide, so the proton moves to give the carboxylate (C₆H₅)₂C(OH)COO⁻.
+4. **Acid work-up.** H₃O⁺ protonates the carboxylate to benzilic acid.
+
+<Eq ce="C6H5COCOC6H5 + OH- <=> C6H5CO-C(O-)(OH)C6H5" />
+<Eq ce="C6H5CO-C(O-)(OH)C6H5 -> (C6H5)2C(O-)-COOH -> (C6H5)2C(OH)COO-" />
+<Eq ce="(C6H5)2C(OH)COO- + H3O+ -> (C6H5)2C(OH)COOH + H2O" />
+
+<KeyPoint>
+One carbon is oxidised (it becomes the COOH carbon) and the other is reduced (it becomes the C–OH carbon), so the rearrangement is an intramolecular redox reaction. The rate is first order in diketone and first order in hydroxide.
+</KeyPoint>
+
+<Trick>
+Shortcut (ब्रह्मास्त्र): Step I, move one phenyl across so both phenyls sit on the same carbon. Step II, write that carbon as C(OH) and the other as COOH: Ph₂C(OH)–COOH.
+</Trick>
+
+## Hydride migration: intramolecular Cannizzaro
+
+If the group that migrates is **H (or D, T)** instead of an aryl or alkyl group, the same pathway is an **intramolecular Cannizzaro reaction**. α-Keto aldehydes do this cleanly; phenylglyoxal gives mandelic acid:
+
+<Eq ce="C6H5COCHO ->[1. OH-][2. H3O+] C6H5CH(OH)COOH" />
+
+If any other group migrates, it is called the benzilic acid (B²) rearrangement.
+
+## Migratory aptitude
+
+- **Aryl groups migrate more readily than alkyl groups.**
+- Aryl groups carrying **electron-withdrawing substituents migrate fastest**, so an unsymmetrical benzil moves its more electron-poor aryl group.
+
+## Examples
+
+**Benzil to benzilic acid:**
+
+<Eq ce="C6H5COCOC6H5 ->[1. KOH, \Delta][2. H3O+] (C6H5)2C(OH)COOH" />
+
+**Ring contraction.** In a cyclic 1,2-diketone the migrating group is a ring bond, so the ring shrinks by one carbon. Phenanthrene-9,10-quinone gives 9-hydroxyfluorene-9-carboxylic acid (a six-membered central ring becomes five-membered):
+
+<Eq ce="C14H8O2 ->[1. OH-][2. H3O+] C14H10O3" />
+
+The quinone itself can be made by oxidising the CH₂ next to the C=O of 9(10H)-phenanthrenone with [selenium dioxide](/reagents/selenium-dioxide/), so "SeO₂, then OH⁻" questions end in the same ring-contracted acid.
+
+**Benzilic ester rearrangement.** With an alkoxide (RO⁻) instead of hydroxide, the product is the **α-hydroxy ester**, e.g. Ph₂C(OH)COOR. Alkoxides that are easily oxidised can instead reduce the diketone by a Meerwein–Ponndorf–Verley-type side reaction.
+
+<ExamTip>
+After a benzilic acid rearrangement, the two groups that started on different carbons end up on the same carbon, next to both the OH and the COOH. Count carbons: the product has the same number of carbons as the diketone (plus the ester alkyl group if an alkoxide is used).
+</ExamTip>
+
+## Limitations
+
+- Diketones with **enolisable α-hydrogens** can undergo aldol condensation in base, lowering the yield.
+- The two carbonyl groups must be on adjacent carbons; the shift needs a carbonyl carbon right next to the alkoxide carbon.
+
+## Related reactions
+
+- [Benzoin condensation](/reactions/benzoin-condensation/): makes benzoin, which nitric acid oxidises to benzil.
+- [Cannizzaro reaction](/reactions/cannizzaro-reaction/): the hydride-migration analogue.
+- [Favorskii rearrangement](/reactions/favorskii-rearrangement/): another base-promoted rearrangement that gives carboxylic acid derivatives and ring contraction.
+- [Pinacol–pinacolone rearrangement](/reactions/pinacol-pinacolone-rearrangement/): a 1,2-shift through a cation rather than an anion.
+- Hub: [rearrangement reactions](/mechanisms/rearrangement-reactions/).

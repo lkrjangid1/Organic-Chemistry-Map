@@ -1,0 +1,122 @@
+---
+title: "Henry Reaction (Nitroaldol Reaction)"
+description: "The Henry (nitroaldol) reaction joins a nitroalkane and an aldehyde or ketone with a base to give a β-nitro alcohol, which can dehydrate to a nitroalkene."
+aliases: ["Nitroaldol reaction", "Nitroaldol condensation", "Henry condensation", "Nitro aldol reaction"]
+kind: "named-reaction"
+family: "carbonyl-condensation-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: []
+reactant:
+  name: "Acetaldehyde (ethanal)"
+  smiles: "CC=O"
+product:
+  name: "1-Nitropropan-2-ol"
+  smiles: "CC(O)C[N+](=O)[O-]"
+byproducts: "None in the addition step; H₂O if the β-nitro alcohol dehydrates"
+reagents: "Nitroalkane (e.g. CH₃NO₂) with a catalytic base such as OH⁻, an alkoxide, a carbonate or an amine"
+conditions: "Small amount of base, room temperature; heating or excess base causes dehydration to the nitroalkene"
+equation: "CH3CHO + CH3NO2 ->[OH-] CH3CH(OH)CH2NO2"
+notesPages: [73]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Henry reaction?"
+    a: "A β-nitro alcohol. The carbon next to the nitro group bonds to the carbonyl carbon and the C=O oxygen becomes an OH. Acetaldehyde and nitromethane give 1-nitropropan-2-ol, CH₃CH(OH)CH₂NO₂."
+  - q: "Why is the Henry reaction called the nitroaldol reaction?"
+    a: "It follows the same pattern as the aldol reaction, except that the nucleophile is a nitronate ion from a nitroalkane instead of an enolate. The product has an OH on the carbon β to the nitro group, just as an aldol has an OH β to the carbonyl."
+  - q: "Why can a weak base like OH⁻ deprotonate nitromethane?"
+    a: "The C–H next to a nitro group is unusually acidic (pKa about 9) because the negative charge of the nitronate ion is delocalised onto both nitro oxygens. Only a catalytic amount of base is needed."
+  - q: "What happens to the Henry product on heating?"
+    a: "If the carbon bearing the nitro group still has a hydrogen, the β-nitro alcohol loses water to give a conjugated nitroalkene. Benzaldehyde and nitromethane, for example, end up as β-nitrostyrene."
+  - q: "What are Henry reaction products used for?"
+    a: "Reducing the nitro group gives β-amino alcohols, oxidising the alcohol gives α-nitro ketones and dehydration gives nitroalkenes. These routes appear in syntheses of drugs such as the β-blocker propranolol."
+related: ["aldol-condensation", "cross-aldol-condensation", "knoevenagel-condensation", "michael-addition", "cannizzaro-reaction", "mechanisms/carbonyl-condensation-reactions"]
+sources:
+  - title: "Henry reaction"
+    url: "https://en.wikipedia.org/wiki/Henry_reaction"
+    publisher: "Wikipedia"
+  - title: "Henry Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/henry-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "8.5: Acidity of Alpha Hydrogen Atoms – Enolate Ion Formation"
+    url: "https://chem.libretexts.org/Courses/can/CHEM_232_-_Organic_Chemistry_II_(Puenzo)/08:_Carbonyl_Alpha-Substitution_Reactions/8.05:_Acidity_of_Alpha_Hydrogen_Atoms-_Enolate_Ion_Formation"
+    publisher: "Chemistry LibreTexts"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 3
+---
+
+## What is the Henry reaction?
+
+The **Henry reaction**, also called the **nitroaldol reaction**, is the base-catalysed addition of a **nitroalkane** to an **aldehyde or ketone** to give a **β-nitro alcohol**. A small amount of base removes the acidic α-hydrogen of the nitroalkane, and the resulting nitronate carbanion attacks the carbonyl carbon, just as an enolate does in the aldol reaction. It was discovered in 1895 by the Belgian chemist Louis Henry.
+
+## General reaction
+
+<Eq ce="R-CHO + R'CH2NO2 ->[base] R-CH(OH)-CH(R')NO2" />
+
+The new C–C bond joins the carbonyl carbon to the carbon that carries the nitro group. The OH ends up on the carbon **β to the nitro group**, which is why the product is called a β-nitro alcohol (or β-hydroxy nitro compound).
+
+## Why nitroalkanes react like carbonyl compounds
+
+A C–H bond next to an –NO₂ group is strongly acidic. Typical pKa values are about **9 for R–CH₂–NO₂**, compared with about 17 for an aldehyde α-H and 20 for a ketone α-H. The negative charge on the conjugate base (the **nitronate ion**) is spread onto both oxygens of the nitro group, so even hydroxide or a mild amine base can form it.
+
+<KeyPoint>
+The nitro group plays the role that the C=O plays in an aldol reaction: it makes the neighbouring hydrogen acidic and stabilises the carbanion. Only a catalytic amount of base is required.
+</KeyPoint>
+
+## Mechanism
+
+1. **Deprotonation.** OH⁻ removes an α-hydrogen from nitromethane, giving the resonance-stabilised nitronate ion, ⁻CH₂–NO₂ ⟷ CH₂=N⁺(O⁻)O⁻.
+2. **Nucleophilic addition.** The carbon end of the nitronate attacks the carbonyl carbon of the aldehyde, forming a β-nitro alkoxide. (The nitronate oxygens are also nucleophilic, but the observed product comes from carbon attack.)
+3. **Protonation.** The alkoxide takes a proton from water (the conjugate acid of the base), giving the β-nitro alcohol and regenerating OH⁻.
+
+<Eq ce="CH3NO2 + OH- <=> ^-CH2NO2 + H2O" />
+<Eq ce="CH3CHO + ^-CH2NO2 -> CH3CH(O^-)CH2NO2 ->[H2O] CH3CH(OH)CH2NO2 + OH-" />
+
+Every step is **reversible**. The reverse process (retro-Henry) can lower yields, because there is no single step that locks the product in.
+
+## Examples
+
+**1. Acetaldehyde and nitromethane.** The simplest exam example gives 1-nitropropan-2-ol.
+
+<Eq ce="CH3CHO + CH3NO2 ->[OH-] CH3CH(OH)CH2NO2" />
+
+**2. Benzaldehyde and nitromethane, then dehydration.** The first product still has hydrogens on the nitro-bearing carbon, so on warming or with more base it loses water to give the conjugated nitroalkene, β-nitrostyrene.
+
+<Eq ce="C6H5CHO + CH3NO2 ->[base] C6H5CH(OH)CH2NO2 ->[-H2O] C6H5CH=CHNO2" />
+
+**3. A ketone as the acceptor.** Ketones react the same way but more slowly, because their C=O carbon is more hindered and less electrophilic. Acetone and nitromethane give 2-methyl-1-nitropropan-2-ol.
+
+<Eq ce="(CH3)2C=O + CH3NO2 ->[base] (CH3)2C(OH)CH2NO2" />
+
+<ExamTip>
+To spot the Henry product, join the carbonyl carbon to the carbon that carried the nitro group and turn C=O into C–OH. If the question says "heat" or "excess base", go one step further and remove H₂O to make the C=C conjugated with NO₂.
+</ExamTip>
+
+## What the products are used for
+
+The β-nitro alcohol is a versatile intermediate:
+
+| Next step | Product |
+|---|---|
+| Dehydration | Nitroalkene (good Michael acceptor) |
+| Reduction of –NO₂ (e.g. H₂/catalyst) | β-Amino alcohol |
+| Oxidation of the secondary –OH | α-Nitro ketone |
+
+These conversions have been used in syntheses of the β-blocker (S)-propranolol and of the sugar unit of anthracycline antibiotics.
+
+## Limitations and exceptions
+
+- **Reversibility:** retro-Henry cleavage competes, so yields are often moderate.
+- **Unwanted dehydration:** if the β-nitro alcohol itself is wanted, only a small amount of base should be used; excess base favours the nitroalkene.
+- **Stereochemistry:** the nitro-bearing carbon epimerises easily, so simple Henry reactions give mixtures of stereoisomers. Chiral metal catalysts (Cu, Zn and others) are used for selective versions.
+- **Side reactions:** hindered aldehydes without α-H may undergo the Cannizzaro reaction instead.
+
+## Related reactions
+
+- [Aldol condensation](/reactions/aldol-condensation/): the parent reaction, with an enolate as the nucleophile.
+- [Cross aldol condensation](/reactions/cross-aldol-condensation/): two different carbonyl partners.
+- [Knoevenagel condensation](/reactions/knoevenagel-condensation/): active methylene compounds (including nitroalkanes) condensing with aldehydes, followed by dehydration.
+- [Michael addition](/reactions/michael-addition/): nitroalkenes from the Henry reaction are classic Michael acceptors.
+- [Cannizzaro reaction](/reactions/cannizzaro-reaction/): a side reaction of aldehydes without α-H in strong base.
+- Hub: [Carbonyl condensation reactions](/mechanisms/carbonyl-condensation-reactions/)

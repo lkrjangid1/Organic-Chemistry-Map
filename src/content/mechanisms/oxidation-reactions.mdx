@@ -1,0 +1,132 @@
+---
+title: "Oxidation Reactions in Organic Chemistry"
+description: "Oxidation reactions for JEE and NEET: oxidation states of carbon, oxidising alcohols with PCC, KMnO₄, K₂Cr₂O₇, Cu at 573 K, and a reagent-selection table."
+exams: ["jee-main", "jee-advanced", "neet"]
+order: 80
+notesPages: [53, 56, 100]
+faq:
+  - q: "What is oxidation in organic chemistry?"
+    a: "Oxidation is any change that adds oxygen to a molecule, removes hydrogen from it, or removes electrons, so that the oxidation number of carbon goes up. Converting an alcohol into an aldehyde removes two hydrogens and is therefore an oxidation."
+  - q: "Why are tertiary alcohols not oxidised easily?"
+    a: "Oxidation to a carbonyl needs a hydrogen on the carbon that carries the OH. A tertiary alcohol has none, so it resists mild oxidants; strong oxidants at high temperature break C–C bonds and give a mixture of acids with fewer carbons."
+  - q: "What happens when alcohol vapours are passed over heated copper at 573 K?"
+    a: "Primary alcohols are dehydrogenated to aldehydes and secondary alcohols to ketones, with loss of H₂. Tertiary alcohols cannot lose hydrogen this way, so they are dehydrated to alkenes instead; tert-butyl alcohol gives 2-methylpropene."
+  - q: "Which reagent oxidises a primary alcohol only to an aldehyde?"
+    a: "An anhydrous Cr(VI) reagent such as PCC in CH₂Cl₂ (also PDC in CH₂Cl₂ or Collins reagent), or Cu at 573 K. Aqueous oxidants like KMnO₄, Jones reagent or acidified K₂Cr₂O₇ continue to the carboxylic acid."
+  - q: "Why is chloroform stored in dark bottles filled to the top?"
+    a: "In light and air chloroform is slowly oxidised to phosgene (COCl₂), a very poisonous gas: 2CHCl₃ + O₂ → 2COCl₂ + 2HCl. Dark, completely filled bottles keep out light and air, and a little ethanol is added to destroy any phosgene formed."
+sources:
+  - title: "NCERT Chemistry Part II, Class 12, Unit 7: Alcohols, Phenols and Ethers"
+    url: "https://ncert.nic.in/textbook/pdf/lech202.pdf"
+    publisher: "NCERT"
+  - title: "NCERT Chemistry Part II, Class 12, Unit 6: Haloalkanes and Haloarenes"
+    url: "https://ncert.nic.in/textbook/pdf/lech201.pdf"
+    publisher: "NCERT"
+  - title: "Alcohol oxidation"
+    url: "https://en.wikipedia.org/wiki/Alcohol_oxidation"
+    publisher: "Wikipedia"
+  - title: "Chloroform (conversion to phosgene)"
+    url: "https://en.wikipedia.org/wiki/Chloroform"
+    publisher: "Wikipedia"
+  - title: "Jones oxidation"
+    url: "https://en.wikipedia.org/wiki/Jones_oxidation"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 5
+---
+
+## What is an oxidation reaction?
+
+In organic chemistry, **oxidation** is any change that **adds oxygen**, **removes hydrogen** or **removes electrons**, so that the **oxidation number of carbon increases**. Reduction is the opposite. Turning an alcohol into an aldehyde is an oxidation because two hydrogens are lost; NCERT points out that alcohol oxidations are therefore also called **dehydrogenation** reactions.
+
+<KeyPoint>
+Oxidation = gain of O, loss of H, loss of e⁻, rise in oxidation number. One oxidation step usually means one more C–O bond or one fewer C–H bond on the carbon that changes.
+</KeyPoint>
+
+## The oxidation-state ladder of carbon
+
+Counting C–H bonds as −1 and C–O bonds as +1 for each carbon gives a ladder that every oxidation question climbs:
+
+| Compound | Functional carbon | Oxidation number of that C |
+|---|---|---|
+| CH₄ | alkane | −4 |
+| CH₃OH | alcohol | −2 |
+| HCHO | aldehyde | 0 |
+| HCOOH | carboxylic acid | +2 |
+| CO₂ | carbon dioxide | +4 |
+
+The same pattern holds for larger molecules: alkane → alcohol → aldehyde or ketone → carboxylic acid → CO₂. A **ketone cannot be oxidised further without breaking a C–C bond**, which is why ketones resist mild oxidants.
+
+## Oxidation of alcohols
+
+- **1° alcohol** → aldehyde → carboxylic acid (two steps; the second needs water, which converts the aldehyde to its hydrate).
+- **2° alcohol** → ketone, and normally stops there.
+- **3° alcohol** → no oxidation under normal conditions, because there is no hydrogen on the carbinol carbon. Strong oxidants (hot KMnO₄) at high temperature break C–C bonds and give a mixture of acids with fewer carbon atoms.
+
+In exam answers the ease of oxidation is written as **1° greater than 2° greater than 3°** (3° alcohols do not oxidise, ऑक्सीकरण नहीं होता है). With Cr(VI) reagents the chromate ester breaks down by loss of the α-hydrogen, and that C–H cleavage is the slow step; a tertiary alcohol forms the ester but has no α-hydrogen to lose.
+
+## Copper at 573 K: dehydrogenation vs dehydration
+
+When alcohol vapours are passed over **heated copper at 573 K (300 °C)**, primary and secondary alcohols lose H₂, while tertiary alcohols lose H₂O instead.
+
+| Alcohol | Product over Cu, 573 K | Change |
+|---|---|---|
+| Ethanol (1°) | acetaldehyde | dehydrogenation |
+| Propan-2-ol (2°) | acetone | dehydrogenation |
+| 2-Methylpropan-2-ol (3°) | 2-methylpropene | dehydration |
+
+<Eq ce="CH3CH2OH ->[Cu][573 K] CH3CHO + H2" />
+
+<Eq ce="(CH3)2CHOH ->[Cu][573 K] (CH3)2C=O + H2" />
+
+<Eq ce="(CH3)3C-OH ->[Cu][573 K] (CH3)2C=CH2 + H2O" />
+
+<ExamTip>
+Cu at 573 K is the classic test of alcohol class without a solution reagent: aldehyde means 1°, ketone means 2°, alkene means 3°.
+</ExamTip>
+
+## Choosing the oxidising agent
+
+| Reagent | 1° alcohol gives | 2° alcohol gives | Touches C=C? | Page |
+|---|---|---|---|---|
+| PCC in CH₂Cl₂ | aldehyde | ketone | no | [PCC](/reagents/pyridinium-chlorochromate/) |
+| PDC in CH₂Cl₂ / in DMF | aldehyde / acid | ketone | no | [PDC](/reagents/pyridinium-dichromate/) |
+| Collins / Sarett reagent (CrO₃·2py) | aldehyde | ketone | no | [PCC page, comparison](/reagents/pyridinium-chlorochromate/) |
+| Cu, 573 K | aldehyde | ketone | — | this page |
+| MnO₂ | only allylic/benzylic → aldehyde | only allylic/benzylic → ketone | no | [MnO₂](/reagents/manganese-dioxide/) |
+| Al(OtBu)₃ + acetone | (rarely used) | ketone | no | [Oppenauer oxidation](/reactions/oppenauer-oxidation/) |
+| Jones reagent (CrO₃/H₂SO₄, acetone) | carboxylic acid | ketone | usually no | [Jones reagent](/reagents/jones-reagent/) |
+| K₂Cr₂O₇ / H₂SO₄ | acid (aldehyde if distilled out) | ketone | slowly | [K₂Cr₂O₇](/reagents/potassium-dichromate/) |
+| KMnO₄ (acidic or alkaline, hot) | carboxylic acid | ketone (may cleave) | yes | [KMnO₄](/reagents/potassium-permanganate/) |
+| SeO₂ | — | oxidises allylic C–H and α-CH₂ of carbonyls | — | [SeO₂](/reagents/selenium-dioxide/) |
+
+The rule behind the table: **water present means over-oxidation of aldehydes**, because the aldehyde hydrate, RCH(OH)₂, is oxidised again. Anhydrous reagents (PCC, PDC or Collins in CH₂Cl₂) stop at the aldehyde.
+
+## Oxidation of other functional groups
+
+- **Alkenes.** Cold dilute KMnO₄ gives a syn-diol; peracids give epoxides ([Prilezhaev epoxidation](/reactions/prilezhaev-epoxidation/)); [ozonolysis](/reactions/ozonolysis/) and hot KMnO₄ cleave the C=C; PdCl₂/CuCl₂/O₂ gives a carbonyl compound without cleavage ([Wacker oxidation](/reactions/wacker-oxidation/)). [Hydroboration–oxidation](/reactions/hydroboration-oxidation/) uses H₂O₂ to give the anti-Markovnikov alcohol.
+- **Vicinal diols.** HIO₄ cuts the C–C bond between the two OH groups ([Malaprade oxidation](/reactions/malaprade-oxidation/)).
+- **Methylarenes.** Chromyl chloride stops at the aldehyde ([Étard reaction](/reactions/etard-reaction/)); KMnO₄ takes any benzylic side chain to benzoic acid.
+- **Ketones.** Peracids insert an oxygen next to the C=O ([Baeyer–Villiger oxidation](/reactions/baeyer-villiger-oxidation/)).
+- **Phenols.** Persulphate introduces a second OH ([Elbs persulphate oxidation](/reactions/elbs-persulphate-oxidation/)).
+- **Aldehydes.** Mild oxidants such as Tollens' and Fehling's reagents oxidise aldehydes but not ketones, the basis of [Tollens' test](/tests/tollens-test/) and [Fehling's test](/tests/fehling-test/). Methyl ketones are cleaved by halogen in alkali ([haloform reaction](/reactions/haloform-reaction/)).
+
+## Air oxidation of chloroform to phosgene
+
+Chloroform is slowly oxidised by **air in the presence of light** to **phosgene** (carbonyl chloride, COCl₂), an extremely poisonous gas, with HCl as the other product.
+
+<Eq ce="2CHCl3 + O2 ->[light] 2COCl2 + 2HCl" />
+
+Here the carbon climbs from +2 in CHCl₃ to +4 in COCl₂. To prevent this, chloroform is stored in **closed, dark-coloured bottles filled to the top** so that light and air are excluded, and commercial chloroform contains a little **ethanol**, which converts any phosgene into harmless diethyl carbonate.
+
+<Eq ce="COCl2 + 2C2H5OH -> (C2H5O)2CO + 2HCl" />
+
+## Member pages
+
+Reagents: [PCC](/reagents/pyridinium-chlorochromate/), [PDC](/reagents/pyridinium-dichromate/), [Jones reagent](/reagents/jones-reagent/), [potassium dichromate](/reagents/potassium-dichromate/), [potassium permanganate](/reagents/potassium-permanganate/), [manganese dioxide](/reagents/manganese-dioxide/), [selenium dioxide](/reagents/selenium-dioxide/).
+
+Reactions: [Oppenauer oxidation](/reactions/oppenauer-oxidation/), [Malaprade oxidation](/reactions/malaprade-oxidation/), [Wacker oxidation](/reactions/wacker-oxidation/), [Étard reaction](/reactions/etard-reaction/).
+
+The reverse processes are collected in [Reduction reactions](/mechanisms/reduction-reactions/).

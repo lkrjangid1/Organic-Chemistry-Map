@@ -1,0 +1,113 @@
+---
+title: "Fries Rearrangement"
+description: "Fries rearrangement: a phenyl ester heated with AlCl₃ gives o- and p-hydroxyaryl ketones; low temperature favours para, high temperature ortho. Mechanism."
+aliases: ["Fries reaction", "Fries rearrangment", "Phenyl acetate to hydroxyacetophenone", "Photo-Fries rearrangement", "Acyl migration of phenolic esters"]
+kind: "rearrangement"
+family: "rearrangement-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["r4", "fries-rearrangement"]
+reactant:
+  name: "Phenyl acetate"
+  smiles: "CC(=O)Oc1ccccc1"
+product:
+  name: "4-Hydroxyacetophenone (para product, favoured at low temperature)"
+  smiles: "CC(=O)c1ccc(O)cc1"
+byproducts: "2-Hydroxyacetophenone (ortho isomer); aluminium salts after work-up"
+reagents: "Anhydrous AlCl₃ (more than one equivalent), then aqueous acid work-up; BF₃, TiCl₄, SnCl₄, HF or sulphonic acids also work"
+conditions: "Low temperature favours the para product; high temperature favours the ortho product; non-polar solvents favour ortho"
+equation: "C6H5OCOCH3 ->[1. AlCl3][2. H3O+] 2-HOC6H4COCH3 + 4-HOC6H4COCH3"
+notesPages: [101]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Fries rearrangement of phenyl acetate?"
+    a: "A mixture of 2-hydroxyacetophenone (ortho) and 4-hydroxyacetophenone (para). The acetyl group moves from the phenolic oxygen to a ring carbon."
+  - q: "Why is the ortho product major at high temperature in the Fries rearrangement?"
+    a: "The ortho hydroxy ketone forms a stable chelate (bidentate complex) with aluminium through its OH and C=O oxygens, so it is the thermodynamic product. At low temperature the reaction is under kinetic control and the para product dominates."
+  - q: "Is the Fries rearrangement intramolecular or intermolecular?"
+    a: "It can be both. The acylium ion released from the ester–AlCl₃ complex can react with its own aryl ring inside the solvent cage, or escape and acylate a different molecule, so crossover products can form."
+  - q: "Why can't phenol be acylated directly by Friedel–Crafts acylation?"
+    a: "With an acyl chloride and AlCl₃, phenol reacts at oxygen and forms an ester instead of a hydroxyaryl ketone. The Fries rearrangement then converts that ester into the ring-acylated product."
+  - q: "Why is more than one equivalent of AlCl₃ needed?"
+    a: "AlCl₃ forms complexes with the oxygen atoms of both the starting ester and the hydroxy ketone product, so it is consumed and must be used in at least stoichiometric amount."
+related: ["friedel-crafts-acylation", "claisen-rearrangement", "schotten-baumann-reaction", "kolbe-schmitt-reaction", "mechanisms/rearrangement-reactions", "mechanisms/electrophilic-aromatic-substitution", "mechanisms/reactions-of-phenols"]
+sources:
+  - title: "Fries rearrangement"
+    url: "https://en.wikipedia.org/wiki/Fries_rearrangement"
+    publisher: "Wikipedia"
+  - title: "Fries Rearrangement"
+    url: "https://www.organic-chemistry.org/namedreactions/fries-rearrangement.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 2
+  note: "Notes call it an intermolecular rearrangement; sources say the acylium ion can react within the solvent cage or with another molecule, so the page presents both pathways."
+---
+
+## What is the Fries rearrangement?
+
+The **Fries rearrangement** is the Lewis-acid-catalysed conversion of a **phenolic ester** (an aryl ester) into a **hydroxyaryl ketone**. Heating **phenyl acetate** with **anhydrous AlCl₃** moves the acyl group from oxygen to the ring, giving a mixture of **2-hydroxyacetophenone (ortho)** and **4-hydroxyacetophenone (para)**. The ratio is controlled by temperature: **low temperature favours para, high temperature favours ortho**. It is named after the German chemist Karl Theophil Fries.
+
+## General reaction
+
+<Eq ce="C6H5-O-CO-R ->[AlCl3][then H3O+] 2-HO-C6H4-CO-R + 4-HO-C6H4-CO-R" />
+
+The ester is usually made first from the phenol and an acyl chloride or anhydride. Phenol itself cannot be ring-acylated by [Friedel–Crafts acylation](/reactions/friedel-crafts-acylation/): under those conditions it reacts at oxygen and gives the ester, which is exactly the Fries substrate.
+
+## Mechanism
+
+1. **Ester formation (if starting from phenol).** The phenolic oxygen attacks the acyl chloride, chloride leaves, and the phenyl ester C₆H₅–O–CO–R forms.
+2. **Complexation.** AlCl₃ coordinates to an oxygen of the ester, which weakens the O–C(acyl) bond.
+3. **Acylium ion.** The complex breaks into an **acylium ion, R–C≡O⁺**, and an aluminium phenoxide, C₆H₅–O–AlCl₃⁻.
+4. **Electrophilic attack.** The O–Al phenoxide is strongly electron-donating, so its ortho and para carbons attack the acylium ion (an electrophilic aromatic substitution). A cyclohexadienone intermediate forms.
+5. **Rearomatisation.** Loss of the ring proton (tautomerisation) restores the aromatic ring.
+6. **Work-up.** Aqueous acid breaks the O–Al bond and liberates the free hydroxyaryl ketone.
+
+<Eq ce="C6H5OCOR + AlCl3 -> C6H5O-AlCl3^- + RCO+ -> 2/4-(RCO)C6H4OAlCl2 ->[H3O+] 2/4-(RCO)C6H4OH" />
+
+<KeyPoint>
+**Intramolecular or intermolecular?** The acylium ion and the phenoxide can recombine inside the solvent cage (an ion pair, effectively intramolecular), or the acylium ion can drift away and acylate another molecule (intermolecular). Both happen, so crossover products are possible. Many exam answers describe it simply as intermolecular, because the acyl group fully separates as a free acylium ion.
+</KeyPoint>
+
+## Temperature control of ortho and para
+
+| Condition | Major product | Why |
+|---|---|---|
+| Low temperature | para-hydroxyaryl ketone | Kinetic control: para attack is faster and less hindered |
+| High temperature | ortho-hydroxyaryl ketone | Thermodynamic control: the ortho product forms a stable chelate with Al |
+| Non-polar solvent | more ortho | Observed solvent effect |
+| More polar solvent | more para | The para share rises as solvent polarity increases |
+
+<ExamTip>
+Remember "**low–para, high–ortho**". The ortho product is the thermodynamic one because its OH and C=O oxygens grip the aluminium in a six-membered chelate. At high temperature the reaction can reach this more stable product.
+</ExamTip>
+
+## Examples
+
+**1. Phenyl acetate (low temperature) → 4-hydroxyacetophenone:**
+
+<Eq ce="C6H5OCOCH3 ->[AlCl3, low temp.][then H3O+] 4-HOC6H4COCH3" />
+
+**2. Phenyl acetate (high temperature) → 2-hydroxyacetophenone:**
+
+<Eq ce="C6H5OCOCH3 ->[AlCl3, high temp.][then H3O+] 2-HOC6H4COCH3" />
+
+**3. Para position blocked:** p-tolyl acetate (4-methylphenyl acetate) can only be acylated ortho to the OH, so it gives 2-hydroxy-5-methylacetophenone.
+
+<Eq ce="4-CH3C6H4OCOCH3 ->[AlCl3][then H3O+] 2-HO-5-CH3C6H3COCH3" />
+
+## Limitations and variations
+
+- The acyl group must survive the harsh, strongly acidic conditions.
+- Heavily substituted (crowded) esters give low yields.
+- Strongly deactivating, meta-directing groups on the ring slow or stop the reaction, as in Friedel–Crafts acylation.
+- AlCl₃ reacts violently with water and is needed in excess; protic acids such as HF or methanesulphonic acid are alternatives.
+- **Photo-Fries rearrangement:** UV light gives the same o/p ketones through a radical pathway. It works even with deactivating groups but yields are low, so it is not used industrially. It also slowly degrades aromatic polyester and polycarbonate plastics in sunlight.
+
+## Related reactions
+
+- [Friedel–Crafts acylation](/reactions/friedel-crafts-acylation/): same acylium-ion electrophile, but on rings that are not phenols.
+- [Claisen rearrangement](/reactions/claisen-rearrangement/): an allyl group (not acyl) moves from phenolic oxygen to the ring, by heat alone through a cyclic transition state.
+- [Schotten–Baumann reaction](/reactions/schotten-baumann-reaction/): a way to make the phenyl ester starting material.
+- [Kolbe–Schmitt reaction](/reactions/kolbe-schmitt-reaction/): another way to put a carbonyl group ortho to a phenolic OH.
+- [Rearrangement reactions](/mechanisms/rearrangement-reactions/), [Electrophilic aromatic substitution](/mechanisms/electrophilic-aromatic-substitution/) and [Reactions of phenols](/mechanisms/reactions-of-phenols/).

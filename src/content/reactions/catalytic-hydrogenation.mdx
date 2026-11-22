@@ -1,0 +1,137 @@
+---
+title: "Catalytic Hydrogenation"
+description: "Catalytic hydrogenation adds H₂ across C=C or C≡C over Ni, Pd or Pt to give alkanes by syn addition on the metal surface: mechanism, heat of hydrogenation."
+aliases: ["Hydrogenation of alkenes", "Catalytic reduction", "H2/Ni reduction", "H2/Pd-C reduction"]
+kind: "general-reaction"
+family: "reduction-reactions"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["hydrogenation_of_fat"]
+reactant:
+  name: "1,2-Dimethylcyclohexene"
+  smiles: "CC1=C(C)CCCC1"
+product:
+  name: "cis-1,2-Dimethylcyclohexane"
+  smiles: "C[C@H]1CCCC[C@H]1C"
+byproducts: "None (catalyst recovered unchanged)"
+reagents: "H₂ gas with finely divided Ni (Raney Ni), Pd (Pd/C) or Pt (PtO₂, Adams' catalyst)"
+conditions: "Room temperature and low H₂ pressure for Pd and Pt; higher temperature and pressure for Ni; solvent ethanol or acetic acid"
+equation: "CH2=CH2 + H2 ->[Ni, Pd or Pt] CH3-CH3"
+notesPages: [59]
+memoryTricks: []
+faq:
+  - q: "Is catalytic hydrogenation syn or anti addition?"
+    a: "Syn. Both hydrogen atoms are delivered from the metal surface to the same face of the alkene, so 1,2-dimethylcyclohexene gives cis-1,2-dimethylcyclohexane."
+  - q: "Which catalysts are used for catalytic hydrogenation?"
+    a: "Finely divided nickel (Raney nickel), palladium on charcoal (Pd/C) and platinum, usually as PtO₂ (Adams' catalyst). Homogeneous rhodium complexes such as Wilkinson's catalyst also hydrogenate alkenes."
+  - q: "What is heat of hydrogenation and what does it tell us?"
+    a: "It is the heat released when one mole of an alkene is hydrogenated to the alkane, about 30 kcal per mole for a simple alkene. A smaller heat of hydrogenation means a more stable alkene, so more substituted and trans alkenes have lower values."
+  - q: "Does H₂/Ni reduce carboxylic acids?"
+    a: "No. Under ordinary hydrogenation conditions carboxylic acids, esters and amides are left alone. Aldehydes, ketones, nitriles and nitro groups can be reduced, especially with Raney nickel or under heat and pressure."
+  - q: "How is vegetable oil converted into vanaspati ghee?"
+    a: "By catalytic hydrogenation of the C=C bonds in the unsaturated fatty acid chains over a nickel catalyst at elevated temperature and pressure, which turns liquid oils into semi-solid fats."
+related: ["reagents/wilkinsons-catalyst", "reagents/lindlar-catalyst", "diimide-reduction", "birch-reduction", "comparisons/alkene-stability-heat-of-hydrogenation", "reduction-of-nitrobenzene"]
+sources:
+  - title: "Catalytic Hydrogenation of Alkenes II"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Alkenes/Reactivity_of_Alkenes/Catalytic_Hydrogenation_of_Alkenes_II"
+    publisher: "Chemistry LibreTexts"
+  - title: "12.2: Catalytic Hydrogenation (Vollhardt and Schore map)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Map:_Organic_Chemistry_(Vollhardt_and_Schore)/12:_Reactions_to_Alkenes/12.02:_Catalytic_Hydrogenation"
+    publisher: "Chemistry LibreTexts"
+  - title: "Hydrogenation"
+    url: "https://en.wikipedia.org/wiki/Hydrogenation"
+    publisher: "Wikipedia"
+  - title: "5.5: Catalytic Hydrogenation"
+    url: "https://chem.libretexts.org/Ancillary_Materials/Worksheets/Worksheets:_Inorganic_Chemistry/Worksheets:_Structure_and_Reactivity_in_Organic_Biological_and_Inorganic_Chemistry/5:_Oxidative_Addition_and_Reductive_Elimination/5.5:_Catalytic_Hydrogenation"
+    publisher: "Chemistry LibreTexts"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 4
+  note: "Rule 'rate of hydrogenation is proportional to heat of hydrogenation' is kept as an exam convention; sources only say less hindered alkenes react faster. 'Reduces everything except COOH' is an exam simplification; sources say esters and amides also resist and that ketones/nitriles are untouched under mild alkene conditions."
+---
+
+## What is catalytic hydrogenation?
+
+**Catalytic hydrogenation** is the addition of a molecule of **hydrogen (H₂)** across a carbon–carbon double or triple bond in the presence of a finely divided metal catalyst, usually **nickel, palladium or platinum**. An alkene becomes an **alkane**, and an alkyne takes up two moles of H₂ to give the alkane. Both hydrogens add to the **same face** of the multiple bond (**syn addition**), and the reaction happens on the surface of the solid metal, so it is a heterogeneous, **adsorption-controlled** process.
+
+Without a catalyst the reaction is exothermic but far too slow to observe, because its activation energy is high. The metal lowers that barrier.
+
+## The catalysts
+
+| Catalyst | Form used | Typical conditions |
+|---|---|---|
+| Nickel | Raney nickel (made from Ni–Al alloy and NaOH) | Higher temperature and pressure; cheap, used for oils |
+| Palladium | Pd on charcoal (Pd/C) | Room temperature, ethanol solvent |
+| Platinum | PtO₂, Adams' catalyst (reduced to Pt metal by H₂) | Ethanol or acetic acid |
+| Rhodium (homogeneous) | [Wilkinson's catalyst](/reagents/wilkinsons-catalyst/), RhCl(PPh₃)₃ | Dissolves in the solvent; prefers unhindered C=C |
+
+## Mechanism
+
+1. **Adsorption of H₂.** Hydrogen molecules are adsorbed on the metal surface; the H–H bond breaks and the H atoms bind to metal atoms.
+2. **Adsorption of the alkene.** The alkene lies flat on the surface and its π bond interacts with the metal, which weakens it.
+3. **Hydrogen transfer.** Two surface hydrogens are transferred, one after the other, to the two alkene carbons. Because the alkene sits on the surface, both arrive from the **underside**, which gives syn addition.
+4. **Desorption.** The alkane is held more weakly than the alkene, so it leaves the surface and frees the site for the next molecule.
+
+<Eq ce="R2C=CR2 + H2 ->[Ni / Pd / Pt] R2CH-CHR2" />
+
+<KeyPoint>
+Three facts to remember: (1) it is a **syn addition**; (2) it is a **surface (adsorption) process** on the metal; (3) the catalyst is not used up and can be filtered off.
+</KeyPoint>
+
+## Heat of hydrogenation and alkene stability
+
+The heat released (about 30 kcal per mole, roughly 120 kJ per mole, for a simple alkene) is called the **heat of hydrogenation**. When several alkenes give the **same alkane**, the one that releases less heat was lower in energy, that is, **more stable**. For the three C₅H₁₀ alkenes that give 2-methylbutane:
+
+| Alkene | ΔH (kcal per mole) | Substitution |
+|---|---|---|
+| 3-Methylbut-1-ene | −30.3 | Monosubstituted |
+| 2-Methylbut-1-ene | −28.5 | Disubstituted |
+| 2-Methylbut-2-ene | −26.9 | Trisubstituted |
+
+So stability rises with the number of alkyl groups on the double bond (hyperconjugation), and **trans** alkenes are more stable than **cis** ones. The full order is on [alkene stability and heat of hydrogenation](/comparisons/alkene-stability-heat-of-hydrogenation/).
+
+<ExamTip>
+In exam answers, the rate of catalytic hydrogenation is taken to run parallel to the heat of hydrogenation: the less substituted, less stable alkene (larger heat of hydrogenation) is hydrogenated faster, because it is less hindered and adsorbs more easily on the metal.
+</ExamTip>
+
+## Examples
+
+**Syn addition on a ring.** 1,2-Dimethylcyclohexene gives only the cis product, because both H atoms come from the catalyst side.
+
+<Eq ce="C6H8(CH3)2 ->[H2, Pt] cis-C6H10(CH3)2" />
+
+**Hydrogenation of oils (vanaspati).** The C=C bonds of glyceryl trioleate are saturated over nickel at high temperature and pressure to give glyceryl tristearate, a solid fat.
+
+<Eq ce="C57H104O6 + 3H2 ->[Ni][\Delta, pressure] C57H110O6" />
+
+**Counting double bonds.** Cyclohexene uses one equivalent of H₂ and cyclohexa-1,4-diene uses two, both giving cyclohexane. Measuring the H₂ taken up tells how many C=C bonds a compound has.
+
+## Scope: what H₂ and a metal reduce
+
+| Group | Product | Comment |
+|---|---|---|
+| C=C, C≡C | Alkane | Fast with Pd, Pt or Ni |
+| C≡C with Lindlar or P-2 catalyst | cis-Alkene | See [Lindlar catalyst](/reagents/lindlar-catalyst/) |
+| Aldehyde, ketone | 1° or 2° alcohol | Needs Raney Ni or forcing conditions |
+| Nitrile, imine | Amine | Ni or Pd |
+| Nitro group | Amine | H₂/Pd; see [reduction of nitrobenzene](/reactions/reduction-of-nitrobenzene/) |
+| Benzene ring | Cyclohexane | Only at high pressure and temperature |
+| COOH, ester, amide | Not reduced | Too stable for ordinary hydrogenation |
+
+<ExamTip title="Common mistake">
+"H₂/Ni reduces everything except COOH" is a useful exam shortcut, but it applies only under forcing conditions. Under the mild conditions used for alkenes (Pd/C, room temperature), ketones, esters, nitriles and benzene rings are **not** touched, so the C=C can be reduced selectively. Esters and amides, like acids, also resist ordinary catalytic hydrogenation.
+</ExamTip>
+
+## Limitations and exceptions
+
+- The catalyst can move the double bond before H₂ adds (isomerisation), so the syn result is not always clean.
+- Partial reduction of an alkyne to an alkene is not possible with Pd/C or Pt: the alkene formed is reduced at once. A poisoned catalyst or a different method is needed.
+- Heat in industrial oil hardening can convert some cis C=C bonds into trans ones (trans fats).
+
+## Related reactions
+
+- [Lindlar catalyst](/reagents/lindlar-catalyst/): stops alkyne reduction at the cis-alkene.
+- [Wilkinson's catalyst](/reagents/wilkinsons-catalyst/): homogeneous hydrogenation of unhindered alkenes.
+- [Diimide reduction](/reactions/diimide-reduction/): metal-free syn addition of H₂ using HN=NH.
+- [Birch reduction](/reactions/birch-reduction/): Na in liquid NH₃; trans-alkenes from alkynes and 1,4-dienes from arenes.
+- [Reduction reactions hub](/mechanisms/reduction-reactions/)

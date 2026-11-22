@@ -1,0 +1,111 @@
+---
+title: "Favorskii Rearrangement"
+description: "Favorskii rearrangement converts an α-halo ketone into a carboxylic acid (with OH⁻) or ester (with RO⁻) through a cyclopropanone; cyclic ones ring-contract."
+aliases: ["Favorski rearrangement", "Favorsky rearrangement", "Favorskii reaction (rearrangement)", "Quasi-Favorskii rearrangement", "Semibenzilic rearrangement"]
+kind: "rearrangement"
+family: "rearrangement-reactions"
+exams: ["jee-advanced"]
+mapEdges: []
+reactant:
+  name: "Chloroacetone (1-chloropropan-2-one)"
+  smiles: "CC(=O)CCl"
+product:
+  name: "Propanoic acid"
+  smiles: "CCC(=O)O"
+byproducts: "Cl⁻ (as NaCl), H₂O"
+reagents: "OH⁻ (gives the acid after H₃O⁺) or an alkoxide RO⁻ (gives the ester)"
+conditions: "α-Halo ketone with an α′-hydrogen on the other side of C=O"
+equation: "CH3COCH2Cl ->[1. OH-][2. H3O+] CH3CH2COOH"
+notesPages: [80, 81]
+memoryTricks: []
+faq:
+  - q: "What is the Favorskii rearrangement?"
+    a: "It is the base-promoted rearrangement of an α-halo ketone into a carboxylic acid derivative. Hydroxide gives a carboxylic acid (as its salt) and an alkoxide gives an ester; the key intermediate is a cyclopropanone."
+  - q: "What is the intermediate in the Favorskii rearrangement?"
+    a: "A cyclopropanone. The enolate formed on the side away from the halogen displaces the halide internally (an intramolecular SN2), closing a three-membered ring that contains the C=O carbon."
+  - q: "What is the product when 2-chlorocyclohexanone reacts with sodium methoxide?"
+    a: "Methyl cyclopentanecarboxylate. The six-membered ring contracts to a five-membered ring because the C=O carbon is pushed out of the ring as the ester carbon."
+  - q: "Which bond breaks when the cyclopropanone opens?"
+    a: "The bond that leaves the more stable carbanion. The order of preference is benzylic > primary > secondary > tertiary carbon."
+  - q: "What is the essential condition for the Favorskii rearrangement?"
+    a: "The ketone must carry a halogen on one α-carbon and at least one hydrogen on the other α-carbon (α′). Without that α′-hydrogen no cyclopropanone can form."
+related: ["benzilic-acid-rearrangement", "haloform-reaction", "sn2-reaction", "pinacol-pinacolone-rearrangement", "ester-hydrolysis"]
+sources:
+  - title: "Favorskii rearrangement"
+    url: "https://en.wikipedia.org/wiki/Favorskii_rearrangement"
+    publisher: "Wikipedia"
+  - title: "Favorskii Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/favorsky-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "3.3: Rearrangements (Organic Synthesis, Shea)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Synthesis_(Shea)/03:_Neighboring_Group_Participation_Rearrangements_and_Fragmentations/3.03:_Rearrangements"
+    publisher: "Chemistry LibreTexts"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 3
+  note: "Example PhC(CH3)2COCH2Cl + OH⁻ giving the hydroxy ketone by direct substitution is kept as an exam convention; sources only say that non-enolisable α-halo ketones may undergo a quasi-Favorskii rearrangement under harsh conditions."
+---
+
+## What is the Favorskii rearrangement?
+
+The **Favorskii rearrangement** is the conversion of an **α-halo ketone** into a **carboxylic acid derivative** by a base. With **hydroxide** the product is a **carboxylic acid** (as its salt until acidified); with an **alkoxide** such as CH₃O⁻ or C₂H₅O⁻ it is an **ester**. The reaction goes through a strained **cyclopropanone** intermediate, and when the α-halo ketone is cyclic the ring **contracts by one carbon**. It was discovered by the Russian chemist Alexei Favorskii in 1894.
+
+Essential condition: one α-carbon carries a **halogen** and the other α-carbon (α′) carries at least **one hydrogen**.
+
+## Mechanism
+
+Chloroacetone with hydroxide shows every step:
+
+1. **Enolate formation.** OH⁻ removes an α′-hydrogen from the CH₃ group, on the side of the C=O away from chlorine.
+2. **Cyclopropanone formation.** The enolate carbon attacks the carbon bearing Cl and pushes out Cl⁻ in an intramolecular SN2 reaction. A three-membered ring with the C=O at one corner (cyclopropanone) is formed.
+3. **Nucleophilic addition.** Because of ring strain the cyclopropanone C=O is very reactive. A second OH⁻ adds to it, giving a tetrahedral alkoxide.
+4. **Ring opening.** The alkoxide re-forms C=O and one ring C–C bond breaks, releasing the **more stable carbanion**.
+5. **Protonation.** The carbanion picks up a proton, giving the carboxylic acid, which stays as the carboxylate in base until acid work-up.
+
+<Eq ce="CH3COCH2Cl + OH- -> -CH2COCH2Cl + H2O" />
+<Eq ce="-CH2COCH2Cl -> (CH2)2CO + Cl-" />
+<Eq ce="(CH2)2CO + OH- -> CH3CH2COO- ->[H3O+] CH3CH2COOH" />
+
+<KeyPoint>
+When the cyclopropanone opens, the bond that breaks is the one giving the more stable carbanion: **benzylic > primary > secondary > tertiary**. This decides the product from unsymmetrical substrates, and labelling experiments confirm that both ends of the ring can open.
+</KeyPoint>
+
+## Examples
+
+**Acid with hydroxide:**
+
+<Eq ce="CH3COCH2Cl ->[1. NaOH][2. H3O+] CH3CH2COOH" />
+
+**Ester with an alkoxide (ring contraction):** 2-chlorocyclohexanone gives methyl cyclopentanecarboxylate.
+
+<Eq ce="C6H9ClO ->[CH3ONa][CH3OH] C5H9COOCH3" />
+
+With aqueous NaOH the same ketone gives cyclopentanecarboxylic acid. Ring contraction is the most common synthetic use of the reaction; it was used twice in the classic synthesis of cubane.
+
+**α,α′-Dihalo ketones give α,β-unsaturated acids.** In 1,3-dichlorobutan-2-one, the cyclopropanone still carries one chlorine. When the ring opens, the carbanion expels that chloride, forming a C=C bond conjugated with the carboxyl group:
+
+<Eq ce="ClCH2COCHClCH3 ->[1. OH-][2. H3O+] CH3CH=CHCOOH" />
+
+## When there is no α′-hydrogen
+
+- **Quasi-Favorskii (semibenzilic) rearrangement.** If no enolate can form on the far side, a cyclopropanone is impossible. Under forcing conditions the base adds directly to the C=O, and a group on the carbonyl carbon migrates to the halogen-bearing carbon while the halide leaves, just like the [benzilic acid rearrangement](/reactions/benzilic-acid-rearrangement/). C₆H₅COCHClCH₃ gives 2-phenylpropanoic acid, CH₃CH(C₆H₅)COOH, with the phenyl group migrating.
+- **Simple substitution.** For a substrate such as C₆H₅C(CH₃)₂COCH₂Cl, whose far α-carbon is quaternary, exam answers usually show OH⁻ simply replacing the reactive primary chloride (SN2) to give C₆H₅C(CH₃)₂COCH₂OH.
+
+<ExamTip>
+First check the α′-carbon. If it has a hydrogen, draw the cyclopropanone and open it to the more stable carbanion. If it has none, think of the semibenzilic shift or, for a primary halide, plain SN2 substitution.
+</ExamTip>
+
+## Limitations
+
+- α,α,α-Trihalomethyl ketones undergo the [haloform reaction](/reactions/haloform-reaction/) instead.
+- It should not be confused with the Favorskii *reaction*, the addition of a terminal alkyne to a ketone.
+
+## Related reactions
+
+- [Benzilic acid rearrangement](/reactions/benzilic-acid-rearrangement/): base adds to C=O and a group migrates; the quasi-Favorskii path follows it closely.
+- [SN2 reaction](/reactions/sn2-reaction/): the ring-closing step is an intramolecular SN2.
+- [Haloform reaction](/reactions/haloform-reaction/): what trihalomethyl ketones do in base.
+- [Pinacol–pinacolone rearrangement](/reactions/pinacol-pinacolone-rearrangement/): a structurally related 1,2-shift under acidic conditions.
+- [Ester hydrolysis](/reactions/ester-hydrolysis/): converts the Favorskii ester into the acid.
+- Hub: [rearrangement reactions](/mechanisms/rearrangement-reactions/).

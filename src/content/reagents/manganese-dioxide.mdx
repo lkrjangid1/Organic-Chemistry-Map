@@ -1,0 +1,105 @@
+---
+title: "Manganese Dioxide (MnO₂)"
+description: "Activated MnO₂ is a mild, selective oxidant that turns allylic and benzylic alcohols into α,β-unsaturated or aromatic aldehydes and ketones."
+aliases: ["MnO2", "Activated MnO2", "Active manganese dioxide", "Manganese(IV) oxide", "Pyrolusite"]
+category: "Oxidising agents"
+exams: ["jee-main", "jee-advanced"]
+formula: "MnO₂"
+molecule:
+  name: "Manganese dioxide"
+  smiles: "O=[Mn]=O"
+family: "oxidation-reactions"
+notesPages: [55]
+memoryTricks: []
+faq:
+  - q: "Which alcohols are oxidised by MnO₂?"
+    a: "Activated MnO₂ oxidises allylic and benzylic alcohols (and propargylic ones) to the corresponding aldehydes or ketones under mild conditions. For exam purposes, ordinary saturated alcohols are treated as unaffected, which is what makes MnO₂ selective."
+  - q: "What is the product of allyl alcohol with MnO₂?"
+    a: "Allyl alcohol, CH₂=CH–CH₂OH, is oxidised to propenal (acrolein), CH₂=CH–CHO. The C=C bond is not touched."
+  - q: "Does MnO₂ oxidise an aldehyde to a carboxylic acid?"
+    a: "No. MnO₂ is a mild oxidant and the reaction stops at the aldehyde or ketone, unlike KMnO₄ or Jones reagent which take a primary alcohol all the way to the acid."
+  - q: "What is activated MnO₂?"
+    a: "It is a specially prepared, hydrated, finely divided form of manganese dioxide, usually made from KMnO₄ and a manganese(II) salt. Natural pyrolusite is a poor reagent; the activity depends strongly on how the solid is prepared."
+related: ["reagents/potassium-permanganate", "reagents/selenium-dioxide", "reagents/pyridinium-chlorochromate", "reagents/jones-reagent", "reactions/oppenauer-oxidation", "preparation/preparation-of-aldehydes-and-ketones", "mechanisms/oxidation-reactions"]
+sources:
+  - title: "Manganese dioxide"
+    url: "https://en.wikipedia.org/wiki/Manganese_dioxide"
+    publisher: "Wikipedia"
+  - title: "Oxoammonium-catalyzed oxidation"
+    url: "https://en.wikipedia.org/wiki/Oxoammonium-catalyzed_oxidation"
+    publisher: "Wikipedia"
+  - title: "15.7: Oxidation of Alcohols (Roberts and Caserio)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Basic_Principles_of_Organic_Chemistry_(Roberts_and_Caserio)/15:_Alcohols_and_Ethers/15.07:_Oxidation_of_Alcohols"
+    publisher: "Chemistry LibreTexts"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 3
+  note: "A common claim is that MnO₂ oxidises only allylic alcohols; sources say allylic and benzylic (also propargylic) alcohols, and Wikipedia notes some unactivated alcohols react too. Page follows the sources and gives the exam convention. The surface/C–H-weakening explanation of selectivity is standard teaching, not stated in the sources read."
+---
+
+## What is manganese dioxide?
+
+**Manganese dioxide (MnO₂)** is a brown-black solid in which manganese is in the +4 state. In organic chemistry it is used as **activated MnO₂**, a mild and selective oxidising agent that converts **allylic and benzylic alcohols** into the corresponding **aldehydes or ketones** without touching the C=C bond or the ring. It is the reagent to choose when an alcohol next to a double bond must be oxidised while other alcohol groups in the molecule are left alone.
+
+## Preparation and composition
+
+- The reagent is **not** simply the mineral pyrolusite, which is a poor oxidant. It is usually made fresh by reacting **KMnO₄ with a manganese(II) salt**, giving a finely divided, hydrated, non-stoichiometric solid.
+- Its strength varies from batch to batch, so it is often used in **large excess**, stirred as a suspension in a solvent such as dichloromethane, hexane or acetone at room temperature.
+- MnO₂ is also the brown precipitate formed when [KMnO₄](/reagents/potassium-permanganate/) is reduced in neutral or weakly alkaline solution.
+
+## What it oxidises
+
+| Substrate | Product |
+|---|---|
+| Allylic 2° alcohol, CH₂=CH–CH(OH)–CH₃ | α,β-Unsaturated ketone, CH₂=CH–CO–CH₃ |
+| Allylic 1° alcohol, CH₂=CH–CH₂OH | α,β-Unsaturated aldehyde, CH₂=CH–CHO (propenal) |
+| Benzylic alcohol, C₆H₅CH₂OH | Aromatic aldehyde, C₆H₅CHO |
+| Propargylic alcohol, R–C≡C–CH₂OH | Ynal, R–C≡C–CHO |
+| 1,2-Diol | Cleaved to two carbonyl compounds |
+
+The configuration of the double bond is kept: an (E)-allylic alcohol gives the (E)-unsaturated aldehyde.
+
+<Eq ce="CH2=CH-CH(OH)-CH3 ->[MnO2] CH2=CH-CO-CH3" />
+
+<Eq ce="C6H5-CH=CH-CH2OH ->[MnO2] C6H5-CH=CH-CHO" />
+
+The second example is cinnamyl alcohol going to **cinnamaldehyde**; the alcohol is both allylic and close to the benzene ring, so it reacts easily.
+
+## What it does not touch
+
+- **The C=C bond** of the allylic alcohol; no epoxide or diol forms.
+- **The aldehyde product.** Oxidation stops at the carbonyl stage; no carboxylic acid forms.
+- **Ordinary saturated 1° and 2° alcohols** react very slowly under the usual conditions, so in exam questions they are treated as unaffected.
+- **Tertiary alcohols**, which have no H on the carbinol carbon.
+
+<Eq ce="HO-CH2-CH2-CH=CH-CH2-OH ->[MnO2] HO-CH2-CH2-CH=CH-CHO" />
+
+Only the allylic CH₂OH is oxidised; the saturated CH₂OH at the other end survives.
+
+<ExamTip title="Common mistake">
+MnO₂ is not limited to allylic alcohols. **Benzylic alcohols** (C₆H₅CH₂OH, C₆H₅CH(OH)R) react just as readily. If a question shows an OH next to a benzene ring and asks for a reagent that leaves another saturated OH untouched, MnO₂ is a correct answer.
+</ExamTip>
+
+## Mechanism (short)
+
+The reaction takes place on the surface of the solid. In the usual teaching picture, the alcohol binds to manganese, and then the hydrogen on the carbinol carbon is removed to give C=O while Mn(IV) is reduced. That C–H bond is weaker when it is allylic or benzylic, because the intermediate is stabilised by the neighbouring π system. This is why those alcohols react much faster than saturated ones.
+
+## Comparison with similar reagents
+
+| Reagent | 1° saturated alcohol | Allylic / benzylic alcohol | C=C in molecule |
+|---|---|---|---|
+| MnO₂ | Usually no reaction | Aldehyde or ketone | Untouched |
+| [PCC](/reagents/pyridinium-chlorochromate/) | Aldehyde | Aldehyde or ketone | Untouched |
+| [Jones reagent](/reagents/jones-reagent/) | Carboxylic acid | Aldehyde (1°) or ketone (2°) | Rarely attacked |
+| [KMnO₄](/reagents/potassium-permanganate/) | Carboxylic acid | Further oxidation; C=C also attacked | Diol or cleavage |
+| [SeO₂](/reagents/selenium-dioxide/) | Not used | Not used; it makes allylic alcohols from alkenes | Kept |
+
+Do not confuse MnO₂ with SeO₂: SeO₂ **puts an OH at the allylic carbon** of an alkene, while MnO₂ **oxidises an existing allylic OH** to C=O. Used one after the other, they can turn an alkene into an α,β-unsaturated carbonyl compound.
+
+## Exam tips
+
+- Keyword match: "selective oxidation of allylic/benzylic alcohol", "only one of two OH groups", "retain C=C" → MnO₂.
+- The product of an allylic alcohol is always **conjugated** (C=C–C=O), an α,β-unsaturated carbonyl compound.
+- MnO₂ also appears in inorganic questions as the **Mn(+4)** product of permanganate in neutral medium; be ready for both roles.
+- For the wider picture of oxidising agents, see [oxidation reactions](/mechanisms/oxidation-reactions/) and [preparation of aldehydes and ketones](/preparation/preparation-of-aldehydes-and-ketones/).

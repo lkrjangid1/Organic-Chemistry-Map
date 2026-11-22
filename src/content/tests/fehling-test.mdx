@@ -1,0 +1,123 @@
+---
+title: "Fehling's Test"
+description: "Fehling's test detects aliphatic aldehydes and reducing sugars: on heating, the blue copper(II) tartrate reagent gives a reddish-brown Cu₂O precipitate."
+aliases: ["Fehling test", "Fehling's solution", "Fehling solution A and B", "Fehling's reagent", "Rochelle salt test"]
+kind: "test"
+family: "nucleophilic-addition"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "Propanal"
+  smiles: "CCC=O"
+product:
+  name: "Propanoate ion"
+  smiles: "CCC(=O)[O-]"
+byproducts: "Cu₂O (reddish-brown precipitate), H₂O"
+reagents: "Fehling's solution: equal volumes of Fehling A (aqueous CuSO₄) and Fehling B (alkaline sodium potassium tartrate, Rochelle salt, in NaOH), mixed just before use"
+conditions: "Heat on a boiling water bath for a few minutes"
+equation: "RCHO + 2Cu^2+ + 5OH- -> RCOO- + Cu2O v + 3H2O"
+observation: "Deep blue solution gives a reddish-brown (brick-red) precipitate of Cu₂O"
+distinguishes: "Aliphatic aldehydes from ketones and aromatic aldehydes"
+notesPages: [81, 82, 120]
+memoryTricks: []
+faq:
+  - q: "What are Fehling's solution A and B?"
+    a: "Fehling A is a blue aqueous solution of copper(II) sulphate. Fehling B is a colourless solution of sodium potassium tartrate (Rochelle salt) made strongly alkaline with NaOH. The two are mixed in equal volumes just before the test."
+  - q: "What is the red precipitate in Fehling's test?"
+    a: "It is copper(I) oxide, Cu₂O. The aldehyde reduces Cu²⁺ to Cu⁺, which precipitates as the reddish-brown oxide in the alkaline solution."
+  - q: "Why does benzaldehyde not give Fehling's test?"
+    a: "Aromatic aldehydes do not respond to Fehling's solution, although they do reduce Tollens' reagent. This difference is used to tell aliphatic and aromatic aldehydes apart."
+  - q: "What is the role of Rochelle salt in Fehling's solution?"
+    a: "The tartrate ion complexes Cu²⁺ and keeps it in solution. Without it, copper(II) hydroxide would precipitate in the strongly alkaline mixture."
+  - q: "Does glucose give Fehling's test?"
+    a: "Yes. Glucose is a reducing sugar and gives the red Cu₂O precipitate. Fructose is also positive because the alkaline reagent isomerises it to an aldose."
+related: ["tests/tollens-test", "tests/benedict-test", "tests/schiff-test", "tests/2-4-dnp-test", "concepts/aldoses-and-epimers", "concepts/disaccharides", "mechanisms/oxidation-reactions"]
+sources:
+  - title: "Aldehydes, Ketones and Carboxylic Acids (Class XII Chemistry, Unit 8)"
+    url: "https://ncert.nic.in/textbook/pdf/lech203.pdf"
+    publisher: "NCERT"
+  - title: "Fehling's solution"
+    url: "https://en.wikipedia.org/wiki/Fehling%27s_solution"
+    publisher: "Wikipedia"
+  - title: "6.4D: Individual Tests (Benedict's and Fehling's tests)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_Lab_Techniques_(Nichols)/06:_Miscellaneous_Techniques/6.04:_Chemical_Tests/6.4D:_Individual_Tests"
+    publisher: "LibreTexts Chemistry"
+  - title: "20.3: The Structure and Properties of D-Glucose"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Basic_Principles_of_Organic_Chemistry_(Roberts_and_Caserio)/20%3A_Carbohydrates/20.03%3A_The_Structure_and_Properties_of_D-Glucose"
+    publisher: "LibreTexts Chemistry"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 4
+  note: "Positive result for R–CHCl₂ is exam teaching (hydrolysis to RCHO in base), not stated in the sources. Fehling B is alkaline (NaOH) Rochelle salt per sources."
+---
+
+## What is Fehling's test?
+
+**Fehling's test** detects **aliphatic aldehydes** and **reducing sugars**. The sample is heated with **Fehling's solution**, a deep blue alkaline complex of **copper(II) with tartrate ions**. An aliphatic aldehyde is oxidised to its carboxylate ion while Cu²⁺ is reduced to Cu⁺, which separates as a **reddish-brown precipitate of copper(I) oxide, Cu₂O**. Ketones and aromatic aldehydes do not respond.
+
+## Reagent and how to prepare it
+
+Fehling's reagent is supplied as two stable solutions that are mixed in **equal volumes just before use**, because the combined copper complex slowly decomposes:
+
+| Solution | Composition | Colour |
+|---|---|---|
+| Fehling A | Aqueous copper(II) sulphate, CuSO₄ | Blue |
+| Fehling B | Sodium potassium tartrate (Rochelle salt, Seignette salt) in aqueous NaOH | Colourless |
+| Mixed reagent | Bis(tartrato)cuprate(II) complex in alkali | Deep blue |
+
+The tartrate acts as a ligand. It holds Cu²⁺ in solution in the strongly basic medium, where it would otherwise precipitate as Cu(OH)₂.
+
+## Procedure
+
+1. Mix 1 mL each of Fehling A and Fehling B in a test tube.
+2. Add a few drops (or a few mg) of the sample.
+3. Heat on a boiling water bath for 2–5 minutes.
+4. Look for a reddish-brown precipitate.
+
+## Observations and inference
+
+| Compound type | Observation | Inference |
+|---|---|---|
+| Aliphatic aldehyde (ethanal, propanal) | Reddish-brown Cu₂O precipitate | Positive |
+| Aromatic aldehyde (benzaldehyde) | Blue colour stays | Negative |
+| Simple ketone (propanone) | Blue colour stays | Negative |
+| α-Hydroxy ketone, ketose (fructose) | Red precipitate | Positive |
+| Formic acid (HCOOH) | Red precipitate | Positive |
+| Reducing sugars (glucose, maltose, lactose) | Red precipitate | Positive |
+| Sucrose | Blue colour stays | Negative (non-reducing) |
+
+## Chemistry behind it
+
+The copper(II) complex oxidises the aldehyde group. Two Cu²⁺ ions each gain one electron and leave as one Cu₂O:
+
+<Eq ce="RCHO + 2Cu^2+ + 5OH- -> RCOO- + Cu2O v + 3H2O" />
+
+<Eq ce="CH3CH2CHO + 2Cu^2+ + 5OH- -> CH3CH2COO- + Cu2O v + 3H2O" />
+
+Formic acid is oxidised further, to carbon dioxide (carbonate in the alkaline reagent), which is why it is the only simple carboxylic acid that gives the test.
+
+α-Hydroxy ketones and ketoses such as fructose are positive because the base in the reagent tautomerises them, via an enediol, into aldehydes. Cyclic hemiacetals (2-hydroxytetrahydropyran, the ring forms of glucose) open to the free aldehyde, so they react too.
+
+<KeyPoint>
+Fehling's solution is a weaker oxidising agent than Tollens' reagent. It oxidises aliphatic aldehydes, α-hydroxy ketones, HCOOH and reducing sugars, but not aromatic aldehydes. In exam answers, R–CHCl₂ is also counted as positive, because it hydrolyses to R–CHO in the hot alkaline reagent.
+</KeyPoint>
+
+<ExamTip>
+To separate ethanal and benzaldehyde: both give a silver mirror with Tollens' reagent, but only ethanal gives a red precipitate with Fehling's solution. To separate ethanal and propanone, either reagent works.
+</ExamTip>
+
+## Limitations
+
+- Aromatic aldehydes give no result, so a negative Fehling's test does not rule out an aldehyde.
+- α-Hydroxy ketones and ketoses also give a positive result, so the test cannot by itself separate aldoses from ketoses. Use the [bromine water test](/tests/bromine-water-test/) for that.
+- The mixed reagent must be prepared fresh, because the copper tartrate complex slowly decomposes in the alkaline solution.
+- Fehling's test cannot separate benzaldehyde from acetone, since both are negative.
+
+## Related tests
+
+- [Tollens' test](/tests/tollens-test/): silver mirror; also positive for aromatic aldehydes.
+- [Benedict's test](/tests/benedict-test/): a single-solution copper(II) citrate reagent with the same result.
+- [Schiff's test](/tests/schiff-test/): colour test for aldehydes at room temperature.
+- [2,4-DNP test](/tests/2-4-dnp-test/): confirms a C=O group first.
+- [Bromine water test](/tests/bromine-water-test/): distinguishes glucose from fructose.

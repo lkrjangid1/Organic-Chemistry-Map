@@ -1,0 +1,124 @@
+---
+title: "Claisen Condensation"
+description: "Claisen condensation joins two ester molecules with α-H using sodium ethoxide to give a β-keto ester, e.g. ethyl acetate to ethyl acetoacetate."
+aliases: ["Claisen ester condensation", "Acetoacetic ester condensation", "Crossed Claisen condensation", "Mixed Claisen condensation"]
+kind: "named-reaction"
+family: "carbonyl-condensation-reactions"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["claisen_condensation_polyketide"]
+reactant:
+  name: "Ethyl acetate"
+  smiles: "CCOC(C)=O"
+product:
+  name: "Ethyl acetoacetate (ethyl 3-oxobutanoate)"
+  smiles: "CCOC(=O)CC(C)=O"
+byproducts: "C₂H₅OH"
+reagents: "C₂H₅O⁻Na⁺ (the alkoxide matching the ester), then H₃O⁺ work-up; NaH or NaNH₂ also used"
+conditions: "One full equivalent of base; ester must be enolisable (two α-H for the classic NaOEt reaction)"
+equation: "2 CH3COOC2H5 ->[1. C2H5ONa][2. H3O+] CH3COCH2COOC2H5 + C2H5OH"
+notesPages: [72]
+memoryTricks: []
+faq:
+  - q: "What is the product of Claisen condensation of ethyl acetate?"
+    a: "Ethyl acetoacetate (ethyl 3-oxobutanoate), CH₃COCH₂COOC₂H₅, a β-keto ester, with ethanol as the by-product."
+  - q: "Why is sodium ethoxide used for ethyl esters?"
+    a: "The base must not spoil the ester. Ethoxide is the same group that leaves from an ethyl ester, so any attack by the base on the carbonyl just regenerates the starting ester instead of giving a different ester by transesterification."
+  - q: "Why is a full equivalent of base needed?"
+    a: "The condensation step is unfavourable on its own. It is pulled to completion when the base removes the very acidic CH₂ hydrogen between the two carbonyls of the β-keto ester. That consumes one equivalent of base, and acid is added at the end to recover the neutral product."
+  - q: "What is the difference between Claisen condensation and aldol condensation?"
+    a: "In the aldol reaction the tetrahedral alkoxide intermediate is protonated to an alcohol. In the Claisen reaction it expels an alkoxide leaving group (–OR), so the product is a β-keto ester instead of a β-hydroxy carbonyl compound."
+  - q: "What happens when ethyl acetoacetate is hydrolysed and heated?"
+    a: "Acid hydrolysis gives acetoacetic acid, a β-keto acid, which loses CO₂ on gentle heating to give acetone."
+related: ["dieckmann-condensation", "aldol-condensation", "cross-aldol-condensation", "decarboxylation", "ester-hydrolysis", "thorpe-reaction", "claisen-rearrangement"]
+sources:
+  - title: "Claisen condensation"
+    url: "https://en.wikipedia.org/wiki/Claisen_condensation"
+    publisher: "Wikipedia"
+  - title: "Claisen Condensation"
+    url: "https://www.organic-chemistry.org/namedreactions/claisen-condensation.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "23.7: The Claisen Condensation Reaction"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/23%3A_Carbonyl_Condensation_Reactions/23.07%3A_The_Claisen_Condensation_Reaction"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "23.8: Mixed Claisen Condensations"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/23%3A_Carbonyl_Condensation_Reactions/23.08%3A_Mixed_Claisen_Condensations"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "Acetoacetic acid"
+    url: "https://en.wikipedia.org/wiki/Acetoacetic_acid"
+    publisher: "Wikipedia"
+  - title: "23.13: Some Biological Carbonyl Condensation Reactions"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/23%3A_Carbonyl_Condensation_Reactions/23.13%3A_Some_Biological_Carbonyl_Condensation_Reactions"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 6
+  note: "Source material states the ester needs at least one α-H; Wikipedia states the classic Claisen fails for esters with only one α-H, because the final deprotonation of the β-keto ester is the driving force."
+---
+
+## What is the Claisen condensation?
+
+The **Claisen condensation** (Claisen ester condensation) is the reaction of two ester molecules, at least one of which has α-hydrogens, in the presence of a strong base such as **sodium ethoxide**. It gives a **β-keto ester** and an alcohol. The classic example is **ethyl acetate → ethyl acetoacetate**. It is the ester version of the aldol reaction. Do not confuse it with the Claisen–Schmidt condensation or the Claisen rearrangement.
+
+## Mechanism
+
+1. **Enolate formation.** C₂H₅O⁻ removes an α-H from ethyl acetate, giving the resonance-stabilised ester enolate ⁻CH₂COOC₂H₅.
+2. **Nucleophilic attack.** The enolate attacks the carbonyl carbon of a second ester molecule, giving a tetrahedral alkoxide intermediate.
+3. **Loss of the leaving group.** Unlike in the aldol reaction, the intermediate collapses and expels C₂H₅O⁻. This is a nucleophilic acyl substitution, and it gives the β-keto ester.
+4. **Driving deprotonation.** The CH₂ between the two C=O groups of the β-keto ester is strongly acidic. Ethoxide removes it at once, giving a very stable enolate. This pulls the whole equilibrium forward.
+5. **Acid work-up.** Dilute acid (H₃O⁺) protonates this enolate to give the neutral β-keto ester.
+
+<Eq ce="CH3COOC2H5 + C2H5O- <=> ^{-}CH2COOC2H5 + C2H5OH" />
+<Eq ce="^{-}CH2COOC2H5 + CH3COOC2H5 -> CH3COCH2COOC2H5 + C2H5O-" />
+
+<KeyPoint>
+A full equivalent of base is needed, not a catalytic amount, because the base ends up as the enolate of the product. The alkoxide should match the ester's alkoxy group (NaOEt for ethyl esters, NaOMe for methyl esters) so that transesterification does no harm.
+</KeyPoint>
+
+<ExamTip title="Common mistake">
+The usual rule "the ester must have at least one α-H" is not enough for the classic Claisen with NaOEt. The ester needs **two α-H**: one is used to make the enolate, and the second remains on the product so that it can be deprotonated. An ester with only one α-H, such as ethyl 2-methylpropanoate, does not give a good Claisen product with sodium ethoxide.
+</ExamTip>
+
+## Hydrolysis and decarboxylation
+
+The β-keto ester can be converted into a ketone. Acid hydrolysis gives the β-keto acid, which loses CO₂ easily on warming:
+
+<Eq ce="CH3COCH2COOC2H5 ->[H3O+] CH3COCH2COOH ->[\Delta] CH3COCH3 + CO2" />
+
+So ethyl acetate → ethyl acetoacetate → acetoacetic acid → acetone. This sequence is often asked as a conversion problem. See [decarboxylation](/reactions/decarboxylation/).
+
+## Crossed (mixed) Claisen condensation
+
+Two different esters that both have α-H give a mixture of four products. A mixed Claisen is useful when only **one partner can form an enolate**:
+
+| Acceptor (no α-H) | With the enolate of an ester or ketone gives |
+|---|---|
+| Ethyl benzoate, C₆H₅COOEt | β-Keto ester or β-diketone carrying a benzoyl group |
+| Ethyl formate, HCOOEt | Formyl (–CHO) group at the α-carbon |
+| Diethyl oxalate, (COOEt)₂ | α-Keto diester (ethyl acetate gives diethyl oxaloacetate, EtOOC–CO–CH₂–COOEt) |
+| Diethyl carbonate, (EtO)₂CO | Malonate-type ester |
+
+A ketone can also act as the donor. Its α-H is more acidic than an ester α-H, so the ketone forms the enolate and the ester is the acceptor. The product is a **β-diketone**:
+
+<Eq ce="cyclohexanone + CH3COOC2H5 ->[1. C2H5ONa][2. H3O+] 2-acetylcyclohexanone + C2H5OH" />
+
+Nitriles act as donors in the same way and give β-keto nitriles.
+
+## Related forms
+
+- **Intramolecular Claisen:** a diester cyclises to a cyclic β-keto ester. This is the [Dieckmann condensation](/reactions/dieckmann-condensation/).
+- **Retro-Claisen:** the reverse reaction. Base can cleave a β-keto ester into two ester fragments, which is why yields are poor when the product cannot be deprotonated.
+- **Biological Claisen:** in fatty-acid biosynthesis, an enolate formed by decarboxylation of malonyl-ACP attacks an acyl thioester. This gives acetoacetyl-ACP, and the same type of step builds polyketides.
+
+## Limitations
+
+- At least one partner must be enolisable, and in self-condensation the ester needs two α-H.
+- Hydroxide cannot be used, because it would hydrolyse (saponify) the ester. Use an alkoxide, NaH or NaNH₂. The stronger bases often raise the yield.
+- Two different enolisable esters give a statistical mixture.
+
+## Related reactions
+
+- [Dieckmann condensation](/reactions/dieckmann-condensation/)
+- [Aldol condensation](/reactions/aldol-condensation/) and [cross aldol / Claisen–Schmidt](/reactions/cross-aldol-condensation/)
+- [Thorpe reaction](/reactions/thorpe-reaction/), the nitrile analogue
+- Hub: [Carbonyl condensation reactions](/mechanisms/carbonyl-condensation-reactions/)

@@ -1,0 +1,113 @@
+---
+title: "Mendius Reduction"
+description: "Mendius reduction converts a nitrile (R–C≡N) into a primary amine R–CH₂–NH₂ using sodium and ethanol. Mechanism, examples and comparison with LiAlH₄ and H₂/Ni."
+aliases: ["Mendius reaction", "Reduction of nitriles with sodium and ethanol", "Na/C2H5OH reduction of cyanides", "Nitrile to primary amine reduction"]
+kind: "named-reaction"
+family: "reduction-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: []
+reactant:
+  name: "Propanenitrile (ethyl cyanide)"
+  smiles: "CCC#N"
+product:
+  name: "Propan-1-amine"
+  smiles: "CCCN"
+reagents: "Sodium metal + ethanol (C₂H₅OH)"
+conditions: "Sodium metal added to the nitrile in ethanol"
+equation: "R-C#N + 4[H] ->[Na, C2H5OH] R-CH2-NH2"
+notesPages: [106]
+memoryTricks: []
+faq:
+  - q: "What is the Mendius reduction?"
+    a: "It is the reduction of a nitrile, R–C≡N, to a primary amine, R–CH₂–NH₂, by sodium metal in ethanol. Four hydrogen atoms are added across the C≡N triple bond."
+  - q: "What is the product of Mendius reduction of methyl cyanide?"
+    a: "Ethanamine (ethylamine), CH₃CH₂NH₂. The nitrile carbon becomes the CH₂ attached to nitrogen."
+  - q: "Why is nitrile reduction called an ascent of the amine series?"
+    a: "An alkyl halide R–X gives R–CN with cyanide, adding one carbon. Reducing the nitrile then gives R–CH₂–NH₂, an amine with one more carbon than the amine R–NH₂ that R–X would give directly."
+  - q: "Which other reagents reduce nitriles to primary amines?"
+    a: "Lithium aluminium hydride followed by water, and catalytic hydrogenation (H₂ with Ni, Pd or Pt). Diborane and LiBH₄ also work. All give R–CH₂–NH₂."
+  - q: "Do isocyanides and nitriles give the same amine on reduction?"
+    a: "No. A nitrile R–C≡N gives a primary amine R–CH₂NH₂, while the isomeric isocyanide R–N≡C gives a secondary amine R–NH–CH₃ because the carbon ends up on nitrogen as a methyl group."
+related: ["bouveault-blanc-reduction", "catalytic-hydrogenation", "reagents/lithium-aluminium-hydride", "stephen-reduction", "reductive-amination", "preparation/preparation-of-amines"]
+sources:
+  - title: "Nitrile reduction"
+    url: "https://en.wikipedia.org/wiki/Nitrile_reduction"
+    publisher: "Wikipedia"
+  - title: "Amines (Class 12 Chemistry, Unit 9), section 9.4: Reduction of nitriles"
+    url: "https://ncert.nic.in/textbook/pdf/lech204.pdf"
+    publisher: "NCERT"
+  - title: "Mendius, O. (1862). Ueber eine neue Umwandlung der Nitrile. Justus Liebigs Annalen der Chemie 121, 129–153"
+    url: "https://doi.org/10.1002/jlac.18621210202"
+    publisher: "Wiley"
+  - title: "Suter, C. M.; Moffett, E. W. (1934). The Reduction of Aliphatic Cyanides and Oximes with Sodium and n-Butyl Alcohol. J. Am. Chem. Soc. 56, 487"
+    url: "https://doi.org/10.1021/ja01317a502"
+    publisher: "American Chemical Society"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 4
+  note: "Sodium-in-alcohol reduction of nitriles to primary amines is confirmed by Wikipedia (Nitrile reduction) and the cited primary papers (metadata only; full text paywalled). NCERT covers nitrile reduction with LiAlH₄/H₂ but not the Mendius name. Isocyanide → secondary amine and the stepwise electron/proton-transfer mechanism are standard exam teaching, not detailed in the sources read."
+---
+
+## What is the Mendius reduction?
+
+The **Mendius reduction** is the reduction of a **nitrile (alkyl or aryl cyanide, R–C≡N) to a primary amine, R–CH₂–NH₂**, using **sodium metal and ethanol**. Four hydrogen atoms add across the C≡N triple bond; the nitrile carbon becomes the CH₂ group bonded to nitrogen. It is named after Otto Mendius, who reported this new conversion of nitriles in 1862.
+
+<Eq ce="R-C#N ->[Na, C2H5OH] R-CH2-NH2" />
+
+## Mechanism (dissolving-metal reduction)
+
+Sodium acts as the electron source and ethanol as the proton source, the same pattern as in the [Bouveault–Blanc reduction](/reactions/bouveault-blanc-reduction/) of esters.
+
+1. **Electron transfer.** Sodium gives one electron to the C≡N group, forming a radical anion.
+2. **Protonation.** Ethanol protonates it; a second electron and a second proton complete the first addition of H₂, giving an imine, R–CH=NH.
+3. **Second reduction.** The C=N of the imine is reduced in the same way (two electrons, two protons) to the amine R–CH₂–NH₂.
+
+Overall, four sodium atoms and four ethanol molecules are used per nitrile, and sodium ethoxide is formed.
+
+<Eq ce="R-C#N + 4Na + 4C2H5OH -> R-CH2-NH2 + 4C2H5ONa" />
+
+<KeyPoint>
+Every reagent that fully reduces a nitrile (Na/C₂H₅OH, LiAlH₄ then H₂O, or H₂/Ni) gives the **same** primary amine, R–CH₂–NH₂. Partial reduction to the aldehyde needs special reagents: SnCl₂/HCl ([Stephen reduction](/reactions/stephen-reduction/)) or DIBAL-H.
+</KeyPoint>
+
+## Examples
+
+**Ethanenitrile to ethanamine**
+
+<Eq ce="CH3-C#N ->[Na, C2H5OH] CH3-CH2-NH2" />
+
+**Ascent of the amine series.** Chloroethane gives propanenitrile with KCN, and reduction gives propan-1-amine, one carbon more than the ethanamine that ammonolysis of chloroethane would give.
+
+<Eq ce="CH3CH2Cl ->[KCN] CH3CH2CN ->[Na, C2H5OH] CH3CH2CH2NH2" />
+
+**Benzonitrile to benzylamine**
+
+<Eq ce="C6H5-C#N ->[Na, C2H5OH] C6H5-CH2-NH2" />
+
+## Comparison of nitrile reducing agents
+
+| Reagent | Product from R–C≡N | Note |
+|---|---|---|
+| Na + C₂H₅OH (Mendius) | R–CH₂–NH₂ | dissolving-metal reduction |
+| [LiAlH₄](/reagents/lithium-aluminium-hydride/), then H₂O | R–CH₂–NH₂ | the NCERT reagent |
+| H₂ / Ni, Pd or Pt ([catalytic hydrogenation](/reactions/catalytic-hydrogenation/)) | R–CH₂–NH₂ | cheapest industrially; some 2° and 3° amine may form |
+| SnCl₂ / HCl, then H₃O⁺ | R–CHO | Stephen reduction, stops at aldehyde |
+| DIBAL-H, then H₂O | R–CHO | stops at aldehyde |
+
+## Limitations and exceptions
+
+- In catalytic hydrogenation the imine intermediate can be attacked by the amine product, giving some secondary and tertiary amine; catalyst choice controls this.
+- Strongly acidic or basic aqueous conditions can hydrolyse the –CN group to an amide or acid instead of reducing it, so the reduction is done in alcohol.
+- **Isocyanides behave differently:** R–N≡C is reduced to the secondary amine R–NH–CH₃, which is a common exam contrast with nitriles.
+
+<ExamTip>
+Count carbons. A nitrile reduction product keeps every carbon of R–CN, so R–CH₂NH₂ has one more carbon than the alkyl halide R–X used to make the nitrile. Hofmann bromamide degradation does the opposite (one carbon fewer).
+</ExamTip>
+
+## Related reactions
+
+- [Bouveault–Blanc reduction](/reactions/bouveault-blanc-reduction/): Na/ethanol reduction of esters to alcohols.
+- [Reductive amination](/reactions/reductive-amination/): Na/ethanol also reduces oximes to primary amines.
+- [Stephen reduction](/reactions/stephen-reduction/): nitrile to aldehyde.
+- [Preparation of amines](/preparation/preparation-of-amines/): all methods compared.

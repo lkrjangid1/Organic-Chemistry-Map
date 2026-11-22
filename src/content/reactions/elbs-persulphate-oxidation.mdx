@@ -1,0 +1,114 @@
+---
+title: "Elbs Persulphate Oxidation"
+description: "Elbs persulphate oxidation: phenol with alkaline potassium persulphate (K₂S₂O₈) gives a para-aryl sulphate, hydrolysed by acid to hydroquinone. Mechanism."
+aliases: ["Elbs persulfate oxidation", "Elbs oxidation", "Elbs reaction", "Phenol to hydroquinone", "Persulphate oxidation of phenols"]
+kind: "named-reaction"
+family: "reactions-of-phenols"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["r8", "elbs-persulfate-oxidation"]
+reactant:
+  name: "Phenol"
+  smiles: "Oc1ccccc1"
+product:
+  name: "Hydroquinone (benzene-1,4-diol)"
+  smiles: "Oc1ccc(O)cc1"
+byproducts: "Sulphate salts (KHSO₄/K₂SO₄)"
+reagents: "K₂S₂O₈ (potassium persulphate) in aqueous NaOH or KOH, then hot dilute acid to hydrolyse the aryl sulphate"
+conditions: "Aqueous alkaline solution at room temperature or below"
+equation: "C6H5OH ->[1. K2S2O8, aq. NaOH][2. H3O+, \\Delta] 1,4-C6H4(OH)2"
+notesPages: [101]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Elbs persulphate oxidation of phenol?"
+    a: "Hydroquinone (benzene-1,4-diol). A second OH group is introduced para to the original OH, first as an aryl sulphate that is then hydrolysed by acid."
+  - q: "What reagent is used in the Elbs persulphate oxidation?"
+    a: "Potassium persulphate (potassium peroxydisulphate, K₂S₂O₈) in aqueous alkali such as NaOH or KOH. It is not potassium sulphate, which has no oxidising O–O bond."
+  - q: "Where does the new OH group go if the para position is blocked?"
+    a: "To the ortho position. For example, 4-nitrophenol gives 2-hydroxy-5-nitrophenyl sulphate, and 3,4-dimethylphenol gives 3,4-dimethylcatechol."
+  - q: "Why is the Elbs oxidation carried out in alkaline medium?"
+    a: "The base converts the phenol into the phenoxide ion, whose para carbon is nucleophilic enough to attack the peroxide oxygen of the persulphate ion."
+  - q: "What is the difference between the Elbs and Boyland–Sims oxidations?"
+    a: "Both use persulphate. In the Elbs oxidation a phenoxide is attacked mainly at the para position; in the Boyland–Sims oxidation a neutral aromatic amine reacts and the sulphate ends up mainly ortho to the amino group."
+related: ["dakin-reaction", "cumene-process", "kolbe-schmitt-reaction", "reimer-tiemann-reaction", "mechanisms/reactions-of-phenols", "mechanisms/oxidation-reactions"]
+sources:
+  - title: "Elbs persulfate oxidation"
+    url: "https://en.wikipedia.org/wiki/Elbs_persulfate_oxidation"
+    publisher: "Wikipedia"
+  - title: "The Elbs and Boyland-Sims peroxydisulfate oxidations (E. J. Behrman, 2006)"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC1697820/"
+    publisher: "Beilstein Journal of Organic Chemistry"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 2
+  note: "Notes hydrolyse the O–SO₃H group with water before rearomatisation; sources show the aryl sulphate forms first (it is isolable) and is hydrolysed by aqueous acid. Page follows the sources. Notes label K₂S₂O₈ as 'potassium sulphate'; corrected to persulphate."
+---
+
+## What is the Elbs persulphate oxidation?
+
+The **Elbs persulphate oxidation** converts a **phenol** into a **para-dihydroxybenzene** using **potassium persulphate (K₂S₂O₈) in aqueous alkali**. The phenoxide ion attacks the persulphate ion, which puts an **–OSO₃⁻ (sulphate) group para to the OH**. Heating this aryl sulphate with dilute acid hydrolyses it to the second OH, so **phenol gives hydroquinone**. It was reported by Karl Elbs in 1893, who used it to make nitrohydroquinone.
+
+## General reaction
+
+<Eq ce="C6H5OH + S2O8^2- + 2OH- -> 4-HOC6H4OSO3^- + SO4^2- + H2O" />
+
+<Eq ce="4-HOC6H4OSO3^- + H2O ->[H+][\Delta] 1,4-C6H4(OH)2 + HSO4^-" />
+
+## Mechanism
+
+1. **Phenoxide formation.** OH⁻ removes the phenolic proton. The negative charge spreads into the ring, so the **para carbon** carries partial negative charge (the para-carbanion resonance form).
+2. **Attack on the peroxide oxygen.** The para carbon attacks one oxygen of the O–O bond of ⁻O₃S–O–O–SO₃⁻. The O–O bond breaks and sulphate (SO₄²⁻) leaves. This is a nucleophilic displacement on oxygen, not a radical reaction.
+3. **Rearomatisation.** The resulting cyclohexadienone loses the para hydrogen (tautomerisation) and becomes an aromatic **4-hydroxyphenyl sulphate**.
+4. **Acid hydrolysis.** The aryl sulphate ester is hydrolysed in hot aqueous acid, replacing –OSO₃⁻ by –OH and giving **hydroquinone**.
+
+<KeyPoint>
+The attack comes directly from the **para carbon** of the phenoxide. When the alternative O-sulphate intermediate was made separately, it moved to the ortho position, not para, which rules out "O-attack first, then migration" for the Elbs reaction.
+</KeyPoint>
+
+<ExamTip title="Common mistake">
+The reagent is **potassium persulphate** (peroxydisulphate, K₂S₂O₈, with an O–O bond), not potassium sulphate (K₂SO₄). Also, plain water does not hydrolyse the sulphate during the reaction: the aryl sulphate is a stable, water-soluble intermediate that needs acid and heat for hydrolysis.
+</ExamTip>
+
+## Examples
+
+| Phenol | Elbs product (after hydrolysis) | Note |
+|---|---|---|
+| Phenol | Hydroquinone | para attack |
+| 2-Nitrophenol | 2-Nitrohydroquinone | Elbs's original example |
+| 2-Fluorophenol | 2-Fluorohydroquinone | halogens tolerated |
+| 3-Methylphenol (m-cresol) | 2-Methylhydroquinone | OH enters para to the OH |
+| 3,4-Dimethylphenol | 3,4-Dimethylcatechol | para blocked, so ortho attack |
+| 4-Nitrophenol | 2-Hydroxy-5-nitrophenyl sulphate | para blocked, so ortho attack |
+
+**1. Phenol → hydroquinone:**
+
+<Eq ce="C6H5OH ->[K2S2O8, NaOH][then H3O+] 1,4-C6H4(OH)2" />
+
+**2. 2-Nitrophenol → nitrohydroquinone:**
+
+<Eq ce="2-O2NC6H4OH ->[K2S2O8, KOH][then H3O+] 2-O2N-1,4-C6H3(OH)2" />
+
+**3. 3,4-Dimethylphenol (para blocked) → 3,4-dimethylcatechol:**
+
+<Eq ce="3,4-(CH3)2C6H3OH ->[K2S2O8, NaOH][then H3O+] 3,4-(CH3)2-1,2-C6H2(OH)2" />
+
+## Limitations
+
+- **Yields are low to moderate** (often below 50%); some starting phenol is recovered while all the persulphate is used up.
+- The reaction is run at **room temperature or below** to suppress side reactions involving free radicals.
+- Higher yields are obtained when persulphate is added slowly so that phenol stays in excess. Potassium persulphate's low solubility helps here; sodium and ammonium salts dissolve better.
+- Its strength is **selectivity and tolerance**: many other functional groups (nitro, halogen, carbonyl) survive, and the procedure is very simple.
+
+## Comparison with other routes to dihydric phenols
+
+| Method | Starting material | Product |
+|---|---|---|
+| Elbs oxidation | Phenol + K₂S₂O₈/OH⁻ | Hydroquinone (para OH) |
+| [Dakin reaction](/reactions/dakin-reaction/) | o- or p-hydroxybenzaldehyde + H₂O₂/OH⁻ | Catechol or hydroquinone |
+| [Cumene-type process](/reactions/cumene-process/) | 1,4-Diisopropylbenzene + O₂, then H⁺ | Hydroquinone + acetone |
+
+## Related reactions
+
+- [Dakin reaction](/reactions/dakin-reaction/): another way to install an OH on a phenol ring using a peroxide.
+- [Kolbe–Schmitt reaction](/reactions/kolbe-schmitt-reaction/) and [Reimer–Tiemann reaction](/reactions/reimer-tiemann-reaction/): the phenoxide ion acting as a ring nucleophile towards other electrophiles.
+- [Reactions of phenols](/mechanisms/reactions-of-phenols/) and [Oxidation reactions](/mechanisms/oxidation-reactions/).

@@ -15,8 +15,10 @@ byproducts: "Mg(OH)X after aqueous acid work-up"
 reagents: "R–X + Mg in dry ether (to make RMgX); then the electrophile, then H₃O⁺"
 conditions: "Strictly anhydrous diethyl ether or THF; acidic aqueous work-up"
 equation: "CH3COC2H5 ->[1) C2H5MgBr, dry ether][2) H3O+] (C2H5)2C(OH)CH3"
-notesPages: [9, 13, 52]
-memoryTricks: []
+notesPages: [9, 13, 52, 83, 84, 146]
+memoryTricks:
+  - text: "Is ko H chahiye"
+    meaning: "This (Grignard reagent) wants an acidic H: every acidic hydrogen in the molecule destroys one RMgX and releases one R–H."
 faq:
   - q: "How is a Grignard reagent prepared?"
     a: "By reacting an alkyl or aryl halide (chloride, bromide or iodide) with magnesium metal in dry ether, for example CH3Br + Mg → CH3MgBr. The ether stabilises the reagent by coordinating to magnesium."
@@ -45,10 +47,20 @@ sources:
   - title: "Grignard Reaction"
     url: "https://www.organic-chemistry.org/namedreactions/grignard-reaction.shtm"
     publisher: "Organic Chemistry Portal"
+  - title: "Conjugate Addition Reactions"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Aldehydes_and_Ketones/Reactivity_of_Aldehydes_and_Ketones/Conjugate_Addition_Reactions"
+    publisher: "Chemistry LibreTexts"
+  - title: "Thiol (preparation from Grignard reagents and sulfur)"
+    url: "https://en.wikipedia.org/wiki/Thiol"
+    publisher: "Wikipedia"
+  - title: "Monochloramine (amination of nucleophiles)"
+    url: "https://en.wikipedia.org/wiki/Monochloramine"
+    publisher: "Wikipedia"
 verified:
   status: "verified"
-  checked: 2026-11-21
-  sourceCount: 5
+  checked: 2026-11-22
+  sourceCount: 8
+  note: "RMgX + SO₃ → RSO₃H and RMgX + ClCN → RCN are exam conventions not found in the sources read. Uncatalysed RMgX + R–X coupling by SN2 is exam teaching; sources say Grignard reagents do not normally couple with alkyl halides without a metal catalyst."
 ---
 
 ## What is a Grignard reagent?
@@ -93,6 +105,47 @@ Grignard reactions must be run under strictly anhydrous conditions. Even moist a
 | Other aldehydes (RCHO) | 2° alcohol |
 | Ketones (R₂CO) | 3° alcohol |
 
+## α,β-Unsaturated carbonyls: 1,2- or 1,4-addition?
+
+An α,β-unsaturated aldehyde or ketone has two electrophilic carbons: the C=O carbon (1,2-addition) and the β-carbon (1,4- or conjugate addition). A Grignard reagent is a strong base and a **hard** nucleophile; its additions are irreversible, so the faster **1,2-addition** wins (kinetic control). Adding a copper(I) salt (CuBr or CuI) converts it into an organocopper species, a **soft** nucleophile that adds **1,4**, like a Gilman reagent R₂CuLi.
+
+<Eq ce="CH2=CH-CO-CH3 ->[1) CH3MgBr][2) H3O+] CH2=CH-C(OH)(CH3)2" />
+
+<Eq ce="CH2=CH-CO-CH3 ->[1) CH3MgBr, CuBr][2) H3O+] CH3-CH2-CH2-CO-CH3" />
+
+The 1,4-product first forms as an enol(ate), which tautomerises to the saturated ketone. Acrolein (CH₂=CH–CHO) with CH₃MgBr likewise gives the 1,2-product, but-3-en-2-ol.
+
+| Hard nucleophiles (mainly 1,2) | Soft nucleophiles (mainly 1,4) |
+|---|---|
+| CH₃Li, CH₃Na, RMgX (no copper) | R₂CuLi (Gilman), RMgX/CuX, amines, water, alcohols, thiols, CN⁻ |
+
+## Reactions with other electrophiles
+
+The carbanion-like R group attacks many electrophiles besides C=O; an acidic work-up then gives the product:
+
+| Electrophile | Intermediate | Product after H₃O⁺ |
+|---|---|---|
+| CO₂ (dry ice) | R–COOMgX | R–COOH (carboxylic acid) |
+| Sulphur (S₈) | R–SMgX | R–SH (thiol) |
+| O₂ | R–O–O–MgX | R–OOH or R–OH (poor yields) |
+| NH₂Cl (chloramine) | — | R–NH₂ (amine) |
+| SO₃ (exam questions) | R–SO₂–OMgX | R–SO₃H (sulphonic acid) |
+| Cl–C≡N (exam questions) | — | R–C≡N (nitrile) |
+
+<Eq ce="RMgX + S -> R-S-MgX ->[H3O+] R-SH" />
+
+**Alkyl halides.** Exam answers sometimes write RMgX + R–X → R–R as an SN2 attack, with 1° halides substituting, 3° halides eliminating (E2) and 2° halides giving both.
+
+<ExamTip title="Common mistake">
+Ordinary Grignard reagents do **not** couple efficiently with simple alkyl halides. The coupling works well only with reactive halides (allyl, benzyl) or with a metal catalyst such as Li₂CuCl₄; for a clean R–R′ bond, use the [Corey–House synthesis](/reactions/corey-house-synthesis/).
+</ExamTip>
+
+## Counting active hydrogens (CH₃MgBr and CH₄)
+
+Each acidic hydrogen (O–H, N–H, COOH, S–H, terminal ≡C–H) destroys one molecule of CH₃MgBr and releases **one mole of methane**. A C=O group uses up CH₃MgBr by addition but releases no CH₄. Glycerol (three OH groups) gives 3 mol CH₄; prop-2-yn-1-ol, HC≡C–CH₂OH, gives 2 mol CH₄ (one O–H, one alkyne C–H).
+
+<Eq ce="CH3MgBr + R-OH -> CH4 + R-OMgBr" />
+
 ## Examples
 
 **Ketone → tertiary alcohol** (butan-2-one with ethylmagnesium bromide):
@@ -123,7 +176,6 @@ To design a Grignard synthesis, cut the bond between the carbinol carbon and one
 
 - Substrates with acidic hydrogens (–OH, –NH₂, –COOH, terminal alkyne C–H) quench the reagent instead of reacting at the carbonyl group.
 - With very hindered ketones, RMgX can act as a base (forming the enolate) or deliver a hydride (reduction) instead of adding.
-- Grignard reagents generally do not couple with ordinary alkyl halides without a metal catalyst.
 
 ## Related reactions
 

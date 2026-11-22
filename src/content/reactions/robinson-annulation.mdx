@@ -1,0 +1,108 @@
+---
+title: "Robinson Annulation"
+description: "Robinson annulation builds a new cyclohexenone ring: a ketone enolate does Michael addition to methyl vinyl ketone, then intramolecular aldol condensation."
+aliases: ["Robinson annelation", "Robinson ring annulation", "Michael–aldol annulation", "Tandem Michael-aldol reaction"]
+kind: "named-reaction"
+family: "carbonyl-condensation-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["robinson_annulation_michael", "robinson_annulation_aldol"]
+reactant:
+  name: "Cyclohexanone + methyl vinyl ketone (but-3-en-2-one)"
+  smiles: "O=C1CCCCC1.C=CC(C)=O"
+product:
+  name: "Δ¹,⁹-Octal-2-one (4,4a,5,6,7,8-hexahydronaphthalen-2(3H)-one)"
+  smiles: "O=C1CCC2CCCCC2=C1"
+byproducts: "H₂O"
+reagents: "Base (OH⁻, NaOEt or KOH); acid catalysis (H₂SO₄) also works"
+conditions: "Michael addition first, then intramolecular aldol and dehydration on warming"
+equation: "cyclohexanone + CH2=CHCOCH3 ->[OH-] 2-(3-oxobutyl)cyclohexanone ->[OH-][\\Delta] octalone + H2O"
+notesPages: [89]
+memoryTricks: []
+faq:
+  - q: "What are the two steps of the Robinson annulation?"
+    a: "First a Michael (1,4-) addition of a ketone enolate to an α,β-unsaturated ketone such as methyl vinyl ketone gives a 1,5-diketone. Then an intramolecular aldol condensation of that diketone closes a six-membered ring and loses water to give a cyclohexenone."
+  - q: "What is the product of cyclohexanone and methyl vinyl ketone in base?"
+    a: "The Michael adduct 2-(3-oxobutyl)cyclohexanone forms first. It then cyclises and dehydrates to the bicyclic enone Δ¹,⁹-octal-2-one, in which the new C=C sits at the ring fusion, conjugated with the C=O."
+  - q: "Why does a six-membered ring form in the Robinson annulation?"
+    a: "The Michael step creates a 1,5-diketone. The enolate of its terminal CH₃ attacks the ring C=O five atoms away, which closes a strain-free six-membered ring. 1,5-Diketones give cyclohexenones in aldol reactions."
+  - q: "What is the Wieland–Miescher ketone?"
+    a: "It is the Robinson annulation product of 2-methylcyclohexane-1,3-dione with methyl vinyl ketone. This bicyclic enedione is a classic starting material for steroid synthesis."
+related: ["michael-addition", "aldol-condensation", "claisen-condensation", "stork-enamine-reaction", "e1cb-mechanism"]
+sources:
+  - title: "Robinson annulation"
+    url: "https://en.wikipedia.org/wiki/Robinson_annulation"
+    publisher: "Wikipedia"
+  - title: "Robinson Annulation"
+    url: "https://www.organic-chemistry.org/namedreactions/robinson-annulation.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "23.12: The Robinson Annulation Reaction"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/23%3A_Carbonyl_Condensation_Reactions/23.12%3A_The_Robinson_Annulation_Reaction"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "Methyl vinyl ketone"
+    url: "https://en.wikipedia.org/wiki/Methyl_vinyl_ketone"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 4
+---
+
+## What is the Robinson annulation?
+
+The **Robinson annulation** is a ring-forming reaction that adds a **new six-membered ring** carrying an α,β-unsaturated ketone (a cyclohex-2-enone) onto a ketone. It combines two reactions in sequence: a **Michael addition** of a ketone enolate to an α,β-unsaturated ketone, usually **methyl vinyl ketone (MVK)**, followed by an **intramolecular aldol condensation**. Robert Robinson reported it in 1935, and it is a key route to fused rings in steroids and terpenes. *Annulus* is Latin for "ring".
+
+## Mechanism
+
+**Stage 1: Michael addition (1,4-addition)**
+
+1. OH⁻ removes an α-H from cyclohexanone to give its enolate.
+2. The enolate carbon attacks the **β-CH₂** of CH₂=CH–CO–CH₃ (conjugate addition), giving a new enolate on the MVK part.
+3. Proton transfer (tautomerisation) gives the **1,5-diketone** 2-(3-oxobutyl)cyclohexanone.
+
+<Eq ce="cyclohexanone + CH2=CHCOCH3 ->[OH-] 2-(3-oxobutyl)cyclohexanone" />
+
+**Stage 2: Intramolecular aldol condensation**
+
+4. OH⁻ removes an H from the terminal CH₃ of the side-chain ketone, giving ⁻CH₂–CO–.
+5. This carbanion attacks the ring C=O, closing a six-membered ring and giving a bicyclic β-hydroxy ketone (keto alcohol).
+6. Dehydration (E1cB, on warming) gives the conjugated enone: **Δ¹,⁹-octal-2-one**, with the C=C at the ring fusion.
+
+<Eq ce="2-(3-oxobutyl)cyclohexanone ->[OH-] bicyclic keto alcohol ->[\Delta][-H2O] octalone" />
+
+<KeyPoint>
+In the new ring, the four carbons of methyl vinyl ketone's CH₂=CH–CO–CH₃ unit make a four-carbon bridge, and two carbons of the original ketone (its C=O carbon and its α-carbon) complete the six-membered ring. The new C=C always ends up conjugated with the new ring C=O.
+</KeyPoint>
+
+## Examples
+
+| Donor (enolate source) | Acceptor | Annulation product |
+|---|---|---|
+| Cyclohexanone | Methyl vinyl ketone | Δ¹,⁹-Octal-2-one (bicyclic enone) |
+| 2-Methylcyclohexanone | Methyl vinyl ketone | Methyl-substituted octalone (angular CH₃ at the ring fusion) |
+| 2-Methylcyclohexane-1,3-dione | Methyl vinyl ketone | Wieland–Miescher ketone (steroid building block) |
+| 2-Methylcyclopentane-1,3-dione | Aryl-substituted enone | Ring C/D unit used in a synthesis of estrone |
+
+With a β-diketone or β-keto ester donor, deprotonation happens at the CH flanked by two carbonyl groups. This fixes where the Michael addition takes place.
+
+<ExamTip>
+To work backwards from a cyclohexenone product, first undo the aldol: break the C=C (α,β-bond) and restore the C=O on the β-carbon. This gives a 1,5-diketone. Then undo the Michael addition at the bond between the α-carbon of the original ketone and the CH₂ that came from MVK.
+</ExamTip>
+
+## Conditions and practical points
+
+- **Base or acid:** the reaction is usually run with base (NaOH, KOH, NaOEt), but acid (H₂SO₄) gives similar results. The Michael step can also run under neutral conditions through an enamine (compare the [Stork enamine reaction](/reactions/stork-enamine-reaction/)).
+- **Two separate steps:** the Michael adduct is often isolated first and then cyclised in a separate step. This stops the starting enolate from reacting with the enone product.
+- **MVK polymerises easily.** A precursor such as a β-chloroketone or a Mannich base can be used, which releases the enone slowly.
+- **Asymmetric versions:** proline and other chiral amines catalyse an enantioselective annulation, for example to make the Wieland–Miescher ketone in enantiopure form.
+
+## Limitations
+
+- Unsymmetrical ketones can form two different enolates, so the Michael step can occur on either side. The thermodynamic enolate usually reacts under equilibrating conditions.
+- The enone product is itself a Michael acceptor, so side reactions with excess enolate can occur.
+
+## Related reactions
+
+- [Michael addition](/reactions/michael-addition/), the first stage
+- [Aldol condensation](/reactions/aldol-condensation/), including the intramolecular aldol that closes the ring
+- [Claisen condensation](/reactions/claisen-condensation/) and [Dieckmann condensation](/reactions/dieckmann-condensation/), other ring-building condensations
+- Hub: [Carbonyl condensation reactions](/mechanisms/carbonyl-condensation-reactions/)

@@ -1,0 +1,124 @@
+---
+title: "Hell–Volhard–Zelinsky Reaction"
+description: "Hell–Volhard–Zelinsky (HVZ) reaction converts a carboxylic acid with an α-hydrogen into an α-halo acid using Br₂ or Cl₂ and red phosphorus. Mechanism, examples."
+aliases: ["HVZ reaction", "Hell-Volhard-Zelinsky halogenation", "Hell Volhard Zelinskii reaction", "Alpha halogenation of carboxylic acids", "α-Bromination of carboxylic acids"]
+kind: "named-reaction"
+family: "reactions-of-carboxylic-acids"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "Propanoic acid"
+  smiles: "CCC(=O)O"
+product:
+  name: "2-Bromopropanoic acid"
+  smiles: "CC(Br)C(=O)O"
+byproducts: "HBr (HX)"
+reagents: "Br₂ or Cl₂ with a small amount of red phosphorus (forms PX₃ in situ), or X₂ with catalytic PX₃"
+conditions: "Warm; the acid must have at least one α-hydrogen; water work-up hydrolyses the α-halo acyl halide"
+equation: "CH3CH2COOH + Br2 ->[red P] CH3CHBrCOOH + HBr"
+notesPages: [85, 86]
+memoryTricks: []
+faq:
+  - q: "What is the product of the HVZ reaction of propanoic acid?"
+    a: "2-Bromopropanoic acid, CH₃CHBrCOOH, when bromine and red phosphorus are used. The bromine goes onto the α-carbon, the carbon next to the COOH group."
+  - q: "Why is red phosphorus used in the Hell–Volhard–Zelinsky reaction?"
+    a: "Red phosphorus reacts with the halogen to form PX₃ (PBr₃ or PCl₃). PX₃ converts the acid into an acyl halide, which enolises far more easily than the free acid, so the α-carbon can then be halogenated."
+  - q: "Why does trimethylacetic acid not undergo the HVZ reaction?"
+    a: "The HVZ reaction needs at least one hydrogen on the α-carbon to form the enol. (CH₃)₃C–COOH and benzoic acid have no α-hydrogen, so they are not halogenated."
+  - q: "How is glycine made from acetic acid?"
+    a: "Acetic acid is first converted to bromoacetic acid by the HVZ reaction (Br₂, red P). Treating bromoacetic acid with excess ammonia replaces Br by NH₂, giving glycine, H₂N–CH₂–COOH."
+  - q: "Is the HVZ product optically active?"
+    a: "No. The α-carbon becomes planar in the enol intermediate, so when a new stereocentre is formed (as in 2-bromopropanoic acid) both enantiomers form equally and the product is racemic."
+related: ["haloform-reaction", "hunsdiecker-reaction", "ammonolysis-of-alkyl-halides", "arndt-eistert-synthesis", "concepts/amino-acids", "reagents/hi-and-red-phosphorus"]
+sources:
+  - title: "Aldehydes, Ketones and Carboxylic Acids (Class XII Chemistry, Unit 8)"
+    url: "https://ncert.nic.in/textbook/pdf/lech203.pdf"
+    publisher: "NCERT"
+  - title: "Hell–Volhard–Zelinsky halogenation"
+    url: "https://en.wikipedia.org/wiki/Hell%E2%80%93Volhard%E2%80%93Zelinsky_halogenation"
+    publisher: "Wikipedia"
+  - title: "Hell-Volhard-Zelinsky Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/hell-volhard-zelinsky-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "22.4: Alpha Bromination of Carboxylic Acids"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(McMurry)/22%3A_Carbonyl_Alpha-Substitution_Reactions/22.04%3A_Alpha_Bromination_of_Carboxylic_Acids"
+    publisher: "Chemistry LibreTexts"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 4
+  note: "Mixed-reagent outcomes (Cl₂/PBr₃ gives the α-chloro acid) and dihalogenation with excess halogen are kept as exam teaching derived from the mechanism; no source states them explicitly."
+---
+
+## What is the Hell–Volhard–Zelinsky reaction?
+
+The **Hell–Volhard–Zelinsky (HVZ) reaction** is the **α-halogenation of a carboxylic acid**. A carboxylic acid that has at least one **α-hydrogen** is treated with **bromine or chlorine in the presence of a small amount of red phosphorus**, and one α-hydrogen is replaced by a halogen to give an **α-halocarboxylic acid**. NCERT lists it as the key substitution reaction of the hydrocarbon part of carboxylic acids.
+
+<Eq ce="R-CH2-COOH ->[X2, red P][then H2O] R-CHX-COOH + HX" />
+
+The reaction is named after Carl Magnus von Hell, Jacob Volhard and Nikolay Zelinsky, who developed it in the 1880s.
+
+## Why the acid needs help
+
+Ketones and aldehydes are halogenated at the α-carbon simply with X₂ and acid, because they form enols. A free carboxylic acid hardly enolises: base removes the O–H proton long before an α-hydrogen. The trick of the HVZ reaction is to turn the acid into an **acyl halide**, which has no acidic O–H and enolises readily.
+
+## Mechanism
+
+1. **Making PX₃.** Red phosphorus reacts with the halogen: 2P + 3X₂ → 2PX₃. So "red P + Br₂" and "PBr₃ + Br₂" are effectively the same reagent.
+2. **Acyl halide.** PX₃ converts R–CH₂–COOH into the acyl halide R–CH₂–COX.
+3. **Enolisation.** The acyl halide tautomerises (catalysed by the HX formed) to its enol, R–CH=C(OH)X.
+4. **α-Halogenation.** The electron-rich C=C of the enol attacks X₂; loss of H⁺ gives the α-halo acyl halide R–CHX–COX.
+5. **Back to the acid.** Water hydrolyses R–CHX–COX to R–CHX–COOH. Without water, R–CHX–COX can also exchange with unreacted acid, regenerating the acyl halide, so only a catalytic amount of phosphorus is needed.
+
+<Eq ce="CH3CH2COOH ->[PBr3] CH3CH2COBr <=> CH3CH=C(OH)Br ->[Br2] CH3CHBrCOBr ->[H2O] CH3CHBrCOOH" />
+
+<KeyPoint>
+Two conditions to remember: (1) the carboxylic acid must have **at least one α-hydrogen**, and (2) the role of red phosphorus is only to **generate PX₃**, which makes the acyl halide that can enolise.
+</KeyPoint>
+
+Because the α-carbon is flat in the enol, a new stereocentre at the α-carbon is formed as a **racemic mixture**. If the reaction is quenched with an alcohol instead of water, the **α-bromo ester** is obtained.
+
+## Examples
+
+**1. Propanoic acid to 2-bromopropanoic acid**
+
+<Eq ce="CH3CH2COOH + Br2 ->[red P] CH3CHBrCOOH + HBr" />
+
+**2. Acetic acid to chloroacetic acid**
+
+<Eq ce="CH3COOH + Cl2 ->[red P] ClCH2COOH + HCl" />
+
+**3. Acetic acid to glycine (HVZ, then ammonolysis)**
+
+<Eq ce="CH3COOH ->[Br2, red P] BrCH2COOH ->[excess NH3] H2N-CH2-COOH" />
+
+The same two-step route from propanoic acid gives racemic alanine, the textbook use of the reaction. α-Halo acids are very reactive in SN2 reactions, so the halogen is easily replaced by NH₂, OH or CN.
+
+## Reagent variations in exam questions
+
+| Reagent on propanoic acid | Product |
+|---|---|
+| Br₂, red P (then H₂O) | CH₃CHBrCOOH (2-bromopropanoic acid) |
+| Cl₂, red P (then H₂O) | CH₃CHClCOOH |
+| PCl₅ alone | CH₃CH₂COCl (acyl chloride, no α-substitution) |
+| Br₂ + PCl₃ | CH₃CHBrCOOH |
+| Cl₂ + PBr₃ | CH₃CHClCOOH |
+| excess Br₂, red P | CH₃CBr₂COOH |
+
+<ExamTip>
+In exam answers, the α-halogen always comes from the **free halogen X₂**, because it is X₂ that reacts with the enol; the phosphorus halide only makes the acyl halide. So Cl₂/PBr₃ gives the α-chloro acid and Br₂/PCl₃ gives the α-bromo acid. With excess halogen, the remaining α-hydrogens can also be replaced.
+</ExamTip>
+
+## Limitations
+
+- **No α-hydrogen, no reaction:** benzoic acid, 2,2-dimethylpropanoic acid and formic acid are not α-halogenated.
+- Only **chlorine and bromine** are used; iodination and fluorination are not carried out this way.
+- If an aqueous work-up is used during the reaction, a full equivalent of PX₃ is needed because water breaks the catalytic exchange cycle.
+
+## Related reactions
+
+- [Haloform reaction](/reactions/haloform-reaction/): α-halogenation of methyl ketones in base, followed by C–C cleavage.
+- [Hunsdiecker reaction](/reactions/hunsdiecker-reaction/): replaces the whole COOH group by a halogen instead of an α-hydrogen.
+- [Ammonolysis of alkyl halides](/reactions/ammonolysis-of-alkyl-halides/): the step that turns an α-halo acid into an amino acid; see [amino acids](/concepts/amino-acids/).
+- [Arndt–Eistert synthesis](/reactions/arndt-eistert-synthesis/): the correct way to add one carbon to an acid chain.
+- [Reactions of carboxylic acids](/mechanisms/reactions-of-carboxylic-acids/) hub.

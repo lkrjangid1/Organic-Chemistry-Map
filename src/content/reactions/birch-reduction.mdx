@@ -1,0 +1,126 @@
+---
+title: "Birch Reduction"
+description: "Birch reduction converts benzene into cyclohexa-1,4-diene using Na or Li in liquid NH₃ with an alcohol; alkynes give trans-alkenes. EDG and EWG rules explained."
+aliases: ["Birch reaction", "Metal–ammonia reduction", "Dissolving metal reduction", "Na/liquid NH3 reduction", "Na in liquid ammonia"]
+kind: "named-reaction"
+family: "reduction-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["birch_reduction_of_benzene"]
+reactant:
+  name: "Benzene"
+  smiles: "c1ccccc1"
+product:
+  name: "Cyclohexa-1,4-diene"
+  smiles: "C1=CCC=CC1"
+byproducts: "Sodium alkoxide (e.g. NaOC₂H₅)"
+reagents: "Na or Li metal in liquid NH₃, with an alcohol (ethanol or tert-butanol) as proton source"
+conditions: "Liquid ammonia, about −33 °C (its boiling point) or below"
+equation: "C6H6 + 2Na + 2C2H5OH ->[liq. NH3] C6H8 + 2C2H5ONa"
+notesPages: [61]
+memoryTricks: []
+faq:
+  - q: "What is the product of Birch reduction of benzene?"
+    a: "Cyclohexa-1,4-diene, a non-conjugated diene. The two new hydrogens end up on opposite (para) carbons of the ring, and the 1,3-diene is not formed."
+  - q: "What is the product of Birch reduction of anisole?"
+    a: "1-Methoxycyclohexa-1,4-diene. An electron-donating group such as OCH₃ stays on a carbon of a remaining double bond."
+  - q: "What is the product of Birch reduction of benzoic acid?"
+    a: "Cyclohexa-2,5-diene-1-carboxylic acid. An electron-withdrawing group such as COOH ends up on an sp³ carbon, because the carbanion next to it is stabilised."
+  - q: "What does Na in liquid NH₃ do to an alkyne?"
+    a: "It reduces an internal alkyne to the trans (E) alkene, for example 5-decyne to trans-5-decene. This complements H₂ with Lindlar catalyst, which gives the cis-alkene."
+  - q: "Why is sodium in liquid ammonia blue?"
+    a: "Sodium dissolves to give Na⁺ ions and electrons solvated by ammonia. These solvated electrons absorb light and give the deep blue colour, and they are the actual reducing agent."
+related: ["catalytic-hydrogenation", "reagents/lindlar-catalyst", "bouveault-blanc-reduction", "diimide-reduction", "concepts/aromaticity"]
+sources:
+  - title: "Birch reduction"
+    url: "https://en.wikipedia.org/wiki/Birch_reduction"
+    publisher: "Wikipedia"
+  - title: "Birch Reduction"
+    url: "https://www.organic-chemistry.org/namedreactions/birch-reduction.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "19.5: Reductions of Aromatic Rings"
+    url: "https://chem.libretexts.org/Courses/SUNY_Potsdam/Book:_Organic_Chemistry_II_(Walker)/19:_Oxidation_and_Reduction/19.05:_Reductions_of_Aromatic_Rings"
+    publisher: "Chemistry LibreTexts"
+  - title: "9.5: Reduction of Alkynes (OpenStax)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/09:_Alkynes_-_An_Introduction_to_Organic_Synthesis/9.05:_Reduction_of_Alkynes"
+    publisher: "Chemistry LibreTexts"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 4
+  note: "Notes give 'Na/Li + liquid ROH' as an alternative to liquid NH3; sources use liquid NH3 with an alcohol only as the proton source. Calling the Na/NH3 reduction of alkynes 'Birch reduction' is an Indian exam convention; the sources reserve the name for arenes and call the alkyne case a dissolving metal reduction."
+---
+
+## What is the Birch reduction?
+
+The **Birch reduction** is the partial reduction of an **aromatic ring to a cyclohexa-1,4-diene** using an **alkali metal (Na or Li) dissolved in liquid ammonia**, with an **alcohol** as the proton source. Benzene gives **cyclohexa-1,4-diene**, not the conjugated 1,3-diene, and the ring is not reduced further. It is named after the Australian chemist **Arthur J. Birch**. In Indian exam usage, the same reagent acting on an **alkyne** to give a **trans-alkene** is also called Birch reduction; textbooks call that case a dissolving metal reduction.
+
+## Mechanism (benzene)
+
+1. **Solvated electrons.** Na dissolves in liquid NH₃ to give Na⁺ and blue, ammonia-solvated electrons: Na → Na⁺ + e⁻.
+2. **First electron transfer.** An electron enters the ring's π system, giving a **radical anion**.
+3. **First protonation.** The alcohol protonates the radical anion, giving a cyclohexadienyl radical. This is the slow step.
+4. **Second electron transfer.** Another electron converts the radical into a cyclohexadienyl **carbanion**.
+5. **Second protonation.** The carbanion is protonated at the carbon **para** to the first one, giving the 1,4-diene.
+
+<Eq ce="C6H6 ->[Na, liq. NH3][C2H5OH] C6H8 (cyclohexa-1,4-diene)" />
+
+<KeyPoint>
+Electron, proton, electron, proton. The two hydrogens add **1,4 (para)** to each other, so the two remaining C=C bonds are **isolated**, not conjugated.
+</KeyPoint>
+
+## Substituent effects: EDG vs EWG
+
+| Substituent on ring | Example | Where it ends up | Product |
+|---|---|---|---|
+| Electron-donating (OCH₃, CH₃) | Anisole | On a **double-bond (sp²) carbon** | 1-Methoxycyclohexa-1,4-diene |
+| Electron-withdrawing (COOH, COOR) | Benzoic acid | On an **sp³ carbon** | Cyclohexa-2,5-diene-1-carboxylic acid |
+
+The reason: protonation happens **ortho** to an electron donor, keeping the donor on the more highly substituted double bond. With an electron-withdrawing group, protonation happens **para** to it, so the group sits on the carbon that becomes sp³, where it can stabilise the neighbouring carbanion.
+
+<Eq ce="C6H5OCH3 ->[Na, liq. NH3, ROH] 1-methoxycyclohexa-1,4-diene" />
+
+<Eq ce="C6H5COOH ->[Na, liq. NH3, ROH] cyclohexa-2,5-diene-1-carboxylic acid" />
+
+Electron-withdrawing groups also **speed up** the reduction (they stabilise the radical anion), while electron-donating groups slow it down, the reverse of electrophilic substitution.
+
+<ExamTip>
+EDG: on the double bond. EWG: on the sp³ carbon. In both products the two CH₂ groups are para to each other.
+</ExamTip>
+
+## Alkynes: trans-alkenes
+
+Sodium or lithium in liquid ammonia reduces an internal alkyne to the **trans (E) alkene**, for example 5-decyne gives trans-5-decene.
+
+1. An electron adds to the triple bond, giving a **radical anion**.
+2. NH₃ protonates it, giving a **vinyl radical**. Vinyl radicals flip between cis and trans forms quickly.
+3. A second electron gives a **vinyl anion**, which forms in the less hindered **trans** shape.
+4. NH₃ protonates the vinyl anion to give the **trans-alkene**.
+
+<Eq ce="R-C#C-R' ->[Na, liq. NH3] trans-RCH=CHR'" />
+
+This is the counterpart of H₂ with the [Lindlar catalyst](/reagents/lindlar-catalyst/), which gives the cis-alkene.
+
+## What it does and does not reduce
+
+- Reduced: benzene rings, internal alkynes, C=C conjugated with an aromatic ring, ketones and nitro groups (these are more easily reduced than the ring).
+- Not reduced: isolated alkenes (usually), alcohols, ethers and carboxylic acid groups.
+
+<ExamTip title="Common mistake">
+Sodium in **liquid ammonia** is the Birch reagent; the alcohol is only added as a proton source. Sodium in ethanol alone is a different reduction (used for esters in the [Bouveault–Blanc reduction](/reactions/bouveault-blanc-reduction/)), not the Birch reduction.
+</ExamTip>
+
+## Comparison with catalytic hydrogenation
+
+| Feature | Birch (Na/liq. NH₃) | [Catalytic hydrogenation](/reactions/catalytic-hydrogenation/) |
+|---|---|---|
+| Benzene gives | Cyclohexa-1,4-diene | Cyclohexane (only at high pressure) |
+| Alkyne gives | trans-Alkene | Alkane (cis-alkene with Lindlar) |
+| Mechanism | Electron transfer and protonation | Syn addition on metal surface |
+
+## Related reactions
+
+- [Catalytic hydrogenation](/reactions/catalytic-hydrogenation/)
+- [Lindlar catalyst](/reagents/lindlar-catalyst/)
+- [Bouveault–Blanc reduction](/reactions/bouveault-blanc-reduction/)
+- [Aromaticity](/concepts/aromaticity/): why benzene resists reduction
+- [Reduction reactions hub](/mechanisms/reduction-reactions/)

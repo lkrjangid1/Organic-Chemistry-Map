@@ -1,0 +1,110 @@
+---
+title: "Pyridinium Dichromate (PDC)"
+description: "Pyridinium dichromate (PDC) oxidises 1° alcohols to aldehydes in CH₂Cl₂ but to carboxylic acids in DMF, and 2° alcohols to ketones. Solvent effect explained."
+aliases: ["PDC", "Cornforth reagent", "Corey–Schmidt oxidation", "Pyridinium dichromate oxidation", "(C5H5NH)2Cr2O7"]
+category: "Oxidising agents"
+exams: ["jee-main", "jee-advanced"]
+formula: "(C₅H₅NH⁺)₂Cr₂O₇²⁻"
+molecule:
+  name: "Pyridinium dichromate"
+  smiles: "[O-][Cr](=O)(=O)O[Cr]([O-])(=O)=O.c1cc[nH+]cc1.c1cc[nH+]cc1"
+family: "oxidation-reactions"
+notesPages: [58]
+memoryTricks: []
+faq:
+  - q: "What does PDC do to a primary alcohol?"
+    a: "It depends on the solvent. In dichloromethane PDC stops at the aldehyde, but in DMF a saturated primary alcohol is oxidised all the way to the carboxylic acid."
+  - q: "Is PDC a strong or a mild oxidising agent?"
+    a: "PDC is a Cr(VI) oxidant whose strength depends on the solvent. In CH₂Cl₂ it behaves as a mild, selective oxidant like PCC; in DMF it is stronger and over-oxidises saturated primary alcohols to acids."
+  - q: "What is the difference between PCC and PDC?"
+    a: "PCC is the chlorochromate salt C₅H₅NH⁺CrO₃Cl⁻ and is slightly acidic; PDC is the dichromate salt (C₅H₅NH⁺)₂Cr₂O₇²⁻ and is nearly neutral, so it suits acid-sensitive substrates. Both give aldehydes from primary alcohols in CH₂Cl₂."
+  - q: "Does PDC in DMF oxidise allylic and benzylic alcohols to acids?"
+    a: "No. Even in DMF, allylic and benzylic primary alcohols stop at the aldehyde stage; only saturated primary alcohols are taken on to carboxylic acids."
+related: ["reagents/pyridinium-chlorochromate", "reagents/jones-reagent", "reagents/potassium-dichromate", "reagents/manganese-dioxide", "preparation/preparation-of-aldehydes-and-ketones"]
+sources:
+  - title: "Pyridinium dichromate (Cornforth reagent)"
+    url: "https://en.wikipedia.org/wiki/Pyridinium_dichromate"
+    publisher: "Wikipedia"
+  - title: "Pyridinium Dichromate (PDC)"
+    url: "https://www.organic-chemistry.org/chemicals/oxidations/pyridinium-dichromate-pdc.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "Pyridinium Chlorochromate (PCC)"
+    url: "https://www.organic-chemistry.org/chemicals/oxidations/pyridinium-chlorochromate-pcc.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "Alcohol oxidation"
+    url: "https://en.wikipedia.org/wiki/Alcohol_oxidation"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 4
+  note: "Notes call PDC a 'hard' oxidising agent without naming the solvent; sources describe it as mild in CH₂Cl₂ and stronger in DMF, so the page states the solvent dependence."
+---
+
+## What is pyridinium dichromate (PDC)?
+
+**Pyridinium dichromate (PDC)**, also called the **Cornforth reagent**, is the orange pyridinium salt of dichromate, **(C₅H₅NH⁺)₂Cr₂O₇²⁻**. It is a chromium(VI) oxidising agent that converts **secondary alcohols to ketones** and **primary alcohols to aldehydes or carboxylic acids**, depending on the solvent. In **dichloromethane** it stops at the aldehyde; in **DMF** it oxidises saturated primary alcohols to **carboxylic acids**. Cornforth introduced it in 1962, and Corey and Schmidt developed its use for alcohols in 1979.
+
+## Preparation and composition
+
+PDC is made by slowly adding a concentrated aqueous solution of **chromium trioxide** to **pyridine** with ice cooling (the mixing is strongly exothermic). The orange solid is filtered, washed with acetone and dried.
+
+<Eq ce="2C5H5N + 2CrO3 + H2O -> (C5H5NH)2Cr2O7" />
+
+In water, CrO₃ forms dichromic acid, whose two protons are taken up by two pyridine molecules. Key properties:
+
+- stable in air, **not very hygroscopic**, easy to store;
+- **nearly neutral** (only slightly acidic from the pyridinium ion), so it is **less acidic than PCC**;
+- soluble in water, DMF and DMSO; only sparingly soluble in CH₂Cl₂, where it is used as a suspension.
+
+## What PDC oxidises: the solvent decides
+
+| Substrate | PDC in CH₂Cl₂ | PDC in DMF |
+|---|---|---|
+| Saturated 1° alcohol, RCH₂OH | aldehyde, RCHO | **carboxylic acid, RCOOH** |
+| Allylic or benzylic 1° alcohol | α,β-unsaturated aldehyde / ArCHO | still stops at aldehyde |
+| 2° alcohol, R₂CHOH | ketone | ketone |
+| 3° alcohol | no oxidation | no oxidation |
+
+<Eq ce="CH3(CH2)6CH2OH ->[PDC][CH2Cl2] CH3(CH2)6CHO" />
+
+<Eq ce="CH3(CH2)6CH2OH ->[PDC][DMF] CH3(CH2)6COOH" />
+
+<Eq ce="C6H5CH2OH ->[PDC][DMF] C6H5CHO" />
+
+<KeyPoint>
+PDC is mild in CH₂Cl₂ (like PCC) but strong in DMF. The more DMF in the solvent mixture, the stronger the oxidation. Allylic and benzylic primary alcohols are not taken to acids even in DMF.
+</KeyPoint>
+
+Slow oxidations can be sped up with powdered 3 Å molecular sieves, acetic acid or acetic anhydride, at the cost of a less neutral medium and some loss of selectivity.
+
+## What PDC does not touch
+
+- **Tertiary alcohols**: no α-hydrogen, so no carbonyl can form.
+- **Acid-sensitive groups** (acetals, silyl ethers, many protecting groups): because PDC is almost neutral, it is the preferred Cr(VI) reagent for such substrates.
+- Isolated C=C bonds are not cleaved under the usual room-temperature conditions.
+
+## Mechanism (short)
+
+As with other Cr(VI) oxidants, the alcohol first forms a **chromate ester** with the dichromate. A base then removes the hydrogen on the carbinol carbon while the O–Cr bond breaks, giving the C=O group and reduced chromium. A tertiary alcohol has no such hydrogen, which is why it is not oxidised. In exam answers, the acid formed in DMF is explained as a second oxidation of the aldehyde (through its hydrate) under the stronger conditions.
+
+## Comparison with similar reagents
+
+| Reagent | Formula | Acidity | 1° alcohol gives |
+|---|---|---|---|
+| **PDC** | (C₅H₅NH⁺)₂Cr₂O₇²⁻ | nearly neutral | aldehyde (CH₂Cl₂) / acid (DMF) |
+| [PCC](/reagents/pyridinium-chlorochromate/) | C₅H₅NH⁺CrO₃Cl⁻ | slightly acidic | aldehyde (CH₂Cl₂) |
+| Collins reagent | CrO₃·2C₅H₅N in CH₂Cl₂ | neutral to basic | aldehyde |
+| [Jones reagent](/reagents/jones-reagent/) | CrO₃ + dil. H₂SO₄ in acetone | strongly acidic | carboxylic acid |
+| [K₂Cr₂O₇ + H₂SO₄](/reagents/potassium-dichromate/) | Cr₂O₇²⁻ / H⁺ | strongly acidic | carboxylic acid |
+
+PCC and PDC share most properties: both are stable, commercially available, and convert alcohols to aldehydes and ketones in CH₂Cl₂ at room temperature. The deciding difference is acidity: choose **PDC for acid-sensitive substrates**.
+
+## Exam tips
+
+- Read the solvent. "PDC, CH₂Cl₂" means aldehyde; "PDC, DMF" with a saturated primary alcohol means carboxylic acid.
+- PDC and PCC are both pyridinium salts of Cr(VI): PCC has **one Cr and a Cl**, PDC has **two Cr bridged by O**.
+- If a question calls PDC a "strong" or "hard" oxidant, it is thinking of DMF conditions; in CH₂Cl₂ it is as selective as PCC.
+- For oxidising only allylic or benzylic alcohols, [MnO₂](/reagents/manganese-dioxide/) is more selective still.
+
+All chromium(VI) reagents are toxic and must be handled with care; modern labs often replace them with Swern or Dess–Martin oxidations. Overview: [Oxidation reactions](/mechanisms/oxidation-reactions/).

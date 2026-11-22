@@ -1,0 +1,126 @@
+---
+title: "Tishchenko Reaction"
+description: "The Tishchenko reaction joins two aldehyde molecules into an ester using aluminium ethoxide, Al(OC₂H₅)₃; acetaldehyde gives ethyl acetate by hydride shift."
+aliases: ["Tischenko reaction", "Tishchenko ester condensation", "Claisen–Tishchenko reaction", "Aldehyde to ester with aluminium ethoxide"]
+kind: "named-reaction"
+family: "nucleophilic-addition"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["tishchenko_reaction", "reaction_3"]
+reactant:
+  name: "Acetaldehyde (ethanal)"
+  smiles: "CC=O"
+product:
+  name: "Ethyl acetate (ethyl ethanoate)"
+  smiles: "CCOC(C)=O"
+byproducts: "None (both aldehyde molecules end up in the ester)"
+reagents: "Aluminium ethoxide, Al(OC₂H₅)₃ (catalytic Lewis acid)"
+conditions: "Anhydrous; low temperature and small catalyst loading"
+equation: "2 CH3CHO ->[Al(OC2H5)3] CH3COOCH2CH3"
+notesPages: [77, 78]
+memoryTricks:
+  - text: "ब्रह्मास्त्र"
+    meaning: "'Brahmastra' (ultimate weapon): shortcut — move H⁻ from one aldehyde to the carbonyl carbon of the other; the acid part and the alcohol part then join as an ester."
+faq:
+  - q: "What is the product of the Tishchenko reaction of acetaldehyde?"
+    a: "Ethyl acetate. One acetaldehyde molecule ends up at the acid level (the acetyl part) and the other at the alcohol level (the ethyl part), joined in a single ester."
+  - q: "What catalyst is used in the Tishchenko reaction?"
+    a: "An aluminium alkoxide, classically aluminium ethoxide, Al(OC₂H₅)₃. It acts as a Lewis acid that holds two aldehyde molecules together while a hydride shifts."
+  - q: "What is the difference between the Cannizzaro and Tishchenko reactions?"
+    a: "Both are aldehyde disproportionations by hydride transfer. Cannizzaro uses concentrated hydroxide, needs an aldehyde without α-hydrogen and gives a separate alcohol and carboxylate; Tishchenko uses an aluminium alkoxide, also works for aldehydes with α-hydrogen, and gives one ester."
+  - q: "Can aldehydes with α-hydrogen undergo the Tishchenko reaction?"
+    a: "Yes. Aluminium alkoxides are weakly basic Lewis acids, so enolisable aldehydes such as acetaldehyde are converted into esters instead of undergoing aldol reactions. Ethyl acetate is made industrially this way."
+related: ["cannizzaro-reaction", "meerwein-ponndorf-verley-reduction", "oppenauer-oxidation", "aldol-condensation", "ester-hydrolysis"]
+sources:
+  - title: "Tishchenko reaction"
+    url: "https://en.wikipedia.org/wiki/Tishchenko_reaction"
+    publisher: "Wikipedia"
+  - title: "Tishchenko Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/tishchenko-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "Meerwein–Ponndorf–Verley reduction"
+    url: "https://en.wikipedia.org/wiki/Meerwein%E2%80%93Ponndorf%E2%80%93Verley_reduction"
+    publisher: "Wikipedia"
+  - title: "Oppenauer oxidation"
+    url: "https://en.wikipedia.org/wiki/Oppenauer_oxidation"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 4
+  note: "Sources describe the Al-alkoxide mechanism as coordination, addition of a second aldehyde to a hemiacetal alkoxide, then a 1,3-hydride shift; the page uses that. Aluminium tert-butoxide for Oppenauer oxidation is kept as the usual exam-table pairing; Wikipedia names aluminium isopropoxide with excess acetone."
+---
+
+## What is the Tishchenko reaction?
+
+The **Tishchenko reaction** converts **two molecules of an aldehyde into one ester** in the presence of an **aluminium alkoxide**, typically **aluminium ethoxide, Al(OC₂H₅)₃**. It is a disproportionation: one aldehyde carbon is oxidised to the ester (acid) level and the other is reduced to the alcohol level. Acetaldehyde gives **ethyl acetate**. The reaction is named after the Russian chemist Vyacheslav Tishchenko, who found that aluminium alkoxides make it work even for enolisable aldehydes.
+
+## Mechanism
+
+1. **Coordination.** Aluminium in Al(OC₂H₅)₃ is a Lewis acid. The carbonyl oxygen of one aldehyde binds to it, making that carbonyl carbon more electrophilic.
+2. **Two additions.** An ethoxide group on aluminium adds to the activated carbonyl. The new alkoxide oxygen then adds to the carbonyl of a second aldehyde. The result is an aluminium-bound **hemiacetal alkoxide** in which the two former aldehyde carbons are linked through one oxygen.
+3. **1,3-Hydride shift.** The carbon carrying the O–Al group passes its hydrogen, as hydride, across the bridging oxygen to the other former aldehyde carbon, which releases the ethoxide. The hydride donor becomes the ester C=O; the acceptor becomes the –O–CH₂– of the ester.
+4. **Release.** The ester leaves the aluminium and the alkoxide catalyst is regenerated.
+
+<Eq ce="2 CH3CHO ->[Al(OC2H5)3] CH3-CO-O-CH2-CH3" />
+
+<KeyPoint>
+The acetyl part (CH₃CO–) comes from the aldehyde that lost a hydride (oxidised), and the ethyl part (–OCH₂CH₃) comes from the aldehyde that gained it (reduced). Both halves of an ester from a Tishchenko reaction always have the same carbon skeleton as the starting aldehyde.
+</KeyPoint>
+
+<Trick>
+Shortcut (ब्रह्मास्त्र): write the acid of the aldehyde (CH₃COOH) and the alcohol of the aldehyde (CH₃CH₂OH), then join them as an ester (CH₃COOCH₂CH₃). This is only a bookkeeping trick; no free acid or alcohol is formed.
+</Trick>
+
+A side reaction can occur when one of the ethoxide groups on aluminium adds to an aldehyde instead of a second aldehyde molecule. Low temperature and small amounts of catalyst keep this to a minimum.
+
+## Examples
+
+**Acetaldehyde to ethyl acetate** (used industrially):
+
+<Eq ce="2 CH3CHO ->[Al(OC2H5)3] CH3COOC2H5" />
+
+**Benzaldehyde to benzyl benzoate.** The original version by Claisen used sodium benzyloxide as the base:
+
+<Eq ce="2 C6H5CHO ->[C6H5CH2ONa] C6H5COOCH2C6H5" />
+
+**Phenylacetaldehyde to 2-phenylethyl phenylacetate:**
+
+<Eq ce="2 C6H5CH2CHO ->[Al(OC2H5)3] C6H5CH2COOCH2CH2C6H5" />
+
+## Aluminium alkoxides in exam questions
+
+Three named reactions use aluminium alkoxides and are often confused:
+
+| Reagent | Partner | Reaction | Result |
+|---|---|---|---|
+| Al(OC₂H₅)₃ | the aldehyde itself | Tishchenko reaction | 2 RCHO → RCOOCH₂R |
+| Al(OCH(CH₃)₂)₃ | isopropanol | Meerwein–Ponndorf–Verley reduction | C=O → CH–OH |
+| Aluminium tert-butoxide or isopropoxide | excess acetone | Oppenauer oxidation | CH–OH → C=O |
+
+All three work by hydride transfer through aluminium, which is why they are taught together.
+
+## Cannizzaro vs Tishchenko
+
+| Feature | Cannizzaro | Tishchenko |
+|---|---|---|
+| Reagent | Concentrated NaOH/KOH | Aluminium alkoxide (catalytic) |
+| Aldehyde | No α-H | With or without α-H |
+| Products | Alcohol + carboxylate salt | One ester |
+| Example | 2 HCHO → CH₃OH + HCOONa | 2 CH₃CHO → CH₃COOC₂H₅ |
+
+<ExamTip>
+If the reagent is Al(OEt)₃ and the aldehyde has α-hydrogens, do not write an aldol product. Write the ester made of the aldehyde's own acid and alcohol.
+</ExamTip>
+
+## Limitations
+
+- Water must be excluded, since it destroys the aluminium alkoxide.
+- With strong hydroxide instead of an alkoxide, enolisable aldehydes give aldol products, and non-enolisable ones give the Cannizzaro products.
+
+## Related reactions
+
+- [Cannizzaro reaction](/reactions/cannizzaro-reaction/): the hydroxide version giving an alcohol and a carboxylate.
+- [Meerwein–Ponndorf–Verley reduction](/reactions/meerwein-ponndorf-verley-reduction/) and [Oppenauer oxidation](/reactions/oppenauer-oxidation/): related aluminium-alkoxide hydride transfers.
+- [Aldol condensation](/reactions/aldol-condensation/): what enolisable aldehydes do in ordinary base.
+- [Ester hydrolysis](/reactions/ester-hydrolysis/): splits the ester back into acid and alcohol.
+- Hub: [nucleophilic addition](/mechanisms/nucleophilic-addition/).

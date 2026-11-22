@@ -1,0 +1,124 @@
+---
+title: "Claisen Rearrangement"
+description: "Claisen rearrangement: heating an allyl aryl or allyl vinyl ether gives an o-allylphenol or γ,δ-unsaturated carbonyl via a [3,3]-sigmatropic shift."
+aliases: ["Aromatic Claisen rearrangement", "Aliphatic Claisen rearrangement", "Allyl phenyl ether rearrangement", "[3,3]-sigmatropic rearrangement of allyl ethers", "Claisen rearrangment"]
+kind: "rearrangement"
+family: "pericyclic-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: ["r6", "claisen_rearrangement", "claisen-rearrangement"]
+reactant:
+  name: "Allyl phenyl ether"
+  smiles: "C=CCOc1ccccc1"
+product:
+  name: "2-Allylphenol (o-allylphenol)"
+  smiles: "C=CCc1ccccc1O"
+byproducts: "None (intramolecular isomerisation)"
+reagents: "None; heat only (thermal rearrangement)"
+conditions: "Strong heating; uncatalysed Claisen rearrangements need temperatures above 100 °C"
+equation: "C6H5-O-CH2CH=CH2 ->[\\Delta] 2-(CH2=CHCH2)C6H4OH"
+notesPages: [100, 101]
+memoryTricks:
+  - text: "Ortho pe Ulta or Para pe Sedha"
+    meaning: "At the ortho position the allyl group is attached upside down (through its far CH₂ end); at the para position it is attached the right way round (through the CH₂ that was originally bonded to oxygen)."
+faq:
+  - q: "What is the product of the Claisen rearrangement of allyl phenyl ether?"
+    a: "2-Allylphenol (o-allylphenol). The allyl group moves from oxygen to the ortho carbon of the ring, and the dienone intermediate tautomerises back to an aromatic phenol."
+  - q: "What type of reaction is the Claisen rearrangement?"
+    a: "It is a concerted, intramolecular [3,3]-sigmatropic rearrangement that passes through a six-membered cyclic transition state. It needs only heat and no reagent."
+  - q: "When does the Claisen rearrangement give the para product?"
+    a: "When both ortho positions are blocked by substituents. The ortho dienone cannot tautomerise, so the allyl group undergoes a second [3,3] shift (a Cope rearrangement) to the para carbon, and then tautomerisation gives the p-allylphenol."
+  - q: "Is the Claisen rearrangement intramolecular or intermolecular?"
+    a: "Intramolecular. Crossover experiments show that the allyl group never leaves the molecule; it moves within the same molecule through a cyclic transition state."
+  - q: "What is the difference between Claisen rearrangement and Claisen condensation?"
+    a: "The Claisen rearrangement is a thermal [3,3]-sigmatropic shift of an allyl vinyl or allyl aryl ether. The Claisen condensation is a base-promoted reaction of two ester molecules that gives a β-keto ester."
+related: ["fries-rearrangement", "claisen-condensation", "diels-alder-reaction", "williamson-ether-synthesis", "mechanisms/pericyclic-reactions", "mechanisms/rearrangement-reactions", "mechanisms/reactions-of-phenols"]
+sources:
+  - title: "Claisen rearrangement"
+    url: "https://en.wikipedia.org/wiki/Claisen_rearrangement"
+    publisher: "Wikipedia"
+  - title: "Claisen Rearrangement"
+    url: "https://www.organic-chemistry.org/namedreactions/claisen-rearrangement.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 2
+---
+
+## What is the Claisen rearrangement?
+
+The **Claisen rearrangement** is a **[3,3]-sigmatropic rearrangement** of an allyl ether that needs only **heat**. In the **aromatic** version, **allyl phenyl ether** rearranges to **2-allylphenol (o-allylphenol)**: the allyl group moves from oxygen to the ortho carbon of the ring. In the **aliphatic** version, an **allyl vinyl ether** gives a **γ,δ-unsaturated carbonyl compound**. Reported by Ludwig Claisen in 1912, it was the first known [3,3]-sigmatropic rearrangement.
+
+## General reaction
+
+<Eq ce="C6H5-O-CH2-CH=CH2 ->[\Delta] 2-(CH2=CH-CH2)C6H4-OH" />
+
+<Eq ce="CH2=CH-O-CH2-CH=CH2 ->[\Delta] CH2=CH-CH2-CH2-CHO" />
+
+A new C–C bond forms and the C–O bond breaks. The aliphatic reaction is driven by forming the strong C=O bond; the aromatic reaction is driven by getting back the aromatic ring.
+
+## Mechanism
+
+Number the six atoms of the system: the allyl CH₂=CH–CH₂ is carbons 1, 2, 3 (C-1 bonded to oxygen), and O–C(ring)=C(ortho) is the other set of 1, 2, 3.
+
+1. **Cyclic transition state.** On heating, the six atoms arrange in a ring, preferably a chair-like transition state.
+2. **Concerted [3,3] shift.** In one step, the O–CH₂ bond (between the two "1" atoms) breaks, a new bond forms between the two "3" atoms (the far CH₂ of the allyl group and the ortho carbon), and the π bonds move over.
+3. **Dienone intermediate.** The product of the shift is 6-allylcyclohexa-2,4-dien-1-one, which is not aromatic.
+4. **Tautomerisation.** The hydrogen on the sp³ ortho carbon moves to oxygen (keto → enol). The ring becomes aromatic again, giving **o-allylphenol**.
+
+<KeyPoint>
+Because the new bond forms at the **far end** of the allyl group, the allyl unit is attached to the ring **upside down** (transposed). If the CH₂ at the end of the double bond is labelled (for example with ¹⁴C), the label ends up bonded to the ring at the ortho position.
+</KeyPoint>
+
+**When both ortho positions are blocked**, the dienone cannot tautomerise. The allyl group then undergoes a second [3,3] shift (a Cope rearrangement) from the ortho carbon to the para carbon. The second inversion restores the original orientation, and tautomerisation gives the **p-allylphenol**.
+
+<Trick>
+**Ortho pe Ulta or Para pe Sedha**: at ortho the allyl group sits inverted (one [3,3] shift); at para it sits the right way round (two shifts, two inversions).
+</Trick>
+
+## Examples
+
+**1. Allyl phenyl ether → 2-allylphenol:**
+
+<Eq ce="C6H5OCH2CH=CH2 ->[\Delta] 2-(CH2=CHCH2)C6H4OH" />
+
+**2. Ortho positions blocked (para product):** allyl 2,6-dimethylphenyl ether gives 4-allyl-2,6-dimethylphenol.
+
+<Eq ce="2,6-(CH3)2C6H3OCH2CH=CH2 ->[\Delta] 4-(CH2=CHCH2)-2,6-(CH3)2C6H2OH" />
+
+**3. Aliphatic Claisen:** allyl vinyl ether gives pent-4-enal, a γ,δ-unsaturated aldehyde.
+
+<Eq ce="CH2=CHOCH2CH=CH2 ->[\Delta] CH2=CHCH2CH2CHO" />
+
+<ExamTip title="Common mistake">
+o-Allylphenol does not go on to rearrange into p-allylphenol. The para product appears only when both ortho positions already carry substituents. With a free ortho position, the ortho product is formed and the reaction stops there.
+</ExamTip>
+
+<ExamTip>
+To draw the product fast: number O as 1 and count three atoms each way. Break bond 1–1, make bond 3–3, shift the double bonds, then tautomerise if a phenol can form. The allyl ether is usually made first by [Williamson ether synthesis](/reactions/williamson-ether-synthesis/) from a phenoxide and allyl bromide.
+</ExamTip>
+
+## Key features
+
+| Feature | Claisen rearrangement |
+|---|---|
+| Type | [3,3]-sigmatropic, pericyclic |
+| Molecularity | Intramolecular (no crossover products) |
+| Reagent | None; heat only |
+| Transition state | Six-membered, chair preferred |
+| Kinetics | First order |
+| Stereochemistry | Suprafacial, stereospecific |
+
+## Limitations and variations
+
+- Uncatalysed reactions need temperatures above 100 °C. Polar and hydrogen-bonding solvents speed up the reaction.
+- If an –CHO or –COOH group occupies the ortho or para position the allyl group moves to, that group can be pushed out as CO or CO₂.
+- Named variants (Ireland–, Johnson– and Eschenmoser–Claisen) start from allylic esters or allylic alcohols and give γ,δ-unsaturated acids, esters and amides under milder conditions.
+- In nature, the enzyme chorismate mutase carries out a Claisen rearrangement of chorismate to prephenate on the way to phenylalanine and tyrosine.
+
+## Related reactions
+
+- [Fries rearrangement](/reactions/fries-rearrangement/): an acyl group (not allyl) moves from phenolic oxygen to the ring, but with AlCl₃ and through an acylium ion.
+- [Claisen condensation](/reactions/claisen-condensation/): same chemist, completely different reaction (ester + ester → β-keto ester).
+- [Diels–Alder reaction](/reactions/diels-alder-reaction/): another thermal pericyclic reaction through a six-membered cyclic transition state.
+- [Pericyclic reactions](/mechanisms/pericyclic-reactions/), [Rearrangement reactions](/mechanisms/rearrangement-reactions/) and [Reactions of phenols](/mechanisms/reactions-of-phenols/).

@@ -1,0 +1,122 @@
+---
+title: "Reductive Amination"
+description: "Reductive amination turns an aldehyde or ketone plus ammonia or an amine into an amine via an imine reduced by H₂/Ni, LiAlH₄ or NaBH₃CN; oxime reduction too."
+aliases: ["Reductive alkylation of amines", "Borch reduction", "Borch reaction", "Reduction of imines", "Reduction of oximes", "Reductive imination"]
+kind: "general-reaction"
+family: "reactions-of-amines"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "Acetophenone (1-phenylethan-1-one)"
+  smiles: "CC(=O)c1ccccc1"
+product:
+  name: "1-Phenylethan-1-amine"
+  smiles: "CC(N)c1ccccc1"
+byproducts: "H₂O"
+reagents: "NH₃ or R–NH₂; then H₂/Ni (or Pt, Pd), LiAlH₄, or NaBH₃CN"
+conditions: "Neutral to weakly acidic (about pH 6–7 for NaBH₃CN); one pot or imine isolated first"
+equation: "R1R2C=O + H2N-R3 ->[-H2O] R1R2C=N-R3 ->[H2/Ni or NaBH3CN] R1R2CH-NH-R3"
+notesPages: [106]
+memoryTricks: []
+faq:
+  - q: "What is reductive amination?"
+    a: "It is the conversion of an aldehyde or ketone into an amine by first forming an imine with ammonia or an amine and then reducing the C=N bond. Ammonia gives a primary amine, a primary amine gives a secondary amine, and a secondary amine gives a tertiary amine."
+  - q: "Why is NaBH₃CN used in reductive amination?"
+    a: "Sodium cyanoborohydride is a mild hydride donor that reduces the protonated imine (iminium ion) much faster than the starting aldehyde or ketone at about pH 6–7. So the carbonyl compound, the amine and the reductant can be mixed in one pot without the carbonyl being reduced to an alcohol first."
+  - q: "What is the product of reduction of an oxime?"
+    a: "A primary amine. The oxime R₁R₂C=N–OH, made from the carbonyl compound and hydroxylamine, is reduced by Na/C₂H₅OH, H₂/Ni or LiAlH₄ to R₁R₂CH–NH₂; the N–O bond is cleaved."
+  - q: "How is ethanamine prepared from acetaldehyde?"
+    a: "Treat ethanal with ammonia and hydrogen over nickel (or form the oxime with NH₂OH and reduce it with Na/ethanol). Both routes give CH₃CH₂NH₂ with the same number of carbons as the aldehyde."
+  - q: "Can a ketone give a secondary amine by reductive amination?"
+    a: "Yes. A ketone with a primary amine, for example propanone with methanamine, forms an N-substituted imine that is reduced to the secondary amine (CH₃)₂CH–NH–CH₃."
+related: ["mendius-reduction", "catalytic-hydrogenation", "reagents/sodium-borohydride", "reagents/lithium-aluminium-hydride", "beckmann-rearrangement", "preparation/preparation-of-amines"]
+sources:
+  - title: "Reductive amination"
+    url: "https://en.wikipedia.org/wiki/Reductive_amination"
+    publisher: "Wikipedia"
+  - title: "23.12: Synthesis of Amines (Basic Principles of Organic Chemistry, Roberts and Caserio)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Basic_Principles_of_Organic_Chemistry_(Roberts_and_Caserio)/23:_Organonitrogen_Compounds_I_-_Amines/23.12:_Synthesis_of_Amines"
+    publisher: "LibreTexts"
+  - title: "Sodium cyanoborohydride"
+    url: "https://en.wikipedia.org/wiki/Sodium_cyanoborohydride"
+    publisher: "Wikipedia"
+  - title: "Oxime (reduction to amines)"
+    url: "https://en.wikipedia.org/wiki/Oxime"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 4
+---
+
+## What is reductive amination?
+
+**Reductive amination** (reductive alkylation) converts an **aldehyde or ketone into an amine**. The carbonyl compound first condenses with **ammonia or an amine** to give an **imine** (Schiff base) and water; the C=N bond is then **reduced**, by H₂ over Ni/Pt/Pd, by LiAlH₄, or, most conveniently, by **sodium cyanoborohydride (NaBH₃CN)** under neutral to weakly acidic conditions. The closely related **reduction of oximes** gives primary amines.
+
+<Eq ce="R1R2C=O + H2N-R3 <=> R1R2C=N-R3 + H2O" />
+<Eq ce="R1R2C=N-R3 ->[H2/Ni, LiAlH4 or NaBH3CN] R1R2CH-NH-R3" />
+
+## Mechanism
+
+1. **Addition.** The nitrogen lone pair attacks the carbonyl carbon, giving a hemiaminal (carbinolamine), R₁R₂C(OH)–NHR₃.
+2. **Dehydration.** Loss of water gives the imine (or, under mild acid, the iminium ion). This step is reversible; removing water pushes it forward.
+3. **Reduction.** Hydride (or H₂ on the metal surface) adds to the C=N carbon and the nitrogen is protonated, giving the amine.
+
+<KeyPoint>
+The class of amine formed is set by the nitrogen partner: **NH₃ → 1° amine, R–NH₂ → 2° amine, R₂NH → 3° amine**. The carbon skeleton comes from the carbonyl compound, and the old C=O carbon becomes the C–N carbon.
+</KeyPoint>
+
+## Choosing the reducing agent
+
+| Reducing agent | Selectivity | When used |
+|---|---|---|
+| H₂ with Ni, Pt or Pd | low (also reduces C=C, C=O) | industrial and one-pot; the classic textbook method |
+| [LiAlH₄](/reagents/lithium-aluminium-hydride/) | low; reduces C=O too | isolated imine or oxime, reduced in a separate step |
+| [NaBH₄](/reagents/sodium-borohydride/) | reduces both imines and carbonyls | imine formed first, then reduced |
+| NaBH₃CN | high: reduces iminium ions at pH about 6–7, carbonyls only at lower pH | one-pot "direct" reductive amination (Borch) |
+| NaBH(OAc)₃ | high, less toxic than NaBH₃CN | modern lab alternative |
+
+<ExamTip title="Common mistake">
+The reagent is sodium cyanoborohydride, NaBH₃CN (Na⁺[BH₃CN]⁻): one cyano group replaces one hydrogen of BH₄⁻. It is weaker than NaBH₄, which is why it leaves the aldehyde or ketone alone and reduces only the iminium ion. Work-up can release toxic HCN.
+</ExamTip>
+
+## Reduction of oximes
+
+An aldehyde or ketone reacts with **hydroxylamine (NH₂OH)** to form an **oxime**, R₁R₂C=N–OH, with loss of water. Reducing the oxime cleaves the N–O bond and saturates C=N, giving a **primary amine**.
+
+<Eq ce="R1R2C=O + NH2OH -> R1R2C=N-OH + H2O" />
+<Eq ce="R1R2C=N-OH ->[Na/C2H5OH or H2/Ni or LiAlH4] R1R2CH-NH2" />
+
+Sodium (in ethanol or another alcohol), sodium amalgam, catalytic hydrogenation and metal hydrides all work. With aldoximes, a mixture of primary and some secondary amine can form unless conditions are controlled. The same Na/ethanol system reduces nitriles in the [Mendius reduction](/reactions/mendius-reduction/).
+
+## Examples
+
+**Ethanal to ethanamine (1° amine)**
+
+<Eq ce="CH3CHO + NH3 + H2 ->[Ni] CH3CH2NH2 + H2O" />
+
+**Acetophenone to 1-phenylethan-1-amine (Mignonac reaction)**
+
+<Eq ce="C6H5COCH3 + NH3 + H2 ->[Ni] C6H5CH(NH2)CH3 + H2O" />
+
+**Propanone and methanamine to a 2° amine**
+
+<Eq ce="(CH3)2C=O + CH3NH2 ->[NaBH3CN][pH 6-7] (CH3)2CH-NH-CH3" />
+
+**Cyclohexanone oxime to cyclohexanamine**
+
+<Eq ce="C6H10=N-OH ->[Na, C2H5OH] C6H11-NH2" />
+
+## Limitations
+
+- Imine formation is an equilibrium; with water present the imine can hydrolyse back to the carbonyl compound.
+- Unselective reductants (H₂/catalyst, NaBH₄) can reduce the aldehyde or ketone to an alcohol, or other reducible groups, before the imine forms.
+- Primary amines made from NH₃ can react again with the carbonyl compound, so some over-alkylation can occur.
+- An oxime treated with acid instead of a reductant gives an amide by the [Beckmann rearrangement](/reactions/beckmann-rearrangement/), not an amine.
+
+## Related reactions
+
+- [Mendius reduction](/reactions/mendius-reduction/): Na/ethanol reduction of nitriles to primary amines.
+- [Catalytic hydrogenation](/reactions/catalytic-hydrogenation/): the H₂/metal reduction used in the industrial version.
+- [Beckmann rearrangement](/reactions/beckmann-rearrangement/): what oximes do in acid.
+- [Preparation of amines](/preparation/preparation-of-amines/): all methods compared.

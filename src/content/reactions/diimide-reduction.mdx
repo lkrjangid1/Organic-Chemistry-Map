@@ -1,0 +1,121 @@
+---
+title: "Diimide Reduction"
+description: "Diimide reduction uses HN=NH, made from hydrazine and H₂O₂, to add two H atoms syn across non-polar C=C or C≡C bonds, giving alkanes and N₂ without a metal."
+aliases: ["Reduction with diimide", "Diazene reduction", "Hydrazine–H2O2 reduction", "N2H2 reduction", "Azine reduction"]
+kind: "general-reaction"
+family: "reduction-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: []
+reactant:
+  name: "Oleic acid ((Z)-octadec-9-enoic acid)"
+  smiles: "CCCCCCCC/C=C\\CCCCCCCC(=O)O"
+product:
+  name: "Stearic acid (octadecanoic acid)"
+  smiles: "CCCCCCCCCCCCCCCCCC(=O)O"
+byproducts: "N₂ gas (and H₂O from the oxidation of hydrazine)"
+reagents: "HN=NH generated in situ: N₂H₄ + H₂O₂ (or O₂ with Cu²⁺), or potassium azodicarboxylate + acid"
+conditions: "Room temperature or mild warming; no H₂ gas and no metal catalyst"
+equation: "R2C=CR2 + HN=NH -> R2CH-CHR2 + N2 ^"
+notesPages: [59, 60]
+memoryTricks: []
+faq:
+  - q: "What is diimide and how is it prepared?"
+    a: "Diimide (diazene) is HN=NH. It is unstable, so it is generated in the reaction flask, most simply by oxidising hydrazine with hydrogen peroxide: N₂H₄ + H₂O₂ gives N₂H₂ + 2H₂O."
+  - q: "Is diimide reduction syn or anti addition?"
+    a: "Syn. The cis form of HN=NH transfers both hydrogens to the same face of the C=C bond in one concerted step through a six-membered cyclic transition state."
+  - q: "Which groups does diimide reduce?"
+    a: "Non-polar multiple bonds: C=C, C≡C and allenes. Polar groups such as C=O, C≡N and NO₂ are generally not reduced, and O–O and N–O bonds survive."
+  - q: "What is the by-product of diimide reduction?"
+    a: "Nitrogen gas. Its formation, with a very stable N≡N triple bond, drives the reaction forward."
+related: ["catalytic-hydrogenation", "reagents/lindlar-catalyst", "reagents/wilkinsons-catalyst", "wolff-kishner-reduction", "birch-reduction"]
+sources:
+  - title: "Reductions with diimide"
+    url: "https://en.wikipedia.org/wiki/Reductions_with_diimide"
+    publisher: "Wikipedia"
+  - title: "Diimide"
+    url: "https://en.wikipedia.org/wiki/Diimide"
+    publisher: "Wikipedia"
+  - title: "Hydrazine (reducing agent)"
+    url: "https://www.organic-chemistry.org/chemicals/reductions/hydrazine.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 3
+  note: "Notes say only alkenes are reduced; sources say alkynes and allenes react too (faster than alkenes), and polar groups are not reduced. Notes call HN=NH an 'azine'; it is diimide (diazene). Notes balance N2H4 + H2O2 -> N2H2 + H2O; correct is + 2H2O."
+---
+
+## What is diimide reduction?
+
+**Diimide reduction** is the conversion of an **alkene (or alkyne) into an alkane** by **diimide, HN=NH**, which hands over its two hydrogens and is released as **nitrogen gas**. Diimide is too unstable to store, so it is made in the flask, classically by oxidising **hydrazine with hydrogen peroxide**. The two hydrogens add to the **same face** of the C=C bond (**syn addition**), giving the same stereochemistry as catalytic hydrogenation but **without H₂ gas or a metal catalyst**.
+
+## Generating diimide
+
+<Eq ce="H2N-NH2 + H2O2 -> HN=NH + 2H2O" />
+
+Here H₂O₂ is the oxidising agent. Other ways to make diimide are air oxidation of hydrazine with a copper(II) catalyst, and decarboxylation of potassium azodicarboxylate with an acid.
+
+## Mechanism
+
+1. **Formation of cis-diimide.** HN=NH exists as cis and trans isomers. Only the cis form can react, and acids help the two forms interconvert.
+2. **Concerted hydrogen transfer.** cis-Diimide approaches one face of the alkene. Through a six-membered cyclic transition state, both N–H hydrogens move to the two alkene carbons at the same time while the N=N becomes N≡N.
+3. **Loss of nitrogen.** N₂ gas escapes, which makes the step irreversible. The product has both new H atoms on the same side.
+
+<Eq ce=">C=C< + HN=NH -> >CH-CH< + N#N" />
+
+In the overall process, forming diimide is the slow step.
+
+<KeyPoint>
+Diimide reduction is a **syn addition** of two H atoms, metal-free, and **N₂ gas** is the only by-product of the hydrogen transfer.
+</KeyPoint>
+
+## Examples
+
+**Oleic acid to stearic acid.** This was the first reduction seen with hydrazine (1929), long before diimide was recognised as the reagent.
+
+<Eq ce="C17H33COOH ->[N2H4, H2O2] C17H35COOH" />
+
+**Alkyne to alkane.** But-2-yne takes up two molecules of diimide. The intermediate cis-but-2-ene reacts almost as fast as it forms, so butane is the product.
+
+<Eq ce="CH3-C#C-CH3 ->[2 HN=NH] CH3CH2CH2CH3 + 2N2" />
+
+**Selective reduction.** A molecule with a C=C bond and a peroxide (O–O) or N–O bond can have its C=C reduced by diimide while the O–O or N–O bond survives; metal hydrogenation would cleave it.
+
+## Scope and selectivity
+
+| Substrate | Result with HN=NH |
+|---|---|
+| Alkyne | Alkane (an alkene intermediate is hard to isolate) |
+| Allene | Alkene, then alkane |
+| Terminal or strained alkene | Fast reduction |
+| Highly substituted alkene | Slow |
+| trans-Alkene vs cis-alkene | trans reacts faster |
+| C=O, C≡N, NO₂ | Generally not reduced |
+| O–O, N–O bonds | Not affected |
+
+Order of reactivity: **alkynes, allenes > terminal or strained alkenes > substituted alkenes**.
+
+<ExamTip title="Common mistake">
+HN=NH is **diimide (diazene)**, not an azine; an azine is R₂C=N–N=CR₂. And diimide does not reduce only alkenes: it reduces **any non-polar C=C or C≡C**, including alkynes. What it leaves alone are **polar** multiple bonds such as C=O.
+</ExamTip>
+
+## Limitations
+
+- Diimide also destroys itself by disproportionation (2 HN=NH gives N₂H₄ + N₂), so a large excess of the precursor is needed.
+- Reactions can be slow, and crowded (tri- or tetrasubstituted) alkenes react sluggishly.
+- Stopping an alkyne at the alkene stage is difficult; use the [Lindlar catalyst](/reagents/lindlar-catalyst/) instead.
+
+## Comparison with other methods
+
+| Method | Reagent | Addition | Metal needed |
+|---|---|---|---|
+| [Catalytic hydrogenation](/reactions/catalytic-hydrogenation/) | H₂, Ni/Pd/Pt | Syn | Yes |
+| [Wilkinson's catalyst](/reagents/wilkinsons-catalyst/) | H₂, RhCl(PPh₃)₃ | Syn | Yes (Rh) |
+| Diimide reduction | HN=NH | Syn | No |
+| [Birch reduction](/reactions/birch-reduction/) of alkynes | Na, liquid NH₃ | Anti (trans-alkene) | Alkali metal |
+
+## Related reactions
+
+- [Wolff–Kishner reduction](/reactions/wolff-kishner-reduction/): hydrazine again, but here it converts a C=O group into CH₂ in strong base, also with loss of N₂.
+- [Catalytic hydrogenation](/reactions/catalytic-hydrogenation/)
+- [Reduction reactions hub](/mechanisms/reduction-reactions/)

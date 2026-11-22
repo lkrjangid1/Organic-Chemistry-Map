@@ -1,0 +1,117 @@
+---
+title: "Schotten–Baumann Reaction"
+description: "Schotten–Baumann reaction acylates amines or phenols with an acid chloride like benzoyl chloride in aqueous NaOH, giving amides or esters. Mechanism and uses."
+aliases: ["Schotten Baumann reaction", "Schotten Bauman reaction", "Benzoylation", "Benzoylation of aniline", "Acylation of amines", "Schotten–Baumann conditions"]
+kind: "named-reaction"
+family: "reactions-of-amines"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "Aniline + benzoyl chloride"
+  smiles: "Nc1ccccc1.O=C(Cl)c1ccccc1"
+product:
+  name: "Benzanilide (N-phenylbenzamide)"
+  smiles: "O=C(Nc1ccccc1)c1ccccc1"
+byproducts: "HCl, neutralised by the base to NaCl + H₂O"
+reagents: "Acid chloride (usually C₆H₅COCl) with aqueous NaOH, or pyridine as the base"
+conditions: "Room temperature; two-phase mixture of water and an organic layer, with the base added slowly and the mixture shaken"
+equation: "C6H5NH2 + C6H5COCl + NaOH -> C6H5NHCOC6H5 + NaCl + H2O"
+notesPages: [66, 107]
+memoryTricks: []
+faq:
+  - q: "What is the Schotten–Baumann reaction?"
+    a: "It is the acylation of an amine (or an alcohol or phenol) with an acid chloride in the presence of aqueous base. The classic example is benzoylation: aniline and benzoyl chloride shaken with aqueous NaOH give benzanilide."
+  - q: "What is the role of NaOH in the Schotten–Baumann reaction?"
+    a: "Each acylation releases one HCl. The base neutralises it; otherwise the acid would protonate the remaining amine, which as an ammonium ion is no longer a nucleophile, and the yield would fall. Removing HCl also drives the reaction forward."
+  - q: "What is the product of aniline with benzoyl chloride?"
+    a: "Benzanilide, C₆H₅NHCOC₆H₅ (N-phenylbenzamide), an amide formed by replacing one N–H hydrogen of aniline with the benzoyl group C₆H₅CO–."
+  - q: "Do tertiary amines undergo benzoylation?"
+    a: "No. Acylation replaces a hydrogen on nitrogen, so only primary and secondary amines react. Tertiary amines have no N–H and do not form amides."
+  - q: "What is the product of phenol with benzoyl chloride in NaOH?"
+    a: "Phenyl benzoate, C₆H₅COOC₆H₅. In aqueous NaOH phenol is present as the phenoxide ion, which attacks the acid chloride to form the ester."
+related: ["carbylamine-reaction", "hofmann-bromamide-degradation", "ester-hydrolysis", "tests/hinsberg-test", "mechanisms/reactions-of-amines", "mechanisms/reactions-of-phenols"]
+sources:
+  - title: "Amines (Class XII Chemistry, Unit 9)"
+    url: "https://ncert.nic.in/textbook/pdf/lech204.pdf"
+    publisher: "NCERT"
+  - title: "Schotten–Baumann reaction"
+    url: "https://en.wikipedia.org/wiki/Schotten%E2%80%93Baumann_reaction"
+    publisher: "Wikipedia"
+  - title: "Schotten-Baumann Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/schotten-baumann-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 3
+---
+
+## What is the Schotten–Baumann reaction?
+
+The **Schotten–Baumann reaction** is the **acylation of an amine with an acid chloride in the presence of aqueous base**, giving an **amide**. The same conditions also turn alcohols and phenols into **esters**. When the acid chloride is **benzoyl chloride (C₆H₅COCl)** the reaction is called **benzoylation**; for example, aniline shaken with benzoyl chloride and aqueous NaOH gives **benzanilide**. Carl Schotten and Eugen Baumann described it in 1883.
+
+## General reaction
+
+<Eq ce="R-NH2 + R'-COCl ->[aq. NaOH] R-NH-CO-R' + HCl" />
+
+The HCl does not accumulate: the base converts it into NaCl and water. NCERT carries out the same acylation with **pyridine**, a base stronger than the amine, for the same purpose.
+
+## Mechanism
+
+The reaction is a **nucleophilic acyl substitution** (addition followed by elimination).
+
+1. **Attack.** The lone pair on nitrogen attacks the carbonyl carbon of the acid chloride, giving a tetrahedral intermediate.
+2. **Elimination.** The C=O re-forms and chloride leaves.
+3. **Deprotonation.** The base removes the proton from nitrogen, giving the neutral amide and neutralising HCl.
+
+<Eq ce="C6H5NH2 + C6H5COCl -> C6H5NH-CO-C6H5 + HCl" />
+<Eq ce="HCl + NaOH -> NaCl + H2O" />
+
+<KeyPoint title="Why the base matters">
+Without base, the HCl formed would protonate unreacted amine to R–NH₃⁺, which has no free lone pair and cannot attack. The base keeps the amine free and drives the equilibrium towards the amide.
+</KeyPoint>
+
+In the classic two-phase set-up, the amine, the acid chloride and the amide stay in the organic layer while the base stays in water and mops up the acid.
+
+## Examples
+
+**1. Benzoylation of aniline.**
+
+<Eq ce="C6H5NH2 + C6H5COCl ->[aq. NaOH] C6H5NHCOC6H5 + NaCl + H2O" />
+
+**2. Benzoylation of methanamine** (the NCERT example): the product is N-methylbenzamide.
+
+<Eq ce="CH3NH2 + C6H5COCl -> C6H5CONHCH3 + HCl" />
+
+**3. Benzoylation of phenol.** In NaOH, phenol is present as phenoxide, which attacks the acid chloride to give the ester phenyl benzoate.
+
+<Eq ce="C6H5OH + C6H5COCl ->[aq. NaOH] C6H5COOC6H5 + NaCl + H2O" />
+
+## Acylation of amines: the family
+
+| Acylating agent | Group introduced | Name of reaction | Product from R–NH₂ |
+|---|---|---|---|
+| R′–COCl | acyl, R′CO– | acylation | R–NH–CO–R′ |
+| CH₃COCl or (CH₃CO)₂O | acetyl, CH₃CO– | acetylation | R–NH–CO–CH₃ |
+| C₆H₅COCl | benzoyl, C₆H₅CO– | benzoylation | R–NH–CO–C₆H₅ |
+
+Esters also acylate amines, more slowly: methyl ethanoate and methanamine give N-methylethanamide and methanol, again by attack at the carbonyl carbon.
+
+<Eq ce="CH3COOCH3 + CH3NH2 -> CH3CONHCH3 + CH3OH" />
+
+<ExamTip>
+Only primary and secondary amines are acylated, because a hydrogen on nitrogen must be replaced. Acetylation of aniline is also used to protect the –NH₂ group and moderate its activating effect before nitration or bromination; the acetyl group is removed afterwards by hydrolysis.
+</ExamTip>
+
+## Limitations
+
+- **Tertiary amines** do not form amides (no N–H).
+- **Hydrolysis of the acid chloride.** In water the acid chloride slowly hydrolyses to the carboxylic acid, so it is added gradually and the mixture is shaken well.
+- **Carboxylic acids** are not used directly: at room temperature they simply form salts with amines.
+
+## Related reactions
+
+- [Hinsberg test](/tests/hinsberg-test/): the sulphonyl analogue, using benzenesulphonyl chloride to tell 1°, 2° and 3° amines apart.
+- [Carbylamine reaction](/reactions/carbylamine-reaction/) and [Hofmann bromamide degradation](/reactions/hofmann-bromamide-degradation/): other exam reactions of amines and amides.
+- [Ester hydrolysis](/reactions/ester-hydrolysis/): the reverse type of acyl substitution.
+- Hubs: [Reactions of amines](/mechanisms/reactions-of-amines/) and [Reactions of phenols](/mechanisms/reactions-of-phenols/).

@@ -1,0 +1,140 @@
+---
+title: "Ester Hydrolysis Mechanisms (AAC2, BAC2, AAL1…)"
+description: "Ester hydrolysis mechanisms: acid-catalysed AAC2, base-promoted BAC2 (saponification), AAL1 for tert-butyl esters and Ingold's other paths, with ¹⁸O evidence."
+aliases: ["Hydrolysis of esters", "Saponification mechanism", "AAC2 mechanism", "BAC2 mechanism", "AAL1 mechanism", "Ingold classification of ester hydrolysis", "Acyl-oxygen vs alkyl-oxygen cleavage"]
+kind: "mechanism-type"
+family: "reactions-of-carboxylic-acids"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: ["saponification", "saponification_to_soap"]
+reactant:
+  name: "Ethyl ethanoate (ethyl acetate)"
+  smiles: "CCOC(C)=O"
+product:
+  name: "Sodium ethanoate (with ethanol)"
+  smiles: "CC(=O)[O-].[Na+]"
+byproducts: "Ethanol (the alcohol part of the ester)"
+reagents: "Dilute acid (H₃O⁺, catalytic) with excess water; or NaOH/KOH (one full equivalent) for saponification"
+conditions: "Heat under reflux; acid hydrolysis is reversible, base hydrolysis goes to completion"
+equation: "CH3COOC2H5 + NaOH ->[\\Delta] CH3COONa + C2H5OH"
+notesPages: [97, 98, 99]
+memoryTricks: []
+faq:
+  - q: "Why is acid hydrolysis of an ester reversible but base hydrolysis irreversible?"
+    a: "Acid hydrolysis is simply Fischer esterification run backwards, so it reaches an equilibrium and needs excess water. In base, the carboxylic acid formed is immediately deprotonated to a carboxylate ion, which is too unreactive to be attacked by the alcohol, so the reaction goes to completion."
+  - q: "What do AAC2 and BAC2 mean?"
+    a: "In Ingold's notation, A or B is acid or base catalysis, AC means acyl–oxygen bond cleavage (AL would be alkyl–oxygen cleavage), and the number is the molecularity of the rate-determining step. AAC2 and BAC2 are the normal acid and base mechanisms, both through a tetrahedral intermediate."
+  - q: "How does ¹⁸O labelling show which bond breaks in saponification?"
+    a: "When the alkoxy (ether-type) oxygen of the ester is labelled with ¹⁸O, the label appears in the alcohol after hydrolysis. So the acyl–oxygen bond breaks, as in BAC2; an SN2 attack on the alkyl carbon would have put the label in the carboxylate."
+  - q: "Why do tert-butyl esters hydrolyse by alkyl–oxygen cleavage in acid?"
+    a: "The tert-butyl group can leave as a stable tertiary carbocation, so after protonation the O–C(alkyl) bond ionises (AAL1, like SN1). Tracer studies show that 85–97% of tert-butyl acetate hydrolysis in water goes by alkyl–oxygen fission."
+  - q: "What is saponification?"
+    a: "Saponification is the hydrolysis of an ester by aqueous alkali to give a carboxylate salt and an alcohol. Saponification of fats (triglycerides) with NaOH gives glycerol and soap, the sodium salts of long-chain fatty acids."
+related: ["claisen-condensation", "bouveault-blanc-reduction", "sn1-reaction", "sn2-reaction", "concepts/biodegradable-polymers", "mechanisms/nucleophilic-substitution"]
+sources:
+  - title: "Ester hydrolysis"
+    url: "https://en.wikipedia.org/wiki/Ester_hydrolysis"
+    publisher: "Wikipedia"
+  - title: "Ester"
+    url: "https://en.wikipedia.org/wiki/Ester"
+    publisher: "Wikipedia"
+  - title: "21.6: Chemistry of Esters"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(McMurry)/21%3A_Carboxylic_Acid_Derivatives-_Nucleophilic_Acyl_Substitution_Reactions/21.06%3A_Chemistry_of_Esters"
+    publisher: "Chemistry LibreTexts"
+  - title: "Saponification"
+    url: "https://en.wikipedia.org/wiki/Saponification"
+    publisher: "Wikipedia"
+  - title: "Ester Cleavage Mechanisms (Virtual Textbook of Organic Chemistry, W. Reusch)"
+    url: "https://organicchemistrydata.org/reusch/virtualtext/ester-cleavage-mechanisms/"
+    publisher: "OrganicChemistryData.org"
+  - title: "Kinetics and Mechanisms of the Acid-catalysed Hydrolysis of Tertiary Butyl Acetate (Adam, Lauder and Stimson, Aust. J. Chem. 1962)"
+    url: "https://doi.org/10.1071/CH9620467"
+    publisher: "CSIRO Publishing"
+  - title: "Acylium ions"
+    url: "https://en.wikipedia.org/wiki/Acylium"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 7
+  note: "AAL2 and BAC1 being unobserved, and benzyl/cyclopropylmethyl esters following AAL1, are kept as exam teaching; no approved source states them. AAC1 substrate described as a very hindered acyl group."
+---
+
+## What is ester hydrolysis?
+
+**Ester hydrolysis** is the splitting of an ester, R–COO–R′, by water into a **carboxylic acid (or its salt) and an alcohol**. It is **catalysed by acid** (reversible, the reverse of Fischer esterification) or **promoted by base** (irreversible; called **saponification**). Mechanistically, the key questions are **which C–O bond breaks**, the acyl–oxygen bond or the alkyl–oxygen bond, and **how many species take part in the slow step**. Ingold's notation labels all the possibilities.
+
+<Eq ce="RCOOR' + H2O <=>[H+] RCOOH + R'OH" />
+<Eq ce="RCOOR' + OH- -> RCOO- + R'OH" />
+
+## Ingold's classification
+
+Each label has three parts: **A** (acid) or **B** (base); **AC** (acyl–oxygen cleavage, R–CO–|–OR′) or **AL** (alkyl–oxygen cleavage, R–COO–|–R′); and **1 or 2**, the molecularity of the rate-determining step.
+
+| Label | Medium | Bond broken | Key intermediate | When it happens |
+|---|---|---|---|---|
+| **AAC2** | acid | acyl–O | tetrahedral intermediate | normal esters (the general acid mechanism) |
+| AAC1 | acid | acyl–O | acylium ion R–C≡O⁺ | rare; very hindered acyl groups in strong acid |
+| **AAL1** | acid | alkyl–O | carbocation R′⁺ | R′ forms a stable cation (tert-butyl) |
+| AAL2 | acid | alkyl–O | — | not observed |
+| **BAC2** | base | acyl–O | tetrahedral alkoxide | normal saponification (the general base mechanism) |
+| BAC1 | base | acyl–O | — | not observed |
+| BAL1 | neutral/weak base | alkyl–O | carbocation R′⁺ | tert-alkyl esters in water |
+| BAL2 | base | alkyl–O | SN2 transition state | methyl esters with strong nucleophiles |
+
+<KeyPoint>
+Almost every exam question is about **AAC2** (acid) and **BAC2** (base). Switch to **alkyl–oxygen cleavage** only when R′ can form a stable carbocation (AAL1, BAL1) or when R′ is methyl and a strong nucleophile does SN2 on it (BAL2).
+</KeyPoint>
+
+## AAC2: acid-catalysed hydrolysis
+
+1. The **carbonyl oxygen is protonated**, making the carbonyl carbon more electrophilic.
+2. **Water attacks the carbonyl carbon** (slow step), giving a tetrahedral intermediate with an –OH₂⁺ group.
+3. A **proton transfer** moves H⁺ onto the –OR′ oxygen.
+4. **R′OH leaves**, giving the protonated acid.
+5. **Loss of H⁺** gives R–COOH and regenerates the catalyst.
+
+With H₂¹⁸O, the label ends up in the **acid**, and the alcohol keeps the original alkoxy oxygen.
+
+## BAC2: saponification
+
+1. **OH⁻ adds to the carbonyl carbon** (slow step), giving a tetrahedral alkoxide intermediate.
+2. The C=O re-forms and **R′O⁻ is expelled**.
+3. The alkoxide **removes the acidic proton** of R–COOH, giving R–COO⁻ and R′OH. This last step pulls the reaction to completion, and a full equivalent of base is used up.
+
+<Eq ce="CH3COOC2H5 + NaOH ->[\Delta] CH3COONa + C2H5OH" />
+
+**Isotopic evidence:** when the alkoxy oxygen of ethyl propanoate is labelled with ¹⁸O, the label is found in the **ethanol** after saponification. This proves acyl–oxygen cleavage; an SN2 attack on the ethyl carbon would have left the ¹⁸O in the propanoate.
+
+## Alkyl–oxygen cleavage: AAL1, BAL1 and BAL2
+
+- **AAL1 (like SN1):** after protonation, the O–R′ bond ionises to give the acid and a **carbocation R′⁺**, which water then captures. With H₂¹⁸O the label appears in the **alcohol** R′–¹⁸OH. Tracer and kinetic studies on tert-butyl acetate in water found 85–97% alkyl–oxygen fission. In exam answers benzyl and cyclopropylmethyl esters are also placed here because their cations are stabilised.
+- **BAL1:** tert-alkyl esters can ionise even without acid (uncatalysed solvolysis in water).
+- **BAL2 (like SN2):** a strong nucleophile attacks the **methyl carbon** of a methyl ester and carboxylate leaves; halide salts in DMSO or DMF cleave methyl esters this way.
+- **AAC1:** when the acyl group is very hindered, the protonated ester can lose R′OH to give an **acylium ion**, which water then attacks.
+
+<ExamTip>
+For "where does ¹⁸O go?" questions: in AAC2/BAC2 the oxygen from water (or OH⁻) ends up in the **acid/carboxylate**; in AAL1 it ends up in the **alcohol**. Check whether R′ is tertiary first.
+</ExamTip>
+
+## Examples
+
+**1. Acid hydrolysis of methyl benzoate**
+
+<Eq ce="C6H5COOCH3 + H2O <=>[H+] C6H5COOH + CH3OH" />
+
+**2. Saponification of a fat (soap making)**
+
+<Eq ce="(C17H33COO)3C3H5 + 3 NaOH -> 3 C17H33COONa + C3H5(OH)3" />
+
+Glyceryl trioleate gives sodium oleate (soap) and glycerol.
+
+**3. tert-Butyl acetate in acid (AAL1)**
+
+<Eq ce="CH3COOC(CH3)3 + H2O ->[H+] CH3COOH + (CH3)3COH" />
+
+## Related reactions
+
+- [Claisen condensation](/reactions/claisen-condensation/) and [Bouveault–Blanc reduction](/reactions/bouveault-blanc-reduction/): other reactions at the ester carbonyl.
+- [SN1 reaction](/reactions/sn1-reaction/) and [SN2 reaction](/reactions/sn2-reaction/): the models for AAL1 and BAL2.
+- [Biodegradable polymers](/concepts/biodegradable-polymers/): polyesters break down by ester hydrolysis.
+- [Reactions of carboxylic acids](/mechanisms/reactions-of-carboxylic-acids/) hub.

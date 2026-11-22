@@ -1,0 +1,113 @@
+---
+title: "Oppenauer Oxidation"
+description: "Oppenauer oxidation converts a secondary alcohol into a ketone using aluminium tert-butoxide or isopropoxide with excess acetone. Mechanism, examples, MPV link."
+aliases: ["Oppenauer reaction", "Oppenaur oxidation", "Oppenauer oxidation of secondary alcohols", "Aluminium tert-butoxide oxidation", "Reverse MPV reduction"]
+kind: "named-reaction"
+family: "oxidation-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: []
+reactant:
+  name: "Cyclohexanol"
+  smiles: "OC1CCCCC1"
+product:
+  name: "Cyclohexanone"
+  smiles: "O=C1CCCCC1"
+byproducts: "Propan-2-ol (from the acetone hydride acceptor)"
+reagents: "Aluminium tert-butoxide, Al(OC(CH₃)₃)₃, or aluminium isopropoxide, with excess acetone as hydride acceptor"
+conditions: "Heat in acetone or acetone–benzene; anhydrous"
+equation: "R2CH-OH + (CH3)2C=O ->[Al(OCMe3)3][\\Delta] R2C=O + (CH3)2CH-OH"
+notesPages: [56]
+memoryTricks: []
+faq:
+  - q: "What is the reagent used in the Oppenauer oxidation?"
+    a: "An aluminium alkoxide, classically aluminium tert-butoxide (Oppenauer's original reagent) or aluminium isopropoxide, together with a large excess of acetone, which accepts the hydride and is reduced to propan-2-ol."
+  - q: "Why is excess acetone used in the Oppenauer oxidation?"
+    a: "The reaction is a reversible hydride transfer between the alcohol and acetone. A large excess of acetone pushes the equilibrium towards the ketone product."
+  - q: "What is the relation between Oppenauer oxidation and MPV reduction?"
+    a: "They are the same aluminium-catalysed equilibrium run in opposite directions. Excess acetone drives alcohol to ketone (Oppenauer); excess propan-2-ol drives ketone to alcohol (Meerwein–Ponndorf–Verley reduction)."
+  - q: "Does the Oppenauer oxidation affect C=C double bonds?"
+    a: "No. Only the alcohol group is oxidised; double bonds, amines and sulfides are not attacked, which is why the method is used on steroids such as cholesterol and pregnenolone."
+  - q: "Why are primary alcohols rarely oxidised by the Oppenauer method?"
+    a: "The aldehydes formed undergo base-catalysed aldol condensation (or Tishchenko reaction) with the aluminium alkoxide, so the method is used mainly for secondary alcohols."
+related: ["meerwein-ponndorf-verley-reduction", "tishchenko-reaction", "aldol-condensation", "reagents/pyridinium-chlorochromate", "reagents/jones-reagent"]
+sources:
+  - title: "Oppenauer oxidation"
+    url: "https://en.wikipedia.org/wiki/Oppenauer_oxidation"
+    publisher: "Wikipedia"
+  - title: "Oppenauer Oxidation"
+    url: "https://www.organic-chemistry.org/namedreactions/oppenauer-oxidation.shtm"
+    publisher: "Organic Chemistry Portal"
+  - title: "Aluminium isopropoxide (original Oppenauer reagent)"
+    url: "https://en.wikipedia.org/wiki/Aluminium_isopropoxide"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 3
+  note: "Notes give only the aluminium tert-butoxide; sources add the essential acetone hydride acceptor and the common isopropoxide variant."
+---
+
+## What is the Oppenauer oxidation?
+
+The **Oppenauer oxidation** is a gentle method for oxidising a **secondary alcohol to a ketone** with an **aluminium alkoxide**, classically **aluminium tert-butoxide**, Al(OC(CH₃)₃)₃, or **aluminium isopropoxide**, in the presence of a **large excess of acetone**. Acetone acts as the hydride acceptor and is reduced to propan-2-ol. The reaction is the reverse of the **Meerwein–Ponndorf–Verley (MPV) reduction** and was introduced by R. V. Oppenauer in 1937 for steroid ketones.
+
+## General reaction
+
+<Eq ce="R2CH-OH + (CH3)2C=O <=>[Al(OCMe3)3] R2C=O + (CH3)2CH-OH" />
+
+The alcohol is oxidised and acetone is reduced; aluminium shuttles the hydride between them. Because all steps are reversible, excess acetone is used to drive the equilibrium to the right.
+
+<KeyPoint>
+Oppenauer oxidation acts only on the alcohol group (केवल alcohol को ऑक्सीकृत करता है). C=C bonds, amines and sulfides survive, and there is no over-oxidation to carboxylic acids.
+</KeyPoint>
+
+## Mechanism
+
+1. **Alkoxide exchange.** The substrate alcohol binds to aluminium and loses its proton, giving an aluminium alkoxide of the substrate, R₂CH–O–Al, and releasing tert-butanol.
+2. **Coordination of acetone.** Acetone coordinates to the same aluminium through its carbonyl oxygen, which makes its carbonyl carbon more electrophilic.
+3. **Hydride shift.** The hydrogen on the carbinol carbon moves as a hydride to the acetone carbonyl carbon through a **six-membered cyclic transition state** (Al, two O, two C and the H).
+4. **Release.** The new ketone, R₂C=O, leaves; the acetone has become an isopropoxide on aluminium, which exchanges with more substrate alcohol to continue the cycle.
+
+<Eq ce="R2CH-O-Al + (CH3)2C=O -> R2C=O + (CH3)2CH-O-Al" />
+
+## Examples
+
+**1. Cyclohexanol to cyclohexanone.**
+
+<Eq ce="C6H11OH + (CH3)2CO ->[Al(OCMe3)3][\Delta] C6H10O + (CH3)2CHOH" />
+
+**2. Butan-2-ol to butan-2-one.** Any simple secondary alcohol behaves the same way (propan-2-ol would just give acetone, the same compound as the acceptor):
+
+<Eq ce="CH3CH(OH)CH2CH3 ->[Al(OCMe3)3, acetone] CH3COCH2CH3" />
+
+**3. Steroids.** Pregnenolone is oxidised to **progesterone**: the 3-OH becomes a ketone and the neighbouring C=C moves into conjugation with it, giving an α,β-unsaturated ketone. Codeine is similarly converted into codeinone.
+
+<ExamTip>
+If an exam question shows a secondary alcohol with "Al(O-t-Bu)₃, acetone" (or "Al(OiPr)₃, acetone"), write the ketone and leave every C=C in place. If the reagent is "Al(OiPr)₃, propan-2-ol" with a ketone, it is the reverse reaction, MPV reduction.
+</ExamTip>
+
+## Oppenauer oxidation vs MPV reduction
+
+| Feature | Oppenauer oxidation | MPV reduction |
+|---|---|---|
+| Substrate | 2° alcohol | aldehyde or ketone |
+| Product | ketone | alcohol |
+| Excess reagent | acetone (hydride acceptor) | propan-2-ol (hydride donor) |
+| Catalyst | Al(OtBu)₃ or Al(OiPr)₃ | Al(OiPr)₃ |
+| Key step | hydride transfer via six-membered transition state | same |
+
+## Limitations and exceptions
+
+- **Primary alcohols** react, but the aldehydes formed undergo **aldol condensation** under the basic alkoxide conditions, so the method is mainly used for secondary alcohols. Aldehydes without α-H can instead give esters by the Tishchenko reaction.
+- **Allylic alcohols** may show migration of the double bond into conjugation with the new ketone.
+- **Tertiary alcohols** have no hydrogen on the carbinol carbon and are not oxidised.
+- Substrates with a Lewis-basic nitrogen can tie up aluminium; the Woodward modification uses potassium tert-butoxide and benzophenone instead.
+- Secondary alcohols react faster than primary ones, so some chemoselectivity is possible.
+
+## Related reactions
+
+- [Meerwein–Ponndorf–Verley reduction](/reactions/meerwein-ponndorf-verley-reduction/): the reverse, aluminium-catalysed reduction of ketones.
+- [Tishchenko reaction](/reactions/tishchenko-reaction/): aluminium alkoxide converting an aldehyde into an ester.
+- [Aldol condensation](/reactions/aldol-condensation/): the main side reaction with primary alcohols.
+- [Pyridinium chlorochromate (PCC)](/reagents/pyridinium-chlorochromate/) and [Jones reagent](/reagents/jones-reagent/): chromium(VI) alternatives.
+- Overview: [Oxidation reactions](/mechanisms/oxidation-reactions/).

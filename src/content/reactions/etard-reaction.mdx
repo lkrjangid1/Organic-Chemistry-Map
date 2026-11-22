@@ -1,0 +1,103 @@
+---
+title: "Étard Reaction"
+description: "The Étard reaction oxidises toluene to benzaldehyde with chromyl chloride (CrO₂Cl₂) in CS₂; the Étard complex is hydrolysed, so oxidation stops at the aldehyde."
+aliases: ["Etard reaction", "Étard oxidation", "Chromyl chloride oxidation of toluene", "Toluene to benzaldehyde", "Etard reagent reaction"]
+kind: "named-reaction"
+family: "oxidation-reactions"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "Toluene (methylbenzene)"
+  smiles: "Cc1ccccc1"
+product:
+  name: "Benzaldehyde"
+  smiles: "O=Cc1ccccc1"
+byproducts: "Reduced chromium species"
+reagents: "Chromyl chloride (CrO₂Cl₂, Étard reagent), then H₃O⁺ (in practice aqueous Na₂SO₃)"
+conditions: "Inert solvent: CS₂ (exam answer) or CCl₄, CHCl₃, CH₂Cl₂; complex then decomposed with water"
+equation: "C6H5CH3 + 2 CrO2Cl2 ->[CS2] C6H5CH(OCrOHCl2)2 ->[H3O+] C6H5CHO"
+notesPages: [68]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Étard reaction?"
+    a: "Benzaldehyde. Toluene reacts with chromyl chloride to form a solid chromium complex (the Étard complex), and hydrolysis of this complex releases benzaldehyde."
+  - q: "What is the Étard reagent?"
+    a: "Chromyl chloride, CrO₂Cl₂ (chromium(VI) dichloride dioxide), usually dissolved in CS₂ or CCl₄."
+  - q: "Why does the Étard reaction stop at the aldehyde and not give benzoic acid?"
+    a: "The methyl group is converted into a chromium complex that is not oxidised further, and the aldehyde is released only when the complex is decomposed with water. Chromyl chloride does not oxidise the aldehyde to the acid, whereas KMnO₄ or K₂Cr₂O₇ take toluene all the way to benzoic acid."
+  - q: "What is the formula of the Étard complex?"
+    a: "In exam answers it is written as C₆H₅CH(OCrOHCl₂)₂, a benzylidene unit carrying two chromium-containing groups, formed from one toluene and two CrO₂Cl₂."
+  - q: "What is the difference between the Étard reaction and the Gattermann–Koch reaction?"
+    a: "Both give benzaldehyde, but the Étard reaction oxidises the CH₃ of toluene with CrO₂Cl₂, while the Gattermann–Koch reaction adds a CHO group to benzene with CO, HCl and AlCl₃/CuCl."
+related: ["gattermann-koch-reaction", "gattermann-aldehyde-synthesis", "reagents/potassium-permanganate", "reagents/potassium-dichromate", "reagents/selenium-dioxide", "preparation/preparation-of-aldehydes-and-ketones"]
+sources:
+  - title: "Aldehydes, Ketones and Carboxylic Acids (Class 12 Chemistry, Unit 8)"
+    url: "https://ncert.nic.in/textbook/pdf/lech203.pdf"
+    publisher: "NCERT"
+  - title: "Étard reaction"
+    url: "https://en.wikipedia.org/wiki/%C3%89tard_reaction"
+    publisher: "Wikipedia"
+  - title: "Chromyl chloride"
+    url: "https://en.wikipedia.org/wiki/Chromyl_chloride"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 3
+---
+
+## What is the Étard reaction?
+
+The **Étard reaction** is the **oxidation of a methyl group on an aromatic ring to an aldehyde (–CHO)** using **chromyl chloride, CrO₂Cl₂**. Toluene in an inert solvent such as **CS₂** reacts with chromyl chloride to give a solid chromium complex, the **Étard complex**, which on **hydrolysis gives benzaldehyde**. Because the methyl carbon is trapped in the complex, the oxidation stops at the aldehyde stage instead of going on to benzoic acid. It is named after the French chemist Alexandre Léon Étard.
+
+## General reaction
+
+<Eq ce="Ar-CH3 + 2 CrO2Cl2 ->[CS2] Ar-CH(OCrOHCl2)2 ->[H3O+] Ar-CHO" />
+
+## Mechanism
+
+1. **Complex formation.** Chromyl chloride reacts with the benzylic C–H bonds of the methyl group. The modern description is an **ene-type reaction** between CrO₂Cl₂ and the benzylic hydrogen, repeated so that two chromium units end up on the same carbon. The solid that precipitates is the Étard complex, written for exams as **C₆H₅CH(OCrOHCl₂)₂**.
+2. **Decomposition.** The complex is filtered off and decomposed. It undergoes a rearrangement that frees the C=O group and leaves reduced chromium behind, giving benzaldehyde.
+
+<Eq ce="C6H5CH3 + 2 CrO2Cl2 ->[CS2] C6H5CH(OCrOHCl2)2" />
+<Eq ce="C6H5CH(OCrOHCl2)2 ->[H3O+] C6H5CHO" />
+
+<KeyPoint>
+**Exam answer versus lab practice.** For JEE and NEET, write "hydrolysis with H₃O⁺". In the laboratory the complex is decomposed under **reducing conditions**, usually with saturated aqueous **sodium sulphite**, so that the freshly released benzaldehyde is not oxidised further by leftover Cr(VI). The common solvent in practice is CCl₄; CS₂, CHCl₃ and CH₂Cl₂ are also used.
+</KeyPoint>
+
+## Examples
+
+**1. Benzaldehyde from toluene (NCERT example).**
+
+<Eq ce="C6H5CH3 ->[1) CrO2Cl2, CS2][2) H3O+] C6H5CHO" />
+
+**2. A longer side chain does not give a clean aldehyde.** n-Propylbenzene gives a mixture: benzyl methyl ketone (major), propiophenone and chlorinated products. For this reason the Étard reaction is used almost only for converting an aromatic CH₃ group into CHO.
+
+## Ways to oxidise toluene
+
+| Reagent | Product from toluene | Stops at aldehyde? |
+|---|---|---|
+| CrO₂Cl₂ in CS₂, then H₃O⁺ (Étard) | benzaldehyde | yes |
+| CrO₃ in acetic anhydride, then aq. acid | benzylidene diacetate → benzaldehyde | yes |
+| Cl₂/hν (side chain), then H₂O | benzal chloride → benzaldehyde | yes |
+| hot alkaline KMnO₄, then H⁺ | benzoic acid | no |
+| acidified K₂Cr₂O₇ | benzoic acid | no |
+
+<ExamTip>
+"Toluene to benzaldehyde in one named step" means **Étard reaction** (CrO₂Cl₂). "Benzene to benzaldehyde in one named step" means **Gattermann–Koch** (CO, HCl, AlCl₃/CuCl). Strong oxidants such as KMnO₄ always give benzoic acid from toluene.
+</ExamTip>
+
+## Limitations and exceptions
+
+- **Mainly for aromatic methyl groups.** Longer alkyl chains rearrange and give ketone mixtures and chlorinated by-products.
+- **Slow and hazardous.** The reaction may take days to weeks, and chromyl chloride is a toxic, aggressive Cr(VI) oxidant that also attacks alkenes and alkanes.
+- **Unreacted reagent must be removed.** The Étard complex is usually purified before decomposition, otherwise leftover CrO₂Cl₂ can over-oxidise the product.
+
+## Related reactions
+
+- [Gattermann–Koch reaction](/reactions/gattermann-koch-reaction/) makes benzaldehyde directly from benzene.
+- [Gattermann aldehyde synthesis](/reactions/gattermann-aldehyde-synthesis/) formylates arenes with HCN/HCl.
+- [Potassium permanganate](/reagents/potassium-permanganate/) and [potassium dichromate](/reagents/potassium-dichromate/) oxidise the side chain all the way to benzoic acid.
+- [Selenium dioxide](/reagents/selenium-dioxide/) is another reagent that oxidises a CH₃ or CH₂ next to an activating group to a carbonyl.
+- All routes to aldehydes are collected in [Preparation of aldehydes and ketones](/preparation/preparation-of-aldehydes-and-ketones/), and oxidations in [Oxidation reactions](/mechanisms/oxidation-reactions/).

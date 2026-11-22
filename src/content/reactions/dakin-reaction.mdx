@@ -1,0 +1,114 @@
+---
+title: "Dakin Reaction (Dakin Oxidation)"
+description: "Dakin reaction: an o- or p-hydroxy (or amino) aryl aldehyde or ketone with H₂O₂ and base gives a benzenediol and carboxylate, e.g. salicylaldehyde to catechol."
+aliases: ["Dakin oxidation", "Dakin rearrangement", "Salicylaldehyde to catechol", "Hydroxybenzaldehyde to benzenediol", "Dakin reaction mechanism"]
+kind: "named-reaction"
+family: "reactions-of-phenols"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: []
+reactant:
+  name: "Salicylaldehyde (2-hydroxybenzaldehyde)"
+  smiles: "O=Cc1ccccc1O"
+product:
+  name: "Catechol (benzene-1,2-diol)"
+  smiles: "Oc1ccccc1O"
+byproducts: "Carboxylate ion: HCOO⁻ from aldehydes, CH₃COO⁻ from methyl ketones"
+reagents: "H₂O₂ in aqueous base (NaOH); acidic H₂O₂ variants also known"
+conditions: "Aqueous alkaline solution; base must not be too strong (no reaction above about pH 13.5)"
+equation: "2-HOC6H4CHO + H2O2 + OH- -> 1,2-C6H4(OH)2 + HCOO- + H2O"
+notesPages: [102]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Dakin reaction of salicylaldehyde?"
+    a: "Catechol (benzene-1,2-diol) and formate ion. The –CHO group is replaced by –OH, because the aryl group migrates from carbon to oxygen and the resulting aryl formate is hydrolysed."
+  - q: "Why does the Dakin reaction need an OH or NH₂ group ortho or para to the carbonyl?"
+    a: "An electron-donating group at ortho or para pushes electron density onto the ring carbon attached to the C=O, which raises its migratory aptitude. Without it (or with a meta OH), hydrogen migrates instead and a carboxylic acid forms."
+  - q: "How is the Dakin reaction related to the Baeyer–Villiger oxidation?"
+    a: "Both insert an oxygen atom between the carbonyl carbon and the aryl group through a peroxide adduct and a 1,2-shift to oxygen. In the Dakin reaction the ester formed is an aryl ester, which is hydrolysed in the basic medium to a phenol."
+  - q: "What happens to m-hydroxybenzaldehyde under Dakin conditions?"
+    a: "It does not give resorcinol. The aryl group is not activated for migration from the meta position, so the hydride migrates and m-hydroxybenzoic acid is formed."
+  - q: "What is the by-product of the Dakin reaction of 4-hydroxyacetophenone?"
+    a: "Acetate ion (acetic acid after acidification). The other product is hydroquinone."
+related: ["baeyer-villiger-oxidation", "cumene-process", "elbs-persulphate-oxidation", "mechanisms/reactions-of-phenols", "mechanisms/oxidation-reactions", "mechanisms/rearrangement-reactions"]
+sources:
+  - title: "Dakin oxidation"
+    url: "https://en.wikipedia.org/wiki/Dakin_oxidation"
+    publisher: "Wikipedia"
+  - title: "Dakin Reaction"
+    url: "https://www.organic-chemistry.org/namedreactions/dakin-reaction.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 2
+---
+
+## What is the Dakin reaction?
+
+The **Dakin reaction (Dakin oxidation)** converts an **ortho- or para-hydroxy (or amino) aryl aldehyde or ketone** into a **phenol** using **hydrogen peroxide in aqueous base**. The –CHO or –COR group is replaced by **–OH**, and the carbonyl carbon leaves as a **carboxylate**. So **salicylaldehyde gives catechol**, and **4-hydroxybenzaldehyde gives hydroquinone**. It is named after Henry Drysdale Dakin and is closely related to the [Baeyer–Villiger oxidation](/reactions/baeyer-villiger-oxidation/).
+
+## General reaction
+
+<Eq ce="HO-C6H4-CO-R + H2O2 + OH- -> HO-C6H4-OH + R-COO- + H2O" />
+
+R = H (aldehyde, gives formate) or alkyl (ketone, gives acetate etc.). The activating group (OH or NH₂) must be **ortho or para** to the carbonyl.
+
+## Mechanism
+
+1. **Hydroperoxide ion forms.** OH⁻ removes a proton from H₂O₂, giving HOO⁻, a much stronger nucleophile than H₂O₂.
+2. **Nucleophilic addition.** HOO⁻ adds to the carbonyl carbon, giving a tetrahedral intermediate, Ar–C(O⁻)(R)–O–OH.
+3. **[1,2]-Aryl migration.** The intermediate collapses: the C=O reforms, the aryl group moves from carbon to the neighbouring oxygen, and OH⁻ leaves from the O–O bond. The product is an **aryl ester**, R–CO–O–Ar.
+4. **Ester hydrolysis.** OH⁻ attacks the ester carbonyl, and the tetrahedral intermediate expels the **phenoxide ion**.
+5. **Proton transfer.** The phenoxide takes the acidic proton of the carboxylic acid, giving the phenoxide and carboxylate. Acid work-up gives the free benzenediol.
+
+<Eq ce="Ar-CHO ->[HOO-] Ar-CH(O-)-O-OH ->[\text{aryl shift}][- OH-] H-CO-O-Ar ->[OH-] Ar-O- + HCOOH" />
+
+<KeyPoint>
+The two slow steps are the **addition of HOO⁻** and the **aryl migration**. An OH or NH₂ group ortho or para to the carbonyl feeds electron density to the migrating ring carbon, so the aryl group moves instead of the hydrogen. This is why only o- and p-hydroxy/amino carbonyl compounds give phenols.
+</KeyPoint>
+
+## Examples
+
+**1. Salicylaldehyde → catechol:**
+
+<Eq ce="2-HOC6H4CHO ->[H2O2, NaOH] 1,2-C6H4(OH)2 + HCOO-" />
+
+**2. 4-Hydroxybenzaldehyde → hydroquinone:**
+
+<Eq ce="4-HOC6H4CHO ->[H2O2, NaOH] 1,4-C6H4(OH)2 + HCOO-" />
+
+**3. 4-Hydroxyacetophenone → hydroquinone + acetate:** ketones react more slowly than aldehydes, but warming compensates.
+
+<Eq ce="4-HOC6H4COCH3 ->[H2O2, OH-] 1,4-C6H4(OH)2 + CH3COO-" />
+
+**4. 4-Aminoacetophenone → 4-aminophenol:** an NH₂ group activates the ring in the same way as OH.
+
+<Eq ce="4-H2NC6H4COCH3 ->[H2O2, OH-] 4-H2NC6H4OH + CH3COO-" />
+
+## Factors that control the reaction
+
+| Factor | Effect |
+|---|---|
+| Aldehyde vs ketone | Aldehydes react faster (more electrophilic C=O) |
+| OH ortho vs para | Ortho reacts faster in weak base (internal H-bond activates C=O) |
+| OH meta | Hydrogen migrates instead; gives a hydroxybenzoic acid, not a diol |
+| EWG (e.g. NO₂) ortho/para | Slows aryl migration; acid product favoured |
+| pH | Faster as more HOO⁻ forms; stops above about pH 13.5 |
+
+<ExamTip>
+Treat it as a Baeyer–Villiger on an activated aromatic carbonyl: O is inserted between the ring and the carbonyl carbon, then base cuts the aryl ester. Product = ring with OH where the carbonyl group was; by-product = RCOO⁻. Check that the activating group is ortho or para; if it is meta, expect the carboxylic acid instead.
+</ExamTip>
+
+## Limitations and variants
+
+- m-Hydroxy and electron-poor aryl carbonyls give carboxylic acids instead of phenols.
+- Very strong base (above about pH 13.5) stops the reaction, probably because the doubly deprotonated peroxide cannot lose O²⁻.
+- **Acid-catalysed version:** H₂O₂ with a little H₂SO₄ in methanol works by the same aryl-shift pathway; adding boric acid raises the phenol yield.
+- Catalysts such as methyltrioxorhenium in ionic liquids, or the solid urea–H₂O₂ complex, speed up the oxidation.
+
+## Related reactions
+
+- [Baeyer–Villiger oxidation](/reactions/baeyer-villiger-oxidation/): the parent reaction; peracid inserts O next to the carbonyl to give esters or lactones.
+- [Cumene process](/reactions/cumene-process/): phenyl migrates from carbon to an electron-deficient oxygen, giving phenol and acetone.
+- [Elbs persulphate oxidation](/reactions/elbs-persulphate-oxidation/): another route from a phenol to a dihydroxybenzene.
+- [Reactions of phenols](/mechanisms/reactions-of-phenols/), [Oxidation reactions](/mechanisms/oxidation-reactions/) and [Rearrangement reactions](/mechanisms/rearrangement-reactions/).

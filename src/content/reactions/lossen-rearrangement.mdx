@@ -1,0 +1,100 @@
+---
+title: "Lossen Rearrangement"
+description: "Lossen rearrangement converts an O-activated hydroxamic acid into an isocyanate with base, which water turns into a primary amine with one carbon fewer."
+aliases: ["Lossen reaction", "Lossen degradation", "Hydroxamic acid rearrangement", "Losen rearrangement"]
+kind: "rearrangement"
+family: "rearrangement-reactions"
+exams: ["jee-main", "jee-advanced"]
+mapEdges: []
+reactant:
+  name: "O-Acetylbenzohydroxamic acid (an acyl hydroxamate)"
+  smiles: "CC(=O)ONC(=O)c1ccccc1"
+product:
+  name: "Aniline (via phenyl isocyanate)"
+  smiles: "Nc1ccccc1"
+byproducts: "Carboxylate (R′COO⁻) from the leaving group; CO₂ on hydrolysis"
+reagents: "Hydroxamic acid + activator (Ac₂O, RCOCl, RSO₂Cl or CDI); base (OH⁻); then H₂O"
+conditions: "Base, warming; water to hydrolyse the isocyanate"
+equation: "R-CO-NH-O-COR' ->[OH-] R-N=C=O ->[H2O] R-NH2 + CO2"
+notesPages: [105]
+memoryTricks: []
+faq:
+  - q: "What is the product of the Lossen rearrangement?"
+    a: "An isocyanate, R–N=C=O. In water it is hydrolysed through a carbamic acid that loses CO₂, so the final product is a primary amine R–NH₂ with one carbon fewer than the hydroxamic acid."
+  - q: "What is the leaving group in the Lossen rearrangement?"
+    a: "A carboxylate (or sulfonate) on the oxygen of the hydroxamic acid. The OH of a free hydroxamic acid is first acylated or sulfonylated; the more acidic the leaving acid, the faster the rearrangement."
+  - q: "Is configuration retained in the Lossen rearrangement?"
+    a: "Yes. The migrating group moves from carbon to nitrogen within the same molecule without ever becoming free, so a chiral migrating carbon keeps its configuration, exactly as in the Hofmann and Curtius rearrangements."
+  - q: "What is the difference between Lossen, Hofmann and Curtius rearrangements?"
+    a: "All three give an isocyanate by a 1,2-shift from carbon to electron-deficient nitrogen. They differ in the starting material and leaving group: Hofmann uses an N-bromoamide (Br⁻ leaves), Curtius an acyl azide (N₂ leaves) and Lossen an O-acyl hydroxamic acid (carboxylate leaves)."
+related: ["hofmann-bromamide-degradation", "curtius-rearrangement", "schmidt-reaction", "beckmann-rearrangement", "preparation/preparation-of-amines"]
+sources:
+  - title: "Lossen rearrangement"
+    url: "https://en.wikipedia.org/wiki/Lossen_rearrangement"
+    publisher: "Wikipedia"
+  - title: "30.8: Rearrangements of Cationic or Electron Deficient Nitrogen (Virtual Textbook of Organic Chemistry, Reusch)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Book:_Virtual_Textbook_of_OChem_(Reusch)_UNDER_CONSTRUCTION/30:_Cationic_Rearrangements/30.8:_Rearrangements_of_Cationic_or_Electron_Deficient_Nitrogen"
+    publisher: "LibreTexts"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 2
+  note: "Notes draw OH⁻ leaving from the free hydroxamic acid anion; sources say the oxygen is first acylated/sulfonylated and a carboxylate (or sulfonate) leaves. Page follows sources. 'Reactivity ∝ ERG' and 'migration step is RDS' are not stated by the sources; kept as exam phrasing."
+---
+
+## What is the Lossen rearrangement?
+
+The **Lossen rearrangement** is the base-promoted conversion of an **O-activated hydroxamic acid** (an acyl hydroxamate, R–CO–NH–O–COR′) into an **isocyanate**, R–N=C=O. In water the isocyanate is hydrolysed and loses CO₂, so the overall result is a **primary amine with one carbon fewer** than the starting acid derivative. It was described by Wilhelm Lossen in the 1870s and belongs to the same family as the [Hofmann](/reactions/hofmann-bromamide-degradation/) and [Curtius](/reactions/curtius-rearrangement/) rearrangements.
+
+## General reaction
+
+A hydroxamic acid, R–CO–NH–OH, is made from an ester (or acid chloride) and hydroxylamine. Its OH is then converted into a better leaving group, usually by acylation with acetic anhydride or an acid chloride, or with a sulfonyl chloride or CDI. Base then triggers the rearrangement.
+
+<Eq ce="R-CO-OR'' ->[NH2OH] R-CO-NH-OH ->[Ac2O] R-CO-NH-O-COCH3" />
+
+## Mechanism
+
+1. **Deprotonation.** The base removes the N–H proton, which is acidic because it is next to a C=O, giving the conjugate base R–CO–N⁻–O–COR′.
+2. **1,2-Shift with loss of the leaving group.** In one concerted step the group R moves from the carbonyl carbon to nitrogen, the N–O bond breaks and the carboxylate R′COO⁻ leaves. The nitrogen lone pair forms the C=N bond of the isocyanate. In exam answers this migration step is taken as the rate-determining step.
+3. **Hydrolysis.** Water adds to the isocyanate to give a carbamic acid, R–NH–COOH, which loses CO₂ to give the amine.
+
+<Eq ce="R-CO-N^--O-COR' -> R-N=C=O + R'COO^-" />
+<Eq ce="R-N=C=O + H2O -> [R-NH-COOH] -> R-NH2 + CO2" />
+
+<KeyPoint>
+Lossen is a **step-down** reaction: the C=O carbon leaves as CO₂, so the amine has one carbon fewer. The migrating group keeps its **configuration**, because it never separates from the molecule during the shift.
+</KeyPoint>
+
+<ExamTip title="Common mistake">
+Hydroxide is a poor leaving group, so a free hydroxamic acid anion does not simply expel OH⁻. The oxygen must first be activated (O-acyl, O-sulfonyl); the leaving group is then a carboxylate or sulfonate. The rate rises as the leaving acid becomes stronger.
+</ExamTip>
+
+## Factors that affect the rate
+
+- **Leaving group:** the stronger the conjugate acid of the leaving group (lower pKa, more electron-withdrawing substituents), the faster the rearrangement.
+- **Migrating group:** in exam answers, electron-releasing groups on the migrating group are said to speed up the shift, since the group moves with its bonding pair to electron-poor nitrogen.
+- **Stereochemistry:** a chiral migrating carbon shows **retention of configuration**.
+
+## Examples
+
+**Benzohydroxamic acid to aniline.** The O-acetyl derivative rearranges in base to phenyl isocyanate, which water converts into aniline.
+
+<Eq ce="C6H5-CO-NH-O-COCH3 ->[OH-] C6H5-N=C=O ->[H2O] C6H5-NH2 + CO2" />
+
+**Trapping the isocyanate.** Without water, the isocyanate can be captured: an alcohol gives a carbamate (urethane), and an amine gives a substituted urea.
+
+<Eq ce="R-N=C=O + R'OH -> R-NH-CO-OR'" />
+
+## Limitations and practical notes
+
+- The acyl hydroxamate is rarely isolated; the activator is usually added to the hydroxamic acid and the rearrangement happens in the same pot.
+- Compared with the Curtius route (azides, explosive) and the Hofmann route (bromine/hypobromite oxidant), the Lossen route avoids both hazardous reagents.
+- A "self-propagating" version from the free hydroxamic acid is known, but it needs special conditions (a strong base and an added electrophile), not just aqueous hydroxide.
+
+## Related reactions
+
+- [Hofmann bromamide degradation](/reactions/hofmann-bromamide-degradation/): amide + Br₂/NaOH; Br⁻ is the leaving group.
+- [Curtius rearrangement](/reactions/curtius-rearrangement/): acyl azide on heating; N₂ is the leaving group.
+- [Schmidt reaction](/reactions/schmidt-reaction/): carboxylic acid + HN₃ in acid.
+- [Beckmann rearrangement](/reactions/beckmann-rearrangement/): the acid-catalysed shift in oximes, giving amides instead of isocyanates.
+- [Preparation of amines](/preparation/preparation-of-amines/) and the [rearrangement reactions hub](/mechanisms/rearrangement-reactions/).

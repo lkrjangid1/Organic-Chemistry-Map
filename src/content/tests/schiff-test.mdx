@@ -1,0 +1,111 @@
+---
+title: "Schiff's Test"
+description: "Schiff's test detects aldehydes: fuchsine decolourised by SO₂ (Schiff's reagent) turns back to magenta pink when an aldehyde is added, in the cold."
+aliases: ["Schiff test", "Schiff's reagent test", "Schiff reagent", "Fuchsine test", "Magenta dye test", "Decolourised magenta test"]
+kind: "test"
+family: "nucleophilic-addition"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "Ethanal (acetaldehyde)"
+  smiles: "CC=O"
+reagents: "Schiff's reagent: basic fuchsine (magenta dye, rich in pararosaniline hydrochloride) decolourised with SO₂, sulphurous acid or sodium bisulphite"
+conditions: "Room temperature or below; do not heat"
+equation: "\\text{magenta dye} ->[SO2] \\text{colourless Schiff's reagent} ->[RCHO] \\text{magenta-pink colour}"
+observation: "The colourless reagent turns magenta-pink within a minute"
+distinguishes: "Aldehydes from ketones"
+notesPages: [82, 120, 121]
+memoryTricks:
+  - text: "magenta dye —SO₂→ रंग गायब —R–CHO→ रंग वापस"
+    meaning: "Magenta dye with SO₂: colour gone; then add an aldehyde: colour comes back."
+faq:
+  - q: "What is Schiff's reagent?"
+    a: "Schiff's reagent is a magenta dye (basic fuchsine, a rosaniline/pararosaniline dye) that has been decolourised by sulphur dioxide or bisulphite. It is a colourless solution that turns magenta with aldehydes."
+  - q: "Do ketones give Schiff's test?"
+    a: "Ketones are counted as negative. Some react very slowly to give the same colour, so the test is done cold and read within a minute or so."
+  - q: "Why does glucose not give Schiff's test even though it has an aldehyde group?"
+    a: "Glucose exists almost entirely as a cyclic hemiacetal, so very little free –CHO is present, and any aldehyde it forms can be held as a bisulphite adduct. The result is a false negative, which is one piece of evidence for the ring structure of glucose."
+  - q: "Why should the Schiff's test not be heated?"
+    a: "Heating removes SO₂ from the reagent and also speeds up the slow reaction of ketones. Either can produce a pink colour without an aldehyde."
+related: ["tests/tollens-test", "tests/fehling-test", "tests/2-4-dnp-test", "tests/benedict-test", "concepts/aldoses-and-epimers", "mechanisms/nucleophilic-addition"]
+sources:
+  - title: "Schiff test"
+    url: "https://en.wikipedia.org/wiki/Schiff_test"
+    publisher: "Wikipedia"
+  - title: "14.7: Determining Alcohol Classifications in the Lab - alternate reactions (Schiff's reagent)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Map%3A_Organic_Chemistry_(Wade)_Complete_and_Semesters_I_and_II/Map%3A_Organic_Chemistry_II_(Wade)/14%3A_Reactions_of_Alcohols/14.07%3A_Determining_Alcohol_Classifications_in_the_Lab_-_alternate_reactions"
+    publisher: "LibreTexts Chemistry"
+  - title: "Fuchsine"
+    url: "https://en.wikipedia.org/wiki/Fuchsine"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 3
+  note: "HgCl₂ test (aldehyde reduces HgCl₂ to white Hg₂Cl₂, then black Hg) could not be confirmed in any approved source, so it is not included. 'Only aldehydes' is softened: sources say ketones react very slowly."
+---
+
+## What is Schiff's test?
+
+**Schiff's test** is a quick colour test for **aldehydes**. **Schiff's reagent** is a magenta dye (**basic fuchsine**) that has been made **colourless with sulphur dioxide**. When an aldehyde is added to the cold reagent, the **magenta-pink colour returns**. Ketones are treated as negative, so the test separates aldehydes from ketones without any heating.
+
+## Reagent and how to prepare it
+
+1. Take a dilute aqueous solution of **basic fuchsine** (also called magenta or rosaniline hydrochloride; formulations rich in **pararosaniline hydrochloride** work best). It is deep magenta.
+2. Pass **SO₂** through it, or add sulphurous acid or sodium bisulphite, until the colour disappears.
+3. The colourless (or faintly yellow) solution is Schiff's reagent. Keep it cold and tightly closed, since loss of SO₂ restores the colour.
+
+| Stage | What is present | Colour |
+|---|---|---|
+| Basic fuchsine | Extended conjugated (quinoid) dye cation | Magenta |
+| Schiff's reagent | Dye with HSO₃⁻ added at the central carbon | Colourless |
+| After adding RCHO | Aldehyde–bisulphite–dye adduct with conjugation restored | Magenta-pink |
+
+## Procedure
+
+1. Take about 1 mL of Schiff's reagent in a test tube.
+2. Add 2–3 drops of the sample (or its solution in water or ethanol) and shake.
+3. Keep it at room temperature and watch for about a minute. Do not warm.
+
+## Observations and inference
+
+| Compound type | Observation | Inference |
+|---|---|---|
+| Aliphatic aldehyde (methanal, ethanal) | Pink-magenta colour quickly | Positive |
+| Aromatic aldehyde (benzaldehyde) | Pink-magenta colour | Positive |
+| Simple ketone (propanone) | Stays colourless (trace pink only after a long time) | Negative |
+| Glucose | Stays colourless | Negative (cyclic hemiacetal) |
+| Alcohols, acids, esters | Stays colourless | Negative |
+
+## Chemistry behind it
+
+1. **Decolourisation.** Fuchsine is coloured because its central carbon is part of a long conjugated quinoid system. Bisulphite (from SO₂ and water) adds to that central carbon, breaking the conjugation, so the colour disappears.
+2. **Reaction with the aldehyde.** The free –NH₂ groups of the decolourised dye condense with the aldehyde to form imines (Schiff bases) through a hemiaminal intermediate.
+3. **Colour returns.** These imines add more bisulphite to give Ar–NH–CH(R)–SO₃⁻ groups. The resulting species restore an extended conjugated system and absorb in the visible region, giving the magenta colour of a positive test.
+
+<Eq ce="\text{fuchsine (magenta)} + SO2 + H2O -> \text{leuco-sulphonic adduct (colourless)}" />
+
+<Eq ce="\text{colourless reagent} + RCHO -> \text{magenta adduct}" />
+
+<KeyPoint>
+The magenta colour of a positive Schiff's test is not simply the original dye coming back. It belongs to a new aldehyde–bisulphite–dye adduct. For exam answers, "SO₂ decolourises the dye; the aldehyde restores a magenta colour" is enough.
+</KeyPoint>
+
+<ExamTip>
+Glucose does not give Schiff's test even though its open-chain formula shows a –CHO group. This, together with its failure to form a bisulphite addition product, is classic evidence that glucose exists mainly as a cyclic hemiacetal.
+</ExamTip>
+
+## Limitations
+
+- Ketones react slowly and give the same colour, so the result must be read cold and quickly.
+- Heating, or a reagent that has lost SO₂, can turn pink without any aldehyde.
+- Aldehydes that form stable bisulphite adducts, such as glucose, can give false negatives.
+- Schiff's test does not say whether the aldehyde is aliphatic or aromatic; use [Fehling's test](/tests/fehling-test/) for that.
+
+## Related tests
+
+- [Tollens' test](/tests/tollens-test/): silver mirror with all aldehydes.
+- [Fehling's test](/tests/fehling-test/): red Cu₂O with aliphatic aldehydes only.
+- [Benedict's test](/tests/benedict-test/): copper(II) citrate test used for sugars.
+- [2,4-DNP test](/tests/2-4-dnp-test/): positive for both aldehydes and ketones.
+- [Nucleophilic addition](/mechanisms/nucleophilic-addition/): hub page for carbonyl addition reactions.

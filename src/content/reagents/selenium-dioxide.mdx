@@ -1,0 +1,122 @@
+---
+title: "Selenium Dioxide (SeO₂)"
+description: "SeO₂ (Riley oxidation) puts an OH on the allylic carbon of an alkene and turns the α-CH₂ of a ketone into C=O, giving 1,2-dicarbonyl compounds."
+aliases: ["SeO2", "Riley oxidation", "Selenium(IV) oxide", "Allylic oxidation with SeO2", "Allylic hydroxylation"]
+category: "Oxidising agents"
+exams: ["jee-main", "jee-advanced"]
+formula: "SeO₂"
+molecule:
+  name: "Selenium dioxide"
+  smiles: "O=[Se]=O"
+family: "oxidation-reactions"
+notesPages: [55]
+memoryTricks:
+  - text: "allylic position पर OH लाता है"
+    meaning: "SeO₂ brings an OH group onto the allylic position of an alkene."
+faq:
+  - q: "What is the Riley oxidation?"
+    a: "The Riley oxidation is the use of selenium dioxide to oxidise a CH₂ group next to a carbonyl group into a second C=O, giving a 1,2-dicarbonyl compound. The name is also used for SeO₂ oxidation of the allylic position of alkenes."
+  - q: "What is the product of cyclohexanone with SeO₂?"
+    a: "Cyclohexane-1,2-dione. The CH₂ next to the carbonyl group is converted into a second C=O, and red selenium separates out."
+  - q: "What is the product of cyclohexene with SeO₂?"
+    a: "Cyclohex-2-en-1-ol. SeO₂ introduces an OH group on the allylic carbon while the C=C bond stays in the ring."
+  - q: "What is the difference between SeO₂ and MnO₂?"
+    a: "SeO₂ creates an allylic alcohol from an alkene by attacking an allylic C–H bond. MnO₂ takes an allylic alcohol that already exists and oxidises it to the α,β-unsaturated aldehyde or ketone."
+related: ["reagents/manganese-dioxide", "reagents/potassium-permanganate", "reactions/nbs-allylic-bromination", "reactions/wacker-oxidation", "mechanisms/oxidation-reactions", "mechanisms/pericyclic-reactions"]
+sources:
+  - title: "Riley oxidation"
+    url: "https://en.wikipedia.org/wiki/Riley_oxidation"
+    publisher: "Wikipedia"
+  - title: "Selenium dioxide"
+    url: "https://en.wikipedia.org/wiki/Selenium_dioxide"
+    publisher: "Wikipedia"
+  - title: "1,2-Cyclohexanedione"
+    url: "https://en.wikipedia.org/wiki/1,2-Cyclohexanedione"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 3
+---
+
+## What is selenium dioxide?
+
+**Selenium dioxide (SeO₂)** is a colourless (white) solid oxidising agent, with selenium in the +4 state, that attacks **C–H bonds activated by a neighbouring π bond**. With **alkenes** it puts an **OH group on the allylic carbon** (allylic oxidation). With **aldehydes and ketones** it converts the **α-CH₂ (or α-CH₃) group into C=O**, giving a **1,2-dicarbonyl compound**; this is the **Riley oxidation**, first reported by H. L. Riley in 1932. Selenium is reduced to red elemental selenium.
+
+## Preparation and composition
+
+SeO₂ is made by oxidising selenium, either by burning it in air or with nitric acid or hydrogen peroxide; dehydrating selenous acid (H₂SeO₃) also gives it. It dissolves in water to form selenous acid and is soluble in alcohols. Selenium compounds are **highly toxic**, so the reagent is handled with care, and the red selenium formed is filtered off after the reaction. For exams, simply write SeO₂ over the arrow.
+
+## What it oxidises
+
+| Substrate | Site attacked | Product |
+|---|---|---|
+| Cyclohexene | Allylic CH₂ | Cyclohex-2-en-1-ol |
+| R₂C=CR′–CHR″₂ | Allylic C–H | R₂C=CR′–C(OH)R″₂ (allylic alcohol) |
+| Cyclohexanone | α-CH₂ | Cyclohexane-1,2-dione |
+| Acetaldehyde (as paraldehyde) | α-CH₃ | Glyoxal, OHC–CHO |
+| Ketone with two different α-CH₂ groups | Less hindered α-carbon | 1,2-Dione |
+
+**Allylic oxidation of cyclohexene:**
+
+<Eq ce="C6H10 ->[SeO2] C6H9OH" />
+
+Here C₆H₁₀ is cyclohexene and C₆H₉OH is cyclohex-2-en-1-ol: the OH sits on the carbon next to the double bond, and the double bond does not move in this symmetric case.
+
+**Riley oxidation of cyclohexanone:**
+
+<Eq ce="C6H10O + SeO2 -> C6H8O2 + Se + H2O" />
+
+The ring CH₂ next to C=O becomes a second C=O, so cyclohexanone gives cyclohexane-1,2-dione.
+
+**Glyoxal from acetaldehyde:**
+
+<Eq ce="CH3-CHO + SeO2 -> OHC-CHO + Se + H2O" />
+
+<KeyPoint>
+SeO₂ attacks the carbon **next to** a C=C or C=O. Alkenes give **allylic alcohols**; carbonyl compounds give **1,2-dicarbonyl compounds** (α-diketones or α-keto aldehydes). Red selenium is the by-product.
+</KeyPoint>
+
+## What it does not touch
+
+- **The C=C bond itself.** It is not cleaved or hydroxylated; the double bond survives (it may shift position in unsymmetrical alkenes, see the mechanism).
+- **Positions that are not activated.** Ordinary CH₂ groups far from a π bond are unaffected.
+- **Bridgehead allylic positions** in bridged bicyclic alkenes, because a double bond cannot form at a bridgehead (Bredt's rule).
+
+## Mechanism (short)
+
+**Alkenes (allylic oxidation).**
+1. **Ene reaction.** SeO₂ reacts with the alkene: the Se=O adds to one alkene carbon while an allylic hydrogen moves to oxygen. The double bond shifts by one position, giving an allylseleninic acid.
+2. **[2,3]-Sigmatropic rearrangement.** The C–Se bond and an Se–O bond reorganise through a five-membered cyclic transition state, which moves the double bond back to its original position and puts oxygen on the allylic carbon.
+3. **Hydrolysis.** The resulting selenium ester is hydrolysed to the allylic alcohol.
+
+Because both steps are pericyclic, see [pericyclic reactions](/mechanisms/pericyclic-reactions/) for the ene and sigmatropic ideas.
+
+**Carbonyl compounds (Riley).** The enol form of the ketone attacks electrophilic selenium. After rearrangement and loss of water, water attacks the α-carbon, and red amorphous selenium is released as the 1,2-dicarbonyl product forms.
+
+## Regioselectivity
+
+- In **trisubstituted alkenes**, oxidation takes place at the **more substituted end** of the double bond, with the order of reactivity **CH₂ greater than CH₃ greater than CH**.
+- **Terminal alkenes** tend to give primary allylic alcohols, because the double bond moves during the ene step.
+- In **cyclic alkenes**, a ring allylic position is preferred over a side-chain position.
+- For **ketones** with two α-CH₂ groups, the less hindered side reacts.
+
+## Comparison with similar reagents
+
+| Reagent | What it does at the allylic position |
+|---|---|
+| SeO₂ | C–H → C–OH (allylic alcohol); α-CH₂ of ketone → C=O |
+| [NBS, light or peroxide](/reactions/nbs-allylic-bromination/) | C–H → C–Br (allylic bromide) |
+| [MnO₂](/reagents/manganese-dioxide/) | Existing allylic C–OH → C=O |
+| [KMnO₄](/reagents/potassium-permanganate/) | Attacks the C=C itself (diol or cleavage) |
+
+<ExamTip>
+If a question shows an alkene turning into an alkene that has gained an OH on the neighbouring carbon, the reagent is SeO₂. If a ketone gains a second C=O on the adjacent carbon (cyclohexanone → cyclohexane-1,2-dione), the reagent is again SeO₂.
+</ExamTip>
+
+## Exam tips
+
+- Count carbons: SeO₂ never adds or removes carbon atoms; only the oxidation level of one carbon changes.
+- Look for the **activated** carbon: allylic (next to C=C) or α to C=O.
+- Remember the by-product: red **selenium** metal, which separates out and is filtered off.
+- Overview of oxidants: [oxidation reactions](/mechanisms/oxidation-reactions/).

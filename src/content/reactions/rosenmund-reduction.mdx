@@ -1,0 +1,117 @@
+---
+title: "Rosenmund Reduction"
+description: "Rosenmund reduction converts an acyl chloride into an aldehyde by hydrogenation over palladium on barium sulphate, a poisoned catalyst. Mechanism, examples."
+aliases: ["Rosenmund reaction", "Rosenmund catalyst", "Pd/BaSO4 reduction", "Reduction of acid chloride to aldehyde"]
+kind: "named-reaction"
+family: "reduction-reactions"
+exams: ["jee-main", "jee-advanced", "neet"]
+mapEdges: []
+reactant:
+  name: "Benzoyl chloride"
+  smiles: "O=C(Cl)c1ccccc1"
+product:
+  name: "Benzaldehyde"
+  smiles: "O=Cc1ccccc1"
+byproducts: "HCl"
+reagents: "H₂, Pd on BaSO₄ (Rosenmund catalyst), often with a sulfur poison such as thiourea"
+conditions: "Anhydrous solvent; hydrogen gas passed through the solution of the acyl chloride"
+equation: "R-COCl + H2 ->[Pd/BaSO4] R-CHO + HCl"
+notesPages: [63, 67, 68]
+memoryTricks: []
+faq:
+  - q: "What is the Rosenmund reduction?"
+    a: "It is the catalytic hydrogenation of an acyl (acid) chloride to an aldehyde, using hydrogen gas over palladium supported on barium sulphate. For example, benzoyl chloride gives benzaldehyde and HCl."
+  - q: "Why is BaSO₄ used in the Rosenmund reduction?"
+    a: "Palladium on its own is too active and would reduce the aldehyde further to a primary alcohol. Barium sulphate has a low surface area and lowers the activity of palladium, so the reaction stops at the aldehyde. Extra sulfur poisons such as thiourea are added for very reactive acyl chlorides."
+  - q: "Why can formaldehyde not be prepared by the Rosenmund reduction?"
+    a: "The required acyl chloride, formyl chloride (HCOCl), is unstable at room temperature and breaks down into CO and HCl, so there is no starting material to reduce."
+  - q: "Which catalyst is used in the Rosenmund reduction, Ni or Pd?"
+    a: "Palladium. The Rosenmund catalyst is Pd deposited on BaSO₄. Nickel is not used for this reaction."
+  - q: "What happens if the Rosenmund catalyst is not poisoned?"
+    a: "The aldehyde is reduced on to the primary alcohol, and the alcohol can then react with unreacted acyl chloride to form an ester as a side product."
+related: ["stephen-reduction", "catalytic-hydrogenation", "reagents/dibal-h", "reagents/lindlar-catalyst", "reagents/lithium-aluminium-hydride", "preparation/preparation-of-aldehydes-and-ketones"]
+sources:
+  - title: "Aldehydes, Ketones and Carboxylic Acids (Class XII Chemistry, Unit 8)"
+    url: "https://ncert.nic.in/textbook/pdf/lech203.pdf"
+    publisher: "NCERT"
+  - title: "Rosenmund reduction"
+    url: "https://en.wikipedia.org/wiki/Rosenmund_reduction"
+    publisher: "Wikipedia"
+  - title: "Rosenmund Reduction"
+    url: "https://www.organic-chemistry.org/namedreactions/rosenmund-reduction.shtm"
+    publisher: "Organic Chemistry Portal"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 3
+  note: "One classroom scheme writes the catalyst as H2 + Ni on BaSO4; all sources (and a later classroom scheme) give Pd on BaSO4. Page uses Pd."
+---
+
+## What is the Rosenmund reduction?
+
+The **Rosenmund reduction** is the **catalytic hydrogenation of an acyl chloride (acid chloride) to an aldehyde**. Hydrogen gas is passed through the acyl chloride in the presence of **palladium supported on barium sulphate (Pd/BaSO₄)**, a catalyst whose activity has been deliberately lowered so that the aldehyde is not reduced any further. HCl is the by-product. Karl Wilhelm Rosenmund reported the reaction in 1918.
+
+## General reaction
+
+<Eq ce="R-COCl + H2 ->[Pd/BaSO4] R-CHO + HCl" />
+
+NCERT gives it as the first method for preparing aldehydes from acyl chlorides.
+
+## How it works
+
+The reaction is a **hydrogenolysis**: the C–Cl bond of the acyl chloride is broken by hydrogen on the palladium surface and replaced by a C–H bond.
+
+1. The acyl chloride and H₂ are both adsorbed on palladium.
+2. The C–Cl bond is cleaved and hydrogen is delivered to the acyl carbon, giving R–CHO.
+3. The chlorine leaves as HCl.
+
+The danger is step 4, which a fully active catalyst would also carry out: hydrogenation of the aldehyde C=O to give R–CH₂OH. Lowering the catalyst's activity prevents this.
+
+<KeyPoint title="Why the catalyst is poisoned">
+Barium sulphate has a low surface area, which tempers the activity of the palladium. In Indian textbooks BaSO₄ itself is usually called the "poison". For especially reactive acyl chlorides an additional sulfur poison, such as thiourea, is added. Without this deactivation the aldehyde is reduced to a primary alcohol, which can then react with leftover acyl chloride to form an ester.
+</KeyPoint>
+
+<ExamTip title="Common mistake">
+The metal in the Rosenmund catalyst is **palladium**, not nickel: write H₂, Pd/BaSO₄. Nickel is a hydrogenation catalyst too, but it is not the Rosenmund catalyst.
+</ExamTip>
+
+## Examples
+
+**1. Benzoyl chloride to benzaldehyde.**
+
+<Eq ce="C6H5COCl + H2 ->[Pd/BaSO4] C6H5CHO + HCl" />
+
+**2. Ethanoyl chloride to ethanal.**
+
+<Eq ce="CH3COCl + H2 ->[Pd/BaSO4] CH3CHO + HCl" />
+
+**3. A two-step route from a carboxylic acid.** Convert the acid to its chloride with SOCl₂, then reduce:
+
+<Eq ce="CH3CH2COOH ->[SOCl2] CH3CH2COCl ->[H2, Pd/BaSO4] CH3CH2CHO" />
+
+## Limitations and exceptions
+
+- **No formaldehyde.** The required starting material, formyl chloride (H–CO–Cl), is unstable at room temperature and decomposes to CO and HCl, so methanal cannot be made this way.
+
+<Eq ce="HCOCl -> CO + HCl" />
+
+- **Over-reduction.** With an insufficiently poisoned catalyst the product is the primary alcohol, plus some ester.
+- **Moisture.** Strictly anhydrous solvents are recommended; water hydrolyses the acyl chloride back to the carboxylic acid and gives side products.
+
+## Comparison with other routes to aldehydes
+
+| Starting material | Reagent | Named method |
+|---|---|---|
+| Acyl chloride | H₂, Pd/BaSO₄ | Rosenmund reduction |
+| Nitrile | SnCl₂, HCl, then H₃O⁺ | Stephen reduction |
+| Nitrile or ester | DIBAL-H, then H₂O | DIBAL-H reduction |
+
+LiAlH₄ is not used for this job: it reduces acyl chlorides all the way to primary alcohols.
+
+## Related reactions
+
+- [Stephen reduction](/reactions/stephen-reduction/): nitrile to aldehyde.
+- [DIBAL-H](/reagents/dibal-h/): ester or nitrile to aldehyde at low temperature.
+- [Lindlar catalyst](/reagents/lindlar-catalyst/): another poisoned palladium catalyst, used to stop alkyne hydrogenation at the cis-alkene.
+- [Catalytic hydrogenation](/reactions/catalytic-hydrogenation/): the unpoisoned version.
+- [Preparation of aldehydes and ketones](/preparation/preparation-of-aldehydes-and-ketones/) and [Reduction reactions](/mechanisms/reduction-reactions/).
