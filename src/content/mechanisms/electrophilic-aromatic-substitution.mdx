@@ -3,7 +3,7 @@ title: "Electrophilic Aromatic Substitution"
 description: "In electrophilic aromatic substitution (EAS), an electrophile replaces a ring H of benzene. Covers nitration, sulphonation, halogenation, Friedel–Crafts."
 exams: ["jee-main", "jee-advanced", "neet"]
 order: 35
-notesPages: [20]
+notesPages: [5, 20, 94]
 faq:
   - q: "What is electrophilic aromatic substitution?"
     a: "It is a reaction in which an electrophile replaces a hydrogen atom on an aromatic ring such as benzene. The ring keeps its aromaticity because the intermediate arenium ion loses a proton at the end."
@@ -15,6 +15,8 @@ faq:
     a: "Electron-withdrawing groups without a lone pair on the attached atom, such as –NO₂, –CN, –CHO, –COR, –COOH, –COOR, –SO₃H and –N⁺(CH₃)₃. All of them also deactivate the ring."
   - q: "Is sulphonation of benzene reversible?"
     a: "Yes. Sulphonation is favoured in strong (fuming) sulphuric acid, while heating benzenesulphonic acid with hot dilute aqueous acid removes the –SO₃H group again."
+  - q: "What is ipso substitution?"
+    a: "It is electrophilic substitution at a ring carbon that already carries a group other than hydrogen, which then leaves. For example, salicylic acid with bromine water loses CO₂ and gives 2,4,6-tribromophenol."
 sources:
   - title: "Electrophilic aromatic substitution"
     url: "https://en.wikipedia.org/wiki/Electrophilic_aromatic_substitution"
@@ -25,10 +27,16 @@ sources:
   - title: "16.4: Substituent Effects in Electrophilic Substitutions"
     url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/16:_Chemistry_of_Benzene_-_Electrophilic_Aromatic_Substitution/16.04:_Substituent_Effects_in_Electrophilic_Substitutions"
     publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "Arene substitution pattern (ipso substitution)"
+    url: "https://en.wikipedia.org/wiki/Arene_substitution_pattern"
+    publisher: "Wikipedia"
+  - title: "Aromatic sulfonation"
+    url: "https://en.wikipedia.org/wiki/Aromatic_sulfonation"
+    publisher: "Wikipedia"
 verified:
   status: "conflict"
-  checked: 2026-11-21
-  sourceCount: 3
+  checked: 2026-11-22
+  sourceCount: 5
 ---
 
 ## What is electrophilic aromatic substitution?
@@ -100,6 +108,25 @@ To predict the major product, first decide whether the group has a lone pair on 
 ## Why the position changes
 
 For ortho and para attack, one resonance form of the arenium ion puts the positive charge on the carbon carrying the substituent. A lone-pair donor (–OH, –NH₂, halogen) can then share that charge, which stabilises those intermediates. An electron-withdrawing group with a δ+ atom next to the ring makes those same resonance forms especially unfavourable, so meta attack, which never places the charge on that carbon, becomes the least bad option.
+
+## Ipso substitution: when a group other than H leaves
+
+Usually the proton is the group lost from the arenium ion. If the electrophile instead attacks a ring carbon that already carries a substituent (the **ipso** position), that substituent can leave in place of H⁺, provided it departs easily without its bonding pair. Groups that behave this way include **–SiR₃** (as R₃Si⁺), **–SO₃H** (as SO₃ + H⁺), **–COOH** (as CO₂ + H⁺) and **tertiary alkyl groups** such as tert-butyl (as a stable carbocation).
+
+The exam case is **bromine water on a phenol or aniline** that carries one of these groups at an ortho or para position. The –OH or –NH₂ group activates all three ortho/para positions so strongly that bromine goes into all of them, displacing the group that was there:
+
+<Eq ce="HOC6H4COOH + 3 Br2 ->[H2O] Br3C6H2OH v + CO2 + 3 HBr" />
+
+| Starting compound | Group replaced | Product with Br₂/H₂O |
+|---|---|---|
+| Salicylic acid (2-hydroxybenzoic acid) | –COOH | 2,4,6-tribromophenol |
+| 4-Hydroxybenzenesulphonic acid | –SO₃H | 2,4,6-tribromophenol |
+| Sulphanilic acid (4-aminobenzenesulphonic acid) | –SO₃H | 2,4,6-tribromoaniline |
+| 4-tert-Butylphenol, 2-(trimethylsilyl)phenol | –C(CH₃)₃, –Si(CH₃)₃ | 2,4,6-tribromophenol |
+
+<KeyPoint>
+Protodesulphonation (the reverse of sulphonation in hot dilute acid) is ipso substitution with H⁺ as the electrophile. The same idea lets –SO₃H act as a removable blocking group.
+</KeyPoint>
 
 ## Limits of Friedel–Crafts on substituted rings
 

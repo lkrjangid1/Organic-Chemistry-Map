@@ -15,7 +15,7 @@ byproducts: "CHX₃ (CHI₃ iodoform, CHBr₃ bromoform or CHCl₃ chloroform)"
 reagents: "X₂ + NaOH (i.e. sodium hypohalite NaOX); X = Cl, Br or I"
 conditions: "Aqueous base, cold or gently warmed; acidify afterwards to obtain the free acid"
 equation: "CH3COCH3 + 3 I2 + 4 NaOH -> CH3COONa + CHI3 v + 3 NaI + 3 H2O"
-notesPages: [40]
+notesPages: [40, 86, 87]
 memoryTricks: []
 faq:
   - q: "What is the haloform reaction?"
@@ -28,6 +28,8 @@ faq:
     a: "The reaction needs the hypohalite ion, and hypofluorite is far too unstable to be used. Chlorine, bromine and iodine all work."
   - q: "What happens when a methyl ketone reacts with NaOH and Br2?"
     a: "It gives the sodium salt of the carboxylic acid with one carbon fewer and bromoform (CHBr3). For example, acetophenone gives sodium benzoate and CHBr3."
+  - q: "What is the rate-determining step of the haloform reaction?"
+    a: "Formation of the enolate ion by removal of an α-hydrogen by OH⁻. The rate depends on the ketone and hydroxide concentrations but not on the halogen, so Cl₂, Br₂ and I₂ react at the same rate."
 related: ["hofmann-bromamide-degradation", "decarboxylation", "free-radical-halogenation"]
 sources:
   - title: "Aldehydes, Ketones and Carboxylic Acids (Class XII Chemistry, Unit 8)"
@@ -42,10 +44,14 @@ sources:
   - title: "Haloform Reaction (Organic Chemistry Glossary)"
     url: "https://chem.libretexts.org/Ancillary_Materials/Reference/Organic_Chemistry_Glossary/Haloform_Reaction"
     publisher: "LibreTexts Chemistry"
+  - title: "17.3: Halogenation of Aldehydes and Ketones (Roberts and Caserio)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Basic_Principles_of_Organic_Chemistry_(Roberts_and_Caserio)/17:_Carbonyl_Compounds_II-_Enols_and_Enolate_Anions._Unsaturated_and_Polycarbonyl_Compounds/17.03:_Halogenation_of_Aldehydes_and_Ketones"
+    publisher: "LibreTexts Chemistry"
 verified:
-  status: "verified"
-  checked: 2026-11-21
-  sourceCount: 4
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 5
+  note: "Notes give the halogen reactivity as F2 = Cl2 = Br2 = I2; sources show equal rates for Cl2, Br2 and I2 only (enolate formation is rate-determining) and that fluorine cannot be used. Page follows the sources."
 ---
 
 ## What is the haloform reaction?
@@ -64,7 +70,7 @@ So NCERT describes the reaction as oxidation of methyl ketones by sodium hypohal
 
 ## Mechanism
 
-1. **Enolate formation.** OH⁻ removes an α-hydrogen from the CH₃ group to give an enolate ion.
+1. **Enolate formation (slow).** OH⁻ removes an α-hydrogen from the CH₃ group to give an enolate ion, R–CO–CH₂⁻ ↔ R–C(O⁻)=CH₂. This is the rate-determining step.
 2. **Halogenation.** The enolate attacks the halogen (or hypohalite), giving R–CO–CH₂X.
 3. **Repeat twice.** Each halogen makes the remaining α-hydrogens more acidic, so the second and third halogenations are faster. The CH₃ group becomes CX₃: R–CO–CX₃.
 4. **Cleavage.** OH⁻ adds to the carbonyl carbon. The tetrahedral intermediate collapses and expels ⁻CX₃, which is a reasonable leaving group because three electronegative halogens stabilise the negative charge.
@@ -73,8 +79,16 @@ So NCERT describes the reaction as oxidation of methyl ketones by sodium hypohal
 <Eq ce="R-CO-CH3 ->[3 X2, OH-] R-CO-CX3 ->[OH-] R-COO- + CHX3" />
 
 <KeyPoint>
-Only the CH₃ attached directly to the carbonyl group is halogenated completely, because only those hydrogens are acidic enough. The product acid always has one carbon fewer than the starting compound.
+Only the CH₃ attached directly to the carbonyl group is halogenated completely, because only those hydrogens are acidic enough. That CH₃ carbon becomes the carbon of CHX₃, so the product acid always has one carbon fewer than the starting compound.
 </KeyPoint>
+
+## Kinetics: why the halogen does not matter
+
+Kinetic studies on acetone show that, in base, the rate of halogenation is **rate = k[ketone][OH⁻]**. The halogen does not appear in the rate law: the reaction goes at the same rate whether chlorine, bromine or iodine is used, and even at very low halogen concentration. The slow step is therefore **formation of the enolate ion**; once formed, the enolate reacts with the halogen very quickly. Each halogen added makes the remaining α-hydrogens more acidic, so the second and third substitutions are faster still, and base-promoted halogenation of a methyl ketone cannot be stopped at the monohalo stage.
+
+<ExamTip title="Common mistake">
+Writing the reactivity order as F₂ = Cl₂ = Br₂ = I₂. The rate is the same for **Cl₂, Br₂ and I₂** because none of them takes part in the slow step, but fluorine is not used at all: the haloform reaction needs the hypohalite ion, and hypofluorite is too unstable, so fluoroform cannot be made this way.
+</ExamTip>
 
 ## Examples
 

@@ -16,7 +16,7 @@ byproducts: "CO₂, AgBr"
 reagents: "Br₂ (or Cl₂) acting on the dry silver salt of a carboxylic acid"
 conditions: "Reflux in dry CCl₄ (heat or light); no protic solvent"
 equation: "CH3CH2COOAg + Br2 ->[CCl4][\\Delta] CH3CH2Br + CO2 + AgBr"
-notesPages: [10, 34]
+notesPages: [10, 34, 85]
 memoryTricks: []
 faq:
   - q: "What is the product of the Hunsdiecker reaction of silver propanoate?"
@@ -29,6 +29,8 @@ faq:
     a: "The intermediate acyl hypobromite decomposes in protic solvents, so a dry, inert, non-polar solvent such as CCl₄ is needed. The silver salt must also be pure and dry."
   - q: "What happens if iodine is used instead of bromine?"
     a: "With a 1:1 ratio of silver salt to iodine an alkyl iodide forms, but with a 2:1 ratio an ester RCOOR is the main product. This variant is called the Simonini reaction."
+  - q: "Does the Hunsdiecker reaction of an optically active acid give an optically active alkyl halide?"
+    a: "No. The reaction passes through a planar alkyl radical, so bromine can attach from either face and a racemic alkyl bromide is formed."
 related: ["kolbe-electrolysis", "decarboxylation", "free-radical-halogenation", "nbs-allylic-bromination", "hofmann-bromamide-degradation"]
 sources:
   - title: "Hunsdiecker reaction"
@@ -40,10 +42,13 @@ sources:
   - title: "18.5: Decarboxylation of Carboxylic Acids (Roberts and Caserio)"
     url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Basic_Principles_of_Organic_Chemistry_(Roberts_and_Caserio)/18%3A_Carboxylic_Acids_and_Their_Derivatives/18.05%3A_Decarboxylation_of_Carboxylic_Acids"
     publisher: "Chemistry LibreTexts"
+  - title: "Decarboxylative Halogenation of Organic Compounds (Chem. Rev. 2021, 121, 412–484)"
+    url: "https://doi.org/10.1021/acs.chemrev.0c00813"
+    publisher: "American Chemical Society (Chemical Reviews)"
 verified:
   status: "verified"
-  checked: 2026-11-21
-  sourceCount: 3
+  checked: 2026-11-22
+  sourceCount: 4
 ---
 
 ## What is the Hunsdiecker reaction?
@@ -70,6 +75,18 @@ Alexander Borodin, better known as a composer, first made methyl bromide this wa
 <KeyPoint>
 Key facts: (1) it is a **decarboxylation** reaction, (2) it is a **step-down** reaction (one carbon fewer), and (3) the yield of halide follows **1° > 2° > 3°**.
 </KeyPoint>
+
+## Stereochemistry: racemic product
+
+The carbon that ends up bonded to bromine passes through a free **alkyl radical**, which is planar (or very nearly so). Bromine can bond to either face of it, so the configuration of the original carbon is lost. When the silver salt of an **optically active acid** whose stereocentre is the α-carbon is brominated, the alkyl bromide is obtained as a **racemic mixture** (a 1 : 1 mixture of enantiomers). This loss of optical activity is one of the classic pieces of evidence for the radical mechanism, since a concerted substitution would keep the configuration.
+
+A favourite exam example uses a carbon that is chiral only because of isotopes. The silver salt of (H)(D)(T)C–COOH, treated with Br₂ in CCl₄ under light, gives both enantiomers of (H)(D)(T)C–Br in equal amounts.
+
+<Eq ce="(H)(D)(T)C-COOAg ->[Br2, CCl4][h\nu] (H)(D)(T)C-Br + CO2 + AgBr" />
+
+<ExamTip>
+If the question shows a single enantiomer of the acid and asks for the product of the Hunsdiecker reaction, answer "racemic alkyl bromide": both mirror-image products form, and the product is optically inactive.
+</ExamTip>
 
 ## Examples
 

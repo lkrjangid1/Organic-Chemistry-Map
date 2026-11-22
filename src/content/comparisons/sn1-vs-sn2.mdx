@@ -1,0 +1,141 @@
+---
+title: "SN1 vs SN2 Reaction"
+description: "SN1 vs SN2: SN2 is one-step with inversion, rate k[RX][Nu]; SN1 goes via a carbocation with racemisation, rate k[RX]. Reactivity orders and solved examples."
+aliases: ["Difference between SN1 and SN2", "SN1 and SN2 comparison", "SN1 vs SN2 reactivity order", "Unimolecular vs bimolecular substitution", "SN1 SN2 table", "Which halide reacts faster by SN1 or SN2"]
+category: "Stability and energy"
+exams: ["jee-main", "jee-advanced", "neet"]
+family: "nucleophilic-substitution"
+notesPages: [157, 158]
+memoryTricks: []
+faq:
+  - q: "What is the main difference between SN1 and SN2 reactions?"
+    a: "SN2 is a single concerted step in which the nucleophile attacks from the back as the leaving group departs, so rate = k[RX][Nu⁻] and configuration is inverted. SN1 has two steps: slow ionisation to a planar carbocation, then fast attack by the nucleophile, so rate = k[RX] and a chiral substrate is largely racemised."
+  - q: "What is the order of reactivity of alkyl halides in SN1 and SN2?"
+    a: "SN2: CH₃X > 1° > 2° > 3°, because steric hindrance blocks backside attack. SN1: 3° > 2° > 1° > CH₃X, because a more substituted carbocation is more stable. For the same alkyl group, the halide order is RI > RBr > RCl > RF in both."
+  - q: "Which solvent favours SN1 and which favours SN2?"
+    a: "Polar protic solvents (water, alcohols, acetic acid) favour SN1 by stabilising the carbocation and the leaving anion. Polar aprotic solvents (acetone, DMSO, DMF, acetonitrile) favour SN2 by leaving the anionic nucleophile poorly solvated and more reactive."
+  - q: "Do secondary alkyl halides react by SN1 or SN2?"
+    a: "Either, depending on conditions. A strong anionic nucleophile in a polar aprotic solvent pushes a secondary halide towards SN2; a weak, neutral nucleophile in a polar protic solvent (solvolysis) pushes it towards SN1."
+  - q: "Why does benzyl chloride react fast by both SN1 and SN2?"
+    a: "It is a primary halide, so the carbon is open to backside attack, and the adjacent ring speeds up the SN2 transition state. On ionisation it gives the resonance-stabilised benzyl cation, so SN1 is also fast in protic solvents."
+related: ["reactions/sn1-reaction", "reactions/sn2-reaction", "concepts/solvent-effects", "concepts/leaving-group-ability", "comparisons/nucleophilicity-vs-basicity", "concepts/carbocations", "comparisons/stability-of-reaction-intermediates", "reactions/sni-mechanism", "reactions/neighbouring-group-participation", "mechanisms/nucleophilic-substitution", "mechanisms/electrophilic-aromatic-substitution"]
+sources:
+  - title: "Haloalkanes and Haloarenes (Class 12 Chemistry Part II, Unit 6)"
+    url: "https://ncert.nic.in/textbook/pdf/lech201.pdf"
+    publisher: "NCERT"
+  - title: "7.12: Comparison of SN1 and SN2 Reactions (Wade)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Map:_Organic_Chemistry_(Wade)_Complete_and_Semesters_I_and_II/Map:_Organic_Chemistry_(Wade)/07:_Alkyl_Halides-_Nucleophilic_Substitution_and_Elimination/7.12:_Comparison_of_SN1_and_SN2_Reactions"
+    publisher: "Chemistry LibreTexts"
+  - title: "8.8: Structural and Solvent Effects in SN Reactions (Roberts and Caserio)"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Basic_Principles_of_Organic_Chemistry_(Roberts_and_Caserio)/08:_Nucleophilic_Substitution_and_Elimination_Reactions/8.08:_Structural_and_Solvent_Effects_in_(S_N)_Reactions"
+    publisher: "Chemistry LibreTexts"
+  - title: "SN1 reaction"
+    url: "https://en.wikipedia.org/wiki/SN1_reaction"
+    publisher: "Wikipedia"
+  - title: "SN2 reaction"
+    url: "https://en.wikipedia.org/wiki/SN2_reaction"
+    publisher: "Wikipedia"
+  - title: "Leaving group"
+    url: "https://en.wikipedia.org/wiki/Leaving_group"
+    publisher: "Wikipedia"
+  - title: "Electrophilic aromatic directing groups"
+    url: "https://en.wikipedia.org/wiki/Electrophilic_aromatic_directing_groups"
+    publisher: "Wikipedia"
+  - title: "Acyl chloride (reactivity of acid derivatives)"
+    url: "https://en.wikipedia.org/wiki/Acyl_chloride"
+    publisher: "Wikipedia"
+  - title: "19.5: Nucleophilic Addition of Water - Hydration"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/19:_Aldehydes_and_Ketones-_Nucleophilic_Addition_Reactions/19.05:_Nucleophilic_Addition_of_Water-_Hydration"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "Free-radical halogenation"
+    url: "https://en.wikipedia.org/wiki/Free-radical_halogenation"
+    publisher: "Wikipedia"
+  - title: "Hyperconjugation"
+    url: "https://en.wikipedia.org/wiki/Hyperconjugation"
+    publisher: "Wikipedia"
+verified:
+  status: "verified"
+  checked: 2026-11-22
+  sourceCount: 11
+  note: "The p-methoxy > H > p-nitro benzyl chloride SN1 order and the place of cyclopentoxide in the SN2 alkoxide order are exam teaching not tabulated by the sources; the first follows from the carbocation-stability rule and is kept, the second is omitted."
+---
+
+## What is the difference between SN1 and SN2?
+
+**SN2** (substitution, nucleophilic, bimolecular) is a **one-step** reaction: the nucleophile attacks the carbon from the side opposite the leaving group while the C–X bond breaks, so the rate depends on both reactants and the configuration is **inverted**. **SN1** (substitution, nucleophilic, unimolecular) is a **two-step** reaction: the C–X bond first ionises slowly to a **carbocation**, which the nucleophile then captures quickly, so the rate depends only on the substrate and a chiral centre is largely **racemised**.
+
+<KeyPoint title="Reactivity orders to remember">
+- **SN2:** CH₃–X > 1° > 2° ≫ 3° (steric hindrance at the back of the carbon).
+- **SN1:** 3° > 2° > 1° > CH₃–X (carbocation stability); allylic and benzylic halides are fast.
+- **Leaving group (both):** R–I > R–Br > R–Cl ≫ R–F.
+- **Benzylic series:** SN1 C₆H₅C(CH₃)₂Cl > C₆H₅CH(CH₃)Cl > C₆H₅CH₂Cl; SN2 is the reverse.
+</KeyPoint>
+
+## SN1 vs SN2 comparison table
+
+| Feature | SN2 | SN1 |
+|---|---|---|
+| Steps | one, concerted | two: ionisation, then capture |
+| Rate law | rate = k[R–X][Nu⁻] (second order) | rate = k[R–X] (first order) |
+| Intermediate | none (one transition state) | planar sp² carbocation |
+| Rate-determining step | bimolecular attack | formation of the carbocation |
+| Stereochemistry | inversion (Walden inversion) | racemisation, usually with slight excess of inversion |
+| Rearrangement | never | possible (1,2-H or 1,2-alkyl shift) |
+| Substrate | methyl, 1°, some 2° | 3°, allylic, benzylic, some 2° |
+| Nucleophile | strong, high concentration, usually anionic (OH⁻, CN⁻, RO⁻, I⁻) | weak, often neutral; frequently the solvent (H₂O, ROH) |
+| Solvent | polar aprotic (acetone, DMSO, DMF) | polar protic (water, alcohols, acetic acid) |
+| Effect of steric bulk | slows it strongly | speeds it (relief of strain, more stable cation) |
+| Vinyl and aryl halides | no reaction | no reaction |
+
+## Why the substrate order reverses
+
+**SN2** needs room behind the carbon. Each alkyl group in place of H crowds the five-coordinate transition state, so methyl is fastest and tertiary halides do not react by SN2. Branching one carbon away also matters: neopentyl bromide, (CH₃)₃C–CH₂Br, is primary but reacts extremely slowly.
+
+**SN1** depends only on how easily the carbocation forms. Alkyl groups stabilise a carbocation by +I effect and hyperconjugation, so 3° > 2° > 1° > CH₃⁺; a tertiary bromide is hydrolysed about 10⁵ times faster than a secondary one. Phenyl groups stabilise the cation by resonance: each extra phenyl on the reacting carbon raises SN1 reactivity sharply (Ph₃C–Cl > Ph₂CH–Cl > PhCH₂–Cl).
+
+Ring substituents on a benzyl halide follow the same logic. In exam answers the SN1 order is **p-CH₃O–C₆H₄CH₂Cl > C₆H₅CH₂Cl > p-O₂N–C₆H₄CH₂Cl**: methoxy donates electrons by resonance and stabilises the benzyl cation, while nitro withdraws them and destabilises it.
+
+## Effect of nucleophile, solvent and leaving group
+
+- **Nucleophile.** It does not appear in the SN1 rate law, so its strength matters only for SN2. Bulk lowers SN2 rates: CH₃O⁻ > CH₃CH₂O⁻ > (CH₃)₂CHO⁻ > (CH₃)₃CO⁻. See [nucleophilicity vs basicity](/comparisons/nucleophilicity-vs-basicity/).
+- **Solvent.** Protic solvents stabilise ions and speed up SN1; aprotic solvents leave the nucleophile bare and speed up SN2. See [solvent effects](/concepts/solvent-effects/).
+- **Leaving group.** It is involved in the slow step of both, so a better leaving group speeds up both; it does not decide between them. Weaker base, better leaving group: NH₂⁻ < RO⁻ ≈ OH⁻ < RCOO⁻ < Cl⁻. See [leaving group ability](/concepts/leaving-group-ability/).
+
+<ExamTip>
+Decide in this order: substrate (1°, 2°, 3°, allylic, benzylic) → nucleophile (strong anion or weak neutral) → solvent (aprotic or protic). A 2° substrate is decided by the last two. A chiral product with inverted configuration means SN2; a racemic product means SN1.
+</ExamTip>
+
+## Solved examples
+
+**1. Arrange for SN2: 2-bromo-2-methylbutane, 1-bromopentane, 2-bromopentane.**
+Primary > secondary > tertiary. **Answer:** 1-bromopentane > 2-bromopentane > 2-bromo-2-methylbutane.
+
+**2. Which is hydrolysed faster by aqueous KOH, C₆H₅CH₂Cl or C₆H₅CHClC₆H₅?**
+Hydrolysis of these benzylic halides goes largely by SN1, and the diphenylmethyl cation is stabilised by two rings. **Answer:** C₆H₅CHClC₆H₅.
+
+**3. Arrange the four isomeric bromobutanes for SN1.**
+**Answer:** (CH₃)₃CBr > CH₃CH₂CH(Br)CH₃ > (CH₃)₂CHCH₂Br > CH₃CH₂CH₂CH₂Br. Of the two primary bromides, the isobutyl cation gains more +I stabilisation from the (CH₃)₂CH– group. For SN2 the order is exactly reversed, because steric hindrance at the reacting carbon rises along the series.
+
+**4. Arrange for SN1: C₆H₅CH₂Br, C₆H₅CH(CH₃)Br, C₆H₅CH(C₆H₅)Br, C₆H₅C(CH₃)(C₆H₅)Br.**
+More groups (especially phenyl) on the cationic carbon give a more stable cation. **Answer:** C₆H₅C(CH₃)(C₆H₅)Br > C₆H₅CH(C₆H₅)Br > C₆H₅CH(CH₃)Br > C₆H₅CH₂Br; SN2 is the reverse.
+
+## Other "arrange in order" questions from the same topic set
+
+| Question | Order | Reason |
+|---|---|---|
+| Electrophilic substitution (SE) rate | C₆H₅N(CH₃)₂ > C₆H₅CH₃ > C₆H₅CH₂N⁺(CH₃)₃ > C₆H₅N⁺(CH₃)₃ | –NMe₂ strongly activates; –N⁺R₃ on the ring strongly deactivates; a CH₂ spacer weakens the pull of the positive charge |
+| Activating power of o,p-directors | –O⁻ > –OH > –OCOCH₃ | in acetoxy the oxygen lone pair is shared with the C=O (cross-conjugation) |
+| SE rate | chlorobenzene > p-chloronitrobenzene > 2,4-dinitrochlorobenzene | each –NO₂ deactivates further |
+| SE rate | aniline > acetanilide > benzene > acetophenone | –NH₂ > –NHCOCH₃ (activators) > H > –COCH₃ (deactivator) |
+| Extent of hydration of C=O | CH₃COCH₃ < ClCH₂COCH₃ < CH₃CHO < ClCH₂CHO | aldehydes hydrate more than ketones; –Cl makes the carbonyl carbon more positive |
+| Hydrolysis of acid derivatives | CH₃CONH₂ < CH₃COOC₂H₅ < (CH₃CO)₂O < CH₃COCl | better leaving group, faster acyl substitution |
+| Reaction with NH₃ to give acetamide | CH₃COOH < CH₃COOC₂H₅ < (CH₃CO)₂O < CH₃COCl | same order; the acid first just forms a salt |
+| Hyperconjugation in the alkene | propene > but-1-ene > 3-methylbut-1-ene > 3,3-dimethylbut-1-ene | number of α-hydrogens: 3, 2, 1, 0 |
+| Halogen reactivity in radical H-abstraction | F₂ > Cl₂ > Br₂ > I₂ | fluorination is violent; iodination barely occurs |
+
+## Related pages
+
+- [SN1 reaction](/reactions/sn1-reaction/) and [SN2 reaction](/reactions/sn2-reaction/)
+- [SNi mechanism](/reactions/sni-mechanism/) and [neighbouring group participation](/reactions/neighbouring-group-participation/), two cases with retention
+- [Carbocations](/concepts/carbocations/) and [stability of reaction intermediates](/comparisons/stability-of-reaction-intermediates/)
+- [Nucleophilic substitution reactions](/mechanisms/nucleophilic-substitution/) and [electrophilic aromatic substitution](/mechanisms/electrophilic-aromatic-substitution/)

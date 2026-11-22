@@ -3,7 +3,7 @@ title: "Electrophilic Addition Reactions of Alkenes and Alkynes"
 description: "Electrophilic addition for JEE and NEET: how HX, H₂O, X₂, HOX and other E–Nu reagents add to alkenes, Markovnikov orientation, rearrangements, syn vs anti."
 exams: ["jee-main", "jee-advanced", "neet"]
 order: 30
-notesPages: [14, 15, 16, 17, 18, 28, 29]
+notesPages: [4, 6, 14, 15, 16, 17, 18, 28, 29]
 faq:
   - q: "What is an electrophilic addition reaction?"
     a: "It is an addition to a C=C or C≡C bond that starts with attack of an electrophile (E⁺) on the π electrons. A positively charged intermediate forms, and a nucleophile (Nu⁻) then bonds to it, so E and Nu end up on adjacent carbons."
@@ -32,10 +32,34 @@ sources:
   - title: "9.3: Preparation of Alkynes - Elimination Reactions of Dihalides"
     url: "https://chem.libretexts.org/Courses/Smith_College/Organic_Chemistry_(LibreTexts)/09:_Alkynes_-_An_Introduction_to_Organic_Synthesis/9.03:_Preparation_of_Alkynes_-_Elimination_Reactions_of_Dihalides"
     publisher: "Chemistry LibreTexts"
+  - title: "Oxymercuration reaction"
+    url: "https://en.wikipedia.org/wiki/Oxymercuration_reaction"
+    publisher: "Wikipedia"
+  - title: "Carbene"
+    url: "https://en.wikipedia.org/wiki/Carbene"
+    publisher: "Wikipedia"
+  - title: "Diimide"
+    url: "https://en.wikipedia.org/wiki/Diimide"
+    publisher: "Wikipedia"
+  - title: "Ozonolysis"
+    url: "https://en.wikipedia.org/wiki/Ozonolysis"
+    publisher: "Wikipedia"
+  - title: "Lindlar catalyst"
+    url: "https://en.wikipedia.org/wiki/Lindlar_catalyst"
+    publisher: "Wikipedia"
+  - title: "Halogen addition reaction"
+    url: "https://en.wikipedia.org/wiki/Halogen_addition_reaction"
+    publisher: "Wikipedia"
+  - title: "Ethylene oxide"
+    url: "https://en.wikipedia.org/wiki/Ethylene_oxide"
+    publisher: "Wikipedia"
+  - title: "Magnesium monoperoxyphthalate"
+    url: "https://en.wikipedia.org/wiki/Magnesium_monoperoxyphthalate"
+    publisher: "Wikipedia"
 verified:
   status: "conflict"
-  checked: 2026-11-21
-  sourceCount: 6
+  checked: 2026-11-22
+  sourceCount: 14
 ---
 
 ## What is electrophilic addition?
@@ -101,9 +125,44 @@ KCP: "Rxn में सबसे पहले बनने वाला", "Low t
 Writing H₂O₂/NaOH for anti-hydroxylation. The anti route is **epoxidation with a peroxy acid followed by acid-catalysed hydrolysis**: water opens the epoxide from the side opposite the oxygen. Use that sequence in answers. See [Prilezhaev epoxidation](/reactions/prilezhaev-epoxidation/).
 </ExamTip>
 
+## Other additions across C=C: a quick map
+
+Several common alkene reactions are not simple E⁺/Nu⁻ additions, but they are learnt alongside them. What matters in exam answers is the orientation and the stereochemistry:
+
+| Reagent | Product | Orientation / stereochemistry |
+|---|---|---|
+| H₂ with Ni, Pt or Pd | Alkane | Syn addition on the metal surface ([catalytic hydrogenation](/reactions/catalytic-hydrogenation/)) |
+| HN=NH (diimide, from N₂H₄ + H₂O₂) | Alkane | Syn delivery of both H from one face ([diimide reduction](/reactions/diimide-reduction/)) |
+| Hg(OAc)₂, H₂O; then NaBH₄ | Alcohol | Markovnikov; anti oxymercuration; no carbocation, so no rearrangement |
+| BH₃·THF (B₂H₆); then H₂O₂/NaOH | Alcohol | Anti-Markovnikov; syn addition of H and OH |
+| Peroxy acid (mCPBA, MMPP) | Epoxide | Syn, stereospecific (cis alkene gives cis epoxide) |
+| O₂ over a silver catalyst | Ethylene oxide | Industrial route, used for ethene |
+| Singlet :CH₂ (e.g. from CH₂N₂ + light) | Cyclopropane | Concerted, stereospecific: cis-but-2-ene gives cis-1,2-dimethylcyclopropane |
+| Triplet :CH₂ | Cyclopropane | Stepwise diradical addition; stereochemistry is scrambled |
+| O₃; then Zn/H₂O or (CH₃)₂S | Aldehydes and/or ketones | C=C cleaved ([ozonolysis](/reactions/ozonolysis/), reductive work-up) |
+| O₃; then H₂O₂ | Carboxylic acids (and ketones) | Oxidative work-up |
+
+For carbene chemistry in more depth, see the [carbenes hub](/mechanisms/carbenes/) and the [Simmons–Smith reaction](/reactions/simmons-smith-reaction/).
+
+## Worked example: cyclohexene
+
+Cyclohexene is the standard ring alkene in road-map questions, because the ring makes anti and syn addition easy to see.
+
+- **HBr** gives bromocyclohexane (both carbons are equivalent, so orientation does not arise).
+- **Br₂ in CCl₄** gives **trans-1,2-dibromocyclohexane**. Attack of Br⁻ on the bromonium ion from the back face makes the addition anti; the product is formed as a racemic pair of enantiomers.
+- **Br₂ in water** gives **trans-2-bromocyclohexan-1-ol** (a bromohydrin), again by anti addition.
+- **Base (NaOH or KOH) on the bromohydrin** closes the ring by an internal SN2 reaction: the alkoxide displaces bromide from the back side, giving **cyclohexene oxide** (7-oxabicyclo[4.1.0]heptane).
+- **Cold, dilute alkaline KMnO₄ or OsO₄** gives cis-cyclohexane-1,2-diol; **peroxy acid then H₃O⁺** gives the trans-diol.
+
+<Eq ce="C6H10 ->[Br2, H2O] C6H10(OH)Br ->[NaOH] C6H10O + NaBr + H2O" />
+
 ## Additions to alkynes
 
-Alkynes add the same reagents, usually in two stages. Water needs Hg²⁺ catalysis and gives a ketone through an enol: the [Kucherov reaction](/reactions/kucherov-reaction/).
+Alkynes add the same reagents, usually in two stages. Water needs Hg²⁺ catalysis and gives a ketone through an enol: the [Kucherov reaction](/reactions/kucherov-reaction/). Hydrogen can be stopped at the alkene stage with the [Lindlar catalyst](/reagents/lindlar-catalyst/) (palladium on CaCO₃, poisoned with lead salts or quinoline), which adds H₂ syn and gives the **cis-alkene**.
+
+<ExamTip title="Common mistake">
+Writing nickel for the Lindlar catalyst. Lindlar's catalyst is poisoned **palladium**; Pd on BaSO₄ poisoned with sulphur compounds is the Rosenmund catalyst used for acid chlorides.
+</ExamTip>
 
 **Positional isomerisation (often studied alongside E2).** NaNH₂ on heating moves an internal triple bond to the chain end (but-2-yne → but-1-yne), because the terminal alkyne is trapped as its sodium salt. Alcoholic KOH on heating does the reverse, since the terminal alkyne salt is not held and the more stable internal alkyne forms via an allene.
 

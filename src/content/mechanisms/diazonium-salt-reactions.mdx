@@ -3,7 +3,7 @@ title: "Reactions of Diazonium Salts"
 description: "Diazonium salt reactions for JEE and NEET: diazotization, Sandmeyer, Gattermann, Balz–Schiemann, KI, hydrolysis to phenol, reduction to arenes, azo coupling."
 exams: ["jee-main", "jee-advanced", "neet"]
 order: 60
-notesPages: [24, 47]
+notesPages: [24, 47, 113]
 faq:
   - q: "How is benzenediazonium chloride prepared?"
     a: "By diazotization: aniline is treated with sodium nitrite and hydrochloric acid at 273–278 K. The nitrous acid formed in situ converts the –NH₂ group into –N₂⁺Cl⁻."
@@ -13,6 +13,8 @@ faq:
     a: "The aryl diazonium ion is stabilised by resonance with the ring, and losing N₂ would give an unstable aryl cation. An alkyl diazonium ion has no such stabilisation and loses N₂ at once to form a carbocation."
   - q: "How do primary, secondary and tertiary amines differ in their reaction with nitrous acid?"
     a: "Primary aliphatic amines give alcohols with evolution of N₂; primary aromatic amines give diazonium salts in the cold; secondary amines give yellow N-nitrosamines; tertiary aliphatic amines only form salts, while N,N-dialkylanilines are nitrosated at the para position of the ring."
+  - q: "How is phenylhydrazine prepared from benzenediazonium chloride?"
+    a: "By reducing the diazonium salt with stannous chloride and hydrochloric acid, or with sodium sulphite. Both nitrogen atoms are kept, giving C₆H₅NHNH₂; alkaline stannite or H₃PO₂ would instead remove the nitrogen and give benzene."
 sources:
   - title: "Amines (Class 12 Chemistry, Unit 9)"
     url: "https://ncert.nic.in/textbook/pdf/lech204.pdf"
@@ -26,10 +28,13 @@ sources:
   - title: "Amines with Nitrous Acid (Roberts and Caserio)"
     url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Basic_Principles_of_Organic_Chemistry_(Roberts_and_Caserio)/23:_Organonitrogen_Compounds_I_-_Amines/23.10:_Amines_with_Nitrous_Acid"
     publisher: "Chemistry LibreTexts"
+  - title: "Phenylhydrazine"
+    url: "https://en.wikipedia.org/wiki/Phenylhydrazine"
+    publisher: "Wikipedia"
 verified:
   status: "conflict"
-  checked: 2026-11-21
-  sourceCount: 4
+  checked: 2026-11-22
+  sourceCount: 5
 ---
 
 ## What are diazonium salts?
@@ -77,6 +82,23 @@ The replacement reactions of benzenediazonium chloride at a glance:
 <ExamTip title="Common mistake">
 Writing KCN alone for the cyanide replacement, or AgNO₂ for the nitro replacement. The cyanide comes from **CuCN** (a Sandmeyer reaction), and the nitro replacement from the fluoroborate uses **aqueous NaNO₂ with copper** on heating (NCERT).
 </ExamTip>
+
+## Reduction: benzene or phenylhydrazine?
+
+The reducing agent decides whether the nitrogen is lost or kept:
+
+| Reducing agent | Product | What happens to N |
+|---|---|---|
+| H₃PO₂ (hypophosphorous acid), C₂H₅OH | C₆H₆ | Lost as N₂ (deamination) |
+| Sodium stannite (SnCl₂ + excess NaOH), alkaline Na₂S₂O₃ | C₆H₆ | Lost as N₂ |
+| SnCl₂ + HCl (stannous chloride in acid) | C₆H₅NHNH₂ | Both N kept: phenylhydrazine |
+| Na₂SO₃ (sodium sulphite, with NaOH), then acid | C₆H₅NHNH₂ | Both N kept: phenylhydrazine |
+
+<Eq ce="C6H5N2^+ Cl^- ->[SnCl2, HCl] C6H5NHNH2" />
+
+<KeyPoint>
+The same tin(II) chloride gives two different answers: **SnCl₂ with NaOH (stannite) gives benzene**, but **SnCl₂ with HCl gives phenylhydrazine**. Phenylhydrazine was first made by Emil Fischer in 1875 by reducing a benzenediazonium salt with sulphite; it is the reagent used for osazone formation with sugars and for the Fischer indole synthesis.
+</KeyPoint>
 
 ## Mechanisms compared
 

@@ -16,7 +16,7 @@ byproducts: "HCl"
 reagents: "Alkyl halide (R–X) with anhydrous AlCl₃ (or another Lewis acid)"
 conditions: "Anhydrous; excess arene to limit polyalkylation"
 equation: "C6H6 + CH3Cl ->[anhyd. AlCl3] C6H5CH3 + HCl"
-notesPages: [20]
+notesPages: [5, 20]
 memoryTricks: []
 faq:
   - q: "What is the product of benzene with CH₃Cl and anhydrous AlCl₃?"
@@ -40,10 +40,16 @@ sources:
   - title: "Friedel-Crafts Alkylation"
     url: "https://www.organic-chemistry.org/namedreactions/friedel-crafts-alkylation.shtm"
     publisher: "Organic Chemistry Portal"
+  - title: "18.10: Limitations on Electrophilic Substitution Reactions with Substituted Benzenes"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Map:_Organic_Chemistry_(Smith)/Chapter_18:_Electrophilic_Aromatic_Substitution/18.10:_Limitations_on_Electrophilic_Substitution_Reactions_with_Substituted_Benzenes"
+    publisher: "Chemistry LibreTexts"
+  - title: "Nitrobenzene"
+    url: "https://en.wikipedia.org/wiki/Nitrobenzene"
+    publisher: "Wikipedia"
 verified:
   status: "verified"
-  checked: 2026-11-21
-  sourceCount: 3
+  checked: 2026-11-22
+  sourceCount: 5
   note: "Notes list R–OH/H⁺ and R–NH₂/HNO₂ as carbocation sources for alkylation; the sources read only confirm alkyl halides and alkenes, so these are kept as exam convention."
 ---
 
@@ -99,6 +105,16 @@ Because AlCl₃ is regenerated in the last step, it acts as a true catalyst in a
 - **Polyalkylation.** An alkyl group activates the ring, so the product reacts faster than benzene. A large excess of benzene is used to favour the mono-alkylated product.
 - **Deactivated rings fail.** Rings carrying strongly electron-withdrawing groups such as –NO₂, –CN or C=O do not react, because the weak carbocation electrophile cannot attack such an electron-poor ring.
 - **Amino groups block the reaction.** –NH₂, –NHR and –NR₂ groups are Lewis bases; they bind AlCl₃ and deactivate the ring. Aniline therefore does not undergo Friedel–Crafts reactions.
+
+The same two reasons explain every "no reaction" case with R–X/AlCl₃ and, equally, with RCOCl/AlCl₃:
+
+| Group on the ring | Example | Why Friedel–Crafts fails |
+|---|---|---|
+| –NO₂, –N⁺R₃, –CN, –SO₃H | nitrobenzene | Strongly electron-withdrawing; R⁺ and RCO⁺ are weak electrophiles and cannot attack the electron-poor ring |
+| –CHO, –COR, –COOH, –COOR | acetophenone, benzaldehyde | C=O withdraws electrons by resonance, deactivating the ring |
+| –NH₂, –NHR, –NR₂ | aniline | N lone pair binds AlCl₃; the resulting –N⁺ group strongly deactivates the ring |
+
+Nitrobenzene is unreactive enough that it is sometimes used in the laboratory as a solvent for reactions with electrophilic reagents.
 - **Aryl and vinyl halides cannot be used.** Their cations are too unstable to form, so chlorobenzene or vinyl chloride will not alkylate benzene.
 - **Reversibility.** Alkylation can be reversed under the reaction conditions, which allows transalkylation.
 

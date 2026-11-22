@@ -1,0 +1,119 @@
+---
+title: "Degree of Unsaturation (Double Bond Equivalent)"
+description: "Degree of unsaturation (double bond equivalent) counts rings plus π bonds: DU = [(2C + 2) − H − X + N]/2. Rules for halogens, O, N, ions and worked examples."
+aliases: ["Double bond equivalent", "DBE formula", "Index of hydrogen deficiency", "IHD", "Rings plus double bonds", "Degree of unsaturation formula", "How to calculate degree of unsaturation"]
+category: "General organic chemistry"
+exams: ["jee-main", "jee-advanced", "neet"]
+molecule:
+  name: "Benzene, C₆H₆ (DU = 4)"
+  smiles: "c1ccccc1"
+notesPages: [161]
+memoryTricks:
+  - text: "X → +H ; O, S → हटा दे ; N → −H"
+    meaning: "Count each halogen as one extra hydrogen, simply drop oxygen and sulphur, and take away one hydrogen for each nitrogen, then use DU = [(2C + 2) − H]/2."
+faq:
+  - q: "What is the formula for degree of unsaturation?"
+    a: "DU = [(2C + 2) + N − H − X]/2, where C, H, N and X are the numbers of carbon, hydrogen, nitrogen and halogen atoms. Oxygen and sulphur are ignored. The same expression can be written as C − H/2 − X/2 + N/2 + 1."
+  - q: "What is the degree of unsaturation of benzene?"
+    a: "Benzene, C₆H₆, has DU = (14 − 6)/2 = 4: one ring and three C=C double bonds."
+  - q: "How many degrees of unsaturation does a triple bond count as?"
+    a: "Two. A triple bond contains two π bonds, and each π bond or ring counts as one degree of unsaturation. A C=O or C=N double bond counts as one, just like C=C."
+  - q: "Why is oxygen ignored when calculating degree of unsaturation?"
+    a: "Oxygen forms two bonds, so it can be inserted into a chain without changing the number of hydrogens needed for saturation. Ethanol, C₂H₆O, has the same six hydrogens as ethane, so both have DU = 0."
+  - q: "How do you find the degree of unsaturation of an ion?"
+    a: "Convert the ion to the neutral molecule it comes from, then apply the normal formula. For a carbocation or a carbanion add one H per charge; for a protonated species such as an ammonium or pyridinium ion remove the extra H."
+related: ["concepts/aromaticity", "concepts/iupac-functional-group-priority", "reactions/catalytic-hydrogenation", "reactions/ozonolysis", "comparisons/dipole-moment-order"]
+sources:
+  - title: "Degree of unsaturation"
+    url: "https://en.wikipedia.org/wiki/Degree_of_unsaturation"
+    publisher: "Wikipedia"
+  - title: "7.2: Calculating Degree of Unsaturation"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/07:_Alkenes-_Structure_and_Reactivity/7.02:_Calculating_Degree_of_Unsaturation"
+    publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "Degree of Unsaturation"
+    url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Alkenes/Properties_of_Alkenes/Degree_of_Unsaturation"
+    publisher: "Chemistry LibreTexts"
+verified:
+  status: "conflict"
+  checked: 2026-11-22
+  sourceCount: 3
+  note: "The neutral-molecule rules (X counts as H, O/S ignored, N subtracts one H) agree with all sources. A shortcut 'positive charge: add H; negative charge: remove H' fails for most ions (e.g. CH3O− and pyridinium). Ion handling on the page follows the general valence formula in the Wikipedia source (each atom contributes valence − 2), expressed as 'convert to the neutral parent'."
+---
+
+## What is degree of unsaturation?
+
+The **degree of unsaturation (DU)**, also called the **double bond equivalent (DBE)** or index of hydrogen deficiency, is the total number of **rings plus π bonds** in a molecule. It is worked out from the molecular formula alone: every ring or double bond removes two hydrogens from the saturated open-chain formula CₙH₂ₙ₊₂, so DU counts how many pairs of hydrogens are missing.
+
+<KeyPoint title="Formula">
+**DU = [(2C + 2) − H]/2** for a hydrocarbon CₓHᵧ.
+
+With other elements: **DU = [(2C + 2) + N − H − X]/2**, or equivalently **C − H/2 − X/2 + N/2 + 1**.
+</KeyPoint>
+
+## How to treat other atoms
+
+| Atom in the formula | What to do | Why |
+|---|---|---|
+| Halogen (F, Cl, Br, I) | count each one as an H | a halogen replaces a hydrogen (one bond) |
+| Oxygen, sulphur | ignore | two bonds: fits into a chain without changing the H count |
+| Nitrogen | subtract one H for each N | three bonds: a saturated amine has one extra H |
+
+Example of the logic: chloroethane C₂H₅Cl behaves like C₂H₆, ethanol C₂H₆O like C₂H₆, and propylamine C₃H₉N like C₃H₈. All three are saturated (DU = 0).
+
+## What each unit means
+
+| Structural feature | Contribution to DU |
+|---|---|
+| Ring | 1 |
+| C=C, C=O, C=N double bond | 1 |
+| C≡C or C≡N triple bond | 2 |
+| Benzene ring (one ring + three C=C) | 4 |
+
+DU tells you the total, not the type. C₄H₆ (DU = 2) could be an alkyne, a diene, a cycloalkene or a bicyclic alkane. Use other clues (reaction with H₂, Br₂ water, ozonolysis) to decide.
+
+## Worked examples
+
+| Formula | Treat as | DU | One possible structure |
+|---|---|---|---|
+| C₆H₁₀ | C₆H₁₀ | (14 − 10)/2 = 2 | cyclohexene |
+| C₆H₆ | C₆H₆ | (14 − 6)/2 = 4 | benzene |
+| C₃H₆O | C₃H₆ | (8 − 6)/2 = 1 | acetone (one C=O) |
+| C₂H₃N | C₂H₂ | (6 − 2)/2 = 2 | acetonitrile (C≡N) |
+| C₄H₆Br₂ | C₄H₈ | (10 − 8)/2 = 1 | a dibromobutene |
+| C₆H₅NO₂ | C₆H₄ | (14 − 4)/2 = 5 | nitrobenzene (ring 4 + N=O 1) |
+| C₇H₆O₂ | C₇H₆ | (16 − 6)/2 = 5 | benzoic acid (ring 4 + C=O 1) |
+| C₁₀H₈ | C₁₀H₈ | (22 − 8)/2 = 7 | naphthalene (2 rings + 5 C=C) |
+| C₁₆H₁₃ClN₂O | C₁₆H₁₂ | (34 − 12)/2 = 11 | diazepam (3 rings + 8 double bonds) |
+
+**Step-by-step for C₉H₉NO₄:** drop the four O atoms, then subtract one H for the N, giving C₉H₈. DU = (20 − 8)/2 = 6.
+
+<Trick>
+X → +H ; O, S → हटा दे ; N → −H. (Add a hydrogen for every halogen, drop O and S, take one hydrogen off for every nitrogen.)
+</Trick>
+
+## Charged species
+
+For an ion, first turn it into the **neutral molecule it came from**, then use the formula. This follows from the general rule that each atom contributes (number of bonds − 2)/2, so what matters is how many bonds the charged atom actually forms.
+
+| Ion | Neutral parent | DU |
+|---|---|---|
+| CH₃⁺ (carbocation, lost H⁻) | CH₄: add one H | 0 |
+| CH₃O⁻ (alkoxide, lost H⁺) | CH₃OH: add one H | 0 |
+| C₂H₅NH₃⁺ (ammonium, gained H⁺) | C₂H₅NH₂: remove one H | 0 |
+| C₅H₆N⁺ (pyridinium, gained H⁺) | C₅H₅N: remove one H | 4 |
+
+<ExamTip title="Common mistake">
+There is no single rule of the type "positive charge: add H, negative charge: remove H". It works for a carbocation, but it gives wrong answers for alkoxide ions, carbanions and protonated amines. Always go back to the neutral parent.
+</ExamTip>
+
+## Exam tips
+
+- For an ordinary neutral molecule the answer is always a whole number. A fraction means an arithmetic slip, a wrong formula or a radical.
+- In exam problems, a DU of 4 or more in a formula with six or more carbons is a strong hint of a benzene ring.
+- Catalytic hydrogenation adds H₂ across C=C and C≡C bonds but does not open ordinary rings. A C₆H₁₀ compound (DU = 2) that takes up only one mole of H₂ therefore has one ring and one C=C, as in cyclohexene.
+
+## Related pages
+
+- [Aromaticity](/concepts/aromaticity/): why benzene's four units of unsaturation behave differently.
+- [Catalytic hydrogenation](/reactions/catalytic-hydrogenation/) and [ozonolysis](/reactions/ozonolysis/): tests for locating π bonds.
+- [Functional group priority in IUPAC nomenclature](/concepts/iupac-functional-group-priority/).

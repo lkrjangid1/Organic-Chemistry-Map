@@ -16,7 +16,7 @@ byproducts: "HCl (or CH₃COOH with acetic anhydride)"
 reagents: "Acyl chloride (RCOCl) or acid anhydride with anhydrous AlCl₃ (at least one equivalent)"
 conditions: "Anhydrous; warm (benzene + CH₃COCl about 80 °C); aqueous work-up frees the ketone from AlCl₃"
 equation: "C6H6 + CH3COCl ->[anhyd. AlCl3] C6H5COCH3 + HCl"
-notesPages: [20]
+notesPages: [20, 104]
 memoryTricks: []
 faq:
   - q: "What is the product of benzene with acetyl chloride and anhydrous AlCl₃?"
@@ -29,6 +29,8 @@ faq:
     a: "The ketone product is a Lewis base and forms a stable complex with AlCl₃, so the AlCl₃ is not released at the end. At least one equivalent is used, and the complex is broken during aqueous work-up."
   - q: "How do you make n-propylbenzene from benzene?"
     a: "Acylate benzene with propanoyl chloride and AlCl₃ to get propiophenone, then reduce the C=O to CH₂ by Clemmensen or Wolff–Kishner reduction. Direct alkylation with 1-chloropropane would give rearranged isopropylbenzene."
+  - q: "What is the product of benzene with pivaloyl chloride and AlCl₃?"
+    a: "tert-Butylbenzene. The pivaloyl acylium ion loses carbon monoxide to give the stable tert-butyl cation, which alkylates the ring instead of acylating it."
 related: ["friedel-crafts-alkylation", "wolff-kishner-reduction", "haloform-reaction", "reimer-tiemann-reaction"]
 sources:
   - title: "Friedel–Crafts reaction"
@@ -40,10 +42,14 @@ sources:
   - title: "16.3: Alkylation and Acylation of Aromatic Rings – The Friedel–Crafts Reaction"
     url: "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(OpenStax)/16:_Chemistry_of_Benzene_-_Electrophilic_Aromatic_Substitution/16.03:_Alkylation_and_Acylation_of_Aromatic_Rings_-_The_Friedel-Crafts_Reaction"
     publisher: "Chemistry LibreTexts (OpenStax)"
+  - title: "Acylium"
+    url: "https://en.wikipedia.org/wiki/Acylium"
+    publisher: "Wikipedia"
 verified:
   status: "verified"
-  checked: 2026-11-21
-  sourceCount: 3
+  checked: 2026-11-22
+  sourceCount: 4
+  note: "Pivaloyl chloride + benzene/AlCl3 giving tert-butylbenzene: the source confirms the pivaloyl acylium / tert-butyl cation + CO equilibrium; the product statement is kept as the exam answer."
 ---
 
 ## What is Friedel–Crafts acylation?
@@ -66,7 +72,7 @@ verified:
 4. **Complexation and work-up.** The ketone oxygen binds AlCl₃. Adding water at the end breaks this complex and releases the free ketone.
 
 <KeyPoint>
-The acylium ion is drawn as R–C≡O⁺ ↔ R–C⁺=O. Because the positive charge is shared with oxygen, the acylium ion is far more stable than an ordinary primary carbocation and **never rearranges**.
+The acylium ion is drawn as R–C≡O⁺ ↔ R–C⁺=O. Because the positive charge is shared with oxygen, the acylium ion is far more stable than an ordinary primary carbocation and **does not rearrange** (the pivaloyl case below, which loses CO, is the exception to remember).
 </KeyPoint>
 
 ## Examples
@@ -82,6 +88,17 @@ The acylium ion is drawn as R–C≡O⁺ ↔ R–C⁺=O. Because the positive ch
 **3. Heterocycles and ring closure.** Thiophene reacts with acetyl chloride under milder SnCl₄ catalysis to give 2-acetylthiophene; furan is acylated by acetic anhydride to give 2-acetylfuran. In the intramolecular version, 4-phenylbutanoic acid cyclises with polyphosphoric acid or methanesulfonic acid to α-tetralone (3,4-dihydronaphthalen-1(2H)-one).
 
 <Eq ce="C6H5(CH2)3COOH ->[PPA][\Delta] C10H10O + H2O" />
+
+## Exception: pivaloyl chloride gives alkylation
+
+The one well-known case where an "acylation" gives an alkylbenzene uses **pivaloyl chloride**, (CH₃)₃C–COCl (2,2-dimethylpropanoyl chloride). Its acylium ion, (CH₃)₃C–C≡O⁺, is in equilibrium with the **tert-butyl cation and carbon monoxide**, because the tertiary carbocation is unusually stable. The tert-butyl cation then alkylates the ring, so in exam answers the product of benzene with pivaloyl chloride and AlCl₃ is **tert-butylbenzene**, not the ketone.
+
+<Eq ce="(CH3)3C-C#O+ <=> (CH3)3C+ + CO" />
+<Eq ce="C6H6 + (CH3)3C-COCl ->[AlCl3] C6H5-C(CH3)3 + CO + HCl" />
+
+<ExamTip>
+Before writing a ketone for a Friedel–Crafts acylation, look at the carbon next to C=O. If it is tertiary (as in pivaloyl chloride), loss of CO gives a stable tertiary carbocation, and the answer is the alkylation product.
+</ExamTip>
 
 ## Acylation versus alkylation
 

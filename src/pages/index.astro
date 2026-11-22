@@ -9,6 +9,12 @@ import { faqLd, orgLd } from '../lib/seo';
 const master = await getMasterList();
 const reactionPages = await getCollection('reactions');
 const mechanisms = await getCollection('mechanisms');
+const tests = await getCollection('tests');
+const concepts = await getCollection('concepts');
+const comparisons = await getCollection('comparisons');
+const reagents = await getCollection('reagents');
+const preparation = await getCollection('preparation');
+const studyPages = reactionPages.length + tests.length + mechanisms.length + concepts.length + comparisons.length + reagents.length + preparation.length;
 const reactionCount = master.reduce((n, i) => n + Math.max(1, i.conversions.length), 0);
 const namedCount = master.length;
 const compoundCount = nodes.length;
@@ -19,11 +25,12 @@ const POPULAR = [
   'Friedel-Crafts Acylation', 'Sandmeyer Reaction', 'Wurtz Reaction', 'Clemmensen Reduction',
   'Wolff-Kishner Reduction', 'Diels-Alder Reaction', 'Beckmann Rearrangement', 'Kolbe-Schmitt Reaction',
   'Williamson Ether Synthesis', 'Carbylamine Reaction (Isocyanide Test)', 'Pinacol-Pinacolone Rearrangement', 'Finkelstein Reaction',
+  'Perkin Reaction', 'Rosenmund Reduction', 'Birch Reduction', 'Gabriel Phthalimide Synthesis', 'Hell-Volhard-Zelinsky Reaction', 'Tollens Test',
 ];
 const norm = (s: string) => s.toLowerCase().replace(/[^a-z]/g, '');
 const popular = POPULAR.map((name) => {
-  const page = reactionPages.find((r) => [r.data.title, ...r.data.aliases].some((t) => norm(t) === norm(name)));
-  if (page) return { name: page.data.title, href: url(`reactions/${page.id}/`) };
+  const page = [...reactionPages, ...tests].find((r) => [r.data.title, ...r.data.aliases].some((t) => norm(t) === norm(name)));
+  if (page) return { name: page.data.title, href: url(`${page.collection}/${page.id}/`) };
   const edge = edges.find((e) => norm(e.label) === norm(name));
   return edge ? { name, href: url(`map/?reaction=${encodeURIComponent(edge.id)}`) } : null;
 }).filter((x): x is { name: string; href: string } => !!x);
@@ -79,7 +86,7 @@ const jsonLd = [
         </div>
         <dl class="stats">
           <div><dt>Reactions</dt><dd>{reactionCount}</dd></div>
-          <div><dt>Reaction pages</dt><dd>{reactionPages.length}</dd></div>
+          <div><dt>Study pages</dt><dd>{studyPages}</dd></div>
           <div><dt>Compounds</dt><dd>{compoundCount}</dd></div>
           <div><dt>Compound classes</dt><dd>{classCount}</dd></div>
         </dl>
@@ -93,9 +100,14 @@ const jsonLd = [
   <section class="section" id="explore" aria-labelledby="explore-h">
     <div class="container">
       <h2 id="explore-h">Start revising</h2>
-      <div class="cards cards-4">
+      <div class="cards cards-3">
         <a class="card feature card-link" href={url('reactions/')}><h3>Reactions A–Z</h3><p>{namedCount} named reactions, rearrangements and tests with mechanism, reagents and examples.</p></a>
         <a class="card feature card-link" href={url('mechanisms/')}><h3>Mechanisms</h3><p>{mechanisms.length} mechanism types, from S<sub>N</sub>1/S<sub>N</sub>2 to free radicals and rearrangements.</p></a>
+        <a class="card feature card-link" href={url('concepts/')}><h3>Concepts</h3><p>{concepts.length} GOC, biomolecule, polymer and purification topics explained with exam examples.</p></a>
+        <a class="card feature card-link" href={url('comparisons/')}><h3>Order comparisons</h3><p>{comparisons.length} arrange-in-order topics: acidity, basicity, stability, boiling points, with reasons.</p></a>
+        <a class="card feature card-link" href={url('reagents/')}><h3>Reagents</h3><p>{reagents.length} reagents such as LiAlH₄, NaBH₄, PCC and KMnO₄: what each one does and does not touch.</p></a>
+        <a class="card feature card-link" href={url('tests/')}><h3>Functional group tests</h3><p>{tests.length} laboratory tests (Tollens, Fehling, Lucas, Hinsberg…) with reagents and observations.</p></a>
+        <a class="card feature card-link" href={url('preparation/')}><h3>Methods of preparation</h3><p>Every way to make aldehydes, ketones, amines and phenols, on one page per class.</p></a>
         <a class="card feature card-link" href={url('compounds/')}><h3>Compounds</h3><p>{pageCompounds.length} key compounds: how to prepare them and what they turn into.</p></a>
         <a class="card feature card-link" href={url('notes/')}><h3>Handwritten notes PDF</h3><p>Download the original notebook pages for offline revision.</p></a>
       </div>
