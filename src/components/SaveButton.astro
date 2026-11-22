@@ -1,0 +1,21 @@
+---
+/** "Save page" toggle; saved pages live in the browser and sync for signed-in users. */
+interface Props { path: string; title: string }
+const { path, title } = Astro.props;
+---
+<button type="button" class="btn btn-ghost btn-sm save-btn" data-save-path={path} data-save-title={title} aria-pressed="false" hidden>☆ Save</button>
+<script>
+  import { getSaved, toggleSaved } from '../scripts/account';
+  for (const b of document.querySelectorAll<HTMLButtonElement>('[data-save-path]')) {
+    const path = b.dataset.savePath!;
+    const paint = () => {
+      const on = getSaved().some((p) => p.path === path);
+      b.setAttribute('aria-pressed', String(on));
+      b.textContent = on ? '★ Saved' : '☆ Save';
+    };
+    b.addEventListener('click', () => { toggleSaved({ path, title: b.dataset.saveTitle! }); paint(); });
+    window.addEventListener('ocm:synced', paint);
+    b.hidden = false;
+    paint();
+  }
+</script>

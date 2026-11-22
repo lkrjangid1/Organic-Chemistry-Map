@@ -23,6 +23,14 @@ export const SITE = {
   reportFormPageField: import.meta.env.REPORT_FORM_PAGE_FIELD as string | undefined,
   cfAnalyticsToken: import.meta.env.CF_ANALYTICS_TOKEN as string | undefined,
   googleVerification: import.meta.env.GOOGLE_SITE_VERIFICATION as string | undefined,
+  // Optional Google sign-in (Firebase). Web config values are public by design; the site
+  // shows sign-in only when all four are set.
+  firebase: {
+    apiKey: import.meta.env.PUBLIC_FIREBASE_API_KEY as string | undefined,
+    authDomain: import.meta.env.PUBLIC_FIREBASE_AUTH_DOMAIN as string | undefined,
+    projectId: import.meta.env.PUBLIC_FIREBASE_PROJECT_ID as string | undefined,
+    appId: import.meta.env.PUBLIC_FIREBASE_APP_ID as string | undefined,
+  },
 } as const;
 
 export const EXAMS = {

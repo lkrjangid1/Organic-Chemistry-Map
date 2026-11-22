@@ -1,0 +1,202 @@
+{
+ "exam": "jee-advanced",
+ "year": 2021,
+ "paper": 2,
+ "source": "https://jeeadv.ac.in/past_qps/2021_2_English.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2021-p2-q1",
+   "number": 1,
+   "type": "multiple",
+   "stem": "The reaction sequence(s) that would lead to o-xylene as the major product is(are)",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "Starting compound (shown): 1. NaNO₂/HCl, 273 K; 2. CuCN; 3. DIBAL-H then H₃O⁺; 4. N₂H₄, KOH, heat",
+     "smiles": "Cc1ccccc1N"
+    },
+    {
+     "key": "B",
+     "text": "Starting compound (shown): 1. Mg, CO₂, H₃O⁺; 2. SOCl₂; 3. H₂, Pd-BaSO₄; 4. Zn-Hg, HCl",
+     "smiles": "Cc1ccccc1Br"
+    },
+    {
+     "key": "C",
+     "text": "Starting compound (shown): 1. i. BH₃ ii. H₂O₂, NaOH; 2. PBr₃; 3. Zn, dil. HCl",
+     "smiles": "C=Cc1ccccc1C"
+    },
+    {
+     "key": "D",
+     "text": "Starting compound (shown): 1. O₃, Zn/H₂O; 2. N₂H₄, KOH, heat",
+     "smiles": "C1C=Cc2ccccc21"
+    }
+   ],
+   "answer": [
+    "A",
+    "B"
+   ],
+   "solution": "(A) o-Toluidine → diazonium salt → o-tolunitrile (Sandmeyer) → o-tolualdehyde (DIBAL-H) → o-xylene (Wolff–Kishner). (B) 2-Bromotoluene → Grignard + CO₂ → o-toluic acid → acid chloride → aldehyde (Rosenmund) → o-xylene (Clemmensen). (C) Anti-Markovnikov hydroboration puts the OH on the terminal carbon. After bromination and reduction the product is 2-ethyltoluene. (D) Ozonolysis of indene gives (2-formylphenyl)acetaldehyde, and Wolff–Kishner reduction then gives 2-ethyltoluene. So only A and B lead to o-xylene.",
+   "topics": [
+    "reactions/sandmeyer-reaction",
+    "reagents/dibal-h",
+    "reactions/rosenmund-reduction"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2021-p2-q2",
+   "number": 2,
+   "type": "multiple",
+   "stem": "Correct option(s) for the following sequence of reactions is(are)\nPhCH₃ —Br₂, light→ P —1. Q; 2. H₂, Pd/C→ R —CHCl₃, KOH→ S (foul smelling)\nP —V→ S\nPhCH₃ —i. KMnO₄, KOH, heat; ii. H₃O⁺→ T —1. NH₃; 2. heat→ U —W→ R",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "Q = KNO₂, W = LiAlH₄"
+    },
+    {
+     "key": "B",
+     "text": "R = benzenamine, V = KCN"
+    },
+    {
+     "key": "C",
+     "text": "Q = AgNO₂, R = phenylmethanamine"
+    },
+    {
+     "key": "D",
+     "text": "W = LiAlH₄, V = AgCN"
+    }
+   ],
+   "answer": [
+    "C",
+    "D"
+   ],
+   "solution": "P is benzyl bromide. AgNO₂ (attack through N) gives phenylnitromethane, and hydrogenation of that gives benzylamine R (phenylmethanamine). KNO₂ would mainly give the nitrite ester instead. In the carbylamine reaction R gives benzyl isocyanide S, the foul-smelling product. S can also be made from P in one step with AgCN, so V = AgCN (KCN gives the nitrile). On the other route, T is benzoic acid and U is benzamide, and LiAlH₄ reduces benzamide to benzylamine, so W = LiAlH₄.",
+   "topics": [
+    "reactions/carbylamine-reaction",
+    "reagents/lithium-aluminium-hydride",
+    "mechanisms/nucleophilic-substitution"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2021-p2-q9",
+   "number": 9,
+   "type": "numerical",
+   "stem": "Reaction of x g of Sn with HCl quantitatively produced a salt. Entire amount of the salt reacted with y g of nitrobenzene in the presence of required amount of HCl to produce 1.29 g of an organic salt (quantitatively).\n(Use Molar masses (in g mol⁻¹) of H, C, N, O, Cl and Sn as 1, 12, 14, 16, 35 and 119, respectively).\nThe value of x is ___.",
+   "figures": [],
+   "options": [],
+   "answer": "3.57",
+   "solution": "Sn + 2HCl → SnCl₂ + H₂. Reducing nitrobenzene to anilinium chloride is a 6-electron change: C₆H₅NO₂ + 3SnCl₂ + 7HCl → C₆H₅NH₃⁺Cl⁻ + 3SnCl₄ + 2H₂O. The organic salt C₆H₈NCl has M = 129 g mol⁻¹, so 1.29 g = 0.010 mol. That needs 0.030 mol SnCl₂, i.e. 0.030 mol Sn = 0.030 × 119 = 3.57 g.",
+   "topics": [
+    "reactions/reduction-of-nitrobenzene"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2021-p2-q10",
+   "number": 10,
+   "type": "numerical",
+   "stem": "Reaction of x g of Sn with HCl quantitatively produced a salt. Entire amount of the salt reacted with y g of nitrobenzene in the presence of required amount of HCl to produce 1.29 g of an organic salt (quantitatively).\n(Use Molar masses (in g mol⁻¹) of H, C, N, O, Cl and Sn as 1, 12, 14, 16, 35 and 119, respectively).\nThe value of y is ___.",
+   "figures": [],
+   "options": [],
+   "answer": "1.23",
+   "solution": "The salt is anilinium chloride, C₆H₅NH₃⁺Cl⁻ (129 g mol⁻¹), so 1.29 g corresponds to 0.010 mol. Each nitrobenzene gives one anilinium ion, so 0.010 mol C₆H₅NO₂ (123 g mol⁻¹) was used. y = 0.010 × 123 = 1.23 g.",
+   "topics": [
+    "reactions/reduction-of-nitrobenzene"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2021-p2-q13",
+   "number": 13,
+   "type": "paragraph",
+   "passage": "The amount of energy required to break a bond is same as the amount of energy released when the same bond is formed. In gaseous state, the energy required for homolytic cleavage of a bond is called Bond Dissociation Energy (BDE) or Bond Strength. BDE is affected by s-character of the bond and the stability of the radicals formed. Shorter bonds are typically stronger bonds. BDEs for some bonds are given below:\nH₃C–H(g) → H₃C•(g) + H•(g)   ΔH° = 105 kcal mol⁻¹\nCl–Cl(g) → Cl•(g) + Cl•(g)   ΔH° = 58 kcal mol⁻¹\nH₃C–Cl(g) → H₃C•(g) + Cl•(g)   ΔH° = 85 kcal mol⁻¹\nH–Cl(g) → H•(g) + Cl•(g)   ΔH° = 103 kcal mol⁻¹",
+   "stem": "Correct match of the C–H bonds (shown in bold) in Column J with their BDE in Column K is\nColumn J (Molecule): (P) H–CH(CH₃)₂; (Q) H–CH₂Ph; (R) H–CH=CH₂; (S) H–C≡CH\nColumn K (BDE, kcal mol⁻¹): (i) 132; (ii) 110; (iii) 95; (iv) 88",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "P – iii, Q – iv, R – ii, S – i"
+    },
+    {
+     "key": "B",
+     "text": "P – i, Q – ii, R – iii, S – iv"
+    },
+    {
+     "key": "C",
+     "text": "P – iii, Q – ii, R – i, S – iv"
+    },
+    {
+     "key": "D",
+     "text": "P – ii, Q – i, R – iv, S – iii"
+    }
+   ],
+   "answer": "A",
+   "solution": "A C–H bond is weaker when the radical formed is more stable, and stronger when the carbon has more s-character. The benzylic radical is resonance-stabilised, so H–CH₂Ph is the weakest (88). The tertiary isopropyl C–H, on sp³ carbon, comes next (95). The vinylic sp² C–H is stronger (110), and the alkynyl sp C–H is strongest (132). So P–iii, Q–iv, R–ii, S–i.",
+   "topics": [
+    "comparisons/stability-of-reaction-intermediates",
+    "mechanisms/free-radical-reactions"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2021-p2-q14",
+   "number": 14,
+   "type": "paragraph",
+   "passage": "The amount of energy required to break a bond is same as the amount of energy released when the same bond is formed. In gaseous state, the energy required for homolytic cleavage of a bond is called Bond Dissociation Energy (BDE) or Bond Strength. BDE is affected by s-character of the bond and the stability of the radicals formed. Shorter bonds are typically stronger bonds. BDEs for some bonds are given below:\nH₃C–H(g) → H₃C•(g) + H•(g)   ΔH° = 105 kcal mol⁻¹\nCl–Cl(g) → Cl•(g) + Cl•(g)   ΔH° = 58 kcal mol⁻¹\nH₃C–Cl(g) → H₃C•(g) + Cl•(g)   ΔH° = 85 kcal mol⁻¹\nH–Cl(g) → H•(g) + Cl•(g)   ΔH° = 103 kcal mol⁻¹",
+   "stem": "For the following reaction\nCH₄(g) + Cl₂(g) —light→ CH₃Cl(g) + HCl(g)\nthe correct statement is",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "Initiation step is exothermic with ΔH° = −58 kcal mol⁻¹."
+    },
+    {
+     "key": "B",
+     "text": "Propagation step involving •CH₃ formation is exothermic with ΔH° = −2 kcal mol⁻¹."
+    },
+    {
+     "key": "C",
+     "text": "Propagation step involving CH₃Cl formation is endothermic with ΔH° = +27 kcal mol⁻¹."
+    },
+    {
+     "key": "D",
+     "text": "The reaction is exothermic with ΔH° = −25 kcal mol⁻¹."
+    }
+   ],
+   "answer": "D",
+   "solution": "Initiation, Cl₂ → 2Cl•, only breaks a bond: ΔH = +58 (endothermic). CH₄ + Cl• → •CH₃ + HCl: ΔH = 105 − 103 = +2 (endothermic). •CH₃ + Cl₂ → CH₃Cl + Cl•: ΔH = 58 − 85 = −27 (exothermic). Overall: 105 + 58 − 85 − 103 = −25 kcal mol⁻¹, so only D is correct.",
+   "topics": [
+    "reactions/free-radical-halogenation",
+    "mechanisms/free-radical-reactions"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  }
+ ]
+}

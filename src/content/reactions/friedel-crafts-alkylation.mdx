@@ -17,6 +17,35 @@ reagents: "Alkyl halide (R–X) with anhydrous AlCl₃ (or another Lewis acid)"
 conditions: "Anhydrous; excess arene to limit polyalkylation"
 equation: "C6H6 + CH3Cl ->[anhyd. AlCl3] C6H5CH3 + HCl"
 notesPages: [5, 20]
+steps:
+  - title: "Electrophile generation"
+    text: "Anhydrous AlCl₃ takes chloride from chloromethane, giving the methyl electrophile and AlCl₄⁻. It is written as R⁺, or as a strongly polarised R–Cl–AlCl₃ complex that behaves like one."
+    arrows: "Cl lone pair of CH₃Cl → empty orbital on Al; the C–Cl bond pair leaves with chlorine as AlCl₄⁻."
+    species:
+      - smiles: "CCl"
+        label: "Chloromethane"
+        highlight: "[CH3]Cl"
+      - smiles: "Cl[Al](Cl)Cl"
+        label: "AlCl₃"
+        highlight: "[Al]"
+  - title: "Attack by the ring"
+    text: "The π electrons of benzene attack the electrophile, forming a resonance-stabilised arenium ion (σ-complex). Aromaticity is lost in this step, so it is the slow step."
+    arrows: "A π pair of benzene → CH₃⁺, forming the new ring C–C bond."
+    species:
+      - smiles: "c1ccccc1"
+        label: "Benzene"
+      - smiles: "[CH3+]"
+        label: "Methyl cation (electrophile)"
+        highlight: "[CH3+]"
+  - title: "Deprotonation"
+    text: "AlCl₄⁻ removes the proton from the sp³ ring carbon, restoring aromaticity. Toluene and HCl form and AlCl₃ is regenerated, so it acts as a true catalyst."
+    arrows: "A Cl lone pair of AlCl₄⁻ → ring C–H; the C–H bond pair → ring, rebuilding the aromatic π system."
+    species:
+      - smiles: "CC1C=CC=C[CH+]1"
+        label: "Arenium ion (σ-complex)"
+        highlight: "[CX4;R]"
+      - smiles: "Cl[Al-](Cl)(Cl)Cl"
+        label: "AlCl₄⁻"
 memoryTricks: []
 faq:
   - q: "What is the product of benzene with CH₃Cl and anhydrous AlCl₃?"

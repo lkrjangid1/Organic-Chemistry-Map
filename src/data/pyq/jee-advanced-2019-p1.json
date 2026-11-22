@@ -1,0 +1,173 @@
+{
+ "exam": "jee-advanced",
+ "year": 2019,
+ "paper": 1,
+ "source": "https://jeeadv.ac.in/past_qps/2019_1_English.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2019-p1-q4",
+   "number": 4,
+   "type": "single",
+   "stem": "The correct order of acid strength of the following carboxylic acids is",
+   "figures": [
+    {
+     "smiles": "C#CC(=O)O",
+     "label": "I"
+    },
+    {
+     "smiles": "C=CC(=O)O",
+     "label": "II"
+    },
+    {
+     "smiles": "COc1ccc(C(=O)O)cc1",
+     "label": "III"
+    },
+    {
+     "smiles": "CCC(=O)O",
+     "label": "IV"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "III > II > I > IV"
+    },
+    {
+     "key": "B",
+     "text": "I > II > III > IV"
+    },
+    {
+     "key": "C",
+     "text": "I > III > II > IV"
+    },
+    {
+     "key": "D",
+     "text": "II > I > IV > III"
+    }
+   ],
+   "answer": "B",
+   "solution": "The carboxylate is stabilised most when the carboxyl carbon is attached to an electron-withdrawing sp carbon, so propiolic acid (I) is the strongest. The sp² vinyl carbon of acrylic acid (II) withdraws less. In p-methoxybenzoic acid (III) the OMe group donates electrons by resonance and weakens the acid, but it remains stronger than propanoic acid (IV), whose sp³ ethyl group donates electrons inductively. Order: I > II > III > IV.",
+   "topics": [
+    "comparisons/acidity-of-carboxylic-acids",
+    "concepts/inductive-effect"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2019-p1-q11",
+   "number": 11,
+   "type": "multiple",
+   "stem": "Which of the following statement(s) is(are) true?",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "Monosaccharides cannot be hydrolysed to give polyhydroxy aldehydes and ketones"
+    },
+    {
+     "key": "B",
+     "text": "Oxidation of glucose with bromine water gives glutamic acid"
+    },
+    {
+     "key": "C",
+     "text": "Hydrolysis of sucrose gives dextrorotatory glucose and laevorotatory fructose"
+    },
+    {
+     "key": "D",
+     "text": "The two six-membered cyclic hemiacetal forms of D-(+)-glucose are called anomers"
+    }
+   ],
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "solution": "Monosaccharides are the simplest sugars and cannot be hydrolysed further, so (A) is true. Bromine water oxidises only the CHO group of glucose, giving gluconic acid; glutamic acid is an amino acid, so (B) is false. Hydrolysis of sucrose gives D-(+)-glucose and D-(−)-fructose, i.e. a dextrorotatory and a laevorotatory sugar, so (C) is true. The α and β pyranose forms of D-glucose differ only at C1 and are called anomers, so (D) is true.",
+   "topics": [
+    "concepts/disaccharides",
+    "concepts/aldoses-and-epimers"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2019-p1-q12",
+   "number": 12,
+   "type": "multiple",
+   "stem": "Choose the correct option(s) for the following set of reactions\nC₆H₁₀O —i) MeMgBr ii) H₂O→ Q —conc. HCl→ S (major)\nQ —20% H₃PO₄, 360 K→ R (major)\nR —i) H₂, Ni ii) Br₂, hν→ T (major)\nR —HBr, benzoyl peroxide, Δ→ U (major)",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "CC1=CCCCC1Cl.CC1(Br)CCCCC1",
+     "text": "S = 6-chloro-1-methylcyclohexene; T = 1-bromo-1-methylcyclohexane"
+    },
+    {
+     "key": "B",
+     "smiles": "CC1(Br)CCCCC1.CC1CCCCC1Cl",
+     "text": "U = 1-bromo-1-methylcyclohexane; S = 1-chloro-2-methylcyclohexane"
+    },
+    {
+     "key": "C",
+     "smiles": "CC1(Cl)CCCCC1.CC1CCCCC1Br",
+     "text": "S = 1-chloro-1-methylcyclohexane; U = 1-bromo-2-methylcyclohexane"
+    },
+    {
+     "key": "D",
+     "smiles": "CC1CCCCC1Br.CC1(Br)CCCCC1",
+     "text": "U = 1-bromo-2-methylcyclohexane; T = 1-bromo-1-methylcyclohexane"
+    }
+   ],
+   "answer": [
+    "C",
+    "D"
+   ],
+   "solution": "C₆H₁₀O is cyclohexanone; MeMgBr gives 1-methylcyclohexanol (Q). Conc. HCl substitutes through the tertiary cation, so S is 1-chloro-1-methylcyclohexane. Dehydration gives the more substituted alkene, 1-methylcyclohexene (R). Hydrogenation gives methylcyclohexane, and radical bromination picks the tertiary C–H, so T is 1-bromo-1-methylcyclohexane. HBr with peroxide adds anti-Markovnikov, so U is 1-bromo-2-methylcyclohexane. Options C and D list correct pairs.",
+   "topics": [
+    "reactions/grignard-reagent",
+    "reactions/peroxide-effect",
+    "reactions/free-radical-halogenation"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2019-p1-q18",
+   "number": 18,
+   "type": "numerical",
+   "stem": "Schemes 1 and 2 describe the conversion of P to Q and R to S, respectively. Scheme 3 describes the synthesis of T from Q and S. The total number of Br atoms in a molecule of T is ______\nScheme 1: P —i) Br₂ (excess), H₂O ii) NaNO₂, HCl, 273 K iii) CuCN/KCN iv) H₃O⁺, Δ v) SOCl₂, pyridine→ Q (major)\nScheme 2: R —i) Oleum ii) NaOH, Δ iii) H⁺ iv) Br₂, CS₂, 273 K→ S (major)\nScheme 3: S —i) NaOH ii) Q→ T (major)",
+   "figures": [
+    {
+     "smiles": "Nc1ccccc1",
+     "label": "P"
+    },
+    {
+     "smiles": "c1ccccc1",
+     "label": "R"
+    }
+   ],
+   "answer": "4",
+   "solution": "Bromine water converts aniline into 2,4,6-tribromoaniline; diazotisation, Sandmeyer cyanation and hydrolysis give 2,4,6-tribromobenzoic acid, and SOCl₂ gives the acid chloride Q (3 Br). Benzene is sulfonated, fused with NaOH and acidified to give phenol, which with Br₂ in CS₂ at low temperature is monobrominated at the para position, so S is 4-bromophenol (1 Br). The phenoxide of S is acylated by Q to give 4-bromophenyl 2,4,6-tribromobenzoate, with 4 Br atoms.",
+   "topics": [
+    "reactions/sandmeyer-reaction",
+    "reactions/schotten-baumann-reaction",
+    "mechanisms/reactions-of-phenols"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  }
+ ]
+}

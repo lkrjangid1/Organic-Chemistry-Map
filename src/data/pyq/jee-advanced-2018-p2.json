@@ -1,0 +1,230 @@
+{
+ "exam": "jee-advanced",
+ "year": 2018,
+ "paper": 2,
+ "source": "https://jeeadv.ac.in/past_qps/2018_2.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2018-p2-q3",
+   "number": 3,
+   "type": "multiple",
+   "stem": "Aniline reacts with mixed acid (conc. HNO₃ and conc. H₂SO₄) at 288 K to give P (51 %), Q (47%) and R (2%). The major product(s) of the following reaction sequence is (are)\nR —1) Ac₂O, pyridine 2) Br₂, CH₃CO₂H 3) H₃O⁺ 4) NaNO₂, HCl/273-278K 5) EtOH, Δ→ S —1) Sn/HCl 2) Br₂/H₂O (excess) 3) NaNO₂, HCl/273-278K 4) H₃PO₂→ major product(s)",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "Brc1cc(Br)c(Br)cc1Br"
+    },
+    {
+     "key": "B",
+     "smiles": "Brc1ccc(Br)c(Br)c1Br"
+    },
+    {
+     "key": "C",
+     "smiles": "Brc1cc(Br)cc(Br)c1"
+    },
+    {
+     "key": "D",
+     "smiles": "Brc1cc(Br)c(Br)c(Br)c1"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "solution": "In mixed acid aniline is mostly protonated, so the products are para (51%), meta (47%) and only 2% ortho; R is 2-nitroaniline. Acetylation and bromination put Br para to the NHAc group; hydrolysis, diazotisation and reduction with ethanol then remove the amino group, so S is 1-bromo-3-nitrobenzene. Sn/HCl gives 3-bromoaniline, and excess bromine water brominates the three positions ortho and para to NH₂, giving 2,3,4,6-tetrabromoaniline. Diazotisation and H₃PO₂ remove the NH₂, leaving 1,2,3,5-tetrabromobenzene (option D).",
+   "topics": [
+    "mechanisms/electrophilic-aromatic-substitution",
+    "reactions/diazotization-reaction",
+    "mechanisms/diazonium-salt-reactions"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2018-p2-q4",
+   "number": 4,
+   "type": "multiple",
+   "stem": "The Fischer presentation of D-glucose is given below.\nThe correct structure(s) of β-L-glucopyranose is (are)\n(The options are drawn as Haworth projections in the paper; they are given here as stereo SMILES.)",
+   "figures": [
+    {
+     "smiles": "O=C[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO",
+     "label": "D-glucose"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "OC[C@@H]1O[C@@H](O)[C@@H](O)[C@H](O)[C@H]1O"
+    },
+    {
+     "key": "B",
+     "smiles": "OC[C@@H]1O[C@@H](O)[C@H](O)[C@H](O)[C@H]1O"
+    },
+    {
+     "key": "C",
+     "smiles": "OC[C@H]1O[C@@H](O)[C@@H](O)[C@@H](O)[C@@H]1O"
+    },
+    {
+     "key": "D",
+     "smiles": "OC[C@@H]1O[C@H](O)[C@@H](O)[C@H](O)[C@H]1O"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "solution": "β-L-Glucopyranose is the mirror image of β-D-glucopyranose. In a Haworth drawing with the ring O at the back right, β-D-glucose has CH₂OH up, the anomeric OH up and the OH groups at C2, C3, C4 down, up, down; the L-sugar reverses all of these: CH₂OH down, C1-OH down, C2-OH up, C3-OH down, C4-OH up. Structure D matches this exactly. A has the anomeric OH up (α-L-glucopyranose), B also differs at C2 (α-L-mannopyranose), and C is β-D-mannopyranose.",
+   "topics": [
+    "concepts/aldoses-and-epimers"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2018-p2-q10",
+   "number": 10,
+   "type": "numerical",
+   "stem": "For the given compound X, the total number of optically active stereoisomers is ____.\n(In the drawing, wedge bonds mean the configuration at that carbon and the geometry of that double bond are fixed; wavy bonds mean they are NOT fixed. Here the ring OH groups, the upper side chain with its E double bond and its OH carbon are fixed; the lower side chain attachment, its double bond and its OH carbon are not fixed.)",
+   "figures": [
+    {
+     "smiles": "CCCCCC(O)C=CC1[C@@H](O)C[C@@H](O)[C@H]1/C=C/[C@@H](O)CCCCC",
+     "label": "X"
+    }
+   ],
+   "answer": "7",
+   "solution": "Only three stereo units are free: the ring carbon carrying the lower side chain, the lower C=C, and the lower carbinol carbon. That gives 2 × 2 × 2 = 8 stereoisomers. The two side chains are constitutionally identical and the ring is 1,2,3,4-substituted symmetrically, so when the lower chain is cis to the upper one with the same E geometry and the mirror-image carbinol configuration, the molecule has a mirror plane through CH₂ and the middle of the ring C–C bond. That one isomer is meso, so 8 − 1 = 7 are optically active.",
+   "topics": [
+    "concepts/aldoses-and-epimers"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2018-p2-q11",
+   "number": 11,
+   "type": "numerical",
+   "stem": "In the following reaction sequence, the amount of D (in g) formed from 10 moles of acetophenone is ____.\n(Atomic weights in g mol⁻¹: H = 1, C = 12, N = 14, O = 16, Br = 80. The yield (%) corresponding to the product in each step is given in the parenthesis)\nAcetophenone —NaOBr, H₃O⁺→ A (60%) —NH₃, Δ→ B (50%) —Br₂/KOH→ C (50%) —Br₂ (3 equiv), AcOH→ D (100%)",
+   "figures": [
+    {
+     "smiles": "CC(=O)c1ccccc1",
+     "label": "acetophenone"
+    }
+   ],
+   "answer": "495",
+   "solution": "The haloform reaction gives benzoic acid A: 10 × 0.60 = 6 mol. Heating with NH₃ gives benzamide B: 3 mol. Hofmann bromamide degradation gives aniline C: 1.5 mol. Bromine (3 equiv) gives 2,4,6-tribromoaniline D, C₆H₄Br₃N, M = 72 + 4 + 240 + 14 = 330 g mol⁻¹. Mass of D = 1.5 × 330 = 495 g.",
+   "topics": [
+    "reactions/haloform-reaction",
+    "reactions/hofmann-bromamide-degradation",
+    "mechanisms/electrophilic-aromatic-substitution"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2018-p2-q16",
+   "number": 16,
+   "type": "matching",
+   "stem": "The desired product X can be prepared by reacting the major product of the reactions in LIST-I with one or more appropriate reagents in LIST-II.\n(given, order of migratory aptitude: aryl > alkyl > hydrogen)\nLIST-I: P. Ph₂C(OH)–C(OH)Me₂ + H₂SO₄; Q. Ph₂C(NH₂)–CH(OH)Me + HNO₂; R. PhC(OH)(Me)–C(OH)(Me)Ph + H₂SO₄; S. Ph₂C(Br)–CH(OH)Me + AgNO₃\nLIST-II: 1. I₂, NaOH; 2. [Ag(NH₃)₂]OH; 3. Fehling solution; 4. HCHO, NaOH; 5. NaOBr\nThe correct option is",
+   "figures": [
+    {
+     "smiles": "CC(c1ccccc1)(c1ccccc1)C(=O)O",
+     "label": "X"
+    },
+    {
+     "smiles": "OC(c1ccccc1)(c1ccccc1)C(C)(C)O",
+     "label": "P"
+    },
+    {
+     "smiles": "NC(c1ccccc1)(c1ccccc1)C(C)O",
+     "label": "Q"
+    },
+    {
+     "smiles": "CC(O)(c1ccccc1)C(C)(O)c1ccccc1",
+     "label": "R"
+    },
+    {
+     "smiles": "BrC(c1ccccc1)(c1ccccc1)C(C)O",
+     "label": "S"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "P → 1; Q → 2,3; R → 1,4; S → 2,4"
+    },
+    {
+     "key": "B",
+     "text": "P → 1,5; Q → 3,4; R → 4,5; S → 3"
+    },
+    {
+     "key": "C",
+     "text": "P → 1,5; Q → 3,4; R → 5; S → 2,4"
+    },
+    {
+     "key": "D",
+     "text": "P → 1,5; Q → 2,3; R → 1,5; S → 2,3"
+    }
+   ],
+   "answer": "D",
+   "solution": "X is Ph₂C(Me)–CO₂H, so the List-I step must give either the methyl ketone Ph₂C(Me)COCH₃ (oxidised by a haloform reagent, 1 or 5) or the aldehyde Ph₂C(Me)CHO (oxidised by Tollens or Fehling, 2 or 3). In P the cation forms at the diphenyl carbon and a methyl shifts from the neighbouring carbinol carbon, giving the methyl ketone: 1, 5. In Q and S the cation also forms at CPh₂ (by diazotisation or Ag⁺-assisted loss of Br⁻), and methyl outranks H in migrating, so the product is the aldehyde: 2, 3. In R either carbon can ionise to the same benzylic cation, and phenyl migrates, again giving Ph₂C(Me)COCH₃: 1, 5. HCHO/NaOH would only reduce the aldehyde by crossed Cannizzaro.",
+   "topics": [
+    "reactions/pinacol-pinacolone-rearrangement",
+    "reactions/haloform-reaction",
+    "tests/tollens-test"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2018-p2-q17",
+   "number": 17,
+   "type": "matching",
+   "stem": "LIST-I contains reactions and LIST-II contains major products.\nLIST-I: P. (CH₃)₃CONa + (CH₃)₃CBr →; Q. (CH₃)₃COMe + HBr →; R. (CH₃)₃CBr + NaOMe →; S. (CH₃)₃CONa + MeBr →\nLIST-II: 1. (CH₃)₃COH; 2. (CH₃)₃CBr; 3. (CH₃)₃COMe; 4. (CH₃)₂C=CH₂; 5. (CH₃)₃C–O–C(CH₃)₃\nMatch each reaction in LIST-I with one or more products in LIST-II and choose the correct option.",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "P → 1,5; Q → 2; R → 3; S → 4"
+    },
+    {
+     "key": "B",
+     "text": "P → 1,4; Q → 2; R → 4; S → 3"
+    },
+    {
+     "key": "C",
+     "text": "P → 1,4; Q → 1,2; R → 3,4; S → 4"
+    },
+    {
+     "key": "D",
+     "text": "P → 4,5; Q → 4; R → 4; S → 3,4"
+    }
+   ],
+   "answer": "B",
+   "solution": "A tertiary halide with a strong base eliminates rather than substitutes. In P tert-butoxide removes a proton from tert-butyl bromide, giving isobutylene and tert-butanol (1, 4); di-tert-butyl ether does not form. In Q the ether is protonated and cleaves by SN1 at the tertiary carbon, giving tert-butyl bromide and methanol (2). In R methoxide again causes E2 elimination, giving isobutylene (4). In S the alkoxide attacks the unhindered methyl bromide by SN2 (Williamson synthesis), giving tert-butyl methyl ether (3).",
+   "topics": [
+    "reactions/williamson-ether-synthesis",
+    "reactions/ether-cleavage-with-hx",
+    "reactions/e2-reaction"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  }
+ ]
+}

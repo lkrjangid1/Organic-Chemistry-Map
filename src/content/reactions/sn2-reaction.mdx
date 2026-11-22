@@ -17,6 +17,28 @@ reagents: "Strong, unhindered nucleophile (OH-, CN-, N3-, I-, RO-)"
 conditions: "Polar aprotic solvent (acetone, DMF, DMSO); methyl or primary substrate preferred"
 equation: "CH3CH(Br)CH2CH3 + NaN3 ->[DMF] CH3CH(N3)CH2CH3 + NaBr"
 notesPages: [42, 51]
+steps:
+  - title: "Backside approach"
+    text: "Azide approaches the carbon from the side opposite bromine, 180° from the leaving group. The back side must be unhindered, which is why reactivity is CH₃X > 1° > 2° > 3°."
+    arrows: "Azide lone pair (HOMO) → back lobe of the C–Br σ* orbital (LUMO)."
+    species:
+      - smiles: "[N-]=[N+]=[N-]"
+        label: "Azide ion"
+      - smiles: "C[C@@H](Br)CC"
+        label: "(R)-2-Bromobutane"
+        highlight: "[CX4]Br"
+  - title: "Transition state (rate-determining)"
+    text: "Carbon is partly bonded to both N₃ and Br, five-coordinate with the other three groups lying in one plane and partial negative charge on N₃ and Br. Bond making and bond breaking happen in this one step, so rate = k[R–X][Nu⁻]."
+    arrows: "The new N–C bond forms as the C–Br bond pair moves onto bromine, at the same time."
+  - title: "Inversion"
+    text: "The C–Br bond breaks completely, Br⁻ leaves and the three groups snap over to the other side, giving an inverted sp³ carbon. (R)-2-Bromobutane gives (S)-2-azidobutane (Walden inversion)."
+    arrows: "The C–Br bond pair leaves with bromine as Br⁻."
+    species:
+      - smiles: "C[C@H](N=[N+]=[N-])CC"
+        label: "(S)-2-Azidobutane"
+        highlight: "[CX4]N"
+      - smiles: "[Br-]"
+        label: "Bromide"
 memoryTricks: []
 faq:
   - q: "What is the rate law of an SN2 reaction?"

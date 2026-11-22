@@ -53,6 +53,19 @@ const reactionSchema = z.object({
   /** Tests only: what the test tells apart, e.g. "1°, 2° and 3° alcohols". */
   distinguishes: z.string().optional(),
   notesPages: z.array(z.number()).default([]),
+  /** Step-by-step mechanism shown as an interactive stepper. */
+  steps: z
+    .array(
+      z.object({
+        title: z.string(),
+        text: z.string(),
+        /** Species drawn for this step (left to right). */
+        species: z.array(z.object({ smiles: z.string(), label: z.string().optional(), highlight: z.string().optional() })).default([]),
+        /** Short description of the electron movement (curly arrows). */
+        arrows: z.string().optional(),
+      }),
+    )
+    .default([]),
   memoryTricks: z.array(trick).default([]),
   faq: z.array(faq).default([]),
   /** Bare slugs of reaction pages, or "collection/slug" paths to other pages. */
@@ -145,6 +158,8 @@ const hindi = defineCollection({
     reactantName: z.string().optional(),
     productName: z.string().optional(),
     memoryTricks: z.array(trick).optional(),
+    /** Translated mechanism steps, matched to the English steps by position. */
+    steps: z.array(z.object({ title: z.string(), text: z.string(), arrows: z.string().optional() })).optional(),
     faq: z.array(faq).default([]),
     /** Date the translation was last brought in line with the English page. */
     translated: z.coerce.date(),

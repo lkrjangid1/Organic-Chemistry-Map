@@ -17,6 +17,40 @@ reagents: "Dilute acid (H₃O⁺, catalytic) with excess water; or NaOH/KOH (one
 conditions: "Heat under reflux; acid hydrolysis is reversible, base hydrolysis goes to completion"
 equation: "CH3COOC2H5 + NaOH ->[\\Delta] CH3COONa + C2H5OH"
 notesPages: [97, 98, 99]
+steps:
+  - title: "Hydroxide adds to C=O (BAC2)"
+    text: "In saponification, OH⁻ adds to the carbonyl carbon of ethyl ethanoate (slow step), giving a tetrahedral alkoxide intermediate. This is acyl–oxygen attack, not SN2 at the ethyl carbon."
+    arrows: "Lone pair of OH⁻ → carbonyl carbon; C=O π pair → O⁻."
+    species:
+      - smiles: "CCOC(C)=O"
+        label: "Ethyl ethanoate"
+        highlight: "[CX3](=O)O"
+      - smiles: "[OH-]"
+        label: "Hydroxide"
+      - smiles: "CCOC(C)([O-])O"
+        label: "Tetrahedral intermediate"
+  - title: "Loss of ethoxide"
+    text: "The C=O re-forms and ethoxide, EtO⁻, is expelled, giving ethanoic acid. The acyl–oxygen bond is the one that breaks, which is why an ¹⁸O label in the alkoxy oxygen ends up in the ethanol."
+    arrows: "O⁻ lone pair re-forms C=O; the C–OEt bond pair leaves with EtO⁻."
+    species:
+      - smiles: "CCOC(C)([O-])O"
+        label: "Tetrahedral intermediate"
+        highlight: "CCO[CX4]"
+      - smiles: "CC(=O)O"
+        label: "Ethanoic acid"
+      - smiles: "CC[O-]"
+        label: "Ethoxide"
+  - title: "Proton transfer"
+    text: "Ethoxide removes the acidic proton of ethanoic acid, giving the ethanoate ion and ethanol; with NaOH the product is sodium ethanoate. This step pulls the reaction to completion, so base hydrolysis is irreversible and uses a full equivalent of base."
+    arrows: "Lone pair of EtO⁻ → acidic O–H; the O–H bond pair stays on the carboxylate oxygen."
+    species:
+      - smiles: "CC(=O)O"
+        label: "Ethanoic acid"
+        highlight: "C(=O)[OH]"
+      - smiles: "CC[O-]"
+        label: "Ethoxide"
+      - smiles: "CC(=O)[O-].[Na+]"
+        label: "Sodium ethanoate"
 memoryTricks: []
 faq:
   - q: "Why is acid hydrolysis of an ester reversible but base hydrolysis irreversible?"

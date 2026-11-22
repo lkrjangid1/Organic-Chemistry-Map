@@ -1,0 +1,382 @@
+{
+ "exam": "jee-advanced",
+ "year": 2019,
+ "paper": 2,
+ "source": "https://jeeadv.ac.in/past_qps/2019_2_English.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2019-p2-q5",
+   "number": 5,
+   "type": "multiple",
+   "stem": "Which of the following reactions produce(s) propane as a major product?",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "CCCC(=O)[O-].[Na+]",
+     "text": "NaOH, CaO, Δ"
+    },
+    {
+     "key": "B",
+     "smiles": "CCCC(=O)[O-].[Na+]",
+     "text": "+ H₂O, electrolysis"
+    },
+    {
+     "key": "C",
+     "smiles": "CCCCl",
+     "text": "Zn, dil. HCl"
+    },
+    {
+     "key": "D",
+     "smiles": "CC(Br)CBr",
+     "text": "Zn"
+    }
+   ],
+   "answer": [
+    "A",
+    "C"
+   ],
+   "solution": "Heating sodium butanoate with soda-lime removes CO₂, so (A) gives propane. Kolbe electrolysis of butanoate couples two propyl radicals, giving hexane, so (B) does not. Zn/dil. HCl reduces 1-chloropropane to propane, so (C) works. Zinc removes both bromines from 1,2-dibromopropane as ZnBr₂ and forms a C=C, giving propene, so (D) does not.",
+   "topics": [
+    "reactions/decarboxylation",
+    "reactions/kolbe-electrolysis"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2019-p2-q6",
+   "number": 6,
+   "type": "multiple",
+   "stem": "Choose the correct option(s) that give(s) an aromatic compound as the major product",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "CC(Br)CBr",
+     "text": "i) alc. KOH ii) NaNH₂ iii) red hot iron tube, 873 K"
+    },
+    {
+     "key": "B",
+     "smiles": "C1=CCC=C1",
+     "text": "NaOMe"
+    },
+    {
+     "key": "C",
+     "smiles": "BrC1C=CC1",
+     "text": "NaOEt"
+    },
+    {
+     "key": "D",
+     "smiles": "c1ccccc1",
+     "text": "+ Cl₂ (excess), UV, 500 K"
+    }
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "solution": "(A) Double dehydrobromination of 1,2-dibromopropane (alc. KOH, then NaNH₂) gives propyne, which trimerises in a red-hot iron tube to mesitylene, which is aromatic. (B) Methoxide removes the acidic CH₂ proton of cyclopentadiene, giving the cyclopentadienyl anion, a planar ring with 6 π electrons, which is aromatic. (C) Elimination from 3-bromocyclobutene would give cyclobutadiene, which is antiaromatic, so it is not correct. (D) Benzene with excess Cl₂ under UV first adds chlorine to give hexachlorocyclohexane; the answer treats the forcing 500 K conditions as giving an aromatic chlorobenzene product (BHC readily loses HCl to give trichlorobenzene).",
+   "topics": [
+    "concepts/aromaticity",
+    "reactions/e2-reaction",
+    "reactions/free-radical-halogenation"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": false,
+    "note": "Held back for review: answers differ"
+   }
+  },
+  {
+   "id": "jee-advanced-2019-p2-q7",
+   "number": 7,
+   "type": "multiple",
+   "stem": "Choose the correct option(s) for the following reaction sequence\n4-MeOC₆H₄–C≡C–CH₂–CHO —i) Hg²⁺, dil. H₂SO₄ ii) AgNO₃, NH₄OH iii) Zn-Hg, conc. HCl→ Q —i) SOCl₂, pyridine ii) AlCl₃→ R —Zn-Hg, conc. HCl→ S\nConsider Q, R and S as major products",
+   "figures": [
+    {
+     "smiles": "COc1ccc(C#CCC=O)cc1",
+     "label": "starting material"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "COc1ccc(C(O)CCC(=O)O)cc1.COc1ccc2CCC=Cc2c1",
+     "text": "Q = 4-hydroxy-4-(4-methoxyphenyl)butanoic acid; S = 6-methoxy-1,2-dihydronaphthalene"
+    },
+    {
+     "key": "B",
+     "smiles": "COc1ccc2C=CCC(=O)c2c1.COc1ccc2CCCCc2c1",
+     "text": "R = 7-methoxynaphthalen-1(2H)-one; S = 6-methoxy-1,2,3,4-tetrahydronaphthalene"
+    },
+    {
+     "key": "C",
+     "smiles": "COc1ccc(CCCC(=O)O)cc1.COc1ccc2CCCC(=O)c2c1",
+     "text": "Q = 4-(4-methoxyphenyl)butanoic acid; R = 7-methoxy-3,4-dihydronaphthalen-1(2H)-one"
+    },
+    {
+     "key": "D",
+     "smiles": "COc1ccc2CCCC(=O)c2c1.COc1ccc2CCCCc2c1",
+     "text": "R = 7-methoxy-3,4-dihydronaphthalen-1(2H)-one; S = 6-methoxy-1,2,3,4-tetrahydronaphthalene"
+    }
+   ],
+   "answer": [
+    "C",
+    "D"
+   ],
+   "solution": "Hg²⁺-catalysed hydration puts the C=O on the alkyne carbon next to the anisyl ring, giving ArCOCH₂CH₂CHO. Tollens reagent oxidises the CHO to CO₂H, and Clemmensen reduction removes the ketone, so Q is 4-(4-methoxyphenyl)butanoic acid. The acid chloride cyclises by intramolecular Friedel–Crafts acylation onto the ring carbon ortho to the chain, giving R = 7-methoxy-1-tetralone. A second Clemmensen reduction gives S = 6-methoxytetralin. Options C (Q, R) and D (R, S) are both correct.",
+   "topics": [
+    "reactions/kucherov-reaction",
+    "reactions/clemmensen-reduction",
+    "reactions/friedel-crafts-acylation"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2019-p2-q8",
+   "number": 8,
+   "type": "multiple",
+   "stem": "Choose the correct option(s) from the following",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "Natural rubber is polyisoprene containing trans alkene units"
+    },
+    {
+     "key": "B",
+     "text": "Nylon-6 has amide linkages"
+    },
+    {
+     "key": "C",
+     "text": "Teflon is prepared by heating tetrafluoroethene in presence of a persulphate catalyst at high pressure"
+    },
+    {
+     "key": "D",
+     "text": "Cellulose has only α-D-glucose units that are joined by glycosidic linkages"
+    }
+   ],
+   "answer": [
+    "B",
+    "C"
+   ],
+   "solution": "Natural rubber is cis-1,4-polyisoprene; the trans polymer is gutta-percha, so (A) is false. Nylon-6, made from caprolactam, is a polyamide with –CO–NH– links, so (B) is true. Teflon is made by heating tetrafluoroethene under high pressure with a persulphate initiator, so (C) is true. Cellulose is built from β-D-glucose units joined by β-1,4-glycosidic links, not α-units, so (D) is false.",
+   "topics": [
+    "concepts/natural-and-synthetic-rubber",
+    "concepts/nylon-6-6-and-nylon-6",
+    "concepts/polysaccharides"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2019-p2-q13",
+   "number": 13,
+   "type": "numerical",
+   "stem": "Total number of hydroxyl groups present in a molecule of the major product P is ____\nsubstrate —i) H₂, Pd-BaSO₄, quinoline ii) dil. KMnO₄ (excess), 273 K→ P",
+   "figures": [
+    {
+     "smiles": "C1(CC#CCC2CC=CCC2)C=CCC1",
+     "label": "substrate"
+    }
+   ],
+   "answer": "6",
+   "solution": "Lindlar hydrogenation reduces only the C≡C, to a cis C=C, and leaves the two ring double bonds alone. The substrate now has three C=C bonds: the new acyclic one and one in each ring. Cold dilute KMnO₄ in excess syn-dihydroxylates every C=C, adding two OH groups to each. P therefore has 3 × 2 = 6 hydroxyl groups.",
+   "topics": [
+    "reagents/lindlar-catalyst",
+    "reagents/potassium-permanganate"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2019-p2-q14",
+   "number": 14,
+   "type": "numerical",
+   "stem": "Total number of isomers, considering both structural and stereoisomers, of cyclic ethers with the molecular formula C₄H₈O is____",
+   "figures": [],
+   "answer": "10",
+   "solution": "C₄H₈O has one degree of unsaturation, which here is the ring. Five-membered ring: tetrahydrofuran (1). Four-membered ring: 2-methyloxetane, which is chiral (2), and 3-methyloxetane (1). Three-membered ring: 2-ethyloxirane, which is chiral (2); 2,2-dimethyloxirane (1); 2,3-dimethyloxirane as the cis meso form plus the trans pair of enantiomers (3). Total: 1 + 3 + 6 = 10.",
+   "topics": [
+    "concepts/degree-of-unsaturation",
+    "reactions/prilezhaev-epoxidation"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2019-p2-q17",
+   "number": 17,
+   "type": "matching",
+   "stem": "List-I includes starting materials and reagents of selected chemical reactions. List-II gives structures of compounds that may be formed as intermediate products and/or final products from the reactions of List-I.\nList-I: (I) 2-(2-(1,3-dioxolan-2-yl)phenyl)acetonitrile —i) DIBAL-H ii) dil. HCl iii) NaBH₄ iv) conc. H₂SO₄→; (II) 2-allylbenzoic acid —i) O₃ ii) Zn, H₂O iii) NaBH₄ iv) conc. H₂SO₄→; (III) methyl 2-(chloromethyl)benzoate —i) KCN ii) H₃O⁺, Δ iii) LiAlH₄ iv) conc. H₂SO₄→; (IV) methyl 2-(2-methoxy-2-oxoethyl)benzoate —i) LiAlH₄ ii) conc. H₂SO₄→\nList-II: (P) 2-(2-oxoethyl)benzoic acid; (Q) 2-(2-(hydroxymethyl)phenyl)ethanol; (R) isochromane; (S) 2-(2-hydroxyethyl)benzoic acid; (T) 2-(carboxymethyl)benzoic acid; (U) isochroman-1-one\nWhich of the following options has correct combination considering List-I and List-II?",
+   "figures": [
+    {
+     "smiles": "N#CCc1ccccc1C1OCCO1",
+     "label": "I"
+    },
+    {
+     "smiles": "C=CCc1ccccc1C(=O)O",
+     "label": "II"
+    },
+    {
+     "smiles": "COC(=O)c1ccccc1CCl",
+     "label": "III"
+    },
+    {
+     "smiles": "COC(=O)Cc1ccccc1C(=O)OC",
+     "label": "IV"
+    },
+    {
+     "smiles": "O=CCc1ccccc1C(=O)O",
+     "label": "P"
+    },
+    {
+     "smiles": "OCCc1ccccc1CO",
+     "label": "Q"
+    },
+    {
+     "smiles": "C1OCc2ccccc2C1",
+     "label": "R"
+    },
+    {
+     "smiles": "OCCc1ccccc1C(=O)O",
+     "label": "S"
+    },
+    {
+     "smiles": "O=C(O)Cc1ccccc1C(=O)O",
+     "label": "T"
+    },
+    {
+     "smiles": "O=C1OCCc2ccccc21",
+     "label": "U"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "(I), (Q), (T), (U)"
+    },
+    {
+     "key": "B",
+     "text": "(II), (P), (S), (T)"
+    },
+    {
+     "key": "C",
+     "text": "(II), (P), (S), (U)"
+    },
+    {
+     "key": "D",
+     "text": "(I), (S), (Q), (R)"
+    }
+   ],
+   "answer": "C",
+   "solution": "(I) DIBAL-H takes the nitrile to an imine, and dilute acid hydrolyses both the imine and the acetal, giving a dialdehyde; NaBH₄ gives diol Q, and acid closes it to the cyclic ether isochromane R. So I → Q, R. (II) Reductive ozonolysis turns the allyl group into CH₂CHO, giving P; NaBH₄ reduces only the aldehyde to give hydroxy acid S, and acid lactonises S to isochromanone U. So II → P, S, U. (III) Cyanide displaces chloride, and hot aqueous acid hydrolyses both the nitrile and the ester to homophthalic acid T; LiAlH₄ gives diol Q, which cyclises to R. So III → T, Q, R. (IV) LiAlH₄ reduces both esters to diol Q, which cyclises to R. So IV → Q, R. Only option C, (II), (P), (S), (U), lists one starting material with compounds it actually forms.",
+   "topics": [
+    "reagents/dibal-h",
+    "reactions/ozonolysis",
+    "reagents/sodium-borohydride"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2019-p2-q18",
+   "number": 18,
+   "type": "matching",
+   "stem": "List-I includes starting materials and reagents of selected chemical reactions. List-II gives structures of compounds that may be formed as intermediate products and/or final products from the reactions of List-I.\nList-I: (I) 2-(2-(1,3-dioxolan-2-yl)phenyl)acetonitrile —i) DIBAL-H ii) dil. HCl iii) NaBH₄ iv) conc. H₂SO₄→; (II) 2-allylbenzoic acid —i) O₃ ii) Zn, H₂O iii) NaBH₄ iv) conc. H₂SO₄→; (III) methyl 2-(chloromethyl)benzoate —i) KCN ii) H₃O⁺, Δ iii) LiAlH₄ iv) conc. H₂SO₄→; (IV) methyl 2-(2-methoxy-2-oxoethyl)benzoate —i) LiAlH₄ ii) conc. H₂SO₄→\nList-II: (P) 2-(2-oxoethyl)benzoic acid; (Q) 2-(2-(hydroxymethyl)phenyl)ethanol; (R) isochromane; (S) 2-(2-hydroxyethyl)benzoic acid; (T) 2-(carboxymethyl)benzoic acid; (U) isochroman-1-one\nWhich of the following options has correct combination considering List-I and List-II?",
+   "figures": [
+    {
+     "smiles": "N#CCc1ccccc1C1OCCO1",
+     "label": "I"
+    },
+    {
+     "smiles": "C=CCc1ccccc1C(=O)O",
+     "label": "II"
+    },
+    {
+     "smiles": "COC(=O)c1ccccc1CCl",
+     "label": "III"
+    },
+    {
+     "smiles": "COC(=O)Cc1ccccc1C(=O)OC",
+     "label": "IV"
+    },
+    {
+     "smiles": "O=CCc1ccccc1C(=O)O",
+     "label": "P"
+    },
+    {
+     "smiles": "OCCc1ccccc1CO",
+     "label": "Q"
+    },
+    {
+     "smiles": "C1OCc2ccccc2C1",
+     "label": "R"
+    },
+    {
+     "smiles": "OCCc1ccccc1C(=O)O",
+     "label": "S"
+    },
+    {
+     "smiles": "O=C(O)Cc1ccccc1C(=O)O",
+     "label": "T"
+    },
+    {
+     "smiles": "O=C1OCCc2ccccc21",
+     "label": "U"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "(III), (S), (R)"
+    },
+    {
+     "key": "B",
+     "text": "(IV), (Q), (U)"
+    },
+    {
+     "key": "C",
+     "text": "(III), (T), (U)"
+    },
+    {
+     "key": "D",
+     "text": "(IV), (Q), (R)"
+    }
+   ],
+   "answer": "D",
+   "solution": "(I) DIBAL-H takes the nitrile to an imine, and dilute acid hydrolyses both the imine and the acetal, giving a dialdehyde; NaBH₄ gives diol Q, and acid closes it to the cyclic ether isochromane R. So I → Q, R. (II) Reductive ozonolysis turns the allyl group into CH₂CHO, giving P; NaBH₄ reduces only the aldehyde to give hydroxy acid S, and acid lactonises S to isochromanone U. So II → P, S, U. (III) Cyanide displaces chloride, and hot aqueous acid hydrolyses both the nitrile and the ester to homophthalic acid T; LiAlH₄ gives diol Q, which cyclises to R. So III → T, Q, R. (IV) LiAlH₄ reduces both esters to diol Q, which cyclises to R. So IV → Q, R. Only option D, (IV), (Q), (R), is fully correct: III gives T, Q and R but not S or U, and IV does not give a lactone.",
+   "topics": [
+    "reagents/lithium-aluminium-hydride",
+    "reactions/ester-hydrolysis",
+    "mechanisms/reduction-reactions"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  }
+ ]
+}

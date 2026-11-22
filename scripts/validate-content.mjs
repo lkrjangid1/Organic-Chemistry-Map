@@ -114,6 +114,20 @@ for (const file of files) {
         }
       }
       if (fm.equation) checkCe(fm.equation, 'frontmatter equation', errors);
+      for (const [k, st] of (fm.steps ?? []).entries()) {
+        if (!st.title || !st.text) errors.push(`steps[${k}] needs title and text`);
+        for (const sp of st.species ?? []) {
+          const mol = rdkit.get_mol(sp.smiles ?? '');
+          if (!mol || !mol.is_valid()) errors.push(`steps[${k}] invalid SMILES: ${sp.smiles}`);
+          else if (sp.highlight) {
+            const q = rdkit.get_qmol(sp.highlight);
+            if (!q || !q.is_valid()) errors.push(`steps[${k}] invalid highlight SMARTS: ${sp.highlight}`);
+            else if (mol.get_substruct_match(q) === '{}') errors.push(`steps[${k}] highlight ${sp.highlight} matches nothing in ${sp.smiles}`);
+            q?.delete();
+          }
+          mol?.delete();
+        }
+      }
       if ((fm.faq ?? []).length < 3) warn.push('fewer than 3 FAQ items');
     }
   }

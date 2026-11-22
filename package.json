@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "check:content": "node scripts/validate-content.mjs",
     "check:site": "node scripts/check-site.mjs",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "check:pyq": "node scripts/validate-pyq.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^8.1.6",
@@ -20,6 +21,7 @@
     "@types/node": "^24.7.1",
     "astro": "^7.4.13",
     "autoprefixer": "^10.4.21",
+    "firebase": "^12.19.0",
     "katex": "^0.19.1",
     "lucide-react": "^0.545.0",
     "postcss": "^8.5.6",

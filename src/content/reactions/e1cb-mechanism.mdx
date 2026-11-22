@@ -17,6 +17,38 @@ reagents: "Base (OH⁻, alkoxide)"
 conditions: "Electron-withdrawing group on the carbon bearing the β-H, poor leaving group; often warming"
 equation: "CH3CH(OH)CH2CHO ->[OH-][\\Delta] CH3CH=CHCHO + H2O"
 notesPages: [19]
+steps:
+  - title: "Deprotonation of the acidic α-H"
+    text: "OH⁻ removes a hydrogen from the CH₂ next to the C=O of 3-hydroxybutanal (the aldol). The carbonyl group makes this H acidic; the β-OH is a poor leaving group, so E1 and E2 do not compete."
+    arrows: "Lone pair of OH⁻ → α-H; the C–H bond pair stays on carbon as a carbanion."
+    species:
+      - smiles: "CC(O)CC=O"
+        label: "3-Hydroxybutanal"
+        highlight: "[CH2]C=O"
+      - smiles: "[OH-]"
+        label: "Hydroxide"
+  - title: "Carbanion (conjugate base) = enolate"
+    text: "The negative charge is spread onto the carbonyl oxygen by resonance, so the carbanion is an enolate. This distinct carbanion intermediate is what defines E1cB; which step is slow depends on the system."
+    arrows: "Carbanion lone pair → C–C=O bond (forming C=C); the C=O π pair → oxygen, giving O⁻."
+    species:
+      - smiles: "CC(O)[CH-]C=O"
+        label: "Carbanion"
+        highlight: "[CH-]"
+      - smiles: "CC(O)C=C[O-]"
+        label: "Enolate (resonance form)"
+        highlight: "C=C[O-]"
+  - title: "Loss of the leaving group"
+    text: "The carbanion pushes out OH⁻ from the adjacent carbon, forming the C=C in conjugation with C=O. The product is the α,β-unsaturated aldehyde but-2-enal (crotonaldehyde); overall H₂O is lost and OH⁻ is regenerated."
+    arrows: "Enolate O⁻ lone pair re-forms C=O, the C=C π pair → C2–C3 π bond, and the C3–OH bond pair leaves with OH⁻."
+    species:
+      - smiles: "CC(O)C=C[O-]"
+        label: "Enolate"
+        highlight: "[CX4][OH]"
+      - smiles: "CC=CC=O"
+        label: "But-2-enal"
+        highlight: "C=CC=O"
+      - smiles: "[OH-]"
+        label: "Hydroxide (leaving group)"
 memoryTricks: []
 faq:
   - q: "What does E1cB stand for?"

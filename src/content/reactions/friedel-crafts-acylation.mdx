@@ -17,6 +17,45 @@ reagents: "Acyl chloride (RCOCl) or acid anhydride with anhydrous AlCl₃ (at le
 conditions: "Anhydrous; warm (benzene + CH₃COCl about 80 °C); aqueous work-up frees the ketone from AlCl₃"
 equation: "C6H6 + CH3COCl ->[anhyd. AlCl3] C6H5COCH3 + HCl"
 notesPages: [20, 104]
+steps:
+  - title: "Acylium ion formation"
+    text: "AlCl₃ takes chloride from ethanoyl chloride, giving the acylium ion and AlCl₄⁻. The charge is shared with oxygen (CH₃–C≡O⁺ ↔ CH₃–C⁺=O), so the acylium ion does not rearrange."
+    arrows: "Cl lone pair → empty orbital on Al; the C–Cl bond pair leaves as AlCl₄⁻ and an O lone pair forms C≡O⁺."
+    species:
+      - smiles: "CC(=O)Cl"
+        label: "Ethanoyl chloride"
+        highlight: "C(=O)Cl"
+      - smiles: "Cl[Al](Cl)Cl"
+        label: "AlCl₃"
+        highlight: "[Al]"
+  - title: "Attack by the ring"
+    text: "The π electrons of benzene attack the carbon of the acylium ion, giving a resonance-stabilised arenium ion (σ-complex). This step breaks aromaticity and is the slow step."
+    arrows: "A π pair of benzene → acylium carbon; the C≡O⁺ π pair → oxygen."
+    species:
+      - smiles: "c1ccccc1"
+        label: "Benzene"
+      - smiles: "CC#[O+]"
+        label: "Acylium ion"
+        highlight: "C#[O+]"
+  - title: "Deprotonation"
+    text: "AlCl₄⁻ removes the ring proton, aromaticity is restored and HCl is released, giving acetophenone."
+    arrows: "A Cl lone pair of AlCl₄⁻ → ring C–H; the C–H bond pair → ring, rebuilding the aromatic π system."
+    species:
+      - smiles: "CC(=O)C1C=CC=C[CH+]1"
+        label: "Arenium ion (σ-complex)"
+        highlight: "[CX4;R]"
+      - smiles: "Cl[Al-](Cl)(Cl)Cl"
+        label: "AlCl₄⁻"
+  - title: "Complexation and work-up"
+    text: "The ketone oxygen binds AlCl₃, so at least one equivalent of AlCl₃ is needed. Adding water at the end breaks this complex and releases free acetophenone."
+    arrows: "Carbonyl O lone pair → Al; water at work-up breaks the O–Al bond."
+    species:
+      - smiles: "CC(=O)c1ccccc1"
+        label: "Acetophenone"
+        highlight: "[CX3]=O"
+      - smiles: "Cl[Al](Cl)Cl"
+        label: "AlCl₃"
+        highlight: "[Al]"
 memoryTricks: []
 faq:
   - q: "What is the product of benzene with acetyl chloride and anhydrous AlCl₃?"

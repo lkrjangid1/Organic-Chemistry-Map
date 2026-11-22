@@ -1,0 +1,239 @@
+{
+ "exam": "jee-advanced",
+ "year": 2025,
+ "paper": 1,
+ "source": "https://jeeadv.ac.in/past_qps/2025_1_English.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2025-p1-q4",
+   "number": 4,
+   "type": "single",
+   "stem": "Consider the depicted hydrogen (H) in the hydrocarbons given below. The most acidic hydrogen (H) is",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "C=C1C=C(C([H])(C)C)C=C1"
+    },
+    {
+     "key": "B",
+     "smiles": "[H]CC(C)=C1C=C(C)C=C1"
+    },
+    {
+     "key": "C",
+     "smiles": "C=C1C(C([H])(C)C)=CC=C1"
+    },
+    {
+     "key": "D",
+     "smiles": "C=C1CC(=C(C)C[H])C=C1"
+    }
+   ],
+   "answer": "B",
+   "solution": "Acidity is decided by the stability of the carbanion left after the depicted H is removed. In (B) the H sits on the methyl group of the exocyclic C=C(CH₃)–CH₃ unit; losing it gives an allyl anion whose charge can be pushed onto the ring carbon, and the ring then carries two endocyclic C=C bonds plus a carbanion, i.e. an aromatic cyclopentadienyl anion (6π electrons). In (A), (C) and (D) the resulting anion can only be delocalised into cross-conjugated or exocyclic positions and never forms the aromatic cyclopentadienyl anion, so those hydrogens are far less acidic.",
+   "topics": [
+    "concepts/aromaticity",
+    "comparisons/acidic-strength-order",
+    "comparisons/stability-of-reaction-intermediates"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (B)"
+   }
+  },
+  {
+   "id": "jee-advanced-2025-p1-q7",
+   "number": 7,
+   "type": "multiple",
+   "stem": "For the reaction sequence given below, the correct statement(s) is(are)\nCyclohexene —HBr→ P; P —Finkelstein reaction→ Q; P —Swarts reaction→ R\n(In the options, X is any atom other than carbon and hydrogen, and it is different in P, Q and R)",
+   "figures": [
+    {
+     "smiles": "C1=CCCCC1",
+     "label": "Cyclohexene"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "C−X bond length in P, Q and R follows the order Q > R > P."
+    },
+    {
+     "key": "B",
+     "text": "C−X bond enthalpy in P, Q and R follows the order R > P > Q."
+    },
+    {
+     "key": "C",
+     "text": "Relative reactivity toward SN2 reaction in P, Q and R follows the order P > R > Q."
+    },
+    {
+     "key": "D",
+     "text": "pKa value of the conjugate acids of the leaving groups in P, Q and R follows the order R > Q > P."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "solution": "HBr adds to cyclohexene to give bromocyclohexane (P). Finkelstein exchange (NaI/acetone) gives iodocyclohexane (Q) and Swarts exchange (AgF, Hg₂F₂ etc.) gives fluorocyclohexane (R). C–X bond length grows with halogen size, C–I > C–Br > C–F, i.e. Q > P > R, so (A) is wrong. Bond enthalpy runs the other way, C–F > C–Br > C–I, i.e. R > P > Q, so (B) is right. SN2 reactivity follows leaving-group ability I⁻ > Br⁻ > F⁻ (Q > P > R), so (C) is wrong, and the pKa of HX is HF > HBr > HI (R > P > Q), so (D) is wrong.",
+   "topics": [
+    "reactions/finkelstein-reaction",
+    "reactions/swarts-reaction",
+    "concepts/leaving-group-ability"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (B)"
+   }
+  },
+  {
+   "id": "jee-advanced-2025-p1-q12",
+   "number": 12,
+   "type": "numerical",
+   "stem": "The monomer (X) involved in the synthesis of Nylon 6,6 gives positive carbylamine test. If 10 moles of X are analyzed using Dumas method, the amount (in grams) of nitrogen gas evolved is ______.\nUse: Atomic mass of N (in amu) = 14",
+   "figures": [],
+   "answer": "280",
+   "solution": "Nylon 6,6 is made from adipic acid and hexamethylenediamine; only the diamine, H₂N(CH₂)₆NH₂, is a primary amine and gives the carbylamine test, so X is hexamethylenediamine. Each molecule has two N atoms, so in the Dumas method one mole of X releases one mole of N₂. 10 mol of X therefore give 10 mol N₂ = 10 × 28 = 280 g.",
+   "topics": [
+    "concepts/nylon-6-6-and-nylon-6",
+    "reactions/carbylamine-reaction"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (280)"
+   }
+  },
+  {
+   "id": "jee-advanced-2025-p1-q13",
+   "number": 13,
+   "type": "numerical",
+   "stem": "The reaction sequence given below is carried out with 16 moles of X. The yield of the major product in each step is given below the product in parentheses. The amount (in grams) of S produced is______.\nX —(i) Na, dry ether (ii) H₃O⁺→ P (molar mass 210, 100 %) —(i) NaOH, Δ (ii) H₃O⁺→ Q (50 %) —(i) NaOH, CaO (ii) Δ→ R (50 %) —PBr₃, (C₂H₅)₂O→ T (50 %); T —R, NaH, (C₂H₅)₂O→ S (50 %)\nUse: Atomic mass (in amu): H = 1, C = 12, O = 16, Br = 80",
+   "figures": [
+    {
+     "smiles": "Brc1ccccc1C1OCCO1",
+     "label": "X"
+    }
+   ],
+   "answer": "175",
+   "solution": "X is the ethylene acetal of 2-bromobenzaldehyde. Na in dry ether couples two aryl bromides (Fittig coupling) and acid removes the acetals, giving biphenyl-2,2′-dicarbaldehyde, C₁₄H₁₀O₂ (M = 210): 16 mol X → 8 mol P. Hot NaOH effects an intramolecular Cannizzaro reaction, giving 2′-(hydroxymethyl)biphenyl-2-carboxylic acid Q (4 mol); soda-lime decarboxylation gives biphenyl-2-ylmethanol R (2 mol), and PBr₃ converts R to 2-(bromomethyl)biphenyl T (1 mol). In the Williamson step the alkoxide of R displaces bromide from T, forming the symmetric ether (C₁₂H₉CH₂)₂O, C₂₆H₂₂O, M = 350; 50 % of 1 mol gives 0.5 mol = 175 g.",
+   "topics": [
+    "reactions/fittig-reaction",
+    "reactions/cannizzaro-reaction",
+    "reactions/williamson-ether-synthesis"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (175)"
+   }
+  },
+  {
+   "id": "jee-advanced-2025-p1-q15",
+   "number": 15,
+   "type": "matching",
+   "stem": "The major products obtained from the reactions in List-II are the reactants for the named reactions mentioned in List-I. Match each entry in List-I with the appropriate entry in List-II and choose the correct option.\nList-I\n(P) Stephen reaction\n(Q) Sandmeyer reaction\n(R) Hoffmann bromamide degradation reaction\n(S) Cannizzaro reaction\nList-II\n(1) Toluene —(i) CrO₂Cl₂/CS₂ (ii) H₃O⁺→\n(2) Benzoic acid —(i) PCl₅ (ii) NH₃ (iii) P₄O₁₀, Δ→\n(3) Nitrobenzene —(i) Fe, HCl (ii) HCl, NaNO₂ (273-278 K), H₂O→\n(4) Toluene —(i) Cl₂/hν, H₂O (ii) Tollen's reagent (iii) SO₂Cl₂ (iv) NH₃→\n(5) Aniline —(i) (CH₃CO)₂O, Pyridine (ii) HNO₃, H₂SO₄, 288 K (iii) aq. NaOH→",
+   "figures": [
+    {
+     "smiles": "Cc1ccccc1",
+     "label": "Toluene"
+    },
+    {
+     "smiles": "OC(=O)c1ccccc1",
+     "label": "Benzoic acid"
+    },
+    {
+     "smiles": "O=[N+]([O-])c1ccccc1",
+     "label": "Nitrobenzene"
+    },
+    {
+     "smiles": "Nc1ccccc1",
+     "label": "Aniline"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "P → 2; Q → 4; R → 1; S → 3"
+    },
+    {
+     "key": "B",
+     "text": "P → 2; Q → 3; R → 4; S → 1"
+    },
+    {
+     "key": "C",
+     "text": "P → 5; Q → 3; R → 4; S → 2"
+    },
+    {
+     "key": "D",
+     "text": "P → 5; Q → 4; R → 2; S → 1"
+    }
+   ],
+   "answer": "B",
+   "solution": "(1) is the Étard reaction: toluene → benzaldehyde, which has no α-H and undergoes the Cannizzaro reaction (S → 1). (2) gives benzoyl chloride → benzamide → benzonitrile (dehydration by P₄O₁₀); a nitrile is the substrate of the Stephen reduction (P → 2). (3) reduces nitrobenzene to aniline and diazotises it to benzenediazonium chloride, the Sandmeyer substrate (Q → 3). (4) gives benzaldehyde → benzoic acid → benzoyl chloride → benzamide, the substrate for Hofmann bromamide degradation (R → 4). (5) gives p-nitroaniline, which is not needed. So P→2, Q→3, R→4, S→1.",
+   "topics": [
+    "reactions/stephen-reduction",
+    "reactions/sandmeyer-reaction",
+    "reactions/hofmann-bromamide-degradation"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (B)"
+   }
+  },
+  {
+   "id": "jee-advanced-2025-p1-q16",
+   "number": 16,
+   "type": "matching",
+   "stem": "Match the compounds in List-I with the appropriate observations in List-II and choose the correct option.\nList-I: (P), (Q), (R), (S) — structures shown\nList-II\n(1) Reaction with phenyl diazonium salt gives yellow dye.\n(2) Reaction with ninhydrin gives purple color and it also reacts with FeCl₃ to give violet color.\n(3) Reaction with glucose will give corresponding hydrazone.\n(4) Lassiagne extract of the compound treated with dilute HCl followed by addition of aqueous FeCl₃ gives blood red color.\n(5) After complete hydrolysis, it will give ninhydrin test and it DOES NOT give positive phthalein dye test.",
+   "figures": [
+    {
+     "smiles": "NC(C(=O)NCC(=O)OC)c1ccc(O)cc1",
+     "label": "P"
+    },
+    {
+     "smiles": "CC(=O)NC(C(=O)NC(C(C)C)C(=O)OC)c1ccccc1",
+     "label": "Q"
+    },
+    {
+     "smiles": "[NH3+]c1ccccc1.[Cl-]",
+     "label": "R"
+    },
+    {
+     "smiles": "Cc1cc(C)c(NN)c(C)c1",
+     "label": "S"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "P → 1; Q → 5; R → 4; S → 2"
+    },
+    {
+     "key": "B",
+     "text": "P → 2; Q → 5; R → 1; S → 3"
+    },
+    {
+     "key": "C",
+     "text": "P → 5; Q → 2; R → 1; S → 4"
+    },
+    {
+     "key": "D",
+     "text": "P → 2; Q → 1; R → 5; S → 3"
+    }
+   ],
+   "answer": "B",
+   "solution": "P is a dipeptide ester with a free α-NH₂ (ninhydrin purple) and a phenolic OH (violet with FeCl₃), so P → 2. Q has its amino group acetylated and no phenol; only after full hydrolysis are free amino acids released (ninhydrin positive), and it has no phenol for the phthalein test, so Q → 5. R is anilinium chloride; aniline couples with benzenediazonium salt to give a yellow aminoazobenzene dye, so R → 1. S is an arylhydrazine, which condenses with the aldehyde group of glucose to give a hydrazone, so S → 3. None contains both N and S, so (4) is unused.",
+   "topics": [
+    "concepts/amino-acids",
+    "tests/ferric-chloride-test",
+    "reactions/diazo-coupling-reaction"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (B)"
+   }
+  }
+ ]
+}

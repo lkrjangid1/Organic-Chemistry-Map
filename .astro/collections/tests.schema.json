@@ -101,6 +101,49 @@
         "type": "number"
       }
     },
+    "steps": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "species": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "smiles": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "highlight": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "smiles"
+              ]
+            }
+          },
+          "arrows": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "text"
+        ]
+      }
+    },
     "memoryTricks": {
       "default": [],
       "type": "array",

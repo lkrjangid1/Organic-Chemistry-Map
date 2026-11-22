@@ -1,0 +1,151 @@
+{
+ "exam": "jee-advanced",
+ "year": 2024,
+ "paper": 2,
+ "source": "https://jeeadv.ac.in/past_qps/2024_2_English.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2024-p2-q3",
+   "number": 3,
+   "type": "single",
+   "stem": "In the following reaction sequence, the major product Q is\nL-Glucose —i) HI, Δ ii) Cr₂O₃, 775 K, 10-20 atm→ P —Cl₂ (excess), UV→ Q",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "Clc1c(Cl)c(Cl)c(Cl)c(Cl)c1Cl"
+    },
+    {
+     "key": "B",
+     "smiles": "Clc1c(Cl)cc(Cl)cc1Cl"
+    },
+    {
+     "key": "C",
+     "smiles": "Clc1ccc(Cl)cc1"
+    },
+    {
+     "key": "D",
+     "smiles": "ClC1C(Cl)C(Cl)C(Cl)C(Cl)C1Cl"
+    }
+   ],
+   "answer": "D",
+   "solution": "Prolonged heating with HI reduces glucose (either enantiomer) to n-hexane, showing its six carbons form a straight chain. Cr₂O₃ at 775 K and 10–20 atm aromatises n-hexane to benzene (P). Under UV light benzene adds three molecules of Cl₂ by a free-radical addition, not substitution, giving 1,2,3,4,5,6-hexachlorocyclohexane (BHC), option (D).",
+   "topics": [
+    "reagents/hi-and-red-phosphorus",
+    "reactions/free-radical-halogenation",
+    "concepts/aldoses-and-epimers"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2024-p2-q6",
+   "number": 6,
+   "type": "multiple",
+   "stem": "The option(s) with correct sequence of reagents for the conversion of P to Q is(are)",
+   "figures": [
+    {
+     "smiles": "O=C1CC(OC(C)=O)C(CC#CCCCC#N)C1CC#CCCCC(=O)OCC",
+     "label": "P"
+    },
+    {
+     "smiles": "OC1CC(O)C(C/C=C\\CCCC=O)C1C/C=C\\CCCC(=O)O",
+     "label": "Q"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "i) Lindlar’s catalyst, H₂; ii) SnCl₂/HCl; iii) NaBH₄; iv) H₃O⁺"
+    },
+    {
+     "key": "B",
+     "text": "i) Lindlar’s catalyst, H₂; ii) H₃O⁺; iii) SnCl₂/HCl; iv) NaBH₄"
+    },
+    {
+     "key": "C",
+     "text": "i) NaBH₄; ii) SnCl₂/HCl; iii) H₃O⁺; iv) Lindlar’s catalyst, H₂"
+    },
+    {
+     "key": "D",
+     "text": "i) Lindlar’s catalyst, H₂; ii) NaBH₄; iii) SnCl₂/HCl; iv) H₃O⁺"
+    }
+   ],
+   "answer": [
+    "C",
+    "D"
+   ],
+   "solution": "Four changes are needed: both C≡C → cis C=C (Lindlar), ketone → secondary alcohol (NaBH₄), C≡N → CHO (SnCl₂/HCl gives the aldimine salt, which water/acid hydrolyses), and ester/acetate → COOH/OH (H₃O⁺). NaBH₄ must act before the CHO group exists, or it would reduce the aldehyde too, and it must not meet the aldimine salt (which it would reduce to an amine). (D) Lindlar → NaBH₄ → SnCl₂/HCl → H₃O⁺ meets all the conditions. (C) NaBH₄ → SnCl₂/HCl → H₃O⁺ → Lindlar is also correct, because Lindlar H₂ reduces only the alkynes and leaves CHO and COOH alone. (A) uses NaBH₄ on the aldimine salt, and (B) uses NaBH₄ after the aldehyde has formed, so both fail.",
+   "topics": [
+    "reagents/lindlar-catalyst",
+    "reactions/stephen-reduction",
+    "reagents/sodium-borohydride"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2024-p2-q13",
+   "number": 13,
+   "type": "numerical",
+   "stem": "An organic compound P having molecular formula C₆H₆O₃ gives ferric chloride test and does not have intramolecular hydrogen bond. The compound P reacts with 3 equivalents of NH₂OH to produce oxime Q. Treatment of P with excess methyl iodide in the presence of KOH produces compound R as the major product. Reaction of R with excess iso-butylmagnesium bromide followed by treatment with H₃O⁺ gives compound S as the major product.\nThe total number of methyl (−CH₃) group(s) in compound S is _____.",
+   "figures": [],
+   "answer": "12",
+   "solution": "A C₆H₆O₃ phenol without an intramolecular H-bond that forms a trioxime is phloroglucinol (benzene-1,3,5-triol), which reacts in its keto form, cyclohexane-1,3,5-trione. With excess CH₃I/KOH all six acidic CH₂ hydrogens are replaced, giving 2,2,4,4,6,6-hexamethylcyclohexane-1,3,5-trione (R), which has 6 CH₃ groups. Excess iso-butylmagnesium bromide adds to each of the three C=O groups, and each isobutyl group (–CH₂CH(CH₃)₂) brings two more CH₃. S therefore has 6 + 3 × 2 = 12 methyl groups.",
+   "topics": [
+    "tests/ferric-chloride-test",
+    "reactions/grignard-reagent"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2024-p2-q14",
+   "number": 14,
+   "type": "numerical",
+   "passage": "An organic compound P with molecular formula C₉H₁₈O₂ decolorizes bromine water and also shows positive iodoform test. P on ozonolysis followed by treatment with H₂O₂ gives Q and R. While compound Q shows positive iodoform test, compound R does not give positive iodoform test. Q and R on oxidation with pyridinium chlorochromate (PCC) followed by heating give S and T, respectively. Both S and T show positive iodoform test.\nComplete copolymerization of 500 moles of Q and 500 moles of R gives one mole of a single acyclic copolymer U.\n[Given, atomic mass: H =1, C = 12, O =16]",
+   "stem": "Sum of number of oxygen atoms in S and T is _____.",
+   "figures": [],
+   "answer": "2",
+   "solution": "P is CH₃CH(OH)CH₂CH=CHCH₂CH(OH)CH₂CH₃ (one C=C, a CH₃CH(OH)– unit for the iodoform test). Oxidative ozonolysis gives Q = CH₃CH(OH)CH₂COOH (3-hydroxybutanoic acid, iodoform positive) and R = CH₃CH₂CH(OH)CH₂COOH (3-hydroxypentanoic acid, iodoform negative). PCC turns each into a β-keto acid, which decarboxylates on heating: S = acetone and T = butan-2-one, both methyl ketones. Each contains one oxygen atom, so the sum is 1 + 1 = 2.",
+   "topics": [
+    "reactions/ozonolysis",
+    "reactions/haloform-reaction",
+    "reagents/pyridinium-chlorochromate"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2024-p2-q15",
+   "number": 15,
+   "type": "numerical",
+   "passage": "An organic compound P with molecular formula C₉H₁₈O₂ decolorizes bromine water and also shows positive iodoform test. P on ozonolysis followed by treatment with H₂O₂ gives Q and R. While compound Q shows positive iodoform test, compound R does not give positive iodoform test. Q and R on oxidation with pyridinium chlorochromate (PCC) followed by heating give S and T, respectively. Both S and T show positive iodoform test.\nComplete copolymerization of 500 moles of Q and 500 moles of R gives one mole of a single acyclic copolymer U.\n[Given, atomic mass: H =1, C = 12, O =16]",
+   "stem": "The molecular weight of U is _____.",
+   "figures": [],
+   "answer": "93018",
+   "solution": "P is CH₃CH(OH)CH₂CH=CHCH₂CH(OH)CH₂CH₃ (one C=C, a CH₃CH(OH)– unit for the iodoform test). Oxidative ozonolysis gives Q = CH₃CH(OH)CH₂COOH (3-hydroxybutanoic acid, iodoform positive) and R = CH₃CH₂CH(OH)CH₂COOH (3-hydroxypentanoic acid, iodoform negative). PCC turns each into a β-keto acid, which decarboxylates on heating: S = acetone and T = butan-2-one, both methyl ketones. Q (C₄H₈O₃, 104) and R (C₅H₁₀O₃, 118) are hydroxy acids that condense into a linear polyester (PHBV). A single acyclic chain of 1000 monomer units has 999 ester links, so 999 H₂O are lost: 500 × 104 + 500 × 118 − 999 × 18 = 52000 + 59000 − 17982 = 93018.",
+   "topics": [
+    "concepts/biodegradable-polymers",
+    "concepts/polymers"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  }
+ ]
+}

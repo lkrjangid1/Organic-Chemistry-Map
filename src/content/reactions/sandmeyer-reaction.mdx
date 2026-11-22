@@ -17,6 +17,32 @@ reagents: "CuCl/HCl, CuBr/HBr or CuCN/KCN (copper(I) salts; Cu₂X₂ + HX in ol
 conditions: "Diazonium salt solution added to the Cu(I) salt, gentle warming"
 equation: "C6H5N2^+ Cl^- ->[CuCl/HCl] C6H5Cl + N2 ^"
 notesPages: [47]
+steps:
+  - title: "Electron transfer"
+    text: "Cu(I) gives one electron to the benzenediazonium ion, forming Cu(II) and a diazenyl radical. The Sandmeyer reaction is a radical-nucleophilic aromatic substitution, not an SN1 loss of N₂ through an aryl cation."
+    arrows: "Single electron from Cu⁺ → the diazonium ion (fish-hook arrow)."
+    species:
+      - smiles: "N#[N+]c1ccccc1"
+        label: "Benzenediazonium ion"
+        highlight: "N#[N+]"
+      - smiles: "[Cu+]"
+        label: "Cu(I)"
+  - title: "Loss of nitrogen"
+    text: "The diazenyl radical breaks down to a phenyl radical and N₂ gas. Biaryl (Ar–Ar) by-products are evidence for this radical route."
+    arrows: "The C–N bond splits homolytically: one electron stays on the ring carbon and N₂ leaves."
+    species:
+      - smiles: "[N]=Nc1ccccc1"
+        label: "Diazenyl radical"
+        highlight: "[N]=N"
+  - title: "Group transfer"
+    text: "The aryl radical takes Cl from the copper(II) species, giving chlorobenzene and regenerating Cu(I), so copper acts as a catalyst. CuBr/HBr gives bromobenzene and CuCN/KCN gives benzonitrile in the same way."
+    arrows: "Unpaired electron of the aryl radical + one electron of a Cu–Cl bond → new C–Cl bond."
+    species:
+      - smiles: "[c]1ccccc1"
+        label: "Phenyl radical"
+        highlight: "[c;H0]"
+      - smiles: "Cl[Cu]Cl"
+        label: "CuCl₂ (Cu(II))"
 memoryTricks: []
 faq:
   - q: "What is the Sandmeyer reaction?"

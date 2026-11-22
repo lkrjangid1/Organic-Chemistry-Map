@@ -1,0 +1,51 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { url, absUrl } from '../../lib/site';
+import { breadcrumbLd } from '../../lib/seo';
+import { allPages } from '../../lib/sections';
+import { papers, paperSlug, paperTitle, questionHref } from '../../lib/pyq';
+
+const pages = await allPages();
+const byTopic = new Map<string, { label: string; href: string; qs: { label: string; href: string }[] }>();
+for (const paper of papers) {
+  for (const q of paper.questions) {
+    for (const t of q.topics) {
+      const ref = pages.get(t);
+      if (!ref) continue;
+      const entry = byTopic.get(t) ?? { label: ref.title, href: ref.href, qs: [] };
+      entry.qs.push({ label: `${paper.year} P${paper.paper} Q${q.number}`, href: questionHref(paper, q) });
+      byTopic.set(t, entry);
+    }
+  }
+}
+const topics = [...byTopic.values()].sort((a, b) => b.qs.length - a.qs.length || a.label.localeCompare(b.label));
+const total = papers.reduce((n, p) => n + p.questions.length, 0);
+const path = 'pyq/';
+const title = 'JEE Advanced Organic Chemistry PYQs with Solutions';
+const description = `${total} JEE Advanced previous year organic chemistry questions, paper by paper and topic by topic, with redrawn structures, answers and solutions.`;
+const jsonLd = [
+  { '@type': 'CollectionPage', name: title, url: absUrl(path), mainEntity: { '@type': 'ItemList', itemListElement: papers.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: absUrl(`pyq/${paperSlug(p)}/`), name: paperTitle(p) })) } },
+  breadcrumbLd([{ name: 'Previous year questions', path }]),
+];
+---
+<Base title={title} description={description} path={path} jsonLd={jsonLd}>
+  <div class="container page">
+    <Breadcrumbs items={[{ label: 'Previous year questions' }]} />
+    <header class="page-head">
+      <h1>JEE Advanced organic chemistry PYQs</h1>
+      <p class="summary">{description}</p>
+    </header>
+    {papers.length === 0 && <p class="empty">Questions are being added.</p>}
+    <h2>By paper</h2>
+    <ul class="list-cards">
+      {papers.map((p) => <li><a class="card" href={url(`pyq/${paperSlug(p)}/`)}><strong>{paperTitle(p)}</strong><p>{p.questions.length} organic chemistry questions</p></a></li>)}
+    </ul>
+    <h2>By topic</h2>
+    <div class="pyq-topic-list">
+      {topics.map((t) => (
+        <p><a href={t.href}><strong>{t.label}</strong></a> ({t.qs.length}): {t.qs.map((q, i) => <>{i > 0 && ', '}<a href={q.href}>{q.label}</a></>)}</p>
+      ))}
+    </div>
+  </div>
+</Base>

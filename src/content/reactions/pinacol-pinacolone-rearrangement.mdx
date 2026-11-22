@@ -17,6 +17,53 @@ reagents: H⁺ (conc. H₂SO₄) or a Lewis acid
 conditions: Heat (Δ)
 equation: "(CH3)2C(OH)-C(OH)(CH3)2 ->[H+][\\Delta] (CH3)3C-CO-CH3 + H2O"
 notesPages: [8, 25, 73]
+steps:
+  - title: "Protonation of one OH"
+    text: "The acid protonates one OH group of pinacol, turning it into –OH₂⁺, a good leaving group."
+    arrows: "A lone pair on one OH oxygen → H⁺."
+    species:
+      - smiles: "CC(C)(O)C(C)(C)O"
+        label: "Pinacol"
+        highlight: "[OH]"
+      - smiles: "[H+]"
+        label: "H⁺ (conc. H₂SO₄)"
+      - smiles: "CC(C)(O)C(C)(C)[OH2+]"
+        label: "Protonated diol"
+  - title: "Loss of water: carbocation"
+    text: "Water leaves, giving a tertiary carbocation next to the carbon that still carries an OH. In exam answers this is treated as the slow, rate-determining step."
+    arrows: "The C–O bond pair moves onto oxygen and H₂O departs."
+    species:
+      - smiles: "CC(C)(O)C(C)(C)[OH2+]"
+        label: "Protonated diol"
+        highlight: "C[OH2+]"
+      - smiles: "CC(C)(O)[C+](C)C"
+        label: "Tertiary carbocation"
+      - smiles: "O"
+        label: "Water"
+  - title: "1,2-Methyl shift"
+    text: "A methyl group moves with its bonding pair from the carbinol carbon to the cationic carbon. The positive charge now sits on the carbon bearing the OH, where it is stabilised as an oxonium ion."
+    arrows: "The C–CH₃ bond pair carries the methyl to C⁺; an O lone pair then → C⁺, giving C=OH⁺."
+    species:
+      - smiles: "CC(C)(O)[C+](C)C"
+        label: "Tertiary carbocation"
+        highlight: "[CH3]C(O)[C+]"
+      - smiles: "CC(C)(C)[C+](C)O"
+        label: "Shifted cation"
+      - smiles: "CC(C)(C)C(C)=[OH+]"
+        label: "Oxonium ion"
+        highlight: "C=[OH+]"
+  - title: "Deprotonation to pinacolone"
+    text: "Loss of H⁺ from the oxonium oxygen gives the strong C=O of pinacolone (3,3-dimethylbutan-2-one). Forming this C=O is the driving force."
+    arrows: "The O–H bond pair → oxygen, releasing H⁺ and leaving C=O."
+    species:
+      - smiles: "CC(C)(C)C(C)=[OH+]"
+        label: "Oxonium ion"
+        highlight: "[OH+]"
+      - smiles: "CC(=O)C(C)(C)C"
+        label: "Pinacolone"
+        highlight: "C=O"
+      - smiles: "[H+]"
+        label: "H⁺ (regenerated)"
 memoryTricks: []
 faq:
   - q: What is the product of the pinacol–pinacolone rearrangement?

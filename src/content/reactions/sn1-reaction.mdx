@@ -17,6 +17,32 @@ reagents: "Weak or neutral nucleophile (H2O, ROH, CH3COOH), usually the solvent"
 conditions: "Polar protic solvent (water, alcohol, aqueous acetone); tertiary, allylic or benzylic substrate"
 equation: "(CH3)3C-Br + H2O -> (CH3)3C-OH + HBr"
 notesPages: [43, 44]
+steps:
+  - title: "Ionisation (slow)"
+    text: "The polarised C–Br bond breaks heterolytically, giving the planar sp² tert-butyl cation and Br⁻. NCERT describes this step as the slowest one and reversible, so the rate depends only on [tert-butyl bromide]."
+    arrows: "The C–Br bond pair leaves entirely with bromine as Br⁻."
+    species:
+      - smiles: "CC(C)(C)Br"
+        label: "tert-Butyl bromide"
+        highlight: "[CX4]Br"
+  - title: "Nucleophilic attack (fast)"
+    text: "Water attacks either lobe of the empty p orbital, from the top or the bottom face, giving an oxonium ion. At a stereocentre this gives both enantiomers (usually incomplete racemisation), and because a carbocation forms, rearrangement is possible."
+    arrows: "A lone pair on the water oxygen → the empty p orbital of C⁺."
+    species:
+      - smiles: "C[C+](C)C"
+        label: "tert-Butyl cation"
+        highlight: "[C+]"
+      - smiles: "O"
+        label: "Water"
+  - title: "Deprotonation"
+    text: "A solvent water molecule removes H⁺ from the oxonium ion, giving tert-butyl alcohol (2-methylpropan-2-ol). The overall by-product is HBr."
+    arrows: "Lone pair of solvent water → O–H proton; the O–H bond pair stays on oxygen."
+    species:
+      - smiles: "CC(C)(C)[OH2+]"
+        label: "Oxonium ion"
+        highlight: "[OH2+]"
+      - smiles: "O"
+        label: "Water (solvent)"
 memoryTricks: []
 faq:
   - q: "What is the rate law of an SN1 reaction?"

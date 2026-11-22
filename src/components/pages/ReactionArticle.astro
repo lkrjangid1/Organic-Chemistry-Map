@@ -13,6 +13,8 @@ import References from '../../components/References.astro';
 import ReportError from '../../components/ReportError.astro';
 import Byline from '../../components/Byline.astro';
 import LibgenCard from '../../components/LibgenCard.astro';
+import SaveButton from '../../components/SaveButton.astro';
+import MechanismSteps from '../../components/MechanismSteps.astro';
 import { url, absUrl, EXAMS } from '../../lib/site';
 import { edgesById, compoundName, compoundSlug, hasCompoundPage } from '../../lib/graph';
 import { audienceLd, breadcrumbLd, faqLd, orgLd, personLd } from '../../lib/seo';
@@ -20,6 +22,7 @@ import { audienceLd, breadcrumbLd, faqLd, orgLd, personLd } from '../../lib/seo'
 import { getCollection as getAll, type CollectionEntry } from 'astro:content';
 import { SECTIONS, resolveRelated, hindiPages, localiseRef, type ReactionKey } from '../../lib/sections';
 import { t as tr, type Lang } from '../../lib/i18n';
+import { questionsFor, paperTitle, questionHref } from '../../lib/pyq';
 
 interface Props {
   entry: CollectionEntry<'reactions'> | CollectionEntry<'tests'>;
@@ -49,6 +52,7 @@ const d = {
     distinguishes: hi.data.distinguishes ?? entry.data.distinguishes,
     memoryTricks: hi.data.memoryTricks ?? entry.data.memoryTricks,
     faq: hi.data.faq,
+    steps: entry.data.steps.map((st, k) => ({ ...st, ...(hi.data.steps?.[k] ?? {}) })),
     reactant: entry.data.reactant && { ...entry.data.reactant, name: hi.data.reactantName ?? entry.data.reactant.name },
     product: entry.data.product && { ...entry.data.product, name: hi.data.productName ?? entry.data.product.name },
   }),
@@ -128,6 +132,7 @@ const titleOptions = section === 'tests'
   : [`${d.title}: Mechanism, Reagents & Examples`, `${d.title}: Mechanism & Examples`, `${d.title} Mechanism`, d.title];
 const hiTitle = section === 'tests' ? `${d.title}: Reagent, Procedure और Observations` : `${d.title}: Mechanism, Reagents और Examples`;
 const pageTitle = lang === 'hi' ? (hiTitle.length <= 65 ? hiTitle : d.title) : titleOptions.find((t) => t.length <= 65) ?? d.title;
+const pyqs = questionsFor(`${section}/${entry.id}`);
 ---
 <Base title={pageTitle} description={d.description} path={path} altPath={altPath} ogType="article" jsonLd={jsonLd} section={section}>
   <div class="container page">
@@ -139,6 +144,7 @@ const pageTitle = lang === 'hi' ? (hiTitle.length <= 65 ? hiTitle : d.title) : t
         <ExamTags exams={d.exams} />
         {d.verified.status === 'verified' && <span class="tag tag-ok">✓ {s.verifiedAgainst(d.sources.length)}</span>}
         {d.verified.status === 'conflict' && <span class="tag tag-warn">{s.underReview}</span>}
+        <SaveButton path={path} title={d.title} />
       </div>
       <p class="summary">{d.description}</p>
     </header>
@@ -164,6 +170,8 @@ const pageTitle = lang === 'hi' ? (hiTitle.length <= 65 ? hiTitle : d.title) : t
 
         <Content components={components} />
 
+        <MechanismSteps steps={d.steps} />
+
         {d.memoryTricks.length > 0 && (
           <Trick>
             <ul>
@@ -188,6 +196,14 @@ const pageTitle = lang === 'hi' ? (hiTitle.length <= 65 ? hiTitle : d.title) : t
       </article>
 
       <aside class="side">
+        {pyqs.length > 0 && (
+          <div class="side-card">
+            <h2>{s.pyqTitle}</h2>
+            <ul>
+              {pyqs.slice(0, 8).map(({ paper, q }) => <li><a href={questionHref(paper, q)}>{paperTitle(paper)}, Q.{q.number}</a></li>)}
+            </ul>
+          </div>
+        )}
         {mapEdges.length > 0 && (
           <div class="side-card">
             <h2>{s.seeOnMap}</h2>

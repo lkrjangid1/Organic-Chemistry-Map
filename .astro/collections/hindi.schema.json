@@ -54,6 +54,27 @@
         ]
       }
     },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "arrows": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "text"
+        ]
+      }
+    },
     "faq": {
       "default": [],
       "type": "array",

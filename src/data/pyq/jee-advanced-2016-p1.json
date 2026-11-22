@@ -1,0 +1,194 @@
+{
+ "exam": "jee-advanced",
+ "year": 2016,
+ "paper": 1,
+ "source": "https://jeeadv.ac.in/past_qps/2016_1.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2016-p1-q23",
+   "number": 23,
+   "type": "single",
+   "stem": "On complete hydrogenation, natural rubber produces",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "ethylene-propylene copolymer"
+    },
+    {
+     "key": "B",
+     "text": "vulcanised rubber"
+    },
+    {
+     "key": "C",
+     "text": "polypropylene"
+    },
+    {
+     "key": "D",
+     "text": "polybutylene"
+    }
+   ],
+   "answer": "A",
+   "solution": "Natural rubber is cis-1,4-polyisoprene with the repeat unit –CH₂–C(CH₃)=CH–CH₂–. Saturating the C=C gives –CH₂–CH(CH₃)–CH₂–CH₂–. This repeat unit is one propylene unit (–CH₂–CH(CH₃)–) joined to one ethylene unit (–CH₂–CH₂–), so the product is an alternating ethylene–propylene copolymer. Vulcanisation is cross-linking with sulfur, not hydrogenation.",
+   "topics": [
+    "concepts/natural-and-synthetic-rubber",
+    "concepts/polymers"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (A)"
+   }
+  },
+  {
+   "id": "jee-advanced-2016-p1-q29",
+   "number": 29,
+   "type": "multiple",
+   "stem": "Positive Tollen's test is observed for",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "C=CC=O"
+    },
+    {
+     "key": "B",
+     "smiles": "O=Cc1ccccc1"
+    },
+    {
+     "key": "C",
+     "smiles": "OC(C(=O)c1ccccc1)c1ccccc1"
+    },
+    {
+     "key": "D",
+     "smiles": "O=C(/C=C/c1ccccc1)c1ccccc1"
+    }
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "solution": "Tollens' reagent is reduced to silver by aldehydes and by α-hydroxy ketones. Acrolein (A) and benzaldehyde (B) are aldehydes and both give a silver mirror. Benzoin (C) is an α-hydroxy ketone: in the basic ammoniacal medium it is readily oxidised (via its enediol) to benzil, so it also tests positive. Chalcone (D) is a simple α,β-unsaturated ketone with no aldehyde or α-hydroxy group, so it does not react.",
+   "topics": [
+    "tests/tollens-test"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (A, B, C)"
+   }
+  },
+  {
+   "id": "jee-advanced-2016-p1-q30",
+   "number": 30,
+   "type": "multiple",
+   "stem": "The product(s) of the following reaction sequence is(are)\nAniline —i) Acetic anhydride/pyridine ii) KBrO₃/HBr iii) H₃O⁺, heat iv) NaNO₂/HCl, 273–278 K v) Cu/HBr→ ?",
+   "figures": [
+    {
+     "smiles": "Nc1ccccc1",
+     "label": "Aniline"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "Brc1cccc(Br)c1"
+    },
+    {
+     "key": "B",
+     "smiles": "Brc1ccc(Br)cc1"
+    },
+    {
+     "key": "C",
+     "smiles": "Brc1cccc(Br)c1Br"
+    },
+    {
+     "key": "D",
+     "smiles": "Brc1cc(Br)c(Br)c(Br)c1"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "solution": "Acetylation converts aniline into acetanilide, which moderates the activation and so prevents polybromination. Br₂ generated from KBrO₃/HBr then monobrominates acetanilide at the less hindered para position. Acid hydrolysis gives 4-bromoaniline, and diazotisation followed by Cu/HBr (Gattermann/Sandmeyer) replaces N₂⁺ by Br. The product is 1,4-dibromobenzene.",
+   "topics": [
+    "reactions/sandmeyer-reaction",
+    "reactions/diazotization-reaction",
+    "mechanisms/electrophilic-aromatic-substitution"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (B)"
+   }
+  },
+  {
+   "id": "jee-advanced-2016-p1-q31",
+   "number": 31,
+   "type": "multiple",
+   "stem": "The correct statement(s) about the following reaction sequence is(are)\nCumene (C₉H₁₂) —i) O₂ ii) H₃O⁺→ P —CHCl₃/NaOH→ Q (major) + R (minor)\nQ —NaOH, PhCH₂Br→ S",
+   "figures": [
+    {
+     "smiles": "CC(C)c1ccccc1",
+     "label": "Cumene"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "R is steam volatile"
+    },
+    {
+     "key": "B",
+     "text": "Q gives dark violet coloration with 1% aqueous FeCl₃ solution"
+    },
+    {
+     "key": "C",
+     "text": "S gives yellow precipitate with 2, 4-dinitrophenylhydrazine"
+    },
+    {
+     "key": "D",
+     "text": "S gives dark violet coloration with 1% aqueous FeCl₃ solution"
+    }
+   ],
+   "answer": [
+    "B",
+    "C"
+   ],
+   "solution": "Cumene is oxidised to its hydroperoxide, which is cleaved by acid to phenol (P) and acetone. The Reimer–Tiemann reaction on phenol gives salicylaldehyde (Q, ortho, major) and 4-hydroxybenzaldehyde (R, para, minor). R forms intermolecular hydrogen bonds, so it is not steam volatile, unlike Q with its intramolecular hydrogen bond. Q has a free phenolic OH and gives the violet FeCl₃ colour. Benzylating Q gives 2-(benzyloxy)benzaldehyde (S), which still has a CHO group (positive 2,4-DNP test) but no phenolic OH, so it gives no FeCl₃ colour.",
+   "topics": [
+    "reactions/cumene-process",
+    "reactions/reimer-tiemann-reaction",
+    "tests/ferric-chloride-test"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (B, C)"
+   }
+  },
+  {
+   "id": "jee-advanced-2016-p1-q36",
+   "number": 36,
+   "type": "numerical",
+   "stem": "In the following monobromination reaction, the number of possible chiral products is\n(R)-2-bromopentane (1.0 mole, enantiomerically pure; drawn as a Fischer projection) —Br₂ (1.0 mole), 300 °C→ ?",
+   "figures": [
+    {
+     "smiles": "CCC[C@@H](C)Br"
+    }
+   ],
+   "answer": "5",
+   "solution": "Radical bromination can replace H at C-1, C-2, C-3, C-4 or C-5, and the original stereocentre is untouched unless C-2 itself reacts. C-1 gives 1,2-dibromopentane (one chiral product), and C-2 gives achiral 2,2-dibromopentane. C-3 creates a new stereocentre and gives two diastereomers of 2,3-dibromopentane, both chiral. C-4 gives (2R,4R)-2,4-dibromopentane (chiral) and the meso (2R,4S) isomer (achiral). C-5 gives chiral 1,4-dibromopentane, so the total is 1 + 2 + 1 + 1 = 5.",
+   "topics": [
+    "reactions/free-radical-halogenation",
+    "mechanisms/free-radical-reactions"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (5)"
+   }
+  }
+ ]
+}

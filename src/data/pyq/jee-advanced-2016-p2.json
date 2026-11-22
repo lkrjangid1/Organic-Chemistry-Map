@@ -1,0 +1,331 @@
+{
+ "exam": "jee-advanced",
+ "year": 2016,
+ "paper": 2,
+ "source": "https://jeeadv.ac.in/past_qps/2016_2.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2016-p2-q23",
+   "number": 23,
+   "type": "single",
+   "stem": "The correct order of acidity for the following compounds is",
+   "figures": [
+    {
+     "smiles": "OC(=O)c1c(O)cccc1O",
+     "label": "I"
+    },
+    {
+     "smiles": "OC(=O)c1ccccc1O",
+     "label": "II"
+    },
+    {
+     "smiles": "OC(=O)c1cccc(O)c1",
+     "label": "III"
+    },
+    {
+     "smiles": "OC(=O)c1ccc(O)cc1",
+     "label": "IV"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "I > II > III > IV"
+    },
+    {
+     "key": "B",
+     "text": "III > I > II > IV"
+    },
+    {
+     "key": "C",
+     "text": "III > IV > II > I"
+    },
+    {
+     "key": "D",
+     "text": "I > III > IV > II"
+    }
+   ],
+   "answer": "A",
+   "solution": "An ortho-OH stabilises the carboxylate by intramolecular hydrogen bonding, which strongly raises acidity. 2,6-Dihydroxybenzoic acid (I) has two such hydrogen bonds and is the strongest, ahead of salicylic acid (II) with one. With OH at the meta position (III) only its electron-withdrawing inductive effect acts, so the acid is slightly stronger than benzoic acid. At the para position (IV) the +R donation of OH dominates and weakens the acid, which gives I > II > III > IV.",
+   "topics": [
+    "comparisons/acidity-of-carboxylic-acids",
+    "concepts/ortho-effect"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (A)"
+   }
+  },
+  {
+   "id": "jee-advanced-2016-p2-q24",
+   "number": 24,
+   "type": "single",
+   "stem": "The major product of the following reaction sequence is\nStarting ketone —i) HCHO (excess)/NaOH, heat ii) HCHO/H⁺ (catalytic amount)→ ?",
+   "figures": [
+    {
+     "smiles": "CC(C)C(=O)c1ccccc1"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "CC1(C)COCOC1c1ccccc1"
+    },
+    {
+     "key": "B",
+     "smiles": "CC(C)(COCO)C(=O)c1ccccc1"
+    },
+    {
+     "key": "C",
+     "smiles": "CC1(C)COCOC1(O)c1ccccc1"
+    },
+    {
+     "key": "D",
+     "smiles": "CC(C)(CO)C(=O)c1cccc(CO)c1"
+    }
+   ],
+   "answer": "A",
+   "solution": "The ketone has a single α-hydrogen, so with base it undergoes one crossed aldol addition to HCHO, giving PhCOC(CH₃)₂CH₂OH. Excess formaldehyde in hot alkali then acts as a hydride donor (a crossed Cannizzaro-type reduction) and reduces the C=O to CH–OH, giving the 1,3-diol PhCH(OH)C(CH₃)₂CH₂OH. With HCHO and a trace of acid, this 1,3-diol forms a cyclic formal, 5,5-dimethyl-4-phenyl-1,3-dioxane.",
+   "topics": [
+    "reactions/cross-aldol-condensation",
+    "reactions/cannizzaro-reaction"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (A)"
+   }
+  },
+  {
+   "id": "jee-advanced-2016-p2-q30",
+   "number": 30,
+   "type": "multiple",
+   "stem": "For 'invert sugar', the correct statement(s) is(are)\n(Given: specific rotations of (+)-sucrose, (+)-maltose, L-(−)-glucose and L-(+)-fructose in aqueous solution are +66°, +140°, −52° and +92°, respectively)",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "'invert sugar' is prepared by acid catalyzed hydrolysis of maltose"
+    },
+    {
+     "key": "B",
+     "text": "'invert sugar' is an equimolar mixture of D-(+)-glucose and D-(−)-fructose"
+    },
+    {
+     "key": "C",
+     "text": "specific rotation of 'invert sugar' is −20°"
+    },
+    {
+     "key": "D",
+     "text": "on reaction with Br₂ water, 'invert sugar' forms saccharic acid as one of the products"
+    }
+   ],
+   "answer": [
+    "B",
+    "C"
+   ],
+   "solution": "Invert sugar comes from hydrolysing sucrose, not maltose, and is an equimolar mixture of D-glucose and D-fructose. The D enantiomers have rotations opposite to the given L values: D-glucose +52° and D-fructose −92°. For a 1:1 mixture the rotation is (52 − 92)/2 = −20°, which is where the change in sign from sucrose (+66°) comes from. Bromine water is a mild oxidant that turns glucose into gluconic acid; making saccharic (glucaric) acid needs HNO₃.",
+   "topics": [
+    "concepts/disaccharides"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (B, C)"
+   }
+  },
+  {
+   "id": "jee-advanced-2016-p2-q31",
+   "number": 31,
+   "type": "multiple",
+   "stem": "Reagent(s) which can be used to bring about the following transformation is(are)",
+   "figures": [
+    {
+     "smiles": "CC(C)(C)OC(=O)C(CCCC(=O)O)C1OC1C=O",
+     "label": "Reactant"
+    },
+    {
+     "smiles": "CC(C)(C)OC(=O)C(CCCC(=O)O)C1OC1CO",
+     "label": "Product"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "LiAlH₄ in (C₂H₅)₂O"
+    },
+    {
+     "key": "B",
+     "text": "BH₃ in THF"
+    },
+    {
+     "key": "C",
+     "text": "NaBH₄ in C₂H₅OH"
+    },
+    {
+     "key": "D",
+     "text": "Raney Ni/H₂ in THF"
+    }
+   ],
+   "answer": [
+    "C",
+    "D"
+   ],
+   "solution": "Only the aldehyde must be reduced to CH₂OH, while the carboxylic acid, the tert-butyl ester and the epoxide survive. NaBH₄ in ethanol reduces aldehydes quickly and leaves acids, esters and epoxides intact. Raney Ni/H₂ under mild conditions also reduces the C=O of the aldehyde selectively. LiAlH₄ would also reduce the acid and the ester and could open the epoxide. BH₃ reduces carboxylic acids very fast, so it would attack the COOH.",
+   "topics": [
+    "reagents/sodium-borohydride",
+    "mechanisms/reduction-reactions"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (C, D)"
+   }
+  },
+  {
+   "id": "jee-advanced-2016-p2-q32",
+   "number": 32,
+   "type": "multiple",
+   "stem": "Among the following, reaction(s) which gives(give) tert-butyl benzene as the major product is(are)\n(A) benzene + (CH₃)₃CBr, NaOC₂H₅\n(B) benzene + (CH₃)₂CHCH₂Cl, AlCl₃\n(C) benzene + (CH₃)₂C=CH₂, H₂SO₄\n(D) benzene + (CH₃)₂CHCH₂OH, BF₃·OEt₂",
+   "figures": [
+    {
+     "smiles": "c1ccccc1",
+     "label": "Benzene"
+    },
+    {
+     "smiles": "CC(C)(C)Br",
+     "label": "A"
+    },
+    {
+     "smiles": "CC(C)CCl",
+     "label": "B"
+    },
+    {
+     "smiles": "C=C(C)C",
+     "label": "C"
+    },
+    {
+     "smiles": "CC(C)CO",
+     "label": "D"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "benzene + tert-butyl bromide with NaOC₂H₅"
+    },
+    {
+     "key": "B",
+     "text": "benzene + isobutyl chloride with AlCl₃"
+    },
+    {
+     "key": "C",
+     "text": "benzene + isobutylene with H₂SO₄"
+    },
+    {
+     "key": "D",
+     "text": "benzene + isobutyl alcohol with BF₃·OEt₂"
+    }
+   ],
+   "answer": [
+    "B",
+    "C",
+    "D"
+   ],
+   "solution": "Friedel–Crafts alkylation needs an acid that makes a carbocation. NaOEt is a base, so with tert-butyl bromide it only causes E2 elimination to isobutylene, and benzene does not react. AlCl₃ with isobutyl chloride, and BF₃ with isobutyl alcohol, both give a primary cation (or cation-like complex) that undergoes a hydride shift to the tert-butyl cation. Protonating isobutylene with H₂SO₄ gives the tert-butyl cation directly. In each of these three cases the cation alkylates benzene to give tert-butylbenzene.",
+   "topics": [
+    "reactions/friedel-crafts-alkylation",
+    "concepts/carbocations"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (B, C, D)"
+   }
+  },
+  {
+   "id": "jee-advanced-2016-p2-q35",
+   "number": 35,
+   "type": "paragraph",
+   "passage": "Treatment of compound O with KMnO₄/H⁺ gave P, which on heating with ammonia gave Q. The compound Q on treatment with Br₂/NaOH produced R. On strong heating, Q gave S, which on further treatment with ethyl 2-bromopropanoate in the presence of KOH followed by acidification, gave a compound T.",
+   "stem": "The compound R is",
+   "figures": [
+    {
+     "smiles": "CCCc1ccccc1CCC",
+     "label": "O"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "smiles": "Nc1ccccc1N"
+    },
+    {
+     "key": "B",
+     "smiles": "O=C(Br)c1ccccc1C(=O)Br"
+    },
+    {
+     "key": "C",
+     "smiles": "O=C(NBr)c1ccccc1C(=O)NBr"
+    },
+    {
+     "key": "D",
+     "smiles": "O=C1N(Br)C(=O)c2ccccc12"
+    }
+   ],
+   "answer": "A",
+   "solution": "Hot acidic KMnO₄ oxidises both benzylic side chains to COOH, giving phthalic acid (P). Heating it with ammonia gives phthalamide (Q), and strong heating of Q loses NH₃ to give phthalimide (S). Br₂/NaOH carries out a Hofmann bromamide degradation on both CONH₂ groups of phthalamide. Each amide loses one carbon and becomes NH₂, so R is benzene-1,2-diamine.",
+   "topics": [
+    "reactions/hofmann-bromamide-degradation"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (A)"
+   }
+  },
+  {
+   "id": "jee-advanced-2016-p2-q36",
+   "number": 36,
+   "type": "paragraph",
+   "passage": "Treatment of compound O with KMnO₄/H⁺ gave P, which on heating with ammonia gave Q. The compound Q on treatment with Br₂/NaOH produced R. On strong heating, Q gave S, which on further treatment with ethyl 2-bromopropanoate in the presence of KOH followed by acidification, gave a compound T.",
+   "stem": "The compound T is",
+   "figures": [
+    {
+     "smiles": "CCCc1ccccc1CCC",
+     "label": "O"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "glycine"
+    },
+    {
+     "key": "B",
+     "text": "alanine"
+    },
+    {
+     "key": "C",
+     "text": "valine"
+    },
+    {
+     "key": "D",
+     "text": "serine"
+    }
+   ],
+   "answer": "B",
+   "solution": "S is phthalimide. KOH deprotonates its N–H, and the imide anion displaces bromide from ethyl 2-bromopropanoate (Gabriel synthesis), giving N-phthalimido ethyl propanoate. Hydrolysis and acidification release the phthalic acid part and the ester, leaving CH₃CH(NH₂)COOH. So T is alanine.",
+   "topics": [
+    "reactions/gabriel-phthalimide-synthesis",
+    "concepts/amino-acids"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; matches the official key printed in the paper (B)"
+   }
+  }
+ ]
+}

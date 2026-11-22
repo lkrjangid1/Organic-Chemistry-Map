@@ -35,6 +35,7 @@ const jsonLd = [
 </Base>
 
 <script>
+  import { notifyProgress } from '../../scripts/account';
   type Opt = { name: string; svg: string };
   type Q = { type: 'structure' | 'group'; reactant?: Opt; from?: string; reagents: string; conditions?: string; options: (Opt | string)[]; answer: number; title: string; note?: string; href: string };
   const all: Q[] = JSON.parse(document.getElementById('qz-data')!.textContent!);
@@ -75,7 +76,7 @@ const jsonLd = [
   }
   function finish() {
     let best = 0;
-    try { best = Number(localStorage.getItem(BEST) ?? 0); if (score > best) localStorage.setItem(BEST, String(score)); } catch { /* storage unavailable */ }
+    try { best = Number(localStorage.getItem(BEST) ?? 0); if (score > best) { localStorage.setItem(BEST, String(score)); notifyProgress(); } } catch { /* storage unavailable */ }
     box.innerHTML = `<div class="qz-end"><h2>You scored ${score} out of ${round.length}</h2><p>${score > best ? 'New best score!' : `Best so far: ${Math.max(best, score)}/10`}</p><button type="button" class="btn btn-primary" id="qz-again">Play another round</button></div>`;
   }
   box.addEventListener('click', (e) => {

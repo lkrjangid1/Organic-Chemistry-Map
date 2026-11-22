@@ -17,6 +17,40 @@ reagents: "Conc. H₂SO₄ or 85% H₃PO₄ (also Al₂O₃ or anhydrous ZnCl₂
 conditions: "Heat: 443 K for ethanol; milder for 2° and 3° alcohols"
 equation: "CH3CH2OH ->[conc. H2SO4][443 K] CH2=CH2 + H2O"
 notesPages: [8, 17, 19, 26, 27, 30, 73]
+steps:
+  - title: "Protonation of the alcohol"
+    text: "An oxygen lone pair of ethanol takes H⁺ from concentrated H₂SO₄, giving CH₃CH₂–OH₂⁺. Water is now a good leaving group."
+    arrows: "Lone pair of the –OH oxygen → H⁺ of the acid."
+    species:
+      - smiles: "CCO"
+        label: "Ethanol"
+        highlight: "[OH]"
+      - smiles: "[H+]"
+        label: "Proton"
+      - smiles: "CC[OH2+]"
+        label: "Protonated ethanol"
+  - title: "Formation of the carbocation"
+    text: "Water leaves, giving the ethyl carbocation. NCERT treats this as the slowest, rate-determining step; university texts note that primary alcohols really react by E2, but exam answers use this NCERT path."
+    arrows: "C–O bond pair → oxygen as water departs."
+    species:
+      - smiles: "CC[OH2+]"
+        label: "Protonated ethanol"
+        highlight: "C[OH2+]"
+      - smiles: "C[CH2+]"
+        label: "Ethyl carbocation"
+      - smiles: "O"
+        label: "Water"
+  - title: "Loss of a β-proton"
+    text: "A base (HSO₄⁻ or water) removes H⁺ from the adjacent carbon to give the C=C bond of ethene, regenerating the acid. Ethene is removed as it forms at 443 K, pulling the equilibrium forward."
+    arrows: "Base lone pair → β-H; the C–H bond pair → C=C."
+    species:
+      - smiles: "C[CH2+]"
+        label: "Ethyl carbocation"
+        highlight: "[CH3][CH2+]"
+      - smiles: "OS(=O)(=O)[O-]"
+        label: "Hydrogen sulphate"
+      - smiles: "C=C"
+        label: "Ethene"
 memoryTricks: []
 faq:
   - q: "What is the product of dehydration of ethanol with conc. H₂SO₄?"

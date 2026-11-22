@@ -17,6 +17,37 @@ reagents: "Sodium alkoxide or phenoxide (RO⁻Na⁺) + alkyl halide (R′–X)"
 conditions: "Alkoxide made from ROH with Na or NaH (phenoxide with NaOH); polar solvent, warm"
 equation: "C2H5ONa + C2H5Cl -> C2H5-O-C2H5 + NaCl"
 notesPages: [49]
+steps:
+  - title: "Alkoxide formation"
+    text: "Ethanol is deprotonated by sodium metal (or NaH) to give sodium ethoxide. The ethoxide ion is a strong nucleophile and also a strong base."
+    arrows: "The O–H bond pair stays on oxygen as the hydrogen is removed, leaving a negatively charged oxygen."
+    species:
+      - smiles: "CCO"
+        label: "Ethanol"
+        highlight: "[OX2H]"
+      - smiles: "[Na]"
+        label: "Sodium"
+      - smiles: "CC[O-].[Na+]"
+        label: "Sodium ethoxide"
+  - title: "Backside SN2 attack"
+    text: "The ethoxide oxygen attacks the carbon bearing chlorine from the side opposite to Cl. The C–O bond forms as the C–Cl bond breaks, in one step."
+    arrows: "Lone pair of O⁻ → back of the C–Cl carbon; the C–Cl bond pair → Cl, which leaves as Cl⁻."
+    species:
+      - smiles: "CC[O-]"
+        label: "Ethoxide ion"
+        highlight: "[O-]"
+      - smiles: "CCCl"
+        label: "Chloroethane"
+        highlight: "[CH2]Cl"
+  - title: "Ether and NaCl"
+    text: "Diethyl ether and sodium chloride are formed. If the attacked carbon is a stereocentre its configuration is inverted; the halide must be methyl or primary, because 3° halides give only E2 alkenes."
+    arrows: "No further arrows: the expelled Cl⁻ pairs with Na⁺ as NaCl."
+    species:
+      - smiles: "CCOCC"
+        label: "Ethoxyethane"
+        highlight: "[OX2]"
+      - smiles: "[Na+].[Cl-]"
+        label: "Sodium chloride"
 memoryTricks: []
 faq:
   - q: "What is the Williamson ether synthesis?"

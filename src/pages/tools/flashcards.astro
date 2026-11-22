@@ -52,6 +52,7 @@ const jsonLd = [
 </Base>
 
 <script>
+  import { notifyProgress } from '../../scripts/account';
   type Card = { id: string; deck: string; front: string; sub?: string; back: string[]; href: string };
   const cards: Card[] = JSON.parse(document.getElementById('fc-data')!.textContent!);
   const KEY = 'ocm-flashcards-v1';
@@ -96,6 +97,7 @@ const jsonLd = [
     if (!current || $('fc-back').hidden) return;
     boxes[current.id] = knew ? Math.min(5, (boxes[current.id] ?? 1) + 1) : 1;
     save(boxes);
+    notifyProgress();
     show();
   }
   function stats() {
@@ -117,5 +119,6 @@ const jsonLd = [
     if (e.key === '1') grade(false);
     if (e.key === '2') grade(true);
   });
+  window.addEventListener('ocm:synced', () => { boxes = load(); stats(); });
   show();
 </script>

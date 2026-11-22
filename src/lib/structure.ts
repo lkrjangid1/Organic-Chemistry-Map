@@ -15,10 +15,10 @@ const getRDKit = () => {
 
 export async function moleculeSvg(
   smiles: string | undefined,
-  { width = 220, height = 160 }: { width?: number; height?: number } = {},
+  { width = 220, height = 160, highlight }: { width?: number; height?: number; highlight?: string } = {},
 ): Promise<string | null> {
   if (!smiles) return null;
-  const key = `${smiles}|${width}|${height}`;
+  const key = `${smiles}|${width}|${height}|${highlight ?? ''}`;
   if (cache.has(key)) return cache.get(key)!;
 
   const rdkit = await getRDKit();
@@ -29,8 +29,22 @@ export async function moleculeSvg(
     return null;
   }
   try {
+    // Optional SMARTS highlight: the matched atoms and bonds are tinted.
+    let match: { atoms?: number[]; bonds?: number[] } = {};
+    if (highlight) {
+      const q = rdkit.get_qmol(highlight);
+      if (q?.is_valid()) {
+        const m = JSON.parse(mol.get_substruct_match(q) || '{}');
+        if (m.atoms) match = { atoms: m.atoms, bonds: m.bonds ?? [] };
+      }
+      q?.delete();
+    }
     let svg = mol.get_svg_with_highlights(
       JSON.stringify({
+        ...match,
+        highlightColour: [1, 0.78, 0.5],
+        highlightRadius: 0.25,
+        highlightBondWidthMultiplier: 10,
         width,
         height,
         backgroundColour: [1, 1, 1, 0],

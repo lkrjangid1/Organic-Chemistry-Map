@@ -1,0 +1,217 @@
+{
+ "exam": "jee-advanced",
+ "year": 2022,
+ "paper": 1,
+ "source": "https://jeeadv.ac.in/past_qps/2022_1_English.pdf",
+ "questions": [
+  {
+   "id": "jee-advanced-2022-p1-q6",
+   "number": 6,
+   "type": "numerical",
+   "stem": "Consider the following reaction.\n4-BrC₆H₄CH₂OH —red phosphorous, Br₂→ R (major product)\nOn estimation of bromine in 1.00 g of R using Carius method, the amount of AgBr formed (in g) is ________.\n[Given: Atomic mass of H = 1, C = 12, O = 16, P = 31, Br = 80, Ag = 108]",
+   "figures": [
+    {
+     "smiles": "OCc1ccc(Br)cc1"
+    }
+   ],
+   "answer": "1.50",
+   "solution": "Red P and Br₂ generate PBr₃, which replaces the benzylic OH by Br; the aryl C–Br bond is untouched, so R is 4-BrC₆H₄CH₂Br, C₇H₆Br₂ (M = 250). 1.00 g of R = 0.004 mol, which contains 0.008 mol Br. In the Carius method all of it ends up as AgBr (M = 188): 0.008 × 188 = 1.504 g ≈ 1.50 g.",
+   "topics": [
+    "mechanisms/nucleophilic-substitution"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2022-p1-q7",
+   "number": 7,
+   "type": "numerical",
+   "stem": "The weight percentage of hydrogen in Q, formed in the following reaction sequence, is ________.\nC₆H₅Cl —1. NaOH, 623 K, 300 atm 2. conc. H₂SO₄ and then conc. HNO₃→ Q (major product)\n[Given: Atomic mass of H = 1, C = 12, N = 14, O = 16, S = 32, Cl = 35]",
+   "figures": [
+    {
+     "smiles": "Clc1ccccc1"
+    }
+   ],
+   "answer": "1.31",
+   "solution": "Fusing chlorobenzene with NaOH at 623 K and 300 atm (Dow process) gives sodium phenoxide, and from it phenol. Sulfonation followed by nitration with conc. HNO₃ replaces the SO₃H groups and gives picric acid, 2,4,6-trinitrophenol, C₆H₃N₃O₇ (M = 229). %H = 3/229 × 100 = 1.31%.",
+   "topics": [
+    "preparation/preparation-of-phenols",
+    "mechanisms/reactions-of-phenols",
+    "mechanisms/electrophilic-aromatic-substitution"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2022-p1-q8",
+   "number": 8,
+   "type": "numerical",
+   "stem": "If the reaction sequence given below is carried out with 15 moles of acetylene, the amount of the product D formed (in g) is ________.\nHC≡CH —iron tube (red hot)→ A (80%) —H₃C–CH₂–CH₂–Cl, AlCl₃→ B (50%) —1. O₂ 2. H₃O⁺, −CH₃COCH₃→ C (50%) —CH₃COCl, pyridine→ D (100%)\nThe yields of A, B, C and D are given in parentheses.\n[Given: Atomic mass of H = 1, C = 12, O = 16, Cl = 35]",
+   "figures": [
+    {
+     "smiles": "C#C"
+    },
+    {
+     "smiles": "CCCCl"
+    }
+   ],
+   "answer": "136",
+   "solution": "Three acetylenes cyclise to benzene: 15/3 × 0.8 = 4 mol of A. Friedel–Crafts alkylation with 1-chloropropane goes through rearrangement to the isopropyl cation, giving cumene: 4 × 0.5 = 2 mol of B. The cumene process (O₂, then H₃O⁺, with loss of acetone) gives phenol: 2 × 0.5 = 1 mol of C. Acetylation in pyridine gives phenyl acetate, C₈H₈O₂ (M = 136): 1 mol = 136 g of D.",
+   "topics": [
+    "reactions/cumene-process",
+    "reactions/friedel-crafts-alkylation",
+    "mechanisms/reactions-of-phenols"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2022-p1-q13",
+   "number": 13,
+   "type": "multiple",
+   "stem": "Considering the reaction sequence given below, the correct statement(s) is(are)\nCH₃CH₂COOH —1. Br₂, red phosphorous 2. H₂O→ P —1. potassium phthalimide 2. NaOH 3. H₃O⁺→ Q + phthalic acid",
+   "figures": [
+    {
+     "smiles": "CCC(=O)O"
+    },
+    {
+     "smiles": "O=C1[N-]C(=O)c2ccccc21.[K+]",
+     "label": "potassium phthalimide"
+    },
+    {
+     "smiles": "OC(=O)c1ccccc1C(=O)O",
+     "label": "phthalic acid"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "P can be reduced to a primary alcohol using NaBH₄."
+    },
+    {
+     "key": "B",
+     "text": "Treating P with conc. NH₄OH solution followed by acidification gives Q."
+    },
+    {
+     "key": "C",
+     "text": "Treating Q with a solution of NaNO₂ in aq. HCl liberates N₂."
+    },
+    {
+     "key": "D",
+     "text": "P is more acidic than CH₃CH₂COOH."
+    }
+   ],
+   "answer": [
+    "B",
+    "C",
+    "D"
+   ],
+   "solution": "HVZ bromination gives 2-bromopropanoic acid (P). Gabriel synthesis (N-alkylation of phthalimide, then hydrolysis) gives alanine (Q) and phthalic acid. (A) NaBH₄ does not reduce a carboxylic acid, so it is false. (B) Ammonolysis of the α-bromo acid with conc. NH₄OH, then acidification, also gives alanine, so it is true. (C) Alanine is a primary aliphatic amine and gives N₂ with HNO₂, so it is true. (D) The −I effect of the α-Br makes P stronger than propanoic acid, so it is true.",
+   "topics": [
+    "reactions/hell-volhard-zelinsky-reaction",
+    "reactions/gabriel-phthalimide-synthesis",
+    "tests/nitrous-acid-test-for-amines"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2022-p1-q14",
+   "number": 14,
+   "type": "multiple",
+   "stem": "Considering the following reaction sequence,\n4-nitrotoluene —P→ Q —R→ S —H₂O→ T; S —U→ benzoic acid\nthe correct option(s) is(are)",
+   "figures": [
+    {
+     "smiles": "Cc1ccc(cc1)[N+](=O)[O-]"
+    },
+    {
+     "smiles": "OC(=O)c1ccccc1",
+     "label": "benzoic acid"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "P = H₂/Pd, ethanol; R = NaNO₂/HCl; U = 1. H₃PO₂ 2. KMnO₄–KOH, heat"
+    },
+    {
+     "key": "B",
+     "text": "P = Sn/HCl; R = HNO₂; S = 4-methylbenzenediazonium chloride (p-CH₃C₆H₄N₂⁺Cl⁻)"
+    },
+    {
+     "key": "C",
+     "text": "S = 4-methylbenzenediazonium chloride (p-CH₃C₆H₄N₂⁺Cl⁻); T = 4-methylphenol (p-cresol); U = 1. CH₃CH₂OH 2. KMnO₄–KOH, heat"
+    },
+    {
+     "key": "D",
+     "text": "Q = 4-nitrobenzoic acid; R = H₂/Pd, ethanol; T = 4-methylphenol (p-cresol)"
+    }
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "solution": "The route is: reduce NO₂ to NH₂ (P: H₂/Pd or Sn/HCl) to get p-toluidine (Q), diazotise (R: NaNO₂/HCl, i.e. HNO₂) to get 4-methylbenzenediazonium chloride (S), and warm with water to get p-cresol (T). To reach benzoic acid, the N₂⁺ group is first removed by H₃PO₂ or ethanol, giving toluene, and the methyl group is then oxidised by hot alkaline KMnO₄. So (A), (B) and (C) are consistent. (D) fails: if Q were 4-nitrobenzoic acid, H₂/Pd would only give 4-aminobenzoic acid, and the sequence could not lead to p-cresol.",
+   "topics": [
+    "reactions/diazotization-reaction",
+    "mechanisms/diazonium-salt-reactions",
+    "reagents/potassium-permanganate"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  },
+  {
+   "id": "jee-advanced-2022-p1-q18",
+   "number": 18,
+   "type": "matching",
+   "stem": "Match the compounds in LIST-I with the observations in LIST-II, and choose the correct option.\nLIST-I\n(I) Aniline\n(II) o-Cresol\n(III) Cysteine\n(IV) Caprolactam\nLIST-II\n(P) Sodium fusion extract of the compound on boiling with FeSO₄, followed by acidification with conc. H₂SO₄, gives Prussian blue color.\n(Q) Sodium fusion extract of the compound on treatment with sodium nitroprusside gives blood red color.\n(R) Addition of the compound to a saturated solution of NaHCO₃ results in effervescence.\n(S) The compound reacts with bromine water to give a white precipitate.\n(T) Treating the compound with neutral FeCl₃ solution produces violet color.",
+   "figures": [],
+   "options": [
+    {
+     "key": "A",
+     "text": "I→P,Q; II→S; III→Q,R; IV→P"
+    },
+    {
+     "key": "B",
+     "text": "I→P; II→R,S; III→R; IV→Q,S"
+    },
+    {
+     "key": "C",
+     "text": "I→Q,S; II→P,T; III→P; IV→S"
+    },
+    {
+     "key": "D",
+     "text": "I→P,S; II→T; III→Q,R; IV→P"
+    }
+   ],
+   "answer": "D",
+   "solution": "Aniline contains N, so its Lassaigne extract gives Prussian blue (P), and with bromine water it gives white 2,4,6-tribromoaniline (S). o-Cresol is a phenol and gives a violet colour with neutral FeCl₃ (T). Cysteine contains both N and S, and the sulfur test on its fusion extract is the one listed as (Q); its free COOH liberates CO₂ from NaHCO₃ (R). Caprolactam contains N, so it gives (P). Only option (D) matches.",
+   "topics": [
+    "tests/ferric-chloride-test",
+    "tests/bromine-water-test",
+    "concepts/amino-acids"
+   ],
+   "check": {
+    "solutions": 2,
+    "agree": true,
+    "note": "Two independent solutions agree; the official key is not in the archived paper"
+   }
+  }
+ ]
+}

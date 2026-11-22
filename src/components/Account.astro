@@ -1,0 +1,22 @@
+---
+import { SITE } from '../lib/site';
+const f = SITE.firebase;
+const enabled = Boolean(f.apiKey && f.authDomain && f.projectId && f.appId);
+---
+{enabled && (
+  <div class="account" data-account data-config={JSON.stringify(f)} hidden>
+    <button type="button" class="btn btn-ghost btn-sm" data-signin>Sign in</button>
+    <details class="nav-menu" data-menu hidden>
+      <summary data-name>Account</summary>
+      <ul>
+        <li><a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/saved/`}>Saved pages</a></li>
+        <li><button type="button" class="btn-link" data-signout>Sign out</button></li>
+      </ul>
+    </details>
+  </div>
+)}
+<script>
+  import { initAccount } from '../scripts/account';
+  const root = document.querySelector<HTMLElement>('[data-account]');
+  if (root) initAccount(root);
+</script>

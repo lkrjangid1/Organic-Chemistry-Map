@@ -13,9 +13,11 @@ import References from '../References.astro';
 import ReportError from '../ReportError.astro';
 import Byline from '../Byline.astro';
 import LibgenCard from '../LibgenCard.astro';
+import SaveButton from '../SaveButton.astro';
 import { url, absUrl, EXAMS } from '../../lib/site';
 import { SECTIONS, resolveRelated, hindiPages, localiseRef, type TopicKey } from '../../lib/sections';
 import { t as tr, type Lang } from '../../lib/i18n';
+import { questionsFor, paperTitle, questionHref } from '../../lib/pyq';
 import { audienceLd, breadcrumbLd, faqLd, orgLd, personLd } from '../../lib/seo';
 
 interface Props {
@@ -92,6 +94,7 @@ const jsonLd = [
   breadcrumbLd([{ name: info.label, path: info.path }, { name: d.title, path }]),
   faqLd(d.faq, path),
 ].filter(Boolean) as Record<string, unknown>[];
+const pyqs = questionsFor(`${section}/${entry.id}`);
 ---
 <Base title={pageTitle} description={d.description} path={path} altPath={altPath} ogType="article" jsonLd={jsonLd} section={section}>
   <div class="container page">
@@ -103,6 +106,7 @@ const jsonLd = [
         <ExamTags exams={d.exams} />
         {d.verified.status === 'verified' && <span class="tag tag-ok">✓ {s.verifiedAgainst(d.sources.length)}</span>}
         {d.verified.status === 'conflict' && <span class="tag tag-warn">{s.underReview}</span>}
+        <SaveButton path={path} title={d.title} />
       </div>
       <p class="summary">{d.description}</p>
     </header>
@@ -136,6 +140,14 @@ const jsonLd = [
       </article>
 
       <aside class="side">
+        {pyqs.length > 0 && (
+          <div class="side-card">
+            <h2>{s.pyqTitle}</h2>
+            <ul>
+              {pyqs.slice(0, 8).map(({ paper, q }) => <li><a href={questionHref(paper, q)}>{paperTitle(paper)}, Q.{q.number}</a></li>)}
+            </ul>
+          </div>
+        )}
         {family && (
           <div class="side-card">
             <h2>{s.partOf}</h2>

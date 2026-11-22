@@ -92,3 +92,17 @@ GitHub Actions (`.github/workflows/deploy.yml`) builds, validates and deploys to
 | Map | React 19, React Flow 11, Zustand 5, Tailwind CSS 4 |
 | Structures | RDKit (build-time SVG) and SMILES Drawer (map) |
 | Equations | KaTeX + mhchem |
+
+## Optional Google sign-in (Firebase)
+
+Sign-in syncs flashcard progress, best quiz score and saved pages across devices. It stays hidden until these four repository variables are set (Settings → Secrets and variables → Actions → Variables):
+`PUBLIC_FIREBASE_API_KEY`, `PUBLIC_FIREBASE_AUTH_DOMAIN`, `PUBLIC_FIREBASE_PROJECT_ID`, `PUBLIC_FIREBASE_APP_ID`.
+
+1. Create a Firebase project and add a **Web app**; copy the four values from its config.
+2. Authentication → Sign-in method → enable **Google**. Authentication → Settings → Authorized domains → add `organic-chemistry-map.yaaratech.in`.
+3. Create a **Cloud Firestore** database (production mode) and publish the rules in `firestore.rules`.
+4. Do not enable Google Analytics for the project (the site promises no trackers).
+
+## Previous-year questions
+
+`src/data/pyq/jee-advanced-<year>-p<paper>.json` holds the organic chemistry questions of each official JEE Advanced paper (from jeeadv.ac.in). Structures are SMILES; `check.agree` is true only when two independent solutions (or the official key printed in the paper) agree, and only those questions are published. Validate with `npm run check:pyq`.

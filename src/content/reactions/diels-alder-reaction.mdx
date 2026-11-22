@@ -16,6 +16,31 @@ reagents: "Conjugated diene (s-cis) + dienophile (alkene or alkyne, best with el
 conditions: "Heat (Δ); thermally allowed, no light or catalyst needed"
 equation: "CH2=CH-CH=CH2 + CH2=CH2 ->[\\Delta] C6H10"
 notesPages: [16]
+steps:
+  - title: "s-cis diene"
+    text: "Buta-1,3-diene rotates about its central single bond into the s-cis conformation, so C-1 and C-4 point the same way. Dienes locked s-trans cannot react."
+    arrows: "No arrows yet: this is only rotation about the C2–C3 single bond."
+    species:
+      - smiles: "C=CC=C"
+        label: "Buta-1,3-diene (s-cis)"
+        highlight: "C=CC=C"
+  - title: "One cyclic transition state"
+    text: "Diene and dienophile approach in parallel planes and six π electrons move round a ring at the same time. Ethene has no electron-withdrawing group, so it is a weak dienophile and strong heating is needed."
+    arrows: "Three arrows round the ring: diene C1=C2 π → new C2=C3 π bond, C3=C4 π → new C4–C σ bond, ethene π → new C–C1 σ bond."
+    species:
+      - smiles: "C=CC=C"
+        label: "Diene"
+        highlight: "C=CC=C"
+      - smiles: "C=C"
+        label: "Ethene (dienophile)"
+        highlight: "C=C"
+  - title: "Cyclohexene"
+    text: "Two new σ bonds (C-1 and C-4 to the dienophile carbons) and a new C2=C3 π bond give cyclohexene. The reaction is concerted, stereospecific and thermally allowed [π4s + π2s]; turning two π bonds into two σ bonds drives it."
+    arrows: "No further arrows: all bonds were made and broken in the single concerted step."
+    species:
+      - smiles: "C1=CCCCC1"
+        label: "Cyclohexene"
+        highlight: "C=C"
 memoryTricks: []
 faq:
   - q: "What is the product of the Diels–Alder reaction of buta-1,3-diene and ethene?"
