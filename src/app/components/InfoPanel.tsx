@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { ExternalLink, X } from 'lucide-react';
+import { BookOpen, ExternalLink, FlaskConical, X } from 'lucide-react';
 
 import { useTheme } from '../theme';
 import SmilesRenderer from './SmilesRenderer';
@@ -7,9 +7,16 @@ import ConformerViewer from './ConformerViewer';
 import type { ChemicalNodeData } from './NodeChemical';
 import type { ReactionInfo } from './CustomEdge';
 
+/** A page of the site about the selected compound or reaction. */
+export interface PageLinkItem {
+  label: string;
+  href: string;
+  kind: 'reaction' | 'compound';
+}
+
 export type SelectedInfo =
-  | { type: 'node'; payload: ChemicalNodeData }
-  | { type: 'edge'; payload: { label: string; reactionInfo: ReactionInfo } };
+  | { type: 'node'; payload: ChemicalNodeData; pages?: PageLinkItem[] }
+  | { type: 'edge'; payload: { label: string; reactionInfo: ReactionInfo }; pages?: PageLinkItem[] };
 
 interface InfoPanelProps {
   selected: SelectedInfo | null;
@@ -141,7 +148,7 @@ const InfoPanel = memo(({ selected, onClose }: InfoPanelProps) => {
         <div className="flex items-center justify-between px-4 py-3 border-b border-slate-200/70 dark:border-neutral-800/80">
           <div>
             <div className="text-xs uppercase tracking-wide text-slate-600 dark:text-neutral-400">
-              {isNode ? 'Element' : 'Reaction'}
+              {isNode ? 'Compound' : 'Reaction'}
             </div>
             <h2 className="text-base font-bold text-slate-900 dark:text-neutral-100 leading-tight" style={{ color: tokens.node.text }}>
               {title}
@@ -171,6 +178,29 @@ const InfoPanel = memo(({ selected, onClose }: InfoPanelProps) => {
         </div>
 
         <div className="overflow-y-auto px-4 py-3 space-y-4 h-[calc(55vh-3.5rem)] md:h-auto md:max-h-[60vh]">
+          {selected.pages && selected.pages.length > 0 && (
+            <nav aria-label="Pages on this site">
+              <div className="text-xs uppercase tracking-wide text-slate-600 dark:text-neutral-400 mb-1.5">
+                Read the full page
+              </div>
+              <ul className="space-y-1">
+                {selected.pages.map((p) => (
+                  <li key={p.href}>
+                    <a
+                      href={p.href}
+                      className="flex items-center gap-2 rounded-lg px-2 py-1.5 text-sm font-medium text-blue-700 hover:bg-blue-50 hover:underline dark:text-sky-300 dark:hover:bg-sky-900/30"
+                    >
+                      {p.kind === 'compound'
+                        ? <FlaskConical className="h-4 w-4 shrink-0" aria-hidden="true" />
+                        : <BookOpen className="h-4 w-4 shrink-0" aria-hidden="true" />}
+                      <span>{p.kind === 'compound' ? `${p.label}: compound page` : p.label}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )}
+
           {isNode && (
             <div className="flex justify-center">
               <SmilesRenderer

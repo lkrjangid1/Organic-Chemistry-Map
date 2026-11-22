@@ -12,6 +12,8 @@ import References from '../References.astro';
 import ReportError from '../ReportError.astro';
 import Byline from '../Byline.astro';
 import LibgenCard from '../LibgenCard.astro';
+import MapConversions from '../MapConversions.astro';
+import { conversionsFor } from '../../lib/maplinks';
 import { url, absUrl } from '../../lib/site';
 import { familyMembers, hindiPages, localiseRef } from '../../lib/sections';
 import { t as tr, type Lang } from '../../lib/i18n';
@@ -33,6 +35,7 @@ const altPath = lang === 'hi' ? enPath : hiEntry ? `hi/${enPath}` : undefined;
 const d = { ...entry.data, ...(hi && { title: hi.data.title, description: hi.data.description, faq: hi.data.faq }) };
 const { Content } = await render(hi ?? entry);
 const members = await Promise.all((await familyMembers(entry.id)).map((m) => localiseRef(m, lang)));
+const onMap = await conversionsFor(members, 12);
 
 const jsonLd = [
   {
@@ -88,6 +91,7 @@ const jsonLd = [
         <LibgenCard />
       </article>
       <aside class="side">
+        <MapConversions edges={onMap} title={s.seeOnMap} />
         <div class="side-card">
           <h2>{s.explore}</h2>
           <ul>

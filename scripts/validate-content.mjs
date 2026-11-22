@@ -85,6 +85,7 @@ for (const file of files) {
       if (fm.verified && fm.verified.sourceCount !== sources.length) warn.push('verified.sourceCount != number of sources');
       if (fm.family && !exists('mechanisms', fm.family)) errors.push(`unknown family: ${fm.family}`);
       for (const r of fm.related ?? []) if (!r.includes('/') || !relatedOk(r)) errors.push(`related must be an existing "section/slug": ${r}`);
+      for (const id of fm.mapEdges ?? []) if (!edgeIds.has(id)) errors.push(`unknown map edge id: ${id}`);
       const smi = fm.molecule?.smiles;
       if (smi) {
         const mol = rdkit.get_mol(smi);
