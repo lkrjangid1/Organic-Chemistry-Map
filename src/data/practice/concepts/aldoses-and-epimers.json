@@ -1,0 +1,49 @@
+{
+ "page": "concepts/aldoses-and-epimers",
+ "questions": [
+  {
+   "q": "Which sugar is the C4 epimer of D-glucose?",
+   "options": [
+    "D-Mannose",
+    "D-Galactose",
+    "D-Allose",
+    "D-Fructose"
+   ],
+   "answer": 1,
+   "explain": "D-Glucose (C2–C5: R, L, R, R) and D-galactose (R, L, L, R) differ only at C4. Mannose is the C2 epimer, allose the C3 epimer, and fructose is a ketose (a functional isomer)."
+  },
+  {
+   "q": "Which pair of sugars are NOT epimers?",
+   "options": [
+    "D-Mannose and D-galactose",
+    "D-Glucose and D-mannose",
+    "D-Glucose and D-allose",
+    "D-Xylose and D-lyxose"
+   ],
+   "answer": 0,
+   "explain": "D-Mannose and D-galactose differ at both C2 and C4, so they are diastereomers but not epimers; epimers differ at exactly one stereocentre."
+  },
+  {
+   "q": "An open-chain aldohexose has how many stereoisomers in all, and how many of them are D-sugars?",
+   "options": [
+    "8 and 4",
+    "16 and 8",
+    "32 and 16",
+    "16 and 4"
+   ],
+   "answer": 1,
+   "explain": "An aldohexose has four stereocentres (C2–C5), giving 2⁴ = 16 stereoisomers, half of which (8) are D."
+  },
+  {
+   "q": "Lengthening D-xylose by one carbon at the CHO end (Kiliani–Fischer synthesis) gives which pair of D-aldohexoses?",
+   "options": [
+    "D-Glucose and D-mannose",
+    "D-Allose and D-altrose",
+    "D-Gulose and D-idose",
+    "D-Galactose and D-talose"
+   ],
+   "answer": 2,
+   "explain": "The new stereocentre appears at C2, so each parent gives a pair of C2 epimers; the old centres of xylose (R, L, R) become C3–C5, matching D-gulose and D-idose."
+  }
+ ]
+}

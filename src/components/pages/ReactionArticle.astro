@@ -14,6 +14,8 @@ import ReportError from '../../components/ReportError.astro';
 import Byline from '../../components/Byline.astro';
 import LibgenCard from '../../components/LibgenCard.astro';
 import SaveButton from '../../components/SaveButton.astro';
+import Practice from '../../components/Practice.astro';
+import { practiceFor } from '../../lib/practice';
 import MechanismSteps from '../../components/MechanismSteps.astro';
 import { url, absUrl, EXAMS } from '../../lib/site';
 import { edgesById, compoundName, compoundSlug, hasCompoundPage } from '../../lib/graph';
@@ -133,6 +135,7 @@ const titleOptions = section === 'tests'
 const hiTitle = section === 'tests' ? `${d.title}: Reagent, Procedure और Observations` : `${d.title}: Mechanism, Reagents और Examples`;
 const pageTitle = lang === 'hi' ? (hiTitle.length <= 65 ? hiTitle : d.title) : titleOptions.find((t) => t.length <= 65) ?? d.title;
 const pyqs = questionsFor(`${section}/${entry.id}`);
+const practice = lang === 'hi' ? [] : practiceFor(`${section}/${entry.id}`);
 ---
 <Base title={pageTitle} description={d.description} path={path} altPath={altPath} ogType="article" jsonLd={jsonLd} section={section}>
   <div class="container page">
@@ -179,6 +182,8 @@ const pyqs = questionsFor(`${section}/${entry.id}`);
             </ul>
           </Trick>
         )}
+
+        <Practice questions={practice} id="practice" />
 
         {d.faq.length > 0 && (
           <section id="faq" aria-labelledby="faq-h">

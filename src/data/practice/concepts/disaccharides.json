@@ -1,0 +1,49 @@
+{
+ "page": "concepts/disaccharides",
+ "questions": [
+  {
+   "q": "Which disaccharide is a non-reducing sugar?",
+   "options": [
+    "Maltose",
+    "Lactose",
+    "Sucrose",
+    "Cellobiose"
+   ],
+   "answer": 2,
+   "explain": "In sucrose, C1 of glucose is bonded to C2 of fructose, so both anomeric carbons are used in the glycosidic bond and no free aldehyde group can form."
+  },
+  {
+   "q": "Hydrolysis of lactose gives",
+   "options": [
+    "D-Galactose and D-glucose",
+    "Two molecules of D-glucose",
+    "D-Glucose and D-fructose",
+    "D-Galactose and D-fructose"
+   ],
+   "answer": 0,
+   "explain": "Lactose (milk sugar) is β-D-galactose linked C1 to C4 of D-glucose. Writing two glucose molecules is the common error."
+  },
+  {
+   "q": "Maltose and cellobiose differ in",
+   "options": [
+    "The monosaccharide units present",
+    "Whether they are reducing sugars",
+    "The carbon atoms joined by the glycosidic bond",
+    "The configuration of the glycosidic bond, α(1→4) versus β(1→4)"
+   ],
+   "answer": 3,
+   "explain": "Both are two D-glucose units joined C1 to C4 and both are reducing; maltose (from starch) has an α link and cellobiose (from cellulose) a β link."
+  },
+  {
+   "q": "Sucrose (+66.5°) is hydrolysed to an equimolar mixture of D-glucose (+52.5°) and D-fructose (−92.4°). The approximate specific rotation of the mixture is",
+   "options": [
+    "+20°",
+    "−20°",
+    "−40°",
+    "−92.4°"
+   ],
+   "answer": 1,
+   "explain": "For a 1:1 mixture, (52.5 − 92.4)/2 ≈ −20°. The stronger laevorotation of fructose inverts the sign from (+) to (−), hence the name invert sugar."
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "page": "concepts/polysaccharides",
+ "questions": [
+  {
+   "q": "Which polysaccharide is built from β-D-glucose units and gives cellobiose on partial hydrolysis?",
+   "options": [
+    "Amylose",
+    "Amylopectin",
+    "Glycogen",
+    "Cellulose"
+   ],
+   "answer": 3,
+   "explain": "Cellulose is an unbranched β(1→4) polymer of glucose, and cellobiose is its β(1→4) disaccharide unit. Amylose, amylopectin and glycogen are all α-glucose polymers."
+  },
+  {
+   "q": "The correct increasing order of branching is:",
+   "options": [
+    "Glycogen < amylopectin < amylose",
+    "Amylose < amylopectin < glycogen",
+    "Amylopectin < amylose < glycogen",
+    "Amylose < glycogen < amylopectin"
+   ],
+   "answer": 1,
+   "explain": "Amylose has no branches, amylopectin branches about every 25–30 glucose units and glycogen about every 8–12 units, so glycogen is the most branched."
+  },
+  {
+   "q": "Which statement about starch is correct?",
+   "options": [
+    "Amylose is the water-soluble component with only α(1→4) links",
+    "Amylopectin is the water-soluble component and gives a deep blue colour with iodine",
+    "Amylose forms about 80–85% of starch and is branched through C1–C6 links",
+    "Diastase converts starch directly into glucose"
+   ],
+   "answer": 0,
+   "explain": "Amylose (about 15–20% of starch) is the unbranched, water-soluble, α(1→4)-linked component that gives the blue iodine colour. Diastase gives maltose; maltase is needed to reach glucose."
+  },
+  {
+   "q": "Cattle can digest cellulose but humans cannot. The best explanation is:",
+   "options": [
+    "Cattle produce the enzyme cellulase in their own digestive glands",
+    "Microorganisms in the rumen produce cellulase that hydrolyses β-glycosidic bonds",
+    "Cellulose in grass contains α(1→4) links, unlike cotton cellulose",
+    "Cattle have diastase that converts cellulose into maltose"
+   ],
+   "answer": 1,
+   "explain": "Humans lack an enzyme for β-glycosidic bonds; in ruminants it is the gut bacteria, not the animal itself, that produce cellulase. Option A is the common trap."
+  }
+ ]
+}

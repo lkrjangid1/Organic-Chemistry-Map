@@ -1,0 +1,50 @@
+{
+ "page": "reactions/catalytic-hydrogenation",
+ "questions": [
+  {
+   "q": "1,2-Dimethylcyclohexene is shaken with H₂ over Pt. The product is:",
+   "smiles": "CC1=C(C)CCCC1",
+   "options": [
+    "trans-1,2-Dimethylcyclohexane",
+    "An equal mixture of cis- and trans-1,2-dimethylcyclohexane",
+    "cis-1,2-Dimethylcyclohexane",
+    "1,1-Dimethylcyclohexane"
+   ],
+   "answer": 2,
+   "explain": "The alkene lies flat on the metal surface and both hydrogens arrive from the underside (syn addition), so only the cis product forms."
+  },
+  {
+   "q": "3-Methylbut-1-ene, 2-methylbut-1-ene and 2-methylbut-2-ene all give 2-methylbutane on hydrogenation. Which is the most stable alkene?",
+   "options": [
+    "2-Methylbut-2-ene",
+    "3-Methylbut-1-ene",
+    "2-Methylbut-1-ene",
+    "All three are equally stable, since they give the same alkane"
+   ],
+   "answer": 0,
+   "explain": "2-Methylbut-2-ene releases the least heat (−26.9 kcal per mole against −28.5 and −30.3), so it starts lowest in energy. Stability rises with the number of alkyl groups on the C=C."
+  },
+  {
+   "q": "Which group is NOT reduced by ordinary catalytic hydrogenation over Ni, Pd or Pt?",
+   "options": [
+    "Nitro group",
+    "Nitrile",
+    "C≡C triple bond",
+    "Carboxylic acid (–COOH)"
+   ],
+   "answer": 3,
+   "explain": "COOH, like esters and amides, is too stable for ordinary hydrogenation. Nitro groups and nitriles are reduced to amines, and an alkyne takes up two H₂ to give the alkane."
+  },
+  {
+   "q": "Using the exam convention that the rate of catalytic hydrogenation runs parallel to the heat of hydrogenation, which alkene is hydrogenated fastest?",
+   "options": [
+    "2-Methylbut-2-ene",
+    "3-Methylbut-1-ene",
+    "2-Methylbut-1-ene",
+    "2,3-Dimethylbut-2-ene"
+   ],
+   "answer": 1,
+   "explain": "The monosubstituted 3-methylbut-1-ene has the largest heat of hydrogenation (−30.3 kcal per mole) and is the least hindered, so it adsorbs on the metal most easily. More substituted alkenes are more stable and react more slowly."
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "page": "tests/schiff-test",
+ "questions": [
+  {
+   "q": "Schiff's reagent is:",
+   "options": [
+    "Ammoniacal silver nitrate",
+    "Magenta dye (basic fuchsine) decolourised by SO₂",
+    "Alkaline copper(II) solution with tartrate",
+    "2,4-Dinitrophenylhydrazine in acid"
+   ],
+   "answer": 1,
+   "explain": "Bisulphite from SO₂ adds to the central carbon of fuchsine, breaking its conjugation and leaving a colourless reagent that turns magenta-pink with aldehydes."
+  },
+  {
+   "q": "Which compound does NOT give a positive Schiff's test, even though its open-chain formula has a –CHO group?",
+   "options": [
+    "Methanal",
+    "Benzaldehyde",
+    "Glucose",
+    "Ethanal"
+   ],
+   "answer": 2,
+   "explain": "Glucose exists almost entirely as a cyclic hemiacetal, so little free –CHO is present. This false negative is classic evidence for its ring structure."
+  },
+  {
+   "q": "Why must Schiff's test be done cold and read within about a minute?",
+   "options": [
+    "Heating drives off SO₂ and speeds up the slow reaction of ketones, both of which can give pink without an aldehyde",
+    "Heating destroys the aldehyde before it can react",
+    "Warm Schiff's reagent oxidises aldehydes to acids, which are colourless",
+    "The magenta adduct is stable only above room temperature"
+   ],
+   "answer": 0,
+   "explain": "Loss of SO₂ restores colour to the reagent on its own, and ketones react very slowly to give the same colour, so heat or a long wait gives false positives."
+  },
+  {
+   "q": "Schiff's test can be used to distinguish which pair?",
+   "options": [
+    "Ethanal and benzaldehyde",
+    "Methanal and ethanal",
+    "Glucose and propanone",
+    "Propanal and propanone"
+   ],
+   "answer": 3,
+   "explain": "Propanal (an aldehyde) turns the reagent magenta-pink while propanone stays colourless. Schiff's test cannot tell aliphatic from aromatic aldehydes, and glucose and propanone are both negative."
+  }
+ ]
+}

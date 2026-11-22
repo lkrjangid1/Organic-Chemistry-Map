@@ -1,0 +1,51 @@
+{
+ "page": "reactions/claisen-rearrangement",
+ "questions": [
+  {
+   "q": "Allyl phenyl ether is heated strongly with no reagent. The product is:",
+   "smiles": "C=CCOc1ccccc1",
+   "options": [
+    "4-Allylphenol",
+    "3-Allylphenol",
+    "2-Allylphenol",
+    "Allylbenzene"
+   ],
+   "answer": 2,
+   "explain": "A [3,3] shift moves the allyl group from oxygen to the ortho carbon, and the dienone tautomerises to the phenol. With a free ortho position the reaction stops there; it does not go on to the para product."
+  },
+  {
+   "q": "Allyl 2,6-dimethylphenyl ether is heated. The main product is:",
+   "smiles": "C=CCOc1c(C)cccc1C",
+   "options": [
+    "4-Allyl-2,6-dimethylphenol",
+    "2-Allyl-6-methylphenol",
+    "2,6-Dimethylphenol and propene",
+    "3-Allyl-2,6-dimethylphenol"
+   ],
+   "answer": 0,
+   "explain": "Both ortho positions are blocked, so the ortho dienone cannot tautomerise. A second [3,3] (Cope) shift carries the allyl group to the para carbon before rearomatisation."
+  },
+  {
+   "q": "The Claisen rearrangement of allyl aryl ethers is best described as:",
+   "options": [
+    "An intermolecular reaction through a free allyl cation",
+    "A [1,3]-sigmatropic shift catalysed by acid",
+    "A [5,5]-sigmatropic shift through a ten-membered ring",
+    "A concerted, intramolecular [3,3]-sigmatropic shift through a six-membered cyclic transition state"
+   ],
+   "answer": 3,
+   "explain": "It needs only heat, is first order and gives no crossover products, because the allyl group never leaves the molecule; the shift passes through a chair-like six-membered transition state."
+  },
+  {
+   "q": "In allyl phenyl ether, C₆H₅–O–CH₂–CH=CH₂, the terminal =CH₂ carbon is labelled with ¹⁴C. After Claisen rearrangement to 2-allylphenol, the label is found:",
+   "options": [
+    "In the terminal =CH₂ of the allyl group",
+    "In the CH₂ that is bonded to the ring",
+    "In the central CH of the allyl group",
+    "Equally in both end carbons of the allyl group"
+   ],
+   "answer": 1,
+   "explain": "The new C–C bond forms at the far end (atom 3) of the allyl group, so the allyl unit is attached to the ring upside down and the labelled carbon becomes the one bonded to the ortho carbon. A para product (two shifts) would restore the original orientation."
+  }
+ ]
+}

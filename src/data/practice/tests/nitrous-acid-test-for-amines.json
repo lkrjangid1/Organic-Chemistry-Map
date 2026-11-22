@@ -1,0 +1,49 @@
+{
+ "page": "tests/nitrous-acid-test-for-amines",
+ "questions": [
+  {
+   "q": "Which amine gives brisk effervescence of N₂ from a clear solution when treated with NaNO₂ and dilute HCl at 273–278 K?",
+   "options": [
+    "Aniline",
+    "Ethylamine",
+    "Diethylamine",
+    "Triethylamine"
+   ],
+   "answer": 1,
+   "explain": "A 1° aliphatic amine forms a very unstable alkyldiazonium ion that loses N₂ at once. Aniline forms a diazonium salt that is stable in the cold, so no gas is seen."
+  },
+  {
+   "q": "Diethylamine is treated with cold nitrous acid. The yellow oily product that separates is:",
+   "options": [
+    "(C₂H₅)₂N–NO₂, an N-nitroamine",
+    "Ethanol with evolution of N₂",
+    "(C₂H₅)₂NH₂⁺ NO₂⁻, a soluble salt",
+    "(C₂H₅)₂N–N=O, an N-nitrosamine"
+   ],
+   "answer": 3,
+   "explain": "A 2° amine has only one N–H, so the reaction stops at the N-nitroso compound R₂N–N=O. Writing it as an N-nitro compound (R₂N–NO₂) is the common mistake."
+  },
+  {
+   "q": "N,N-Dimethylaniline reacts with nitrous acid in the cold to give a green solid. What is it?",
+   "options": [
+    "p-Nitroso-N,N-dimethylaniline",
+    "N-Nitroso-N-methylaniline",
+    "Benzenediazonium chloride",
+    "N,N-Dimethylanilinium nitrite only"
+   ],
+   "answer": 0,
+   "explain": "With no N–H, the strongly activating –NMe₂ group lets the weak electrophile NO⁺ attack the free para position of the ring. If the para position is blocked, no green nitroso compound forms."
+  },
+  {
+   "q": "While testing an unknown amine, a student lets the NaNO₂/HCl mixture warm up and sees steady N₂ evolution. Why might this wrongly suggest a primary aliphatic amine?",
+   "options": [
+    "A secondary amine loses N₂ from its nitrosamine on warming",
+    "A tertiary aliphatic amine is oxidised to N₂ when warm",
+    "A primary aromatic amine's diazonium salt decomposes to phenol and N₂ on warming",
+    "Nitrous acid alone decomposes to N₂ in the absence of an amine"
+   ],
+   "answer": 2,
+   "explain": "Arenediazonium salts survive only in the cold; on warming they decompose to phenol with N₂ evolution. The mixture must be kept at 0–5 °C so that only 1° aliphatic amines give gas."
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "page": "comparisons/dipole-moment-order",
+ "questions": [
+  {
+   "q": "The correct decreasing order of dipole moment of the methyl halides is:",
+   "options": [
+    "CH₃F > CH₃Cl > CH₃Br > CH₃I",
+    "CH₃Cl > CH₃F > CH₃Br > CH₃I",
+    "CH₃I > CH₃Br > CH₃Cl > CH₃F",
+    "CH₃Cl > CH₃Br > CH₃F > CH₃I"
+   ],
+   "answer": 1,
+   "explain": "μ = q × d. Fluorine gives the largest charge but over a very short C–F bond (139 pm), so CH₃Cl (1.860 D) edges out CH₃F (1.847 D); from Cl to I the charge falls faster than the bond lengthens."
+  },
+  {
+   "q": "Which of the following has zero dipole moment?",
+   "options": [
+    "cis-1,2-Dichloroethene",
+    "o-Dichlorobenzene",
+    "CHCl₃",
+    "trans-1,2-Dichloroethene"
+   ],
+   "answer": 3,
+   "explain": "In the trans isomer the two equal C–Cl bond dipoles point in opposite directions and cancel. The cis and ortho isomers and CHCl₃ all have a net dipole."
+  },
+  {
+   "q": "Arrange CCl₄, CHCl₃, CH₂Cl₂ and CH₃Cl in increasing order of dipole moment.",
+   "options": [
+    "CH₃Cl < CH₂Cl₂ < CHCl₃ < CCl₄",
+    "CCl₄ < CH₂Cl₂ < CHCl₃ < CH₃Cl",
+    "CHCl₃ < CCl₄ < CH₂Cl₂ < CH₃Cl",
+    "CCl₄ < CHCl₃ < CH₂Cl₂ < CH₃Cl"
+   ],
+   "answer": 3,
+   "explain": "The more chlorines spread round the tetrahedral carbon, the more their bond dipoles cancel: CCl₄ (0) < CHCl₃ (about 1.1 D) < CH₂Cl₂ (about 1.6 D) < CH₃Cl (about 1.9 D)."
+  },
+  {
+   "q": "If a single C–Cl bond dipole in chlorobenzene is μ₁, the dipole moments of o-, m- and p-dichlorobenzene (using 2μ₁ cos(θ/2)) are approximately:",
+   "options": [
+    "1.7μ₁, μ₁ and 0",
+    "μ₁, 1.7μ₁ and 0",
+    "2μ₁, μ₁ and 0",
+    "0, μ₁ and 1.7μ₁"
+   ],
+   "answer": 0,
+   "explain": "The angles between the dipoles are 60°, 120° and 180°, so 2μ₁cos30° ≈ 1.7μ₁, 2μ₁cos60° = μ₁ and 2μ₁cos90° = 0, giving ortho > meta > para."
+  }
+ ]
+}

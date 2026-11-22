@@ -1,0 +1,7 @@
+{"page": "reactions/malaprade-oxidation",
+ "questions": [
+  {"q": "Open-chain glucose is treated with excess periodic acid. The products are:", "options": ["5 HCOOH + 1 HCHO, using 5 HIO₄", "3 HCOOH + 2 HCHO + 1 CO₂, using 5 HIO₄", "4 HCOOH + 2 HCHO, using 5 HIO₄", "6 HCOOH, using 6 HIO₄"], "answer": 0, "explain": "Five C–C bonds are cut: C-1 (CHO) and C-2 to C-5 (CHOH) give formic acid and the terminal CH₂OH gives formaldehyde. The 3 HCOOH + 2 HCHO + CO₂ set belongs to fructose."},
+  {"q": "Which compound is NOT cleaved by HIO₄?", "options": ["Ethane-1,2-diol", "2-Aminoethan-1-ol", "Propane-1,3-diol", "Butane-2,3-dione"], "answer": 2, "explain": "Cleavage needs two neighbouring carbons that each carry O or N. In propane-1,3-diol the OH groups are separated by a CH₂, so no cyclic periodate ester forms."},
+  {"q": "Which product is formed when open-chain fructose is cleaved by HIO₄ but NOT when glucose is?", "options": ["HCOOH", "CO₂", "HCHO", "HIO₃"], "answer": 1, "explain": "The ketone carbon C-2 of fructose is cut on both sides and leaves as CO₂. Both sugars give HCOOH, HCHO and HIO₃."},
+  {"q": "Glycerol, HOCH₂–CH(OH)–CH₂OH, is oxidised with excess HIO₄. The moles of HIO₄ consumed and the products per mole are:", "options": ["1 HIO₄; 2 HCHO", "3 HIO₄; 3 HCOOH", "2 HIO₄; 1 HCHO + 2 HCOOH", "2 HIO₄; 2 HCHO + 1 HCOOH"], "answer": 3, "explain": "Two C–C bonds join O-bearing carbons, so 2 HIO₄ are used. The two terminal CH₂OH carbons become HCHO and the inner CHOH, cut on both sides, becomes HCOOH."}
+ ]}

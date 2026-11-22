@@ -1,0 +1,49 @@
+{
+ "page": "tests/sodium-metal-test",
+ "questions": [
+  {
+   "q": "Which compound does NOT give effervescence of H₂ with a freshly cut piece of sodium?",
+   "options": [
+    "Ethanol",
+    "Phenol",
+    "Diethyl ether",
+    "Ethyne"
+   ],
+   "answer": 2,
+   "explain": "Diethyl ether has no acidic hydrogen that sodium can replace. Alcohols, phenols and terminal alkynes all form sodium salts and release hydrogen."
+  },
+  {
+   "q": "0.2 mol of dry ethanol is treated with excess sodium metal. How many moles of H₂ are evolved?",
+   "options": [
+    "0.05 mol",
+    "0.1 mol",
+    "0.2 mol",
+    "0.4 mol"
+   ],
+   "answer": 1,
+   "explain": "2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂, so 2 mol of alcohol give 1 mol of H₂; 0.2 mol gives 0.1 mol."
+  },
+  {
+   "q": "Why must the sample and test tube be completely dry for the sodium metal test?",
+   "options": [
+    "Moisture converts sodium into sodium peroxide",
+    "Water dissolves the sodium alkoxide and hides the result",
+    "Moisture makes the hydrogen non-flammable",
+    "Water also reacts with sodium to give H₂, causing a false positive"
+   ],
+   "answer": 3,
+   "explain": "Water reacts with sodium even faster than alcohols and also liberates hydrogen, so a wet sample would give effervescence regardless of the compound."
+  },
+  {
+   "q": "Sodium metal can be used to distinguish which pair of compounds?",
+   "options": [
+    "Butan-1-ol and diethyl ether",
+    "Ethanol and phenol",
+    "Ethanoic acid and ethanol",
+    "Ethane and ethene"
+   ],
+   "answer": 0,
+   "explain": "These functional isomers (both C₄H₁₀O) differ in acidic hydrogen: the alcohol gives H₂, the ether does not. In the other pairs both members give the same result."
+  }
+ ]
+}

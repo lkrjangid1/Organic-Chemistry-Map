@@ -1,0 +1,50 @@
+{
+ "page": "reactions/hell-volhard-zelinsky-reaction",
+ "questions": [
+  {
+   "q": "Propanoic acid is warmed with Br₂ and a small amount of red phosphorus, followed by water. The product is:",
+   "smiles": "CCC(=O)O",
+   "options": [
+    "Racemic 2-bromopropanoic acid",
+    "3-Bromopropanoic acid",
+    "Propanoyl bromide",
+    "Optically active (R)-2-bromopropanoic acid"
+   ],
+   "answer": 0,
+   "explain": "The halogen enters the α-carbon through the enol of the acyl bromide; because the α-carbon is planar in the enol, the new stereocentre forms as a racemic mixture."
+  },
+  {
+   "q": "Which carboxylic acid does NOT undergo the Hell–Volhard–Zelinsky reaction?",
+   "options": [
+    "Acetic acid",
+    "Butanoic acid",
+    "2,2-Dimethylpropanoic acid",
+    "Propanoic acid"
+   ],
+   "answer": 2,
+   "explain": "HVZ needs at least one α-hydrogen to form the enol. (CH₃)₃C–COOH has a quaternary α-carbon, like benzoic acid and formic acid, which also fail."
+  },
+  {
+   "q": "Propanoic acid is treated with Cl₂ in the presence of PBr₃, then water. The main product is:",
+   "options": [
+    "CH₃CHBrCOOH",
+    "CH₃CH₂COBr",
+    "CH₃CH₂COCl",
+    "CH₃CHClCOOH"
+   ],
+   "answer": 3,
+   "explain": "The phosphorus halide only makes the acyl halide; the α-halogen comes from the free halogen that attacks the enol. So Cl₂/PBr₃ gives the α-chloro acid and Br₂/PCl₃ the α-bromo acid."
+  },
+  {
+   "q": "Acetic acid is converted into glycine. The correct reagent sequence is:",
+   "options": [
+    "NH₃, then heat, then Br₂/NaOH",
+    "Br₂/red P, then excess NH₃",
+    "PCl₅, then excess NH₃",
+    "Br₂/NaOH, then H₃O⁺"
+   ],
+   "answer": 1,
+   "explain": "HVZ gives bromoacetic acid, and the reactive α-bromine is then replaced by NH₂ with excess ammonia to give H₂N–CH₂–COOH. PCl₅ alone gives only the acyl chloride, with no α-substitution."
+  }
+ ]
+}

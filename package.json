@@ -10,7 +10,8 @@
     "check:content": "node scripts/validate-content.mjs",
     "check:site": "node scripts/check-site.mjs",
     "lint": "eslint .",
-    "check:pyq": "node scripts/validate-pyq.mjs"
+    "check:pyq": "node scripts/validate-pyq.mjs",
+    "check:practice": "node scripts/validate-practice.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^8.1.6",

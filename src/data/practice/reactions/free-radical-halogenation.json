@@ -1,0 +1,49 @@
+{
+ "page": "reactions/free-radical-halogenation",
+ "questions": [
+  {
+   "q": "In the chlorination of methane under UV light, which step is taken as rate-determining?",
+   "options": [
+    "Cl₂ → 2 Cl•",
+    "CH₃• + Cl₂ → CH₃Cl + Cl•",
+    "Cl• + CH₄ → CH₃• + HCl",
+    "CH₃• + CH₃• → C₂H₆"
+   ],
+   "answer": 2,
+   "explain": "Hydrogen abstraction by the halogen atom is the slow propagation step, which is why the rate depends on the stability of the alkyl radical formed. Initiation happens only occasionally and termination ends the chain."
+  },
+  {
+   "q": "Propane is monobrominated with Br₂ in light at 25 °C. Which statement about the product mixture is correct?",
+   "options": [
+    "About 97% 2-bromopropane",
+    "About 55% 2-bromopropane and 45% 1-bromopropane",
+    "About 75% 1-bromopropane, in line with the number of hydrogens",
+    "Equal amounts of 1- and 2-bromopropane"
+   ],
+   "answer": 0,
+   "explain": "A bromine atom is much less reactive than a chlorine atom, so it is highly selective and removes mainly the secondary H that gives the more stable radical. The 55 : 45 split is the chlorination figure."
+  },
+  {
+   "q": "Using relative rates per hydrogen of 1° : 2° = 1 : 3.8 for chlorination, what percentage of 2-chloropropane is expected from monochlorination of propane?",
+   "options": [
+    "About 25%",
+    "About 44%",
+    "About 56%",
+    "About 75%"
+   ],
+   "answer": 2,
+   "explain": "Primary: 6 H × 1 = 6; secondary: 2 H × 3.8 = 7.6; so 2-chloropropane = 7.6 / 13.6 ≈ 56%, close to the observed 55%. 25% is the statistical value that ignores the rate difference."
+  },
+  {
+   "q": "Two ethyl radicals undergo disproportionation in the termination stage. The products are:",
+   "options": [
+    "Butane",
+    "Ethane and ethene",
+    "Ethane only",
+    "Ethene and hydrogen"
+   ],
+   "answer": 1,
+   "explain": "In disproportionation one radical takes a β-hydrogen from the other: the donor becomes the alkene (ethene) and the acceptor the alkane (ethane). Butane would come from combination, not disproportionation."
+  }
+ ]
+}

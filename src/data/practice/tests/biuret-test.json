@@ -1,0 +1,49 @@
+{
+ "page": "tests/biuret-test",
+ "questions": [
+  {
+   "q": "Which substance does NOT give a violet colour in the biuret test?",
+   "options": [
+    "Egg albumin",
+    "A tripeptide",
+    "Glycylglycine (a dipeptide)",
+    "Biuret"
+   ],
+   "answer": 2,
+   "explain": "A violet colour needs two or more peptide (–CO–NH–) bonds. A dipeptide has only one, so the solution stays blue, while a tripeptide, proteins and biuret itself are positive."
+  },
+  {
+   "q": "Biuret is prepared by heating urea to about 150 °C. The correctly balanced equation is:",
+   "options": [
+    "2 NH₂CONH₂ → NH₂CONHCONH₂",
+    "2 NH₂CONH₂ → NH₂CONHCONH₂ + NH₃",
+    "2 NH₂CONH₂ → NH₂CONHCONH₂ + H₂O",
+    "NH₂CONH₂ → NH₄OCN"
+   ],
+   "answer": 1,
+   "explain": "Two urea molecules condense and one ammonia molecule is given off. Writing the equation without NH₃ is the common mistake; the reverse isomerisation to ammonium cyanate is unrelated."
+  },
+  {
+   "q": "The violet colour in the biuret test is due to:",
+   "options": [
+    "Oxidation of side chains by Cu²⁺",
+    "Precipitation of Cu₂O",
+    "Reaction of biuret present in the reagent",
+    "Coordination of peptide nitrogen atoms to Cu²⁺ in alkaline solution"
+   ],
+   "answer": 3,
+   "explain": "In strong alkali the peptide N–H protons are displaced and several neighbouring nitrogens of one chain chelate Cu²⁺, giving a violet complex. The reagent contains no biuret, and Cu₂O is the result of reducing-sugar tests, not this one."
+  },
+  {
+   "q": "Sodium potassium tartrate is added to ready-made biuret reagent in order to:",
+   "options": [
+    "Chelate Cu²⁺ and keep it in solution in the strongly alkaline medium",
+    "Make the solution acidic",
+    "Hydrolyse the protein into amino acids",
+    "Reduce Cu²⁺ to Cu⁺"
+   ],
+   "answer": 0,
+   "explain": "Tartrate holds Cu²⁺ as a complex so that it stays dissolved when NaOH or KOH is present. The test itself needs an alkaline medium, and copper stays in the +2 state."
+  }
+ ]
+}

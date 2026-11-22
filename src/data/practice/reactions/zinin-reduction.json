@@ -1,0 +1,51 @@
+{
+ "page": "reactions/zinin-reduction",
+ "questions": [
+  {
+   "q": "m-Dinitrobenzene is treated with aqueous ammonium sulphide, (NH₄)₂S. The product is:",
+   "options": [
+    "m-Phenylenediamine",
+    "Nitrobenzene",
+    "m-Nitroaniline",
+    "Aniline"
+   ],
+   "answer": 2,
+   "explain": "The Zinin reduction reduces only one of the two nitro groups, giving m-nitroaniline (3-nitroaniline). Both groups would be reduced to m-phenylenediamine by Sn/HCl, Fe/HCl or catalytic hydrogenation.",
+   "smiles": "O=[N+]([O-])c1cccc(c1)[N+](=O)[O-]"
+  },
+  {
+   "q": "Which reagent reduces only ONE nitro group of m-dinitrobenzene?",
+   "options": [
+    "Sn/HCl",
+    "Fe/HCl",
+    "H₂/Pd",
+    "Na₂S/NaSH in water"
+   ],
+   "answer": 3,
+   "explain": "Sulphide reagents (Na₂S, NaSH, NH₄SH, (NH₄)₂S) are mild and give selective reduction. Metal–acid and catalytic hydrogenation reduce every nitro group present."
+  },
+  {
+   "q": "2,4-Dinitrophenol is treated with sodium sulphide. The product is:",
+   "options": [
+    "2-Amino-4-nitrophenol",
+    "2,4-Diaminophenol",
+    "4-Amino-2-nitrophenol",
+    "2,4-Dinitroaniline"
+   ],
+   "answer": 0,
+   "explain": "Sodium sulphide reduces 2,4-dinitrophenol selectively to 2-amino-4-nitrophenol, leaving the second nitro group in place. A diamine would need metal–acid reduction, and the OH group is not replaced.",
+   "smiles": "Oc1ccc(cc1[N+](=O)[O-])[N+](=O)[O-]"
+  },
+  {
+   "q": "The usual explanation for why Zinin reduction stops after one nitro group is reduced is that:",
+   "options": [
+    "Sulphide is consumed completely after one nitro group",
+    "The –NH₂ group formed makes the ring richer in electrons, so the remaining –NO₂ is reduced much more slowly",
+    "The second nitro group is converted into a diazonium salt",
+    "The product precipitates as a sulphide salt"
+   ],
+   "answer": 1,
+   "explain": "Sulphide is a weak reductant, and once the first –NO₂ becomes electron-donating –NH₂ the second nitro group is less electron-poor and reacts far more slowly. The reaction can therefore be stopped at the nitroaniline."
+  }
+ ]
+}

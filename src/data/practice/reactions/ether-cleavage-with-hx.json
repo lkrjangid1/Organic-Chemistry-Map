@@ -1,0 +1,51 @@
+{
+ "page": "reactions/ether-cleavage-with-hx",
+ "questions": [
+  {
+   "q": "Anisole is heated with concentrated HI. The products are:",
+   "smiles": "COc1ccccc1",
+   "options": [
+    "Phenol and iodomethane",
+    "Iodobenzene and methanol",
+    "Iodobenzene and iodomethane",
+    "Phenol and methanol"
+   ],
+   "answer": 0,
+   "explain": "Iodide attacks the methyl carbon of the protonated ether by SN2, so the O–CH₃ bond breaks. The O–C₆H₅ bond survives because the sp² aryl carbon cannot be substituted, and phenol is not converted further into an aryl halide."
+  },
+  {
+   "q": "Methyl tert-butyl ether, (CH₃)₃C–O–CH₃, is treated with HI. Which pair of products is formed?",
+   "options": [
+    "Methyl iodide and tert-butyl alcohol",
+    "Methyl iodide and 2-methylpropene only",
+    "Methanol and tert-butyl iodide",
+    "Methanol and isobutyl iodide"
+   ],
+   "answer": 2,
+   "explain": "One group can form a stable 3° carbocation, so the protonated ether follows SN1: it loses methanol and the tert-butyl cation is captured by iodide. The trap is applying the SN2 'attack the smaller group' rule here."
+  },
+  {
+   "q": "Which of the following ethers is NOT cleaved on heating with HI?",
+   "options": [
+    "Diethyl ether",
+    "Anisole",
+    "Methyl tert-butyl ether",
+    "Diphenyl ether"
+   ],
+   "answer": 3,
+   "explain": "In a diaryl ether both C–O bonds involve sp² aryl carbons, which cannot undergo substitution, so diphenyl ether is not cleaved. Each of the others has at least one alkyl group that the halide can attack or that can leave as a carbocation."
+  },
+  {
+   "q": "2-Methyloxirane is opened (i) with CH₃O⁻Na⁺ in CH₃OH and (ii) with CH₃OH and an acid catalyst. The major products are, respectively:",
+   "smiles": "CC1CO1",
+   "options": [
+    "(i) CH₃CH(OCH₃)CH₂OH; (ii) CH₃CH(OH)CH₂OCH₃",
+    "(i) CH₃CH(OH)CH₂OCH₃; (ii) CH₃CH(OCH₃)CH₂OH",
+    "CH₃CH(OH)CH₂OCH₃ in both cases",
+    "CH₃CH(OCH₃)CH₂OH in both cases"
+   ],
+   "answer": 1,
+   "explain": "Under basic conditions methoxide attacks the less substituted CH₂ carbon by SN2. In acid the protonated epoxide opens with SN1 character, so methanol attacks the more substituted carbon, which carries more positive charge."
+  }
+ ]
+}

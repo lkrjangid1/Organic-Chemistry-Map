@@ -51,6 +51,8 @@ jobs:
         run: node scripts/validate-content.mjs
       - name: Validate previous-year questions
         run: node scripts/validate-pyq.mjs
+      - name: Validate practice questions
+        run: node scripts/validate-practice.mjs
 
       - name: Check built site (SEO, links, JSON-LD)
         run: node scripts/check-site.mjs

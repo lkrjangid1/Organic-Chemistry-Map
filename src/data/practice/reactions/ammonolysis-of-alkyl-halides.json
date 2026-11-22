@@ -1,0 +1,49 @@
+{
+ "page": "reactions/ammonolysis-of-alkyl-halides",
+ "questions": [
+  {
+   "q": "The correct order of reactivity of alkyl halides towards ethanolic ammonia is:",
+   "options": [
+    "RCl > RBr > RI",
+    "RBr > RI > RCl",
+    "RI > RBr > RCl",
+    "RI > RCl > RBr"
+   ],
+   "answer": 2,
+   "explain": "Reactivity follows leaving-group ability of the halide ion: the weakest C–X bond (C–I) reacts fastest, so RI > RBr > RCl."
+  },
+  {
+   "q": "Which condition makes the primary amine the major product when an alkyl halide is heated with ethanolic NH₃ in a sealed tube?",
+   "options": [
+    "A large excess of ammonia",
+    "A large excess of the alkyl halide",
+    "Adding NaOH before heating",
+    "Using a tertiary alkyl halide"
+   ],
+   "answer": 0,
+   "explain": "With a large excess of NH₃, each R–X molecule is far more likely to meet NH₃ than the amine already formed, which limits over-alkylation. Excess R–X pushes the reaction towards the quaternary salt."
+  },
+  {
+   "q": "Which halide does NOT give an amine when heated with ethanolic NH₃ at about 373 K in a sealed tube?",
+   "options": [
+    "Bromoethane",
+    "Benzyl chloride",
+    "Chloroethane",
+    "Chlorobenzene"
+   ],
+   "answer": 3,
+   "explain": "In chlorobenzene the C–Cl bond is strengthened by resonance with the ring, so it resists nucleophilic substitution unless strong electron-withdrawing groups are present ortho or para."
+  },
+  {
+   "q": "Benzyl chloride is treated with ammonia and the product is then treated with two moles of chloromethane. The final product is:",
+   "options": [
+    "N-Methylbenzylamine",
+    "N,N-Dimethylbenzylamine",
+    "N,N-Dimethylaniline",
+    "Benzyltrimethylammonium chloride"
+   ],
+   "answer": 1,
+   "explain": "Ammonolysis gives benzylamine, C₆H₅CH₂NH₂, and two CH₃Cl molecules alkylate the nitrogen twice to give C₆H₅CH₂N(CH₃)₂. N,N-Dimethylaniline is a trap: the nitrogen is on the CH₂, not on the ring."
+  }
+ ]
+}

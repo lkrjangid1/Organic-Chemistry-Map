@@ -1,0 +1,49 @@
+{
+ "page": "tests/ceric-ammonium-nitrate-test",
+ "questions": [
+  {
+   "q": "A few drops of ceric ammonium nitrate solution are added to ethanol. The observation is:",
+   "options": [
+    "A white precipitate forms",
+    "The orange-yellow solution turns red",
+    "A violet colour appears",
+    "A silver mirror forms"
+   ],
+   "answer": 1,
+   "explain": "Ethanol replaces nitrate ligands on Ce(IV) to form a red complex, [Ce(NO₃)₄(C₂H₅OH)₃]. Violet is the ferric chloride result for phenol, which is a common mix-up."
+  },
+  {
+   "q": "Which compound gives the red colour in the CAN test?",
+   "options": [
+    "Phenol",
+    "Diethyl ether",
+    "Propan-2-ol",
+    "Hexane"
+   ],
+   "answer": 2,
+   "explain": "The red colour shows an alcoholic –OH group. Ether and hexane have no –OH, and in exam answers phenol does not give the red alcohol colour because Ce(IV) oxidises it instead."
+  },
+  {
+   "q": "The red colour in the CAN test fades on standing because:",
+   "options": [
+    "Ammonium nitrate decomposes",
+    "The alcohol evaporates",
+    "Nitric acid hydrolyses the complex",
+    "Ce(IV) oxidises the bound alcohol and is reduced to nearly colourless Ce(III)"
+   ],
+   "answer": 3,
+   "explain": "Cerium(IV) is a strong one-electron oxidant, so the red complex is temporary: the alcohol is slowly oxidised and pale-yellow Ce³⁺ forms. Adding excess orange reagent also masks the red colour."
+  },
+  {
+   "q": "A compound gives a positive CAN test. Which test should be used next to find whether it is a 1°, 2° or 3° alcohol?",
+   "options": [
+    "Lucas test",
+    "Neutral FeCl₃ test",
+    "2,4-DNP test",
+    "Biuret test"
+   ],
+   "answer": 0,
+   "explain": "The CAN test shows only that an alcoholic –OH is present; all classes of alcohol give the red colour. The Lucas test (or the Victor Meyer test) is used to find the class."
+  }
+ ]
+}

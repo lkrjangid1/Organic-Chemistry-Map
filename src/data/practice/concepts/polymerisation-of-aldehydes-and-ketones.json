@@ -1,0 +1,49 @@
+{
+ "page": "concepts/polymerisation-of-aldehydes-and-ketones",
+ "questions": [
+  {
+   "q": "Acetaldehyde is treated with a little concentrated H₂SO₄ while the mixture is kept at about 0 °C or below. The main product is:",
+   "options": [
+    "Paraldehyde, a liquid cyclic trimer",
+    "Metaldehyde, a solid cyclic tetramer",
+    "Paraformaldehyde, a linear polymer",
+    "Crotonaldehyde, an aldol product"
+   ],
+   "answer": 1,
+   "explain": "Cold conditions favour the eight-membered tetramer, metaldehyde (a solid); at room temperature the six-membered liquid trimer paraldehyde is formed instead. Swapping the two names is the usual trap."
+  },
+  {
+   "q": "Formaldehyde reacts with ammonia to give urotropine. How many molecules of HCHO and NH₃ combine, and how many water molecules are lost, per molecule of product?",
+   "options": [
+    "4 HCHO + 6 NH₃, 4 H₂O lost",
+    "6 HCHO + 4 NH₃, 4 H₂O lost",
+    "3 HCHO + 3 NH₃, 3 H₂O lost",
+    "6 HCHO + 4 NH₃, 6 H₂O lost"
+   ],
+   "answer": 3,
+   "explain": "6HCHO + 4NH₃ → (CH₂)₆N₄ + 6H₂O. All six oxygens of formaldehyde leave as water, which is why urotropine contains no oxygen."
+  },
+  {
+   "q": "Which statement about the products obtained from acetone with acid is correct?",
+   "options": [
+    "Mesityl oxide is formed from three acetone units with dry HCl",
+    "Phorone is formed from two acetone units with dry HCl",
+    "Mesitylene is formed from three acetone units with conc. H₂SO₄ on heating",
+    "Acetone gives a stable C–O–C cyclic trimer similar to paraldehyde"
+   ],
+   "answer": 2,
+   "explain": "Three acetone molecules condense with loss of three water molecules to give mesitylene (1,3,5-trimethylbenzene). Mesityl oxide needs two acetone units and phorone three, and ketones do not form stable acetal polymers."
+  },
+  {
+   "q": "A white solid separates slowly from concentrated formalin. It does not give Tollens' test as such but regenerates HCHO on heating. Which identification and structure are correct?",
+   "options": [
+    "Paraformaldehyde, a linear chain HO(CH₂O)ₙH with n about 8–100",
+    "1,3,5-Trioxane, a six-membered ring (CH₂O)₃",
+    "Polyoxymethylene, an end-capped chain with n much greater than 100",
+    "Formose, a racemic mixture of sugars"
+   ],
+   "answer": 0,
+   "explain": "The solid that separates from concentrated formalin is paraformaldehyde, an open-chain polymer HO(CH₂O)ₙH that depolymerises to HCHO on heating. Trioxane is the cyclic trimer (metaformaldehyde), not paraformaldehyde."
+  }
+ ]
+}

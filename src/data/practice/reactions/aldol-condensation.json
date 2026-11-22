@@ -1,0 +1,50 @@
+{
+ "page": "reactions/aldol-condensation",
+ "questions": [
+  {
+   "q": "Which compound CANNOT undergo self aldol condensation with dilute NaOH?",
+   "options": [
+    "Propanal",
+    "Propanone",
+    "2,2-Dimethylpropanal, (CH₃)₃C–CHO",
+    "Ethanal"
+   ],
+   "answer": 2,
+   "explain": "(CH₃)₃C–CHO has no α-hydrogen, so no enolate can form; like HCHO and C₆H₅CHO it gives the Cannizzaro reaction in concentrated alkali instead."
+  },
+  {
+   "q": "Propanal is treated with cold dilute NaOH. The aldol formed is:",
+   "options": [
+    "3-Hydroxyhexanal",
+    "3-Hydroxy-2-methylpentanal",
+    "2-Hydroxy-3-methylpentanal",
+    "4-Hydroxyhexan-3-one"
+   ],
+   "answer": 1,
+   "explain": "The α-carbon (C-2) of one propanal bonds to the carbonyl carbon of the other, so the methyl branch sits at C-2 and the OH at C-3. Joining through C-3 (giving 3-hydroxyhexanal) is the common trap."
+  },
+  {
+   "q": "Heptane-2,6-dione is warmed with aqueous OH⁻. The major product is:",
+   "smiles": "CC(=O)CCCC(C)=O",
+   "options": [
+    "3-Methylcyclopent-2-en-1-one",
+    "1-(2-Methylcyclobut-1-enyl)ethanone",
+    "Cyclohept-2-en-1-one",
+    "3-Methylcyclohex-2-en-1-one"
+   ],
+   "answer": 3,
+   "explain": "This 1,5-diketone cyclises by an intramolecular aldol: the C-1 enolate attacks the C-6 carbonyl, and dehydration gives the strain-free six-membered enone. Because every step is reversible, the four-membered ring does not accumulate."
+  },
+  {
+   "q": "In vinylogous self-condensation, CH₃(CH=CH)ₙCHO with n = 100 reacts with a second identical molecule in base on heating. The value of n in the product CH₃(CH=CH)ₙCHO is:",
+   "options": [
+    "201",
+    "200",
+    "101",
+    "202"
+   ],
+   "answer": 0,
+   "explain": "The acidic γ-CH₃ of one molecule attacks the CHO of the other and water is lost, so self-condensation gives CH₃(CH=CH)₂ₙ₊₁CHO: 2(100) + 1 = 201."
+  }
+ ]
+}

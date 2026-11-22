@@ -1,0 +1,44 @@
+---
+/** Practice MCQs at the end of a page. Works without JavaScript (answers in <details>). */
+import { moleculeSvg } from '../lib/structure';
+import type { PracticeQuestion } from '../lib/practice';
+
+interface Props { questions: PracticeQuestion[]; id: string }
+const { questions, id } = Astro.props;
+const items = await Promise.all(questions.map(async (q) => ({ ...q, svg: q.smiles ? await moleculeSvg(q.smiles, { width: 200, height: 150 }) : null })));
+const KEYS = ['A', 'B', 'C', 'D', 'E'];
+---
+{items.length > 0 && (
+  <section class="practice" aria-labelledby={`${id}-h`} data-practice>
+    <h2 id={`${id}-h`}>Practice questions</h2>
+    <p class="practice-note">Original questions written for this page. Pick an option to check your answer.</p>
+    <ol class="practice-list">
+      {items.map((q, i) => (
+        <li class="practice-q" data-answer={q.answer}>
+          <p class="practice-stem">{q.q}</p>
+          {q.svg && <figure class="mol"><Fragment set:html={q.svg} /></figure>}
+          <div class="practice-opts" role="group" aria-label={`Options for question ${i + 1}`}>
+            {q.options.map((o, k) => <button type="button" class="qz-opt" data-k={k}><strong>({KEYS[k]})</strong> {o}</button>)}
+          </div>
+          <details class="practice-ans">
+            <summary>Answer</summary>
+            <p><strong>({KEYS[q.answer]}) {q.options[q.answer]}</strong>. {q.explain}</p>
+          </details>
+        </li>
+      ))}
+    </ol>
+  </section>
+)}
+<script>
+  for (const q of document.querySelectorAll<HTMLElement>('[data-practice] .practice-q')) {
+    const answer = Number(q.dataset.answer);
+    const buttons = [...q.querySelectorAll<HTMLButtonElement>('.qz-opt')];
+    const details = q.querySelector('details')!;
+    buttons.forEach((b) => b.addEventListener('click', () => {
+      if (buttons[0].disabled) return;
+      const k = Number(b.dataset.k);
+      buttons.forEach((x, j) => { x.disabled = true; if (j === answer) x.classList.add('ok'); else if (j === k) x.classList.add('bad'); });
+      details.open = true;
+    }));
+  }
+</script>

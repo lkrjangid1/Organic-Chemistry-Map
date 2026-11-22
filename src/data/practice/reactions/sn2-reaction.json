@@ -1,0 +1,7 @@
+{"page": "reactions/sn2-reaction",
+ "questions": [
+  {"q": "(S)-Butan-2-yl tosylate is treated with NaBr in acetone. The product is:", "options": ["(S)-2-Bromobutane", "Racemic 2-bromobutane", "(R)-2-Bromobutane", "But-2-ene only"], "answer": 2, "explain": "Bromide attacks from the back side in one step and the tosylate leaves, so configuration is inverted (Walden inversion)."},
+  {"q": "Which is the correct order of SN2 reactivity?", "options": ["CH₃X > 1° > 2° > 3°", "3° > 2° > 1° > CH₃X", "2° > 1° > CH₃X > 3°", "1° > CH₃X > 3° > 2°"], "answer": 0, "explain": "Bulky groups block back-side attack, so reactivity falls with substitution; tertiary halides show no SN2."},
+  {"q": "An alkyl bromide R–Br is treated separately with AgNO₂ and with KNO₂. The major products are respectively:", "options": ["R–O–N=O and R–NO₂", "R–NO₂ and R–NO₂", "R–NC and R–CN", "R–NO₂ and R–O–N=O"], "answer": 3, "explain": "The covalent silver salt attacks through N to give the nitroalkane, while the ionic potassium salt attacks through O to give the alkyl nitrite."},
+  {"q": "Neopentyl bromide reacts with NaOH extremely slowly by SN2 even though it is a primary halide. The reason is:", "options": ["The C–Br bond lies in a ring plane", "The bulky tert-butyl group blocks the back side of the carbon", "Bromide is a poor leaving group", "It forms a very stable carbocation instead"], "answer": 1, "explain": "SN2 reactivity falls with steric hindrance at the back side; the adjacent tert-butyl group shields the reacting CH₂."}
+ ]}

@@ -1,0 +1,49 @@
+{
+ "page": "concepts/bakelite-and-formaldehyde-resins",
+ "questions": [
+  {
+   "q": "Phenol (in excess) condenses with formaldehyde in acid to give polymer A. Heating A with more formaldehyde (or hexamethylenetetramine) gives a thermosetting polymer B. A and B are",
+   "options": [
+    "Bakelite and novolac",
+    "Novolac and bakelite",
+    "Resole and Melmac",
+    "Novolac and Melmac"
+   ],
+   "answer": 1,
+   "explain": "Phenol in excess gives the linear, thermoplastic prepolymer novolac; extra –CH₂– bridges from more HCHO cross-link it into bakelite."
+  },
+  {
+   "q": "Unbreakable crockery is made from a condensation polymer of formaldehyde with",
+   "options": [
+    "Urea",
+    "Phenol",
+    "Melamine",
+    "Hexamethylenetetramine"
+   ],
+   "answer": 2,
+   "explain": "Melamine–formaldehyde resin (Melmac) is used for unbreakable crockery; urea–formaldehyde resin is matched with laminated sheets and phenol–formaldehyde (bakelite) with electrical switches."
+  },
+  {
+   "q": "Which statement about formaldehyde resins is INCORRECT?",
+   "options": [
+    "Bakelite is a cross-linked thermosetting polymer",
+    "Urea–formaldehyde resin is a condensation polymer with –NH–CH₂–NH– links",
+    "Formaldehyde attacks phenol at the ortho and para positions",
+    "Novolac is formed when formaldehyde is in excess over phenol"
+   ],
+   "answer": 3,
+   "explain": "Novolac forms with phenol in excess (F:P less than 1). The base-catalysed resole route is the one with formaldehyde in excess."
+  },
+  {
+   "q": "Why can phenol form a three-dimensional network with formaldehyde, while a ring with only two reactive positions would give only linear chains?",
+   "options": [
+    "The –OH group activates two ortho and one para position, so each ring can carry up to three –CH₂– bridges",
+    "Phenol reacts with HCHO at the meta positions, which are the most activated",
+    "Each formaldehyde molecule forms three –CH₂– bridges",
+    "Phenol undergoes addition polymerisation through its ring C=C bonds"
+   ],
+   "answer": 0,
+   "explain": "When each ring uses only two positions the chain stays linear (novolac); using the third free ortho/para position links neighbouring chains, giving cross-linked bakelite."
+  }
+ ]
+}

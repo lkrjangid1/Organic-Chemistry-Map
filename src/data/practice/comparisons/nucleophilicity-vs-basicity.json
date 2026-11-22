@@ -1,0 +1,49 @@
+{
+ "page": "comparisons/nucleophilicity-vs-basicity",
+ "questions": [
+  {
+   "q": "Which order of SN2 nucleophilicity is correct?",
+   "options": [
+    "(CH₃)₃CO⁻ > (CH₃)₂CHO⁻ > CH₃O⁻",
+    "(CH₃)₂CHO⁻ > CH₃O⁻ > (CH₃)₃CO⁻",
+    "CH₃O⁻ > (CH₃)₂CHO⁻ > (CH₃)₃CO⁻",
+    "All three are equal because the attacking atom is oxygen in each"
+   ],
+   "answer": 2,
+   "explain": "Branching blocks backside attack on carbon, so nucleophilicity falls with bulk even though basicity rises in the order CH₃O⁻ < (CH₃)₂CHO⁻ < (CH₃)₃CO⁻."
+  },
+  {
+   "q": "Arrange CH₃COO⁻, CH₃O⁻ and C₆H₅O⁻ in decreasing nucleophilicity.",
+   "options": [
+    "CH₃O⁻ > C₆H₅O⁻ > CH₃COO⁻",
+    "CH₃COO⁻ > C₆H₅O⁻ > CH₃O⁻",
+    "C₆H₅O⁻ > CH₃O⁻ > CH₃COO⁻",
+    "CH₃O⁻ > CH₃COO⁻ > C₆H₅O⁻"
+   ],
+   "answer": 0,
+   "explain": "With the same attacking atom (O), nucleophilicity follows basicity; resonance spreads the charge in phenoxide and even more in acetate, weakening both."
+  },
+  {
+   "q": "In a protic solvent, CH₃S⁻ is a better nucleophile than CH₃O⁻ although it is a weaker base. This is an example of:",
+   "options": [
+    "Nucleophilicity following basicity for the same attacking atom",
+    "Steric hindrance lowering nucleophilicity",
+    "Nucleophilicity rising down a group in protic solvents, because the larger anion is less strongly hydrogen-bonded",
+    "Nucleophilicity falling across a period"
+   ],
+   "answer": 2,
+   "explain": "Down a group in protic solvents the large, polarisable anion is caged less by hydrogen bonds and attacks faster, so nucleophilicity and basicity run in opposite directions."
+  },
+  {
+   "q": "A secondary alkyl bromide is heated with potassium tert-butoxide. The main pathway and reason are:",
+   "options": [
+    "SN2, because tert-butoxide is a strong nucleophile",
+    "SN1, because tert-butoxide is a weak base",
+    "Williamson ether synthesis, because alkoxides always substitute",
+    "E2, because tert-butoxide is a strong base but a hindered, poor nucleophile"
+   ],
+   "answer": 3,
+   "explain": "Its bulk blocks backside attack on carbon but a surface β-hydrogen is still easy to reach, so it removes protons and drives E2 instead of SN2."
+  }
+ ]
+}

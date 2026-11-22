@@ -1,0 +1,50 @@
+{
+ "page": "reactions/finkelstein-reaction",
+ "questions": [
+  {
+   "q": "Why is dry acetone the solvent of choice when ethyl bromide is converted into ethyl iodide with NaI?",
+   "options": [
+    "Acetone reacts with NaI to give free I₂, the actual reagent",
+    "Acetone is protic and solvates the bromide ion strongly",
+    "Acetone stabilises the ethyl carbocation formed in the reaction",
+    "NaI dissolves in acetone but NaBr does not, so NaBr precipitates and drives the equilibrium forward"
+   ],
+   "answer": 3,
+   "explain": "The halogen exchange is an equilibrium; removal of NaBr (or NaCl) as a precipitate pulls it towards the alkyl iodide by Le Chatelier's principle. The reaction is SN2, so no carbocation is involved."
+  },
+  {
+   "q": "(R)-2-Bromobutane is warmed with NaI in dry acetone. The organic product is:",
+   "smiles": "CC[C@@H](C)Br",
+   "options": [
+    "(R)-2-Iodobutane",
+    "(S)-2-Iodobutane",
+    "Racemic 2-iodobutane",
+    "But-2-ene"
+   ],
+   "answer": 1,
+   "explain": "The Finkelstein reaction is SN2, so iodide attacks from the back and the configuration is inverted (Walden inversion). Racemisation would require an SN1 path, which does not operate here."
+  },
+  {
+   "q": "Which halide does NOT give an alkyl iodide when heated with NaI in dry acetone?",
+   "options": [
+    "1-Fluoropropane",
+    "1-Chloropropane",
+    "Benzyl chloride",
+    "Methyl chloride"
+   ],
+   "answer": 0,
+   "explain": "Fluoride is a very poor leaving group and the C–F bond is very strong, so iodide cannot displace it. Only chlorides, bromides and sulfonates are converted; including F among the replaceable halogens is a common mistake."
+  },
+  {
+   "q": "In the sodium iodide in acetone test, which halide would be slowest to give a precipitate (or give none at all)?",
+   "options": [
+    "Allyl chloride",
+    "1-Bromobutane",
+    "2-Bromo-2-methylpropane",
+    "Benzyl bromide"
+   ],
+   "answer": 2,
+   "explain": "The test relies on SN2 halogen exchange, so a tertiary halide is practically unreactive because of steric hindrance. Allyl, benzyl and primary halides react fast and quickly precipitate NaCl or NaBr."
+  }
+ ]
+}

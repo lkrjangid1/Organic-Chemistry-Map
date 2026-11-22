@@ -1,0 +1,49 @@
+{
+ "page": "tests/tollens-test",
+ "questions": [
+  {
+   "q": "Which of the following ketones gives a silver mirror with Tollens' reagent?",
+   "options": [
+    "Fructose",
+    "Propanone",
+    "Butanone",
+    "Pentan-3-one"
+   ],
+   "answer": 0,
+   "explain": "Fructose is an α-hydroxy ketone; the alkaline reagent converts it through an enediol into an aldehyde, which is then oxidised. Simple ketones resist this mild oxidation."
+  },
+  {
+   "q": "Which pair of compounds can be distinguished by Tollens' test?",
+   "options": [
+    "Ethanal and benzaldehyde",
+    "Propanal and propanone",
+    "Glucose and fructose",
+    "Formic acid and methanal"
+   ],
+   "answer": 1,
+   "explain": "Propanal is oxidised and gives a silver mirror while propanone does not react. In every other pair both compounds reduce Tollens' reagent (aromatic aldehydes, ketoses and formic acid all respond)."
+  },
+  {
+   "q": "Hex-4-enal is warmed with Tollens' reagent and the mixture is then acidified. The organic product is:",
+   "options": [
+    "Hexanoic acid",
+    "Hex-4-en-1-ol",
+    "Butanoic acid and ethanoic acid",
+    "Hex-4-enoic acid"
+   ],
+   "answer": 3,
+   "explain": "Tollens' reagent oxidises only the –CHO group, leaving the C=C intact; acidification converts the carboxylate to the free acid. A strong oxidant such as KMnO₄ would also attack the double bond."
+  },
+  {
+   "q": "But-1-yne is added to Tollens' reagent. What is observed?",
+   "options": [
+    "A silver mirror, because the alkyne is oxidised to a carboxylate",
+    "No change, because alkynes have no C=O group",
+    "A white precipitate of silver acetylide, because the ≡C–H hydrogen is acidic",
+    "A brown precipitate of Ag₂O"
+   ],
+   "answer": 2,
+   "explain": "A terminal alkyne replaces its acidic ≡C–H hydrogen by silver to give R–C≡C–Ag. This is not an oxidation, so no mirror forms."
+  }
+ ]
+}

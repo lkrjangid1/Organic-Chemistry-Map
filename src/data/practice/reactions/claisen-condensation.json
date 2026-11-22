@@ -1,0 +1,51 @@
+{
+ "page": "reactions/claisen-condensation",
+ "questions": [
+  {
+   "q": "Ethyl acetate is treated with sodium ethoxide and then with dilute acid. The product is:",
+   "smiles": "CCOC(C)=O",
+   "options": [
+    "Ethyl 3-hydroxybutanoate",
+    "Ethyl acetoacetate, CH₃COCH₂COOC₂H₅",
+    "Acetone",
+    "Ethyl butanoate"
+   ],
+   "answer": 1,
+   "explain": "The tetrahedral intermediate expels C₂H₅O⁻ instead of being protonated, so the product is a β-keto ester, not the β-hydroxy compound an aldol would give."
+  },
+  {
+   "q": "Which base is the best choice for the Claisen self-condensation of ethyl propanoate?",
+   "options": [
+    "Aqueous NaOH",
+    "Sodium methoxide",
+    "Sodium ethoxide",
+    "Dilute HCl"
+   ],
+   "answer": 2,
+   "explain": "The alkoxide should match the ester's alkoxy group so that any attack on the carbonyl simply regenerates the same ester. NaOMe would cause transesterification, and NaOH would saponify the ester."
+  },
+  {
+   "q": "Which ester does NOT give a good Claisen self-condensation product with sodium ethoxide?",
+   "options": [
+    "Ethyl acetate",
+    "Ethyl propanoate",
+    "Ethyl butanoate",
+    "Ethyl 2-methylpropanoate"
+   ],
+   "answer": 3,
+   "explain": "Ethyl 2-methylpropanoate has only one α-H. It is used up making the enolate, so the β-keto ester formed has no acidic CH between its carbonyls to be deprotonated, and that final deprotonation is what drives the reaction."
+  },
+  {
+   "q": "Cyclohexanone and ethyl acetate are treated with sodium ethoxide, then with H₃O⁺. The main product is:",
+   "smiles": "O=C1CCCCC1",
+   "options": [
+    "2-Acetylcyclohexanone",
+    "Ethyl 2-oxocyclohexanecarboxylate",
+    "Ethyl acetoacetate",
+    "Cyclohexyl acetate"
+   ],
+   "answer": 0,
+   "explain": "The ketone α-H is more acidic than the ester α-H, so cyclohexanone forms the enolate and ethyl acetate is the acceptor, losing EtO⁻ to give the β-diketone. Ethyl 2-oxocyclohexanecarboxylate would need the roles reversed."
+  }
+ ]
+}

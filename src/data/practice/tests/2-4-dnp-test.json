@@ -1,0 +1,49 @@
+{
+ "page": "tests/2-4-dnp-test",
+ "questions": [
+  {
+   "q": "Which compound does NOT give a coloured precipitate with Brady's reagent?",
+   "options": [
+    "Propanone",
+    "Benzaldehyde",
+    "Ethyl acetate",
+    "Butanone"
+   ],
+   "answer": 2,
+   "explain": "Brady's reagent responds only to aldehydes and ketones. In an ester the lone pair on the attached oxygen is delocalised into the C=O, so the carbonyl carbon is not electrophilic enough to react."
+  },
+  {
+   "q": "The reaction of an aldehyde or ketone with 2,4-dinitrophenylhydrazine is best described as:",
+   "options": [
+    "Nucleophilic addition followed by elimination of water",
+    "Electrophilic aromatic substitution",
+    "Free-radical addition",
+    "Oxidation of the carbonyl group"
+   ],
+   "answer": 0,
+   "explain": "The –NH₂ of 2,4-DNPH adds to the acid-activated carbonyl carbon to give a carbinolamine, which loses water to form the C=N of the hydrazone. It is the same condensation that forms oximes and semicarbazones."
+  },
+  {
+   "q": "A compound C₈H₈O gives an orange-red precipitate with 2,4-DNPH and a yellow precipitate in the iodoform test, but does not reduce Tollens' or Fehling's reagent. The compound is:",
+   "options": [
+    "Phenylacetaldehyde",
+    "Acetophenone",
+    "4-Methylbenzaldehyde",
+    "Styrene oxide"
+   ],
+   "answer": 1,
+   "explain": "A positive 2,4-DNP test shows an aldehyde or ketone, a negative Tollens'/Fehling's test rules out the aldehyde, and a positive iodoform test shows CH₃CO–. Only acetophenone, C₆H₅COCH₃, fits all three."
+  },
+  {
+   "q": "Why does acetic acid give no precipitate with Brady's reagent although it contains a C=O group?",
+   "options": [
+    "Its C=O group is too sterically hindered",
+    "It forms an insoluble salt with H₂SO₄",
+    "2,4-DNPH reacts only with aromatic carbonyl compounds",
+    "Resonance with the –OH lone pair makes the carbonyl carbon less electrophilic, and the acid can lose a proton to form an unreactive carboxylate"
+   ],
+   "answer": 3,
+   "explain": "In acids, esters and amides the C=O is stabilised by the lone pair on the attached O or N, so the carbonyl carbon is a poor electrophile. A carboxylic acid also forms a carboxylate ion, which repels nucleophiles."
+  }
+ ]
+}

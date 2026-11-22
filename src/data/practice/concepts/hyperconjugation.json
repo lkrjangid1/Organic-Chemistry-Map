@@ -1,0 +1,49 @@
+{
+ "page": "concepts/hyperconjugation",
+ "questions": [
+  {
+   "q": "How many hyperconjugative structures can be written for the isopropyl cation, (CH₃)₂CH⁺?",
+   "options": [
+    "3",
+    "6",
+    "9",
+    "2"
+   ],
+   "answer": 1,
+   "explain": "The number of hyperconjugative structures equals the number of α-hydrogens; the two methyl groups supply 6."
+  },
+  {
+   "q": "According to the Baker–Nathan effect, the order of electron release by hyperconjugation from para alkyl groups is",
+   "options": [
+    "–C(CH₃)₃ > –CH(CH₃)₂ > –CH₂CH₃ > –CH₃",
+    "–CH₂CH₃ > –CH₃ > –CH(CH₃)₂ > –C(CH₃)₃",
+    "All four groups release electrons equally",
+    "–CH₃ > –CH₂CH₃ > –CH(CH₃)₂ > –C(CH₃)₃"
+   ],
+   "answer": 3,
+   "explain": "Hyperconjugation depends on the number of α-H atoms (3, 2, 1, 0), so methyl is highest. The first option is the +I order, the usual trap."
+  },
+  {
+   "q": "Which alkene has the smallest heat of hydrogenation?",
+   "options": [
+    "2,3-Dimethylbut-2-ene",
+    "Propene",
+    "cis-But-2-ene",
+    "trans-But-2-ene"
+   ],
+   "answer": 0,
+   "explain": "The tetrasubstituted alkene has 12 α-hydrogens and the most σ(C–H)→π* overlap, so it is the most stable and releases the least heat on hydrogenation (about −110 kJ/mol)."
+  },
+  {
+   "q": "The CH₃–C single bond in propyne is about 1.46 Å, shorter than the usual C–C bond of 1.54 Å. The best explanation is",
+   "options": [
+    "The +I effect of the methyl group",
+    "The electromeric effect of the triple bond",
+    "Hyperconjugation, which gives the C–C bond partial double-bond character",
+    "Steric repulsion between the methyl hydrogens"
+   ],
+   "answer": 2,
+   "explain": "σ(C–H) electrons of the methyl group delocalise into the adjacent π system, giving the CH₃–C bond some double-bond character and shortening it; the triple bond gains slight single-bond character."
+  }
+ ]
+}

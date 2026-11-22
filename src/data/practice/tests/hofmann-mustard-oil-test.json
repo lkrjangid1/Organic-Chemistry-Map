@@ -1,0 +1,49 @@
+{
+ "page": "tests/hofmann-mustard-oil-test",
+ "questions": [
+  {
+   "q": "Ethylamine is warmed with CS₂ and then heated with HgCl₂. The compound responsible for the mustard-oil smell is:",
+   "options": [
+    "C₂H₅N≡C",
+    "C₂H₅N=C=S",
+    "C₂H₅NHCSSH",
+    "(C₂H₅)₂S"
+   ],
+   "answer": 1,
+   "explain": "The final product is ethyl isothiocyanate, R–N=C=S. C₂H₅NHCSSH is only the dithiocarbamic acid intermediate, and C₂H₅N≡C is the isocyanide of the carbylamine test."
+  },
+  {
+   "q": "Which amine gives a positive Hofmann mustard oil test?",
+   "options": [
+    "(CH₃)₂NH",
+    "(CH₃)₃N",
+    "CH₃CH₂NH₂",
+    "(C₂H₅)₂NH"
+   ],
+   "answer": 2,
+   "explain": "Only primary amines give an isothiocyanate. Secondary amines form a dithiocarbamic acid but cannot go further, and tertiary amines do not even form the dithiocarbamic acid."
+  },
+  {
+   "q": "The function of HgCl₂ in the mustard oil reaction is to:",
+   "options": [
+    "Act as the electrophile that adds to the amine",
+    "Oxidise the amine to a nitro compound",
+    "Supply the carbon of the N=C=S group",
+    "Remove the elements of H₂S from the dithiocarbamic acid as black HgS"
+   ],
+   "answer": 3,
+   "explain": "HgCl₂ binds strongly to sulphur and traps H₂S as HgS, leaving R–N=C=S: RNH–C(=S)–SH + HgCl₂ → R–N=C=S + HgS + 2HCl. CS₂, not HgCl₂, is the electrophile and the source of the carbon."
+  },
+  {
+   "q": "Dimethylamine reacts with CS₂ but gives no mustard-oil smell after heating with HgCl₂. The reason is that:",
+   "options": [
+    "Its dithiocarbamic acid (CH₃)₂N–CS–SH has no N–H left to lose when forming N=C",
+    "It does not react with CS₂ at all",
+    "It is too weak a base to attack CS₂",
+    "HgCl₂ oxidises it to a nitrosamine"
+   ],
+   "answer": 0,
+   "explain": "Two N–H hydrogens are needed: one is used when the amine adds to CS₂ and the second is lost when N=C=S forms. A secondary amine has only one, so it stops at the dithiocarbamic acid."
+  }
+ ]
+}

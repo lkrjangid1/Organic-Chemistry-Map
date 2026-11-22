@@ -1,0 +1,49 @@
+{
+ "page": "reactions/gabriel-phthalimide-synthesis",
+ "questions": [
+  {
+   "q": "Which amine can be prepared by the Gabriel phthalimide synthesis?",
+   "options": [
+    "Aniline",
+    "tert-Butylamine",
+    "Benzylamine",
+    "N-Methylethanamine"
+   ],
+   "answer": 2,
+   "explain": "Benzyl chloride undergoes SN2 with the phthalimide anion, so benzylamine is obtained. Aryl and tertiary halides do not undergo SN2, and secondary amines are never products."
+  },
+  {
+   "q": "Why is the N–H hydrogen of phthalimide acidic enough to be removed by ethanolic KOH?",
+   "options": [
+    "The nitrogen is sp³ hybridised",
+    "Potassium forms a covalent bond with nitrogen",
+    "The benzene ring withdraws electrons directly from nitrogen by induction only",
+    "The negative charge of the anion is delocalised onto two flanking C=O groups"
+   ],
+   "answer": 3,
+   "explain": "Nitrogen sits between two carbonyl groups, so the imide anion is stabilised by resonance onto both oxygens. This is what makes potassium phthalimide easy to form."
+  },
+  {
+   "q": "In the Ing–Manske modification, the N-alkylphthalimide is cleaved with:",
+   "options": [
+    "Hydrazine, giving phthalhydrazide as a precipitate",
+    "Aqueous NaOH, giving disodium phthalate",
+    "Aqueous acid, giving phthalic acid",
+    "LiAlH₄, giving phthalyl alcohol"
+   ],
+   "answer": 0,
+   "explain": "Hydrazine releases the primary amine under milder conditions and phthalhydrazide precipitates. Alkaline hydrolysis is the NCERT version, not the Ing–Manske one."
+  },
+  {
+   "q": "Only primary amines are obtained in the Gabriel synthesis, with no secondary or tertiary amines. The reason is that:",
+   "options": [
+    "alkyl halides react only once with any nitrogen nucleophile",
+    "the N-alkylphthalimide has no N–H left and cannot be alkylated again",
+    "the hydrolysis step destroys secondary amines",
+    "KOH removes any secondary amine as its salt"
+   ],
+   "answer": 1,
+   "explain": "After one alkylation the nitrogen carries no H, so over-alkylation, the main problem in ammonolysis of alkyl halides, cannot happen."
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "page": "concepts/solvent-effects",
+ "questions": [
+  {
+   "q": "Which of the following is a polar aprotic solvent?",
+   "options": [
+    "Acetic acid",
+    "Methanol",
+    "N,N-Dimethylformamide (DMF)",
+    "Formic acid"
+   ],
+   "answer": 2,
+   "explain": "DMF, H–CO–N(CH₃)₂, is polar but has no H on O or N, so it cannot donate hydrogen bonds. Acetic acid, methanol and formic acid all carry an O–H and are protic."
+  },
+  {
+   "q": "The correct order of nucleophilicity of halide ions in DMSO is:",
+   "options": [
+    "F⁻ > Cl⁻ > Br⁻ > I⁻",
+    "I⁻ > Br⁻ > Cl⁻ > F⁻",
+    "Cl⁻ > Br⁻ > F⁻ > I⁻",
+    "Br⁻ > I⁻ > Cl⁻ > F⁻"
+   ],
+   "answer": 0,
+   "explain": "In a polar aprotic solvent the anions are bare, so nucleophilicity follows basicity and F⁻ is best. The order I⁻ > Br⁻ > Cl⁻ > F⁻ applies in protic solvents, where small F⁻ is hydrogen-bonded most strongly."
+  },
+  {
+   "q": "The reaction of 1-bromobutane with azide ion is fastest in:",
+   "options": [
+    "Methanol",
+    "Water",
+    "Acetonitrile",
+    "Hexane"
+   ],
+   "answer": 2,
+   "explain": "SN2 of an anion is speeded up by polar aprotic solvents, which leave the nucleophile unsolvated; acetonitrile gives a relative rate of 5,000 against 1 in methanol. Hexane cannot even dissolve the azide salt."
+  },
+  {
+   "q": "According to the Hughes–Ingold rule, increasing solvent polarity will:",
+   "options": [
+    "Speed up both the SN1 solvolysis of tert-butyl chloride and the SN2 reaction of OH⁻ with CH₃Br",
+    "Have no effect on either, since both involve the same leaving group",
+    "Slow down the SN1 solvolysis of tert-butyl chloride but speed up the SN2 reaction of OH⁻ with CH₃Br",
+    "Speed up the SN1 solvolysis of tert-butyl chloride but slow down the SN2 reaction of OH⁻ with CH₃Br"
+   ],
+   "answer": 3,
+   "explain": "Charge is created in the SN1 transition state of a neutral substrate, so a more polar solvent speeds it up; in SN2 of an anion with a neutral alkyl halide the charge is spread out, so higher polarity slows it down."
+  }
+ ]
+}

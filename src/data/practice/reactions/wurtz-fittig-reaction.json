@@ -1,0 +1,49 @@
+{
+ "page": "reactions/wurtz-fittig-reaction",
+ "questions": [
+  {
+   "q": "Bromobenzene and bromoethane are treated with sodium in dry ether. The main product is:",
+   "options": [
+    "Biphenyl",
+    "n-Butane",
+    "Ethylbenzene",
+    "Toluene"
+   ],
+   "answer": 2,
+   "explain": "In the Wurtz–Fittig reaction the aryl and alkyl groups join where the halogens were: C₆H₅Br + C₂H₅Br + 2Na → C₆H₅C₂H₅ + 2NaBr. Biphenyl and butane are only the self-coupled side products."
+  },
+  {
+   "q": "Which compound is NOT formed when bromobenzene and bromomethane react with sodium in dry ether?",
+   "options": [
+    "Toluene",
+    "Ethane",
+    "Biphenyl",
+    "Ethylbenzene"
+   ],
+   "answer": 3,
+   "explain": "Three couplings occur: Ar–R (toluene, main), R–R (ethane, Wurtz) and Ar–Ar (biphenyl, Fittig). Ethylbenzene would need an ethyl group, which neither halide supplies."
+  },
+  {
+   "q": "In the organosodium picture of the Wurtz–Fittig reaction, the cross product Ar–R is favoured because:",
+   "options": [
+    "The alkyl halide reacts with sodium faster and forms R⁻Na⁺, which then attacks the aryl halide",
+    "The aryl halide forms an aryl carbocation that the alkyl halide attacks",
+    "Sodium reacts only with aryl halides",
+    "Dry ether reacts with the aryl halide first"
+   ],
+   "answer": 0,
+   "explain": "Alkyl halides are more reactive towards sodium than aryl halides (Wurtz > Fittig), so R⁻Na⁺ forms first and displaces X⁻ from Ar–X. Pairing halogens from different periods, such as ArCl with RBr, widens this difference."
+  },
+  {
+   "q": "Which aryl halide is unsuitable as a substrate for the Wurtz–Fittig reaction?",
+   "options": [
+    "Bromobenzene",
+    "4-Bromophenol",
+    "Chlorobenzene",
+    "4-Bromotoluene"
+   ],
+   "answer": 1,
+   "explain": "Ring groups that react with sodium, such as OH, NO₂, C=O and COOH, are not tolerated, so the phenolic OH rules out 4-bromophenol. A methyl group on the ring does not react with sodium."
+  }
+ ]
+}

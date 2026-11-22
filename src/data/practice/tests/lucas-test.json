@@ -1,0 +1,49 @@
+{
+ "page": "tests/lucas-test",
+ "questions": [
+  {
+   "q": "Which alcohol turns Lucas reagent turbid immediately at room temperature?",
+   "options": [
+    "Propan-1-ol",
+    "Propan-2-ol",
+    "2-Methylpropan-2-ol",
+    "Ethanol"
+   ],
+   "answer": 2,
+   "explain": "2-Methylpropan-2-ol is a 3° alcohol; it forms the stable tert-butyl carbocation fastest and the insoluble chloride separates at once. Propan-2-ol (2°) takes about 5 minutes and the 1° alcohols show no turbidity at room temperature."
+  },
+  {
+   "q": "What is the role of anhydrous ZnCl₂ in Lucas reagent?",
+   "options": [
+    "It absorbs the water formed and so drives the reaction forward",
+    "It acts as a Lewis acid that binds the –OH oxygen and makes it a better leaving group",
+    "It supplies the chloride ion that acts as the nucleophile",
+    "It oxidises the alcohol to a carbonyl compound"
+   ],
+   "answer": 1,
+   "explain": "ZnCl₂ is a Lewis acid that complexes with an oxygen lone pair, so the activated –OH leaves easily and weakly nucleophilic Cl⁻ can replace it. Calling it merely a water absorber is the common trap."
+  },
+  {
+   "q": "Which primary alcohol gives turbidity with Lucas reagent at once, like a tertiary alcohol?",
+   "options": [
+    "Butan-1-ol",
+    "Propan-1-ol",
+    "Ethanol",
+    "Phenylmethanol (benzyl alcohol)"
+   ],
+   "answer": 3,
+   "explain": "Benzyl alcohol ionises to a resonance-stabilised benzylic carbocation, so it reacts immediately. A fast Lucas result therefore does not always mean a 3° alcohol."
+  },
+  {
+   "q": "Octan-2-ol is a secondary alcohol, yet the Lucas test is not a reliable way to classify it. Why?",
+   "options": [
+    "It is insoluble in the reagent, so a separate layer forms whether or not it reacts",
+    "It reacts by SN2 and gives no chloride",
+    "ZnCl₂ dehydrates it completely to an alkene before any chloride forms",
+    "Secondary alcohols with more than six carbons are oxidised by conc. HCl"
+   ],
+   "answer": 0,
+   "explain": "The test relies on a soluble alcohol giving an insoluble chloride; it works only up to about five or six carbons. Larger alcohols form a separate layer anyway, so cloudiness tells nothing."
+  }
+ ]
+}

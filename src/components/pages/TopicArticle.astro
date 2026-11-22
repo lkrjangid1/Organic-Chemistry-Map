@@ -14,6 +14,8 @@ import ReportError from '../ReportError.astro';
 import Byline from '../Byline.astro';
 import LibgenCard from '../LibgenCard.astro';
 import SaveButton from '../SaveButton.astro';
+import Practice from '../Practice.astro';
+import { practiceFor } from '../../lib/practice';
 import { url, absUrl, EXAMS } from '../../lib/site';
 import { SECTIONS, resolveRelated, hindiPages, localiseRef, type TopicKey } from '../../lib/sections';
 import { t as tr, type Lang } from '../../lib/i18n';
@@ -95,6 +97,7 @@ const jsonLd = [
   faqLd(d.faq, path),
 ].filter(Boolean) as Record<string, unknown>[];
 const pyqs = questionsFor(`${section}/${entry.id}`);
+const practice = lang === 'hi' ? [] : practiceFor(`${section}/${entry.id}`);
 ---
 <Base title={pageTitle} description={d.description} path={path} altPath={altPath} ogType="article" jsonLd={jsonLd} section={section}>
   <div class="container page">
@@ -123,6 +126,8 @@ const pyqs = questionsFor(`${section}/${entry.id}`);
             </ul>
           </Trick>
         )}
+
+        <Practice questions={practice} id="practice" />
 
         {d.faq.length > 0 && (
           <section id="faq" aria-labelledby="faq-h">

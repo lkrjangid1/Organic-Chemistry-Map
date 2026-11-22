@@ -1,0 +1,49 @@
+{
+ "page": "comparisons/alkene-stability-heat-of-hydrogenation",
+ "questions": [
+  {
+   "q": "Arrange in increasing heat of hydrogenation: but-1-ene (I), cis-but-2-ene (II), trans-but-2-ene (III), 2,3-dimethylbut-2-ene (IV).",
+   "options": [
+    "I < II < III < IV",
+    "IV < II < III < I",
+    "IV < III < II < I",
+    "III < IV < II < I"
+   ],
+   "answer": 2,
+   "explain": "The more stable alkene releases less heat: tetrasubstituted > trans-disubstituted > cis-disubstituted > monosubstituted, so IV releases least and I most."
+  },
+  {
+   "q": "Which diene is the most stable?",
+   "options": [
+    "Penta-1,3-diene",
+    "Penta-1,4-diene",
+    "Penta-1,2-diene",
+    "Allene"
+   ],
+   "answer": 0,
+   "explain": "Conjugated dienes are stabilised by delocalisation of π electrons over four carbons, so the order is conjugated > isolated > cumulated."
+  },
+  {
+   "q": "The correct increasing order of heat of hydrogenation is:",
+   "options": [
+    "Cyclohexene < cyclohexa-1,3-diene < benzene",
+    "Cyclohexene < benzene < cyclohexa-1,3-diene",
+    "Benzene < cyclohexene < cyclohexa-1,3-diene",
+    "Cyclohexa-1,3-diene < benzene < cyclohexene"
+   ],
+   "answer": 1,
+   "explain": "Benzene releases about 206 kJ/mol, less than cyclohexa-1,3-diene (about 230) despite having more π bonds, because of about 150 kJ/mol aromatic stabilisation; cyclohexene releases about 118."
+  },
+  {
+   "q": "Which statement about relative stability is correct?",
+   "options": [
+    "Methylenecyclohexane is more stable than 1-methylcyclohexene",
+    "1-Methylcyclopropene is more stable than methylenecyclopropane",
+    "Heats of combustion of cyclopropene and methylenecyclopropane can be compared directly to rank their stability",
+    "Methylenecyclopropane is more stable than 1-methylcyclopropene, but 1-methylcyclohexene is more stable than methylenecyclohexane"
+   ],
+   "answer": 3,
+   "explain": "In three-membered rings an endocyclic C=C adds severe strain, so the exo isomer wins; in six-membered rings strain is not the issue and the more substituted endocyclic alkene wins. Cyclopropene and methylenecyclopropane are not isomers, so their heats of combustion cannot be compared."
+  }
+ ]
+}

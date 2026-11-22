@@ -1,0 +1,50 @@
+{
+ "page": "reactions/bamberger-rearrangement",
+ "questions": [
+  {
+   "q": "N-Phenylhydroxylamine is warmed with aqueous H₂SO₄. The main product is:",
+   "smiles": "ONc1ccccc1",
+   "options": [
+    "2-Aminophenol",
+    "Aniline",
+    "Nitrosobenzene",
+    "4-Aminophenol"
+   ],
+   "answer": 3,
+   "explain": "In the Bamberger rearrangement the OH leaves nitrogen as water and a new OH arrives at the ring carbon para to nitrogen, giving p-aminophenol. Nitrosobenzene needs an oxidant such as dichromate, and aniline comes from over-reduction of nitrobenzene."
+  },
+  {
+   "q": "In the Bamberger rearrangement, the OH group of the product 4-aminophenol comes from:",
+   "options": [
+    "Water of the solvent, which attacks the para carbon",
+    "The original N–OH group, by an intramolecular shift to the para carbon",
+    "The sulphate ion of H₂SO₄",
+    "Dissolved oxygen in the medium"
+   ],
+   "answer": 0,
+   "explain": "After O-protonation, water leaves and solvent water attacks the para carbon. Drawing an intramolecular OH shift from N to the ring is the classic mistake."
+  },
+  {
+   "q": "If the Bamberger rearrangement of N-phenylhydroxylamine is carried out in hydrochloric acid instead of sulphuric acid:",
+   "options": [
+    "Only aniline is formed",
+    "The reaction does not occur at all",
+    "2- and 4-Chloroanilines form along with aminophenol",
+    "Benzidine becomes the main product"
+   ],
+   "answer": 2,
+   "explain": "Chloride competes with water as the nucleophile at the ring carbons, giving chloroanilines. The sulphate anion is a poor nucleophile, which is why H₂SO₄ gives 4-aminophenol cleanly."
+  },
+  {
+   "q": "Which electron-deficient species is formed when water leaves the O-protonated N-phenylhydroxylamine in the textbook mechanism?",
+   "options": [
+    "A free nitrene, C₆H₅N:",
+    "A nitrenium ion, C₆H₅NH⁺, with positive charge delocalised to ortho and para carbons",
+    "A benzenediazonium ion",
+    "A phenyl carbocation formed by loss of NH₂OH"
+   ],
+   "answer": 1,
+   "explain": "Loss of water from C₆H₅NH–OH₂⁺ gives the nitrenium ion C₆H₅NH⁺; its charge is best stabilised at the para carbon, which water attacks. N-protonation is favoured but leads nowhere; only O-protonation is productive."
+  }
+ ]
+}

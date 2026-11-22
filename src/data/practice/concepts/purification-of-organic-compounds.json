@@ -1,0 +1,49 @@
+{
+ "page": "concepts/purification-of-organic-compounds",
+ "questions": [
+  {
+   "q": "The most suitable method to separate iodine from common salt is:",
+   "options": [
+    "Crystallisation",
+    "Sublimation",
+    "Differential extraction",
+    "Steam distillation"
+   ],
+   "answer": 1,
+   "explain": "Iodine passes directly from solid to vapour on heating while NaCl does not, so the iodine condenses as pure crystals on a cold surface and the salt stays behind."
+  },
+  {
+   "q": "On a TLC plate a spot moves 2.4 cm from the base line while the solvent front moves 8.0 cm. The Rf value of the substance is:",
+   "options": [
+    "0.30",
+    "3.33",
+    "0.70",
+    "5.6"
+   ],
+   "answer": 0,
+   "explain": "Rf = distance moved by substance ÷ distance moved by solvent = 2.4 ÷ 8.0 = 0.30. Rf has no unit and is always less than 1, which rules out 3.33."
+  },
+  {
+   "q": "The stationary phase in paper chromatography is:",
+   "options": [
+    "Cellulose fibres acting as an adsorbent",
+    "Silica gel coated on the paper",
+    "The moving organic solvent",
+    "Water held in the fibres of the paper"
+   ],
+   "answer": 3,
+   "explain": "Water trapped in the paper fibres is the stationary phase, so paper chromatography is partition chromatography, not adsorption chromatography like TLC or column chromatography."
+  },
+  {
+   "q": "In column chromatography of a mixture of three compounds A, B and C on alumina, A is the most strongly adsorbed and C the least. Which statement is correct?",
+   "options": [
+    "A is eluted first and has the highest Rf on a TLC plate of the same adsorbent",
+    "C is eluted last because it interacts least with the stationary phase",
+    "A is eluted last and would show the smallest Rf on a TLC plate of the same adsorbent",
+    "All three elute together because Rf does not depend on adsorption"
+   ],
+   "answer": 2,
+   "explain": "The most strongly adsorbed compound moves most slowly, so it is eluted last and, on TLC, travels the shortest distance (smallest Rf). A higher Rf means weaker adsorption."
+  }
+ ]
+}

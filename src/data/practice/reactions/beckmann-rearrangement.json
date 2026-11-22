@@ -1,0 +1,51 @@
+{
+ "page": "reactions/beckmann-rearrangement",
+ "questions": [
+  {
+   "q": "Cyclohexanone oxime is heated with concentrated H₂SO₄. The product is:",
+   "smiles": "ON=C1CCCCC1",
+   "options": [
+    "ε-Caprolactone",
+    "ε-Caprolactam",
+    "Cyclohexylamine",
+    "Cyclohexanone"
+   ],
+   "answer": 1,
+   "explain": "A ring carbon migrates to nitrogen, so the ring grows from six to seven atoms with NH inside it, giving the cyclic amide ε-caprolactam, the monomer of nylon-6. ε-Caprolactone is the Baeyer–Villiger product of cyclohexanone, with O inserted instead of NH."
+  },
+  {
+   "q": "The usual (E)-oxime of acetophenone, with phenyl anti to OH, undergoes Beckmann rearrangement. The product is:",
+   "smiles": "C/C(=N\\O)c1ccccc1",
+   "options": [
+    "N-Methylbenzamide",
+    "Benzamide",
+    "Methyl benzoate",
+    "Acetanilide"
+   ],
+   "answer": 3,
+   "explain": "The group anti to OH (phenyl) moves to nitrogen and the methyl stays on the carbonyl carbon, giving CH₃CONHC₆H₅. N-Methylbenzamide would need methyl to migrate, as in the other oxime isomer."
+  },
+  {
+   "q": "In the Beckmann rearrangement of an unsymmetrical ketoxime, which group migrates to nitrogen?",
+   "options": [
+    "The group anti (trans) to the OH on nitrogen",
+    "The group with the higher migratory aptitude, whatever the oxime geometry",
+    "The group syn (cis) to the OH on nitrogen",
+    "Always the smaller of the two groups"
+   ],
+   "answer": 0,
+   "explain": "The migrating bond must be anti-periplanar to the departing N–O bond, so oxime geometry (E or Z), not migratory aptitude, decides the product. That is why each oxime isomer can give a different amide."
+  },
+  {
+   "q": "Which intermediate is formed directly when the anti group migrates as the N–O bond breaks in the Beckmann rearrangement?",
+   "options": [
+    "A free nitrene",
+    "An isocyanate, R–N=C=O",
+    "A nitrilium ion, R₁–C≡N⁺–R₂",
+    "A carbocation on the oxime carbon"
+   ],
+   "answer": 2,
+   "explain": "Migration and N–O cleavage are concerted, giving a nitrilium ion that water attacks to form the imidic acid, which tautomerises to the amide. No free nitrene is involved."
+  }
+ ]
+}

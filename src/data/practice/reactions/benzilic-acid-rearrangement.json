@@ -1,0 +1,51 @@
+{
+ "page": "reactions/benzilic-acid-rearrangement",
+ "questions": [
+  {
+   "q": "Benzil, C₆H₅COCOC₆H₅, is heated with concentrated KOH and the mixture is then acidified. The product is:",
+   "smiles": "O=C(c1ccccc1)C(=O)c1ccccc1",
+   "options": [
+    "Benzoin, C₆H₅CH(OH)COC₆H₅",
+    "Benzilic acid, (C₆H₅)₂C(OH)COOH",
+    "Two molecules of benzoic acid",
+    "Mandelic acid, C₆H₅CH(OH)COOH"
+   ],
+   "answer": 1,
+   "explain": "OH⁻ adds to one carbonyl and a phenyl shifts to the neighbouring carbonyl carbon, so both phenyls end up on the carbon carrying OH, next to COOH. The product keeps all 14 carbons of benzil."
+  },
+  {
+   "q": "Phenylglyoxal, C₆H₅COCHO, is treated with OH⁻ and then H₃O⁺. The product and the name of this variant are:",
+   "options": [
+    "Benzoylformic acid, C₆H₅COCOOH; an aldol reaction",
+    "Benzoic acid and HCOOH; a haloform-type cleavage",
+    "C₆H₅CH(OH)CHO; a benzoin condensation",
+    "Mandelic acid, C₆H₅CH(OH)COOH; an intramolecular Cannizzaro reaction"
+   ],
+   "answer": 3,
+   "explain": "Here hydride, not phenyl, is the group that migrates, so the same pathway is called an intramolecular Cannizzaro reaction and gives mandelic acid."
+  },
+  {
+   "q": "The rate-determining step of the benzilic acid rearrangement is:",
+   "options": [
+    "The 1,2-migration of the aryl group to the neighbouring carbonyl carbon",
+    "Addition of hydroxide to a carbonyl carbon",
+    "Proton transfer from COOH to the alkoxide",
+    "Protonation of the carboxylate by H₃O⁺"
+   ],
+   "answer": 0,
+   "explain": "Hydroxide addition is a fast, reversible equilibrium; the aryl shift that follows is slow. The rate is first order in diketone and first order in hydroxide."
+  },
+  {
+   "q": "Phenanthrene-9,10-quinone is treated with OH⁻ and then acidified. The product is:",
+   "smiles": "O=C1C(=O)c2ccccc2-c2ccccc21",
+   "options": [
+    "Biphenyl-2,2′-dicarboxylic acid",
+    "Phenanthrene-9,10-diol",
+    "9-Hydroxyfluorene-9-carboxylic acid",
+    "Fluoren-9-one"
+   ],
+   "answer": 2,
+   "explain": "In a cyclic 1,2-diketone the migrating group is a ring bond, so the central six-membered ring contracts to a five-membered ring carrying both OH and COOH on one carbon (C₁₄H₈O₂ to C₁₄H₁₀O₃)."
+  }
+ ]
+}

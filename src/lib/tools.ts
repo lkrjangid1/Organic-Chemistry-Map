@@ -8,6 +8,7 @@ import conversions from '../data/conversions.json';
 import { edges, nodes, nodesById, compoundName } from './graph';
 import { url } from './site';
 import { SECTIONS, type SectionKey } from './sections';
+import { allPractice } from './practice';
 
 export interface Group { id: string; name: string; formula?: string; page?: string }
 export interface Step { from: string; to: string; reagents: string; conditions?: string; name: string; page: string; note?: string }
@@ -26,9 +27,10 @@ export const molUrl = (smiles: string) => url(`structures/${molKey(smiles)}.svg`
 
 const reactionLike = async () => [...(await getCollection('reactions')), ...(await getCollection('tests'))];
 
-/** Every SMILES drawn by the tools (reaction/test examples). */
+/** Every SMILES drawn by the tools (reaction/test examples and practice questions). */
 export async function toolSmiles(): Promise<string[]> {
   const set = new Set<string>();
+  for (const p of allPractice()) if (p.smiles) set.add(p.smiles);
   for (const e of await reactionLike()) {
     if (e.data.reactant?.smiles) set.add(e.data.reactant.smiles);
     if (e.data.product?.smiles) set.add(e.data.product.smiles);
@@ -152,6 +154,13 @@ export async function quizQuestions() {
     const options = shuffle([s.to, ...distract], i + 17);
     qs.push({ type: 'group', from: groupName.get(s.from), reagents: s.reagents, conditions: s.conditions ?? '', options: options.map((id) => groupName.get(id)), answer: options.indexOf(s.to), title: s.name, note: s.note ?? '', href: pageHref(s.page) });
   });
+  const titles = new Map<string, string>();
+  for (const section of ['reactions', 'tests', 'reagents', 'concepts', 'comparisons'] as const) {
+    for (const e of await getCollection(section)) titles.set(`${section}/${e.id}`, e.data.title);
+  }
+  for (const p of allPractice()) {
+    qs.push({ type: 'mcq', stem: p.q, svg: p.smiles ? molUrl(p.smiles) : '', options: p.options, answer: p.answer, title: titles.get(p.page) ?? p.page, note: p.explain, href: pageHref(p.page) });
+  }
   return qs;
 }
 

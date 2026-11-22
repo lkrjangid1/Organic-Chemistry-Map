@@ -1,0 +1,49 @@
+{
+ "page": "concepts/amino-acids",
+ "questions": [
+  {
+   "q": "Which α-amino acid is optically inactive?",
+   "options": [
+    "Alanine",
+    "Serine",
+    "Valine",
+    "Glycine"
+   ],
+   "answer": 3,
+   "explain": "Glycine (H₂N–CH₂–COOH) has two H atoms on the α-carbon, so it has no stereocentre; alanine is the simplest optically active one."
+  },
+  {
+   "q": "Which amino acid is classified as basic?",
+   "options": [
+    "Glutamic acid",
+    "Lysine",
+    "Threonine",
+    "Asparagine"
+   ],
+   "answer": 1,
+   "explain": "Lysine has an extra NH₂ in its side chain, –(CH₂)₄NH₂. Asparagine is a trap: its side-chain nitrogen is an amide, so it is neutral."
+  },
+  {
+   "q": "Which of the following is NOT an essential amino acid in the NCERT list?",
+   "options": [
+    "Tyrosine",
+    "Tryptophan",
+    "Threonine",
+    "Histidine"
+   ],
+   "answer": 0,
+   "explain": "Tyrosine is non-essential; the essential ten are valine, isoleucine, leucine, lysine, phenylalanine, methionine, threonine, tryptophan, histidine and arginine."
+  },
+  {
+   "q": "A linear pentapeptide is formed from five amino acids. How many peptide bonds does it contain, and how many water molecules are lost in forming it?",
+   "options": [
+    "5 and 5",
+    "4 and 5",
+    "4 and 4",
+    "5 and 4"
+   ],
+   "answer": 2,
+   "explain": "n amino acids give n − 1 peptide bonds, and each –CO–NH– link forms with loss of one water molecule, so 4 bonds and 4 H₂O."
+  }
+ ]
+}

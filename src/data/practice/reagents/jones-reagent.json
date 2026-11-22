@@ -1,0 +1,50 @@
+{
+ "page": "reagents/jones-reagent",
+ "questions": [
+  {
+   "q": "Propan-1-ol is treated with Jones reagent (CrO₃ in dilute H₂SO₄, added to an acetone solution). The product is:",
+   "options": [
+    "Propanal",
+    "Propan-2-ol",
+    "Propanone",
+    "Propanoic acid"
+   ],
+   "answer": 3,
+   "explain": "In the aqueous acidic Jones conditions the aldehyde formed first is hydrated and oxidised again, so a 1° alcohol gives the carboxylic acid. Stopping at propanal needs an anhydrous reagent such as PCC."
+  },
+  {
+   "q": "Why does Jones oxidation of a saturated primary alcohol not stop at the aldehyde?",
+   "options": [
+    "The aldehyde forms a hydrate R–CH(OH)₂ in water, which is itself an alcohol and is oxidised to R–COOH",
+    "Acetone oxidises the aldehyde to the acid",
+    "Cr(III) formed in the reaction oxidises aldehydes",
+    "H₂SO₄ alone converts aldehydes into carboxylic acids"
+   ],
+   "answer": 0,
+   "explain": "The hydrate forms a new chromate ester and is oxidised again. Allylic and benzylic aldehydes hydrate only slightly, so those 1° alcohols usually stop at the aldehyde."
+  },
+  {
+   "q": "But-3-en-2-ol, CH₂=CH–CH(OH)–CH₃, is oxidised with Jones reagent. The product is:",
+   "smiles": "C=CC(O)C",
+   "options": [
+    "Butan-2-one",
+    "Butane-1,2,3-triol",
+    "But-3-en-2-one",
+    "Propanoic acid and CO₂"
+   ],
+   "answer": 2,
+   "explain": "Jones reagent oxidises the 2° alcohol to a ketone and generally leaves the C=C intact, giving the enone CH₂=CH–CO–CH₃."
+  },
+  {
+   "q": "In the balanced Jones oxidation of a secondary alcohol to a ketone, how many moles of CrO₃ are consumed for every 3 mol of alcohol?",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "6"
+   ],
+   "answer": 1,
+   "explain": "3R₂CHOH + 2CrO₃ + 3H₂SO₄ → 3R₂C=O + Cr₂(SO₄)₃ + 6H₂O. Each Cr(VI) → Cr(III) gains 3 electrons while each alcohol loses 2, so 3 alcohol molecules need 2 CrO₃."
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "page": "reactions/williamson-ether-synthesis",
+ "questions": [
+  {
+   "q": "Which pair of reagents gives tert-butyl methyl ether in good yield by Williamson synthesis?",
+   "options": [
+    "CH₃ONa + (CH₃)₃CBr",
+    "(CH₃)₃CONa + CH₃Br",
+    "CH₃OH + (CH₃)₃CBr",
+    "(CH₃)₃CONa + (CH₃)₃CBr"
+   ],
+   "answer": 1,
+   "explain": "The halide carbon is where SN2 attack happens, so it must be methyl or primary; the bulky tert-butyl group belongs on the alkoxide side. Methoxide with tert-butyl bromide gives only an alkene by E2."
+  },
+  {
+   "q": "Sodium methoxide is warmed with tert-butyl bromide. The main organic product is:",
+   "options": [
+    "tert-Butyl methyl ether",
+    "2-Methylpropan-2-ol",
+    "2-Methylpropane",
+    "2-Methylpropene"
+   ],
+   "answer": 3,
+   "explain": "With a tertiary halide the alkoxide acts as a base and removes a β-hydrogen instead of attacking the crowded carbon, so E2 is the only reaction: CH₃ONa + (CH₃)₃CBr → CH₂=C(CH₃)₂ + CH₃OH + NaBr."
+  },
+  {
+   "q": "Which combination is used to prepare anisole (methoxybenzene)?",
+   "options": [
+    "Sodium phenoxide + methyl iodide",
+    "Bromobenzene + sodium methoxide",
+    "Phenol + methanol",
+    "Chlorobenzene + methanol"
+   ],
+   "answer": 0,
+   "explain": "The aryl carbon cannot undergo SN2, so the aryl part must come from the phenoxide and the methyl part from CH₃I. Phenol is first converted to sodium phenoxide with NaOH."
+  },
+  {
+   "q": "(R)-2-Bromobutane is treated with sodium methoxide. Which description of the products is correct?",
+   "options": [
+    "(R)-2-Methoxybutane only",
+    "Racemic 2-methoxybutane only",
+    "(S)-2-Methoxybutane together with butenes",
+    "(S)-2-Methoxybutane only, with no alkene"
+   ],
+   "answer": 2,
+   "explain": "SN2 backside attack inverts the stereocentre, and the priority order (O > ethyl > methyl > H) is unchanged, so R becomes S. Because the halide is secondary, E2 competes and alkenes form alongside the ether."
+  }
+ ]
+}

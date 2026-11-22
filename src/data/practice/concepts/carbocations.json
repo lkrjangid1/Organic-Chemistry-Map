@@ -1,0 +1,51 @@
+{
+ "page": "concepts/carbocations",
+ "questions": [
+  {
+   "q": "The cationic carbon of a simple alkyl carbocation such as (CH₃)₃C⁺ is",
+   "options": [
+    "sp³ hybridised, pyramidal, with a lone pair",
+    "sp² hybridised, trigonal planar, with an empty p orbital",
+    "sp hybridised and linear",
+    "sp² hybridised, trigonal planar, with a filled p orbital"
+   ],
+   "answer": 1,
+   "explain": "A carbocation carbon has only six valence electrons; it is sp² and planar, and the empty p orbital makes it an electrophile and Lewis acid.",
+   "smiles": "C[C+](C)C"
+  },
+  {
+   "q": "3-Methylbut-1-ene reacts with HCl. The product formed by carbocation rearrangement is",
+   "options": [
+    "1-Chloro-3-methylbutane",
+    "2-Chloro-3-methylbutane",
+    "2-Chloro-2-methylbutane",
+    "1-Chloro-2-methylbutane"
+   ],
+   "answer": 2,
+   "explain": "Protonation gives a 2° cation next to a C–H on a tertiary carbon; a 1,2-hydride shift makes the more stable 3° cation, which Cl⁻ captures to give 2-chloro-2-methylbutane. 2-Chloro-3-methylbutane is the unrearranged product.",
+   "smiles": "C=CC(C)C"
+  },
+  {
+   "q": "Which aryl group has the highest migratory aptitude in a 1,2-shift to a carbocation?",
+   "options": [
+    "C₆H₅–",
+    "p-NO₂–C₆H₄–",
+    "p-CH₃–C₆H₄–",
+    "p-CH₃O–C₆H₄–"
+   ],
+   "answer": 3,
+   "explain": "Electron-donating para groups help the migrating ring carry the positive charge, so the order is p-anisyl > p-tolyl > phenyl > p-nitrophenyl."
+  },
+  {
+   "q": "The 1-cyclopentylethyl cation rearranges. The final, most stable cation formed is",
+   "options": [
+    "1-Methylcyclohexyl cation",
+    "2-Methylcyclohexyl cation",
+    "Cycloheptyl cation",
+    "Cyclopentylmethyl cation"
+   ],
+   "answer": 0,
+   "explain": "Ring expansion first gives the 2° 2-methylcyclohexyl cation (less strain), and a 1,2-hydride shift then gives the 3° 1-methylcyclohexyl cation. Stopping at the 2-methylcyclohexyl cation is the trap."
+  }
+ ]
+}

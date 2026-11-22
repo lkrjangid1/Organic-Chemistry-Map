@@ -1,0 +1,49 @@
+{
+ "page": "concepts/resonance-effect",
+ "questions": [
+  {
+   "q": "Which group shows a −M effect when attached to a benzene ring?",
+   "options": [
+    "−CN",
+    "−NHCOCH₃",
+    "−OCH₃",
+    "−Cl"
+   ],
+   "answer": 0,
+   "explain": "−CN has a π bond to an electronegative atom and withdraws ring π electrons (−M). −OCH₃, −NHCOCH₃ and −Cl all have a lone pair next to the ring and are +M groups."
+  },
+  {
+   "q": "The N–O bond order in the nitrate ion, NO₃⁻, is:",
+   "options": [
+    "1.5",
+    "1.33",
+    "2",
+    "1.25"
+   ],
+   "answer": 1,
+   "explain": "Bond order = total bonds over all contributors ÷ number of contributors = (2 + 1 + 1) ÷ 3 = 1.33. The value 1.5 applies to nitrite, which has only two contributors."
+  },
+  {
+   "q": "Which statement about writing resonating structures is NOT correct?",
+   "options": [
+    "Only electrons move; nuclei keep their positions",
+    "All structures must have the same number of unpaired electrons",
+    "No structure may contain a five-bonded carbon",
+    "The resonance hybrid is less stable than the most stable contributor"
+   ],
+   "answer": 3,
+   "explain": "The hybrid is always more stable than any single contributor; the difference in energy is the resonance energy."
+  },
+  {
+   "q": "Consider the nitrobenzyl cations (o-, m-, p-) and the unsubstituted benzyl cation. Which order of stability is correct?",
+   "options": [
+    "Benzyl⁺ > m-nitrobenzyl⁺ > p-nitrobenzyl⁺ > o-nitrobenzyl⁺",
+    "p-Nitrobenzyl⁺ > m-nitrobenzyl⁺ > o-nitrobenzyl⁺ > benzyl⁺",
+    "m-Nitrobenzyl⁺ > benzyl⁺ > p-nitrobenzyl⁺ > o-nitrobenzyl⁺",
+    "Benzyl⁺ > o-nitrobenzyl⁺ > p-nitrobenzyl⁺ > m-nitrobenzyl⁺"
+   ],
+   "answer": 0,
+   "explain": "NO₂ destabilises a cation by −M at ortho and para but acts only by −I at meta, so the meta isomer is the least destabilised; all nitro isomers are less stable than benzyl⁺ itself."
+  }
+ ]
+}

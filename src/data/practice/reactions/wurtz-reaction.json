@@ -1,0 +1,51 @@
+{
+ "page": "reactions/wurtz-reaction",
+ "questions": [
+  {
+   "q": "Which alkane CANNOT be prepared by the Wurtz reaction?",
+   "options": [
+    "Ethane",
+    "n-Butane",
+    "Methane",
+    "2,3-Dimethylbutane"
+   ],
+   "answer": 2,
+   "explain": "The Wurtz reaction always joins two alkyl groups, so the smallest possible product is ethane, from a methyl halide. Methane has only one carbon and cannot form this way."
+  },
+  {
+   "q": "The halide shown is treated with sodium in dry ether. The product is:",
+   "options": [
+    "2,3-Dimethylbutane",
+    "n-Hexane",
+    "2-Methylpentane",
+    "Propene"
+   ],
+   "answer": 0,
+   "explain": "Two isopropyl groups join through the carbons that carried chlorine: 2 (CH₃)₂CHCl + 2Na → (CH₃)₂CH–CH(CH₃)₂ + 2NaCl. The straight chain n-hexane would need 1-chloropropane.",
+   "smiles": "CC(C)Cl"
+  },
+  {
+   "q": "A mixture of bromomethane and bromoethane is treated with sodium in dry ether. The alkanes formed are:",
+   "options": [
+    "Propane only",
+    "Ethane, propane and butane",
+    "Propane and butane only",
+    "Ethane and butane only"
+   ],
+   "answer": 1,
+   "explain": "Each halide can couple with itself or with the other, giving ethane (CH₃–CH₃), propane (CH₃–C₂H₅) and butane (C₂H₅–C₂H₅). This mixture is why the Wurtz reaction is not used for odd-carbon alkanes; Corey–House is the clean route."
+  },
+  {
+   "q": "The dihalide shown is treated with sodium in refluxing dioxane. The main product is:",
+   "options": [
+    "Cyclobutene",
+    "A bicyclobutyl with both Cl atoms kept",
+    "Cyclobutane",
+    "Bicyclo[1.1.0]butane"
+   ],
+   "answer": 3,
+   "explain": "Under these conditions the intramolecular Wurtz reaction joins C-1 and C-3 of the same ring, closing bicyclo[1.1.0]butane in about 95% yield. The bicyclobutyl (coupling at C–Br of two molecules) is the exam answer for Na/ether at low temperature.",
+   "smiles": "ClC1CC(Br)C1"
+  }
+ ]
+}

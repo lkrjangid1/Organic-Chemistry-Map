@@ -1,0 +1,50 @@
+{
+ "page": "reactions/tishchenko-reaction",
+ "questions": [
+  {
+   "q": "Acetaldehyde is treated with a catalytic amount of aluminium ethoxide, Al(OC₂H₅)₃, under anhydrous conditions. The main product is:",
+   "options": [
+    "3-Hydroxybutanal",
+    "Ethyl acetate",
+    "Ethanol and sodium acetate",
+    "Diethyl ether"
+   ],
+   "answer": 1,
+   "explain": "In the Tishchenko reaction two aldehyde molecules combine into one ester: CH₃CO– from the aldehyde that lost a hydride and –OCH₂CH₃ from the one that gained it. The aldol product is the trap, because Al(OEt)₃ does not cause aldol reaction even though acetaldehyde has α-hydrogens."
+  },
+  {
+   "q": "Which statement is true for the Tishchenko reaction but NOT for the Cannizzaro reaction?",
+   "options": [
+    "It involves transfer of a hydride ion",
+    "It is a disproportionation of an aldehyde",
+    "It works for aldehydes that have α-hydrogens",
+    "It requires concentrated NaOH or KOH"
+   ],
+   "answer": 2,
+   "explain": "Both reactions are aldehyde disproportionations by hydride transfer, but Cannizzaro needs an aldehyde without α-H, whereas the aluminium alkoxide in Tishchenko works with or without α-H. Concentrated hydroxide is the Cannizzaro reagent, not the Tishchenko one."
+  },
+  {
+   "q": "Aluminium isopropoxide, Al(OCH(CH₃)₂)₃, in isopropanol converts a ketone into a secondary alcohol. This reaction is the:",
+   "options": [
+    "Tishchenko reaction",
+    "Oppenauer oxidation",
+    "Cannizzaro reaction",
+    "Meerwein–Ponndorf–Verley reduction"
+   ],
+   "answer": 3,
+   "explain": "Al(OCH(CH₃)₂)₃ with isopropanol reduces C=O to CH–OH, the MPV reduction. Oppenauer oxidation goes the other way (alcohol to carbonyl, with excess acetone), and Tishchenko uses Al(OC₂H₅)₃ with the aldehyde alone."
+  },
+  {
+   "q": "The aldehyde shown is treated with Al(OC₂H₅)₃. Which ester is formed?",
+   "options": [
+    "2-Phenylethyl phenylacetate",
+    "Benzyl benzoate",
+    "2-Phenylethyl benzoate",
+    "Ethyl benzoate"
+   ],
+   "answer": 0,
+   "explain": "Both halves of a Tishchenko ester keep the skeleton of the starting aldehyde: the acid part is C₆H₅CH₂COO– and the alcohol part is –OCH₂CH₂C₆H₅. Benzyl benzoate is what benzaldehyde gives, not phenylacetaldehyde.",
+   "smiles": "O=CCc1ccccc1"
+  }
+ ]
+}

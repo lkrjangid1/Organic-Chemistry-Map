@@ -1,0 +1,49 @@
+{
+ "page": "tests/fehling-test",
+ "questions": [
+  {
+   "q": "Which pair of compounds can be distinguished by Fehling's solution?",
+   "options": [
+    "Benzaldehyde and propanone",
+    "Ethanal and benzaldehyde",
+    "Glucose and fructose",
+    "Ethanal and propanal"
+   ],
+   "answer": 1,
+   "explain": "Only ethanal, an aliphatic aldehyde, gives red Cu₂O; benzaldehyde, an aromatic aldehyde, leaves the solution blue. Benzaldehyde and propanone are both negative, while glucose/fructose and ethanal/propanal are both positive."
+  },
+  {
+   "q": "The reddish-brown precipitate formed in a positive Fehling's test is:",
+   "options": [
+    "CuO",
+    "Copper metal",
+    "Cu₂O",
+    "Cu(OH)₂"
+   ],
+   "answer": 2,
+   "explain": "The aldehyde reduces Cu²⁺ to Cu⁺, which separates as copper(I) oxide: RCHO + 2Cu²⁺ + 5OH⁻ → RCOO⁻ + Cu₂O + 3H₂O. Copper metal (a mirror) is not formed; that is the silver result of Tollens' test."
+  },
+  {
+   "q": "The role of sodium potassium tartrate (Rochelle salt) in Fehling's solution B is to:",
+   "options": [
+    "Act as the reducing agent",
+    "Make the solution acidic",
+    "Oxidise the aldehyde to an acid",
+    "Complex Cu²⁺ so that Cu(OH)₂ does not precipitate in the alkali"
+   ],
+   "answer": 3,
+   "explain": "Tartrate is a ligand that holds Cu²⁺ in solution as a deep blue bis(tartrato)cuprate(II) complex in strongly basic medium. Cu²⁺ itself is the oxidant, and the reagent is alkaline (NaOH), not acidic."
+  },
+  {
+   "q": "In exam answers, which compound is counted as giving a red precipitate when heated with Fehling's solution?",
+   "options": [
+    "CH₃CHCl₂",
+    "C₆H₅CHO",
+    "CH₃COCH₃",
+    "CH₃COOH"
+   ],
+   "answer": 0,
+   "explain": "A gem-dichloride R–CHCl₂ hydrolyses in the hot alkaline reagent to the aldehyde RCHO, which then reduces Cu²⁺. Benzaldehyde, propanone and acetic acid all leave the solution blue; formic acid is the only simple acid that reacts."
+  }
+ ]
+}

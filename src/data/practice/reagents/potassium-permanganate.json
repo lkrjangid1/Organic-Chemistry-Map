@@ -1,0 +1,51 @@
+{
+ "page": "reagents/potassium-permanganate",
+ "questions": [
+  {
+   "q": "2,3-Dimethylbut-2-ene is treated with cold, dilute, alkaline KMnO₄ (Baeyer's reagent). The product is:",
+   "smiles": "CC(C)=C(C)C",
+   "options": [
+    "Two molecules of propanone",
+    "2,3-Dimethylbutane-2,3-diol",
+    "2,2,3,3-Tetramethyloxirane",
+    "2,3-Dimethylbutan-2-ol"
+   ],
+   "answer": 1,
+   "explain": "Baeyer's reagent forms a cyclic manganate ester that is hydrolysed to the vicinal diol, both OH groups added to the same face (syn). Cleavage to propanone needs hot or acidified KMnO₄."
+  },
+  {
+   "q": "Which alkylbenzene does NOT give benzoic acid on heating with KMnO₄?",
+   "options": [
+    "Ethylbenzene",
+    "Isopropylbenzene",
+    "Propylbenzene",
+    "tert-Butylbenzene"
+   ],
+   "answer": 3,
+   "explain": "Side-chain oxidation needs at least one hydrogen on the benzylic carbon. In tert-butylbenzene that carbon carries three methyl groups and no H; every other chain is cut back to a single COOH."
+  },
+  {
+   "q": "In neutral or weakly alkaline solution, permanganate acts as an oxidant by accepting three electrons. It is reduced to:",
+   "options": [
+    "Mn²⁺, almost colourless",
+    "MnO₄²⁻, green",
+    "MnO₂, a brown-black precipitate",
+    "Mn metal"
+   ],
+   "answer": 2,
+   "explain": "MnO₄⁻ + 2H₂O + 3e⁻ → MnO₂ + 4OH⁻. Mn²⁺ forms in acid (5e⁻) and green manganate MnO₄²⁻ in strongly alkaline solution (1e⁻)."
+  },
+  {
+   "q": "Butan-2-one is heated with KMnO₄. According to Popoff's rule, the product is:",
+   "smiles": "CCC(C)=O",
+   "options": [
+    "Two molecules of ethanoic acid",
+    "Methanoic acid and propanoic acid",
+    "Propanoic acid and CO₂",
+    "Butanoic acid"
+   ],
+   "answer": 0,
+   "explain": "The C=O stays with the smaller alkyl group, so the bond on the ethyl side breaks: CH₃CO– becomes ethanoic acid and the ethyl CH₂ is oxidised to a second ethanoic acid."
+  }
+ ]
+}

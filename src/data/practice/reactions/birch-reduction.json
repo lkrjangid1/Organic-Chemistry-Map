@@ -1,0 +1,52 @@
+{
+ "page": "reactions/birch-reduction",
+ "questions": [
+  {
+   "q": "Benzene is treated with Na in liquid NH₃ containing ethanol. The product is:",
+   "smiles": "c1ccccc1",
+   "options": [
+    "Cyclohexane",
+    "Cyclohexa-1,4-diene",
+    "Cyclohexa-1,3-diene",
+    "Cyclohexene"
+   ],
+   "answer": 1,
+   "explain": "Electron, proton, electron, proton: the two new hydrogens add para to each other, leaving two isolated C=C bonds. The conjugated 1,3-diene is the common trap, and the ring is not reduced further."
+  },
+  {
+   "q": "The Birch reduction of anisole, C₆H₅OCH₃, gives:",
+   "smiles": "COc1ccccc1",
+   "options": [
+    "3-Methoxycyclohexa-1,4-diene (OCH₃ on an sp³ carbon)",
+    "Methoxycyclohexane",
+    "Cyclohexa-1,4-diene and methanol",
+    "1-Methoxycyclohexa-1,4-diene (OCH₃ on a C=C carbon)"
+   ],
+   "answer": 3,
+   "explain": "Protonation occurs ortho to an electron donor, so OCH₃ stays on a carbon of a remaining double bond. Ethers are not cleaved under Birch conditions."
+  },
+  {
+   "q": "Benzoic acid is reduced with Na/liquid NH₃ and an alcohol. The product is:",
+   "smiles": "OC(=O)c1ccccc1",
+   "options": [
+    "Cyclohexa-2,5-diene-1-carboxylic acid",
+    "Cyclohexa-1,4-diene-1-carboxylic acid",
+    "Benzyl alcohol",
+    "Cyclohexanecarboxylic acid"
+   ],
+   "answer": 0,
+   "explain": "An electron-withdrawing group ends up on the sp³ carbon, where it stabilises the neighbouring carbanion, so protonation is para to COOH. The COOH group itself is not reduced."
+  },
+  {
+   "q": "Dec-5-yne is treated with Na in liquid NH₃. The product, and the reagent that would give its geometric isomer, are:",
+   "options": [
+    "cis-Dec-5-ene; H₂ with Pt",
+    "Decane; H₂ with Lindlar catalyst",
+    "trans-Dec-5-ene; H₂ with Lindlar catalyst",
+    "trans-Dec-5-ene; Na in ethanol"
+   ],
+   "answer": 2,
+   "explain": "The vinyl radical flips freely, and the vinyl anion forms in the less hindered trans shape, so Na/NH₃ gives the E-alkene. H₂ with Lindlar catalyst gives the cis-alkene."
+  }
+ ]
+}

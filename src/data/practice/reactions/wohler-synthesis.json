@@ -1,0 +1,49 @@
+{
+ "page": "reactions/wohler-synthesis",
+ "questions": [
+  {
+   "q": "Ammonium cyanate (NH₄OCN) and urea ((NH₂)₂CO) are related as:",
+   "options": [
+    "Allotropes",
+    "Isomers with formula CH₄N₂O",
+    "Homologues",
+    "Resonance structures"
+   ],
+   "answer": 1,
+   "explain": "Both have the formula CH₄N₂O; ammonium cyanate is an ionic salt and urea a covalent molecule, so Wöhler's conversion is an isomerisation. Resonance structures would be the same compound, which these are not."
+  },
+  {
+   "q": "In the usual classroom version of the Wöhler synthesis, which pair of aqueous solutions is mixed and heated to obtain urea?",
+   "options": [
+    "NH₃ and CO₂",
+    "KCN and NH₄Cl",
+    "KCNO and NH₄Cl",
+    "NH₄Cl and NaOH"
+   ],
+   "answer": 2,
+   "explain": "Potassium cyanate and ammonium chloride exchange ions to give ammonium cyanate, which rearranges to urea on heating. NH₃ + CO₂ at high pressure is the modern industrial route, not the Wöhler synthesis."
+  },
+  {
+   "q": "On heating, ammonium cyanate turns into urea through which pair of neutral species?",
+   "options": [
+    "NH₃ and HN=C=O (isocyanic acid)",
+    "NH₃ and CO₂",
+    "N₂ and HCHO",
+    "NH₂OH and HCN"
+   ],
+   "answer": 0,
+   "explain": "A proton passes from NH₄⁺ to OCN⁻, giving ammonia and cyanic acid, mostly as isocyanic acid HN=C=O. The lone pair of NH₃ then adds to the carbon of HN=C=O and a proton shift gives H₂N–CO–NH₂."
+  },
+  {
+   "q": "Which reagent gives a quick test that urea has formed in the Wöhler synthesis, by forming a white precipitate?",
+   "options": [
+    "Silver nitrate",
+    "Barium chloride",
+    "Lead acetate",
+    "Oxalic acid"
+   ],
+   "answer": 3,
+   "explain": "Oxalic acid precipitates white urea oxalate from the solution. Silver and lead salts appear in Wöhler's own variants as cyanates, not as tests for urea."
+  }
+ ]
+}

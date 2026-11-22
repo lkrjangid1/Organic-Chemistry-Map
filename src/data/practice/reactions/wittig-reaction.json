@@ -1,0 +1,50 @@
+{
+ "page": "reactions/wittig-reaction",
+ "questions": [
+  {
+   "q": "Cyclohexanone reacts with Ph₃P=CH₂. The organic product is:",
+   "options": [
+    "1-Methylcyclohexene",
+    "Methylenecyclohexane",
+    "1-Methylcyclohexanol",
+    "Cyclohexene"
+   ],
+   "answer": 1,
+   "explain": "The Wittig reaction forms the new C=C exactly where the C=O was, so only the exocyclic alkene is formed, with Ph₃P=O. The ring alkene is the trap: it is what the Grignard-then-dehydration route can give, as part of a mixture of isomers.",
+   "smiles": "O=C1CCCCC1"
+  },
+  {
+   "q": "The driving force of the Wittig reaction is:",
+   "options": [
+    "Release of a stable carbocation",
+    "Loss of nitrogen gas",
+    "Relief of strain in the ylide",
+    "Formation of the very strong P=O bond"
+   ],
+   "answer": 3,
+   "explain": "The four-membered oxaphosphetane breaks apart into the alkene and triphenylphosphine oxide, and the strong P=O bond in Ph₃P=O drives this step. Loss of N₂ is the driving force of the Wolff–Kishner reduction, not the Wittig."
+  },
+  {
+   "q": "A stabilised ylide such as Ph₃P=CH–COOC₂H₅ reacts with an aldehyde. The alkene formed is mainly:",
+   "options": [
+    "The E-isomer",
+    "The Z-isomer",
+    "A 1:1 E/Z mixture in every case",
+    "A tetrasubstituted alkene"
+   ],
+   "answer": 0,
+   "explain": "Stabilised ylides (R = ester or ketone) are less reactive and give mainly E-alkenes. Non-stabilised ylides (R = alkyl) give mainly Z-alkenes, and aryl (semi-stabilised) ylides often give mixtures."
+  },
+  {
+   "q": "Which alkene CANNOT be made satisfactorily by a Wittig reaction?",
+   "options": [
+    "Styrene",
+    "Methylenecyclohexane",
+    "2,3-Dimethylbut-2-ene",
+    "Propene"
+   ],
+   "answer": 2,
+   "explain": "2,3-Dimethylbut-2-ene is tetrasubstituted, and steric hindrance prevents its formation by the Wittig route. Mono-, di- and trisubstituted alkenes such as styrene (benzaldehyde + Ph₃P=CH₂) are fine."
+  }
+ ]
+}

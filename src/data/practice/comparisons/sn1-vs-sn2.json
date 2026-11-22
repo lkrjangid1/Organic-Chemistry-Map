@@ -1,0 +1,49 @@
+{
+ "page": "comparisons/sn1-vs-sn2",
+ "questions": [
+  {
+   "q": "The correct order of reactivity towards SN2 is:",
+   "options": [
+    "2-Bromo-2-methylbutane > 2-bromopentane > 1-bromopentane",
+    "2-Bromopentane > 1-bromopentane > 2-bromo-2-methylbutane",
+    "1-Bromopentane > 2-bromo-2-methylbutane > 2-bromopentane",
+    "1-Bromopentane > 2-bromopentane > 2-bromo-2-methylbutane"
+   ],
+   "answer": 3,
+   "explain": "SN2 needs room for backside attack, so primary > secondary > tertiary. The reverse order is the SN1 order."
+  },
+  {
+   "q": "Which observation indicates that a substitution has gone by the SN1 mechanism?",
+   "options": [
+    "The rate doubles when the nucleophile concentration is doubled",
+    "An optically active substrate gives a largely racemic product, with a rearranged product also formed",
+    "The product has completely inverted configuration",
+    "The reaction is fastest for CH₃Br and does not occur for tertiary bromides"
+   ],
+   "answer": 1,
+   "explain": "SN1 passes through a planar carbocation, which is attacked from both faces (racemisation) and can undergo 1,2-shifts. Rate dependence on [Nu⁻], full inversion and CH₃X > 3° are all SN2 features."
+  },
+  {
+   "q": "Which compound undergoes SN1 hydrolysis fastest?",
+   "options": [
+    "p-O₂N–C₆H₄CH₂Cl",
+    "C₆H₅CH₂Cl",
+    "CH₃CH₂CH₂Cl",
+    "p-CH₃O–C₆H₄CH₂Cl"
+   ],
+   "answer": 3,
+   "explain": "The methoxy group donates electrons by resonance and stabilises the benzyl cation, while nitro destabilises it; a simple primary alkyl chloride forms a poor carbocation."
+  },
+  {
+   "q": "Arrange the four isomeric bromobutanes in decreasing order of SN1 reactivity: n-butyl bromide (I), isobutyl bromide (II), sec-butyl bromide (III), tert-butyl bromide (IV).",
+   "options": [
+    "IV > III > II > I",
+    "IV > III > I > II",
+    "I > II > III > IV",
+    "III > IV > II > I"
+   ],
+   "answer": 0,
+   "explain": "SN1 follows carbocation stability, 3° > 2° > 1°; between the two primary bromides, the (CH₃)₂CH– group gives the isobutyl cation more +I stabilisation. For SN2 the order is exactly reversed."
+  }
+ ]
+}

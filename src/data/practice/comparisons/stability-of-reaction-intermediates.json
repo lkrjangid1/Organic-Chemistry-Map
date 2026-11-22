@@ -1,0 +1,49 @@
+{
+ "page": "comparisons/stability-of-reaction-intermediates",
+ "questions": [
+  {
+   "q": "Arrange the free radicals in decreasing stability: CH₃•, (CH₃)₃C•, CH₂=CH•, CH₂=CHCH₂•.",
+   "options": [
+    "CH₂=CHCH₂• > (CH₃)₃C• > CH₃• > CH₂=CH•",
+    "(CH₃)₃C• > CH₂=CHCH₂• > CH₂=CH• > CH₃•",
+    "CH₂=CH• > CH₂=CHCH₂• > (CH₃)₃C• > CH₃•",
+    "CH₂=CHCH₂• > CH₂=CH• > (CH₃)₃C• > CH₃•"
+   ],
+   "answer": 0,
+   "explain": "Allyl is resonance stabilised (C–H BDE 89 kcal/mol), tert-butyl gains from hyperconjugation (96.5), while the vinyl radical (111) is less stable even than methyl (105)."
+  },
+  {
+   "q": "The hybridisation of carbon in the methyl free radical and in the methyl carbanion is, respectively:",
+   "options": [
+    "sp³ and sp³",
+    "sp² and sp²",
+    "sp² and sp³",
+    "sp³ and sp²"
+   ],
+   "answer": 2,
+   "explain": "•CH₃ is planar with the odd electron in a pure p orbital, so it is sp²; CH₃⁻ is pyramidal, sp³."
+  },
+  {
+   "q": "Which statement about carbocation stability is correct according to hydride ion affinity data?",
+   "options": [
+    "The cyclopropylmethyl cation is more stable than the cyclopropenyl cation",
+    "The methyl cation is more stable than the vinyl cation",
+    "The phenyl cation is more stable than the ethyl cation",
+    "The tropylium cation is more stable than the tert-butyl cation"
+   ],
+   "answer": 3,
+   "explain": "Aromatic tropylium has the lowest HIA (201 against 231 kcal/mol for tert-butyl). Cyclopropenyl (221) beats cyclopropylmethyl (249), vinyl (287) beats methyl (312), and phenyl (298) is less stable than ethyl (273)."
+  },
+  {
+   "q": "Arrange in decreasing stability: C₆H₅C≡C⁻, (C₆H₅)₃C⁻, C₆H₅CH₂⁻, CH₃⁻.",
+   "options": [
+    "C₆H₅C≡C⁻ > (C₆H₅)₃C⁻ > C₆H₅CH₂⁻ > CH₃⁻",
+    "(C₆H₅)₃C⁻ > C₆H₅C≡C⁻ > C₆H₅CH₂⁻ > CH₃⁻",
+    "C₆H₅CH₂⁻ > (C₆H₅)₃C⁻ > C₆H₅C≡C⁻ > CH₃⁻",
+    "CH₃⁻ > C₆H₅CH₂⁻ > (C₆H₅)₃C⁻ > C₆H₅C≡C⁻"
+   ],
+   "answer": 0,
+   "explain": "Rank carbanions by parent pKa in DMSO: phenylacetylene 28.8, triphenylmethane 30.6, toluene about 43, methane about 56. The sp carbanion edges out even the triply benzylic one, which is the trap."
+  }
+ ]
+}

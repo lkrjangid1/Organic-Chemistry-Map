@@ -1,0 +1,51 @@
+{
+ "page": "reactions/gattermann-reaction",
+ "questions": [
+  {
+   "q": "Benzenediazonium chloride is warmed with copper powder and HBr. The product is:",
+   "smiles": "[Cl-].N#[N+]c1ccccc1",
+   "options": [
+    "Phenol",
+    "Benzonitrile",
+    "Benzaldehyde",
+    "Bromobenzene"
+   ],
+   "answer": 3,
+   "explain": "Cu powder with HX on a diazonium salt is the Gattermann reaction, which replaces –N₂⁺ by Cl or Br with loss of N₂. Phenol would form on warming in water alone."
+  },
+  {
+   "q": "Which statement correctly compares the Gattermann and Sandmeyer reactions?",
+   "options": [
+    "Gattermann uses CuCl; Sandmeyer uses copper powder",
+    "Gattermann uses copper powder and generally gives lower yields than Sandmeyer",
+    "Gattermann goes through an aryl cation, Sandmeyer through an aryl radical",
+    "Gattermann can introduce –CN; Sandmeyer cannot"
+   ],
+   "answer": 1,
+   "explain": "Gattermann uses metallic Cu with HX; Sandmeyer uses a copper(I) salt and gives the better yield. Copper powder works through Cu⁺ formed in situ, so both go via an aryl radical."
+  },
+  {
+   "q": "Which compound CANNOT be prepared from the corresponding diazonium salt by the Gattermann reaction?",
+   "options": [
+    "Benzonitrile",
+    "Bromobenzene",
+    "4-Bromotoluene",
+    "Chlorobenzene"
+   ],
+   "answer": 0,
+   "explain": "The Gattermann reaction introduces only Cl and Br. Cyanide is introduced with CuCN (Sandmeyer), iodide with KI and fluoride by the Balz–Schiemann reaction."
+  },
+  {
+   "q": "p-Toluidine is converted into compound X with NaNO₂/HCl at 273–278 K, and X is warmed with Cu/HBr to give Y. Y is:",
+   "smiles": "Cc1ccc(N)cc1",
+   "options": [
+    "4-Methylphenol",
+    "2-Bromo-4-methylaniline",
+    "4-Bromotoluene",
+    "Benzyl bromide"
+   ],
+   "answer": 2,
+   "explain": "Diazotisation gives p-toluenediazonium chloride (X), and the Gattermann reaction replaces –N₂⁺ by Br at the same position. The amino group fixes the position of the halogen before it is removed."
+  }
+ ]
+}

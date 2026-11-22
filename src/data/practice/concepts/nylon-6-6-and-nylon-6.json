@@ -1,0 +1,50 @@
+{
+ "page": "concepts/nylon-6-6-and-nylon-6",
+ "questions": [
+  {
+   "q": "The monomers of nylon-6,6 are",
+   "options": [
+    "Caprolactam only",
+    "Hexamethylenediamine and sebacic acid",
+    "Hexamethylenediamine and adipic acid",
+    "Glycine and 6-aminohexanoic acid"
+   ],
+   "answer": 2,
+   "explain": "Both H₂N(CH₂)₆NH₂ and HOOC(CH₂)₄COOH have six carbon atoms, hence 6,6. Sebacic acid gives nylon-6,10 and glycine + 6-aminohexanoic acid gives nylon-2-nylon-6."
+  },
+  {
+   "q": "Caprolactam, the monomer of nylon-6, is made from cyclohexanone oxime by the",
+   "options": [
+    "Hofmann bromamide reaction",
+    "Beckmann rearrangement",
+    "Cannizzaro reaction",
+    "Clemmensen reduction"
+   ],
+   "answer": 1,
+   "explain": "The Beckmann rearrangement converts cyclohexanone oxime into caprolactam, the seven-membered cyclic amide that is ring-opened to nylon-6.",
+   "smiles": "O=C1CCCCCN1"
+  },
+  {
+   "q": "The repeating unit –NH(CH₂)₆NH–CO(CH₂)₈CO– belongs to",
+   "options": [
+    "Nylon-6,10",
+    "Nylon-6,8",
+    "Nylon-8,6",
+    "Nylon-6,6"
+   ],
+   "answer": 0,
+   "explain": "The diamine part has 6 C; the diacid part has (CH₂)₈ plus two C=O carbons, i.e. 10 C (sebacic acid). Counting only the CH₂ groups gives the wrong answer 6,8."
+  },
+  {
+   "q": "Which statement about nylon-6 is correct?",
+   "options": [
+    "It is made by condensing two different monomers",
+    "It is an addition polymer of a vinyl monomer",
+    "It melts higher than nylon-6,6",
+    "It forms by ring-opening of caprolactam on heating with a little water, yet exam keys class it as a condensation polyamide"
+   ],
+   "answer": 3,
+   "explain": "Water opens a few caprolactam rings to 6-aminohexanoic acid, whose –NH₂ end then opens further rings; NCERT still lists nylon-6 as a condensation polymer. It melts lower (about 218 °C) than nylon-6,6 (about 264 °C)."
+  }
+ ]
+}

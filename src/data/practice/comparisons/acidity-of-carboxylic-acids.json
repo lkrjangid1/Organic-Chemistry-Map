@@ -1,0 +1,49 @@
+{
+ "page": "comparisons/acidity-of-carboxylic-acids",
+ "questions": [
+  {
+   "q": "The correct decreasing order of acidity is:",
+   "options": [
+    "CH₃COOH > C₆H₅COOH > HCOOH",
+    "C₆H₅COOH > HCOOH > CH₃COOH",
+    "HCOOH > CH₃COOH > C₆H₅COOH",
+    "HCOOH > C₆H₅COOH > CH₃COOH"
+   ],
+   "answer": 3,
+   "explain": "Formic acid (pKa 3.75) has no electron-releasing group; benzoic acid (4.19) has COOH on a more electronegative sp² carbon; acetic acid (4.76) is weakened by the +I effect of CH₃."
+  },
+  {
+   "q": "Which dicarboxylic acid has the lowest pKa₁?",
+   "options": [
+    "Malonic acid",
+    "Succinic acid",
+    "Glutaric acid",
+    "Adipic acid"
+   ],
+   "answer": 0,
+   "explain": "Among these, the two COOH groups are closest in malonic acid (pKa₁ 2.85), so the second COOH withdraws electrons most strongly. Succinic (4.21), glutaric and adipic acids are progressively weaker."
+  },
+  {
+   "q": "Which of the following is the most acidic?",
+   "options": [
+    "4-Chlorobutanoic acid",
+    "3-Chlorobutanoic acid",
+    "2-Chlorobutanoic acid",
+    "Butanoic acid"
+   ],
+   "answer": 2,
+   "explain": "The inductive effect fades with distance: the 2-chloro acid has pKa 2.86, the 3-chloro 4.05 and the 4-chloro 4.52, almost back to butanoic acid."
+  },
+  {
+   "q": "Which order of acidity of the methylbenzoic (toluic) acids and benzoic acid is correct?",
+   "options": [
+    "o-Toluic > benzoic > m-toluic > p-toluic",
+    "Benzoic > o-toluic > m-toluic > p-toluic",
+    "p-Toluic > m-toluic > benzoic > o-toluic",
+    "Benzoic > p-toluic > m-toluic > o-toluic"
+   ],
+   "answer": 0,
+   "explain": "The ortho methyl twists COOH out of the ring plane and cuts ring-to-carboxyl resonance donation, so o-toluic acid (3.9) beats benzoic acid (4.2); the m (4.3) and p (4.4) isomers are weaker than benzoic acid because CH₃ donates electrons."
+  }
+ ]
+}

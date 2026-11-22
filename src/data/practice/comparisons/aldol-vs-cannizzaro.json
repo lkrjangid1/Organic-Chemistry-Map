@@ -1,0 +1,50 @@
+{
+ "page": "comparisons/aldol-vs-cannizzaro",
+ "questions": [
+  {
+   "q": "Which compound undergoes the Cannizzaro reaction with concentrated NaOH?",
+   "options": [
+    "2,2-Dimethylpropanal",
+    "Acetaldehyde",
+    "Acetone",
+    "Propanal"
+   ],
+   "answer": 0,
+   "explain": "(CH₃)₃CCHO has no α-hydrogen, so it disproportionates in concentrated base. Acetaldehyde and propanal have α-H and give aldol, and ketones do not give Cannizzaro."
+  },
+  {
+   "q": "A mixture of benzaldehyde and formaldehyde is heated with concentrated NaOH. The main products are:",
+   "options": [
+    "Sodium benzoate and methanol",
+    "Benzyl alcohol and sodium formate",
+    "Cinnamaldehyde and water",
+    "Benzyl alcohol and sodium benzoate only"
+   ],
+   "answer": 1,
+   "explain": "In this crossed Cannizzaro reaction the more reactive HCHO is attacked by OH⁻ and oxidised to HCOONa, while benzaldehyde receives the hydride and is reduced to C₆H₅CH₂OH."
+  },
+  {
+   "q": "2-Methylpropanal is treated with dilute NaOH. Which statement about the product is correct?",
+   "smiles": "CC(C)C=O",
+   "options": [
+    "It is 3-hydroxy-2,2,4-trimethylpentanal, which cannot dehydrate to an enone",
+    "It is 2,2,4-trimethylpent-2-enal formed by aldol condensation",
+    "It is a 1 : 1 mixture of 2-methylpropan-1-ol and sodium 2-methylpropanoate",
+    "No reaction occurs because the aldehyde has only one α-hydrogen"
+   ],
+   "answer": 0,
+   "explain": "With one α-H, dilute base gives the aldol addition product, but its new α-carbon is quaternary with no H left, so dehydration is impossible. The alcohol plus carboxylate are the products in concentrated base."
+  },
+  {
+   "q": "When the Cannizzaro reaction of benzaldehyde is carried out in D₂O with NaOD, the benzyl alcohol formed contains no deuterium on carbon. This shows that:",
+   "options": [
+    "The reaction proceeds through an enolate intermediate",
+    "The solvent supplies the hydride that reduces the aldehyde",
+    "The rate-determining step is attack of OD⁻ on the carbonyl carbon",
+    "The hydrogen reaching the reduced aldehyde is transferred directly as hydride from another aldehyde molecule"
+   ],
+   "answer": 3,
+   "explain": "If the solvent supplied the C–H hydrogen, deuterium would appear on carbon. Its absence shows hydride moves directly from the tetrahedral anion RCH(OH)O⁻ to a second aldehyde."
+  }
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "page": "reactions/benzoin-condensation",
+ "questions": [
+  {
+   "q": "Benzaldehyde is refluxed with a small amount of KCN in aqueous ethanol. The product is:",
+   "smiles": "O=Cc1ccccc1",
+   "options": [
+    "Benzyl alcohol and potassium benzoate",
+    "Cinnamic acid",
+    "Benzoin, C₆H₅CH(OH)COC₆H₅",
+    "Benzil, C₆H₅COCOC₆H₅"
+   ],
+   "answer": 2,
+   "explain": "Alcoholic KCN catalyses the benzoin condensation, joining the two former carbonyl carbons to give an α-hydroxy ketone. Concentrated NaOH would give the Cannizzaro products, and benzil needs a later oxidation."
+  },
+  {
+   "q": "The role of cyanide in the benzoin condensation is that of a:",
+   "options": [
+    "Reducing agent that converts one aldehyde into an alcohol",
+    "Catalyst that reverses the polarity (umpolung) of the carbonyl carbon and is regenerated",
+    "Reagent that is incorporated as a nitrile group in the product",
+    "Base that removes an α-hydrogen to form an enolate"
+   ],
+   "answer": 1,
+   "explain": "CN⁻ adds to the aldehyde, makes the former carbonyl C–H acidic so that carbon becomes a nucleophilic carbanion, and is expelled at the end. Benzaldehyde has no α-hydrogen, so no enolate is involved."
+  },
+  {
+   "q": "Why does ethanal not give a benzoin-type product with alcoholic KCN?",
+   "options": [
+    "Ethanal does not react with CN⁻ at all",
+    "Cyanide is too weak a nucleophile for aliphatic aldehydes",
+    "The acyloin formed from ethanal is immediately oxidised",
+    "The carbanion after cyanide addition lacks stabilisation by a benzene ring, and in base ethanal mostly undergoes aldol reactions"
+   ],
+   "answer": 3,
+   "explain": "In benzaldehyde the carbanion is stabilised by both –CN and the phenyl ring. Aliphatic aldehydes lack the ring, so they need thiazolium (thiamine-type) catalysts instead."
+  },
+  {
+   "q": "Benzaldehyde is converted into X with alcoholic KCN; X is oxidised by nitric acid to Y; Y is heated with KOH and then acidified to give Z. Z is:",
+   "options": [
+    "Benzilic acid, (C₆H₅)₂C(OH)COOH",
+    "Benzil",
+    "Benzoic acid",
+    "Benzoin"
+   ],
+   "answer": 0,
+   "explain": "X is benzoin, Y is the 1,2-diketone benzil, and the benzilic acid rearrangement of benzil gives Z, (C₆H₅)₂C(OH)COOH. This benzoin → benzil → benzilic acid sequence is a classic three-step chain."
+  }
+ ]
+}

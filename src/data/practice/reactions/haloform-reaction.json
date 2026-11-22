@@ -1,0 +1,51 @@
+{
+ "page": "reactions/haloform-reaction",
+ "questions": [
+  {
+   "q": "Which compound does NOT give a yellow precipitate with I₂ and NaOH?",
+   "options": [
+    "Ethanol",
+    "Propan-2-ol",
+    "Pentan-3-one",
+    "Acetaldehyde"
+   ],
+   "answer": 2,
+   "explain": "A positive iodoform test needs CH₃CO– or CH₃CH(OH)–. Pentan-3-one has ethyl groups on both sides of C=O, so it has no CH₃CO unit."
+  },
+  {
+   "q": "Acetophenone is treated with Br₂ and aqueous NaOH. The products are:",
+   "smiles": "CC(=O)c1ccccc1",
+   "options": [
+    "Bromobenzene and sodium acetate",
+    "Sodium phenylacetate and CH₂Br₂",
+    "Phenacyl bromide (C₆H₅COCH₂Br) only",
+    "Sodium benzoate and CHBr₃"
+   ],
+   "answer": 3,
+   "explain": "In base the CH₃ group is fully brominated and then cleaved as ⁻CBr₃, giving bromoform and the carboxylate with one carbon fewer. Base-promoted halogenation cannot be stopped at the monobromo stage."
+  },
+  {
+   "q": "For the base-promoted halogenation of acetone, rate = k[ketone][OH⁻]. Which conclusion follows?",
+   "options": [
+    "Cl₂, Br₂ and I₂ react at the same rate because enolate formation is rate-determining",
+    "Halogen attack on the enolate is the slow step",
+    "F₂ reacts fastest because it is the most reactive halogen",
+    "Cleavage of ⁻CX₃ is the slow step"
+   ],
+   "answer": 0,
+   "explain": "The halogen does not appear in the rate law, so removal of the α-hydrogen by OH⁻ is the slow step and the rate is the same for Cl₂, Br₂ and I₂. Fluorine is not used at all because hypofluorite is too unstable."
+  },
+  {
+   "q": "Acetamide (CH₃CONH₂) is treated with Br₂ and aqueous NaOH. The organic product is:",
+   "smiles": "CC(N)=O",
+   "options": [
+    "Bromoform and sodium formate",
+    "Methanamine",
+    "Sodium acetate and bromoform",
+    "Bromoacetamide"
+   ],
+   "answer": 1,
+   "explain": "A primary amide with Br₂/NaOH undergoes the Hofmann bromamide degradation to R–NH₂, not the haloform reaction; acetamide is listed among the iodoform-negative compounds. The trap is spotting CH₃CO– and writing a haloform."
+  }
+ ]
+}

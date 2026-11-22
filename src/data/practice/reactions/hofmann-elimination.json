@@ -1,0 +1,51 @@
+{
+ "page": "reactions/hofmann-elimination",
+ "questions": [
+  {
+   "q": "Butan-2-yltrimethylammonium hydroxide is heated. The major alkene is:",
+   "smiles": "CCC(C)[N+](C)(C)C.[OH-]",
+   "options": [
+    "(E)-But-2-ene",
+    "But-1-ene",
+    "(Z)-But-2-ene",
+    "2-Methylpropene"
+   ],
+   "answer": 1,
+   "explain": "The bulky –N⁺(CH₃)₃ group makes hydroxide remove the most accessible β-hydrogen, on the CH₃ group, so the least substituted alkene is major (Hofmann rule). But-2-ene, the Saytzeff alkene, is the trap."
+  },
+  {
+   "q": "What is the role of moist Ag₂O in the Hofmann elimination sequence?",
+   "options": [
+    "It methylates the amine",
+    "It oxidises the amine to an amine oxide",
+    "It acts as a dehydrating agent",
+    "It exchanges iodide for hydroxide, precipitating AgI"
+   ],
+   "answer": 3,
+   "explain": "Moist silver oxide converts the quaternary ammonium iodide into the hydroxide; this OH⁻ is the base that carries out the E2 elimination on heating. Amine oxides belong to the Cope elimination."
+  },
+  {
+   "q": "The Hofmann (least substituted) alkene is the major product in the Hofmann elimination mainly because:",
+   "options": [
+    "the least substituted alkene is the most stable",
+    "the reaction proceeds through a carbocation that rearranges",
+    "the large –N⁺(CH₃)₃ leaving group crowds the conformation needed for the more substituted alkene, so the most exposed β-H is removed",
+    "hydroxide is a very bulky base"
+   ],
+   "answer": 2,
+   "explain": "The bulky, positively charged leaving group on the substrate controls the selectivity; the more substituted alkene is still the more stable one."
+  },
+  {
+   "q": "N-Methylpyrrolidine is subjected to Hofmann exhaustive methylation (CH₃I, then Ag₂O and heat) until the nitrogen is removed completely. The final hydrocarbon and the number of cycles needed are:",
+   "smiles": "CN1CCCC1",
+   "options": [
+    "Buta-1,3-diene, two cycles",
+    "But-1-ene, one cycle",
+    "Buta-1,3-diene, one cycle",
+    "Cyclobutene, two cycles"
+   ],
+   "answer": 0,
+   "explain": "The first cycle only opens the ring, giving CH₂=CH–CH₂–CH₂–N(CH₃)₂; a second cycle removes the nitrogen as trimethylamine and leaves buta-1,3-diene. A ring nitrogen has two C–N bonds to break, so two cycles are needed."
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "page": "comparisons/acidity-of-phenols",
+ "questions": [
+  {
+   "q": "The correct decreasing order of acidity is:",
+   "options": [
+    "o-Nitrophenol > p-nitrophenol > m-nitrophenol > phenol",
+    "p-Nitrophenol > m-nitrophenol > o-nitrophenol > phenol",
+    "m-Nitrophenol > p-nitrophenol > o-nitrophenol > phenol",
+    "p-Nitrophenol > o-nitrophenol > m-nitrophenol > phenol"
+   ],
+   "answer": 3,
+   "explain": "Ortho and para nitro groups stabilise phenoxide by resonance, but in o-nitrophenol the OH proton is held by an intramolecular hydrogen bond, so para (7.1) edges out ortho (7.2); meta (8.3) acts only by −I."
+  },
+  {
+   "q": "Which of the following is a weaker acid than phenol?",
+   "options": [
+    "m-Chlorophenol",
+    "m-Nitrophenol",
+    "p-Cresol",
+    "o-Chlorophenol"
+   ],
+   "answer": 2,
+   "explain": "The methyl group releases electrons and destabilises the phenoxide ion, so p-cresol (pKa 10.2) is weaker than phenol (10.0). Chloro and nitro groups raise acidity."
+  },
+  {
+   "q": "The correct order of acidity among the chlorophenols is:",
+   "options": [
+    "p-Chlorophenol > m-chlorophenol > o-chlorophenol",
+    "m-Chlorophenol > p-chlorophenol > o-chlorophenol",
+    "o-Chlorophenol > p-chlorophenol > m-chlorophenol",
+    "o-Chlorophenol > m-chlorophenol > p-chlorophenol"
+   ],
+   "answer": 3,
+   "explain": "For halophenols the −I effect wins and falls off with distance, and at para the +R donation partly cancels it: o (8.56) > m (9.12) > p (9.41)."
+  },
+  {
+   "q": "Arrange in increasing acidity: propan-1-ol (I), 4-methylphenol (II), phenol (III), 3-nitrophenol (IV), 3,5-dinitrophenol (V), 2,4,6-trinitrophenol (VI).",
+   "options": [
+    "I < II < III < IV < V < VI",
+    "II < I < III < IV < V < VI",
+    "I < III < II < IV < V < VI",
+    "I < II < III < V < IV < VI"
+   ],
+   "answer": 0,
+   "explain": "An alcohol is far weaker than any phenol; the methyl group weakens phenol; each nitro group strengthens it, with picric acid (pKa 0.38) strongest. The trap is placing 4-methylphenol above phenol."
+  }
+ ]
+}

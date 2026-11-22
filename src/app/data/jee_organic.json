@@ -87,7 +87,7 @@
         "reagents": "CO, HCl, AlCl\u2083/CuCl",
         "conditions": "High pressure",
         "mechanism": "Benzene attacks the formyl cation ([HCO]\u207a), which is generated from CO and HCl with the help of the Lewis acid catalyst. A subsequent deprotonation of the aromatic ring restores aromaticity.",
-        "equation": "C\u2086H\u2086 + CO + HCl \u2192 C\u2086H\u2085CHO + HCl",
+        "equation": "C\u2086H\u2086 + CO --(HCl, anhyd. AlCl\u2083/CuCl)--> C\u2086H\u2085CHO",
         "importance": "A direct method to introduce a formyl group onto the benzene ring to produce benzaldehyde. It is important to note that this reaction is not applicable to phenols and phenol ethers."
       }
     },
@@ -115,6 +115,19 @@
         "mechanism": "The electrophile is an iminium ion derived from hexamine. The phenol attacks the iminium ion, and subsequent intramolecular redox and hydrolysis steps lead to the aldehyde. Formylation occurs preferentially at the ortho position.",
         "equation": "C\u2086H\u2085OH + (CH\u2082)\u2086N\u2084 \u2192 HOC\u2086H\u2084CHO",
         "importance": "A method for the synthesis of hydroxyaryl aldehydes, particularly salicylaldehydes, from phenols."
+      }
+    },
+    {
+      "id": "dakin_reaction",
+      "source": "salicylaldehyde",
+      "target": "catechol",
+      "label": "Dakin Reaction",
+      "reactionInfo": {
+        "reagents": "H\u2082O\u2082 in aqueous base (NaOH)",
+        "conditions": "Aqueous alkaline solution; base must not be too strong (no reaction above about pH 13.5)",
+        "mechanism": "HOO\u207b (from H\u2082O\u2082 and OH\u207b) adds to the carbonyl carbon. The tetrahedral intermediate collapses with a 1,2-aryl shift from carbon to oxygen and loss of OH\u207b, giving an aryl formate, which is hydrolysed in the basic medium to the phenoxide and formate.",
+        "equation": "2-HOC\u2086H\u2084CHO + H\u2082O\u2082 + OH\u207b \u2192 1,2-C\u2086H\u2084(OH)\u2082 + HCOO\u207b + H\u2082O",
+        "importance": "Replaces an ortho- or para-CHO/COR group of a hydroxy (or amino) aryl carbonyl compound by \u2013OH; closely related to the Baeyer\u2013Villiger oxidation."
       }
     },
     {
@@ -300,19 +313,6 @@
       }
     },
     {
-      "id": "sandmeyer_reaction",
-      "source": "benzenediazonium_chloride",
-      "target": "chlorobenzene",
-      "label": "Sandmeyer Reaction",
-      "reactionInfo": {
-        "reagents": "CuCl/HCl",
-        "conditions": "Warming",
-        "mechanism": "This is a radical-nucleophilic aromatic substitution. A single electron transfer from Cu(I) to the diazonium salt generates an aryl radical and nitrogen gas. The aryl radical then reacts with the chloride from the copper(II) halide.",
-        "equation": "C\u2086H\u2085N\u2082+Cl\u207b \u2192 C\u2086H\u2085Cl + N\u2082",
-        "importance": "A key named reaction for the synthesis of aryl halides from diazonium salts, frequently appearing in competitive exams."
-      }
-    },
-    {
       "id": "gattermann_reaction",
       "source": "benzenediazonium_chloride",
       "target": "chlorobenzene",
@@ -393,7 +393,7 @@
     {
       "id": "carbylamine_reaction",
       "source": "aniline",
-      "target": "aniline",
+      "target": "phenyl_isocyanide",
       "label": "Carbylamine Reaction (Isocyanide Test)",
       "reactionInfo": {
         "reagents": "CHCl\u2083 + alcoholic KOH",
@@ -417,19 +417,6 @@
       }
     },
     {
-      "id": "r2",
-      "source": "anisole_2",
-      "target": "phenol_1",
-      "label": "Zeisel's Method (Ether Cleavage)",
-      "reactionInfo": {
-        "reagents": "Conc. HI (Hydroiodic acid)",
-        "conditions": "Heating",
-        "mechanism": "The ether oxygen is protonated by HI. The iodide ion (I\u207b) then acts as a nucleophile, attacking the methyl group (the less sterically hindered side) via an S\u20992 mechanism, cleaving the C-O bond to form phenol and methyl iodide.",
-        "equation": "C\u2086H\u2085OCH\u2083 + HI (excess) \u2192 C\u2086H\u2085OH + CH\u2083I",
-        "importance": "Classic reaction for the cleavage of ethers, especially aryl alkyl ethers. It is also a quantitative method for estimating the number of methoxy groups in a compound, a concept sometimes tested in JEE."
-      }
-    },
-    {
       "id": "r3",
       "source": "phenol_1",
       "target": "phenyl_acetate_3",
@@ -450,9 +437,9 @@
       "reactionInfo": {
         "reagents": "Anhydrous AlCl\u2083 (Lewis acid)",
         "conditions": "Low temperature (e.g., in CS\u2082 or nitrobenzene) favors the para-product. Higher temperatures favor the ortho-product.",
-        "mechanism": "The Lewis acid (AlCl\u2083) coordinates with the carbonyl oxygen of the ester. This polarizes the C-O bond, leading to the formation of an acylium ion (CH\u2083CO\u207a) intermediate. The acylium ion then acts as an electrophile and attacks the electron-rich benzene ring (intramolecular electrophilic aromatic substitution), primarily at the less hindered para position at low temperatures.",
+        "mechanism": "The Lewis acid (AlCl\u2083) coordinates with the carbonyl oxygen of the ester. This polarizes the C-O bond, leading to the formation of an acylium ion (CH\u2083CO\u207a) intermediate. The acylium ion then acts as an electrophile and attacks the electron-rich benzene ring (electrophilic aromatic substitution; it can react within the solvent cage or with another molecule, so both intra- and intermolecular pathways operate), primarily at the less hindered para position at low temperatures.",
         "equation": "C\u2086H\u2085OCOCH\u2083 --(AlCl\u2083, low temp)--> 4-HOC\u2086H\u2084COCH\u2083",
-        "importance": "An important method for synthesizing hydroxy aryl ketones. It's a key example of an intramolecular electrophilic aromatic substitution reaction often asked in JEE Advanced."
+        "importance": "An important method for synthesizing hydroxy aryl ketones. It's a key example of an acyl-migration rearrangement by electrophilic aromatic substitution, often asked in JEE Advanced."
       }
     },
     {
@@ -573,19 +560,6 @@
       }
     },
     {
-      "id": "reaction6",
-      "source": "phenylmagnesium_bromide",
-      "target": "benzoic_acid",
-      "label": "Carboxylation of Grignard Reagent",
-      "reactionInfo": {
-        "reagents": "1. CO\u2082 (dry ice), 2. H\u2083O\u207a",
-        "conditions": "Reaction with solid CO\u2082 (dry ice) in an ether solution, followed by acid hydrolysis.",
-        "mechanism": "The nucleophilic carbon of the Grignard reagent attacks the electrophilic carbon of carbon dioxide. This forms a magnesium carboxylate salt. Acidification of this salt in the workup step protonates the carboxylate to give the carboxylic acid.",
-        "equation": "C\u2086H\u2085MgBr + CO\u2082 \u2192 C\u2086H\u2085COOMgBr --(H\u2083O\u207a)--> C\u2086H\u2085COOH + Mg(OH)Br",
-        "importance": "A standard and important method for the preparation of carboxylic acids from Grignard reagents, increasing the carbon chain length by one."
-      }
-    },
-    {
       "id": "r1_cbs_reduction",
       "source": "butan-2-one",
       "target": "s-2-butanol",
@@ -628,11 +602,11 @@
       "id": "r4_e2_elimination_major",
       "source": "s-2-butanol",
       "target": "e-but-2-ene",
-      "label": "E2 Dehydration (Major)",
+      "label": "E1 Dehydration (Major)",
       "reactionInfo": {
         "reagents": "Concentrated sulfuric acid (H\u2082SO\u2084) or alumina (Al\u2082O\u2083)",
         "conditions": "High temperature (e.g., 180 \u00b0C for H\u2082SO\u2084).",
-        "mechanism": "The -OH group is protonated to form a good leaving group (-OH\u2082\u207a). A base (HSO\u2084\u207b or another alcohol molecule) removes a \u03b2-hydrogen, and the leaving group departs simultaneously. The anti-periplanar arrangement of H and OH\u2082\u207a in the transition state leads to the more stable (E)-isomer as the major product.",
+        "mechanism": "E1 mechanism. The -OH group is protonated to form a good leaving group (-OH\u2082\u207a), which departs as water to give a secondary carbocation (rate-determining step). A base (HSO\u2084\u207b or water) then removes a \u03b2-hydrogen from C-3; the more stable, less crowded (E)-isomer is the major product.",
         "equation": "(S)-CH\u2083CH(OH)CH\u2082CH\u2083 --[H\u2082SO\u2084, Heat]--> (E)-CH\u2083CH=CHCH\u2083 + H\u2082O",
         "importance": "Illustrates Saytzeff's rule (more substituted alkene is the major product) and the concept of stereoselectivity, where one stereoisomer is preferentially formed over another."
       }
@@ -641,11 +615,11 @@
       "id": "r5_e2_elimination_minor",
       "source": "s-2-butanol",
       "target": "z-but-2-ene",
-      "label": "E2 Dehydration (Minor)",
+      "label": "E1 Dehydration (Minor)",
       "reactionInfo": {
         "reagents": "Concentrated sulfuric acid (H\u2082SO\u2084)",
         "conditions": "High temperature (e.g., 180 \u00b0C).",
-        "mechanism": "Similar to the major pathway, but elimination occurs from a different conformation leading to the sterically less favorable (Z)-isomer.",
+        "mechanism": "E1 mechanism, as for the major pathway: the same secondary carbocation loses a \u03b2-hydrogen from C-3 in the more crowded orientation, giving the sterically less favorable (Z)-isomer.",
         "equation": "(S)-CH\u2083CH(OH)CH\u2082CH\u2083 --[H\u2082SO\u2084, Heat]--> (Z)-CH\u2083CH=CHCH\u2083 + H\u2082O",
         "importance": "Shows that stereoselective reactions often produce a mixture of products, with one being major and others minor, which is an important nuance for competitive exams."
       }
@@ -677,19 +651,6 @@
       }
     },
     {
-      "id": "diazotization_reaction",
-      "source": "aniline",
-      "target": "benzenediazonium_chloride",
-      "label": "Diazotization",
-      "reactionInfo": {
-        "reagents": "NaNO\u2082, HCl",
-        "conditions": "0-5 \u00b0C",
-        "mechanism": "The reaction proceeds via the formation of nitrous acid (HNO\u2082) in situ, which then reacts with the primary aromatic amine to form a diazonium salt.",
-        "equation": "C\u2086H\u2085NH\u2082 + NaNO\u2082 + 2HCl \u2192 C\u2086H\u2085N\u2082\u207aCl\u207b + NaCl + 2H\u2082O",
-        "importance": "Crucial for converting an amino group into a good leaving group (N\u2082), enabling various substitution reactions on the aromatic ring which are not possible otherwise."
-      }
-    },
-    {
       "id": "sandmeyer_reaction_cl",
       "source": "benzenediazonium_chloride",
       "target": "chlorobenzene",
@@ -711,7 +672,7 @@
         "reagents": "Cu powder/HBr",
         "conditions": "Warming",
         "mechanism": "Similar to the Sandmeyer reaction, but it uses copper powder instead of a cuprous salt. The mechanism also involves the formation of an aryl radical.",
-        "equation": "C\u2086H\u2085N\u2082\u207aCl\u207b --(Cu/HBr)--> C\u2086H\u2085Br + N\u2082 + CuCl",
+        "equation": "C\u2086H\u2085N\u2082\u207aCl\u207b + HBr --(Cu powder)--> C\u2086H\u2085Br + N\u2082 + HCl",
         "importance": "An alternative to the Sandmeyer reaction. While the yield is generally lower than the Sandmeyer reaction, it is still a useful method for preparing aryl chlorides and bromides."
       }
     },
@@ -762,7 +723,7 @@
       "reactionInfo": {
         "reagents": "AgF (or Hg\u2082F\u2082, CoF\u2082)",
         "conditions": "Heating",
-        "mechanism": "Another halogen exchange reaction, typically following an S\u02742 mechanism. The fluoride from the metallic fluoride acts as a nucleophile, displacing the bromide.",
+        "mechanism": "Halogen exchange: the metallic fluoride (AgF, Hg\u2082F\u2082 or CoF\u2082) supplies fluoride, which replaces the bromine; the metal bromide formed (AgBr) drives the exchange. Standard references assign no specific SN1/SN2 mechanism.",
         "equation": "CH\u2083CH\u2082Br + AgF --(Heat)--> CH\u2083CH\u2082F + AgBr",
         "importance": "One of the best methods for the preparation of alkyl fluorides, as direct fluorination of alkanes is highly explosive."
       }
@@ -885,19 +846,6 @@
       }
     },
     {
-      "id": "sn1_rearrangement",
-      "source": "neopentyl_bromide",
-      "target": "tert_amyl_methyl_ether",
-      "label": "SN1 Reaction with Rearrangement",
-      "reactionInfo": {
-        "reagents": "Methanol (CH\u2083OH) as solvent and nucleophile",
-        "conditions": "Heating",
-        "mechanism": "SN1 mechanism. The primary carbocation initially formed is unstable and undergoes a 1,2-hydride shift to form a more stable tertiary carbocation, which is then attacked by methanol.",
-        "equation": "(CH\u2083)\u2083CCH\u2082Br + CH\u2083OH \u2192 (CH\u2083)\u2082C(OCH\u2083)CH\u2082CH\u2083 + HBr",
-        "importance": "Illustrates carbocation rearrangement in SN1 reactions, a very important concept for JEE Advanced."
-      }
-    },
-    {
       "id": "sn2_inversion",
       "source": "r_2_bromobutane",
       "target": "s_2_azidobutane",
@@ -956,8 +904,8 @@
       "label": "Friedel-Crafts Acylation",
       "reactionInfo": {
         "reagents": "CH\u2083COCl, Anhydrous AlCl\u2083",
-        "conditions": "Anhydrous conditions, Lewis acid catalyst.",
-        "mechanism": "1. Generation of the acylium ion electrophile: CH\u2083COCl + AlCl\u2083 \u2192 [CH\u2083C\u2261O]\u207a + [AlCl\u2084]\u207b. 2. Electrophilic attack of the acylium ion on the benzene ring to form a resonance-stabilized carbocation (sigma complex). 3. Deprotonation by [AlCl\u2084]\u207b to restore aromaticity and regenerate the AlCl\u2083 catalyst.",
+        "conditions": "Anhydrous conditions, at least a stoichiometric amount of AlCl\u2083 (it complexes the ketone product).",
+        "mechanism": "1. Generation of the acylium ion electrophile: CH\u2083COCl + AlCl\u2083 \u2192 [CH\u2083C\u2261O]\u207a + [AlCl\u2084]\u207b. 2. Electrophilic attack of the acylium ion on the benzene ring to form a resonance-stabilized carbocation (sigma complex). 3. Deprotonation by [AlCl\u2084]\u207b restores aromaticity, releasing HCl and AlCl\u2083; the AlCl\u2083 is then tied up as a complex with the ketone product, so at least a stoichiometric amount is needed (the ketone is freed on aqueous work-up).",
         "equation": "C\u2086H\u2086 + CH\u2083COCl --(Anhydrous AlCl\u2083)--> C\u2086H\u2085COCH\u2083 + HCl",
         "importance": "This reaction is a key method for forming carbon-carbon bonds with aromatic rings and is a better alternative to Friedel-Crafts alkylation as it is not susceptible to carbocation rearrangements and the product is deactivated to further substitution."
       }
@@ -1106,19 +1054,6 @@
       }
     },
     {
-      "id": "aldol_condensation",
-      "source": "propanal",
-      "target": "3_hydroxy_2_methylpentanal",
-      "label": "Aldol Condensation",
-      "reactionInfo": {
-        "reagents": "Dilute NaOH or KOH",
-        "conditions": "Room temperature",
-        "mechanism": "1. Formation of an enolate ion by deprotonation of the alpha-carbon of propanal. 2. Nucleophilic attack of the enolate on the carbonyl carbon of a second propanal molecule. 3. Protonation of the resulting alkoxide to give the \u03b2-hydroxy aldehyde.",
-        "equation": "2 CH\u2083CH\u2082CHO \u2192 CH\u2083CH\u2082CH(OH)CH(CH\u2083)CHO",
-        "importance": "A fundamental carbon-carbon bond-forming reaction in organic chemistry, frequently tested in JEE Advanced for its mechanism and product prediction."
-      }
-    },
-    {
       "id": "cannizzaro_reaction",
       "source": "benzaldehyde",
       "target": "benzyl_alcohol",
@@ -1142,19 +1077,6 @@
         "mechanism": "1. Nucleophilic attack of hydroxide ion on the carbonyl carbon of benzaldehyde. 2. Hydride transfer from the resulting tetrahedral intermediate to a second molecule of benzaldehyde. 3. Acid-base reaction to yield benzyl alcohol and sodium benzoate.",
         "equation": "2 C\u2086H\u2085CHO + NaOH \u2192 C\u2086H\u2085CH\u2082OH + C\u2086H\u2085COONa",
         "importance": "Illustrates the disproportionation characteristic of the Cannizzaro reaction, where one molecule is oxidized to a carboxylate salt."
-      }
-    },
-    {
-      "id": "hoffmann_bromamide",
-      "source": "acetamide",
-      "target": "methylamine",
-      "label": "Hoffmann Bromamide Degradation",
-      "reactionInfo": {
-        "reagents": "Br\u2082 and NaOH",
-        "conditions": "Aqueous solution, heating",
-        "mechanism": "1. Deprotonation of the amide. 2. Reaction with bromine to form an N-bromoamide. 3. Deprotonation followed by rearrangement (migration of the alkyl group from the carbonyl carbon to the nitrogen) to form an isocyanate intermediate. 4. Hydrolysis of the isocyanate to form the primary amine and carbonate.",
-        "equation": "CH\u2083CONH\u2082 + Br\u2082 + 4NaOH \u2192 CH\u2083NH\u2082 + Na\u2082CO\u2083 + 2NaBr + 2H\u2082O",
-        "importance": "An important method for the preparation of primary amines with one less carbon atom than the starting amide, a common topic in JEE Advanced questions on amines."
       }
     },
     {
@@ -1199,13 +1121,13 @@
     {
       "id": "robinson_annulation_aldol",
       "source": "michael_adduct",
-      "target": "wieland_miescher_ketone",
+      "target": "octalone",
       "label": "Robinson Annulation (Intramolecular Aldol)",
       "reactionInfo": {
         "reagents": "Base (continued from Michael addition) or Acid, followed by heat for dehydration",
         "conditions": "Typically follows the Michael addition in the same pot, may require heating to facilitate dehydration.",
         "mechanism": "The intermediate dicarbonyl compound undergoes an intramolecular aldol condensation. A base removes a proton from an \u03b1-carbon to form an enolate, which then attacks the other carbonyl group, forming a six-membered ring. Subsequent dehydration (elimination of water) leads to the formation of an \u03b1,\u03b2-unsaturated ketone.",
-        "equation": "C\u2081\u2080H\u2081\u2086O\u2082 \u2192 C\u2081\u2081H\u2081\u2084O\u2082 + H\u2082O",
+        "equation": "C\u2081\u2080H\u2081\u2086O\u2082 \u2192 C\u2081\u2080H\u2081\u2084O + H\u2082O",
         "importance": "This second part of the Robinson annulation demonstrates key concepts of enolate chemistry, including intramolecular reactions and aldol condensations, which are fundamental topics for JEE and NEET."
       }
     },
@@ -1218,7 +1140,7 @@
         "reagents": "Retinyl triphenylphosphonium ylide (formed in situ from the corresponding phosphonium salt and a strong base like BuLi).",
         "conditions": "Anhydrous, aprotic solvent (e.g., THF, ether) under an inert atmosphere.",
         "mechanism": "The reaction involves the nucleophilic addition of a phosphorus ylide to an aldehyde or ketone. This forms a betaine intermediate which collapses to a four-membered oxaphosphetane ring. The oxaphosphetane then decomposes to yield an alkene and triphenylphosphine oxide. The formation of the very stable P=O double bond is the driving force for the reaction.",
-        "equation": "2 C\u2082\u2080H\u2082\u2088O + (C\u2086H\u2085)\u2083P=CH-(...)-CH=P(C\u2086H\u2085)\u2083 \u2192 C\u2084\u2080H\u2085\u2086 + 2 (C\u2086H\u2085)\u2083PO",
+        "equation": "C\u2082\u2080H\u2082\u2088O + (C\u2086H\u2085)\u2083P=CH\u2013C\u2081\u2089H\u2082\u2087 \u2192 C\u2084\u2080H\u2085\u2086 + (C\u2086H\u2085)\u2083PO",
         "importance": "The Wittig reaction is a versatile and powerful method for synthesizing alkenes with high regioselectivity. Its application in the industrial synthesis of Vitamin A and \u03b2-carotene makes it a very important named reaction for JEE and NEET."
       }
     },
@@ -1258,7 +1180,7 @@
         "conditions": "Usually carried out in a protic solvent like ethanol or methanol.",
         "mechanism": "Nucleophilic addition of a hydride ion (H\u207b) from NaBH\u2084 to the electrophilic carbonyl carbon of the ketone, forming an alkoxide intermediate. Protonation of the alkoxide by the solvent or during workup yields the alcohol.",
         "equation": "1. C\u2086H\u2085COCH\u2083 + NaBH\u2084 \u2192 C\u2086H\u2085CH(O\u207bNa\u207a)CH\u2083\n2. C\u2086H\u2085CH(O\u207bNa\u207a)CH\u2083 + H\u2083O\u207a \u2192 C\u2086H\u2085CH(OH)CH\u2083 + Na\u207a + H\u2082O",
-        "importance": "A selective and mild reducing agent for aldehydes and ketones. Unlike LiAlH\u2084, it does not reduce carboxylic acids and their derivatives."
+        "importance": "A selective and mild reducing agent for aldehydes and ketones. Unlike LiAlH\u2084, it does not reduce carboxylic acids or amides, and esters react only very slowly; reactive derivatives such as acyl chlorides and anhydrides are reduced."
       }
     },
     {
@@ -1318,15 +1240,6 @@
       "source": "benzene",
       "target": "cyclohexa_1_4_diene",
       "label": "Birch Reduction",
-      "smiles": "C1C=CCC=C1",
-      "info": {
-        "iupac": "Cyclohexa-1,4-diene",
-        "formula": "C\u2086H\u2088"
-      },
-      "position": {
-        "x": 150,
-        "y": 0
-      },
       "reactionInfo": {
         "reagents": "Na or Li in liquid NH\u2083, with an alcohol (e.g., ethanol)",
         "conditions": "Low temperature (-33\u00b0C or below).",
@@ -1345,7 +1258,7 @@
         "conditions": "Room temperature, often in a solvent like diethyl ether or dichloromethane.",
         "mechanism": "A concerted [4+2] cycloaddition reaction. The diene (furan) reacts with the dienophile (maleimide) in a single step through a cyclic transition state. The reaction is suprafacial-suprafacial.",
         "equation": "C\u2084H\u2084O + C\u2084H\u2083NO\u2082 \u2192 C\u2088H\u2087NO\u2083",
-        "importance": "Classic example of a hetero-Diels-Alder reaction, demonstrating the reversibility and the concepts of kinetic vs. thermodynamic control (endo vs. exo products). Important for understanding cycloaddition with heterocyclic compounds."
+        "importance": "Classic example of a Diels-Alder reaction with a heterocyclic diene (furan; its O atom is not in the bonds that form, so this is not a hetero-Diels-Alder reaction), demonstrating the reversibility and the concepts of kinetic vs. thermodynamic control (endo vs. exo products). Important for understanding cycloaddition with heterocyclic compounds."
       }
     },
     {
@@ -1409,7 +1322,7 @@
         "reagents": "None",
         "conditions": "Heating to high temperatures (around 200-250 \u00b0C).",
         "mechanism": "A concerted [3,3]-sigmatropic rearrangement. The reaction proceeds through a cyclic, chair-like transition state. The initial rearrangement gives a non-aromatic cyclohexadienone intermediate, which then tautomerizes to the stable aromatic phenol product.",
-        "equation": "C\u2089H\u2081\u2080O --(heat)--> C\u2089H\u2081\u2080O",
+        "equation": "C\u2086H\u2085OCH\u2082CH=CH\u2082 --(heat, ~200-250 \u00b0C)--> 2-(CH\u2082=CHCH\u2082)C\u2086H\u2084OH",
         "importance": "A classic example of a [3,3]-sigmatropic rearrangement, important for C-C bond formation and synthesis of substituted phenols. The mechanism involving inversion of the allyl group is a key point."
       }
     },
@@ -1612,19 +1525,6 @@
       }
     },
     {
-      "id": "grignard_formation",
-      "source": "bromobenzene",
-      "target": "phenylmagnesium_bromide",
-      "label": "Greener Grignard Reaction",
-      "reactionInfo": {
-        "reagents": "Mg, 2-Methyltetrahydrofuran (2-MeTHF)",
-        "conditions": "Anhydrous conditions.",
-        "mechanism": "The reaction proceeds via a single electron transfer (SET) mechanism from the magnesium surface to the bromobenzene, forming a radical anion which then combines with MgBr\u207a to form the Grignard reagent.",
-        "equation": "C\u2086H\u2085Br + Mg \u2192 C\u2086H\u2085MgBr",
-        "importance": "Grignard reagent formation is fundamental in organic synthesis for C-C bond formation. Using 2-MeTHF, a solvent derivable from renewable resources, makes it a greener alternative to traditional ethers like diethyl ether."
-      }
-    },
-    {
       "id": "grignard_carbonation",
       "source": "phenylmagnesium_bromide",
       "target": "benzoic_acid",
@@ -1635,19 +1535,6 @@
         "mechanism": "The nucleophilic phenyl group of the Grignard reagent attacks the electrophilic carbon of carbon dioxide. The resulting carboxylate salt is then protonated in the acidic workup to yield benzoic acid.",
         "equation": "1. C\u2086H\u2085MgBr + CO\u2082 \u2192 C\u2086H\u2085COOMgBr\n2. C\u2086H\u2085COOMgBr + H\u2083O\u207a \u2192 C\u2086H\u2085COOH + Mg(OH)Br",
         "importance": "A standard and high-yield method for synthesizing carboxylic acids from alkyl/aryl halides, demonstrating the nucleophilic character of Grignard reagents."
-      }
-    },
-    {
-      "id": "chalcone_synthesis",
-      "source": "acetophenone",
-      "target": "chalcone",
-      "label": "Microwave-Assisted Chalcone Synthesis",
-      "reactionInfo": {
-        "reagents": "Benzaldehyde, NaOH or K\u2082CO\u2083, Ethanol",
-        "conditions": "Microwave irradiation for a few minutes.",
-        "mechanism": "This is a Claisen-Schmidt condensation. A base abstracts an \u03b1-proton from acetophenone to form an enolate, which then acts as a nucleophile, attacking the carbonyl carbon of benzaldehyde. The resulting aldol adduct readily dehydrates to form the conjugated system of chalcone.",
-        "equation": "C\u2086H\u2085COCH\u2083 + C\u2086H\u2085CHO --(NaOH, EtOH, MW)--> (E)-C\u2086H\u2085COCH=CHC\u2086H\u2085 + H\u2082O",
-        "importance": "An excellent example of a base-catalyzed condensation reaction. Microwave assistance is a green chemistry technique that significantly reduces reaction time and often improves yields compared to conventional heating."
       }
     },
     {
@@ -1716,19 +1603,6 @@
       }
     },
     {
-      "id": "friedel_crafts_alkylation_of_benzene_to_anisole",
-      "source": "benzene",
-      "target": "anisole",
-      "label": "Friedel-Crafts Alkylation (conceptual)",
-      "reactionInfo": {
-        "reagents": "CH\u2083Cl, Anhydrous AlCl\u2083 (leads to Toluene, not directly Anisole)",
-        "conditions": "Anhydrous conditions",
-        "mechanism": "While Anisole is not directly formed this way, this illustrates the introduction of an alkyl group. For Anisole synthesis, Williamson synthesis is used. This node serves to link to reactions of substituted benzenes.",
-        "equation": "C\u2086H\u2086 + CH\u2083Cl --(AlCl\u2083)--> C\u2086H\u2085CH\u2083 + HCl",
-        "importance": "Friedel-Crafts reactions are very important for NEET/JEE. It is important to know their limitations, such as the inability to use strongly deactivated rings as substrates."
-      }
-    },
-    {
       "id": "bromination_of_anisole",
       "source": "anisole",
       "target": "p_bromoanisole",
@@ -1791,19 +1665,6 @@
         "mechanism": "The reaction involves the condensation of an aromatic aldehyde with an acid anhydride in the presence of the sodium salt of the carboxylic acid corresponding to the anhydride. The base abstracts an \u03b1-hydrogen from the anhydride to form a carbanion, which then attacks the carbonyl carbon of the aldehyde.",
         "equation": "C\u2086H\u2085CHO + (CH\u2083CO)\u2082O \u2192 C\u2086H\u2085CH=CHCOOH + CH\u2083COOH",
         "importance": "Important for the synthesis of \u03b1,\u03b2-unsaturated aromatic acids."
-      }
-    },
-    {
-      "id": "cannizzaro_reaction_salt",
-      "source": "benzaldehyde",
-      "target": "sodium_benzoate",
-      "label": "Cannizzaro Reaction",
-      "reactionInfo": {
-        "reagents": "Concentrated NaOH or KOH",
-        "conditions": "Room temperature",
-        "mechanism": "A disproportionation reaction of aldehydes without \u03b1-hydrogen. One molecule of the aldehyde is reduced to the corresponding alcohol, and another is oxidized to the carboxylic acid salt. The mechanism involves nucleophilic attack of OH\u207b on the carbonyl carbon, followed by a hydride transfer to a second molecule of the aldehyde.",
-        "equation": "2 C\u2086H\u2085CHO + NaOH \u2192 C\u2086H\u2085CH\u2082OH + C\u2086H\u2085COONa",
-        "importance": "A key reaction for aldehydes lacking alpha-hydrogens, demonstrating redox chemistry."
       }
     },
     {
@@ -2025,17 +1886,6 @@
         "mechanism": "Same as the reduction path; this is the oxidized product from the same disproportionation reaction. The initial product is sodium benzoate, which is protonated in the workup step.",
         "equation": "2 C\u2086H\u2085CHO + NaOH \u2192 C\u2086H\u2085CH\u2082OH + C\u2086H\u2085COONa; C\u2086H\u2085COONa + H\u2083O\u207a \u2192 C\u2086H\u2085COOH + Na\u207a + H\u2082O",
         "importance": "Illustrates the oxidation pathway in the disproportionation of non-enolizable aldehydes."
-      }
-    },
-    {
-      "id": "connect_to_acetophenone",
-      "source": "acetophenone",
-      "target": "chalcone",
-      "label": "Reactant in Claisen-Schmidt",
-      "reactionInfo": {
-        "reagents": "Benzaldehyde (C\u2086H\u2085CHO), NaOH or KOH in ethanol/water",
-        "conditions": "Room temperature",
-        "importance": "Acetophenone provides the necessary \u03b1-hydrogens to form the enolate nucleophile required for the condensation."
       }
     },
     {
@@ -2266,7 +2116,7 @@
         "reagents": "Na, absolute C\u2082H\u2085OH",
         "conditions": "Anhydrous conditions are crucial as sodium reacts vigorously with water.",
         "mechanism": "The reaction proceeds via a single-electron transfer from sodium metal to the ester's carbonyl group, forming a radical anion. This is followed by protonation from ethanol and further reduction steps to yield the primary alcohol.",
-        "equation": "C\u2086H\u2085OCH\u2082COOC\u2082H\u2085 + 4Na + 2C\u2082H\u2085OH \u2192 C\u2086H\u2085OCH\u2082CH\u2082OH + C\u2082H\u2085OH + 4NaOC\u2082H\u2085",
+        "equation": "C\u2086H\u2085OCH\u2082COOC\u2082H\u2085 + 4Na + 2C\u2082H\u2085OH \u2192 C\u2086H\u2085OCH\u2082CH\u2082ONa + 3C\u2082H\u2085ONa; then H\u2082O work-up \u2192 C\u2086H\u2085OCH\u2082CH\u2082OH",
         "importance": "A classical method for ester reduction to primary alcohols, it's an alternative to hydride reductions like LiAlH\u2084 and is selective for esters over some other functional groups."
       }
     },
@@ -2280,7 +2130,7 @@
         "conditions": "The reaction is typically performed in an alkaline aqueous solution at room temperature.",
         "mechanism": "The reaction is believed to start with a nucleophilic attack of the phenoxide ion on the peroxide oxygen of the persulfate ion. This forms an intermediate sulfate ester, which is subsequently hydrolyzed to the dihydric phenol.",
         "equation": "CH\u2083C\u2086H\u2084OH + K\u2082S\u2082O\u2088 + 2H\u2082O \u2192 CH\u2083C\u2086H\u2083(OH)\u2082 + 2KHSO\u2084",
-        "importance": "A useful method for introducing a hydroxyl group para to an existing hydroxyl group on a phenol ring."
+        "importance": "A useful method for introducing a hydroxyl group para to an existing phenolic \u2013OH; when the para position is blocked (as in p-cresol) the new \u2013OH goes ortho, giving 4-methylbenzene-1,2-diol."
       }
     },
     {
@@ -2448,7 +2298,7 @@
         "reagents": "Hexamethylenediamine (H\u2082N(CH\u2082)\u2086NH\u2082)",
         "conditions": "High temperature (553 K) and pressure.",
         "mechanism": "Nucleophilic acyl substitution. The lone pair of electrons on the nitrogen of the amine attacks the carbonyl carbon of the carboxylic acid. A molecule of water is eliminated in the formation of each amide bond.",
-        "equation": "n HOOC(CH\u2082)\u2084COOH + n H\u2082N(CH\u2082)\u2086NH\u2082 --> [-OC(CH\u2082)\u2084CONH(CH\u2082)\u2086NH-]n + 2n H\u2082O",
+        "equation": "n HOOC(CH\u2082)\u2084COOH + n H\u2082N(CH\u2082)\u2086NH\u2082 --> H\u2013[NH(CH\u2082)\u2086NHCO(CH\u2082)\u2084CO]\u2099\u2013OH + (2n\u22121) H\u2082O",
         "importance": "A classic example of step-growth polymerization to form a polyamide. Understanding the formation of the amide linkage and the stoichiometry of the monomers is essential for JEE and NEET."
       }
     },
@@ -2538,8 +2388,8 @@
       "reactionInfo": {
         "reagents": "Sodium hydroxide (NaOH)",
         "conditions": "Aqueous solution",
-        "mechanism": "Step 1: A strong base abstracts the acidic \u03b1-proton, forming a resonance-stabilized carbanion (conjugate base). This step is fast and reversible. Step 2: The leaving group (Cl\u207b) is expelled from the carbanion in the slow, rate-determining step to form the alkene.",
-        "equation": "CF\u2083CHCl\u2082 + NaOH \u2192 CF\u2082=CClH + NaCl + H\u2082O",
+        "mechanism": "Step 1: A strong base abstracts the acidic \u03b1-proton, forming a resonance-stabilized carbanion (conjugate base). This step is fast and reversible. Step 2: The carbanion CF\u2083CCl\u2082\u207b expels a \u03b2-fluoride ion (F\u207b), the only leaving group on the carbon next to the anion, in the slow, rate-determining step to form the alkene. Chlorine stabilises the carbanion; fluoride is a poor leaving group, which is why the reaction goes by E1cB.",
+        "equation": "CF\u2083CHCl\u2082 + NaOH \u2192 CF\u2082=CCl\u2082 + NaF + H\u2082O",
         "importance": "Introduces the E1cB (Elimination Unimolecular Conjugate Base) mechanism, which is important for substrates with an acidic proton (due to an electron-withdrawing group) and a poor leaving group. This is a less common but important mechanism for JEE Advanced."
       }
     },
@@ -2554,6 +2404,19 @@
         "mechanism": "1. Generation of the electrophile: The Lewis acid AlCl\u2083 abstracts the chloride from 2-chloropropane to form an isopropyl carbocation (CH\u2083)\u2082CH\u207a. 2. Electrophilic attack: The \u03c0-electron system of the benzene ring attacks the isopropyl carbocation, forming a resonance-stabilized carbocation intermediate (arenium ion). 3. Deprotonation: A weak base (like AlCl\u2084\u207b) removes a proton from the carbon bearing the isopropyl group, restoring aromaticity to the ring.",
         "equation": "C\u2086H\u2086 + CH\u2083CHClCH\u2083 --(AlCl\u2083)--> C\u2086H\u2085CH(CH\u2083)\u2082 + HCl",
         "importance": "A key method to form C-C bonds by attaching alkyl groups to an aromatic ring. It's a fundamental electrophilic aromatic substitution reaction frequently tested in NEET and JEE."
+      }
+    },
+    {
+      "id": "cumene_process",
+      "source": "cumene",
+      "target": "phenol",
+      "label": "Cumene Process",
+      "reactionInfo": {
+        "reagents": "O\u2082 (air), then dilute acid (H\u207a/H\u2082O)",
+        "conditions": "Air oxidation (radical chain) to cumene hydroperoxide; acid-catalysed cleavage of the hydroperoxide",
+        "mechanism": "Air oxidises cumene at the tertiary benzylic C\u2013H by a radical chain to cumene hydroperoxide, C\u2086H\u2085C(CH\u2083)\u2082\u2013O\u2013O\u2013H. In dilute acid the terminal OH is protonated and leaves as water while the phenyl group migrates from carbon to oxygen; water adds to the resulting oxocarbenium ion and the hemiketal breaks down into phenol and acetone.",
+        "equation": "C\u2086H\u2085CH(CH\u2083)\u2082 --(O\u2082, air)--> C\u2086H\u2085C(CH\u2083)\u2082OOH --(H\u2083O\u207a)--> C\u2086H\u2085OH + CH\u2083COCH\u2083",
+        "importance": "The main industrial preparation of phenol, with acetone as co-product (NCERT)."
       }
     },
     {
@@ -2589,9 +2452,9 @@
       "label": "Intramolecular Wurtz Reaction",
       "reactionInfo": {
         "reagents": "2 equivalents of Sodium (Na) metal",
-        "conditions": "Dry ether",
+        "conditions": "Refluxing dioxane (sodium is molten at this temperature)",
         "mechanism": "Sodium metal transfers electrons to the carbon-halogen bonds, creating radical or anionic centers at C1 and C3. An intramolecular coupling then occurs, forming a new C-C bond between the 1st and 3rd carbon atoms of the cyclobutane ring, resulting in the formation of the bicyclic product and elimination of two sodium halide salts.",
-        "equation": "C\u2084H\u2086BrCl + 2 Na --(Dry Ether)--> C\u2084H\u2086 + NaBr + NaCl",
+        "equation": "C\u2084H\u2086BrCl + 2 Na --(dioxane, reflux)--> C\u2084H\u2086 + NaBr + NaCl",
         "importance": "Illustrates the application of the Wurtz reaction for synthesizing strained bicyclic systems from dihaloalkanes. This type of intramolecular reaction is a higher-level concept often explored in competitive exams."
       }
     },
@@ -2803,6 +2666,21 @@
       }
     },
     {
+      "id": "cyclohexa_1_4_diene",
+      "label": "Cyclohexa-1,4-diene",
+      "smiles": "C1C=CCC=C1",
+      "type": "Cyclic Diene",
+      "info": {
+        "iupac": "Cyclohexa-1,4-diene",
+        "formula": "C\u2086H\u2088",
+        "notes": "Non-conjugated diene formed by Birch reduction of benzene."
+      },
+      "position": {
+        "x": -210,
+        "y": 370
+      }
+    },
+    {
       "id": "benzaldehyde",
       "label": "Benzaldehyde",
       "smiles": "O=Cc1ccccc1",
@@ -2848,6 +2726,21 @@
       "position": {
         "x": -1472.8781369078101,
         "y": -2613.5473965128276
+      }
+    },
+    {
+      "id": "catechol",
+      "label": "Catechol",
+      "smiles": "Oc1ccccc1O",
+      "type": "Diphenol",
+      "info": {
+        "iupac": "Benzene-1,2-diol",
+        "formula": "C\u2086H\u2086O\u2082",
+        "notes": "Formed from salicylaldehyde by the Dakin reaction (H\u2082O\u2082, aqueous base)."
+      },
+      "position": {
+        "x": -1802.878,
+        "y": -2893.547
       }
     },
     {
@@ -3028,7 +2921,7 @@
     {
       "id": "compound_4",
       "label": "(2-Phenylethyl) 2-phenylacetate",
-      "smiles": "O=C(OCc1ccccc1)Cc2ccccc2",
+      "smiles": "O=C(OCCc1ccccc1)Cc1ccccc1",
       "type": "Ester",
       "info": {
         "iupac": "(2-Phenylethyl) 2-phenylacetate",
@@ -3088,7 +2981,7 @@
     {
       "id": "compound_8",
       "label": "1-Phenylpropan-2-one tosylhydrazone",
-      "smiles": "CC(=NNTs)Cc1ccccc1",
+      "smiles": "CC(=NNS(=O)(=O)c1ccc(C)cc1)Cc1ccccc1",
       "type": "Tosylhydrazone",
       "info": {
         "iupac": "(E)-N'-(1-phenylpropan-2-ylidene)-4-methylbenzenesulfonohydrazide",
@@ -3292,9 +3185,25 @@
       }
     },
     {
+      "id": "phenyl_isocyanide",
+      "label": "Phenyl Isocyanide",
+      "smiles": "[C-]#[N+]c1ccccc1",
+      "type": "Isocyanide",
+      "info": {
+        "iupac": "Isocyanobenzene",
+        "formula": "C\u2086H\u2085NC",
+        "notes": "Foul-smelling product of the carbylamine (isocyanide) test given by primary amines such as aniline.",
+        "properties": "Liquid with an extremely unpleasant odour."
+      },
+      "position": {
+        "x": 2274.059,
+        "y": -591.053
+      }
+    },
+    {
       "id": "benzenediazonium_chloride",
       "label": "Benzenediazonium Chloride",
-      "smiles": "[N+]#NC1=CC=CC=C1.[Cl-]",
+      "smiles": "N#[N+]c1ccccc1.[Cl-]",
       "type": "Diazonium Salt",
       "info": {
         "iupac": "Benzenediazonium chloride",
@@ -3358,7 +3267,7 @@
     {
       "id": "potassium_phthalimide",
       "label": "Potassium Phthalimide",
-      "smiles": "[K+].O=C1N([O-])C(=O)c2ccccc12",
+      "smiles": "[K+].O=C1[N-]C(=O)c2ccccc12",
       "type": "Imide Salt",
       "info": {
         "iupac": "Potassium 1,3-dioxo-1,3-dihydro-2H-isoindol-2-ide",
@@ -3474,7 +3383,7 @@
       "type": "Phenolic Ketone",
       "info": {
         "iupac": "1-(4-hydroxyphenyl)ethan-1-one",
-        "formula": "C\u2088H\u2088O\u2083",
+        "formula": "C\u2088H\u2088O\u2082",
         "notes": "The para-product of the Fries rearrangement. Formation is favored at lower temperatures.",
         "properties": "White crystalline solid. Melting point: 109-111 \u00b0C."
       },
@@ -3710,7 +3619,7 @@
     {
       "id": "1_2_diphenylethan_1_ol",
       "label": "1,2-Diphenylethan-1-ol",
-      "smiles": "C1=CC=C(C=C1)C(C2=CC=CC=C2)O",
+      "smiles": "OC(Cc1ccccc1)c1ccccc1",
       "type": "Secondary Alcohol",
       "info": {
         "iupac": "1,2-Diphenylethan-1-ol",
@@ -3758,7 +3667,7 @@
     {
       "id": "s-2-butanol",
       "label": "(S)-Butan-2-ol",
-      "smiles": "C[C@@H](O)CC",
+      "smiles": "C[C@H](O)CC",
       "type": "chiral_alcohol",
       "info": {
         "iupac": "(S)-Butan-2-ol",
@@ -3790,7 +3699,7 @@
     {
       "id": "r-2-bromobutane",
       "label": "(R)-2-Bromobutane",
-      "smiles": "C[C@H](Br)CC",
+      "smiles": "C[C@@H](Br)CC",
       "type": "chiral_alkyl_halide",
       "info": {
         "iupac": "(R)-2-Bromobutane",
@@ -3811,7 +3720,7 @@
       "info": {
         "iupac": "(E)-But-2-ene",
         "formula": "C\u2084H\u2088",
-        "notes": "Major product of the E2 elimination of 2-butanol. It is the more thermodynamically stable diastereomer (trans) according to Saytzeff's rule.",
+        "notes": "Major product of the acid-catalysed (E1) dehydration of 2-butanol. It is the more thermodynamically stable diastereomer (trans) according to Saytzeff's rule.",
         "properties": "Colorless gas. More stable than its Z-isomer due to less steric strain."
       },
       "position": {
@@ -3827,7 +3736,7 @@
       "info": {
         "iupac": "(Z)-But-2-ene",
         "formula": "C\u2084H\u2088",
-        "notes": "Minor product of the E2 elimination of 2-butanol. It is the less stable diastereomer (cis) and is formed in smaller amounts.",
+        "notes": "Minor product of the acid-catalysed (E1) dehydration of 2-butanol. It is the less stable diastereomer (cis) and is formed in smaller amounts.",
         "properties": "Colorless gas. Less stable than its E-isomer."
       },
       "position": {
@@ -4124,41 +4033,9 @@
       }
     },
     {
-      "id": "neopentyl_bromide",
-      "label": "Neopentyl Bromide",
-      "smiles": "CC(C)(C)CBr",
-      "type": "Alkyl Halide",
-      "info": {
-        "iupac": "1-bromo-2,2-dimethylpropane",
-        "formula": "C\u2085H\u2081\u2081Br",
-        "notes": "Although a primary alkyl halide, it is sterically hindered for SN2 reactions. It can undergo SN1 reactions with rearrangement due to the formation of a more stable tertiary carbocation. This is a key example for understanding carbocation rearrangements in JEE Advanced.",
-        "properties": "Colorless, volatile liquid."
-      },
-      "position": {
-        "x": -2858.846635462935,
-        "y": -12271.38932292926
-      }
-    },
-    {
-      "id": "tert_amyl_methyl_ether",
-      "label": "tert-Amyl methyl ether",
-      "smiles": "CCC(C)(C)OC",
-      "type": "Ether",
-      "info": {
-        "iupac": "2-methoxy-2-methylbutane",
-        "formula": "C\u2086H\u2081\u2084O",
-        "notes": "Major product of the SN1 reaction of neopentyl bromide in methanol, formed after a 1,2-hydride shift.",
-        "properties": "Volatile, flammable liquid."
-      },
-      "position": {
-        "x": 5300.884843930284,
-        "y": -12088.863464833665
-      }
-    },
-    {
       "id": "r_2_bromobutane",
       "label": "(R)-2-bromobutane",
-      "smiles": "C[C@H](Br)CC",
+      "smiles": "C[C@@H](Br)CC",
       "type": "Alkyl Halide",
       "info": {
         "iupac": "(R)-2-bromobutane",
@@ -4174,7 +4051,7 @@
     {
       "id": "s_2_azidobutane",
       "label": "(S)-2-azidobutane",
-      "smiles": "C[C@@H](N\u2083)CC",
+      "smiles": "C[C@H](N=[N+]=[N-])CC",
       "type": "Alkyl Azide",
       "info": {
         "iupac": "(S)-2-azidobutane",
@@ -4254,7 +4131,7 @@
     {
       "id": "z_1_bromo_1_2_diphenylethene",
       "label": "(Z)-1-bromo-1,2-diphenylethene",
-      "smiles": "Br/C(C1=CC=CC=C1)=C/C2=CC=CC=C2",
+      "smiles": "Br/C(c1ccccc1)=C\\c1ccccc1",
       "type": "Alkenyl Halide",
       "info": {
         "iupac": "(Z)-1-bromo-1,2-diphenylethene",
@@ -4382,7 +4259,7 @@
     {
       "id": "2,5-dimethylpyrrole",
       "label": "2,5-Dimethylpyrrole",
-      "smiles": "Cc1cc(C)nH1",
+      "smiles": "Cc1ccc(C)[nH]1",
       "type": "Pyrrole Derivative",
       "info": {
         "iupac": "2,5-Dimethyl-1H-pyrrole",
@@ -4446,7 +4323,7 @@
     {
       "id": "2-acetylfuran",
       "label": "2-Acetylfuran",
-      "smiles": "CC(=O)c1ccoc1",
+      "smiles": "CC(=O)c1ccco1",
       "type": "Furan Derivative",
       "info": {
         "iupac": "1-(Furan-2-yl)ethanone",
@@ -4462,7 +4339,7 @@
     {
       "id": "diels_alder_adduct",
       "label": "Furan-Maleic Anhydride Adduct",
-      "smiles": "O=C1OC(=O)C2C1C3OC=CC3C2",
+      "smiles": "O=C1OC(=O)C2C1C1C=CC2O1",
       "type": "Cycloadduct",
       "info": {
         "iupac": "4,10-Dioxatricyclo[5.2.1.0\u00b2,\u2076]dec-8-ene-3,5-dione",
@@ -4604,38 +4481,6 @@
       }
     },
     {
-      "id": "acetamide",
-      "label": "Acetamide",
-      "smiles": "CC(=O)N",
-      "type": "amide",
-      "info": {
-        "iupac": "Ethanamide",
-        "formula": "C\u2082H\u2085NO",
-        "notes": "A primary amide that undergoes Hoffmann bromamide degradation to form a primary amine with one less carbon atom. Its IR spectrum shows characteristic N-H and C=O stretching.",
-        "properties": "Colorless or white crystalline solid."
-      },
-      "position": {
-        "x": 8889.680943486708,
-        "y": -6132.990520374972
-      }
-    },
-    {
-      "id": "methylamine",
-      "label": "Methylamine",
-      "smiles": "CN",
-      "type": "primary amine",
-      "info": {
-        "iupac": "Methanamine",
-        "formula": "CH\u2085N",
-        "notes": "The product of the Hoffmann bromamide degradation of acetamide. As a primary amine, its IR spectrum displays two N-H stretching bands. The \u00b9H NMR will show a signal for the methyl protons and the amine protons.",
-        "properties": "Colorless gas with a strong, fish-like odor."
-      },
-      "position": {
-        "x": 9744.580943185583,
-        "y": -3013.8251843304347
-      }
-    },
-    {
       "id": "n_ethylphthalimide",
       "label": "N-Ethylphthalimide",
       "smiles": "CCN1C(=O)C2=CC=CC=C2C1=O",
@@ -4702,7 +4547,7 @@
     {
       "id": "michael_adduct",
       "label": "Michael Adduct Intermediate",
-      "smiles": "O=C1CCCC(C1)CC(=O)C",
+      "smiles": "O=C1CCCCC1CCC(C)=O",
       "type": "Diketone",
       "info": {
         "iupac": "2-(3-oxobutyl)cyclohexan-1-one",
@@ -4716,15 +4561,14 @@
       }
     },
     {
-      "id": "wieland_miescher_ketone",
-      "label": "Wieland-Miescher Ketone",
-      "smiles": "O=C1CC[C@@H]2CCCC(=O)[C@]12C",
-      "type": "Bicyclic Ketone",
+      "id": "octalone",
+      "label": "\u0394\u00b9,\u2079-Octal-2-one",
+      "smiles": "O=C1CCC2CCCCC2=C1",
+      "type": "Bicyclic Enone",
       "info": {
-        "iupac": "(8aS)-8a-methyl-3,4,8,8a-tetrahydronaphthalene-1,6(2H,7H)-dione",
-        "formula": "C\u2081\u2081H\u2081\u2084O\u2082",
-        "notes": "A key building block in the synthesis of more complex natural products like steroids. It is a classic example of a product from an enantioselective Robinson annulation.",
-        "properties": "A bridged bicyclic diketone."
+        "iupac": "4,4a,5,6,7,8-Hexahydronaphthalen-2(3H)-one",
+        "formula": "C\u2081\u2080H\u2081\u2084O",
+        "notes": "The Robinson annulation product of cyclohexanone and methyl vinyl ketone; the new C=C is at the ring fusion, conjugated with the C=O."
       },
       "position": {
         "x": 7197.138876584579,
@@ -4734,7 +4578,7 @@
     {
       "id": "retinal",
       "label": "Retinal",
-      "smiles": "CC1=C(C(C=CC1)C)C=CC(=CC=CC(=CC=O)C)C",
+      "smiles": "CC1=C(C(CCC1)(C)C)/C=C/C(=C/C=C/C(=C/C=O)/C)/C",
       "type": "Aldehyde",
       "info": {
         "iupac": "(2E,4E,6E,8E)-3,7-dimethyl-9-(2,6,6-trimethylcyclohex-1-en-1-yl)nona-2,4,6,8-tetraenal",
@@ -4766,7 +4610,7 @@
     {
       "id": "beta_carotene",
       "label": "\u03b2-Carotene",
-      "smiles": "CC1=C(C(CCC1)C)C=CC(=CC=CC(=CC=CC=C(C)C=CC=C(C)C=CC2=C(C)CCCC2(C)C)C)C",
+      "smiles": "CC2(C)CCCC(\\C)=C2\\C=C\\C(\\C)=C\\C=C\\C(\\C)=C\\C=C\\C=C(/C)\\C=C\\C=C(/C)\\C=C\\C1=C(/C)CCCC1(C)C",
       "type": "Terpenoid",
       "info": {
         "iupac": "1,1'-(3,7,12,16-tetramethyloctadeca-1,3,5,7,9,11,13,15,17-nonaene-1,18-diyl)bis(2,6,6-trimethylcyclohex-1-ene)",
@@ -4957,11 +4801,11 @@
     },
     {
       "id": "furan_maleimide_adduct",
-      "label": "Exo-3,6-Epoxy-1,2,3,6-tetrahydrophthalimide",
-      "smiles": "O=C1NC(=O)C2C=CC(O2)C1",
+      "label": "Furan\u2013Maleimide Adduct",
+      "smiles": "O=C1NC(=O)C2C1C1C=CC2O1",
       "type": "Cycloadduct",
       "info": {
-        "iupac": "(3aR,4S,7R,7aS)-3a,4,7,7a-Tetrahydro-4,7-epoxyisoindole-1,3-dione",
+        "iupac": "3a,4,7,7a-Tetrahydro-4,7-epoxyisoindole-1,3-dione",
         "formula": "C\u2088H\u2087NO\u2083",
         "notes": "The exo isomer is thermodynamically more stable, but the endo isomer is often formed faster under kinetic control. The reaction is reversible.",
         "properties": "Bicyclic compound formed via a [4+2] cycloaddition. The stereochemistry (endo/exo) is a key concept for JEE."
@@ -5246,7 +5090,7 @@
     {
       "id": "glyceryl_trioleate",
       "label": "Glyceryl trioleate",
-      "smiles": "CCCCCCCC\\C=C/CCCCCCCC(=O)OC(COC(=O)CCCCCCC\\C=C/CCCCCCCC)C(=O)CCCCCCC\\C=C/CCCCCCCC",
+      "smiles": "CCCCCCCC\\C=C/CCCCCCCC(=O)OCC(COC(=O)CCCCCCC\\C=C/CCCCCCCC)OC(=O)CCCCCCC\\C=C/CCCCCCCC",
       "type": "Triglyceride",
       "info": {
         "iupac": "2,3-Bis[[(Z)-octadec-9-enoyl]oxy]propyl (Z)-octadec-9-enoate",
@@ -5262,7 +5106,7 @@
     {
       "id": "glyceryl_tristearate",
       "label": "Glyceryl tristearate",
-      "smiles": "CCCCCCCCCCCCCCCCCC(=O)OC(COC(=O)CCCCCCCCCCCCCCCCC)C(=O)CCCCCCCCCCCCCCCCC",
+      "smiles": "CCCCCCCCCCCCCCCCCC(=O)OCC(COC(=O)CCCCCCCCCCCCCCCCC)OC(=O)CCCCCCCCCCCCCCCCC",
       "type": "Saturated Triglyceride",
       "info": {
         "iupac": "2,3-Bis(octadecanoyloxy)propyl octadecanoate",
@@ -5438,7 +5282,7 @@
     {
       "id": "caprolactone",
       "label": "\u03b5-Caprolactone",
-      "smiles": "O=C1OCCCC1",
+      "smiles": "O=C1CCCCCO1",
       "type": "Lactone",
       "info": {
         "iupac": "Oxepan-2-one",
@@ -5806,7 +5650,7 @@
     {
       "id": "norbornene",
       "label": "Norbornene",
-      "smiles": "C1C=CC2C1C2",
+      "smiles": "C1CC2CC1C=C2",
       "type": "Bicyclic Alkenes",
       "info": {
         "iupac": "Bicyclo[2.2.1]hept-2-ene",
@@ -5854,7 +5698,7 @@
     {
       "id": "epoxide_of_methylenecyclohexane",
       "label": "1-Oxaspiro[2.5]octane",
-      "smiles": "C1CCC(CC1)C2O2",
+      "smiles": "C1CCC2(CC1)CO2",
       "type": "Epoxide",
       "info": {
         "iupac": "1-Oxaspiro[2.5]octane",
@@ -6126,7 +5970,7 @@
     {
       "id": "1-diazopentan-2-one",
       "label": "1-Diazopentan-2-one",
-      "smiles": "CCC(=O)C=[N+]=[N-]",
+      "smiles": "CCCC(=O)C=[N+]=[N-]",
       "type": "Diazoketone",
       "info": {
         "iupac": "1-Diazopentan-2-one",
@@ -6222,7 +6066,7 @@
     {
       "id": "cyclohexanone_oxime",
       "label": "Cyclohexanone Oxime",
-      "smiles": "C1CCC(=NOH)CC1",
+      "smiles": "ON=C1CCCCC1",
       "type": "Oxime",
       "info": {
         "iupac": "Cyclohexanone oxime",
@@ -6238,7 +6082,7 @@
     {
       "id": "caprolactam",
       "label": "\u03b5-Caprolactam",
-      "smiles": "C1CCNCC(=O)1",
+      "smiles": "O=C1CCCCCN1",
       "type": "Lactam",
       "info": {
         "iupac": "Azepan-2-one",
@@ -6270,7 +6114,7 @@
     {
       "id": "primary_amine",
       "label": "Primary Amine",
-      "smiles": "RNH\u2082",
+      "smiles": "*N",
       "type": "amine",
       "info": {
         "iupac": "Alkanamine",
@@ -6286,7 +6130,7 @@
     {
       "id": "primary_amide",
       "label": "Primary Amide",
-      "smiles": "RC(=O)NH\u2082",
+      "smiles": "*C(N)=O",
       "type": "amide",
       "info": {
         "iupac": "Alkanamide",
@@ -6318,7 +6162,7 @@
     {
       "id": "acyl_azide",
       "label": "Acyl Azide",
-      "smiles": "RC(=O)N=[N+]=[N-]",
+      "smiles": "*C(=O)N=[N+]=[N-]",
       "type": "acyl azide",
       "info": {
         "iupac": "Alkanoyl azide",
@@ -6350,7 +6194,7 @@
     {
       "id": "n_alkylbenzenesulfonamide",
       "label": "N-Alkylbenzenesulfonamide",
-      "smiles": "RNS(=O)(=O)c1ccccc1",
+      "smiles": "*NS(=O)(=O)c1ccccc1",
       "type": "sulfonamide",
       "info": {
         "iupac": "N-Alkylbenzenesulfonamide",
@@ -6366,7 +6210,7 @@
     {
       "id": "secondary_amine",
       "label": "Secondary Amine",
-      "smiles": "R2NH",
+      "smiles": "*N*",
       "type": "amine",
       "info": {
         "iupac": "N-Alkylalkan-amine",
@@ -6382,7 +6226,7 @@
     {
       "id": "n_dialkylbenzenesulfonamide",
       "label": "N,N-Dialkylbenzenesulfonamide",
-      "smiles": "R2NS(=O)(=O)c1ccccc1",
+      "smiles": "*N(*)S(=O)(=O)c1ccccc1",
       "type": "sulfonamide",
       "info": {
         "iupac": "N,N-Dialkylbenzenesulfonamide",
@@ -6483,7 +6327,7 @@
       "info": {
         "iupac": "4-Methylbenzene-1,2-diol",
         "formula": "C\u2087H\u2088O\u2082",
-        "notes": "The para-dihydroxylated product of the Elbs persulfate oxidation of p-cresol.",
+        "notes": "The ortho-hydroxylated product of the Elbs persulfate oxidation of p-cresol (the para position is blocked by CH\u2083).",
         "properties": "An antioxidant, readily oxidized to the corresponding quinone."
       },
       "position": {
@@ -6814,7 +6658,7 @@
     {
       "id": "s_indene_oxide",
       "label": "(1S,2R)-Indene Oxide",
-      "smiles": "C1=CC=C2[C@H]([C@H]3O3)C2=C1",
+      "smiles": "C1c2ccccc2[C@@H]2O[C@H]12",
       "type": "Chiral Epoxide",
       "info": {
         "iupac": "(1aR,6bS)-1a,6b-Dihydro-2H-indeno[1,2-b]oxirene",
@@ -6830,7 +6674,7 @@
     {
       "id": "r_indene_oxide",
       "label": "(1R,2S)-Indene Oxide",
-      "smiles": "C1=CC=C2[C@@H]([C@@H]3O3)C2=C1",
+      "smiles": "C1c2ccccc2[C@H]2O[C@@H]12",
       "type": "Chiral Epoxide",
       "info": {
         "iupac": "(1aS,6bR)-1a,6b-Dihydro-2H-indeno[1,2-b]oxirene",
@@ -7102,7 +6946,7 @@
     {
       "id": "(S)-2-azidopentane",
       "label": "(S)-2-Azidopentane",
-      "smiles": "CCCC(C)N=[N+]=[N-]",
+      "smiles": "CCC[C@H](C)N=[N+]=[N-]",
       "type": "Alkyl Azide",
       "info": {
         "iupac": "(S)-2-azidopentane",
@@ -7165,13 +7009,13 @@
     },
     {
       "id": "1-chloro-2,2,2-trifluoroethene",
-      "label": "1-Chloro-2,2,2-trifluoroethene",
-      "smiles": "C(=C(F)F)(Cl)F",
+      "label": "1,1-Dichloro-2,2-difluoroethene",
+      "smiles": "FC(F)=C(Cl)Cl",
       "type": "Haloalkene",
       "info": {
-        "iupac": "1-chloro-2,2,2-trifluoroethene",
-        "formula": "C\u2082ClF\u2083",
-        "notes": "The product of E1cB elimination from 1,1-dichloro-2,2,2-trifluoroethane.",
+        "iupac": "1,1-Dichloro-2,2-difluoroethene",
+        "formula": "C\u2082Cl\u2082F\u2082",
+        "notes": "The product of E1cB elimination from 1,1-dichloro-2,2,2-trifluoroethane: the carbanion CF\u2083CCl\u2082\u207b loses fluoride, not chloride.",
         "properties": "A gaseous compound."
       },
       "position": {
@@ -7214,7 +7058,7 @@
     {
       "id": "4_phenylbutyric_acid",
       "label": "4-Phenylbutyric acid",
-      "smiles": "O=C(O)CCCCc1ccccc1",
+      "smiles": "O=C(O)CCCc1ccccc1",
       "type": "Carboxylic Acid",
       "info": {
         "iupac": "4-Phenylbutanoic acid",
@@ -7230,7 +7074,7 @@
     {
       "id": "alpha_tetralone",
       "label": "\u03b1-Tetralone",
-      "smiles": "O=C1CCc2ccccc21",
+      "smiles": "O=C1CCCc2ccccc21",
       "type": "Cyclic Ketone",
       "info": {
         "iupac": "3,4-Dihydronaphthalen-1(2H)-one",

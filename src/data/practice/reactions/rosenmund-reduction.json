@@ -1,0 +1,7 @@
+{"page": "reactions/rosenmund-reduction",
+ "questions": [
+  {"q": "Propanoic acid is treated with SOCl₂ and the product is hydrogenated over Pd/BaSO₄. The final product is:", "options": ["Propan-1-ol", "Propanoyl chloride", "Propanal", "Propane"], "answer": 2, "explain": "SOCl₂ gives CH₃CH₂COCl, and the Rosenmund reduction converts the acyl chloride into the aldehyde CH₃CH₂CHO with HCl as by-product."},
+  {"q": "What is the role of BaSO₄ in the Rosenmund catalyst?", "options": ["It lowers the activity of palladium so the aldehyde is not reduced to an alcohol", "It absorbs the HCl formed", "It is the actual hydrogenation catalyst", "It dries the solvent"], "answer": 0, "explain": "BaSO₄ has a low surface area and tempers palladium; an unpoisoned catalyst would reduce the aldehyde on to the primary alcohol."},
+  {"q": "Which aldehyde CANNOT be prepared by the Rosenmund reduction?", "options": ["Ethanal", "Benzaldehyde", "Propanal", "Methanal"], "answer": 3, "explain": "Methanal would need formyl chloride, HCOCl, which is unstable at room temperature and decomposes to CO and HCl."},
+  {"q": "If the Rosenmund catalyst is insufficiently poisoned, which side product is expected along with the primary alcohol?", "options": ["A ketone", "An ester", "An alkane", "A carboxylic acid anhydride"], "answer": 1, "explain": "Over-reduction gives the primary alcohol, which reacts with unreacted acyl chloride to form an ester."}
+ ]}

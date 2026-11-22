@@ -1,0 +1,51 @@
+{
+ "page": "reactions/bouveault-blanc-reduction",
+ "questions": [
+  {
+   "q": "Ethyl butanoate is treated with sodium metal in absolute ethanol, followed by aqueous work-up. The products are:",
+   "smiles": "CCCC(=O)OCC",
+   "options": [
+    "Butanal and ethanol",
+    "Butanoic acid and ethanol",
+    "Butan-1-ol and ethanol",
+    "Ethyl 2-ethyl-3-oxohexanoate"
+   ],
+   "answer": 2,
+   "explain": "Bouveault–Blanc reduction turns the acyl carbon into CH₂OH and releases the alkoxy part as its alcohol. The β-keto ester is the Claisen condensation product, which needs sodium ethoxide (a base), not sodium metal."
+  },
+  {
+   "q": "How many sodium atoms are consumed, in the ideal equation, to reduce one molecule of an ester RCOOR′ to RCH₂OH and R′OH?",
+   "options": [
+    "2",
+    "4",
+    "1",
+    "6"
+   ],
+   "answer": 1,
+   "explain": "Taking the ester carbon to CH₂OH needs four electrons, one from each Na: RCOOR′ + 4Na + 2C₂H₅OH → RCH₂ONa + R′ONa + 2C₂H₅ONa. In practice excess Na is used because some is lost as H₂."
+  },
+  {
+   "q": "An ester is treated with sodium in an aprotic solvent with no alcohol present. The product is:",
+   "options": [
+    "An acyloin (α-hydroxy ketone)",
+    "A primary alcohol and R′OH",
+    "A β-keto ester",
+    "An aldehyde"
+   ],
+   "answer": 0,
+   "explain": "Without a proton donor the radical-anion intermediates couple instead of being reduced, giving the acyloin condensation. Ethanol as proton source is what makes it a reduction."
+  },
+  {
+   "q": "Ethyl oleate (which has one C=C in its chain) is reduced with Na and absolute ethanol. Which statement about the product is correct?",
+   "smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)OCC",
+   "options": [
+    "The C=C is reduced and the ester survives",
+    "Both the C=C and the ester are reduced, giving octadecan-1-ol",
+    "The ester is reduced to oleyl alcohol and the C=C survives",
+    "The product is oleic acid, because Na/EtOH only hydrolyses esters"
+   ],
+   "answer": 2,
+   "explain": "In Bouveault and Blanc's original 1903 example, ethyl oleate gave oleyl alcohol with the chain C=C intact; isolated C=C bonds are not reduced by Na/EtOH (nor by LiAlH₄)."
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "page": "reactions/friedel-crafts-acylation",
+ "questions": [
+  {
+   "q": "Anisole is treated with acetyl chloride and AlCl₃. The major product is:",
+   "smiles": "COc1ccccc1",
+   "options": [
+    "4-Methoxyacetophenone",
+    "Phenyl acetate",
+    "3-Methoxyacetophenone",
+    "Acetophenone and methanol"
+   ],
+   "answer": 0,
+   "explain": "–OCH₃ is an ortho/para director and the bulky acyl group goes mainly to the para position. Meta substitution would need a deactivating group."
+  },
+  {
+   "q": "Which compound does NOT undergo Friedel–Crafts acylation with CH₃COCl/AlCl₃?",
+   "options": [
+    "Benzene",
+    "Anisole",
+    "Nitrobenzene",
+    "Thiophene (with SnCl₄)"
+   ],
+   "answer": 2,
+   "explain": "–NO₂ strongly deactivates the ring, and the acylium ion is too weak an electrophile to attack it; nitrobenzene is even used as a solvent for such reactions. Thiophene is acylated at C-2 under milder SnCl₄ catalysis."
+  },
+  {
+   "q": "Why must at least one full equivalent of AlCl₃ be used in Friedel–Crafts acylation, whereas a catalytic amount serves in alkylation?",
+   "options": [
+    "The acylium ion rearranges unless excess AlCl₃ is present",
+    "Excess AlCl₃ is needed to prevent polyacylation",
+    "AlCl₃ is consumed by the HCl formed",
+    "The ketone product is a Lewis base and binds AlCl₃, which is released only on aqueous work-up"
+   ],
+   "answer": 3,
+   "explain": "The carbonyl oxygen of the aryl ketone complexes AlCl₃, so it is not regenerated at the end; water at work-up frees the ketone. Polyacylation does not occur anyway because the ketone deactivates the ring."
+  },
+  {
+   "q": "Benzene is treated with pivaloyl chloride, (CH₃)₃C–COCl, and AlCl₃. The major organic product is:",
+   "smiles": "CC(C)(C)C(=O)Cl",
+   "options": [
+    "2,2-Dimethyl-1-phenylpropan-1-one",
+    "tert-Butylbenzene",
+    "Isobutylbenzene",
+    "Benzoic acid"
+   ],
+   "answer": 1,
+   "explain": "The pivaloyl acylium ion is in equilibrium with the very stable tert-butyl cation and CO, so the ring is alkylated instead of acylated. The trap is writing the expected ketone; always check whether the carbon next to C=O is tertiary."
+  }
+ ]
+}

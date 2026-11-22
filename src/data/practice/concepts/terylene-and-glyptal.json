@@ -1,0 +1,49 @@
+{
+ "page": "concepts/terylene-and-glyptal",
+ "questions": [
+  {
+   "q": "The monomers of Glyptal, as given in exam answers, are:",
+   "options": [
+    "Ethylene glycol and terephthalic acid",
+    "Ethylene glycol and isophthalic acid",
+    "Hexamethylenediamine and adipic acid",
+    "Ethylene glycol and phthalic acid"
+   ],
+   "answer": 3,
+   "explain": "Glyptal is the polyester of ethylene glycol with phthalic acid (the 1,2 or ortho acid). Terephthalic (para) acid with ethylene glycol gives Terylene, and isophthalic acid is used for neither."
+  },
+  {
+   "q": "How many carbon atoms are present in the repeating unit of Terylene?",
+   "options": [
+    "8",
+    "6",
+    "12",
+    "10"
+   ],
+   "answer": 3,
+   "explain": "The repeating unit –O–CH₂–CH₂–O–CO–C₆H₄–CO– is C₁₀H₈O₄: two carbons from ethylene glycol and eight from terephthalic acid."
+  },
+  {
+   "q": "When dimethyl terephthalate is used instead of terephthalic acid to make Terylene, the small molecule released is:",
+   "options": [
+    "Methanol",
+    "Water",
+    "Ethylene glycol",
+    "Hydrogen chloride"
+   ],
+   "answer": 0,
+   "explain": "Dimethyl terephthalate reacts with ethylene glycol by transesterification, so methanol is lost instead of water."
+  },
+  {
+   "q": "Which statement correctly explains why Terylene is a fibre while Glyptal is used as a coating resin?",
+   "options": [
+    "Terylene is an addition polymer, Glyptal a condensation polymer",
+    "The 1,4-acid in Terylene continues the chain in a straight line so chains pack regularly; the 1,2-acid in Glyptal turns the chain sharply",
+    "Terylene contains amide links that hydrogen-bond, Glyptal contains only ester links",
+    "Glyptal is made from ethylene glycol, which cannot form long chains"
+   ],
+   "answer": 1,
+   "explain": "Both are polyesters (condensation polymers). The para geometry of terephthalic acid gives straight, regular chains that line up into a semicrystalline fibre, while the ortho acid kinks the chain."
+  }
+ ]
+}

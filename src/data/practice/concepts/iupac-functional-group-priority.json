@@ -1,0 +1,50 @@
+{
+ "page": "concepts/iupac-functional-group-priority",
+ "questions": [
+  {
+   "q": "The IUPAC name of CH₃COCH₂CH(OH)CH₃ is",
+   "options": [
+    "2-Hydroxypentan-4-one",
+    "4-Hydroxypentan-2-one",
+    "4-Oxopentan-2-ol",
+    "2-Oxopentan-4-ol"
+   ],
+   "answer": 1,
+   "explain": "The ketone outranks the alcohol, so it takes the suffix -one with the lowest locant (C-2), and –OH becomes the prefix hydroxy at C-4.",
+   "smiles": "CC(O)CC(C)=O"
+  },
+  {
+   "q": "Which of these groups has the highest priority for choosing the IUPAC suffix?",
+   "options": [
+    "–CHO",
+    "–C≡N",
+    "–CONH₂",
+    "–COOR"
+   ],
+   "answer": 3,
+   "explain": "The order runs ester > acyl halide > amide > nitrile > isocyanide > aldehyde, so the ester group is the principal group here."
+  },
+  {
+   "q": "Which group is always cited as a prefix and never as a suffix?",
+   "options": [
+    "–NO₂",
+    "–OH",
+    "–NH₂",
+    "–SH"
+   ],
+   "answer": 0,
+   "explain": "Nitro, halo, alkoxy, alkyl and phenyl groups never take a suffix. –OH, –NH₂ and –SH can be suffixes (-ol, -amine, -thiol) when they are the principal group."
+  },
+  {
+   "q": "The correct IUPAC name of CH₃O–CO–CH₂CH₂–COOH is",
+   "options": [
+    "Methyl 3-carboxypropanoate",
+    "4-Methoxybutanoic acid",
+    "4-Methoxy-4-oxobutanoic acid",
+    "3-Methoxycarbonylpropanal"
+   ],
+   "answer": 2,
+   "explain": "–COOH outranks the ester, so the name ends in -oic acid with the COOH carbon as C-1; the ester end at C-4 is written as the prefixes methoxy and oxo. Naming it as an ester ignores the priority order."
+  }
+ ]
+}

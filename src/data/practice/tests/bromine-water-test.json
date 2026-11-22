@@ -1,0 +1,49 @@
+{
+ "page": "tests/bromine-water-test",
+ "questions": [
+  {
+   "q": "Which reagent distinguishes glucose from fructose?",
+   "options": [
+    "Tollens' reagent",
+    "Fehling's solution",
+    "Bromine water",
+    "Benedict's solution"
+   ],
+   "answer": 2,
+   "explain": "Bromine water oxidises the –CHO of glucose to gluconic acid and loses its colour, but fructose does not react. Tollens', Fehling's and Benedict's reagents are alkaline and are reduced by both sugars."
+  },
+  {
+   "q": "Which compound does NOT decolourise bromine water?",
+   "options": [
+    "Phenol",
+    "Aniline",
+    "Cyclohexene",
+    "Acetophenone"
+   ],
+   "answer": 3,
+   "explain": "Acetophenone is unsaturated only through its benzene ring, and an aromatic ring by itself does not decolourise bromine water. Phenol and aniline are strongly activated and give white tribromo precipitates; cyclohexene adds Br₂."
+  },
+  {
+   "q": "Glucose is oxidised by bromine water to:",
+   "options": [
+    "Gluconic acid",
+    "Glucaric acid",
+    "Sorbitol",
+    "n-Hexane"
+   ],
+   "answer": 0,
+   "explain": "Bromine water is a mild oxidant that converts only the –CHO group into –COOH, giving the aldonic acid, gluconic acid. The primary and secondary alcohol groups are not touched."
+  },
+  {
+   "q": "Fructose reduces Tollens' and Fehling's reagents but does not react with bromine water. The reason is:",
+   "options": [
+    "Bromine water attacks only the ring form of sugars",
+    "Bromine water is not alkaline, so fructose is not isomerised to an aldose",
+    "Fructose adds bromine across its C=O bond",
+    "Fructose is a non-reducing sugar like sucrose"
+   ],
+   "answer": 1,
+   "explain": "The base in Tollens' and Fehling's reagents converts fructose through an enediol into aldoses, which are then oxidised. Bromine water is neutral to slightly acidic, so that isomerisation does not happen and the ketone is left unoxidised."
+  }
+ ]
+}

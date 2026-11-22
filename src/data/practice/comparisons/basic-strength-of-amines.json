@@ -1,0 +1,49 @@
+{
+ "page": "comparisons/basic-strength-of-amines",
+ "questions": [
+  {
+   "q": "The correct order of basic strength of the methylamines in aqueous solution is:",
+   "options": [
+    "(CH₃)₃N > (CH₃)₂NH > CH₃NH₂ > NH₃",
+    "(CH₃)₂NH > (CH₃)₃N > CH₃NH₂ > NH₃",
+    "CH₃NH₂ > (CH₃)₂NH > (CH₃)₃N > NH₃",
+    "(CH₃)₂NH > CH₃NH₂ > (CH₃)₃N > NH₃"
+   ],
+   "answer": 3,
+   "explain": "In water, inductive effect, solvation of R–NH₃⁺ and steric hindrance compete; with small methyl groups the tertiary amine loses most, giving 2° > 1° > 3° (pKb 3.27, 3.38, 4.22). The 3° > 2° > 1° order applies only in the gas phase."
+  },
+  {
+   "q": "Which is the weakest base?",
+   "options": [
+    "Benzylamine",
+    "Aniline",
+    "Acetanilide",
+    "Cyclohexylamine"
+   ],
+   "answer": 2,
+   "explain": "In acetanilide the nitrogen lone pair is delocalised onto the carbonyl oxygen as well as the ring, so it is far less basic than aniline (conjugate-acid pKa 0.5 against 4.63)."
+  },
+  {
+   "q": "Which order of basicity is correct?",
+   "options": [
+    "p-Toluidine > aniline > o-toluidine",
+    "o-Toluidine > p-toluidine > aniline",
+    "Aniline > p-toluidine > o-toluidine",
+    "p-Toluidine > o-toluidine > aniline"
+   ],
+   "answer": 0,
+   "explain": "A para methyl group donates electrons and raises basicity, but almost any ortho group lowers it because the protonated –NH₃⁺ clashes with the neighbour (ortho effect)."
+  },
+  {
+   "q": "Which statement correctly compares pyridine and pyrrole as bases?",
+   "options": [
+    "Pyrrole is more basic because its nitrogen is sp³ hybridised",
+    "Pyridine is more basic because its lone pair is in an sp² orbital outside the aromatic π system",
+    "Both are equally basic because both are aromatic nitrogen heterocycles",
+    "Pyrrole is more basic because protonation increases its aromaticity"
+   ],
+   "answer": 1,
+   "explain": "Pyridine's lone pair is free to bind H⁺ (pyridinium pKa about 5.2), whereas pyrrole's lone pair is part of the aromatic sextet and protonation would destroy aromaticity."
+  }
+ ]
+}

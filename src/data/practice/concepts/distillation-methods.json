@@ -1,0 +1,50 @@
+{
+ "page": "concepts/distillation-methods",
+ "questions": [
+  {
+   "q": "Glycerol is recovered from spent lye in the soap industry by",
+   "options": [
+    "Simple distillation",
+    "Fractional distillation",
+    "Distillation under reduced pressure",
+    "Steam distillation"
+   ],
+   "answer": 2,
+   "explain": "Glycerol has a very high boiling point and decomposes near it; lowering the external pressure lets it boil at a lower, safe temperature."
+  },
+  {
+   "q": "Nitration of phenol with dilute HNO₃ gives o- and p-nitrophenol, which are separated by steam distillation. Which isomer distils over, and why?",
+   "options": [
+    "p-Nitrophenol, because of intermolecular hydrogen bonding",
+    "o-Nitrophenol, because of intramolecular hydrogen bonding",
+    "o-Nitrophenol, because of intermolecular hydrogen bonding",
+    "p-Nitrophenol, because its molecules are more symmetrical"
+   ],
+   "answer": 1,
+   "explain": "In o-nitrophenol the –OH bonds to the neighbouring –NO₂ within the same molecule, so molecules do not associate and the compound is steam volatile. The para isomer is held by intermolecular hydrogen bonds and stays in the flask.",
+   "smiles": "Oc1ccccc1[N+](=O)[O-]"
+  },
+  {
+   "q": "Which method is best for separating chloroform (b.p. 334 K) from aniline (b.p. 457 K)?",
+   "options": [
+    "Fractional distillation",
+    "Steam distillation",
+    "Distillation under reduced pressure",
+    "Simple distillation"
+   ],
+   "answer": 3,
+   "explain": "The boiling points differ by more than 100 K, so simple distillation works: chloroform distils first and aniline is left behind. Fractional distillation is needed only when boiling points are close."
+  },
+  {
+   "q": "In steam distillation of an aniline–water mixture, the mixture boils",
+   "options": [
+    "Below 373 K, because the vapour pressures of aniline and water together equal atmospheric pressure",
+    "At the normal boiling point of aniline",
+    "Above 373 K, because dissolved aniline raises the boiling point of water",
+    "At exactly 373 K, because only water vaporises"
+   ],
+   "answer": 0,
+   "explain": "The mixture boils when p(organic) + p(water) = atmospheric pressure; each partial pressure is below p, so boiling occurs below 373 K and far below aniline's own boiling point."
+  }
+ ]
+}

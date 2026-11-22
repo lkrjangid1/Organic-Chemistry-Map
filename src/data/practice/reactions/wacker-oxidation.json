@@ -1,0 +1,49 @@
+{
+ "page": "reactions/wacker-oxidation",
+ "questions": [
+  {
+   "q": "Propene is oxidised with O₂ in aqueous PdCl₂/CuCl₂. The product is:",
+   "options": [
+    "Propanal",
+    "Propan-2-ol",
+    "Acetone",
+    "Propane-1,2-diol"
+   ],
+   "answer": 2,
+   "explain": "In the Wacker oxidation the oxygen goes to the more substituted carbon (Markovnikov), so terminal alkenes give methyl ketones. Propanal is the common trap; only ethene gives an aldehyde."
+  },
+  {
+   "q": "In the Wacker process, the function of CuCl₂ is to:",
+   "options": [
+    "Re-oxidise Pd(0) back to Pd(II)",
+    "Supply the oxygen atom of the carbonyl group",
+    "Coordinate the alkene as a π-complex",
+    "Add chloride to the alkene to form a chlorohydrin"
+   ],
+   "answer": 0,
+   "explain": "PdCl₂ is reduced to Pd metal as it oxidises the alkene; CuCl₂ turns Pd(0) back into Pd(II) and becomes CuCl, which O₂ re-oxidises. So both metals are catalytic and only the alkene and O₂ are consumed."
+  },
+  {
+   "q": "In the Wacker oxidation of ethene to acetaldehyde, the oxygen atom of the C=O group comes from:",
+   "options": [
+    "O₂",
+    "Water",
+    "CuCl₂",
+    "PdCl₂"
+   ],
+   "answer": 1,
+   "explain": "Water attacks the palladium-bound alkene (hydroxypalladation), so it supplies the carbonyl oxygen. O₂ is only the final oxidant that regenerates the copper and palladium catalysts."
+  },
+  {
+   "q": "Ethene oxidised by the Wacker process in D₂O gives CH₃CHO containing no deuterium. This result rules out:",
+   "options": [
+    "Coordination of ethene to palladium",
+    "β-Hydride elimination on palladium",
+    "Re-oxidation of Pd(0) by Cu(II)",
+    "A free enol intermediate that tautomerises to the aldehyde"
+   ],
+   "answer": 3,
+   "explain": "If a free enol CH₂=CHOH tautomerised in D₂O, deuterium would end up on carbon. Its absence shows that the C=O forms on palladium by hydride shifts, so no keto–enol step is involved even though some notes draw one."
+  }
+ ]
+}

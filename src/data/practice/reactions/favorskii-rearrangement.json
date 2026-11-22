@@ -1,0 +1,52 @@
+{
+ "page": "reactions/favorskii-rearrangement",
+ "questions": [
+  {
+   "q": "Chloroacetone (CH₃COCH₂Cl) is treated with aqueous NaOH and the mixture is then acidified. The organic product is:",
+   "smiles": "CC(=O)CCl",
+   "options": [
+    "Hydroxyacetone, CH₃COCH₂OH",
+    "Acetic acid, CH₃COOH",
+    "Propanoic acid, CH₃CH₂COOH",
+    "2-Hydroxypropanoic acid, CH₃CH(OH)COOH"
+   ],
+   "answer": 2,
+   "explain": "This is a Favorskii rearrangement: the enolate on the CH₃ side closes a cyclopropanone by intramolecular SN2, OH⁻ adds to its C=O and the ring opens to give propanoate, which acid work-up converts to propanoic acid. Simple substitution to hydroxyacetone is the trap."
+  },
+  {
+   "q": "2-Chlorocyclohexanone is heated with sodium methoxide in methanol. The major product is:",
+   "smiles": "O=C1CCCCC1Cl",
+   "options": [
+    "Methyl cyclopentanecarboxylate",
+    "Methyl cyclohexanecarboxylate",
+    "2-Methoxycyclohexanone",
+    "Cyclohex-2-enone"
+   ],
+   "answer": 0,
+   "explain": "The cyclic α-halo ketone undergoes a Favorskii rearrangement with ring contraction: the C=O carbon is pushed out of the ring and becomes the ester carbon, so the six-membered ring becomes a five-membered one. With an alkoxide the product is an ester rather than an acid."
+  },
+  {
+   "q": "Which α-halo ketone CANNOT give the cyclopropanone intermediate needed for a normal Favorskii rearrangement?",
+   "options": [
+    "CH₃COCH₂Cl",
+    "C₆H₅C(CH₃)₂COCH₂Cl",
+    "ClCH₂COCHClCH₃",
+    "2-Chlorocyclohexanone"
+   ],
+   "answer": 1,
+   "explain": "A cyclopropanone needs at least one hydrogen on the α′-carbon, on the other side of the C=O from the halogen. In C₆H₅C(CH₃)₂COCH₂Cl that carbon is quaternary, so exam answers show plain SN2 substitution to C₆H₅C(CH₃)₂COCH₂OH instead."
+  },
+  {
+   "q": "1,3-Dichlorobutan-2-one (ClCH₂COCHClCH₃) is treated with OH⁻ followed by H₃O⁺. The product is:",
+   "smiles": "ClCC(=O)C(Cl)C",
+   "options": [
+    "HOCH₂COCH(OH)CH₃",
+    "CH₃CH₂CH(Cl)COOH",
+    "CH₃CH(OH)CH₂COOH",
+    "CH₃CH=CHCOOH"
+   ],
+   "answer": 3,
+   "explain": "The cyclopropanone formed still carries one chlorine. When the ring opens, the carbanion expels that chloride and forms a C=C bond conjugated with the carboxyl group, giving the α,β-unsaturated acid but-2-enoic acid."
+  }
+ ]
+}
